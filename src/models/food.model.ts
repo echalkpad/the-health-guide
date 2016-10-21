@@ -8,5 +8,6 @@ export class Food extends Nutrition {
         public quantity: number = 100
     ) { 
         super();
+        this.name = "";
      }
 }

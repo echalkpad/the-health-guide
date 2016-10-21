@@ -10,7 +10,7 @@ export class MjDetailsPage implements OnInit {
     public mealJournal: MealJournal;
     constructor(private params: NavParams) { }
 
-    ngOnInit(): void { 
+    ngOnInit(): void {
         this.mealJournal = this.params.get('mealJournal');
      }
 }

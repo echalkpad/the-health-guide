@@ -4,7 +4,7 @@ import { AlertController, NavController, NavParams, ViewController } from 'ionic
 import { FirebaseListObservable } from 'angularfire2';
 
 // Models
-import { Food, Recipe } from '../../models';
+import { Food, Meal, Recipe } from '../../models';
 
 // Providers
 import { NutritionService, RecipeService } from '../../providers';
@@ -17,7 +17,7 @@ export class MealSearchPage implements OnInit {
   public mealType: string = 'food';
   public noQuantity: boolean = false;
   public recipes: Observable<Recipe[]>;
-  public selectedMeals: any[] = [];
+  public selectedMeals: Meal[] = [];
   public searchQuery: string = '';
 
   constructor(
@@ -41,7 +41,7 @@ export class MealSearchPage implements OnInit {
     this.searchQuery = "";
   }
 
-  public setMeal(meal: any, checkEl: any): void {
+  public setMeal(meal: Meal, checkEl: any): void {
     let idx: number = this.selectedMeals.indexOf(meal);
     if (idx >= 0) {
       this.selectedMeals.splice(idx, 1);

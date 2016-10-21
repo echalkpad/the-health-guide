@@ -3,7 +3,7 @@ import { FirebaseListObservable } from 'angularfire2';
 import { AlertController, NavController, ModalController } from 'ionic-angular';
 
 // Models
-import { MealJournal } from '../../../models';
+import { Meal, MealJournal } from '../../../models';
 
 // Pages
 import { MjDetailsPage } from './mj-details/mj-details';
@@ -17,7 +17,7 @@ import { MealService } from '../../../providers';
 })
 export class MealJournalPage implements OnInit {
   public currentDate: string;
-  public mj: MealJournal;
+  public editing: boolean = false;
   public mealJournals: FirebaseListObservable<MealJournal[]>;
   public searchBy: string = "date";
   public searchQuery: string;
@@ -26,9 +26,10 @@ export class MealJournalPage implements OnInit {
     private alertCtrl: AlertController,
     private mealSvc: MealService,
     private modalCtrl: ModalController,
-    public navCtrl: NavController) { }
+    public navCtrl: NavController
+  ) { }
 
-  public changeQuantity(meal: any): void {
+  public changeQuantity(meal: Meal): void {
     let quantityAlert = this.alertCtrl.create({
       title: `${meal.name}`,
       message: "Enter quantity",
@@ -57,15 +58,24 @@ export class MealJournalPage implements OnInit {
     quantityAlert.present();
   }
 
-  public openMjDetails(): void {
-    this.navCtrl.push(MjDetailsPage, { mj: this.mj });
+  public editMj(mealJournal: MealJournal): void {
+    console.log(mealJournal);
+    if (this.editing) {
+      this.updateMj(mealJournal);
+    }
+    this.editing = !this.editing;
   }
 
-  public removeMeal(mealTime: string, index: number): void {
-    this.mj[mealTime].meals.splice(index, 1);
+  public openMjDetails(mealJournal: MealJournal): void {
+    console.log(mealJournal);
+    this.navCtrl.push(MjDetailsPage, { mealJournal });
   }
 
-  public searchMeal(mealTime: string): void {
+  public removeMeal(mealJournal: MealJournal, mealTime: string, index: number): void {
+    mealJournal[mealTime].meals.splice(index, 1);
+  }
+
+  public searchMeal(mealJournal: MealJournal, mealTime: string): void {
     let mealTimeAlert = this.alertCtrl.create({
       title: "Add meal",
       message: "Please select a meal time",
@@ -108,12 +118,12 @@ export class MealJournalPage implements OnInit {
           text: 'Save',
           handler: data => {
             let mealSearchModal = this.modalCtrl.create(MealSearchPage, {
-              meals: [] || this.mj[data].meals,
+              meals: [] || mealJournal[data].meals,
               noQuantity: false
             });
             mealSearchModal.onDidDismiss(meals => {
               if (!!meals) {
-                this.mj[data].meals = [...meals];
+                mealJournal[data].meals = [...meals];
               }
             });
             mealSearchModal.present();
@@ -124,22 +134,14 @@ export class MealJournalPage implements OnInit {
     mealTimeAlert.present();
   }
 
-  public syncMj(): void {
-    this.mj = new MealJournal();
-    this.mealSvc.getMjByDate(this.currentDate).subscribe(mj => {
-      if (!!mj) {
-        this.mj = mj;
-      }
-    });
-  }
-
-  public updateMj(): void {
-    this.mj.date = this.currentDate;
-    this.mealSvc.setMjNutrition(this.mj);
-    if (this.mj.hasOwnProperty('$key')) {
-      this.mealSvc.updateMealJournal(this.mj);
+  public updateMj(mealJournal: MealJournal): void {
+    console.log(mealJournal);
+    mealJournal.date = this.currentDate;
+    this.mealSvc.setMjNutrition(mealJournal);
+    if (mealJournal.hasOwnProperty('$key')) {
+      this.mealSvc.updateMealJournal(mealJournal);
     } else {
-      this.mealSvc.addMealJournal(this.mj);
+      this.mealSvc.addMealJournal(mealJournal);
     }
   }
 

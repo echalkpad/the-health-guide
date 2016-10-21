@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, ModalController, NavController, NavParams, ToastController } from 'ionic-angular';
 
 // Models
-import { Recipe } from '../../../models';
+import { Meal as Ingredient, Recipe } from '../../../models';
 
 // Pages
 import { MealSearchPage } from '../../meal-search/meal-search';
@@ -95,7 +95,7 @@ export class RecipeEditPage implements OnInit {
     prompt.present();
   }
 
-  public changeQuantity(ingredient: any): void {
+  public changeQuantity(ingredient: Ingredient): void {
     let quantityAlert = this.alertCtrl.create({
       title: `${ingredient.name}`,
       message: "Enter quantity",

@@ -1,3 +1,4 @@
+import { Meal as Ingredient } from './meal.model';
 import { Nutrition } from './nutrition.model';
 
 export class Recipe {
@@ -6,14 +7,14 @@ export class Recipe {
         public category: string = "",
         public dietaries: string[] = [],
         public chef: string = "",
-        public ingredients: any[] = [],
+        public ingredients: Ingredient[] = [],
         public duration: number = 0,
         public difficulty: string = "",
         public cookMethod: string = "",
         public cookTemperature: number = 0,
         public nutrition: Nutrition = new Nutrition(),
         public servings: number = 1,
-        public steps: string[] = [""],
+        public steps: string[] = [],
         public quantity: number = 0
     ) {}
 }

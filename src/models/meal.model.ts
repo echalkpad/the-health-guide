@@ -1,4 +1,10 @@
-import { Nutrition } from '../models';
+import { Food } from './food.model';
+import { Nutrition } from './nutrition.model';
+import { Recipe } from './recipe.model';
+
+export interface Meal extends Food, Recipe {
+    amount: number;
+}
 
 export class MealJournal {
     constructor (
