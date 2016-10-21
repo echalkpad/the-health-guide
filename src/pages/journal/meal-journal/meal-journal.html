@@ -24,114 +24,308 @@
       <ion-icon name="add"></ion-icon>
     </button>
 	</ion-fab>
-	
-	<ion-card>
-		<ion-card-header>
-			Breakfast
-		</ion-card-header>
-		<ion-card-content>
-			<ion-item-sliding *ngFor="let meal of mealJournal.breakfast.meals; let i = index">
-				<ion-item>
-					{{ meal.name }} {{ meal.chef ? meal.amount : meal.amount + 'g' }}
-					<ion-note item-right>Swipe</ion-note>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button type="button" color="primary" (click)="changeQuantity(meal)">
-						<ion-icon name="create"></ion-icon>
-					</button>
-					<button ion-button type="button" color="light" (click)="removeMeal('breakfast', i)">
-						<ion-icon name="trash"></ion-icon>
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-card-content>
-	</ion-card>
 
-	<ion-card>
-		<ion-card-header>
-			Brunch
-		</ion-card-header>
-		<ion-card-content>
-			<ion-item-sliding *ngFor="let meal of mealJournal.brunch.meals; let i = index">
-				<ion-item>
-					{{ meal.name }} {{ meal.chef ? meal.amount : meal.amount + 'g' }}
-					<ion-note item-right>Swipe</ion-note>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button type="button" color="primary" (click)="changeQuantity(meal)">
-						<ion-icon name="create"></ion-icon>
-					</button>
-					<button ion-button type="button" color="light" (click)="removeMeal('brunch', i)">
-						<ion-icon name="trash"></ion-icon>
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-card-content>
-	</ion-card>
+	<div *ngFor="let mealJournal of mealJournals | async | searchFilter: searchQuery: searchBy">
+		<ion-card class="meal-plan" *ngIf="mealJournal.breakfast.meals">
+			<ion-card-header>
+				Breakfast
+			</ion-card-header>
+			<ion-card-content>
+				<md-data-table>
+					<thead>
+						<tr>
+							<th class="md-text-cell">Meal name</th>
+							<th class="md-text-cell">Energy</th>
+							<th class="md-text-cell">Protein</th>
+							<th class="md-text-cell">Carbs</th>
+							<th class="md-text-cell">Fiber</th>
+							<th class="md-text-cell">Sugars</th>
+							<th class="md-text-cell">Fats</th>
+							<th class="md-text-cell">Monounsaturated fat</th>
+							<th class="md-text-cell">Polyunsaturated fat</th>
+							<th class="md-text-cell">Saturated fat</th>
+							<th class="md-text-cell">Trans fat</th>
+							<th class="md-text-cell">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let meal of mealJournal.breakfast.meals">
+							<td class="md-text-cell">{{ meal.name }}</td>
+							<td>{{ meal.macronutrients ? meal.energy.toFixed(0) : meal.nutrients.energy.toFixed(0) }}kcal</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Protein.toFixed(2) : meal.nutrients.macronutrients.Protein.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Carbohydrates.toFixed(2) : meal.nutrients.macronutrients.Carbohydrates.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fiber.toFixed(2) : meal.nutrients.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Sugars.toFixed(2) : meal.nutrients.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fats.toFixed(2) : meal.nutrients.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Monounsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Polyunsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Saturated fat'].toFixed(2) : meal.nutrients.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Trans fat'].toFixed(2) : meal.nutrients.macronutrients['Trans fat'].toFixed(2) }}g
+							</td>
+							<td>{{ meal.amount }}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{ mealJournal.breakfast.total.energy.toFixed(0) }}kcal</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients.Protein.toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients.Carbohydrates.toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.breakfast.total.macronutrients['Trans fat'].toFixed(2) }}g</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</md-data-table>
+			</ion-card-content>
 
-	<ion-card>
-		<ion-card-header>
-			Lunch
-		</ion-card-header>
-		<ion-card-content>
-			<ion-item-sliding *ngFor="let meal of mealJournal.lunch.meals; let i = index">
-				<ion-item>
-					{{ meal.name }} {{ meal.chef ? meal.amount : meal.amount + 'g' }}
-					<ion-note item-right>Swipe</ion-note>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button type="button" color="primary" (click)="changeQuantity(meal)">
-						<ion-icon name="create"></ion-icon>
-					</button>
-					<button ion-button type="button" color="light" (click)="removeMeal('lunch', i)">
-						<ion-icon name="trash"></ion-icon>
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-card-content>
-	</ion-card>
+		</ion-card>
 
-	<ion-card>
-		<ion-card-header>
-			Snack
-		</ion-card-header>
-		<ion-card-content>
-			<ion-item-sliding *ngFor="let meal of mealJournal.snack.meals; let i = index">
-				<ion-item>
-					{{ meal.name }} {{ meal.chef ? meal.amount : meal.amount + 'g' }}
-					<ion-note item-right>Swipe</ion-note>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button type="button" color="primary" (click)="changeQuantity(meal)">
-						<ion-icon name="create"></ion-icon>
-					</button>
-					<button ion-button type="button" color="light" (click)="removeMeal('snack', i)">
-						<ion-icon name="trash"></ion-icon>
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-card-content>
-	</ion-card>
+		<ion-card class="meal-plan" *ngIf="mealJournal.brunch.meals">
+			<ion-card-header>
+				Brunch
+			</ion-card-header>
+			<ion-card-content>
+				<md-data-table>
+					<thead>
+						<tr>
+							<th class="md-text-cell">Meal name</th>
+							<th class="md-text-cell">Energy</th>
+							<th class="md-text-cell">Protein</th>
+							<th class="md-text-cell">Carbs</th>
+							<th class="md-text-cell">Fiber</th>
+							<th class="md-text-cell">Sugars</th>
+							<th class="md-text-cell">Fats</th>
+							<th class="md-text-cell">Monounsaturated fat</th>
+							<th class="md-text-cell">Polyunsaturated fat</th>
+							<th class="md-text-cell">Saturated fat</th>
+							<th class="md-text-cell">Trans fat</th>
+							<th class="md-text-cell">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let meal of mealJournal.brunch.meals">
+							<td class="md-text-cell">{{ meal.name }}</td>
+							<td>{{ meal.macronutrients ? meal.energy.toFixed(0) : meal.nutrients.energy.toFixed(0) }}kcal</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Protein.toFixed(2) : meal.nutrients.macronutrients.Protein.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Carbohydrates.toFixed(2) : meal.nutrients.macronutrients.Carbohydrates.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fiber.toFixed(2) : meal.nutrients.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Sugars.toFixed(2) : meal.nutrients.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fats.toFixed(2) : meal.nutrients.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Monounsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Polyunsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Saturated fat'].toFixed(2) : meal.nutrients.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Trans fat'].toFixed(2) : meal.nutrients.macronutrients['Trans fat'].toFixed(2) }}g
+							</td>
+							<td>{{ meal.amount }}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{ mealJournal.brunch.total.energy.toFixed(0) }}kcal</td>
+							<td>{{ mealJournal.brunch.total.macronutrients.Protein.toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients.Carbohydrates.toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.brunch.total.macronutrients['Trans fat'].toFixed(2) }}g</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</md-data-table>
+			</ion-card-content>
 
-	<ion-card>
-		<ion-card-header>
-			Dinner
-		</ion-card-header>
-		<ion-card-content>
-			<ion-item-sliding *ngFor="let meal of mealJournal.dinner.meals; let i = index">
-				<ion-item>
-					{{ meal.name }} {{ meal.chef ? meal.amount : meal.amount + 'g' }}
-					<ion-note item-right>Swipe</ion-note>
-				</ion-item>
-				<ion-item-options side="right">
-					<button ion-button type="button" color="primary" (click)="changeQuantity(meal)">
-						<ion-icon name="create"></ion-icon>
-					</button>
-					<button ion-button type="button" color="light" (click)="removeMeal('dinner', i)">
-						<ion-icon name="trash"></ion-icon>
-					</button>
-				</ion-item-options>
-			</ion-item-sliding>
-		</ion-card-content>
-	</ion-card>
+		</ion-card>
+
+		<ion-card class="meal-plan" *ngIf="mealJournal.lunch.meals">
+			<ion-card-header>
+				Lunch
+			</ion-card-header>
+			<ion-card-content>
+				<md-data-table>
+					<thead>
+						<tr>
+							<th class="md-text-cell">Meal name</th>
+							<th class="md-text-cell">Energy</th>
+							<th class="md-text-cell">Protein</th>
+							<th class="md-text-cell">Carbs</th>
+							<th class="md-text-cell">Fiber</th>
+							<th class="md-text-cell">Sugars</th>
+							<th class="md-text-cell">Fats</th>
+							<th class="md-text-cell">Monounsaturated fat</th>
+							<th class="md-text-cell">Polyunsaturated fat</th>
+							<th class="md-text-cell">Saturated fat</th>
+							<th class="md-text-cell">Trans fat</th>
+							<th class="md-text-cell">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let meal of mealJournal.lunch.meals">
+							<td class="md-text-cell">{{ meal.name }}</td>
+							<td>{{ meal.macronutrients ? meal.energy.toFixed(0) : meal.nutrients.energy.toFixed(0) }}kcal</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Protein.toFixed(2) : meal.nutrients.macronutrients.Protein.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Carbohydrates.toFixed(2) : meal.nutrients.macronutrients.Carbohydrates.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fiber.toFixed(2) : meal.nutrients.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Sugars.toFixed(2) : meal.nutrients.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fats.toFixed(2) : meal.nutrients.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Monounsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Polyunsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Saturated fat'].toFixed(2) : meal.nutrients.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Trans fat'].toFixed(2) : meal.nutrients.macronutrients['Trans fat'].toFixed(2) }}g
+							</td>
+							<td>{{ meal.amount }}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{ mealJournal.lunch.total.energy.toFixed(0) }}kcal</td>
+							<td>{{ mealJournal.lunch.total.macronutrients.Protein.toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients.Carbohydrates.toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.lunch.total.macronutrients['Trans fat'].toFixed(2) }}g</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</md-data-table>
+			</ion-card-content>
+
+		</ion-card>
+
+		<ion-card class="meal-plan" *ngIf="mealJournal.snack.meals">
+			<ion-card-header>
+				Snack
+			</ion-card-header>
+			<ion-card-content>
+				<md-data-table>
+					<thead>
+						<tr>
+							<th class="md-text-cell">Meal name</th>
+							<th class="md-text-cell">Energy</th>
+							<th class="md-text-cell">Protein</th>
+							<th class="md-text-cell">Carbs</th>
+							<th class="md-text-cell">Fiber</th>
+							<th class="md-text-cell">Sugars</th>
+							<th class="md-text-cell">Fats</th>
+							<th class="md-text-cell">Monounsaturated fat</th>
+							<th class="md-text-cell">Polyunsaturated fat</th>
+							<th class="md-text-cell">Saturated fat</th>
+							<th class="md-text-cell">Trans fat</th>
+							<th class="md-text-cell">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let meal of mealJournal.snack.meals">
+							<td class="md-text-cell">{{ meal.name }}</td>
+							<td>{{ meal.macronutrients ? meal.energy.toFixed(0) : meal.nutrients.energy.toFixed(0) }}kcal</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Protein.toFixed(2) : meal.nutrients.macronutrients.Protein.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Carbohydrates.toFixed(2) : meal.nutrients.macronutrients.Carbohydrates.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fiber.toFixed(2) : meal.nutrients.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Sugars.toFixed(2) : meal.nutrients.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fats.toFixed(2) : meal.nutrients.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Monounsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Polyunsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Saturated fat'].toFixed(2) : meal.nutrients.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Trans fat'].toFixed(2) : meal.nutrients.macronutrients['Trans fat'].toFixed(2) }}g
+							</td>
+							<td>{{ meal.amount }}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{ mealJournal.snack.total.energy.toFixed(0) }}kcal</td>
+							<td>{{ mealJournal.snack.total.macronutrients.Protein.toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients.Carbohydrates.toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.snack.total.macronutrients['Trans fat'].toFixed(2) }}g</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</md-data-table>
+			</ion-card-content>
+
+		</ion-card>
+
+		<ion-card class="meal-plan" *ngIf="mealJournal.dinner.meals">
+			<ion-card-header>
+				Dinner
+			</ion-card-header>
+			<ion-card-content>
+				<md-data-table>
+					<thead>
+						<tr>
+							<th class="md-text-cell">Meal name</th>
+							<th class="md-text-cell">Energy</th>
+							<th class="md-text-cell">Protein</th>
+							<th class="md-text-cell">Carbs</th>
+							<th class="md-text-cell">Fiber</th>
+							<th class="md-text-cell">Sugars</th>
+							<th class="md-text-cell">Fats</th>
+							<th class="md-text-cell">Monounsaturated fat</th>
+							<th class="md-text-cell">Polyunsaturated fat</th>
+							<th class="md-text-cell">Saturated fat</th>
+							<th class="md-text-cell">Trans fat</th>
+							<th class="md-text-cell">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let meal of mealJournal.dinner.meals">
+							<td class="md-text-cell">{{ meal.name }}</td>
+							<td>{{ meal.macronutrients ? meal.energy.toFixed(0) : meal.nutrients.energy.toFixed(0) }}kcal</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Protein.toFixed(2) : meal.nutrients.macronutrients.Protein.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Carbohydrates.toFixed(2) : meal.nutrients.macronutrients.Carbohydrates.toFixed(2) }}g
+							</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fiber.toFixed(2) : meal.nutrients.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Sugars.toFixed(2) : meal.nutrients.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients.Fats.toFixed(2) : meal.nutrients.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Monounsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Polyunsaturated fat'].toFixed(2) : meal.nutrients.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Saturated fat'].toFixed(2) : meal.nutrients.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ meal.macronutrients ? meal.macronutrients['Trans fat'].toFixed(2) : meal.nutrients.macronutrients['Trans fat'].toFixed(2) }}g
+							</td>
+							<td>{{ meal.amount }}</td>
+						</tr>
+						<tr>
+							<td>Total</td>
+							<td>{{ mealJournal.dinner.total.energy.toFixed(0) }}kcal</td>
+							<td>{{ mealJournal.dinner.total.macronutrients.Protein.toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients.Carbohydrates.toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients.Fiber.toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients.Sugars.toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients.Fats.toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients['Monounsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients['Polyunsaturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients['Saturated fat'].toFixed(2) }}g</td>
+							<td>{{ mealJournal.dinner.total.macronutrients['Trans fat'].toFixed(2) }}g</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</md-data-table>
+			</ion-card-content>
+
+		</ion-card>
+	</div>
+
+
 </ion-content>

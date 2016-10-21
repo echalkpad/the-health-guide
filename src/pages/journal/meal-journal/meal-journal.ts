@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseListObservable } from 'angularfire2';
 import { AlertController, NavController, ModalController } from 'ionic-angular';
 
 // Models
@@ -16,7 +17,11 @@ import { MealService } from '../../../providers';
 })
 export class MealJournalPage implements OnInit {
   public currentDate: string;
-  public mealJournal: MealJournal;
+  public mj: MealJournal;
+  public mealJournals: FirebaseListObservable<MealJournal[]>;
+  public searchBy: string = "date";
+  public searchQuery: string;
+
   constructor(
     private alertCtrl: AlertController,
     private mealSvc: MealService,
@@ -53,11 +58,11 @@ export class MealJournalPage implements OnInit {
   }
 
   public openMjDetails(): void {
-    this.navCtrl.push(MjDetailsPage, { mealJournal: this.mealJournal });
+    this.navCtrl.push(MjDetailsPage, { mj: this.mj });
   }
 
   public removeMeal(mealTime: string, index: number): void {
-    this.mealJournal[mealTime].meals.splice(index, 1);
+    this.mj[mealTime].meals.splice(index, 1);
   }
 
   public searchMeal(mealTime: string): void {
@@ -103,12 +108,12 @@ export class MealJournalPage implements OnInit {
           text: 'Save',
           handler: data => {
             let mealSearchModal = this.modalCtrl.create(MealSearchPage, {
-              meals: [] || this.mealJournal[data].meals,
+              meals: [] || this.mj[data].meals,
               noQuantity: false
             });
             mealSearchModal.onDidDismiss(meals => {
               if (!!meals) {
-                this.mealJournal[data].meals = [...meals];
+                this.mj[data].meals = [...meals];
               }
             });
             mealSearchModal.present();
@@ -120,21 +125,21 @@ export class MealJournalPage implements OnInit {
   }
 
   public syncMj(): void {
-    this.mealJournal = new MealJournal();
+    this.mj = new MealJournal();
     this.mealSvc.getMjByDate(this.currentDate).subscribe(mj => {
       if (!!mj) {
-        this.mealJournal = mj;
+        this.mj = mj;
       }
     });
   }
 
   public updateMj(): void {
-    this.mealJournal.date = this.currentDate;
-    this.mealSvc.setMjNutrition(this.mealJournal);
-    if (this.mealJournal.hasOwnProperty('$key')) {
-      this.mealSvc.updateMealJournal(this.mealJournal);
+    this.mj.date = this.currentDate;
+    this.mealSvc.setMjNutrition(this.mj);
+    if (this.mj.hasOwnProperty('$key')) {
+      this.mealSvc.updateMealJournal(this.mj);
     } else {
-      this.mealSvc.addMealJournal(this.mealJournal);
+      this.mealSvc.addMealJournal(this.mj);
     }
   }
 
@@ -145,7 +150,8 @@ export class MealJournalPage implements OnInit {
       currentYear = myDate.getFullYear();
     this.currentDate = currentYear + '-' + ((currentMonth < 10) ? '0' + currentMonth : currentMonth) + '-' +
       ((currentDay < 10) ? '0' + currentDay : currentDay);
-    this.syncMj();
+    this.mealJournals = this.mealSvc.getMealJournals();
+    this.searchQuery = this.currentDate;
   }
 
 }

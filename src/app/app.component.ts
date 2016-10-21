@@ -18,7 +18,7 @@ import {
 import { Page } from '../models';
 
 @Component({
-  templateUrl: 'app.component.html',
+  templateUrl: 'app.component.html'
 })
 export class HealthGuideApp implements OnInit {
   @ViewChild(Nav) nav: Nav;

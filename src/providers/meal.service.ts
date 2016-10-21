@@ -158,8 +158,8 @@ export class MealService {
         this.mealJournals.push(mj)
     }
 
-    public getMealJournals(): Observable<MealJournal[]> {
-        return this.mealJournals.map(mj => mj.reverse());
+    public getMealJournals(): FirebaseListObservable<MealJournal[]> {
+        return this.mealJournals;
     }
 
     public getMjByDate(date: string): Observable<any> {
