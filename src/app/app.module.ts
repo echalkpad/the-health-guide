@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { FormsModule }   from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { ChartsModule } from "ng2-charts/ng2-charts";
@@ -35,6 +36,7 @@ import { Limit, SearchFilter } from "../pipes";
 // Providers
 import {
   ActivityService,
+  FileUploadService,
   FitnessService,
   MealService,
   NutritionService,
@@ -79,6 +81,7 @@ const FIREBASE_AUTH_CONFIG = {
     AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG),
     ChartsModule,
     FormsModule,
+    HttpModule,
     IonicModule.forRoot(HealthGuideApp),
     Ng2MaterialModule.forRoot()
   ],
@@ -103,6 +106,7 @@ const FIREBASE_AUTH_CONFIG = {
   ],
   providers: [
     ActivityService,
+    FileUploadService,
     FitnessService,
     MealService,
     NutritionService,
