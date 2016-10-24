@@ -17,13 +17,6 @@
 		<ion-item-sliding *ngFor="let recipe of myRecipes | async | searchFilter: searchQuery: searchBy">
 			<ion-item>
 				<h2>{{ recipe.name }}</h2>
-				<ion-grid>
-					<ion-row>
-						<ion-col>{{ recipe.category }}</ion-col>
-						<ion-col text-center>{{ recipe.difficulty }}</ion-col>
-						<ion-col text-right>{{ recipe.duration }}</ion-col>
-					</ion-row>
-				</ion-grid>
 				<ion-note item-right>
 					Swipe
 				</ion-note>
@@ -31,12 +24,15 @@
 			<ion-item-options side="right">
 				<button ion-button color="royal" (click)="viewRecipe(recipe)">
           <ion-icon name="open"></ion-icon>
+					Details
         </button>
 				<button ion-button color="primary" (click)="editRecipe(recipe)">
           <ion-icon name="create"></ion-icon>
+					Edit
         </button>
 				<button ion-button color="light" (click)="removeRecipe(recipe)">
           <ion-icon name="trash"></ion-icon>
+						Remove
         </button>
 			</ion-item-options>
 		</ion-item-sliding>
@@ -44,13 +40,6 @@
 	<ion-list *ngSwitchCase="'all'">
 		<button ion-item detail-push *ngFor="let recipe of allRecipes | async | searchFilter: searchQuery: searchBy" (click)="viewRecipe(recipe)">
       <h2>{{ recipe.name }}</h2>
-      <ion-grid>
-        <ion-row>
-          <ion-col>{{ recipe.category }}</ion-col>
-          <ion-col text-center>{{ recipe.difficulty }}</ion-col>
-          <ion-col text-right>{{ recipe.duration }}</ion-col>
-        </ion-row>
-      </ion-grid>
       <ion-note item-right>
         Details
       </ion-note>

@@ -3,8 +3,6 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { IonicApp, IonicModule } from 'ionic-angular';
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-import { ChartsModule } from "ng2-charts/ng2-charts";
-import { Ng2MaterialModule } from "ng2-material";
 
 // App
 import { HealthGuideApp } from './app.component';
@@ -79,11 +77,9 @@ const FIREBASE_AUTH_CONFIG = {
   ],
   imports: [
     AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG),
-    ChartsModule,
     FormsModule,
     HttpModule,
-    IonicModule.forRoot(HealthGuideApp),
-    Ng2MaterialModule.forRoot()
+    IonicModule.forRoot(HealthGuideApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [

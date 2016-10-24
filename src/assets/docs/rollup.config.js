@@ -47,14 +47,16 @@ var rollupConfig = {
         'node_modules/angularfire2/**',
         'node_modules/chart.js/**',
         'node_modules/ng2-charts/**',
-        'node_modules/immutable/**'
+        'node_modules/immutable/**',
+        'node_modules/ng2-material/**'
         ],
         namedExports: {
         'node_modules/firebase/firebase.js': ['initializeApp', 'auth', 'database'],
         'node_modules/angularfire2/node_modules/firebase/firebase-browser.js': ['initializeApp', 'auth', 'database'],
         'node_modules/ng2-charts/ng2-charts.js': ['ChartsModule'],
         'node_modules/chart.js/src/chart.js': ['Chart'],
-        'node_modules/immutable/dist/immutable.js': ['Immutable']
+        'node_modules/immutable/dist/immutable.js': ['Immutable'],
+        'node_modules/ng2-material/src/index.js': ['Ng2MaterialModule']
         }
     }),
     nodeResolve({
