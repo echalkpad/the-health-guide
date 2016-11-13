@@ -1,2 +1,2 @@
-# The Health Guide 2. Mobile
+# The Health Guide Mobile
 Wellness mobile application implemented with Angular 2 nd Nativescript
