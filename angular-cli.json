@@ -18,7 +18,14 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css"
+        "styles.scss",
+        "theme.scss",
+        "../node_modules/@covalent/core/styles/platform.css",
+        "../node_modules/@angular/material/core/overlay/overlay.css"
+      ],
+      "scripts": [
+        "../node_modules/hammerjs/hammer.min.js",
+        "../node_modules/showdown/dist/showdown.js"
       ],
       "scripts": [],
       "environments": {
@@ -41,7 +48,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "prefixInterfaces": false,
     "inline": {
       "style": false,
