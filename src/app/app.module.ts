@@ -1,5 +1,8 @@
+import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserModule }  from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { RouterModule } from '@angular/router';
 
 import { CovalentCoreModule, TD_LOADING_ENTRY_COMPONENTS } from '@covalent/core';
 import { CovalentChipsModule } from '@covalent/chips';
@@ -13,15 +16,12 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { appRoutes, appRoutingProviders } from './app.routes';
-
-import { RequestInterceptor } from '../config/interceptors/request.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent
-  ], // directives, components, and pipes owned by this NgModule
+  ],
   imports: [
     BrowserModule,
     CovalentCoreModule.forRoot(),
@@ -29,16 +29,19 @@ import { RequestInterceptor } from '../config/interceptors/request.interceptor';
     CovalentChipsModule.forRoot(),
     CovalentDataTableModule.forRoot(),
     CovalentFileModule.forRoot(),
-    CovalentHttpModule.forRoot([RequestInterceptor]),
     CovalentHighlightModule.forRoot(),
     CovalentJsonFormatterModule.forRoot(),
     CovalentMarkdownModule.forRoot(),
-    appRoutes,
-  ], // modules needed to run this module
-  providers: [
-    appRoutingProviders
-  ], // additional providers needed for this module
-  entryComponents: [ TD_LOADING_ENTRY_COMPONENTS ],
-  bootstrap: [ AppComponent ],
+    FormsModule,
+    HttpModule,
+    RouterModule.forRoot([
+      {
+        path: '',
+        component: DashboardComponent
+      }
+    ])
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

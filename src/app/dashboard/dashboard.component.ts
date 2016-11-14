@@ -1,40 +1,49 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { TdDataTableSortingOrder } from '@covalent/data-table';
 
-const NUMBER_FORMAT: any = (v: {value: number}) => v.value;
-const DECIMAL_FORMAT: any = (v: {value: number}) => v.value.toFixed(2);
+const NUMBER_FORMAT: any = (v: { value: number }) => v.value;
+const DECIMAL_FORMAT: any = (v: { value: number }) => v.value.toFixed(2);
 
 @Component({
-  selector: 'dashboard',
-  templateUrl: 'dashboard.component.html',
-  styleUrls: ['dashboard.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
+  public columns: any[];
+  public data: any[];
+  public multiple: boolean;
+  public pageSize: number;
+  public pagination: boolean;
+  public rowSelection: boolean;
+  public sortBy: string;
+  public sorting: boolean;
+  public sortOrder: string;
 
-  title: string;
-  routes: Object[] = [{
-      title: 'Dashboard',
-      route: '/',
-      icon: 'dashboard',
-    }];
-  columns: any[] = [
-    { name: 'name',  label: 'Product' },
-    { name: 'type', label: 'Type' },
-    { name: 'usage', label: 'CPU Time (m)', numeric: true, format: NUMBER_FORMAT },
-    { name: 'users', label: 'Users (K)', numeric: true, format: DECIMAL_FORMAT },
-    { name: 'load', label: 'load (%)', numeric: true, format: NUMBER_FORMAT },
-    { name: 'time', label: 'time (h)', numeric: true, format: DECIMAL_FORMAT },
-    { name: 'quota', label: 'Quota (%)', numeric: true, format: NUMBER_FORMAT },
-    { name: 'sessions', label: 'Sessions', numeric: true, format: NUMBER_FORMAT },
-    { name: 'containers', label: 'Containers', numeric: true, format: NUMBER_FORMAT },
-  ];
+  constructor() { }
 
-  sorting: boolean = true;
-  pagination: boolean = true;
-  pageSize: number = 5;
+  public sortChanged(changes: any): void {
+    const { column, order }: any = changes;
 
-  data: any[] = [
+    this.sortBy = column.name;
+    this.sortOrder = order === TdDataTableSortingOrder.Ascending ? 'ASC' : 'DESC';
+  }
+
+  ngOnInit(): void {
+    this.columns = [
+      { name: 'name', label: 'Product' },
+      { name: 'type', label: 'Type' },
+      { name: 'usage', label: 'CPU Time (m)', numeric: true, format: NUMBER_FORMAT },
+      { name: 'users', label: 'Users (K)', numeric: true, format: DECIMAL_FORMAT },
+      { name: 'load', label: 'load (%)', numeric: true, format: NUMBER_FORMAT },
+      { name: 'time', label: 'time (h)', numeric: true, format: DECIMAL_FORMAT },
+      { name: 'quota', label: 'Quota (%)', numeric: true, format: NUMBER_FORMAT },
+      { name: 'sessions', label: 'Sessions', numeric: true, format: NUMBER_FORMAT },
+      { name: 'containers', label: 'Containers', numeric: true, format: NUMBER_FORMAT },
+    ];
+
+    this.data = [
       {
         'name': 'Ingest',
         'type': 'container',
@@ -58,17 +67,17 @@ export class DashboardComponent {
       }, {
         'name': 'Computer Engines',
         'type': 'hardware',
-        'usage': { 'value':  262.0 },
+        'usage': { 'value': 262.0 },
         'users': { 'value': 16.0 },
         'load': { 'value': 24.0 },
-        'time': { 'value':  6.0 },
+        'time': { 'value': 6.0 },
         'quota': { 'value': 337.0 },
-        'sessions': { 'value':  6.0 },
+        'sessions': { 'value': 6.0 },
         'containers': { 'value': 7.0 },
       }, {
         'name': 'Memory',
         'type': 'hardware',
-        'usage': { 'value':  305.0 },
+        'usage': { 'value': 305.0 },
         'users': { 'value': 3.7 },
         'load': { 'value': 67.0 },
         'time': { 'value': 4.3 },
@@ -78,7 +87,7 @@ export class DashboardComponent {
       }, {
         'name': 'Workload Engine',
         'type': 'engines',
-        'usage': { 'value':  375.0 },
+        'usage': { 'value': 375.0 },
         'users': { 'value': 0.0 },
         'load': { 'value': 94.0 },
         'time': { 'value': 0.0 },
@@ -125,21 +134,16 @@ export class DashboardComponent {
         'quota': { 'value': 54.0 },
         'sessions': { 'value': 12.0 },
         'containers': { 'value': 6.0 },
-      },
+      }
     ];
 
-  sortBy: string = 'name';
-  sortOrder: string = 'ASC';
+    this.multiple = true;
+    this.pageSize = 5;
+    this.pagination = true;
+    this.rowSelection = false;
+    this.sortBy = 'name';
+    this.sorting = true;
+    this.sortOrder = 'ASC';
 
-  rowSelection: boolean = false;
-  multiple: boolean = true;
-
-  constructor() { }
-
-  sortChanged(changes: any): void {
-    const { column, order }: any = changes;
-
-    this.sortBy = column.name;
-    this.sortOrder = order === TdDataTableSortingOrder.Ascending ? 'ASC' : 'DESC';
   }
 }

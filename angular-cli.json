@@ -27,7 +27,6 @@
         "../node_modules/hammerjs/hammer.min.js",
         "../node_modules/showdown/dist/showdown.js"
       ],
-      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
