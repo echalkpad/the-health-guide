@@ -16,9 +16,22 @@ Clone the repository, install the dependencies, and run the server
 git clone -b desktop https://github.com/razvantomegea/the-health-guide.git
 cd the-health-guide
 npm install
-npm start
+```
+
+## Running
+```bash
+ng build
+robocopy ./electron ./dist /S /E
+electron ./dist
 ```
 
 ## Packaging
 To package the application for production to specific platforms, use the electron-packager
-Install the electron packager globally by `npm install -g electron-packager`, then type `electron-packager . the-health-guide --platform=win32 --arch=x64` for Windows x64. If you want to package it for other platforms, visit (Electron-packagare API Docs)[https://github.com/electron-userland/electron-packager/blob/master/docs/api.md]
+Install the electron packager globally by `npm install -g electron-packager`, then run the follwing commands (Windows)
+```bash
+ng build
+robocopy ./electron ./dist /S /E
+electron-packager ./dist --appname=thehealthguide --platform=win32 --arch=x64 --out=thehealthguide-win32-x64 --overwrite=true
+```
+`electron-packager . the-health-guide --platform=win32 --arch=x64` for Windows x64.
+If you want to package it for other platforms, visit (Electron-packagare API Docs)[https://github.com/electron-userland/electron-packager/blob/master/docs/api.md]

@@ -3,7 +3,6 @@
 # compiled output
 /dist
 /tmp
-/branch-detection-simulator-win32-x64
 
 # dependencies
 /node_modules
