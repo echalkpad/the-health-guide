@@ -1,6 +1,11 @@
-<h1>
-  {{title}}
-</h1>
-<td-data-table [data]="data" [columns]="columns" [pagination]="pagination" [pageSize]="pageSize" [rowSelection]="rowSelection"
-        [multiple]="multiple" [sorting]="sorting" [sortBy]="sortBy" [sortOrder]="sortOrder" search="true" title="Product Stats"
-        (sortChanged)="sortChanged($event)">
+<td-layout #layout title="Sidenav Title" color="primary">
+  <md-nav-list menu-items>
+    <a *ngFor="let item of routes" md-list-item [routerLink]="[item.route]" (click)="layout.close()">
+      <md-icon>{{item.icon}}</md-icon>
+      {{item.title}}
+    </a>
+  </md-nav-list>
+  <td-layout-nav title="Toolbar Title">
+    <router-outlet></router-outlet>
+  </td-layout-nav>
+</td-layout>
