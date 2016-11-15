@@ -24,6 +24,7 @@
         "../node_modules/@angular/material/core/overlay/overlay.css"
       ],
       "scripts": [
+        "../node_modules/firebase/firebase.js",
         "../node_modules/hammerjs/hammer.min.js",
         "../node_modules/showdown/dist/showdown.js"
       ],
