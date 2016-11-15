@@ -1,3 +1,3 @@
 <md-list>
-  <md-list-item>Hello</md-list-item>
+  <md-list-item *ngFor="let food of foodList | async">{{ food.name }}</md-list-item>
 </md-list>

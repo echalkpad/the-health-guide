@@ -38,6 +38,7 @@ const FIREBASE_AUTH_CONFIG = {
     AppComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG),
     AppRoutingModule,
     BrowserModule,
     CovalentCoreModule.forRoot(),
