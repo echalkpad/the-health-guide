@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
 import { CovalentCoreModule, TD_LOADING_ENTRY_COMPONENTS } from '@covalent/core';
 import { CovalentChipsModule } from '@covalent/chips';
 import { CovalentFileModule } from '@covalent/file-upload';
@@ -15,14 +16,29 @@ import { CovalentChartsModule } from '@covalent/charts';
 import { CovalentDataTableModule } from '@covalent/data-table';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FoodModule } from './food/food.module';
+
+
+const FIREBASE_CONFIG = {
+  apiKey: "AIzaSyBXdSjoVfk1KbbtmAUEq7ktnnI70ojg4y8",
+  authDomain: "the-health-guide.firebaseapp.com",
+  databaseURL: "https://the-health-guide.firebaseio.com",
+  storageBucket: "the-health-guide.appspot.com",
+  messagingSenderId: "283336744173"
+};
+
+const FIREBASE_AUTH_CONFIG = {
+  provider: AuthProviders.Password,
+  method: AuthMethods.Password
+}
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DashboardComponent
+    AppComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     CovalentCoreModule.forRoot(),
     CovalentChartsModule.forRoot(),
@@ -34,12 +50,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     CovalentMarkdownModule.forRoot(),
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: DashboardComponent
-      }
-    ])
+    FoodModule
   ],
   providers: [],
   bootstrap: [AppComponent]

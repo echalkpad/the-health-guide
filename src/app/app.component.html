@@ -1,6 +1,6 @@
 <td-layout #layout title="Sidenav Title" color="primary">
   <md-nav-list menu-items>
-    <a *ngFor="let item of routes" md-list-item [routerLink]="[item.route]" (click)="layout.close()">
+    <a *ngFor="let item of routeLinks" md-list-item [routerLink]="[item.route]" (click)="layout.close()">
       <md-icon>{{item.icon}}</md-icon>
       {{item.title}}
     </a>
