@@ -7,8 +7,6 @@ import { TdDataTableSortingOrder } from '@covalent/data-table';
 import { Food } from '../food.model';
 import { FoodService } from '../food.service';
 
-const DECIMAL_FORMAT: any = (data: number ) => data.toFixed(2);
-
 @Component({
   selector: 'app-food-list',
   templateUrl: './food-list.component.html',
@@ -24,15 +22,15 @@ export class FoodListComponent implements OnInit {
   constructor(private foodSvc: FoodService, private route: ActivatedRoute, private router: Router, private titleSvc: Title) {
     this.columns = [
       { name: 'name', label: 'Food' },
-      { name: 'energy', label: 'Energy (kcal)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Protein', label: 'Protein (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Carbohydrates', label: 'Carbs (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Sugars', label: 'Sugars (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Fiber', label: 'Fiber (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Fats', label: 'Fat (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Monounsaturated fat', label: 'Monounsaturated fat (g)', numeric: true, format: DECIMAL_FORMAT },
-      { name: 'Polyunsaturated fat', label: 'Polyunsaturated fat (g)', numeric: true, format: DECIMAL_FORMAT }
+      { name: 'energy', label: 'Energy (kcal)', numeric: true },
+      { name: 'Protein', label: 'Protein (g)', numeric: true },
+      { name: 'Carbohydrates', label: 'Carbs (g)', numeric: true },
+      { name: 'Sugars', label: 'Sugars (g)', numeric: true },
+      { name: 'Fiber', label: 'Fiber (g)', numeric: true },
+      { name: 'Fats', label: 'Fat (g)', numeric: true },
+      { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true },
+      { name: 'Monounsaturated fat', label: 'Monounsaturated fat (g)', numeric: true },
+      { name: 'Polyunsaturated fat', label: 'Polyunsaturated fat (g)', numeric: true }
     ];
   }
 
