@@ -18,6 +18,7 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FoodModule } from './food/food.module';
+import { HomeComponent } from './home/home.component';
 
 
 const FIREBASE_CONFIG = {
@@ -35,7 +36,8 @@ const FIREBASE_AUTH_CONFIG = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent
   ],
   imports: [
     AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG),
