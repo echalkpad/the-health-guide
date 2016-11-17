@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2';
 import { TdDataTableSortingOrder } from '@covalent/data-table';
@@ -20,7 +21,7 @@ export class FoodListComponent implements OnInit {
   public pageSize: number = 10;
   public sortBy: string = 'name';
   public sortOrder: string = 'ASC';
-  constructor(private foodSvc: FoodService, private route: ActivatedRoute, private router: Router) {
+  constructor(private foodSvc: FoodService, private route: ActivatedRoute, private router: Router, private titleSvc: Title) {
     this.columns = [
       { name: 'name', label: 'Food' },
       { name: 'energy', label: 'Energy (kcal)', numeric: true, format: DECIMAL_FORMAT },
@@ -52,6 +53,7 @@ export class FoodListComponent implements OnInit {
         this.data = data.foods;
       }
     });
+    this.titleSvc.setTitle("Food list");
   }
 
 }
