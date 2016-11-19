@@ -17,6 +17,7 @@ import { FoodListComponent } from './food-list/food-list.component';
 import { FoodListResolveService} from './food-list/food-list-resolve.service';
 import { FoodRoutingModule } from './food-routing.module';
 import { FoodService } from './food.service';
+import { FoodInfoComponent } from './food-info/food-info.component';
 
 
 @NgModule({
@@ -31,10 +32,12 @@ import { FoodService } from './food.service';
     CovalentMarkdownModule.forRoot(),
     FoodRoutingModule
   ],
+  entryComponents: [TD_LOADING_ENTRY_COMPONENTS],
   declarations: [
     FoodDetailComponent,
     FoodListComponent,
-    FoodComponent
+    FoodComponent,
+    FoodInfoComponent
   ],
   providers: [FoodService, FoodListResolveService]
 })

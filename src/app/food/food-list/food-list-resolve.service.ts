@@ -8,25 +8,29 @@ import { FoodService } from '../food.service';
 
 @Injectable()
 export class FoodListResolveService implements Resolve<Food[]> {
-
+    private foods: Food[] = [];
     constructor(private foodSvc: FoodService, private router: Router) { }
 
     public resolve(): Promise<Food[]> | boolean {
-        return this.foodSvc.getFoods().then(
-            (data: Food[]) => {
-                if (!!data && !!data.length) {
-                    return data;
-                } else {
-                    this.router.navigate(['/home']);
-                    return false;
+        return new Promise((resolve, reject) => {
+            this.foodSvc.getFoods().subscribe(
+                (data: Food[]) => {
+                    if (!!data && !!data.length) {
+                        this.foods = [...data];
+                    }
+                }, (error: Error) => {
+                    reject(error);
+                    this.router.navigate(['/food']);
                 }
-            },
-            (error: Error) => {
-                console.log(error);
-                this.router.navigate(['/home']);
-                return false;
-            }
-        );
+            );
+            setTimeout(() => {
+                if (!this.foods) {
+                    this.router.navigate(['/food']);
+                } else {
+                    resolve(this.foods);
+                }
+            }, 5000);
+        });
     }
 
 }

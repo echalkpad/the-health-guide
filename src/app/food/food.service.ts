@@ -19,22 +19,7 @@ export class FoodService {
         return this.af.database.object('/food/`${key}`');
     }
 
-    public getFoods(): Promise<Food[]> {
-        return new Promise((resolve, reject) => {
-            let foundFood: boolean = false;
-            this.foods.subscribe(
-                (data: Food[]) => {
-                    if (!!data && !!data.length) {
-                        foundFood = true;
-                        resolve(data);
-                    }
-                }, (error: Error) => reject(error),
-                () => {
-                    if (!foundFood) {
-                        reject("Not found");
-                    }
-                }
-            );
-        });
+    public getFoods(): FirebaseListObservable<Food[]> {
+        return this.foods;
     }
 }

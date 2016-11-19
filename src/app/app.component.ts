@@ -8,7 +8,7 @@ import { Component } from '@angular/core'
 export class AppComponent {
   public routeLinks: Object[] = [
     {
-      title: "Home", route: "/home", icon: "home"
+      title: "Home", route: "/", icon: "home"
     }, {
       title: "Food", route: "/food", icon: "local_grocery_store"
     }
