@@ -1,0 +1,20 @@
+<md-card> 
+  <md-card-content>
+      <td-data-table
+        [data]="data"
+        [columns]="columns"
+        pagination="true"
+        [pageSize]="pageSize"
+        rowSelection="true"
+        (rowSelect)="selectedRow($event)"
+        multiple="false"
+        sorting="true"
+        [sortBy]="sortBy"
+        [sortOrder]="sortOrder"
+        search="true"
+        (sortChanged)="sortChanged($event)">
+      </td-data-table>
+
+  </md-card-content>
+
+</md-card>

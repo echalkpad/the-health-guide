@@ -1,0 +1,25 @@
+import { Injectable } from '@angular/core';
+import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
+import { Subscription } from 'rxjs/Subscription';
+
+import { Food } from './food.model';
+
+@Injectable()
+export class FoodService {
+    private foods: FirebaseListObservable<Food[]>;
+    constructor(private af: AngularFire) {
+        this.foods = af.database.list('/foods', {
+            query: {
+                orderByChild: 'name'
+            }
+        });
+    }
+
+    public getFood(key: string): FirebaseObjectObservable<Food> {
+        return this.af.database.object('/food/`${key}`');
+    }
+
+    public getFoods(): FirebaseListObservable<Food[]> {
+        return this.foods;
+    }
+}

@@ -16,7 +16,10 @@ import { CovalentChartsModule } from '@covalent/charts';
 import { CovalentDataTableModule } from '@covalent/data-table';
 
 import { AppComponent } from './app.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FoodModule } from './food/food.module';
+import { HomeComponent } from './home/home.component';
+
 
 const FIREBASE_CONFIG = {
   apiKey: "AIzaSyBXdSjoVfk1KbbtmAUEq7ktnnI70ojg4y8",
@@ -34,10 +37,11 @@ const FIREBASE_AUTH_CONFIG = {
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    HomeComponent
   ],
   imports: [
     AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG),
+    AppRoutingModule,
     BrowserModule,
     CovalentCoreModule.forRoot(),
     CovalentChartsModule.forRoot(),
@@ -49,12 +53,7 @@ const FIREBASE_AUTH_CONFIG = {
     CovalentMarkdownModule.forRoot(),
     FormsModule,
     HttpModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        component: DashboardComponent
-      }
-    ])
+    FoodModule
   ],
   providers: [],
   bootstrap: [AppComponent]
