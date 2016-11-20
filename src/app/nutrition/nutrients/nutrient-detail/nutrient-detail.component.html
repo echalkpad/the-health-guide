@@ -8,12 +8,11 @@
     <md-divider></md-divider>
     <div *ngIf="nutrient.classification">
       <h2 class="md-headline">Classification</h2>
-      <md-list>
-        <md-list-item *ngFor="let item of nutrient.classification">
-          <h2 md-line>{{ item.name }}</h2>
-          <p md-line [innerHtml]="item.description"></p>
-        </md-list-item>
-      </md-list>
+      <template let-item let-last="last" ngFor [ngForOf]="nutrient.classification">
+        <h3 md-line> {{ item.name }} </h3>
+        <p md-line [innerHtml]="item.description"></p>
+        <md-divider *ngIf="!last" md-inset></md-divider>
+      </template>
       <md-divider></md-divider>
     </div>
     <div layout="column" layout-gt-sm="row" class="pad-md">

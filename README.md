@@ -20,7 +20,7 @@ npm install
 
 ## Running
 ```bash
-ng build
+ng build --prod
 robocopy ./electron ./dist /S /E
 electron ./dist
 ```
@@ -29,7 +29,7 @@ electron ./dist
 To package the application for production to specific platforms, use the electron-packager
 Install the electron packager globally by `npm install -g electron-packager`, then run the follwing commands (Windows)
 ```bash
-ng build
+ng build --prod
 robocopy ./electron ./dist /S /E
 electron-packager ./dist --appname=thehealthguide --platform=win32 --arch=x64 --out=thehealthguide-win32-x64 --overwrite=true
 ```
