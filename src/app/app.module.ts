@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
@@ -17,7 +15,7 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { FoodModule } from './food/food.module';
+import { NutritionModule } from './nutrition/nutrition.module';
 import { HomeComponent } from './home/home.component';
 
 
@@ -51,9 +49,7 @@ const FIREBASE_AUTH_CONFIG = {
     CovalentHighlightModule.forRoot(),
     CovalentJsonFormatterModule.forRoot(),
     CovalentMarkdownModule.forRoot(),
-    FormsModule,
-    HttpModule,
-    FoodModule
+    NutritionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

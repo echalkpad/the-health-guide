@@ -1,10 +1,10 @@
 <td-layout-manage-list #list *tdLoading="'food.load'" loadingType="circular">
     <md-nav-list list-items>
-        <a md-list-item [routerLink]="['/food']">
+        <a md-list-item [routerLink]="['/nutrition']">
             <md-icon md-list-avatar>book</md-icon>
             About
         </a>
-        <a md-list-item [routerLink]="['list']" (click)="startLoading()">
+        <a md-list-item [routerLink]="['food']" (click)="startLoading()">
             <md-icon md-list-avatar>list</md-icon>
             Food list
         </a>

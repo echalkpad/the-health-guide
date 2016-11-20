@@ -5,8 +5,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { FirebaseListObservable } from 'angularfire2';
 import { TdDataTableSortingOrder } from '@covalent/data-table';
 
-import { Food } from '../food.model';
-import { FoodService } from '../food.service';
+import { Food } from '../shared/food.model';
+import { FoodService } from '../shared/food.service';
 
 @Component({
   selector: 'app-food-list',

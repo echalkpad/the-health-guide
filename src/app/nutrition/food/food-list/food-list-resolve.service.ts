@@ -3,8 +3,8 @@ import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { Food } from '../food.model';
-import { FoodService } from '../food.service';
+import { Food } from '../shared/food.model';
+import { FoodService } from '../shared/food.service';
 
 @Injectable()
 export class FoodListResolveService implements Resolve<Food[]> {
@@ -20,12 +20,12 @@ export class FoodListResolveService implements Resolve<Food[]> {
                     }
                 }, (error: Error) => {
                     reject(error);
-                    this.router.navigate(['/food']);
+                    this.router.navigate(['/nutrition']);
                 }
             );
             setTimeout(() => {
                 if (!this.foods) {
-                    this.router.navigate(['/food']);
+                    this.router.navigate(['/nutrition']);
                 } else {
                     resolve(this.foods);
                 }

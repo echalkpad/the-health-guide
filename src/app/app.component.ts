@@ -10,7 +10,7 @@ export class AppComponent {
     {
       title: "Home", route: "/", icon: "home"
     }, {
-      title: "Food", route: "/food", icon: "local_grocery_store"
+      title: "Nutrition", route: "/nutrition", icon: "spa"
     }
   ];
 

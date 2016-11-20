@@ -10,15 +10,14 @@ import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentChartsModule } from '@covalent/charts';
 import { CovalentDataTableModule } from '@covalent/data-table';
 
-import { Food } from './food.model';
-import { FoodComponent } from './food.component';
-import { FoodDetailComponent } from './food-detail/food-detail.component';
-import { FoodListComponent } from './food-list/food-list.component';
-import { FoodListResolveService} from './food-list/food-list-resolve.service';
-import { FoodRoutingModule } from './food-routing.module';
-import { FoodService } from './food.service';
-import { FoodInfoComponent } from './food-info/food-info.component';
-
+import { Food } from './food/shared/food.model';
+import { FoodDetailComponent } from './food/food-detail/food-detail.component';
+import { FoodListComponent } from './food/food-list/food-list.component';
+import { FoodListResolveService } from './food/food-list/food-list-resolve.service';
+import { FoodService } from './food/shared/food.service';
+import { NutritionComponent } from './nutrition.component';
+import { NutritionRoutingModule } from './nutrition-routing.module';
+import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
 
 @NgModule({
   imports: [
@@ -30,15 +29,15 @@ import { FoodInfoComponent } from './food-info/food-info.component';
     CovalentHighlightModule.forRoot(),
     CovalentJsonFormatterModule.forRoot(),
     CovalentMarkdownModule.forRoot(),
-    FoodRoutingModule
+    NutritionRoutingModule
   ],
   entryComponents: [TD_LOADING_ENTRY_COMPONENTS],
   declarations: [
     FoodDetailComponent,
     FoodListComponent,
-    FoodComponent,
-    FoodInfoComponent
+    NutritionComponent,
+    NutritionInfoComponent
   ],
   providers: [FoodService, FoodListResolveService]
 })
-export class FoodModule { }
+export class NutritionModule { }
