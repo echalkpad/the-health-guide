@@ -3,7 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodListComponent } from './food/food-list/food-list.component';
-import { FoodListResolveService } from './food/food-list/food-list-resolve.service';
+import { FoodListResolve } from './food/food-list/food-list-resolve.service';
+import { MacronutrientResolve } from './nutrients/services/macronutrient-resolve.service';
+import { MicronutrientResolve } from './nutrients/services/micronutrient-resolve.service';
+import { NutrientsComponent } from './nutrients/nutrients.component';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
 
@@ -23,7 +26,7 @@ const nutritionRoutes: Routes = [
                         path: '',
                         component: FoodListComponent,
                         resolve: {
-                            foods: FoodListResolveService
+                            foods: FoodListResolve
                         }
                     },
                     {
@@ -31,7 +34,15 @@ const nutritionRoutes: Routes = [
                         component: FoodDetailComponent
                     }
                 ]
-            }
+            },
+            {
+                path: 'nutrients',
+                component: NutrientsComponent,
+                resolve: {
+                    macronutrients: MacronutrientResolve,
+                    micronutrients: MicronutrientResolve
+                }
+            },
         ]
     }
 

@@ -1,0 +1,36 @@
+<div layout-gt-sm="row">
+  <div flex>
+    <md-card>
+      <md-card-title>Macronutrients</md-card-title>
+      <md-nav-list>
+        <template tdLoading="macronutrients.load">
+          <template let-item let-last="last" ngFor [ngForOf]="macronutrients">
+            <a md-list-item layout-align="row" [routerLink]="['../item', item.$key]">
+              <md-icon md-list-avatar>spa</md-icon>
+              <h3 md-line> {{ item.name }} </h3>
+              <p md-line> {{ item.category }} </p>
+            </a>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </template>
+      </md-nav-list>
+    </md-card>
+  </div>
+  <div flex>
+    <md-card>
+      <md-card-title>Micronutrients</md-card-title>
+      <md-nav-list>
+        <template tdLoading="micronutrients.load">
+          <template let-item let-last="last" ngFor [ngForOf]="micronutrients">
+            <a md-list-item layout-align="row" [routerLink]="['../item', item.$key]">
+              <md-icon md-list-avatar>spa</md-icon>
+              <h3 md-line> {{ item.name }} </h3>
+              <p md-line> {{ item.category }} </p>
+            </a>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </template>
+      </md-nav-list>
+    </md-card>
+  </div>
+</div>

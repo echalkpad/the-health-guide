@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
-import { Subscription } from 'rxjs/Subscription';
 
 import { Food } from './food.model';
 

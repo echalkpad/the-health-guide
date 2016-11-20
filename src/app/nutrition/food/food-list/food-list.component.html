@@ -1,20 +1,19 @@
-<md-card> 
+<md-card>
   <md-card-content>
-      <td-data-table
+    <td-data-table
         [data]="data"
         [columns]="columns"
-        pagination="true"
-        [pageSize]="pageSize"
-        rowSelection="true"
-        (rowSelect)="selectedRow($event)"
         multiple="false"
-        sorting="true"
-        [sortBy]="sortBy"
-        [sortOrder]="sortOrder"
+        [pageSize]="pageSize"
+        pagination="true"
+        (rowSelect)="selectedRow($event)"
+        rowSelection="true"
         search="true"
-        (sortChanged)="sortChanged($event)">
-      </td-data-table>
-
+        [sortBy]="sortBy"
+        (sortChanged)="sortChanged($event)"
+        sorting="true"
+        [sortOrder]="sortOrder"
+        title="Food database">
+    </td-data-table>
   </md-card-content>
-
 </md-card>

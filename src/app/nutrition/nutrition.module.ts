@@ -13,8 +13,12 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 import { Food } from './food/shared/food.model';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodListComponent } from './food/food-list/food-list.component';
-import { FoodListResolveService } from './food/food-list/food-list-resolve.service';
+import { FoodListResolve } from './food/food-list/food-list-resolve.service';
 import { FoodService } from './food/shared/food.service';
+import { MacronutrientResolve } from './nutrients/services/macronutrient-resolve.service';
+import { MicronutrientResolve } from './nutrients/services/micronutrient-resolve.service';
+import { NutrientsComponent } from './nutrients/nutrients.component';
+import { NutrientService } from './nutrients/services/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
@@ -36,8 +40,9 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
     FoodDetailComponent,
     FoodListComponent,
     NutritionComponent,
-    NutritionInfoComponent
+    NutritionInfoComponent,
+    NutrientsComponent
   ],
-  providers: [FoodService, FoodListResolveService]
+  providers: [FoodService, FoodListResolve, MacronutrientResolve, MicronutrientResolve, NutrientService]
 })
 export class NutritionModule { }

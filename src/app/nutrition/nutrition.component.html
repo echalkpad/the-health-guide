@@ -8,11 +8,15 @@
             <md-icon md-list-avatar>list</md-icon>
             Food list
         </a>
+        <a md-list-item [routerLink]="['nutrients']">
+            <md-icon md-list-avatar>list</md-icon>
+            Nutrients
+        </a>
     </md-nav-list>
     <div toolbar-buttons layout="row" layout-align="start center" flex>
-        <span>Food nutrition database</span>
+        <span>Nutrition</span>
         <span flex></span>
-        <button md-button class="md-icon-button"><md-icon class="md-24">more_vert</md-icon></button>
+        <button *ngIf="router.routerState.snapshot.url !== '/nutrition'" md-button class="md-icon-button"><md-icon class="md-24">more_vert</md-icon></button>
     </div>
     <router-outlet></router-outlet>
 </td-layout-manage-list>
