@@ -1,12 +1,10 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
-import { FirebaseListObservable } from 'angularfire2';
 import { TdDataTableSortingOrder } from '@covalent/data-table';
 
-import { Food } from '../food.model';
-import { FoodService } from '../food.service';
+import { Food } from '../shared/food.model';
 
 @Component({
   selector: 'app-food-list',
@@ -16,13 +14,11 @@ import { FoodService } from '../food.service';
 export class FoodListComponent implements OnInit {
   public columns: Object[];
   public data: any[] = [];
-  public pageSize: number = 10;
+  public pageSize: number = 5;
   public sortBy: string = 'name';
   public sortOrder: string = 'ASC';
   constructor(
-    private foodSvc: FoodService,
     private route: ActivatedRoute,
-    private router: Router,
     private titleSvc: Title
   ) {
     this.columns = [

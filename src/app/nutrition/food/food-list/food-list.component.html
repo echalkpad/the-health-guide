@@ -1,0 +1,19 @@
+<md-card>
+  <md-card-content>
+    <td-data-table
+        [data]="data"
+        [columns]="columns"
+        multiple="false"
+        [pageSize]="pageSize"
+        pagination="true"
+        (rowSelect)="selectedRow($event)"
+        rowSelection="true"
+        search="true"
+        [sortBy]="sortBy"
+        (sortChanged)="sortChanged($event)"
+        sorting="true"
+        [sortOrder]="sortOrder"
+        title="Food database">
+    </td-data-table>
+  </md-card-content>
+</md-card>

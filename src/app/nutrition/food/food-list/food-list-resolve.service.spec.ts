@@ -1,16 +1,16 @@
 /* tslint:disable:no-unused-variable */
 
 import { TestBed, async, inject } from '@angular/core/testing';
-import { FoodListResolveService } from './food-list-resolve.service';
+import { FoodListResolve } from './food-list-resolve.service';
 
 describe('Service: FoodListResolve', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [FoodListResolveService]
+      providers: [FoodListResolve]
     });
   });
 
-  it('should ...', inject([FoodListResolveService], (service: FoodListResolveService) => {
+  it('should ...', inject([FoodListResolve], (service: FoodListResolve) => {
     expect(service).toBeTruthy();
   }));
 });
