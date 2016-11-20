@@ -1,0 +1,43 @@
+<md-card>
+  <md-card-title class="md-display-1">{{ nutrient.name }}</md-card-title>
+  <md-card-subtitle>{{ nutrient.category }}</md-card-subtitle>
+  <md-divider></md-divider>
+  <md-card-content class="pad-md">
+    <h2 class="md-headline">Summary</h2>
+    <p [innerHtml]="nutrient.description"></p>
+    <md-divider></md-divider>
+    <div *ngIf="nutrient.classification">
+      <h2 class="md-headline">Classification</h2>
+      <md-list>
+        <md-list-item *ngFor="let item of nutrient.classification">
+          <h2 md-line>{{ item.name }}</h2>
+          <p md-line [innerHtml]="item.description"></p>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+    </div>
+    <div layout="column" layout-gt-sm="row" class="pad-md">
+      <div flex>
+        <h2 class="md-headline">Functions</h2>
+        <ul>
+          <li *ngFor="let item of nutrient.functions">{{ item }}</li>
+        </ul>
+      </div>
+      <div flex>
+        <h2 class="md-headline">Disease preventions</h2>
+        <ul>
+          <li *ngFor="let item of nutrient.diseasePrev">{{ item }}</li>
+        </ul>
+      </div>
+      <md-divider></md-divider>
+    </div>
+    <h2 class="md-headline">Defciency</h2>
+    <p [innerHtml]="nutrient.deficiency"></p>
+    <md-divider></md-divider>
+    <h2 class="md-headline">Toxicity</h2>
+    <p [innerHtml]="nutrient.toxicity"></p>
+    <md-divider></md-divider>
+    <h2 class="md-headline">Relationships</h2>
+    <p [innerHtml]="nutrient.nutrientRelationship"></p>
+  </md-card-content>
+</md-card>

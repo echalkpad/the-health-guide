@@ -15,10 +15,12 @@ import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodListComponent } from './food/food-list/food-list.component';
 import { FoodListResolve } from './food/food-list/food-list-resolve.service';
 import { FoodService } from './food/shared/food.service';
-import { MacronutrientResolve } from './nutrients/services/macronutrient-resolve.service';
-import { MicronutrientResolve } from './nutrients/services/micronutrient-resolve.service';
-import { NutrientsComponent } from './nutrients/nutrients.component';
-import { NutrientService } from './nutrients/services/nutrient.service';
+import { MacronutrientResolve } from './nutrients/shared/macronutrient-resolve.service';
+import { MicronutrientResolve } from './nutrients/shared/micronutrient-resolve.service';
+import { NutrientDetailComponent } from './nutrients/nutrient-detail/nutrient-detail.component';
+import { NutrientDetailResolve } from './nutrients/shared/nutrient-detail-resolve.service';
+import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
+import { NutrientService } from './nutrients/shared/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
@@ -41,8 +43,16 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
     FoodListComponent,
     NutritionComponent,
     NutritionInfoComponent,
-    NutrientsComponent
+    NutrientListComponent,
+    NutrientDetailComponent
   ],
-  providers: [FoodService, FoodListResolve, MacronutrientResolve, MicronutrientResolve, NutrientService]
+  providers: [
+    FoodService,
+    FoodListResolve,
+    MacronutrientResolve,
+    MicronutrientResolve,
+    NutrientDetailResolve,
+    NutrientService
+  ]
 })
 export class NutritionModule { }

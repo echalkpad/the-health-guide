@@ -1,20 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Resolve, Router } from '@angular/router';
 
-import { Nutrient } from '../nutrient.model';
+import { Nutrient } from './nutrient.model';
 import { NutrientService } from './nutrient.service';
 
 @Injectable()
-export class MicronutrientResolve implements Resolve<Nutrient[]> {
-    private micronutrients: Nutrient[] = [];
+export class MacronutrientResolve implements Resolve<Nutrient[]> {
+    private macronutrients: Nutrient[] = [];
     constructor(private nutrientSvc: NutrientService, private router: Router) { }
 
     public resolve(): Promise<Nutrient[]> | boolean {
         return new Promise((resolve, reject) => {
-            this.nutrientSvc.getMicronutrients().subscribe(
+            this.nutrientSvc.getMacronutrients().subscribe(
                 (data: Nutrient[]) => {
                     if (!!data && !!data.length) {
-                        this.micronutrients = [...data];
+                        this.macronutrients = [...data];
                     }
                 }, (error: Error) => {
                     reject(error);
@@ -22,10 +22,10 @@ export class MicronutrientResolve implements Resolve<Nutrient[]> {
                 }
             );
             setTimeout(() => {
-                if (!this.micronutrients) {
+                if (!this.macronutrients) {
                     this.router.navigate(['/nutrition']);
                 } else {
-                    resolve(this.micronutrients);
+                    resolve(this.macronutrients);
                 }
             }, 3000);
         });
