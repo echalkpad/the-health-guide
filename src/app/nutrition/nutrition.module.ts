@@ -9,6 +9,8 @@ import { CovalentJsonFormatterModule } from '@covalent/json-formatter';
 import { CovalentMarkdownModule } from '@covalent/markdown';
 import { CovalentChartsModule } from '@covalent/charts';
 import { CovalentDataTableModule } from '@covalent/data-table';
+import { CovalentPagingModule } from '@covalent/paging';
+import { CovalentSearchModule } from '@covalent/search';
 
 import { Food } from './food/shared/food.model';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
@@ -35,6 +37,8 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
     CovalentHighlightModule.forRoot(),
     CovalentJsonFormatterModule.forRoot(),
     CovalentMarkdownModule.forRoot(),
+    CovalentPagingModule.forRoot(),
+    CovalentSearchModule.forRoot(),
     NutritionRoutingModule
   ],
   entryComponents: [TD_LOADING_ENTRY_COMPONENTS],

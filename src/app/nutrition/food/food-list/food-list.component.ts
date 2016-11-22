@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
-import { TdDataTableSortingOrder } from '@covalent/data-table';
+import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
+import { IPageChangeEvent } from '@covalent/paging';
 
 import { Food } from '../shared/food.model';
 
@@ -13,11 +14,17 @@ import { Food } from '../shared/food.model';
 })
 export class FoodListComponent implements OnInit {
   public columns: Object[];
+  public currentPage: number = 1;
   public data: any[] = [];
+  public filteredData: any[] = [];
+  public filteredTotal: number = 0;
+  public fromRow: number = 1;
   public pageSize: number = 5;
+  public searchTerm: string = '';
   public sortBy: string = 'name';
-  public sortOrder: string = 'ASC';
+  public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
+    private dataTableSvc: TdDataTableService,
     private route: ActivatedRoute,
     private titleSvc: Title
   ) {
@@ -35,14 +42,35 @@ export class FoodListComponent implements OnInit {
     ];
   }
 
-  public selectedRow(row: any): void {
-    console.log(row);
+  private filter(): void {
+    let newData: any[] = this.data;
+    newData = this.dataTableSvc.filterData(newData, this.searchTerm, true);
+    this.filteredTotal = newData.length;
+    newData = this.dataTableSvc.sortData(newData, this.sortBy, this.sortOrder);
+    newData = this.dataTableSvc.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
+    this.filteredData = newData;
   }
 
-  public sortChanged(changes: any): void {
-    const { column, order }: any = changes;
-    this.sortBy = column.name;
-    this.sortOrder = order === TdDataTableSortingOrder.Ascending ? 'ASC' : 'DESC';
+  public openDetails(ev: { item: Food }): void {
+    console.log(ev.item);
+  }
+
+  public search(searchTerm: string): void {
+    this.searchTerm = searchTerm;
+    this.filter();
+  }
+
+  public page(pagingEvent: IPageChangeEvent): void {
+    this.fromRow = pagingEvent.fromRow;
+    this.currentPage = pagingEvent.page;
+    this.pageSize = pagingEvent.pageSize;
+    this.filter();
+  }
+
+  public sort(sortEvent: ITdDataTableSortChangeEvent): void {
+    this.sortBy = sortEvent.name;
+    this.sortOrder = sortEvent.order;
+    this.filter();
   }
 
   ngOnInit(): void {
@@ -50,6 +78,7 @@ export class FoodListComponent implements OnInit {
       console.log(data);
       if (!!data) {
         this.data = [...data.foods];
+        this.filter();
       }
     });
     this.titleSvc.setTitle("Food list");
