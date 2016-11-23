@@ -14,6 +14,7 @@ import { CovalentSearchModule } from '@covalent/search';
 
 import { Food } from './food/shared/food.model';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
+import { FoodDetailResolve } from './food/shared/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
 import { FoodListResolve } from './food/food-list/food-list-resolve.service';
 import { FoodService } from './food/shared/food.service';
@@ -51,8 +52,9 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
     NutrientDetailComponent
   ],
   providers: [
-    FoodService,
+    FoodDetailResolve,
     FoodListResolve,
+    FoodService,
     MacronutrientResolve,
     MicronutrientResolve,
     NutrientDetailResolve,

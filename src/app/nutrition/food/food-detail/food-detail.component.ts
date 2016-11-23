@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
+import { ActivatedRoute } from '@angular/router';
+
+import { Food } from '../shared/food.model';
 
 @Component({
   selector: 'app-food-detail',
@@ -6,10 +10,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-detail.component.scss']
 })
 export class FoodDetailComponent implements OnInit {
+  public food: Food;
+  constructor(private detector: ChangeDetectorRef, private route: ActivatedRoute) { }
 
-  constructor() { }
-
-  ngOnInit() {
+  ngOnInit(): void {
+    this.route.data.subscribe((data: { food: Food }) => {
+      if (!!data) {
+        this.food = Object.assign({}, data.food);
+        console.log(this.food);
+      }
+    });
   }
 
 }

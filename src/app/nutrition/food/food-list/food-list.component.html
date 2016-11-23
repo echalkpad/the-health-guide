@@ -7,7 +7,7 @@
     </td-search-box>
   </md-card-title>
   <md-divider></md-divider>
-  <md-card-content>
+  <md-card-content *tdLoading="'food.load'" loadingType="circular">
     <td-data-table
       [data]="filteredData"
       [columns]="columns"

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
+import { TdLoadingService } from '@covalent/core';
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
 import { IPageChangeEvent } from '@covalent/paging';
 
@@ -12,7 +13,7 @@ import { Food } from '../shared/food.model';
   templateUrl: './food-list.component.html',
   styleUrls: ['./food-list.component.scss']
 })
-export class FoodListComponent implements OnInit {
+export class FoodListComponent implements AfterViewInit {
   public columns: Object[];
   public currentPage: number = 1;
   public data: any[] = [];
@@ -25,7 +26,9 @@ export class FoodListComponent implements OnInit {
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
     private dataTableSvc: TdDataTableService,
+    private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
+    private router: Router,
     private titleSvc: Title
   ) {
     this.columns = [
@@ -51,8 +54,8 @@ export class FoodListComponent implements OnInit {
     this.filteredData = newData;
   }
 
-  public openDetails(ev: { item: Food }): void {
-    console.log(ev.item);
+  public openDetails(ev: { row: Food }): void {
+    this.router.navigate(['/nutrition/food', ev.row.$key]);
   }
 
   public search(searchTerm: string): void {
@@ -73,7 +76,9 @@ export class FoodListComponent implements OnInit {
     this.filter();
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
+    this.loadingSvc.register('food.load');
+    setTimeout(() => this.loadingSvc.resolve('food.load'), 3000);
     this.route.data.subscribe((data: { foods: Food[] }) => {
       console.log(data);
       if (!!data) {

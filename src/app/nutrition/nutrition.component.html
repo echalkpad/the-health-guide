@@ -4,7 +4,7 @@
             <md-icon md-list-avatar>book</md-icon>
             <h3 md-line>About</h3>
         </a>
-        <a md-list-item [routerLink]="['food']" (click)="startLoading()">
+        <a md-list-item [routerLink]="['food']">
             <md-icon md-list-avatar>list</md-icon>
             <h3 md-line>Food list</h3>
         </a>
@@ -16,5 +16,5 @@
     <div nav-toolbar-content layout="row" flex>
       <span>{{ pageTitle }}</span>
     </div>
-    <router-outlet *tdLoading="'food.load'" loadingType="circular"></router-outlet>
+    <router-outlet></router-outlet>
 </td-layout-nav-list>

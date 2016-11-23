@@ -15,6 +15,7 @@ export class FoodListResolve implements Resolve<Food[]> {
                 (data: Food[]) => {
                     if (!!data && !!data.length) {
                         this.foods = [...data];
+                        console.log(this.foods);
                     }
                 }, (error: Error) => {
                     reject(error);
@@ -22,7 +23,7 @@ export class FoodListResolve implements Resolve<Food[]> {
                 }
             );
             setTimeout(() => {
-                if (!this.foods) {
+                if (this.foods.length === 0) {
                     this.router.navigate(['/nutrition']);
                 } else {
                     resolve(this.foods);

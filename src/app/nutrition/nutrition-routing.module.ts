@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
+import { FoodDetailResolve } from './food/shared/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
 import { FoodListResolve } from './food/food-list/food-list-resolve.service';
 import { MacronutrientResolve } from './nutrients/shared/macronutrient-resolve.service';
@@ -18,22 +19,21 @@ const nutritionRoutes: Routes = [
         component: NutritionComponent,
         children: [
             {
-                path: '',
-                component: NutritionInfoComponent,
-            },
-            {
                 path: 'food',
                 children: [
+                    {
+                        path: ':key',
+                        component: FoodDetailComponent,
+                        resolve: {
+                            food: FoodDetailResolve
+                        }
+                    },
                     {
                         path: '',
                         component: FoodListComponent,
                         resolve: {
                             foods: FoodListResolve
                         }
-                    },
-                    {
-                        path: ':id',
-                        component: FoodDetailComponent
                     }
                 ]
             },
@@ -41,21 +41,25 @@ const nutritionRoutes: Routes = [
                 path: 'nutrients',
                 children: [
                     {
+                        path: ':category/:key',
+                        component: NutrientDetailComponent,
+                        resolve: {
+                            nutrient: NutrientDetailResolve
+                        }
+                    },
+                    {
                         path: '',
                         component: NutrientListComponent,
                         resolve: {
                             macronutrients: MacronutrientResolve,
                             micronutrients: MicronutrientResolve
                         }
-                    },
-                    {
-                        path: ':category/:key',
-                        component: NutrientDetailComponent,
-                        resolve: {
-                            nutrient: NutrientDetailResolve
-                        }
                     }
                 ]
+            },
+            {
+                path: '',
+                component: NutritionInfoComponent,
             }
         ]
     }

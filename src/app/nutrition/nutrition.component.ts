@@ -9,12 +9,7 @@ import { TdLoadingService } from '@covalent/core';
 })
 export class NutritionComponent implements OnInit {
   public pageTitle: string = "Nutrition";
-  constructor(private loadingSvc: TdLoadingService) { }
-
-  public startLoading(): void {
-    this.loadingSvc.register('food.load');
-    setTimeout(() => this.loadingSvc.resolve('food.load'), 4000);
-  }
+  constructor() { }
 
   public changeTitle(title: string): void {
     this.pageTitle = title;
