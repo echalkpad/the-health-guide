@@ -28,7 +28,7 @@ export class FoodListResolve implements Resolve<Food[]> {
                 } else {
                     resolve(this.foods);
                 }
-            }, 5000);
+            }, 10000);
         });
     }
 
