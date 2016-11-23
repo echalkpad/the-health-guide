@@ -1,3 +1,66 @@
-<p>
-  food-detail works!
-</p>
+<div layout="row">
+  <div layout="column" flex>
+    <md-card>
+      <md-card-title>Basic</md-card-title>
+      <md-card-content>
+        <md-list>
+          <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
+            <md-list-item>
+              <h3 md-line>{{ item }}</h3>
+              <span flex></span>
+              <div class="md-caption tc-grey-500"> {{ food[item] }} </div>
+            </md-list-item>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </md-list>
+      </md-card-content>
+    </md-card>
+    <md-card>
+      <md-card-title>Amino acids</md-card-title>
+      <md-card-content>
+        <md-list>
+          <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
+            <md-list-item>
+              <h3 md-line>{{ item }}</h3>
+              <span flex></span>
+              <div class="md-caption tc-grey-500"> {{ food['amino acids'][item] }} </div>
+            </md-list-item>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
+  <div layout="column" flex>
+    <md-card>
+      <md-card-title>Vitamins</md-card-title>
+      <md-card-content>
+        <md-list>
+          <template let-item let-last="last" ngFor [ngForOf]="vitamins">
+            <md-list-item>
+              <h3 md-line>{{ item }}</h3>
+              <span flex></span>
+              <div class="md-caption tc-grey-500"> {{ food['vitamins'][item] }} </div>
+            </md-list-item>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </md-list>
+      </md-card-content>
+    </md-card>
+    <md-card>
+      <md-card-title>Minerals</md-card-title>
+      <md-card-content>
+        <md-list>
+          <template let-item let-last="last" ngFor [ngForOf]="minerals">
+            <md-list-item>
+              <h3 md-line>{{ item }}</h3>
+              <span flex></span>
+              <div class="md-caption tc-grey-500"> {{ food['minerals'][item] }} </div>
+            </md-list-item>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </md-list>
+      </md-card-content>
+    </md-card>
+  </div>
+</div>

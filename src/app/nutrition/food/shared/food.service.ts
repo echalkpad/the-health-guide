@@ -14,8 +14,8 @@ export class FoodService {
         });
     }
 
-    public getFood(key: string): FirebaseObjectObservable<Food> {
-        return this.af.database.object('/food/`${key}`');
+    public getFood(key: string | number): FirebaseObjectObservable<Food> {
+        return this.af.database.object(`/foods/${key}`);
     }
 
     public getFoods(): FirebaseListObservable<Food[]> {

@@ -5,11 +5,13 @@
   <button md-icon-button [md-menu-trigger-for]="menu">
   <md-icon>more_vert</md-icon>
 </button>
-  <md-menu #menu="mdMenu" class="before">
+  <md-menu #menu="mdMenu" x-position="before">
+    <button md-menu-item (click)="query='name'">Name</button>
+    <button md-menu-item (click)="query='description'">Summary</button>
     <button md-menu-item (click)="query='functions'">Functions</button>
-    <button md-menu-item> Settings </button>
-    <button md-menu-item> Help </button>
-    <button md-menu-item disabled> Sign Out </button>
+    <button md-menu-item (click)="query='diseasePrev'">Preventions</button>
+    <button md-menu-item (click)="query='deficiency'">Deficiency</button>
+    <button md-menu-item (click)="query='toxicity'">Toxicity</button>
   </md-menu>
 </md-toolbar>
 <div layout="column" layout-gt-sm="row">

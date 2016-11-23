@@ -1,5 +1,15 @@
 <td-layout-nav toolbarTitle="The Health Guide">
-    <td-layout-card-over cardTitle="Homepage" cardSubtitle="Welcome home" cardWidth="75">
-      <md-card-content><p>This is where it starts</p></md-card-content>
-    </td-layout-card-over>
-  </td-layout-nav>
+  <td-layout-card-over cardTitle="Homepage" cardSubtitle="Welcome home" cardWidth="75">
+    <md-card-content>
+      <p>This is where it starts</p>
+      
+      <md-grid-list cols="4" [style.background]="'lightblue'">
+        <md-grid-tile [colspan]="2" [rowspan]="1">One</md-grid-tile>
+        <md-grid-tile [colspan]="2" [rowspan]="1">Two</md-grid-tile>
+        <md-grid-tile [colspan]="2" [rowspan]="1">Three</md-grid-tile>
+        <md-grid-tile [colspan]="2" [rowspan]="1">Four</md-grid-tile>
+      </md-grid-list>
+    </md-card-content>
+  </td-layout-card-over>
+
+</td-layout-nav>

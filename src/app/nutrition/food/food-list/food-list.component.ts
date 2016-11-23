@@ -1,6 +1,6 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { TdLoadingService } from '@covalent/core';
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
@@ -13,7 +13,7 @@ import { Food } from '../shared/food.model';
   templateUrl: './food-list.component.html',
   styleUrls: ['./food-list.component.scss']
 })
-export class FoodListComponent implements AfterViewInit, OnInit {
+export class FoodListComponent implements AfterViewInit {
   public columns: Object[];
   public currentPage: number = 1;
   public data: any[] = [];
@@ -28,6 +28,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
     private dataTableSvc: TdDataTableService,
     private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
+    private router: Router,
     private titleSvc: Title
   ) {
     this.columns = [
@@ -53,8 +54,8 @@ export class FoodListComponent implements AfterViewInit, OnInit {
     this.filteredData = newData;
   }
 
-  public openDetails(ev: { item: Food }): void {
-    console.log(ev.item);
+  public openDetails(ev: { row: Food }): void {
+    this.router.navigate(['/nutrition/food', ev.row.$key]);
   }
 
   public search(searchTerm: string): void {
@@ -77,7 +78,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
     this.loadingSvc.register('food.load');
-    setTimeout(() => this.loadingSvc.resolve('food.load'), 2000);
+    setTimeout(() => this.loadingSvc.resolve('food.load'), 3000);
     this.route.data.subscribe((data: { foods: Food[] }) => {
       console.log(data);
       if (!!data) {
@@ -86,10 +87,6 @@ export class FoodListComponent implements AfterViewInit, OnInit {
       }
     });
     this.titleSvc.setTitle("Food list");
-  }
-
-  ngOnInit(): void {
-    
   }
 
 }

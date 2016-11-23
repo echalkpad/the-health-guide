@@ -2,6 +2,7 @@ import { Nutrition } from '../../nutrition.model';
 
 export class Food extends Nutrition {
     constructor(
+        public $key: string = "",
         public name: string = "",
         public category: string = "",
         public energy: number = 0,
