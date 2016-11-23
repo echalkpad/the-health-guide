@@ -1,11 +1,9 @@
-<td-layout #layout title="The Health Guide" color="primary">
+<td-layout #layout sidenavTitle="The Health Guide" color="primary">
   <md-nav-list menu-items>
     <a *ngFor="let item of routeLinks" md-list-item [routerLink]="[item.route]" (click)="layout.close()">
       <md-icon>{{item.icon}}</md-icon>
       {{item.title}}
     </a>
   </md-nav-list>
-  <td-layout-nav title="The Health Guide">
-    <router-outlet></router-outlet>
-  </td-layout-nav>
+  <router-outlet></router-outlet>
 </td-layout>

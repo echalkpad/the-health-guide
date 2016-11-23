@@ -1,19 +1,25 @@
 <md-card>
-  <md-card-content>
+  <md-card-title layout="row" layout-align="start center" class="pad-left-sm pad-right-sm">
+    <span *ngIf="!searchBox.searchVisible" class="push-left-sm">
+        <span class="md-title">Food nutrition database</span>
+    </span>
+    <td-search-box #searchBox backIcon="clear" class="push-right-sm" placeholder="Search here" (searchDebounce)="search($event)" flex>
+    </td-search-box>
+  </md-card-title>
+  <md-divider></md-divider>
+  <md-card-content *tdLoading="'food.load'" loadingType="circular">
     <td-data-table
-        [data]="data"
-        [columns]="columns"
-        multiple="false"
-        [pageSize]="pageSize"
-        pagination="true"
-        (rowSelect)="selectedRow($event)"
-        rowSelection="true"
-        search="true"
-        [sortBy]="sortBy"
-        (sortChanged)="sortChanged($event)"
-        sorting="true"
-        [sortOrder]="sortOrder"
-        title="Food database">
+      [data]="filteredData"
+      [columns]="columns"
+      [multiple]="false"
+      (rowSelect)="openDetails($event)"
+      [selectable]="true"
+      [sortable]="true"
+      [sortBy]="sortBy"
+      [sortOrder]="sortOrder"
+      (sortChange)="sort($event)">
     </td-data-table>
+    <td-paging-bar [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
+
   </md-card-content>
 </md-card>
