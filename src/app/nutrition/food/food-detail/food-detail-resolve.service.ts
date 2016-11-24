@@ -24,7 +24,7 @@ export class FoodDetailResolve implements Resolve<Food> {
         } else {
           resolve(this.food);
         }
-      }, 3000);
+      }, 1000);
     });
   }
 
