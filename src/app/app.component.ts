@@ -15,11 +15,9 @@ export class AppComponent implements OnInit {
   constructor(private af: AngularFire, private router: Router) {
     this.routeLinks = [
       {
-        title: "Login", route: "/", icon: "account_circle"
+        title: "Home", route: "/home", icon: "home"
       },
       {
-        title: "Home", route: "/home", icon: "home"
-      }, {
         title: "Nutrition", route: "/nutrition", icon: "spa"
       }
     ];

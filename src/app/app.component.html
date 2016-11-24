@@ -1,4 +1,4 @@
-<td-layout #layout sidenavTitle="The Health Guide" displayName="{{ username }}" (logout)="logout()">
+<td-layout #layout sidenavTitle="The Health Guide" displayName="{{ username }}" (logout)="logout(); layout.close()">
   <md-nav-list menu-items>
     <a *ngFor="let item of routeLinks" md-list-item [routerLink]="[item.route]" (click)="layout.close()">
       <md-icon>{{item.icon}}</md-icon>
