@@ -1,7 +1,7 @@
 <md-toolbar layout-align="center">
-  <td-search-box backIcon="clear" placeholder="Search" [showUnderline]="true" [debounce]="500" [alwaysVisible]="false" (search)="filterNutrients($event)" (searchDebounce)="filterNutrients($event)" (clear)="searchInputTerm = ''" flex>
+  <td-search-box backIcon="clear" placeholder="Search" [showUnderline]="true" [debounce]="500" [alwaysVisible]="false" (search)="filterNutrients($event)" (searchDebounce)="filterNutrients($event)" (clear)="searchInputTerm = ''"
+    flex>
   </td-search-box>
-
   <button md-icon-button [md-menu-trigger-for]="menu">
   <md-icon>more_vert</md-icon>
 </button>

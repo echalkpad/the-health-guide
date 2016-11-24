@@ -1,8 +1,10 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { TdLoadingService } from '@covalent/core';
+import { TdDialogService } from '@covalent/core';
 
 import { Nutrient } from '../shared/nutrient.model';
 import { NutrientService } from '../shared/nutrient.service';
@@ -20,11 +22,21 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   public query: string = 'name';
   public querySearch: boolean = false;
   constructor(
+    private dialogService: TdDialogService,
     private loadingSvc: TdLoadingService,
     private nutrientSvc: NutrientService,
-    private route: ActivatedRoute,
+    private router: Router,
     private titleSvc: Title
   ) { }
+
+  private showAlert(): void {
+    this.dialogService.openAlert({
+      message: 'Sorry, there is no data available at the moment! Please try again later!',
+      disableClose: false,
+      title: 'No data found',
+      closeButton: 'Close'
+    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
+  }
 
   public filterNutrients(searchTerm: string): void {
     this.filteredMacronutrients = this.nutrientSvc.filterNutrient(this.macronutrients, this.query, searchTerm);
@@ -44,6 +56,9 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
     setTimeout(() => {
       this.loadingSvc.resolve('macronutrients.load');
       this.loadingSvc.resolve('micronutrients.load');
+      if (!this.macronutrients.length || !this.micronutrients.length) {
+        this.showAlert();
+      }
     }, 2000);
     this.titleSvc.setTitle("Nutrients");
   }

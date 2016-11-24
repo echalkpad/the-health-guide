@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 import { TdLoadingService } from '@covalent/core';
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
+import { TdDialogService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
 import { Food } from '../shared/food.model';
@@ -27,9 +28,9 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
     private dataTableSvc: TdDataTableService,
+    private dialogService: TdDialogService,
     private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
-    private route: ActivatedRoute,
     private router: Router,
     private titleSvc: Title
   ) {
@@ -56,6 +57,15 @@ export class FoodListComponent implements AfterViewInit, OnInit {
     this.filteredData = newData;
   }
 
+  private showAlert(): void {
+    this.dialogService.openAlert({
+      message: 'Sorry, there is no data available at the moment! Please try again later!',
+      disableClose: false,
+      title: 'No data found',
+      closeButton: 'Close'
+    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
+  }
+
   public openDetails(ev: { row: Food }): void {
     this.router.navigate(['/nutrition/food', ev.row.$key]);
   }
@@ -80,7 +90,12 @@ export class FoodListComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit(): void {
     this.loadingSvc.register('food.load');
-    setTimeout(() => this.loadingSvc.resolve('food.load'), 2000);
+    setTimeout(() => {
+      this.loadingSvc.resolve('food.load');
+      if (!this.data.length) {
+        this.showAlert();
+      }
+    }, 2000);
     this.titleSvc.setTitle("Food list");
   }
 
