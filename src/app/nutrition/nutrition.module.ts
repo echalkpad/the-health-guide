@@ -26,6 +26,7 @@ import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeService } from './recipes/shared/recipe.service';
 
 @NgModule({
   imports: [
@@ -56,7 +57,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
     FoodDetailResolve,
     FoodService,
     NutrientDetailResolve,
-    NutrientService
+    NutrientService,
+    RecipeService
   ]
 })
 export class NutritionModule { }

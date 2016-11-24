@@ -1,3 +1,7 @@
-<p>
-  recipe-list works!
-</p>
+<md-card *ngFor="let recipe of recipes | async">
+  <md-card-title>{{ recipe.name }}</md-card-title>
+  <md-card-subtitle>{{ recipe.chef }}</md-card-subtitle>
+  <md-card-actions layout="row">
+    <button color="accent" md-raised-button>Read more</button>
+  </md-card-actions>
+</md-card>

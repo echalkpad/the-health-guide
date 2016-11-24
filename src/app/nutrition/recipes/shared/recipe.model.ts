@@ -8,6 +8,7 @@ export interface Ingredient extends Food, Recipe {
 export class Recipe {
     constructor (
         public name: string = "",
+        public imgUrl: string = "",
         public category: string = "",
         public dietaries: string[] = [],
         public chef: string = "",
