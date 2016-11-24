@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
 
-import { Food } from './food.model';
-import { FoodService } from './food.service';
+import { Food } from '../shared/food.model';
+import { FoodService } from '../shared/food.service';
 
 @Injectable()
 export class FoodDetailResolve implements Resolve<Food> {

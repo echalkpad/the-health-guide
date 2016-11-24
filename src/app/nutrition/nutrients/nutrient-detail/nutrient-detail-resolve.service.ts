@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router } from '@angular/router';
 
-import { Nutrient } from './nutrient.model';
-import { NutrientService } from './nutrient.service';
+import { Nutrient } from '../shared/nutrient.model';
+import { NutrientService } from '../shared/nutrient.service';
 
 @Injectable()
 export class NutrientDetailResolve implements Resolve<Nutrient> {

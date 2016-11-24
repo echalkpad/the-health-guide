@@ -1,4 +1,4 @@
-import { AfterViewInit, Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -7,13 +7,14 @@ import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEven
 import { IPageChangeEvent } from '@covalent/paging';
 
 import { Food } from '../shared/food.model';
+import { FoodService } from '../shared/food.service';
 
 @Component({
   selector: 'app-food-list',
   templateUrl: './food-list.component.html',
   styleUrls: ['./food-list.component.scss']
 })
-export class FoodListComponent implements AfterViewInit {
+export class FoodListComponent implements AfterViewInit, OnInit {
   public columns: Object[];
   public currentPage: number = 1;
   public data: any[] = [];
@@ -26,6 +27,7 @@ export class FoodListComponent implements AfterViewInit {
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
     private dataTableSvc: TdDataTableService,
+    private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
     private router: Router,
@@ -33,7 +35,7 @@ export class FoodListComponent implements AfterViewInit {
   ) {
     this.columns = [
       { name: 'name', label: 'Food' },
-      { name: 'energy', label: 'Energy (kcal)', numeric: true },
+      { name: 'Energy', label: 'Energy (kcal)', numeric: true },
       { name: 'Protein', label: 'Protein (g)', numeric: true },
       { name: 'Carbohydrates', label: 'Carbs (g)', numeric: true },
       { name: 'Sugars', label: 'Sugars (g)', numeric: true },
@@ -78,15 +80,18 @@ export class FoodListComponent implements AfterViewInit {
 
   ngAfterViewInit(): void {
     this.loadingSvc.register('food.load');
-    setTimeout(() => this.loadingSvc.resolve('food.load'), 3000);
-    this.route.data.subscribe((data: { foods: Food[] }) => {
-      console.log(data);
-      if (!!data) {
-        this.data = [...data.foods];
-        this.filter();
-      }
-    });
+    setTimeout(() => this.loadingSvc.resolve('food.load'), 2000);
     this.titleSvc.setTitle("Food list");
+  }
+
+  ngOnInit(): void {
+    this.foodSvc.getFoods().subscribe((data: Food[]) => {
+        if (!!data && !!data.length) {
+          this.data = [...data];
+          this.filter();
+        }
+      }
+    );
   }
 
 }

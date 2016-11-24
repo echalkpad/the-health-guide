@@ -1,4 +1,4 @@
-import { AfterViewInit, ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
@@ -8,7 +8,6 @@ import { Nutrient } from '../shared/nutrient.model';
 import { NutrientService } from '../shared/nutrient.service';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-nutrients',
   templateUrl: './nutrient-list.component.html',
   styleUrls: ['./nutrient-list.component.scss']
@@ -21,7 +20,6 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   public query: string = 'name';
   public querySearch: boolean = false;
   constructor(
-    private detector: ChangeDetectorRef,
     private loadingSvc: TdLoadingService,
     private nutrientSvc: NutrientService,
     private route: ActivatedRoute,
@@ -43,26 +41,26 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   ngAfterViewInit(): void {
     this.loadingSvc.register('macronutrients.load');
     this.loadingSvc.register('micronutrients.load');
-    this.detector.markForCheck();
     setTimeout(() => {
       this.loadingSvc.resolve('macronutrients.load');
       this.loadingSvc.resolve('micronutrients.load');
-      this.detector.markForCheck();
-    }, 1000);
-    setTimeout(() => {
-      this.detector.markForCheck();
     }, 2000);
-
     this.titleSvc.setTitle("Nutrients");
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { macronutrients: Nutrient[], micronutrients: Nutrient[] }) => {
-      if (!!data) {
-        this.macronutrients = [...data.macronutrients];
-        this.micronutrients = [...data.micronutrients];
-        this.filteredMacronutrients = [...data.macronutrients];
-        this.filteredMicronutrients = [...data.micronutrients];
+    this.nutrientSvc.getMacronutrients().subscribe((data: Nutrient[]) => {
+      console.log(data);
+      if (!!data && !!data.length) {
+        this.macronutrients = [...data];
+        this.filteredMacronutrients = [...data];
+      }
+    });
+    this.nutrientSvc.getMicronutrients().subscribe((data: Nutrient[]) => {
+      console.log(data);
+      if (!!data && !!data.length) {
+        this.micronutrients = [...data];
+        this.filteredMicronutrients = [...data];
       }
     });
   }
