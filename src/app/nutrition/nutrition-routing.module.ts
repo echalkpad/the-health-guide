@@ -9,6 +9,8 @@ import { NutrientDetailResolve } from './nutrients/nutrient-detail/nutrient-deta
 import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 
 const nutritionRoutes: Routes = [
     {
@@ -44,6 +46,19 @@ const nutritionRoutes: Routes = [
                     {
                         path: '',
                         component: NutrientListComponent
+                    }
+                ]
+            },
+            {
+                path: 'recipes',
+                children: [
+                    {
+                        path: ':key',
+                        component: RecipeDetailComponent
+                    },
+                    {
+                        path: '',
+                        component: RecipeListComponent
                     }
                 ]
             },

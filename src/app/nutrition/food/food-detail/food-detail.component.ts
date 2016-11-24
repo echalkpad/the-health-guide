@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 
 import { Food } from '../shared/food.model';
@@ -13,13 +13,17 @@ import { Food } from '../shared/food.model';
 export class FoodDetailComponent implements OnInit {
   public aminoacids: string[] = [];
   public basicNutrients: string[] = [];
-  public minerals: string[] =  [];
+  public minerals: string[] = [];
   public food: Food;
   public vitamins: string[] = [];
-  constructor(private detector: ChangeDetectorRef, private route: ActivatedRoute) {
-  }
+  constructor(
+    private detector: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private titleSvc: Title
+  ) { }
 
   ngOnInit(): void {
+    console.log(this.route);
     this.route.data.subscribe((data: { food: Food }) => {
       if (!!data) {
         this.food = Object.assign({}, data.food);
@@ -37,8 +41,8 @@ export class FoodDetailComponent implements OnInit {
         for (let prop in this.food['minerals']) {
           this.minerals.push(prop);
         }
+         this.titleSvc.setTitle(this.food.name);
         this.detector.markForCheck();
-        console.log(this.food);
       }
     });
   }

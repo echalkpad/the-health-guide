@@ -95,7 +95,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
       if (!this.data.length) {
         this.showAlert();
       }
-    }, 2000);
+    }, 3000);
     this.titleSvc.setTitle("Food list");
   }
 

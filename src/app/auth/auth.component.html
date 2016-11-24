@@ -1,0 +1,60 @@
+<div layout="column" layout-fill>
+  <md-toolbar color="primary" class="md-whiteframe-z1">
+    <span>Login</span>
+  </md-toolbar>
+  <div class="md-content" layout-padding flex>
+    <div layout-gt-xs="row" layout-align-gt-xs="center start" class="margin">
+      <div flex-gt-xs="50">
+        <md-card tdMediaToggle="gt-xs" [mediaClasses]="['push-top-lg']">
+          <md-card-title>Login</md-card-title>
+          <md-card-subtitle>Sign in via your current application account</md-card-subtitle>
+          <md-divider></md-divider>
+          <md-card-content>
+            <form #loginForm="ngForm">
+              <div layout="row">
+                <md-input #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="email" [(ngModel)]="email" required>
+                  <span md-prefix><md-icon>person</md-icon></span>
+                  <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
+                    <span [hidden]="!emailControl.errors?.required">Required</span>
+                  </md-hint>
+                  <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
+                </md-input>
+              </div>
+              <div layout="row">
+                <md-input #passControl="ngModel" flex placeholder="Password" type="password" name="password" [(ngModel)]="password" required>
+                  <span md-prefix><md-icon>lock</md-icon></span>
+                  <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
+                    <span [hidden]="!passControl.errors?.required">Required</span>
+                  </md-hint>
+                  <md-hint align="end">Something hard to guess</md-hint>
+                </md-input>
+              </div>
+            </form>
+          </md-card-content>
+          <md-divider></md-divider>
+          <md-card-actions layout="column" layout-align="center center">
+            <button md-raised-button flex color="accent" [disabled]="!loginForm.form.valid" (click)="passLogin(loginForm.value)">
+              Sign In
+              </button>
+            <button md-raised-button flex class="bgc-blue-700 social" (click)="fbLogin()">
+              <span class="fa fa-facebook" aria-hidden="true"></span>
+              Log in via Facebook
+            </button>
+            <button md-raised-button flex class="bgc-red-700 social" (click)="googleLogin()">
+              <span class="fa fa-google" aria-hidden="true"></span>
+              Log in via Google
+              </button>
+            <button md-raised-button flex class="bgc-light-blue-400 social" (click)="twitterLogin()">
+              <span class="fa fa-twitter" aria-hidden="true"></span>
+              Log in via Twitter
+              </button>
+            <button md-raised-button flex class="bgc-teal-900 social" (click)="githubLogin()">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              Log in via Github
+              </button>
+          </md-card-actions>
+        </md-card>
+      </div>
+    </div>
+  </div>
+</div>

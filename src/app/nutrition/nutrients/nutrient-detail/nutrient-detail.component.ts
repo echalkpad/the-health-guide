@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
+import { TdLoadingService } from '@covalent/core';
 
 import { Nutrient } from '../shared/nutrient.model';
 
@@ -12,12 +13,18 @@ import { Nutrient } from '../shared/nutrient.model';
 })
 export class NutrientDetailComponent implements OnInit {
   public nutrient: Nutrient;
-  constructor(private detector: ChangeDetectorRef, private route: ActivatedRoute) { }
+  constructor(
+    private detector: ChangeDetectorRef,
+    private route: ActivatedRoute,
+    private titleSvc: Title
+  ) { }
+
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { nutrient: Nutrient }) => {
       if (!!data) {
         this.nutrient = Object.assign({}, data.nutrient);
+        this.titleSvc.setTitle(this.nutrient.name);
         this.detector.markForCheck();
         console.log(this.nutrient);
       }

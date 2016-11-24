@@ -24,6 +24,8 @@ import { NutrientService } from './nutrients/shared/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 
 @NgModule({
   imports: [
@@ -46,7 +48,9 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
     NutritionComponent,
     NutritionInfoComponent,
     NutrientListComponent,
-    NutrientDetailComponent
+    NutrientDetailComponent,
+    RecipeListComponent,
+    RecipeDetailComponent
   ],
   providers: [
     FoodDetailResolve,
