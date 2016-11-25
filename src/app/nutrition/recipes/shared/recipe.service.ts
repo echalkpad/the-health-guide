@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
-import { AngularFire, FirebaseAuth, FirebaseListObservable } from 'angularfire2';
+import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../nutrition.model';
@@ -9,6 +9,7 @@ import { Nutrition } from '../../nutrition.model';
 @Injectable()
 export class RecipeService {
   private allUsersRecipes: FirebaseListObservable<Recipe[]>;
+  private recipeImgUrl: firebase.storage.Reference;
   private userRecipes: FirebaseListObservable<Recipe[]>;
   constructor(private af: AngularFire, private auth: FirebaseAuth) {
     this.allUsersRecipes = af.database.list('/recipes', {
@@ -25,6 +26,7 @@ export class RecipeService {
         });
       }
     });
+    this.recipeImgUrl = firebase.storage().ref().child('/recipes');
   }
 
   private portionRecipe(recipe: Recipe): void {
@@ -92,6 +94,13 @@ export class RecipeService {
     this.portionRecipe(recipe);
   }
 
+  public downloadImg(imgName: string): firebase.Promise<any> {
+    let imgUrl: string = "";
+    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
+      (url: string) => url,
+      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
+  }
+
   public getAllRecipes(): Observable<any> {
     let allRecipes: Recipe[] = [];
     return new Observable(observer => {
@@ -110,8 +119,44 @@ export class RecipeService {
 
   }
 
-  public getMyRecipes(): FirebaseListObservable<Recipe[]> {
-    return this.userRecipes;
+  public getMyRecipes(): Observable<any> {
+    return new Observable(observer => {
+      let recipes: Recipe[];
+      this.auth.subscribe(authData => {
+        if (!!authData) {
+          this.af.database.list(`/recipes/${authData.uid}`, {
+            query: {
+              orderByChild: 'name'
+            }
+          }).subscribe((data: Recipe[]) => {
+            if (!!data && !!data.length) {
+              recipes = [...data];
+            }
+          });
+        }
+      });
+      setTimeout(() => observer.next(recipes), 3000);
+    });
+  }
+
+  public getRecipe(key: string | number): Observable<any> {
+    return new Observable(observer => {
+      let recipe: Recipe;
+      this.auth.subscribe(authData => {
+        if (!!authData) {
+          this.af.database.object(`/recipes/${authData.uid}/${key}`, {
+            query: {
+              orderByChild: 'name'
+            }
+          }).subscribe((data: Recipe) => {
+            if (!!data) {
+              recipe = Object.assign({}, data);
+            }
+          });
+        }
+      });
+      setTimeout(() => observer.next(recipe), 3000);
+    });
   }
 
   public removeRecipe(recipe: Recipe): void {
@@ -122,9 +167,11 @@ export class RecipeService {
     this.removeHashkeys(recipe);
     this.userRecipes.update(recipe['$key'], {
       name: recipe.name,
+      imgUrl: recipe.imgUrl,
       category: recipe.category,
       dietaries: recipe.dietaries,
-      chef: recipe.chef,
+      chefName: recipe.chefName,
+      chefAvatar: recipe.chefAvatar,
       ingredients: recipe.ingredients,
       duration: recipe.duration,
       difficulty: recipe.difficulty,

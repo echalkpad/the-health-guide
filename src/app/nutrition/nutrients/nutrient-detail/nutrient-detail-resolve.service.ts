@@ -15,7 +15,7 @@ export class NutrientDetailResolve implements Resolve<Nutrient> {
       nutrientKey: string | number = route.params['key'];
     return new Promise((resolve, reject) => {
       this.nutrientSvc.getNutrient(nutrientCategory, nutrientKey).subscribe((data: Nutrient) => {
-        if (data) {
+        if (!!data) {
           this.nutrient = Object.assign({}, data);
         }
       });

@@ -33,6 +33,8 @@ const FIREBASE_AUTH_CONFIG = {
   method: AuthMethods.Password
 }
 
+firebase.initializeApp(FIREBASE_CONFIG);
+
 @NgModule({
   declarations: [
     AppComponent,

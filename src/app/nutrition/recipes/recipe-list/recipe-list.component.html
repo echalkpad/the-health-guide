@@ -1,7 +1,74 @@
-<md-card *ngFor="let recipe of recipes | async">
-  <md-card-title>{{ recipe.name }}</md-card-title>
-  <md-card-subtitle>{{ recipe.chef }}</md-card-subtitle>
-  <md-card-actions layout="row">
-    <button color="accent" md-raised-button>Read more</button>
-  </md-card-actions>
-</md-card>
+<div layout="column" layout-gt-lg="row" *tdLoading="'recipes.load'" loadingType="circular">
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of recipes | group : 3 : 1">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          <span class="text-lg">View more</span>
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          <span class="text-lg">Remove</span></button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of recipes | group : 3 : 2">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          <span class="text-lg">View more</span>
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          <span class="text-lg">Remove</span></button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of recipes | group : 3 : 3">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          <span class="text-lg">View more</span>
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          <span class="text-lg">Remove</span></button>
+      </md-card-actions>
+    </md-card>
+  </div>
+</div>

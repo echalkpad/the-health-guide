@@ -2,9 +2,8 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { TdLoadingService } from '@covalent/core';
+import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
-import { TdDialogService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
 import { Food } from '../shared/food.model';

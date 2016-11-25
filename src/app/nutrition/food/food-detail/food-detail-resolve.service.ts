@@ -14,7 +14,7 @@ export class FoodDetailResolve implements Resolve<Food> {
     let foodKey: string | number = route.params['key'];
     return new Promise((resolve, reject) => {
       this.foodSvc.getFood(foodKey).subscribe((data: Food) => {
-        if (data) {
+        if (!!data) {
           this.food = Object.assign({}, data);
         }
       });

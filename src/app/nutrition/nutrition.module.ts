@@ -24,9 +24,11 @@ import { NutrientService } from './nutrients/shared/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeService } from './recipes/shared/recipe.service';
+import { GroupPipe } from './recipes/shared/group.pipe';
 
 @NgModule({
   imports: [
@@ -46,6 +48,7 @@ import { RecipeService } from './recipes/shared/recipe.service';
   declarations: [
     FoodDetailComponent,
     FoodListComponent,
+    GroupPipe,
     NutritionComponent,
     NutritionInfoComponent,
     NutrientListComponent,
@@ -58,6 +61,7 @@ import { RecipeService } from './recipes/shared/recipe.service';
     FoodService,
     NutrientDetailResolve,
     NutrientService,
+    RecipeDetailResolve,
     RecipeService
   ]
 })
