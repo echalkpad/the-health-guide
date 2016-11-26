@@ -65,14 +65,12 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
 
   ngOnInit(): void {
     this.nutrientSvc.getMacronutrients().subscribe((data: Nutrient[]) => {
-      console.log(data);
       if (!!data && !!data.length) {
         this.macronutrients = [...data];
         this.filteredMacronutrients = [...data];
       }
     });
     this.nutrientSvc.getMicronutrients().subscribe((data: Nutrient[]) => {
-      console.log(data);
       if (!!data && !!data.length) {
         this.micronutrients = [...data];
         this.filteredMicronutrients = [...data];

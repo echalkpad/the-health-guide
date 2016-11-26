@@ -10,21 +10,25 @@ export class RecipeDetailResolve implements Resolve<Recipe> {
   constructor(private recipeSvc: RecipeService, private router: Router) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Recipe> {
-    console.log(route);
-    let recipeKey: string | number = route.params['key'];
+    let authId: string = route.params['authId'],
+      recipeKey: string = route.params['key'];
     return new Promise((resolve, reject) => {
-      this.recipeSvc.getRecipe(recipeKey).subscribe((data: Recipe) => {
-        if (!!data) {
-          this.recipe = Object.assign({}, data);
-        }
-      });
-      setTimeout(() => {
-        if (!this.recipe) {
-          this.router.navigate(['recipes']);
-        } else {
-          resolve(this.recipe);
-        }
-      }, 3000);
+      if (recipeKey !== '0') {
+        this.recipeSvc.getRecipe(authId, recipeKey).subscribe((data: Recipe) => {
+          if (!!data) {
+            this.recipe = Object.assign({}, data);
+          }
+        });
+        setTimeout(() => {
+          if (!this.recipe) {
+            this.router.navigate(['recipes']);
+          } else {
+            resolve(this.recipe);
+          }
+        }, 3000);
+      } else {
+        resolve(new Recipe());
+      }
     });
   }
 

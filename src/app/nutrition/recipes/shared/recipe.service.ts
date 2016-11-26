@@ -101,6 +101,46 @@ export class RecipeService {
       (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
   }
 
+  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]) {
+    return recipes.filter((recipe: Recipe) => {
+      let match: boolean = false,
+        matchedIngredients: number = 0;
+      if (query === 'name') {
+        if (recipe.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+          match = true;
+          console.log(ingredients);
+          if (!!ingredients && !!ingredients.length) {
+            ingredients.forEach((item: string) => {
+              recipe.ingredients.forEach((ingredient: Ingredient) => {
+                console.log("Search ingredient", item, "Ingredient", ingredient);
+                if (ingredient.name === item) {
+                  matchedIngredients++;
+                }
+              });
+            });
+            if (matchedIngredients !== ingredients.length) {
+              match = false;
+            }
+          }
+        }
+      } else if (query === 'ingredients') {
+        if (recipe.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+          ingredients.forEach((item: string) => {
+            recipe.ingredients.forEach((ingredient: Ingredient) => {
+              if (ingredient.name === item) {
+                matchedIngredients++;
+              }
+            });
+          });
+          if (matchedIngredients === ingredients.length) {
+            match = true;
+          }
+        }
+      }
+      return match;
+    });
+  }
+
   public getAllRecipes(): Observable<any> {
     let allRecipes: Recipe[] = [];
     return new Observable(observer => {
@@ -119,43 +159,19 @@ export class RecipeService {
 
   }
 
-  public getMyRecipes(): Observable<any> {
-    return new Observable(observer => {
-      let recipes: Recipe[];
-      this.auth.subscribe(authData => {
-        if (!!authData) {
-          this.af.database.list(`/recipes/${authData.uid}`, {
-            query: {
-              orderByChild: 'name'
-            }
-          }).subscribe((data: Recipe[]) => {
-            if (!!data && !!data.length) {
-              recipes = [...data];
-            }
-          });
-        }
-      });
-      setTimeout(() => observer.next(recipes), 3000);
+  public getMyRecipes(authId: string): FirebaseListObservable<Recipe[]> {
+    return this.af.database.list(`/recipes/${authId}`, {
+      query: {
+        orderByChild: 'name'
+      }
     });
   }
 
-  public getRecipe(key: string | number): Observable<any> {
-    return new Observable(observer => {
-      let recipe: Recipe;
-      this.auth.subscribe(authData => {
-        if (!!authData) {
-          this.af.database.object(`/recipes/${authData.uid}/${key}`, {
-            query: {
-              orderByChild: 'name'
-            }
-          }).subscribe((data: Recipe) => {
-            if (!!data) {
-              recipe = Object.assign({}, data);
-            }
-          });
-        }
-      });
-      setTimeout(() => observer.next(recipe), 3000);
+  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
+    return this.af.database.object(`/recipes/${authId}/${key}`, {
+      query: {
+        orderByChild: 'name'
+      }
     });
   }
 

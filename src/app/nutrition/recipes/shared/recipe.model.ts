@@ -7,6 +7,7 @@ export interface Ingredient extends Food, Recipe {
 
 export class Recipe {
     constructor (
+        public $key: string = "0",
         public name: string = "",
         public imgUrl: string = "",
         public category: string = "",

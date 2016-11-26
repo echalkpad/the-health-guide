@@ -10,7 +10,6 @@ export class FoodDetailResolve implements Resolve<Food> {
   constructor(private foodSvc: FoodService, private router: Router) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Food> {
-    console.log(route);
     let foodKey: string | number = route.params['key'];
     return new Promise((resolve, reject) => {
       this.foodSvc.getFood(foodKey).subscribe((data: Food) => {

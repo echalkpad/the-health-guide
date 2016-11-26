@@ -25,8 +25,9 @@ import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
 import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
-import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeService } from './recipes/shared/recipe.service';
 import { GroupPipe } from './recipes/shared/group.pipe';
 
@@ -54,7 +55,8 @@ import { GroupPipe } from './recipes/shared/group.pipe';
     NutrientListComponent,
     NutrientDetailComponent,
     RecipeListComponent,
-    RecipeDetailComponent
+    RecipeDetailComponent,
+    RecipeEditComponent
   ],
   providers: [
     FoodDetailResolve,

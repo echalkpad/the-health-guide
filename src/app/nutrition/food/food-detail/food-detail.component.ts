@@ -23,7 +23,6 @@ export class FoodDetailComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log(this.route);
     this.route.data.subscribe((data: { food: Food }) => {
       if (!!data) {
         this.food = Object.assign({}, data.food);

@@ -10,7 +10,6 @@ export class NutrientDetailResolve implements Resolve<Nutrient> {
   constructor(private nutrientSvc: NutrientService, private router: Router) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Nutrient> {
-    console.log(route);
     let nutrientCategory: string = route.params['category'],
       nutrientKey: string | number = route.params['key'];
     return new Promise((resolve, reject) => {

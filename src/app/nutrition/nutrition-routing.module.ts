@@ -11,6 +11,7 @@ import { NutritionComponent } from './nutrition.component';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
 import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 
 const nutritionRoutes: Routes = [
@@ -54,8 +55,15 @@ const nutritionRoutes: Routes = [
                 path: 'recipes',
                 children: [
                     {
-                        path: ':key',
+                        path: ':authId/:key',
                         component: RecipeDetailComponent,
+                        resolve: {
+                            recipe: RecipeDetailResolve
+                        }
+                    },
+                    {
+                        path: ':authId/:key/edit',
+                        component: RecipeEditComponent,
                         resolve: {
                             recipe: RecipeDetailResolve
                         }
