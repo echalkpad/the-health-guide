@@ -6,6 +6,7 @@ import { MdDialog, MdDialogRef } from '@angular/material';
 import { TdLoadingService } from '@covalent/core';
 import { TdDialogService } from '@covalent/core';
 
+import { DataService } from '../../shared/data.service';
 import { Nutrient } from '../shared/nutrient.model';
 import { NutrientService } from '../shared/nutrient.service';
 
@@ -22,6 +23,7 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   public query: string = 'name';
   public querySearch: boolean = false;
   constructor(
+    private dataSvc: DataService,
     private dialogService: TdDialogService,
     private loadingSvc: TdLoadingService,
     private nutrientSvc: NutrientService,
@@ -41,6 +43,11 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   public filterNutrients(searchTerm: string): void {
     this.filteredMacronutrients = this.nutrientSvc.filterNutrient(this.macronutrients, this.query, searchTerm);
     this.filteredMicronutrients = this.nutrientSvc.filterNutrient(this.micronutrients, this.query, searchTerm);
+  }
+
+  public openDetails(nutrientClass: string, nutrient: Nutrient): void {
+    this.dataSvc.storage.nutrient = Object.assign({}, nutrient);
+    this.router.navigate([`/nutrition/nutrients/${nutrientClass}/${nutrient.$key}`]);
   }
 
   public toggleSearch(): void {

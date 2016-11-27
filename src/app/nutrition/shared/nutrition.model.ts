@@ -1,6 +1,6 @@
 export class Nutrition {
     constructor(
-        public energy: number = 0,
+        public Energy: number = 0,
         public Water: number = 0,
         public Protein: number = 0,
         public Carbohydrates: number = 0,

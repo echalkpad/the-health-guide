@@ -3,6 +3,8 @@
   <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
   <md-divider></md-divider>
   <md-card-content layout-padding>
+    <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+    </td-file-upload>
     <form #recipeForm="ngForm">
       <div layout="row" layout-padding layout-margin>
         <md-input #nameInput #nameControl="ngModel" flex placeholder="Name" type="text" maxlength="30" name="recipe.name" [(ngModel)]="recipe.name" required>
@@ -12,14 +14,49 @@
           </md-hint>
           <md-hint align="end">{{ nameInput.characterCount }} / 30</md-hint>
         </md-input>
-        <md-input #categoryInput #categoryControl="ngModel" flex placeholder="Category" type="text" maxlength="30" name="recipe.category" [(ngModel)]="recipe.category" required>
+
+        <select [(ngModel)]="recipe.category" name="recipe.category">
+          <option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+          </option>
+        </select>
+
+        <select [(ngModel)]="recipe.difficulty" name="recipe.difficulty">
+          <option *ngFor="let difficulty of difficulties" [value]="difficulty">
+            {{ difficulty }}
+          </option>
+        </select>
+
+        <select [(ngModel)]="recipe.cookMethod" name="recipe.cookMethod">
+          <option *ngFor="let method of cookMethods" [value]="method">
+            {{ method }}
+          </option>
+        </select>
+      </div>
+      <div layout="row" layout-padding layout-margin>
+        <md-input #durationInput #durationControl="ngModel" flex placeholder="Duration" type="number" min="1" max="3600" name="recipe.duration" [(ngModel)]="recipe.duration" required>
           <span md-prefix><md-icon>favorite</md-icon></span>
-          <md-hint align="start" [hidden]="categoryControl.pristine" class="tc-red-600">
-            <span [hidden]="!categoryControl.errors?.required">Required</span>
+          <md-hint align="start" [hidden]="durationControl.pristine" class="tc-red-600">
+            <span [hidden]="!durationControl.errors?.required">Required</span>
           </md-hint>
-          <md-hint align="end">{{ categoryInput.characterCount }} / 30</md-hint>
+        </md-input>
+        <md-input #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature" required>
+          <span md-prefix><md-icon>favorite</md-icon></span>
+          <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
+            <span [hidden]="!temperatureControl.errors?.required">Required</span>
+          </md-hint>
+        </md-input>
+        <md-input #servingsInput #servingsControl="ngModel" flex placeholder="Servings" type="number" min="1" max="100" name="recipe.servings" [(ngModel)]="recipe.servings" required>
+          <span md-prefix><md-icon>favorite</md-icon></span>
+          <md-hint align="start" [hidden]="servingsControl.pristine" class="tc-red-600">
+            <span [hidden]="!servingsControl.errors?.required">Required</span>
+          </md-hint>
         </md-input>
       </div>
+      <td-chips placeholder="Enter ingredient" [items]="ingredients" name="ingredients" [(ngModel)]="selectedIngredients" [readOnly]="false" requireMatch>
+      </td-chips>
+      <td-chips placeholder="Enter tag" [items]="tags" name="tags" [(ngModel)]="recipe.tags" [readOnly]="false" requireMatch>
+      </td-chips>
     </form>
   </md-card-content>
 </md-card>

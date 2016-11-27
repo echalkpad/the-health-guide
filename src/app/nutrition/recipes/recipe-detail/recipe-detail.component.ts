@@ -21,17 +21,26 @@ export class RecipeDetailComponent implements OnInit {
     private detector: ChangeDetectorRef,
     private route: ActivatedRoute,
     private titleSvc: Title
-  ) {  }
+  ) {
+    this.basicNutrients = [
+      "Water",
+      "Protein",
+      "Carbohydrates",
+      "Sugars",
+      "Fiber",
+      "Fats",
+      "Saturated fat",
+      "Monounsaturated fat",
+      "Polyunsaturated fat",
+      "Trans fat"
+    ];
+  }
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { recipe: Recipe }) => {
       if (!!data) {
         this.recipe = Object.assign({}, data.recipe);
-        for (let prop in this.recipe.nutrition) {
-          if (typeof this.recipe.nutrition[prop] === 'number') {
-            this.basicNutrients.push(prop);
-          }
-        }
+        console.log(this.recipe);
         for (let prop in this.recipe.nutrition['amino acids']) {
           this.aminoacids.push(prop);
         }

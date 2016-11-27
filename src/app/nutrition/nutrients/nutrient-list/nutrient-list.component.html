@@ -21,7 +21,7 @@
       <md-nav-list>
         <template tdLoading="macronutrients.load">
           <template let-item let-last="last" ngFor [ngForOf]="filteredMacronutrients">
-            <a md-list-item layout-align="row" [routerLink]="['macronutrients', item.$key]">
+            <a md-list-item layout-align="row" (click)="openDetails('macronutrients', item)">
               <md-icon md-list-avatar>spa</md-icon>
               <h3 md-line> {{ item.name }} </h3>
               <p md-line> {{ item.category }} </p>
@@ -38,7 +38,7 @@
       <md-nav-list>
         <template tdLoading="micronutrients.load">
           <template let-item let-last="last" ngFor [ngForOf]="filteredMicronutrients">
-            <a md-list-item layout-align="row" [routerLink]="['micronutrients', item.$key]">
+            <a md-list-item layout-align="row" (click)="openDetails('micronutrients', item)">
               <md-icon md-list-avatar>spa</md-icon>
               <h3 md-line> {{ item.name }} </h3>
               <p md-line> {{ item.category }} </p>

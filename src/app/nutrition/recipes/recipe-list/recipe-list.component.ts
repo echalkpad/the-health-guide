@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { AngularFire, FirebaseListObservable } from "angularfire2";
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
+import { DataService } from '../../shared/data.service';
 import { Food } from '../../food/shared/food.model';
 import { FoodService } from '../../food/shared/food.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
@@ -16,9 +17,7 @@ import { RecipeService } from '../shared/recipe.service';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  public authId: string;
-  public avatarUrl: string;
-  public chefName: string;
+  public auth: any;
   public filteredRecipes: Recipe[];
   public ingredients: string[];
   public query: string = 'name';
@@ -27,6 +26,7 @@ export class RecipeListComponent implements OnInit {
   public recipes: Recipe[];
   constructor(
     private af: AngularFire,
+    private dataSvc: DataService,
     private dialogService: TdDialogService,
     private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
@@ -40,17 +40,24 @@ export class RecipeListComponent implements OnInit {
     this.filterRecipes('');
   }
 
-  public removeIngredient(ingredient: string): void {
-    this.queryIngredients.splice(this.queryIngredients.indexOf(ingredient), 1);
-    this.filterRecipes('');
-  }
-
   public createRecipe(): void {
-    this.router.navigate([`/nutrition/recipes/${this.authId}/0/edit`]);
+    this.dataSvc.storage.auth = Object.assign({ }, this.auth);
+    this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
   public filterRecipes(searchTerm: string): void {
     this.filteredRecipes = [...this.recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
+  }
+
+  public openDetails(recipe: Recipe): void {
+    this.dataSvc.storage.auth = Object.assign({ }, this.auth);
+    this.dataSvc.storage.recipe = Object.assign({ }, recipe);
+    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe.$key]);
+  }
+
+  public removeIngredient(ingredient: string): void {
+    this.queryIngredients.splice(this.queryIngredients.indexOf(ingredient), 1);
+    this.filterRecipes('');
   }
 
   private showAlert(): void {
@@ -59,7 +66,7 @@ export class RecipeListComponent implements OnInit {
       disableClose: false,
       title: 'No data found',
       closeButton: 'Close'
-    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
+    });
   }
 
   ngAfterViewInit(): void {
@@ -82,10 +89,13 @@ export class RecipeListComponent implements OnInit {
     this.recipeSvc.downloadImg('recipe').then((url: string) => this.recipeImg = url);
     this.af.auth.subscribe(auth => {
       if (auth) {
-        this.authId = auth.uid;
-        this.chefName = auth.auth.providerData[0].displayName;
-        this.avatarUrl = auth.auth.providerData[0].photoURL;
-        this.recipeSvc.getMyRecipes(this.authId).subscribe((data: Recipe[]) => {
+        this.auth = {
+          id: auth.uid,
+          name: auth.auth.providerData[0].displayName,
+          avatar: auth.auth.providerData[0].photoURL
+        };
+        console.log(this.auth);
+        this.recipeSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
           if (!!data && !!data.length) {
             this.recipes = [...data];
             this.filteredRecipes = [...data];

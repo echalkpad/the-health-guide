@@ -1,4 +1,4 @@
-import { Nutrition } from '../../nutrition.model';
+import { Nutrition } from '../../shared/nutrition.model';
 
 export class Food extends Nutrition {
     constructor(

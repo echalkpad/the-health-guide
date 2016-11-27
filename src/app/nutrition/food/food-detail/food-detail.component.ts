@@ -20,17 +20,25 @@ export class FoodDetailComponent implements OnInit {
     private detector: ChangeDetectorRef,
     private route: ActivatedRoute,
     private titleSvc: Title
-  ) { }
+  ) {
+    this.basicNutrients = [
+      "Water",
+      "Protein",
+      "Carbohydrates",
+      "Sugars",
+      "Fiber",
+      "Fats",
+      "Saturated fat",
+      "Monounsaturated fat",
+      "Polyunsaturated fat",
+      "Trans fat"
+    ];
+  }
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { food: Food }) => {
       if (!!data) {
         this.food = Object.assign({}, data.food);
-        for (let prop in this.food) {
-          if (typeof this.food[prop] === 'number') {
-            this.basicNutrients.push(prop);
-          }
-        }
         for (let prop in this.food['amino acids']) {
           this.aminoacids.push(prop);
         }

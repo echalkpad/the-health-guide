@@ -4,7 +4,7 @@ import 'rxjs/Rx';
 import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { Ingredient, Recipe } from './recipe.model';
-import { Nutrition } from '../../nutrition.model';
+import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
@@ -179,6 +179,10 @@ export class RecipeService {
     this.userRecipes.remove(recipe['$key']);
   }
 
+  public uploadImage(img: File): void {
+    this.recipeImgUrl.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
+  }
+/*
   public updateRecipe(recipe: Recipe): void {
     this.removeHashkeys(recipe);
     this.userRecipes.update(recipe['$key'], {
@@ -199,4 +203,5 @@ export class RecipeService {
       quantity: recipe.quantity
     });
   }
+  */
 }
