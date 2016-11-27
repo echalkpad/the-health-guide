@@ -14,19 +14,22 @@ import { CovalentSearchModule } from '@covalent/search';
 
 import { Food } from './food/shared/food.model';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
-import { FoodDetailResolve } from './food/shared/food-detail-resolve.service';
+import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
-import { FoodListResolve } from './food/food-list/food-list-resolve.service';
 import { FoodService } from './food/shared/food.service';
-import { MacronutrientResolve } from './nutrients/shared/macronutrient-resolve.service';
-import { MicronutrientResolve } from './nutrients/shared/micronutrient-resolve.service';
 import { NutrientDetailComponent } from './nutrients/nutrient-detail/nutrient-detail.component';
-import { NutrientDetailResolve } from './nutrients/shared/nutrient-detail-resolve.service';
+import { NutrientDetailResolve } from './nutrients/nutrient-detail/nutrient-detail-resolve.service';
 import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
 import { NutrientService } from './nutrients/shared/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
+import { RecipeService } from './recipes/shared/recipe.service';
+import { GroupPipe } from './recipes/shared/group.pipe';
 
 @NgModule({
   imports: [
@@ -46,19 +49,22 @@ import { NutritionInfoComponent } from './nutrition-info/nutrition-info.componen
   declarations: [
     FoodDetailComponent,
     FoodListComponent,
+    GroupPipe,
     NutritionComponent,
     NutritionInfoComponent,
     NutrientListComponent,
-    NutrientDetailComponent
+    NutrientDetailComponent,
+    RecipeListComponent,
+    RecipeDetailComponent,
+    RecipeEditComponent
   ],
   providers: [
     FoodDetailResolve,
-    FoodListResolve,
     FoodService,
-    MacronutrientResolve,
-    MicronutrientResolve,
     NutrientDetailResolve,
-    NutrientService
+    NutrientService,
+    RecipeDetailResolve,
+    RecipeService
   ]
 })
 export class NutritionModule { }

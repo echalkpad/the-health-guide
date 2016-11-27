@@ -1,0 +1,108 @@
+<md-toolbar layout-align="center">
+  <td-search-box *ngIf="query !== 'ingredients'" flex
+    backIcon="clear"
+    placeholder="Search"
+    [showUnderline]="true"
+    [debounce]="500"
+    [alwaysVisible]="false"
+    (search)="filterRecipes($event)"
+    (searchDebounce)="filterRecipes($event)"
+    (clear)="searchInputTerm = ''">
+  </td-search-box>
+  <td-chips *ngIf="query === 'ingredients'" flex
+    placeholder="Type an ingredient"
+    [items]="ingredients"
+    [readOnly]="false"
+    (add)="addIngredient($event)"
+    (remove)="removeIngredient($event)"
+    requireMatch>
+  </td-chips>
+  <button md-icon-button [md-menu-trigger-for]="menu">
+  <md-icon>filter_list</md-icon>
+</button>
+  <md-menu #menu="mdMenu" x-position="before">
+    <button md-menu-item (click)="query='name'">Name</button>
+    <button md-menu-item (click)="query='chef'">Chef</button>
+    <button md-menu-item (click)="query='ingredients'">Ingredients</button>
+  </md-menu>
+</md-toolbar>
+<div layout="column" layout-gt-lg="row" *tdLoading="'recipes.load'" loadingType="circular" class="recipe-list">
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 1">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          View more
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          Remove
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 2">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          View more
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          Remove
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div layout="column" flex>
+    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 3">
+      <md-card-header>
+        <img md-card-avatar [src]="avatarUrl">
+        <md-card-title>{{ chefName }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <md-card-content>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.category }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions>
+        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+          <md-icon>open_in_new</md-icon>
+          View more
+        </button>
+        <button md-button color="warn">
+          <md-icon>delete</md-icon>
+          Remove
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <button md-fab class="floating md-whiteframe-z1" (click)="createRecipe()">
+    <md-icon>add</md-icon>
+  </button>
+</div>

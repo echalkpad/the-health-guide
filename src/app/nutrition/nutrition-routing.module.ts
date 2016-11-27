@@ -2,16 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
-import { FoodDetailResolve } from './food/shared/food-detail-resolve.service';
+import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
-import { FoodListResolve } from './food/food-list/food-list-resolve.service';
-import { MacronutrientResolve } from './nutrients/shared/macronutrient-resolve.service';
-import { MicronutrientResolve } from './nutrients/shared/micronutrient-resolve.service';
 import { NutrientDetailComponent } from './nutrients/nutrient-detail/nutrient-detail.component';
-import { NutrientDetailResolve } from './nutrients/shared/nutrient-detail-resolve.service';
+import { NutrientDetailResolve } from './nutrients/nutrient-detail/nutrient-detail-resolve.service';
 import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
+import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
+import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 
 const nutritionRoutes: Routes = [
     {
@@ -30,10 +31,7 @@ const nutritionRoutes: Routes = [
                     },
                     {
                         path: '',
-                        component: FoodListComponent,
-                        resolve: {
-                            foods: FoodListResolve
-                        }
+                        component: FoodListComponent
                     }
                 ]
             },
@@ -49,11 +47,30 @@ const nutritionRoutes: Routes = [
                     },
                     {
                         path: '',
-                        component: NutrientListComponent,
+                        component: NutrientListComponent
+                    }
+                ]
+            },
+            {
+                path: 'recipes',
+                children: [
+                    {
+                        path: ':authId/:key',
+                        component: RecipeDetailComponent,
                         resolve: {
-                            macronutrients: MacronutrientResolve,
-                            micronutrients: MicronutrientResolve
+                            recipe: RecipeDetailResolve
                         }
+                    },
+                    {
+                        path: ':authId/:key/edit',
+                        component: RecipeEditComponent,
+                        resolve: {
+                            recipe: RecipeDetailResolve
+                        }
+                    },
+                    {
+                        path: '',
+                        component: RecipeListComponent
                     }
                 ]
             },

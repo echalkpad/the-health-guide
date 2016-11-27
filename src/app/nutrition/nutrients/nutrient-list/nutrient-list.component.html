@@ -1,9 +1,9 @@
 <md-toolbar layout-align="center">
-  <td-search-box backIcon="clear" placeholder="Search" [showUnderline]="true" [debounce]="500" [alwaysVisible]="false" (search)="filterNutrients($event)" (searchDebounce)="filterNutrients($event)" (clear)="searchInputTerm = ''" flex>
+  <td-search-box backIcon="clear" placeholder="Search" [showUnderline]="true" [debounce]="500" [alwaysVisible]="false" (search)="filterNutrients($event)" (searchDebounce)="filterNutrients($event)" (clear)="searchInputTerm = ''"
+    flex>
   </td-search-box>
-
   <button md-icon-button [md-menu-trigger-for]="menu">
-  <md-icon>more_vert</md-icon>
+  <md-icon>filter_list</md-icon>
 </button>
   <md-menu #menu="mdMenu" x-position="before">
     <button md-menu-item (click)="query='name'">Name</button>
@@ -14,7 +14,7 @@
     <button md-menu-item (click)="query='toxicity'">Toxicity</button>
   </md-menu>
 </md-toolbar>
-<div layout="column" layout-gt-sm="row">
+<div layout="column" layout-gt-md="row">
   <div flex>
     <md-card>
       <md-card-title>Macronutrients</md-card-title>

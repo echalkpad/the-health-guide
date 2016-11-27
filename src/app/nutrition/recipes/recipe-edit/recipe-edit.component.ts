@@ -3,28 +3,28 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TdLoadingService } from '@covalent/core';
 
-import { Nutrient } from '../shared/nutrient.model';
+import { Recipe } from '../shared/recipe.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
-  selector: 'app-nutrient-detail',
-  templateUrl: './nutrient-detail.component.html',
-  styleUrls: ['./nutrient-detail.component.scss']
+  selector: 'app-recipe-edit',
+  templateUrl: './recipe-edit.component.html',
+  styleUrls: ['./recipe-edit.component.scss']
 })
-export class NutrientDetailComponent implements OnInit {
-  public nutrient: Nutrient;
+export class RecipeEditComponent implements OnInit {
+  public recipe: Recipe;
   constructor(
     private detector: ChangeDetectorRef,
     private route: ActivatedRoute,
     private titleSvc: Title
-  ) { }
-
+  ) {  }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { nutrient: Nutrient }) => {
+    this.route.data.subscribe((data: { recipe: Recipe }) => {
       if (!!data) {
-        this.nutrient = Object.assign({}, data.nutrient);
-        this.titleSvc.setTitle(this.nutrient.name);
+        this.recipe = Object.assign({}, data.recipe);
+        console.log(this.recipe);
+        this.titleSvc.setTitle(this.recipe.name);
         this.detector.markForCheck();
       }
     });

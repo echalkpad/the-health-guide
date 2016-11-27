@@ -1,0 +1,25 @@
+<md-card>
+  <md-card-title>Cooking time</md-card-title>
+  <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
+  <md-divider></md-divider>
+  <md-card-content layout-padding>
+    <form #recipeForm="ngForm">
+      <div layout="row" layout-padding layout-margin>
+        <md-input #nameInput #nameControl="ngModel" flex placeholder="Name" type="text" maxlength="30" name="recipe.name" [(ngModel)]="recipe.name" required>
+          <span md-prefix><md-icon>favorite</md-icon></span>
+          <md-hint align="start" [hidden]="nameControl.pristine" class="tc-red-600">
+            <span [hidden]="!nameControl.errors?.required">Required</span>
+          </md-hint>
+          <md-hint align="end">{{ nameInput.characterCount }} / 30</md-hint>
+        </md-input>
+        <md-input #categoryInput #categoryControl="ngModel" flex placeholder="Category" type="text" maxlength="30" name="recipe.category" [(ngModel)]="recipe.category" required>
+          <span md-prefix><md-icon>favorite</md-icon></span>
+          <md-hint align="start" [hidden]="categoryControl.pristine" class="tc-red-600">
+            <span [hidden]="!categoryControl.errors?.required">Required</span>
+          </md-hint>
+          <md-hint align="end">{{ categoryInput.characterCount }} / 30</md-hint>
+        </md-input>
+      </div>
+    </form>
+  </md-card-content>
+</md-card>

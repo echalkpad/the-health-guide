@@ -2,7 +2,7 @@
     {
         "name": "Abiyuch",
         "category": "Fruit",
-        "energy": 69,
+        "Energy": 69,
         "Water": 79.9,
         "Protein": 1.5,
         "Carbohydrates": 17.6,
@@ -67,7 +67,7 @@
     {
         "name": "Acelora",
         "category": "Fruit",
-        "energy": 32,
+        "Energy": 32,
         "Water": 91.41,
         "Protein": 0.40,
         "Carbohydrates": 7.69,
@@ -132,7 +132,7 @@
     {
         "name": "Agave",
         "category": "Fruit",
-        "energy": 68,
+        "Energy": 68,
         "Water": 81.83,
         "Protein": 0.52,
         "Carbohydrates": 16.23,
@@ -197,7 +197,7 @@
     {
         "name": "Beer",
         "category": "Beverages",
-        "energy": 43,
+        "Energy": 43,
         "Water": 91.96,
         "Protein": 0.46,
         "Carbohydrates": 3.55,
@@ -262,7 +262,7 @@
     {
         "name": "Gin",
         "category": "Beverages",
-        "energy": 263,
+        "Energy": 263,
         "Water": 62.1,
         "Protein": 0,
         "Carbohydrates": 0,
@@ -327,7 +327,7 @@
     {
         "name": "Rum",
         "category": "Beverages",
-        "energy": 231,
+        "Energy": 231,
         "Water": 66.6,
         "Protein": 0,
         "Carbohydrates": 0,
@@ -392,7 +392,7 @@
     {
         "name": "Vodka",
         "category": "Beverages",
-        "energy": 231,
+        "Energy": 231,
         "Water": 66.6,
         "Protein": 0,
         "Carbohydrates": 0,
@@ -457,7 +457,7 @@
     {
         "name": "Whiskey",
         "category": "Beverages",
-        "energy": 250,
+        "Energy": 250,
         "Water": 63.9,
         "Protein": 0,
         "Carbohydrates": 0.1,
@@ -522,7 +522,7 @@
     {
         "name": "Rose wine",
         "category": "Beverages",
-        "energy": 83,
+        "Energy": 83,
         "Water": 86.4,
         "Protein": 0.36,
         "Carbohydrates": 3.8,
@@ -587,7 +587,7 @@
     {
         "name": "Red wine",
         "category": "Beverages",
-        "energy": 85,
+        "Energy": 85,
         "Water": 86.49,
         "Protein": 0.07,
         "Carbohydrates": 2.61,
@@ -652,7 +652,7 @@
     {
         "name": "White wine",
         "category": "Beverages",
-        "energy": 82,
+        "Energy": 82,
         "Water": 86.86,
         "Protein": 0,
         "Carbohydrates": 2.6,
@@ -717,7 +717,7 @@
     {
         "name": "Alfalfa sprouts",
         "category": "Vegetables",
-        "energy": 23,
+        "Energy": 23,
         "Water": 92.82,
         "Protein": 3.99,
         "Carbohydrates": 2.1,
@@ -782,7 +782,7 @@
     {
         "name": "Amaranth seeds",
         "category": "Grains",
-        "energy": 371,
+        "Energy": 371,
         "Water": 11.29,
         "Protein": 14.164,
         "Carbohydrates": 65.25,
@@ -847,7 +847,7 @@
     {
         "name": "Amaranth leaves",
         "category": "Vegetables",
-        "energy": 23,
+        "Energy": 23,
         "Water": 91.69,
         "Protein": 2.46,
         "Carbohydrates": 4.02,
@@ -912,7 +912,7 @@
     {
         "name": "Apple",
         "category": "Fruit",
-        "energy": 52,
+        "Energy": 52,
         "Water": 85.56,
         "Protein": 0.26,
         "Carbohydrates": 13.81,
@@ -977,7 +977,7 @@
     {
         "name": "Appricot",
         "category": "Fruit",
-        "energy": 48,
+        "Energy": 48,
         "Water": 86.35,
         "Protein": 1.4,
         "Carbohydrates": 11.12,
@@ -1042,7 +1042,7 @@
     {
         "name": "Arrowhead",
         "category": "Vegetables",
-        "energy": 99,
+        "Energy": 99,
         "Water": 72.48,
         "Protein": 5.33,
         "Carbohydrates": 20.23,
@@ -1107,7 +1107,7 @@
     {
         "name": "Arrowroot flour",
         "category": "Grains",
-        "energy": 357,
+        "Energy": 357,
         "Water": 11.37,
         "Protein": 0.65,
         "Carbohydrates": 88.15,
@@ -1172,7 +1172,7 @@
     {
         "name": "Arrowroot",
         "category": "Vegetables",
-        "energy": 65,
+        "Energy": 65,
         "Water": 80.75,
         "Protein": 4.24,
         "Carbohydrates": 13.39,
@@ -1237,7 +1237,7 @@
     {
         "name": "Artichoke",
         "category": "Vegetables",
-        "energy": 47,
+        "Energy": 47,
         "Water": 84.94,
         "Protein": 3.27,
         "Carbohydrates": 10.51,
@@ -1302,7 +1302,7 @@
     {
         "name": "Arugula",
         "category": "Vegetables",
-        "energy": 25,
+        "Energy": 25,
         "Water": 91.71,
         "Protein": 2.58,
         "Carbohydrates": 3.65,
@@ -1367,7 +1367,7 @@
     {
         "name": "Asparagus",
         "category": "Vegetables",
-        "energy": 20,
+        "Energy": 20,
         "Water": 93.22,
         "Protein": 2.2,
         "Carbohydrates": 3.88,
@@ -1432,7 +1432,7 @@
     {
         "name": "Avocado",
         "category": "Fruit",
-        "energy": 160,
+        "Energy": 160,
         "Water": 73.23,
         "Protein": 2,
         "Carbohydrates": 8.53,
@@ -1497,7 +1497,7 @@
     {
         "name": "Balsam-pear (Bitter gourd) pods",
         "category": "Vegetables",
-        "energy": 17,
+        "Energy": 17,
         "Water": 94.03,
         "Protein": 1,
         "Carbohydrates": 3.7,
@@ -1562,7 +1562,7 @@
     {
         "name": "Balsam-pear(Bitter gourd) leaves",
         "category": "Vegetables",
-        "energy": 30,
+        "Energy": 30,
         "Water": 89.25,
         "Protein": 5.3,
         "Carbohydrates": 3.29,
@@ -1627,7 +1627,7 @@
     {
         "name": "Bamboo shoots",
         "category": "Vegetables",
-        "energy": 27,
+        "Energy": 27,
         "Water": 91,
         "Protein": 2.6,
         "Carbohydrates": 5.2,
@@ -1692,7 +1692,7 @@
     {
         "name": "Banana",
         "category": "Fruit",
-        "energy": 89,
+        "Energy": 89,
         "Water": 74.91,
         "Protein": 1.09,
         "Carbohydrates": 22.84,
@@ -1757,7 +1757,7 @@
     {
         "name": "Barley flour",
         "category": "Grains",
-        "energy": 345,
+        "Energy": 345,
         "Water": 12.11,
         "Protein": 10.5,
         "Carbohydrates": 74.52,
@@ -1822,7 +1822,7 @@
     {
         "name": "Barley hulled",
         "category": "Grains",
-        "energy": 354,
+        "Energy": 354,
         "Water": 9.44,
         "Protein": 12.48,
         "Carbohydrates": 73.48,
@@ -1887,7 +1887,7 @@
     {
         "name": "Barley malt flour",
         "category": "Grains",
-        "energy": 361,
+        "Energy": 361,
         "Water": 8.21,
         "Protein": 10.28,
         "Carbohydrates": 78.3,
@@ -1952,7 +1952,7 @@
     {
         "name": "Barley pearled",
         "category": "Grains",
-        "energy": 352,
+        "Energy": 352,
         "Water": 10.09,
         "Protein": 9.91,
         "Carbohydrates": 77.72,
@@ -2017,7 +2017,7 @@
     {
         "name": "Basil",
         "category": "Herbs and spices",
-        "energy": 23,
+        "Energy": 23,
         "Water": 92.06,
         "Protein": 3.15,
         "Carbohydrates": 2.65,
@@ -2082,7 +2082,7 @@
     {
         "name": "Adzuki beans",
         "category": "Legumes",
-        "energy": 329,
+        "Energy": 329,
         "Water": 13.44,
         "Protein": 19.87,
         "Carbohydrates": 62.9,
@@ -2147,7 +2147,7 @@
     {
         "name": "Black beans",
         "category": "Legumes",
-        "energy": 341,
+        "Energy": 341,
         "Water": 11.02,
         "Protein": 21.6,
         "Carbohydrates": 62.36,
@@ -2212,7 +2212,7 @@
     {
         "name": "Black turtle beans",
         "category": "Legumes",
-        "energy": 339,
+        "Energy": 339,
         "Water": 11,
         "Protein": 21.25,
         "Carbohydrates": 63.25,
@@ -2277,7 +2277,7 @@
     {
         "name": "Cranberry (Borlotti, Roman) beans",
         "category": "Legumes",
-        "energy": 335,
+        "Energy": 335,
         "Water": 12.39,
         "Protein": 23.03,
         "Carbohydrates": 60.05,
@@ -2342,7 +2342,7 @@
     {
         "name": "Fava beans (Vicia faba) with pods",
         "category": "Vegetables",
-        "energy": 88,
+        "Energy": 88,
         "Water": 72.6,
         "Protein": 7.92,
         "Carbohydrates": 17.63,
@@ -2407,7 +2407,7 @@
     {
         "name": "Kidney beans",
         "category": "Legumes",
-        "energy": 333,
+        "Energy": 333,
         "Water": 11.75,
         "Protein": 23.58,
         "Carbohydrates": 60.01,
@@ -2472,7 +2472,7 @@
     {
         "name": "Sprouted kidney beans",
         "category": "Vegetables",
-        "energy": 29,
+        "Energy": 29,
         "Water": 90.7,
         "Protein": 4.2,
         "Carbohydrates": 4.1,
@@ -2537,7 +2537,7 @@
     {
         "name": "Red beans",
         "category": "Legumes",
-        "energy": 337,
+        "Energy": 337,
         "Water": 11.75,
         "Protein": 22.53,
         "Carbohydrates": 61.29,
@@ -2602,7 +2602,7 @@
     {
         "name": "Navy beans",
         "category": "Legumes",
-        "energy": 337,
+        "Energy": 337,
         "Water": 12.1,
         "Protein": 22.33,
         "Carbohydrates": 60.75,
@@ -2667,7 +2667,7 @@
     {
         "name": "Sprouted navy beans",
         "category": "Vegetables",
-        "energy": 67,
+        "Energy": 67,
         "Water": 79.15,
         "Protein": 6.15,
         "Carbohydrates": 13.05,
@@ -2732,7 +2732,7 @@
     {
         "name": "Navy (Haricot) beans",
         "category": "Legumes",
-        "energy": 337,
+        "Energy": 337,
         "Water": 12.1,
         "Protein": 22.33,
         "Carbohydrates": 60.75,
@@ -2797,7 +2797,7 @@
     {
         "name": "Sprouted navy (haricot) beans",
         "category": "Vegetables",
-        "energy": 67,
+        "Energy": 67,
         "Water": 79.15,
         "Protein": 6.15,
         "Carbohydrates": 13.05,
@@ -2862,7 +2862,7 @@
     {
         "name": "Pink beans",
         "category": "Legumes",
-        "energy": 343,
+        "Energy": 343,
         "Water": 10.06,
         "Protein": 20.96,
         "Carbohydrates": 0,
@@ -2927,7 +2927,7 @@
     {
         "name": "Pinto beans",
         "category": "Legumes",
-        "energy": 347,
+        "Energy": 347,
         "Water": 11.33,
         "Protein": 21.42,
         "Carbohydrates": 62.55,
@@ -2992,7 +2992,7 @@
     {
         "name": "Sprouted pinto beans",
         "category": "Vegetables",
-        "energy": 62,
+        "Energy": 62,
         "Water": 81.3,
         "Protein": 5.25,
         "Carbohydrates": 11.6,
@@ -3057,7 +3057,7 @@
     {
         "name": "Small white beans",
         "category": "Legumes",
-        "energy": 336,
+        "Energy": 336,
         "Water": 11.71,
         "Protein": 21.11,
         "Carbohydrates": 62.25,
@@ -3122,7 +3122,7 @@
     {
         "name": "Green (snap) beans",
         "category": "Vegetables",
-        "energy": 31,
+        "Energy": 31,
         "Water": 90.32,
         "Protein": 1.83,
         "Carbohydrates": 6.97,
@@ -3187,7 +3187,7 @@
     {
         "name": "Yellow (snap) beans",
         "category": "Vegetables",
-        "energy": 31,
+        "Energy": 31,
         "Water": 90.27,
         "Protein": 1.82,
         "Carbohydrates": 7.13,
@@ -3252,7 +3252,7 @@
     {
         "name": "White beans",
         "category": "Legumes",
-        "energy": 333,
+        "Energy": 333,
         "Water": 11.32,
         "Protein": 23.36,
         "Carbohydrates": 60.27,
@@ -3317,7 +3317,7 @@
     {
         "name": "Yellow beans",
         "category": "Legumes",
-        "energy": 345,
+        "Energy": 345,
         "Water": 11.1,
         "Protein": 22,
         "Carbohydrates": 60.7,
@@ -3382,7 +3382,7 @@
     {
         "name": "Beet greens",
         "category": "Vegetables",
-        "energy": 22,
+        "Energy": 22,
         "Water": 91.02,
         "Protein": 2.2,
         "Carbohydrates": 4.33,
@@ -3446,7 +3446,7 @@
     {
         "name": "Beetroot",
         "category": "Vegetables",
-        "energy": 43,
+        "Energy": 43,
         "Water": 87.58,
         "Protein": 1.61,
         "Carbohydrates": 9.56,
@@ -3511,7 +3511,7 @@
     {
         "name": "Almond milk",
         "category": "Beverages",
-        "energy": 15,
+        "Energy": 15,
         "Water": 97.05,
         "Protein": 0.59,
         "Carbohydrates": 0.58,
@@ -3576,7 +3576,7 @@
     {
         "name": "Coffee",
         "category": "Beverages",
-        "energy": 1,
+        "Energy": 1,
         "Water": 99.39,
         "Protein": 0.12,
         "Carbohydrates": 0,
@@ -3641,7 +3641,7 @@
     {
         "name": "Black tea brewed",
         "category": "Beverages",
-        "energy": 1,
+        "Energy": 1,
         "Water": 99.7,
         "Protein": 0,
         "Carbohydrates": 0.3,
@@ -3706,7 +3706,7 @@
     {
         "name": "Chamomile tea brewed",
         "category": "Beverages",
-        "energy": 1,
+        "Energy": 1,
         "Water": 99.7,
         "Protein": 0,
         "Carbohydrates": 0.2,
@@ -3771,7 +3771,7 @@
     {
         "name": "Hibiscus tea brewed",
         "category": "Beverages",
-        "energy": 0,
+        "Energy": 0,
         "Water": 99.58,
         "Protein": 0,
         "Carbohydrates": 0,
@@ -3836,7 +3836,7 @@
     {
         "name": "Green tea brewed",
         "category": "Beverages",
-        "energy": 1,
+        "Energy": 1,
         "Water": 99.93,
         "Protein": 0.22,
         "Carbohydrates": 0,
@@ -3901,7 +3901,7 @@
     {
         "name": "Herbal tea brewed",
         "category": "Beverages",
-        "energy": 1,
+        "Energy": 1,
         "Water": 99.7,
         "Protein": 0,
         "Carbohydrates": 0.2,
@@ -3966,7 +3966,7 @@
     {
         "name": "Blackberries",
         "category": "Fruit",
-        "energy": 43,
+        "Energy": 43,
         "Water": 88.15,
         "Protein": 1.39,
         "Carbohydrates": 9.61,
@@ -4031,7 +4031,7 @@
     {
         "name": "Blueberries",
         "category": "Fruit",
-        "energy": 57,
+        "Energy": 57,
         "Water": 84.21,
         "Protein": 0.74,
         "Carbohydrates": 14.49,
@@ -4096,7 +4096,7 @@
     {
         "name": "Borage",
         "category": "Vegetables",
-        "energy": 21,
+        "Energy": 21,
         "Water": 93,
         "Protein": 1.8,
         "Carbohydrates": 3.06,
@@ -4161,7 +4161,7 @@
     {
         "name": "Breadfruit",
         "category": "Fruit",
-        "energy": 103,
+        "Energy": 103,
         "Water": 70.65,
         "Protein": 1.07,
         "Carbohydrates": 27.12,
@@ -4226,7 +4226,7 @@
     {
         "name": "Broadbeans (Fava beans)",
         "category": "Legumes",
-        "energy": 341,
+        "Energy": 341,
         "Water": 10.98,
         "Protein": 26.12,
         "Carbohydrates": 58.29,
@@ -4291,7 +4291,7 @@
     {
         "name": "Broccoli",
         "category": "Vegetables",
-        "energy": 34,
+        "Energy": 34,
         "Water": 89.3,
         "Protein": 2.82,
         "Carbohydrates": 6.64,
@@ -4356,7 +4356,7 @@
     {
         "name": "Brussels sprouts",
         "category": "Vegetables",
-        "energy": 43,
+        "Energy": 43,
         "Water": 86,
         "Protein": 3.38,
         "Carbohydrates": 8.95,
@@ -4421,7 +4421,7 @@
     {
         "name": "Buckwheat",
         "category": "Grains",
-        "energy": 343,
+        "Energy": 343,
         "Water": 9.75,
         "Protein": 13.25,
         "Carbohydrates": 71.5,
@@ -4486,7 +4486,7 @@
     {
         "name": "Bulgur",
         "category": "Grains",
-        "energy": 342,
+        "Energy": 342,
         "Water": 9,
         "Protein": 12.29,
         "Carbohydrates": 75.87,
@@ -4551,7 +4551,7 @@
     {
         "name": "Burdock root",
         "category": "Vegetables",
-        "energy": 72,
+        "Energy": 72,
         "Water": 80.09,
         "Protein": 1.53,
         "Carbohydrates": 17.34,
@@ -4616,7 +4616,7 @@
     {
         "name": "Fuki (Petasites japonicus or Giant butterbur)",
         "category": "Vegetables",
-        "energy": 14,
+        "Energy": 14,
         "Water": 94.5,
         "Protein": 0.39,
         "Carbohydrates": 3.61,
@@ -4681,7 +4681,7 @@
     {
         "name": "Butter",
         "category": "Dairy",
-        "energy": 717,
+        "Energy": 717,
         "Water": 17.94,
         "Protein": 0.85,
         "Carbohydrates": 0.06,
@@ -4746,7 +4746,7 @@
     {
         "name": "Chinese cabbage (Pak choi)",
         "category": "Vegetables",
-        "energy": 13,
+        "Energy": 13,
         "Water": 95.32,
         "Protein": 1.5,
         "Carbohydrates": 2.18,
@@ -4811,7 +4811,7 @@
     {
         "name": "Chinese cabbage (Pe tsai)",
         "category": "Vegetables",
-        "energy": 16,
+        "Energy": 16,
         "Water": 94.39,
         "Protein": 1.2,
         "Carbohydrates": 3.23,
@@ -4876,7 +4876,7 @@
     {
         "name": "Cabbage",
         "category": "Vegetables",
-        "energy": 25,
+        "Energy": 25,
         "Water": 92.18,
         "Protein": 1.28,
         "Carbohydrates": 5.8,
@@ -4941,7 +4941,7 @@
     {
         "name": "Red cabbage",
         "category": "Vegetables",
-        "energy": 31,
+        "Energy": 31,
         "Water": 90.39,
         "Protein": 1.43,
         "Carbohydrates": 7.37,
@@ -5006,7 +5006,7 @@
     {
         "name": "Savoy cabbage",
         "category": "Vegetables",
-        "energy": 27,
+        "Energy": 27,
         "Water": 91,
         "Protein": 2,
         "Carbohydrates": 6.1,
@@ -5071,7 +5071,7 @@
     {
         "name": "Cardoon",
         "category": "Vegetables",
-        "energy": 17,
+        "Energy": 17,
         "Water": 94,
         "Protein": 0.7,
         "Carbohydrates": 4.07,
@@ -5136,7 +5136,7 @@
     {
         "name": "Carissa macrocarpa (Natal Plum)",
         "category": "Fruit",
-        "energy": 62,
+        "Energy": 62,
         "Water": 84.17,
         "Protein": 0.5,
         "Carbohydrates": 13.63,
@@ -5201,7 +5201,7 @@
     {
         "name": "Carob flour",
         "category": "Legumes",
-        "energy": 222,
+        "Energy": 222,
         "Water": 3.58,
         "Protein": 4.62,
         "Carbohydrates": 88.88,
@@ -5266,7 +5266,7 @@
     {
         "name": "Baby carrot",
         "category": "Vegetables",
-        "energy": 35,
+        "Energy": 35,
         "Water": 90.35,
         "Protein": 0.64,
         "Carbohydrates": 8.24,
@@ -5331,7 +5331,7 @@
     {
         "name": "Carrot",
         "category": "Vegetables",
-        "energy": 41,
+        "Energy": 41,
         "Water": 88.29,
         "Protein": 0.93,
         "Carbohydrates": 9.58,
@@ -5396,7 +5396,7 @@
     {
         "name": "Cassava, Yuca or Tapioca (Manihot esculenta)",
         "category": "Vegetables",
-        "energy": 160,
+        "Energy": 160,
         "Water": 59.68,
         "Protein": 1.36,
         "Carbohydrates": 38.06,
@@ -5461,7 +5461,7 @@
     {
         "name": "Green cauliflower",
         "category": "Vegetables",
-        "energy": 31,
+        "Energy": 31,
         "Water": 89.79,
         "Protein": 2.95,
         "Carbohydrates": 6.09,
@@ -5526,7 +5526,7 @@
     {
         "name": "Cauliflower",
         "category": "Vegetables",
-        "energy": 25,
+        "Energy": 25,
         "Water": 92.07,
         "Protein": 1.92,
         "Carbohydrates": 4.97,
@@ -5591,7 +5591,7 @@
     {
         "name": "Celariac (Turnip-rooted celery)",
         "category": "Vegetables",
-        "energy": 42,
+        "Energy": 42,
         "Water": 88,
         "Protein": 1.5,
         "Carbohydrates": 9.2,
@@ -5656,7 +5656,7 @@
     {
         "name": "Celery",
         "category": "Vegetables",
-        "energy": 16,
+        "Energy": 16,
         "Water": 95.43,
         "Protein": 0.69,
         "Carbohydrates": 2.97,
@@ -5721,7 +5721,7 @@
     {
         "name": "Celtuce",
         "category": "Vegetables",
-        "energy": 18,
+        "Energy": 18,
         "Water": 94.5,
         "Protein": 0.85,
         "Carbohydrates": 3.65,
@@ -5786,7 +5786,7 @@
     {
         "name": "Swiss chard",
         "category": "Vegetables",
-        "energy": 19,
+        "Energy": 19,
         "Water": 92.66,
         "Protein": 1.8,
         "Carbohydrates": 3.74,
@@ -5851,7 +5851,7 @@
     {
         "name": "Chayote",
         "category": "Vegetables",
-        "energy": 19,
+        "Energy": 19,
         "Water": 94.24,
         "Protein": 0.82,
         "Carbohydrates": 4.51,
@@ -5916,7 +5916,7 @@
     {
         "name": "Blue cheese",
         "category": "Dairy",
-        "energy": 353,
+        "Energy": 353,
         "Water": 42.41,
         "Protein": 21.4,
         "Carbohydrates": 2.34,
@@ -5981,7 +5981,7 @@
     {
         "name": "Brick cheese",
         "category": "Dairy",
-        "energy": 371,
+        "Energy": 371,
         "Water": 41.11,
         "Protein": 23.24,
         "Carbohydrates": 2.79,
@@ -6046,7 +6046,7 @@
     {
         "name": "Brie cheese",
         "category": "Dairy",
-        "energy": 334,
+        "Energy": 334,
         "Water": 48.42,
         "Protein": 20.75,
         "Carbohydrates": 0.45,
@@ -6111,7 +6111,7 @@
     {
         "name": "Camembert cheese",
         "category": "Dairy",
-        "energy": 300,
+        "Energy": 300,
         "Water": 51.8,
         "Protein": 19.8,
         "Carbohydrates": 0.46,
@@ -6176,7 +6176,7 @@
     {
         "name": "Caraway cheese",
         "category": "Dairy",
-        "energy": 376,
+        "Energy": 376,
         "Water": 39.28,
         "Protein": 2.18,
         "Carbohydrates": 3.06,
@@ -6241,7 +6241,7 @@
     {
         "name": "Cheddar cheese",
         "category": "Dairy",
-        "energy": 404,
+        "Energy": 404,
         "Water": 37.07,
         "Protein": 22.87,
         "Carbohydrates": 3.09,
@@ -6306,7 +6306,7 @@
     {
         "name": "Cheddar cheese non-fat",
         "category": "Dairy",
-        "energy": 157,
+        "Energy": 157,
         "Water": 57,
         "Protein": 32.14,
         "Carbohydrates": 7.14,
@@ -6371,7 +6371,7 @@
     {
         "name": "Cheshire cheese",
         "category": "Dairy",
-        "energy": 387,
+        "Energy": 387,
         "Water": 37.65,
         "Protein": 23.37,
         "Carbohydrates": 4.78,
@@ -6436,7 +6436,7 @@
     {
         "name": "Colby cheese",
         "category": "Dairy",
-        "energy": 394,
+        "Energy": 394,
         "Water": 38.2,
         "Protein": 23.76,
         "Carbohydrates": 2.57,
@@ -6501,7 +6501,7 @@
     {
         "name": "Colby cheese low-fat",
         "category": "Dairy",
-        "energy": 173,
+        "Energy": 173,
         "Water": 63.1,
         "Protein": 24.35,
         "Carbohydrates": 1.91,
@@ -6566,7 +6566,7 @@
     {
         "name": "Cottage cheese",
         "category": "Dairy",
-        "energy": 98,
+        "Energy": 98,
         "Water": 79.79,
         "Protein": 11.12,
         "Carbohydrates": 3.38,
@@ -6631,7 +6631,7 @@
     {
         "name": "Cottage cheese low-fat",
         "category": "Dairy",
-        "energy": 72,
+        "Energy": 72,
         "Water": 82.48,
         "Protein": 12.39,
         "Carbohydrates": 2.72,
@@ -6696,7 +6696,7 @@
     {
         "name": "Cream cheese",
         "category": "Dairy",
-        "energy": 350,
+        "Energy": 350,
         "Water": 52.62,
         "Protein": 6.15,
         "Carbohydrates": 5.52,
@@ -6761,7 +6761,7 @@
     {
         "name": "Cream cheese low-fat",
         "category": "Dairy",
-        "energy": 105,
+        "Energy": 105,
         "Water": 7.87,
         "Protein": 15.69,
         "Carbohydrates": 7.66,
@@ -6826,7 +6826,7 @@
     {
         "name": "Queso seco cheese",
         "category": "Dairy",
-        "energy": 325,
+        "Energy": 325,
         "Water": 42.17,
         "Protein": 24.51,
         "Carbohydrates": 2.04,
@@ -6891,7 +6891,7 @@
     {
         "name": "Edam cheese",
         "category": "Dairy",
-        "energy": 357,
+        "Energy": 357,
         "Water": 41.56,
         "Protein": 24.99,
         "Carbohydrates": 1.43,
@@ -6956,7 +6956,7 @@
     {
         "name": "Feta cheese",
         "category": "Dairy",
-        "energy": 264,
+        "Energy": 264,
         "Water": 55.22,
         "Protein": 14.21,
         "Carbohydrates": 4.09,
@@ -7021,7 +7021,7 @@
     {
         "name": "Fontina cheese",
         "category": "Dairy",
-        "energy": 389,
+        "Energy": 389,
         "Water": 37.92,
         "Protein": 25.6,
         "Carbohydrates": 1.55,
@@ -7086,7 +7086,7 @@
     {
         "name": "Gjetost cheese",
         "category": "Dairy",
-        "energy": 466,
+        "Energy": 466,
         "Water": 13.44,
         "Protein": 9.65,
         "Carbohydrates": 42.65,
@@ -7151,7 +7151,7 @@
     {
         "name": "Goat cheese hard",
         "category": "Dairy",
-        "energy": 452,
+        "Energy": 452,
         "Water": 29.01,
         "Protein": 30.52,
         "Carbohydrates": 2.17,
@@ -7216,7 +7216,7 @@
     {
         "name": "Goat cheese semi-soft",
         "category": "Dairy",
-        "energy": 364,
+        "Energy": 364,
         "Water": 45.52,
         "Protein": 21.58,
         "Carbohydrates": 0.12,
@@ -7281,7 +7281,7 @@
     {
         "name": "Goat cheese soft",
         "category": "Dairy",
-        "energy": 264,
+        "Energy": 264,
         "Water": 60.75,
         "Protein": 18.52,
         "Carbohydrates": 0,
@@ -7346,7 +7346,7 @@
     {
         "name": "Gouda cheese",
         "category": "Dairy",
-        "energy": 356,
+        "Energy": 356,
         "Water": 41.46,
         "Protein": 24.94,
         "Carbohydrates": 2.22,
@@ -7411,7 +7411,7 @@
     {
         "name": "Gruyere cheese",
         "category": "Dairy",
-        "energy": 413,
+        "Energy": 413,
         "Water": 33.19,
         "Protein": 29.81,
         "Carbohydrates": 0.36,
@@ -7476,7 +7476,7 @@
     {
         "name": "Limburger cheese",
         "category": "Dairy",
-        "energy": 327,
+        "Energy": 327,
         "Water": 48.42,
         "Protein": 20.05,
         "Carbohydrates": 0.49,
@@ -7541,7 +7541,7 @@
     {
         "name": "Queso fresco cheese",
         "category": "Dairy",
-        "energy": 299,
+        "Energy": 299,
         "Water": 51.42,
         "Protein": 18.09,
         "Carbohydrates": 2.98,
@@ -7606,7 +7606,7 @@
     {
         "name": "Queso anejo cheese",
         "category": "Dairy",
-        "energy": 373,
+        "Energy": 373,
         "Water": 38.06,
         "Protein": 21.44,
         "Carbohydrates": 4.63,
@@ -7671,7 +7671,7 @@
     {
         "name": "Queso asadero cheese",
         "category": "Dairy",
-        "energy": 356,
+        "Energy": 356,
         "Water": 42.16,
         "Protein": 22.6,
         "Carbohydrates": 2.87,
@@ -7736,7 +7736,7 @@
     {
         "name": "Queso chihuahua cheese",
         "category": "Dairy",
-        "energy": 374,
+        "Energy": 374,
         "Water": 39.13,
         "Protein": 21.56,
         "Carbohydrates": 5.56,
@@ -7801,7 +7801,7 @@
     {
         "name": "Queso cotija cheese",
         "category": "Dairy",
-        "energy": 366,
+        "Energy": 366,
         "Water": 38,
         "Protein": 20,
         "Carbohydrates": 3.97,
@@ -7866,7 +7866,7 @@
     {
         "name": "Monterey cheese",
         "category": "Dairy",
-        "energy": 373,
+        "Energy": 373,
         "Water": 41.01,
         "Protein": 24.48,
         "Carbohydrates": 0.68,
@@ -7931,7 +7931,7 @@
     {
         "name": "Monterey cheese low-fat",
         "category": "Dairy",
-        "energy": 313,
+        "Energy": 313,
         "Water": 46,
         "Protein": 28.2,
         "Carbohydrates": 0.7,
@@ -7996,7 +7996,7 @@
     {
         "name": "Mozzarella cheese",
         "category": "Dairy",
-        "energy": 300,
+        "Energy": 300,
         "Water": 50.01,
         "Protein": 22.17,
         "Carbohydrates": 2.19,
@@ -8061,7 +8061,7 @@
     {
         "name": "Mozzarella cheese non-fat",
         "category": "Dairy",
-        "energy": 141,
+        "Energy": 141,
         "Water": 60.2,
         "Protein": 31.7,
         "Carbohydrates": 3.5,
@@ -8126,7 +8126,7 @@
     {
         "name": "Muenster cheese",
         "category": "Dairy",
-        "energy": 368,
+        "Energy": 368,
         "Water": 41.77,
         "Protein": 23.41,
         "Carbohydrates": 1.12,
@@ -8191,7 +8191,7 @@
     {
         "name": "Muenster cheese low-fat",
         "category": "Dairy",
-        "energy": 271,
+        "Energy": 271,
         "Water": 50.5,
         "Protein": 24.7,
         "Carbohydrates": 3.5,
@@ -8256,7 +8256,7 @@
     {
         "name": "Parmesan cheese",
         "category": "Dairy",
-        "energy": 392,
+        "Energy": 392,
         "Water": 29.16,
         "Protein": 35.75,
         "Carbohydrates": 3.22,
@@ -8321,7 +8321,7 @@
     {
         "name": "Pimento cheese",
         "category": "Dairy",
-        "energy": 375,
+        "Energy": 375,
         "Water": 39.08,
         "Protein": 22.13,
         "Carbohydrates": 1.73,
@@ -8386,7 +8386,7 @@
     {
         "name": "Port de salut cheese",
         "category": "Dairy",
-        "energy": 352,
+        "Energy": 352,
         "Water": 45.45,
         "Protein": 23.78,
         "Carbohydrates": 0.57,
@@ -8451,7 +8451,7 @@
     {
         "name": "Neufchatel cheese",
         "category": "Dairy",
-        "energy": 253,
+        "Energy": 253,
         "Water": 63.11,
         "Protein": 9.15,
         "Carbohydrates": 3.59,
@@ -8516,7 +8516,7 @@
     {
         "name": "Provolone cheese",
         "category": "Dairy",
-        "energy": 351,
+        "Energy": 351,
         "Water": 40.95,
         "Protein": 25.58,
         "Carbohydrates": 2.14,
@@ -8581,7 +8581,7 @@
     {
         "name": "Provolone cheese low-fat",
         "category": "Dairy",
-        "energy": 274,
+        "Energy": 274,
         "Water": 50.6,
         "Protein": 24.7,
         "Carbohydrates": 3.5,
@@ -8646,7 +8646,7 @@
     {
         "name": "Ricotta cheese",
         "category": "Dairy",
-        "energy": 174,
+        "Energy": 174,
         "Water": 71.7,
         "Protein": 11.26,
         "Carbohydrates": 3.04,
@@ -8711,7 +8711,7 @@
     {
         "name": "Ricotta cheese low-fat",
         "category": "Dairy",
-        "energy": 138,
+        "Energy": 138,
         "Water": 74.41,
         "Protein": 11.39,
         "Carbohydrates": 5.14,
@@ -8776,7 +8776,7 @@
     {
         "name": "Romano cheese",
         "category": "Dairy",
-        "energy": 387,
+        "Energy": 387,
         "Water": 30.91,
         "Protein": 31.8,
         "Carbohydrates": 3.63,
@@ -8841,7 +8841,7 @@
     {
         "name": "Roquefort cheese",
         "category": "Dairy",
-        "energy": 369,
+        "Energy": 369,
         "Water": 39.38,
         "Protein": 21.54,
         "Carbohydrates": 2,
@@ -8906,7 +8906,7 @@
     {
         "name": "Swiss cheese",
         "category": "Dairy",
-        "energy": 393,
+        "Energy": 393,
         "Water": 37.63,
         "Protein": 26.96,
         "Carbohydrates": 1.44,
@@ -8971,7 +8971,7 @@
     {
         "name": "Swiss cheese low-fat",
         "category": "Dairy",
-        "energy": 179,
+        "Energy": 179,
         "Water": 59.6,
         "Protein": 28.4,
         "Carbohydrates": 3.4,
@@ -9036,7 +9036,7 @@
     {
         "name": "Tilsit cheese",
         "category": "Dairy",
-        "energy": 340,
+        "Energy": 340,
         "Water": 42.86,
         "Protein": 24.41,
         "Carbohydrates": 1.88,
@@ -9101,7 +9101,7 @@
     {
         "name": "Queso blanco cheese",
         "category": "Dairy",
-        "energy": 310,
+        "Energy": 310,
         "Water": 48.7,
         "Protein": 20.38,
         "Carbohydrates": 2.53,
@@ -9166,7 +9166,7 @@
     {
         "name": "Telemea cheese low-fat",
         "category": "Dairy",
-        "energy": 72,
+        "Energy": 72,
         "Water": 82.48,
         "Protein": 12.39,
         "Carbohydrates": 2.72,
@@ -9231,7 +9231,7 @@
     {
         "name": "Cherimoya",
         "category": "Fruit",
-        "energy": 75,
+        "Energy": 75,
         "Water": 79.39,
         "Protein": 1.57,
         "Carbohydrates": 17.71,
@@ -9296,7 +9296,7 @@
     {
         "name": "Sour cherries",
         "category": "Fruit",
-        "energy": 50,
+        "Energy": 50,
         "Water": 86.13,
         "Protein": 1,
         "Carbohydrates": 12.18,
@@ -9361,7 +9361,7 @@
     {
         "name": "Cherries",
         "category": "Fruit",
-        "energy": 63,
+        "Energy": 63,
         "Water": 82.25,
         "Protein": 1.06,
         "Carbohydrates": 16.01,
@@ -9426,7 +9426,7 @@
     {
         "name": "Chickpea flour",
         "category": "Legumes",
-        "energy": 387,
+        "Energy": 387,
         "Water": 10.28,
         "Protein": 22.39,
         "Carbohydrates": 57.82,
@@ -9491,7 +9491,7 @@
     {
         "name": "Chickpeas (Garbanzo beans)",
         "category": "Legumes",
-        "energy": 378,
+        "Energy": 378,
         "Water": 7.68,
         "Protein": 20.47,
         "Carbohydrates": 62.95,
@@ -9556,7 +9556,7 @@
     {
         "name": "Chicory greens",
         "category": "Vegetables",
-        "energy": 23,
+        "Energy": 23,
         "Water": 92,
         "Protein": 1.7,
         "Carbohydrates": 4.7,
@@ -9621,7 +9621,7 @@
     {
         "name": "Chicory root",
         "category": "Vegetables",
-        "energy": 72,
+        "Energy": 72,
         "Water": 80,
         "Protein": 1.4,
         "Carbohydrates": 17.51,
@@ -9686,7 +9686,7 @@
     {
         "name": "Chicory",
         "category": "Vegetables",
-        "energy": 17,
+        "Energy": 17,
         "Water": 94.52,
         "Protein": 0.9,
         "Carbohydrates": 4,
@@ -9751,7 +9751,7 @@
     {
         "name": "Chives",
         "category": "Vegetables",
-        "energy": 30,
+        "Energy": 30,
         "Water": 90.65,
         "Protein": 3.27,
         "Carbohydrates": 4.35,
@@ -9816,7 +9816,7 @@
     {
         "name": "Chockecherries",
         "category": "Fruit",
-        "energy": 162,
+        "Energy": 162,
         "Water": 60.72,
         "Protein": 3.04,
         "Carbohydrates": 33.62,
@@ -9881,7 +9881,7 @@
     {
         "name": "Chrysanthemum greens",
         "category": "Vegetables",
-        "energy": 24,
+        "Energy": 24,
         "Water": 91.4,
         "Protein": 3.36,
         "Carbohydrates": 0.56,
@@ -9946,7 +9946,7 @@
     {
         "name": "Clementine",
         "category": "Fruit",
-        "energy": 47,
+        "Energy": 47,
         "Water": 86.58,
         "Protein": 0.85,
         "Carbohydrates": 12.02,
@@ -10011,7 +10011,7 @@
     {
         "name": "Cloudberries",
         "category": "Fruit",
-        "energy": 51,
+        "Energy": 51,
         "Water": 87,
         "Protein": 2.4,
         "Carbohydrates": 8.6,
@@ -10076,7 +10076,7 @@
     {
         "name": "Cockles",
         "category": "Meat",
-        "energy": 79,
+        "Energy": 79,
         "Water": 78.8,
         "Protein": 13.5,
         "Carbohydrates": 4.7,
@@ -10141,7 +10141,7 @@
     {
         "name": "Collard greens",
         "category": "Vegetables",
-        "energy": 32,
+        "Energy": 32,
         "Water": 89.62,
         "Protein": 3.02,
         "Carbohydrates": 5.42,
@@ -10206,7 +10206,7 @@
     {
         "name": "Coriander (Cilantro) leaves",
         "category": "Herbs and spices",
-        "energy": 23,
+        "Energy": 23,
         "Water": 92.21,
         "Protein": 2.13,
         "Carbohydrates": 3.67,
@@ -10271,7 +10271,7 @@
     {
         "name": "Corn bran",
         "category": "Grains",
-        "energy": 224,
+        "Energy": 224,
         "Water": 4.71,
         "Protein": 8.36,
         "Carbohydrates": 85.64,
@@ -10336,7 +10336,7 @@
     {
         "name": "White corn flour",
         "category": "Grains",
-        "energy": 361,
+        "Energy": 361,
         "Water": 10.91,
         "Protein": 6.93,
         "Carbohydrates": 76.85,
@@ -10401,7 +10401,7 @@
     {
         "name": "Yellow corn flour",
         "category": "Grains",
-        "energy": 361,
+        "Energy": 361,
         "Water": 10.91,
         "Protein": 6.93,
         "Carbohydrates": 76.85,
@@ -10466,7 +10466,7 @@
     {
         "name": "White corn",
         "category": "Grains",
-        "energy": 365,
+        "Energy": 365,
         "Water": 10.37,
         "Protein": 9.42,
         "Carbohydrates": 74.26,
@@ -10531,7 +10531,7 @@
     {
         "name": "Yellow corn",
         "category": "Grains",
-        "energy": 365,
+        "Energy": 365,
         "Water": 10.37,
         "Protein": 9.42,
         "Carbohydrates": 74.26,
@@ -10596,7 +10596,7 @@
     {
         "name": "Blue cornmeal",
         "category": "Grains",
-        "energy": 398,
+        "Energy": 398,
         "Water": 5.7,
         "Protein": 10.4,
         "Carbohydrates": 76.93,
@@ -10661,7 +10661,7 @@
     {
         "name": "White cornmeal",
         "category": "Grains",
-        "energy": 362,
+        "Energy": 362,
         "Water": 10.26,
         "Protein": 8.12,
         "Carbohydrates": 76.89,
@@ -10726,7 +10726,7 @@
     {
         "name": "Yellow cornmeal",
         "category": "Grains",
-        "energy": 362,
+        "Energy": 362,
         "Water": 10.26,
         "Protein": 8.12,
         "Carbohydrates": 76.89,
@@ -10791,7 +10791,7 @@
     {
         "name": "Cornstarch",
         "category": "Grains",
-        "energy": 381,
+        "Energy": 381,
         "Water": 8.32,
         "Protein": 0.26,
         "Carbohydrates": 91.27,
@@ -10856,7 +10856,7 @@
     {
         "name": "Sweet yellow corn",
         "category": "Grains",
-        "energy": 86,
+        "Energy": 86,
         "Water": 76.05,
         "Protein": 3.27,
         "Carbohydrates": 18.7,
@@ -10921,7 +10921,7 @@
     {
         "name": "Sweet white corn",
         "category": "Grains",
-        "energy": 86,
+        "Energy": 86,
         "Water": 75.96,
         "Protein": 3.22,
         "Carbohydrates": 19.02,
@@ -10986,7 +10986,7 @@
     {
         "name": "Couscous",
         "category": "Grains",
-        "energy": 376,
+        "Energy": 376,
         "Water": 8.56,
         "Protein": 12.76,
         "Carbohydrates": 77.43,
@@ -11051,7 +11051,7 @@
     {
         "name": "Cowpeas immature seeds",
         "category": "Legumes",
-        "energy": 90,
+        "Energy": 90,
         "Water": 77.2,
         "Protein": 2.95,
         "Carbohydrates": 18.83,
@@ -11116,7 +11116,7 @@
     {
         "name": "Cowpeas mature seeds",
         "category": "Legumes",
-        "energy": 343,
+        "Energy": 343,
         "Water": 11.05,
         "Protein": 23.85,
         "Carbohydrates": 59.64,
@@ -11181,7 +11181,7 @@
     {
         "name": "Cowpeas leafy tips",
         "category": "Vegetables",
-        "energy": 29,
+        "Energy": 29,
         "Water": 89.78,
         "Protein": 4.1,
         "Carbohydrates": 4.82,
@@ -11246,7 +11246,7 @@
     {
         "name": "Cowpeas young pods with seeds",
         "category": "Vegetables",
-        "energy": 44,
+        "Energy": 44,
         "Water": 86,
         "Protein": 3.3,
         "Carbohydrates": 9.5,
@@ -11311,7 +11311,7 @@
     {
         "name": "Crabapple",
         "category": "Fruit",
-        "energy": 76,
+        "Energy": 76,
         "Water": 78.94,
         "Protein": 0.4,
         "Carbohydrates": 19.95,
@@ -11376,7 +11376,7 @@
     {
         "name": "Fuji apple",
         "category": "Fruit",
-        "energy": 63,
+        "Energy": 63,
         "Water": 84.16,
         "Protein": 0.2,
         "Carbohydrates": 15.22,
@@ -11441,7 +11441,7 @@
     {
         "name": "Gala apple",
         "category": "Fruit",
-        "energy": 57,
+        "Energy": 57,
         "Water": 85.76,
         "Protein": 0.25,
         "Carbohydrates": 13.68,
@@ -11506,7 +11506,7 @@
     {
         "name": "Golden apple",
         "category": "Fruit",
-        "energy": 57,
+        "Energy": 57,
         "Water": 85.81,
         "Protein": 0.28,
         "Carbohydrates": 13.6,
@@ -11571,7 +11571,7 @@
     {
         "name": "Red apple",
         "category": "Fruit",
-        "energy": 59,
+        "Energy": 59,
         "Water": 85.33,
         "Protein": 0.27,
         "Carbohydrates": 14.06,
@@ -11636,7 +11636,7 @@
     {
         "name": "Custard apple",
         "category": "Fruit",
-        "energy": 101,
+        "Energy": 101,
         "Water": 71.5,
         "Protein": 1.7,
         "Carbohydrates": 25.2,
@@ -11701,7 +11701,7 @@
     {
         "name": "Mammy-apple (Mamey)",
         "category": "Fruit",
-        "energy": 51,
+        "Energy": 51,
         "Water": 86.2,
         "Protein": 0.5,
         "Carbohydrates": 12.5,
@@ -11766,7 +11766,7 @@
     {
         "name": "Rose apple",
         "category": "Fruit",
-        "energy": 25,
+        "Energy": 25,
         "Water": 93,
         "Protein": 0.6,
         "Carbohydrates": 5.7,
@@ -11831,7 +11831,7 @@
     {
         "name": "Sugar-apple (Sweetop)",
         "category": "Fruit",
-        "energy": 94,
+        "Energy": 94,
         "Water": 73.23,
         "Protein": 2.06,
         "Carbohydrates": 23.64,
@@ -11896,7 +11896,7 @@
     {
         "name": "Cranberries",
         "category": "Fruit",
-        "energy": 46,
+        "Energy": 46,
         "Water": 87.32,
         "Protein": 0.46,
         "Carbohydrates": 11.97,
@@ -11961,7 +11961,7 @@
     {
         "name": "Half and half",
         "category": "Dairy",
-        "energy": 123,
+        "Energy": 123,
         "Water": 81.24,
         "Protein": 3.13,
         "Carbohydrates": 4.73,
@@ -12026,7 +12026,7 @@
     {
         "name": "Half and half non-fat",
         "category": "Dairy",
-        "energy": 59,
+        "Energy": 59,
         "Water": 86,
         "Protein": 2.6,
         "Carbohydrates": 9,
@@ -12091,7 +12091,7 @@
     {
         "name": "Heavy whipping cream",
         "category": "Dairy",
-        "energy": 340,
+        "Energy": 340,
         "Water": 57.81,
         "Protein": 2.84,
         "Carbohydrates": 2.74,
@@ -12156,7 +12156,7 @@
     {
         "name": "Light whipping cream",
         "category": "Dairy",
-        "energy": 292,
+        "Energy": 292,
         "Water": 63.5,
         "Protein": 2.17,
         "Carbohydrates": 2.96,
@@ -12221,7 +12221,7 @@
     {
         "name": "Sour cream",
         "category": "Dairy",
-        "energy": 198,
+        "Energy": 198,
         "Water": 73.07,
         "Protein": 2.44,
         "Carbohydrates": 4.63,
@@ -12286,7 +12286,7 @@
     {
         "name": "Sour cream low-fat",
         "category": "Dairy",
-        "energy": 135,
+        "Energy": 135,
         "Water": 80.14,
         "Protein": 2.94,
         "Carbohydrates": 4.26,
@@ -12351,7 +12351,7 @@
     {
         "name": "Garden cress",
         "category": "Vegetables",
-        "energy": 32,
+        "Energy": 32,
         "Water": 89.4,
         "Protein": 2.6,
         "Carbohydrates": 5.5,
@@ -12416,7 +12416,7 @@
     {
         "name": "Alaskan king crab",
         "category": "Meat",
-        "energy": 84,
+        "Energy": 84,
         "Water": 79.57,
         "Protein": 18.29,
         "Carbohydrates": 0,
@@ -12481,7 +12481,7 @@
     {
         "name": "Blue crab",
         "category": "Meat",
-        "energy": 87,
+        "Energy": 87,
         "Water": 79.02,
         "Protein": 18.06,
         "Carbohydrates": 0.04,
@@ -12546,7 +12546,7 @@
     {
         "name": "Dungeness crab",
         "category": "Meat",
-        "energy": 86,
+        "Energy": 86,
         "Water": 79.18,
         "Protein": 17.41,
         "Carbohydrates": 0.74,
@@ -12611,7 +12611,7 @@
     {
         "name": "Queen crab",
         "category": "Meat",
-        "energy": 90,
+        "Energy": 90,
         "Water": 80.58,
         "Protein": 18.5,
         "Carbohydrates": 0,
@@ -12676,7 +12676,7 @@
     {
         "name": "Crayfish farmed",
         "category": "Meat",
-        "energy": 72,
+        "Energy": 72,
         "Water": 84.05,
         "Protein": 14.85,
         "Carbohydrates": 0,
@@ -12741,7 +12741,7 @@
     {
         "name": "Crayfish wild",
         "category": "Meat",
-        "energy": 77,
+        "Energy": 77,
         "Water": 92.24,
         "Protein": 15.97,
         "Carbohydrates": 0,
@@ -12806,7 +12806,7 @@
     {
         "name": "Northern lobster",
         "category": "Meat",
-        "energy": 77,
+        "Energy": 77,
         "Water": 80.95,
         "Protein": 16.52,
         "Carbohydrates": 0,
@@ -12871,7 +12871,7 @@
     {
         "name": "Shrimp",
         "category": "Meat",
-        "energy": 85,
+        "Energy": 85,
         "Water": 78.45,
         "Protein": 20.1,
         "Carbohydrates": 0,
@@ -12936,7 +12936,7 @@
     {
         "name": "Spiny lobster",
         "category": "Meat",
-        "energy": 112,
+        "Energy": 112,
         "Water": 74.07,
         "Protein": 20.6,
         "Carbohydrates": 2.43,
@@ -13001,7 +13001,7 @@
     {
         "name": "Cucumber",
         "category": "Vegetables",
-        "energy": 15,
+        "Energy": 15,
         "Water": 95.23,
         "Protein": 0.65,
         "Fats": 0.11,
@@ -13066,7 +13066,7 @@
     {
         "name": "Dill",
         "category": "Herbs and spices",
-        "energy": 43,
+        "Energy": 43,
         "Water": 85.95,
         "Protein": 3.46,
         "Fats": 1.12,
@@ -13131,7 +13131,7 @@
     {
         "name": "Egg yolk",
         "category": "Dairy",
-        "energy": 322,
+        "Energy": 322,
         "Water": 52.31,
         "Protein": 15.86,
         "Fats": 26.54,
@@ -13196,7 +13196,7 @@
     {
         "name": "Egg white",
         "category": "Dairy",
-        "energy": 52,
+        "Energy": 52,
         "Water": 87.57,
         "Protein": 10.9,
         "Fats": 0.17,
@@ -13261,7 +13261,7 @@
     {
         "name": "Egg",
         "category": "Dairy",
-        "energy": 143,
+        "Energy": 143,
         "Water": 76.15,
         "Protein": 12.56,
         "Fats": 9.51,
@@ -13326,7 +13326,7 @@
     {
         "name": "Eggplant",
         "category": "Vegetables",
-        "energy": 25,
+        "Energy": 25,
         "Water": 92.3,
         "Protein": 0.98,
         "Fats": 0.18,
@@ -13391,7 +13391,7 @@
     {
         "name": "Cod (Atlantic)",
         "category": "Meat",
-        "energy": 82,
+        "Energy": 82,
         "Water": 81.22,
         "Protein": 17.81,
         "Fats": 0.67,
@@ -13456,7 +13456,7 @@
     {
         "name": "Cod (Pacific)",
         "category": "Meat",
-        "energy": 69,
+        "Energy": 69,
         "Water": 83.95,
         "Protein": 15.27,
         "Fats": 0.41,
@@ -13521,7 +13521,7 @@
     {
         "name": "Herring (Atlantic)",
         "category": "Meat",
-        "energy": 158,
+        "Energy": 158,
         "Water": 72.05,
         "Protein": 17.96,
         "Fats": 9.04,
@@ -13586,7 +13586,7 @@
     {
         "name": "Herring (Pacific)",
         "category": "Meat",
-        "energy": 195,
+        "Energy": 195,
         "Water": 71.52,
         "Protein": 16.39,
         "Fats": 13.88,
@@ -13651,7 +13651,7 @@
     {
         "name": "Mackerel (Atlantic)",
         "category": "Meat",
-        "energy": 205,
+        "Energy": 205,
         "Water": 63.55,
         "Protein": 18.6,
         "Fats": 13.89,
@@ -13716,7 +13716,7 @@
     {
         "name": "Mackerel (Spanish)",
         "category": "Meat",
-        "energy": 139,
+        "Energy": 139,
         "Water": 71.67,
         "Protein": 19.29,
         "Fats": 6.3,
@@ -13781,7 +13781,7 @@
     {
         "name": "Salmon (Atlantic)",
         "category": "Meat",
-        "energy": 142,
+        "Energy": 142,
         "Water": 68.5,
         "Protein": 19.84,
         "Fats": 6.34,
@@ -13846,7 +13846,7 @@
     {
         "name": "Sardine (Atlantic) canned in oil",
         "category": "Meat",
-        "energy": 208,
+        "Energy": 208,
         "Water": 59.61,
         "Protein": 24.62,
         "Fats": 11.45,
@@ -13911,7 +13911,7 @@
     {
         "name": "Sardine (Pacific) canned in tomato sauce",
         "category": "Meat",
-        "energy": 185,
+        "Energy": 185,
         "Water": 66.86,
         "Protein": 20.86,
         "Fats": 10.45,
@@ -13976,7 +13976,7 @@
     {
         "name": "Trout",
         "category": "Meat",
-        "energy": 148,
+        "Energy": 148,
         "Water": 71.42,
         "Protein": 20.77,
         "Fats": 6.61,
@@ -14041,7 +14041,7 @@
     {
         "name": "Tuna white canned in oil",
         "category": "Meat",
-        "energy": 186,
+        "Energy": 186,
         "Water": 64.02,
         "Protein": 26.53,
         "Fats": 8.08,
@@ -14106,7 +14106,7 @@
     {
         "name": "Tuna white canned in water",
         "category": "Meat",
-        "energy": 128,
+        "Energy": 128,
         "Water": 73.19,
         "Protein": 23.62,
         "Fats": 2.97,
@@ -14171,7 +14171,7 @@
     {
         "name": "Garlic",
         "category": "Vegetables",
-        "energy": 149,
+        "Energy": 149,
         "Water": 58.58,
         "Protein": 6.36,
         "Fats": 0.5,
@@ -14236,7 +14236,7 @@
     {
         "name": "Goji berries dried",
         "category": "Fruit",
-        "energy": 349,
+        "Energy": 349,
         "Water": 7.5,
         "Protein": 14.26,
         "Fats": 0.39,
@@ -14301,7 +14301,7 @@
     {
         "name": "Grapes",
         "category": "Fruit",
-        "energy": 69,
+        "Energy": 69,
         "Water": 80.54,
         "Protein": 0.72,
         "Fats": 0.16,
@@ -14366,7 +14366,7 @@
     {
         "name": "Grapefruit",
         "category": "Fruit",
-        "energy": 32,
+        "Energy": 32,
         "Water": 90.89,
         "Protein": 0.63,
         "Fats": 0.1,
@@ -14431,7 +14431,7 @@
     {
         "name": "Honey",
         "category": "Sweeteners",
-        "energy": 304,
+        "Energy": 304,
         "Water": 17.1,
         "Protein": 0.3,
         "Fats": 0,
@@ -14496,7 +14496,7 @@
     {
         "name": "Kale",
         "category": "Vegetables",
-        "energy": 49,
+        "Energy": 49,
         "Water": 84.04,
         "Protein": 4.28,
         "Fats": 0.93,
@@ -14561,7 +14561,7 @@
     {
         "name": "Kiwifruit",
         "category": "Fruit",
-        "energy": 61,
+        "Energy": 61,
         "Water": 83.07,
         "Protein": 1.14,
         "Fats": 0.52,
@@ -14626,7 +14626,7 @@
     {
         "name": "Lemon",
         "category": "Fruit",
-        "energy": 29,
+        "Energy": 29,
         "Water": 88.98,
         "Protein": 1.1,
         "Fats": 0.3,
@@ -14691,7 +14691,7 @@
     {
         "name": "Green lentils",
         "category": "Legumes",
-        "energy": 352,
+        "Energy": 352,
         "Water": 8.26,
         "Protein": 24.63,
         "Fats": 1.06,
@@ -14756,7 +14756,7 @@
     {
         "name": "Red lentils",
         "category": "Legumes",
-        "energy": 358,
+        "Energy": 358,
         "Water": 7.82,
         "Protein": 23.91,
         "Fats": 2.17,
@@ -14821,7 +14821,7 @@
     {
         "name": "Sprouted green lentils",
         "category": "Vegetables",
-        "energy": 106,
+        "Energy": 106,
         "Water": 67.34,
         "Protein": 8.96,
         "Fats": 0.55,
@@ -14886,7 +14886,7 @@
     {
         "name": "Green letuce",
         "category": "Vegetables",
-        "energy": 15,
+        "Energy": 15,
         "Water": 94.98,
         "Protein": 1.36,
         "Fats": 0.15,
@@ -14951,7 +14951,7 @@
     {
         "name": "Romaine lettuce",
         "category": "Vegetables",
-        "energy": 17,
+        "Energy": 17,
         "Water": 94.61,
         "Protein": 1.23,
         "Fats": 0.3,
@@ -15016,7 +15016,7 @@
     {
         "name": "Milk",
         "category": "Dairy",
-        "energy": 61,
+        "Energy": 61,
         "Water": 88.13,
         "Protein": 3.15,
         "Fats": 3.27,
@@ -15081,7 +15081,7 @@
     {
         "name": "Mushrooms white",
         "category": "Vegetables",
-        "energy": 22,
+        "Energy": 22,
         "Water": 92.45,
         "Protein": 3.09,
         "Fats": 0.34,
@@ -15146,7 +15146,7 @@
     {
         "name": "Mushrooms brown",
         "category": "Vegetables",
-        "energy": 22,
+        "Energy": 22,
         "Water": 92.12,
         "Protein": 2.5,
         "Fats": 0.1,
@@ -15211,7 +15211,7 @@
     {
         "name": "Almonds",
         "category": "Nuts and seeds",
-        "energy": 579,
+        "Energy": 579,
         "Water": 4.41,
         "Protein": 21.15,
         "Fats": 49.93,
@@ -15276,7 +15276,7 @@
     {
         "name": "Nectarines",
         "category": "Fruit",
-        "energy": 44,
+        "Energy": 44,
         "Water": 87.59,
         "Protein": 1.06,
         "Fats": 0.32,
@@ -15341,7 +15341,7 @@
     {
         "name": "Cashews",
         "category": "Nuts and seeds",
-        "energy": 553,
+        "Energy": 553,
         "Water": 5.2,
         "Protein": 18.22,
         "Fats": 43.85,
@@ -15406,7 +15406,7 @@
     {
         "name": "Hazelnuts",
         "category": "Nuts and seeds",
-        "energy": 628,
+        "Energy": 628,
         "Water": 5.31,
         "Protein": 14.95,
         "Fats": 60.75,
@@ -15471,7 +15471,7 @@
     {
         "name": "Pecans",
         "category": "Nuts and seeds",
-        "energy": 691,
+        "Energy": 691,
         "Water": 3.52,
         "Protein": 9.17,
         "Fats": 71.97,
@@ -15536,7 +15536,7 @@
     {
         "name": "Walnuts (black)",
         "category": "Nuts and seeds",
-        "energy": 619,
+        "Energy": 619,
         "Water": 4.56,
         "Protein": 24.06,
         "Fats": 59.33,
@@ -15601,7 +15601,7 @@
     {
         "name": "Walnuts (English)",
         "category": "Nuts and seeds",
-        "energy": 654,
+        "Energy": 654,
         "Water": 4.07,
         "Protein": 15.23,
         "Fats": 65.21,
@@ -15666,7 +15666,7 @@
     {
         "name": "Oat bran",
         "category": "Grains",
-        "energy": 246,
+        "Energy": 246,
         "Water": 6.55,
         "Protein": 17.3,
         "Fats": 7.03,
@@ -15731,7 +15731,7 @@
     {
         "name": "Oats",
         "category": "Grains",
-        "energy": 389,
+        "Energy": 389,
         "Water": 8.22,
         "Protein": 16.89,
         "Fats": 6.9,
@@ -15796,7 +15796,7 @@
     {
         "name": "Coconut oil",
         "category": "Fats and oils",
-        "energy": 892,
+        "Energy": 892,
         "Water": 0.03,
         "Protein": 0,
         "Fats": 99.06,
@@ -15861,7 +15861,7 @@
     {
         "name": "Olive oil",
         "category": "Fats and oils",
-        "energy": 884,
+        "Energy": 884,
         "Water": 0,
         "Protein": 0,
         "Fats": 100,
@@ -15926,7 +15926,7 @@
     {
         "name": "Olives",
         "category": "Fruit",
-        "energy": 145,
+        "Energy": 145,
         "Water": 75.28,
         "Protein": 1.03,
         "Fats": 15.32,
@@ -15991,7 +15991,7 @@
     {
         "name": "Onion",
         "category": "Vegetables",
-        "energy": 40,
+        "Energy": 40,
         "Water": 89.11,
         "Protein": 1.1,
         "Fats": 0.1,
@@ -16056,7 +16056,7 @@
     {
         "name": "Orange",
         "category": "Fruit",
-        "energy": 47,
+        "Energy": 47,
         "Water": 86.75,
         "Protein": 0.94,
         "Fats": 0.12,
@@ -16121,7 +16121,7 @@
     {
         "name": "Parsley",
         "category": "Herbs and spices",
-        "energy": 36,
+        "Energy": 36,
         "Water": 87.71,
         "Protein": 2.97,
         "Fats": 0.79,
@@ -16186,7 +16186,7 @@
     {
         "name": "Parsnip",
         "category": "Vegetables",
-        "energy": 75,
+        "Energy": 75,
         "Water": 79.53,
         "Protein": 1.2,
         "Fats": 0.3,
@@ -16251,7 +16251,7 @@
     {
         "name": "Pasta (whole-wheat)",
         "category": "Grains",
-        "energy": 352,
+        "Energy": 352,
         "Water": 8.21,
         "Protein": 13.87,
         "Fats": 2.93,
@@ -16316,7 +16316,7 @@
     {
         "name": "Peaches",
         "category": "Fruit",
-        "energy": 39,
+        "Energy": 39,
         "Water": 88.87,
         "Protein": 0.91,
         "Fats": 0.25,
@@ -16381,7 +16381,7 @@
     {
         "name": "Peanut butter (crunchy)",
         "category": "Fats and oils",
-        "energy": 589,
+        "Energy": 589,
         "Water": 1.14,
         "Protein": 24.06,
         "Fats": 49.94,
@@ -16446,7 +16446,7 @@
     {
         "name": "Peanut butter (smooth)",
         "category": "Fats and oils",
-        "energy": 598,
+        "Energy": 598,
         "Water": 1.23,
         "Protein": 22.21,
         "Fats": 51.36,
@@ -16511,7 +16511,7 @@
     {
         "name": "Peanuts",
         "category": "Nuts and seeds",
-        "energy": 567,
+        "Energy": 567,
         "Water": 6.5,
         "Protein": 25.8,
         "Fats": 49.24,
@@ -16576,7 +16576,7 @@
     {
         "name": "Peanuts (roasted)",
         "category": "Nuts and seeds",
-        "energy": 587,
+        "Energy": 587,
         "Water": 1.81,
         "Protein": 24.35,
         "Fats": 49.66,
@@ -16641,7 +16641,7 @@
     {
         "name": "Pear",
         "category": "Fruit",
-        "energy": 57,
+        "Energy": 57,
         "Water": 83.96,
         "Protein": 0.36,
         "Fats": 0.14,
@@ -16706,7 +16706,7 @@
     {
         "name": "Green peas",
         "category": "Vegetables",
-        "energy": 81,
+        "Energy": 81,
         "Water": 78.86,
         "Protein": 5.42,
         "Fats": 0.4,
@@ -16771,7 +16771,7 @@
     {
         "name": "Green peas (split)",
         "category": "Legumes",
-        "energy": 352,
+        "Energy": 352,
         "Water": 8.62,
         "Protein": 23.82,
         "Fats": 1.16,
@@ -16836,7 +16836,7 @@
     {
         "name": "Peppermint",
         "category": "Herbs and spices",
-        "energy": 70,
+        "Energy": 70,
         "Water": 78.65,
         "Protein": 3.75,
         "Fats": 0.94,
@@ -16901,7 +16901,7 @@
     {
         "name": "Green peppers (hot chilli)",
         "category": "Vegetables",
-        "energy": 40,
+        "Energy": 40,
         "Water": 87.74,
         "Protein": 2,
         "Fats": 0.2,
@@ -16966,7 +16966,7 @@
     {
         "name": "Red peppers (hot chilli)",
         "category": "Vegetables",
-        "energy": 40,
+        "Energy": 40,
         "Water": 88.02,
         "Protein": 1.87,
         "Fats": 0.44,
@@ -17031,7 +17031,7 @@
     {
         "name": "Green peppers (sweet)",
         "category": "Vegetables",
-        "energy": 20,
+        "Energy": 20,
         "Water": 93.89,
         "Protein": 0.86,
         "Fats": 0.17,
@@ -17096,7 +17096,7 @@
     {
         "name": "Red peppers (sweet)",
         "category": "Vegetables",
-        "energy": 31,
+        "Energy": 31,
         "Water": 92.21,
         "Protein": 0.99,
         "Fats": 0.3,
@@ -17161,7 +17161,7 @@
     {
         "name": "Pineapple",
         "category": "Fruit",
-        "energy": 50,
+        "Energy": 50,
         "Water": 86,
         "Protein": 0.54,
         "Fats": 0.12,
@@ -17226,7 +17226,7 @@
     {
         "name": "Plums",
         "category": "Fruit",
-        "energy": 46,
+        "Energy": 46,
         "Water": 87.23,
         "Protein": 0.7,
         "Fats": 0.28,
@@ -17291,7 +17291,7 @@
     {
         "name": "White potato",
         "category": "Vegetables",
-        "energy": 77,
+        "Energy": 77,
         "Water": 79.25,
         "Protein": 2.05,
         "Fats": 0.09,
@@ -17356,7 +17356,7 @@
     {
         "name": "Raisins",
         "category": "Fruit",
-        "energy": 299,
+        "Energy": 299,
         "Water": 15.43,
         "Protein": 3.07,
         "Fats": 0.46,
@@ -17421,7 +17421,7 @@
     {
         "name": "Radish",
         "category": "Vegetables",
-        "energy": 16,
+        "Energy": 16,
         "Water": 95.27,
         "Protein": 0.68,
         "Fats": 0.1,
@@ -17486,7 +17486,7 @@
     {
         "name": "Pumpkin",
         "category": "Vegetables",
-        "energy": 26,
+        "Energy": 26,
         "Water": 91.6,
         "Protein": 1,
         "Fats": 0.1,
@@ -17551,7 +17551,7 @@
     {
         "name": "Red potato",
         "category": "Vegetables",
-        "energy": 70,
+        "Energy": 70,
         "Water": 80.96,
         "Protein": 1.89,
         "Fats": 0.14,
@@ -17616,7 +17616,7 @@
     {
         "name": "Brown rice",
         "category": "Grains",
-        "energy": 362,
+        "Energy": 362,
         "Water": 12.37,
         "Protein": 7.5,
         "Fats": 2.68,
@@ -17681,7 +17681,7 @@
     {
         "name": "Sunflower seeds",
         "category": "Nuts and seeds",
-        "energy": 584,
+        "Energy": 584,
         "Water": 4.73,
         "Protein": 20.78,
         "Fats": 51.46,
@@ -17746,7 +17746,7 @@
     {
         "name": "Cacao powder",
         "category": "Nuts and seeds",
-        "energy": 228,
+        "Energy": 228,
         "Water": 3,
         "Protein": 20,
         "Fats": 13.7,
@@ -17811,7 +17811,7 @@
     {
         "name": "Hemp seeds",
         "category": "Nuts and seeds",
-        "energy": 553,
+        "Energy": 553,
         "Water": 4.96,
         "Protein": 31.56,
         "Fats": 48.75,
@@ -17876,7 +17876,7 @@
     {
         "name": "Hemp flour",
         "category": "Nuts and seeds",
-        "energy": 320,
+        "Energy": 320,
         "Water": 4.96,
         "Protein": 32.5,
         "Fats": 8,
@@ -17941,7 +17941,7 @@
     {
         "name": "Rye",
         "category": "Grains",
-        "energy": 338,
+        "Energy": 338,
         "Water": 10.6,
         "Protein": 10.34,
         "Fats": 1.63,
@@ -18006,7 +18006,7 @@
     {
         "name": "Chia seeds",
         "category": "Nuts and seeds",
-        "energy": 486,
+        "Energy": 486,
         "Water": 5.6,
         "Protein": 16.54,
         "Fats": 30.74,
@@ -18071,7 +18071,7 @@
     {
         "name": "Flaxseeds",
         "category": "Nuts and seeds",
-        "energy": 534,
+        "Energy": 534,
         "Water": 6.96,
         "Protein": 18.29,
         "Fats": 42.16,
@@ -18136,7 +18136,7 @@
     {
         "name": "Pumpkin seeds",
         "category": "Nuts and seeds",
-        "energy": 559,
+        "Energy": 559,
         "Water": 5.23,
         "Protein": 30.23,
         "Fats": 49.05,
@@ -18201,7 +18201,7 @@
     {
         "name": "Spinach",
         "category": "Vegetables",
-        "energy": 23,
+        "Energy": 23,
         "Water": 91.4,
         "Protein": 2.86,
         "Fats": 0.39,
@@ -18266,7 +18266,7 @@
     {
         "name": "Spinach (frozen)",
         "category": "Vegetables",
-        "energy": 29,
+        "Energy": 29,
         "Water": 90.17,
         "Protein": 3.63,
         "Fats": 0.57,
@@ -18331,7 +18331,7 @@
     {
         "name": "Tomato",
         "category": "Vegetables",
-        "energy": 18,
+        "Energy": 18,
         "Water": 94.52,
         "Protein": 0.88,
         "Fats": 0.2,
@@ -18396,7 +18396,7 @@
     {
         "name": "Wheat bran",
         "category": "Grains",
-        "energy": 216,
+        "Energy": 216,
         "Water": 9.89,
         "Protein": 15.55,
         "Fats": 4.25,
@@ -18461,7 +18461,7 @@
     {
         "name": "Squash (summer)",
         "category": "Vegetables",
-        "energy": 16,
+        "Energy": 16,
         "Water": 94.64,
         "Protein": 1.21,
         "Fats": 0.18,
@@ -18526,7 +18526,7 @@
     {
         "name": "Squash (winter)",
         "category": "Vegetables",
-        "energy": 34,
+        "Energy": 34,
         "Water": 89.76,
         "Protein": 0.95,
         "Fats": 0.13,
@@ -18591,7 +18591,7 @@
     {
         "name": "Sweet potato",
         "category": "Vegetables",
-        "energy": 86,
+        "Energy": 86,
         "Water": 77.28,
         "Protein": 1.57,
         "Fats": 0.05,
@@ -18656,7 +18656,7 @@
     {
         "name": "Wheat flour",
         "category": "Grains",
-        "energy": 340,
+        "Energy": 340,
         "Water": 10.74,
         "Protein": 13.21,
         "Fats": 2.5,
@@ -18721,7 +18721,7 @@
     {
         "name": "Watermelon",
         "category": "Fruit",
-        "energy": 30,
+        "Energy": 30,
         "Water": 91.45,
         "Protein": 0.61,
         "Fats": 0.15,
@@ -18786,7 +18786,7 @@
     {
         "name": "Thyme",
         "category": "Herbs and spices",
-        "energy": 101,
+        "Energy": 101,
         "Water": 65.11,
         "Protein": 5.56,
         "Fats": 1.68,
@@ -18851,7 +18851,7 @@
     {
         "name": "Brown sugar",
         "category": "Sweeteners",
-        "energy": 380,
+        "Energy": 380,
         "Water": 1.34,
         "Protein": 0.12,
         "Fats": 0,
@@ -18916,7 +18916,7 @@
     {
         "name": "Strawberry",
         "category": "Fruit",
-        "energy": 32,
+        "Energy": 32,
         "Water": 90.95,
         "Protein": 0.67,
         "Fats": 0.3,
@@ -18981,7 +18981,7 @@
     {
         "name": "Corn flakes",
         "category": "Grains",
-        "energy": 357,
+        "Energy": 357,
         "Water": 3.76,
         "Protein": 7.5,
         "Fats": 0.4,
@@ -19046,7 +19046,7 @@
     {
         "name": "Coconut (dried)",
         "category": "Nuts and seeds",
-        "energy": 660,
+        "Energy": 660,
         "Water": 3,
         "Protein": 6.88,
         "Fats": 64.53,
@@ -19111,7 +19111,7 @@
     {
         "name": "Raspberries",
         "category": "Fruit",
-        "energy": 52,
+        "Energy": 52,
         "Water": 85.75,
         "Protein": 1.2,
         "Fats": 0.65,
@@ -19176,7 +19176,7 @@
     {
         "name": "Sesame seeds",
         "category": "Nuts and seeds",
-        "energy": 573,
+        "Energy": 573,
         "Water": 4.69,
         "Protein": 17.73,
         "Fats": 49.67,
@@ -19241,7 +19241,7 @@
     {
         "name": "Soy flour",
         "category": "Legumes",
-        "energy": 372,
+        "Energy": 372,
         "Water": 4.61,
         "Protein": 49.81,
         "Fats": 8.9,
@@ -19306,7 +19306,7 @@
     {
         "name": "Poppy seeds",
         "category": "Nuts and seeds",
-        "energy": 525,
+        "Energy": 525,
         "Water": 6.78,
         "Protein": 17.99,
         "Fats": 41.56,
