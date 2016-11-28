@@ -29,8 +29,12 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.username = this.authSvc.user.name;
-    this.avatarUrl = this.authSvc.user.avatar;
+    if (!this.authSvc.user.isLoggedIn) {
+      this.router.navigate(['/']);
+    } else {
+      this.username = this.authSvc.user.name;
+      this.avatarUrl = this.authSvc.user.avatar;
+    }
   }
 
 }

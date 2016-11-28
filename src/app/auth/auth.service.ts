@@ -1,3 +1,5 @@
+// TODO: add users database in firebase
+
 import { Injectable } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseObjectObservable } from 'angularfire2';
 
