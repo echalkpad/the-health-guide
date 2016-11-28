@@ -15,9 +15,10 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthComponent } from './auth/auth.component';
+import { AuthService } from "./auth/auth.service";
 import { NutritionModule } from './nutrition/nutrition.module';
 import { HomeComponent } from './home/home.component';
-import { AuthComponent } from './auth/auth.component';
 
 
 const FIREBASE_CONFIG = {
@@ -55,7 +56,7 @@ firebase.initializeApp(FIREBASE_CONFIG);
     CovalentMarkdownModule.forRoot(),
     NutritionModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
