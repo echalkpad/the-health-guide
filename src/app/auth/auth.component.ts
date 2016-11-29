@@ -32,20 +32,6 @@ export class AuthComponent implements OnInit {
     });
   }
 
-  public fbLogin(): void {
-    this.authSvc.facebookLogin().then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
-  }
-
-  public githubLogin(): void {
-    this.authSvc.githubLogin().then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
-  }
-
-  public googleLogin(): void {
-    this.authSvc.googleLogin().then(success => {
-      console.log(success);
-    }).catch(err => this.showError(err));
-  }
-
   public passLogin(credentials: { email: string, password: string }): void {
     this.authSvc.login(credentials).then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
   }
@@ -60,10 +46,6 @@ export class AuthComponent implements OnInit {
 
   public signUp(): void {
     this.authSvc.signUp(this.user).then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
-  }
-
-  public twitterLogin(): void {
-    this.authSvc.twitterLogin().then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
   }
 
   ngOnInit(): void {

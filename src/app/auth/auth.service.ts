@@ -10,48 +10,6 @@ export class AuthService {
   public user: User = new User();
   constructor(private af: AngularFire) { }
 
-  public facebookLogin(): Promise<Object> {
-    return new Promise((resolve, reject) => {
-      this.af.auth.login({
-        provider: AuthProviders.Facebook,
-        method: AuthMethods.Popup
-      }).then(authData => {
-        console.log(authData);
-        resolve(true);
-      }).catch(error => {
-        reject(error);
-      });
-    });
-  }
-
-  public githubLogin(): Promise<Object> {
-    return new Promise((resolve, reject) => {
-      this.af.auth.login({
-        provider: AuthProviders.Github,
-        method: AuthMethods.Popup
-      }).then(authData => {
-        console.log(authData);
-        resolve(true);
-      }).catch(error => {
-        reject(error);
-      });
-    });
-  }
-
-  public googleLogin(): Promise<Object> {
-    return new Promise((resolve, reject) => {
-      this.af.auth.login({
-        provider: AuthProviders.Google,
-        method: AuthMethods.Popup
-      }).then(authData => {
-        console.log(authData);
-        resolve(authData);
-      }).catch(error => {
-        reject(error);
-      });
-    });
-  }
-
   public login(credentials: { email: string, password: string }): Promise<Object> {
     return new Promise((resolve, reject) => {
       this.af.auth.login(credentials).then(authData => {
@@ -80,20 +38,6 @@ export class AuthService {
         this.user.id = authData.uid;
         this.user.isLoggedIn = true;
         console.log(this.user);
-        resolve(true);
-      }).catch(error => {
-        reject(error);
-      });
-    });
-  }
-
-  public twitterLogin(): Promise<Object> {
-    return new Promise((resolve, reject) => {
-      this.af.auth.login({
-        provider: AuthProviders.Twitter,
-        method: AuthMethods.Popup
-      }).then(authData => {
-        console.log(authData);
         resolve(true);
       }).catch(error => {
         reject(error);
