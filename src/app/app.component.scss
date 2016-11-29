@@ -50,4 +50,16 @@
             cursor: pointer;
         }
     }
+
+    button {
+        color: white!important;
+    }
+
+    md-slide-toggle {
+        md-icon {
+            margin-right: 5px;
+        }
+        padding: auto;
+
+    }
 }
