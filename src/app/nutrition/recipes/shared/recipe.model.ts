@@ -1,3 +1,4 @@
+import { Chef } from './chef.model';
 import { Food } from '../../food/shared/food.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
@@ -7,11 +8,7 @@ export interface Ingredient extends Food, Recipe {
 
 export class Recipe {
     constructor (
-        public chef: any = {
-            name: "",
-            avatar: "",
-            authId: ""
-        },
+        public chef: Chef = new Chef(),
         public $key: string = "0",
         public name: string = "",
         public image: string = "",

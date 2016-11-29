@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
+
+import { Auth } from './auth/auth.model';
 import { AuthService } from './auth/auth.service';
 
 @Component({
@@ -8,9 +10,8 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public avatarUrl: string;
+  public auth: Auth;
   public routeLinks: Object[];
-  public username: string;
 
   constructor(private authSvc: AuthService, private router: Router) {
     this.routeLinks = [
@@ -29,11 +30,9 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.authSvc.user.isLoggedIn) {
+    this.auth = Object.assign({}, this.authSvc.getAuthData());
+    if (!this.auth) {
       this.router.navigate(['/']);
-    } else {
-      this.username = this.authSvc.user.name;
-      this.avatarUrl = this.authSvc.user.avatar;
     }
   }
 

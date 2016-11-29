@@ -2,8 +2,8 @@
   <td-layout-card-over cardTitle="Welcome to the Health Guide" cardSubtitle="Ready to be healthy?" cardWidth="75">
     <md-card-content layout="column" layout-align="center center">
       <div class="profile">
-        <img [src]="avatarUrl" alt="User profile image">
-        <h3 class="md-display-1">Hello {{username}}</h3>
+        <img [src]="auth.avatar" alt="User profile image">
+        <h3 class="md-display-1">Hello {{ auth.name }}</h3>
       </div>
     </md-card-content>
   </td-layout-card-over>

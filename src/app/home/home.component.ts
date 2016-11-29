@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+
+import { Auth } from '../auth/auth.model';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -8,13 +10,11 @@ import { AuthService } from '../auth/auth.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public avatarUrl: string;
-  public username: string;
+  public auth: Auth;
   constructor(private authSvc: AuthService, private titleSvc: Title) { }
 
   ngOnInit(): void {
-    this.username = this.authSvc.user.name;
-    this.avatarUrl = this.authSvc.user.avatar;
+    this.auth = Object.assign({}, this.authSvc.getAuthData());
     this.titleSvc.setTitle("Home");
   }
 

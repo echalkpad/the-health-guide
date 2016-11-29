@@ -33,7 +33,7 @@
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="column" layout-align="center center">
-        <button md-raised-button flex color="accent" [disabled]="!loginForm.form.valid" (click)="passLogin(loginForm.value)">
+        <button md-raised-button flex color="accent" [disabled]="!loginForm.form.valid" (click)="passLogin()">
           Sign In
         </button>
         <button md-raised-button flex color="accent" (click)="register()">
@@ -49,13 +49,17 @@
       <md-divider></md-divider>
       <md-card-content>
         <form #signupForm="ngForm">
-          <div class="push-left-xs pad-xs" layout="row" layout-align="start center" flex>
+          <div class="push-left-xs pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
             <md-icon>account_box</md-icon>
             <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
               Avatar:
             </span>
-            <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+            <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
           </td-file-upload>
+          </div>
+          <div class="warn" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
+            <md-icon>warning</md-icon>
+            <h3>Don't forget to upload your avatar!</h3>
           </div>
           <md-divider></md-divider>
           <div layout="row">
@@ -145,7 +149,7 @@
         <button md-raised-button flex color="accent" (click)="signIn()">
           Sign In
         </button>
-        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid" (click)="signUp()">
+        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid || uploadReminder" (click)="signUp()">
           Sign up
         </button>
       </md-card-actions>

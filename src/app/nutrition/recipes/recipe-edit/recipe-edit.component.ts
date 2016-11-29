@@ -3,6 +3,9 @@ import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { TdLoadingService } from '@covalent/core';
 
+import { Auth } from '../../../auth/auth.model';
+import { AuthService } from '../../../auth/auth.service';
+import { Chef } from '../shared/chef.model';
 import { Food } from '../../food/shared/food.model';
 import { FoodService } from '../../food/shared/food.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
@@ -14,6 +17,7 @@ import { RecipeService } from '../shared/recipe.service';
   styleUrls: ['./recipe-edit.component.scss']
 })
 export class RecipeEditComponent implements OnInit {
+  public auth: Auth;
   public categories: string[];
   public cookMethods: string[];
   public difficulties: string[];
@@ -22,6 +26,7 @@ export class RecipeEditComponent implements OnInit {
   public recipe: Recipe;
   public tags: string[];
   constructor(
+    private authSvc: AuthService,
     private detector: ChangeDetectorRef,
     private foodSvc: FoodService,
     public recipeSvc: RecipeService,
@@ -86,6 +91,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.auth = Object.assign({}, this.authSvc.getAuthData());
     this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
       if (!!data && !!data.length) {
         this.ingredients = [...data.map((item: Ingredient) => item.name)];
@@ -94,6 +100,7 @@ export class RecipeEditComponent implements OnInit {
     this.route.data.subscribe((data: { recipe: Recipe }) => {
       if (!!data) {
         this.recipe = Object.assign({}, data.recipe);
+        this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
         console.log(this.recipe);
         this.titleSvc.setTitle(this.recipe.name);
         this.detector.markForCheck();

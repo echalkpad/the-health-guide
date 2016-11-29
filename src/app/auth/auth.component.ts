@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
+import { Auth } from './auth.model'
 import { AuthService } from './auth.service';
 import { User } from './user.model';
 
@@ -14,6 +15,7 @@ import { User } from './user.model';
 })
 export class AuthComponent implements OnInit {
   public registering: boolean = false;
+  public uploadReminder: boolean = false;
   public user = new User();
   constructor(
     private authSvc: AuthService,
@@ -32,8 +34,11 @@ export class AuthComponent implements OnInit {
     });
   }
 
-  public passLogin(credentials: { email: string, password: string }): void {
-    this.authSvc.login(credentials).then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
+  public passLogin(): void {
+    this.authSvc.login(this.user).then(success => setTimeout(() => {
+      let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+      this.router.navigate([redirect]);
+    }, 1000)).catch(err => this.showError(err));
   }
 
   public register(): void {
@@ -45,11 +50,24 @@ export class AuthComponent implements OnInit {
   }
 
   public signUp(): void {
-    this.authSvc.signUp(this.user).then(success => setTimeout(() => this.router.navigate(['/home']), 1000)).catch(err => this.showError(err));
+    if (!this.user.avatar) {
+      this.uploadReminder = true;
+    } else {
+      this.authSvc.signUp(this.user).then(success => setTimeout(() => {
+        let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+        this.router.navigate([redirect]);
+      }, 1000)).catch(err => this.showError(err));
+    }
+  }
+
+  public uploadAvatar(img: File): void {
+    this.user.avatar = img.name;
+    this.authSvc.uploadAvatar(img);
+    this.uploadReminder = false;
   }
 
   ngOnInit(): void {
-    if (this.authSvc.user.isLoggedIn) {
+    if (this.authSvc.getAuthData()) {
       setTimeout(() => this.router.navigate(['/home']), 1000);
     }
   }

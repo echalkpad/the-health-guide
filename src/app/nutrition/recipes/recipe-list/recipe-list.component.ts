@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { AngularFire, FirebaseListObservable } from "angularfire2";
+import { FirebaseListObservable } from "angularfire2";
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
+import { Auth } from '../../../auth/auth.model';
+import { AuthService } from '../../../auth/auth.service';
 import { DataService } from '../../shared/data.service';
 import { Food } from '../../food/shared/food.model';
 import { FoodService } from '../../food/shared/food.service';
@@ -17,7 +19,7 @@ import { RecipeService } from '../shared/recipe.service';
   styleUrls: ['./recipe-list.component.scss']
 })
 export class RecipeListComponent implements OnInit {
-  public auth: any;
+  public auth: Auth;
   public filteredRecipes: Recipe[];
   public ingredients: string[];
   public query: string = 'name';
@@ -25,7 +27,7 @@ export class RecipeListComponent implements OnInit {
   public recipeImg: string;
   public recipes: Recipe[];
   constructor(
-    private af: AngularFire,
+    private authSvc: AuthService,
     private dataSvc: DataService,
     private dialogService: TdDialogService,
     private foodSvc: FoodService,
@@ -41,7 +43,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public createRecipe(): void {
-    this.dataSvc.storage.auth = Object.assign({ }, this.auth);
+    this.dataSvc.storage.auth = Object.assign({}, this.auth);
     this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
@@ -50,8 +52,8 @@ export class RecipeListComponent implements OnInit {
   }
 
   public openDetails(recipe: Recipe): void {
-    this.dataSvc.storage.auth = Object.assign({ }, this.auth);
-    this.dataSvc.storage.recipe = Object.assign({ }, recipe);
+    this.dataSvc.storage.auth = Object.assign({}, this.auth);
+    this.dataSvc.storage.recipe = Object.assign({}, recipe);
     this.router.navigate(['/nutrition/recipes', this.auth.id, recipe.$key]);
   }
 
@@ -86,21 +88,13 @@ export class RecipeListComponent implements OnInit {
         this.ingredients = [...data.map((item: Food) => item.name)];
       }
     });
-    this.recipeSvc.downloadImg('recipe').then((url: string) => this.recipeImg = url);
-    this.af.auth.subscribe(auth => {
-      if (auth) {
-        this.auth = {
-          id: auth.uid,
-          name: auth.auth.providerData[0].displayName,
-          avatar: auth.auth.providerData[0].photoURL
-        };
-        console.log(this.auth);
-        this.recipeSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
-          if (!!data && !!data.length) {
-            this.recipes = [...data];
-            this.filteredRecipes = [...data];
-          }
-        });
+
+    this.auth = Object.assign({}, this.authSvc.getAuthData());
+
+    this.recipeSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
+      if (!!data && !!data.length) {
+        this.recipes = [...data];
+        this.filteredRecipes = [...data];
       }
     });
   }

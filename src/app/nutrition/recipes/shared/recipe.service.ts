@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
 import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { Ingredient, Recipe } from './recipe.model';
@@ -59,6 +58,13 @@ export class RecipeService {
     this.userRecipes.push(recipe);
   }
 
+  public downloadImg(imgName: string): firebase.Promise<any> {
+    let imgUrl: string = "";
+    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
+      (url: string) => url,
+      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
+  }
+
   public setRecipeNutrition(recipe: Recipe): void {
     recipe.nutrition = new Nutrition();
     // Set total recipe nutrition and quantity in grams
@@ -94,25 +100,15 @@ export class RecipeService {
     this.portionRecipe(recipe);
   }
 
-  public downloadImg(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
-      (url: string) => url,
-      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
-  }
-
-  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]) {
+  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
         matchedIngredients: number = 0;
-      if (query === 'name') {
-        if (recipe.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+        if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
           match = true;
-          console.log(ingredients);
           if (!!ingredients && !!ingredients.length) {
             ingredients.forEach((item: string) => {
               recipe.ingredients.forEach((ingredient: Ingredient) => {
-                console.log("Search ingredient", item, "Ingredient", ingredient);
                 if (ingredient.name === item) {
                   matchedIngredients++;
                 }
@@ -123,20 +119,6 @@ export class RecipeService {
             }
           }
         }
-      } else if (query === 'ingredients') {
-        if (recipe.name.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
-          ingredients.forEach((item: string) => {
-            recipe.ingredients.forEach((ingredient: Ingredient) => {
-              if (ingredient.name === item) {
-                matchedIngredients++;
-              }
-            });
-          });
-          if (matchedIngredients === ingredients.length) {
-            match = true;
-          }
-        }
-      }
       return match;
     });
   }

@@ -51,7 +51,11 @@
         }
     }
 
-    button {
+    md-button-raised, md-fab {
+        color: white!important;
+    }
+
+    td-file-upload button {
         color: white!important;
     }
 
@@ -62,4 +66,8 @@
         padding: auto;
 
     }
+}
+
+.warn {
+    color: red;
 }
