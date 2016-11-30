@@ -11,7 +11,7 @@ export class NutrientDetailResolve implements Resolve<Nutrient> {
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Nutrient> {
     return new Promise((resolve, reject) => {
-      resolve(this.dataSvc.storage.nutrient);
+      resolve(this.dataSvc.getNutrient());
     });
   }
 

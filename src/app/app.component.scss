@@ -51,8 +51,8 @@
         }
     }
 
-    md-button-raised, md-fab {
-        color: white!important;
+    [md-raised-button].md-accent, [md-fab].md-accent, [md-mini-fab].md-accent {
+        color: white;
     }
 
     td-file-upload button {
@@ -64,10 +64,14 @@
             margin-right: 5px;
         }
         padding: auto;
-
     }
-}
-
-.warn {
-    color: red;
+    md-card-actions button {
+        margin: .5em;
+        width: 100%;
+        .fa {
+            position: relative;
+            left: -10px;
+            font-size: 20px;
+        }
+    }
 }

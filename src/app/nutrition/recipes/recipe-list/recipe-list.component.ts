@@ -43,7 +43,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public createRecipe(): void {
-    this.dataSvc.storage.auth = Object.assign({}, this.auth);
+    this.dataSvc.saveRecipe(new Recipe(this.auth));
     this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
@@ -52,8 +52,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public openDetails(recipe: Recipe): void {
-    this.dataSvc.storage.auth = Object.assign({}, this.auth);
-    this.dataSvc.storage.recipe = Object.assign({}, recipe);
+    this.dataSvc.saveRecipe(recipe);
     this.router.navigate(['/nutrition/recipes', this.auth.id, recipe.$key]);
   }
 

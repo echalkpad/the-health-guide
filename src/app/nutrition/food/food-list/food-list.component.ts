@@ -68,7 +68,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   }
 
   public openDetails(ev: { row: Food }): void {
-    this.dataSvc.storage.food = Object.assign({}, ev.row);
+    this.dataSvc.saveFood(ev.row);
     this.router.navigate(['/nutrition/food', ev.row.$key]);
   }
 

@@ -25,6 +25,7 @@ export class RecipeEditComponent implements OnInit {
   public selectedIngredients: Ingredient[] = [];
   public recipe: Recipe;
   public tags: string[];
+  public uploadReminder: boolean = false;
   constructor(
     private authSvc: AuthService,
     private detector: ChangeDetectorRef,

@@ -46,7 +46,7 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
   }
 
   public openDetails(nutrientClass: string, nutrient: Nutrient): void {
-    this.dataSvc.storage.nutrient = Object.assign({}, nutrient);
+    this.dataSvc.saveNutrient(nutrient);
     this.router.navigate([`/nutrition/nutrients/${nutrientClass}/${nutrient.$key}`]);
   }
 

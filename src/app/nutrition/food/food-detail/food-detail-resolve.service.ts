@@ -11,7 +11,7 @@ export class FoodDetailResolve implements Resolve<Food> {
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Food> {
     return new Promise((resolve, reject) => {
-      resolve(this.dataSvc.storage.food);
+      resolve(this.dataSvc.getFood());
     });
   }
 
