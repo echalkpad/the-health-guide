@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { AngularFire } from "angularfire2";
+
+import { Auth } from '../auth/auth.model';
+import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +10,11 @@ import { AngularFire } from "angularfire2";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  public avatarUrl: string;
-  public username: string;
-  constructor(private af: AngularFire, private titleSvc: Title) { }
+  public auth: Auth;
+  constructor(private authSvc: AuthService, private titleSvc: Title) { }
 
   ngOnInit(): void {
-    this.af.auth.subscribe(auth => {
-      if (auth) {
-        this.username = auth.auth.providerData[0].displayName;
-        this.avatarUrl = auth.auth.providerData[0].photoURL;
-      }
-    });
+    this.auth = Object.assign({}, this.authSvc.getAuthData());
     this.titleSvc.setTitle("Home");
   }
 

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AuthGuard } from '../auth/auth-guard.service';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
@@ -17,10 +18,12 @@ import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component
 const nutritionRoutes: Routes = [
     {
         path: 'nutrition',
+        canActivate: [AuthGuard],
         component: NutritionComponent,
         children: [
             {
                 path: 'food',
+                canActivateChild: [AuthGuard],
                 children: [
                     {
                         path: ':key',
@@ -37,6 +40,7 @@ const nutritionRoutes: Routes = [
             },
             {
                 path: 'nutrients',
+                canActivateChild: [AuthGuard],
                 children: [
                     {
                         path: ':category/:key',
@@ -53,6 +57,7 @@ const nutritionRoutes: Routes = [
             },
             {
                 path: 'recipes',
+                canActivateChild: [AuthGuard],
                 children: [
                     {
                         path: ':authId/:key',
@@ -76,6 +81,7 @@ const nutritionRoutes: Routes = [
             },
             {
                 path: '',
+                canActivateChild: [AuthGuard],
                 component: NutritionInfoComponent,
             }
         ]

@@ -1,8 +1,12 @@
+// TODO: Add user details (e.g. avatar, username) and save them in users database
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
+
+import { Auth } from './auth.model'
+import { AuthService } from './auth.service';
+import { User } from './user.model';
 
 @Component({
   selector: 'app-auth',
@@ -10,10 +14,11 @@ import { TdDialogService, TdLoadingService } from '@covalent/core';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
-  public email: string;
-  public password: string;
+  public registering: boolean = false;
+  public uploadReminder: boolean = false;
+  public user = new User();
   constructor(
-    private af: AngularFire,
+    private authSvc: AuthService,
     private dialogService: TdDialogService,
     private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
@@ -29,68 +34,42 @@ export class AuthComponent implements OnInit {
     });
   }
 
-  public fbLogin(): void {
-    this.af.auth.login({
-      provider: AuthProviders.Facebook,
-      method: AuthMethods.Redirect
-    }).then(authData => {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
-    }).catch(error => {
-      this.showError(error);
-    });
+  public passLogin(): void {
+    this.authSvc.login(this.user).then(success => setTimeout(() => {
+      let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+      this.router.navigate([redirect]);
+    }, 1000)).catch(err => this.showError(err));
   }
 
-  public githubLogin(): void {
-    this.af.auth.login({
-      provider: AuthProviders.Github,
-      method: AuthMethods.Redirect
-    }).then(authData => {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
-    }).catch(error => {
-      this.showError(error);
-    });
+  public register(): void {
+    this.registering = true;
   }
 
-  public googleLogin(): void {
-    this.af.auth.login({
-      provider: AuthProviders.Google,
-      method: AuthMethods.Redirect
-    }).then(authData => {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
-    }).catch(error => {
-      this.showError(error);
-    });
+  public signIn(): void {
+    this.registering = false;
   }
 
-  public passLogin(userCredentials: { email: string, password: string }): void {
-    this.af.auth.login(userCredentials).then(authData => {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
-    }).catch(error => {
-      this.showError(error);
-    });
+  public signUp(): void {
+    if (!this.user.avatar) {
+      this.uploadReminder = true;
+    } else {
+      this.authSvc.signUp(this.user).then(success => setTimeout(() => {
+        let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+        this.router.navigate([redirect]);
+      }, 1000)).catch(err => this.showError(err));
+    }
   }
 
-  public twitterLogin(): void {
-    this.af.auth.login({
-      provider: AuthProviders.Twitter,
-      method: AuthMethods.Redirect
-    }).then(authData => {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
-    }).catch(error => {
-      this.showError(error);
-    });
+  public uploadAvatar(img: File): void {
+    this.user.avatar = img.name;
+    this.authSvc.uploadAvatar(img);
+    this.uploadReminder = false;
   }
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe(params => {
-      if (!params['logout']) {
-        this.af.auth.subscribe(auth => {
-          if (!!auth && auth.hasOwnProperty('uid')) {
-            setTimeout(() => this.router.navigate(['/home']), 1000);
-          }
-        });
-      }
-    });
+    if (this.authSvc.getAuthData()) {
+      setTimeout(() => this.router.navigate(['/home']), 1000);
+    }
   }
 
 }

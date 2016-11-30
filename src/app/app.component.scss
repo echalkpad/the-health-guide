@@ -50,4 +50,19 @@
             cursor: pointer;
         }
     }
+
+    [md-raised-button].md-accent, [md-fab].md-accent, [md-mini-fab].md-accent {
+        color: white;
+    }
+
+    td-file-upload button {
+        color: white!important;
+    }
+
+    md-slide-toggle {
+        md-icon {
+            margin-right: 5px;
+        }
+        padding: auto;
+    }
 }

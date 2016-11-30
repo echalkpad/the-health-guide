@@ -6,6 +6,7 @@ import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { TdDataTableService, TdDataTableSortingOrder, ITdDataTableSortChangeEvent, ITdDataTableColumn } from '@covalent/data-table';
 import { IPageChangeEvent } from '@covalent/paging';
 
+import { DataService } from '../../shared/data.service';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
 
@@ -26,6 +27,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   public sortBy: string = 'name';
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
+    private dataSvc: DataService,
     private dataTableSvc: TdDataTableService,
     private dialogService: TdDialogService,
     private foodSvc: FoodService,
@@ -66,6 +68,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   }
 
   public openDetails(ev: { row: Food }): void {
+    this.dataSvc.saveFood(ev.row);
     this.router.navigate(['/nutrition/food', ev.row.$key]);
   }
 

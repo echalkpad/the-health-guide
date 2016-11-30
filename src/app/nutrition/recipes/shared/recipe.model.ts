@@ -1,5 +1,6 @@
+import { Chef } from './chef.model';
 import { Food } from '../../food/shared/food.model';
-import { Nutrition } from '../../nutrition.model';
+import { Nutrition } from '../../shared/nutrition.model';
 
 export interface Ingredient extends Food, Recipe {
     amount: number;
@@ -7,13 +8,12 @@ export interface Ingredient extends Food, Recipe {
 
 export class Recipe {
     constructor (
+        public chef: Chef = new Chef(),
         public $key: string = "0",
         public name: string = "",
-        public imgUrl: string = "",
+        public image: string = "",
         public category: string = "",
-        public dietaries: string[] = [],
-        public chefName: string = "",
-        public chefAvatar: string = "",
+        public tags: string[] = [],
         public ingredients: Ingredient[] = [],
         public duration: number = 0,
         public difficulty: string = "",
@@ -21,7 +21,7 @@ export class Recipe {
         public cookTemperature: number = 0,
         public nutrition: Nutrition = new Nutrition(),
         public servings: number = 1,
-        public steps: string[] = [],
+        public instructions: string[] = [],
         public quantity: number = 0
     ) {}
 }

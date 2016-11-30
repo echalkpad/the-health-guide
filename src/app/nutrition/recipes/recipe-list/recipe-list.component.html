@@ -22,7 +22,7 @@
 </button>
   <md-menu #menu="mdMenu" x-position="before">
     <button md-menu-item (click)="query='name'">Name</button>
-    <button md-menu-item (click)="query='chef'">Chef</button>
+    <button md-menu-item (click)="query='chef.name'">Chef</button>
     <button md-menu-item (click)="query='ingredients'">Ingredients</button>
   </md-menu>
 </md-toolbar>
@@ -30,18 +30,18 @@
   <div layout="column" flex>
     <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 1">
       <md-card-header>
-        <img md-card-avatar [src]="avatarUrl">
-        <md-card-title>{{ chefName }}</md-card-title>
+        <img md-card-avatar [src]="recipe.chef.avatar">
+        <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions>
-        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+        <button md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>
@@ -55,18 +55,18 @@
   <div layout="column" flex>
     <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 2">
       <md-card-header>
-        <img md-card-avatar [src]="avatarUrl">
-        <md-card-title>{{ chefName }}</md-card-title>
+        <img md-card-avatar [src]="recipe.chef.avatar">
+        <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions>
-        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+        <button md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>
@@ -80,18 +80,18 @@
   <div layout="column" flex>
     <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 3">
       <md-card-header>
-        <img md-card-avatar [src]="avatarUrl">
-        <md-card-title>{{ chefName }}</md-card-title>
+        <img md-card-avatar [src]="recipe.chef.avatar">
+        <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipeImg">
+      <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions>
-        <button md-button color="accent" [routerLink]="[authId, recipe.$key]">
+        <button md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>

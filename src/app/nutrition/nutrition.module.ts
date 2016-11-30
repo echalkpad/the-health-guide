@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
 import { CovalentCoreModule, TD_LOADING_ENTRY_COMPONENTS } from '@covalent/core';
 import { CovalentChipsModule } from '@covalent/chips';
@@ -12,11 +14,13 @@ import { CovalentDataTableModule } from '@covalent/data-table';
 import { CovalentPagingModule } from '@covalent/paging';
 import { CovalentSearchModule } from '@covalent/search';
 
+import { DataService } from './shared/data.service';
 import { Food } from './food/shared/food.model';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
 import { FoodService } from './food/shared/food.service';
+import { GroupPipe } from './recipes/shared/group.pipe';
 import { NutrientDetailComponent } from './nutrients/nutrient-detail/nutrient-detail.component';
 import { NutrientDetailResolve } from './nutrients/nutrient-detail/nutrient-detail-resolve.service';
 import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
@@ -29,7 +33,6 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { RecipeListComponent } from './recipes/recipe-list/recipe-list.component';
 import { RecipeService } from './recipes/shared/recipe.service';
-import { GroupPipe } from './recipes/shared/group.pipe';
 
 @NgModule({
   imports: [
@@ -43,6 +46,8 @@ import { GroupPipe } from './recipes/shared/group.pipe';
     CovalentMarkdownModule.forRoot(),
     CovalentPagingModule.forRoot(),
     CovalentSearchModule.forRoot(),
+    FormsModule,
+    HttpModule,
     NutritionRoutingModule
   ],
   entryComponents: [TD_LOADING_ENTRY_COMPONENTS],
@@ -59,6 +64,7 @@ import { GroupPipe } from './recipes/shared/group.pipe';
     RecipeEditComponent
   ],
   providers: [
+    DataService,
     FoodDetailResolve,
     FoodService,
     NutrientDetailResolve,
