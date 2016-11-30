@@ -21,7 +21,7 @@ export class Recipe {
         public cookTemperature: number = 0,
         public nutrition: Nutrition = new Nutrition(),
         public servings: number = 1,
-        public steps: string[] = [],
+        public instructions: string[] = [],
         public quantity: number = 0
     ) {}
 }

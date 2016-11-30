@@ -21,7 +21,7 @@ export class RecipeEditComponent implements OnInit {
   public categories: string[];
   public cookMethods: string[];
   public difficulties: string[];
-  public ingredients: string[] = [];
+  public ingredients: Ingredient[] = [];
   public selectedIngredients: Ingredient[] = [];
   public recipe: Recipe;
   public tags: string[];
@@ -95,7 +95,7 @@ export class RecipeEditComponent implements OnInit {
     this.auth = Object.assign({}, this.authSvc.getAuthData());
     this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
       if (!!data && !!data.length) {
-        this.ingredients = [...data.map((item: Ingredient) => item.name)];
+        this.ingredients = [...data];
       }
     });
     this.route.data.subscribe((data: { recipe: Recipe }) => {

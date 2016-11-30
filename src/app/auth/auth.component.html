@@ -55,7 +55,7 @@
               Avatar:
             </span>
             <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
-          </td-file-upload>
+            </td-file-upload>
           </div>
           <div class="warn" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
             <md-icon>warning</md-icon>
@@ -89,7 +89,7 @@
               <md-hint align="end">Something hard to guess</md-hint>
             </md-input>
           </div>
-          <div layout="row">
+          <div layout="column" layout-gt-xs="row">
             <md-input flex="33" #ageControl="ngModel" placeholder="Age ({{ infancy ? 'months' : 'years' }})" type="number" name="user.age" min="1" max="150" [(ngModel)]="user.age" required>
               <span md-prefix><md-icon>date_range</md-icon></span>
               <md-hint align="start" [hidden]="ageControl.pristine" class="tc-red-600">
@@ -122,7 +122,7 @@
             </md-radio-group>
           </div>
 
-          <div layout="row" flex layout-align="start center">
+          <div layout="column" layout-gt-xs="row" flex layout-align="start center">
             <md-slide-toggle class="pad-xs" [(ngModel)]="user.infancy" name="user.infancy">
               <div layout="row" layout-align="center center">
                 <md-icon>child_care</md-icon>
