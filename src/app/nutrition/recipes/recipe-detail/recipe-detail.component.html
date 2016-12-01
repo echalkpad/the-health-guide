@@ -81,7 +81,7 @@
               <md-list-item>
                 <h3 md-line>{{ item }}</h3>
                 <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item] }} </div>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item] }}g </div>
               </md-list-item>
               <md-divider *ngIf="!last" md-inset></md-divider>
             </template>
@@ -96,7 +96,7 @@
               <md-list-item>
                 <h3 md-line>{{ item }}</h3>
                 <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item] }} </div>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item] }}g </div>
               </md-list-item>
               <md-divider *ngIf="!last" md-inset></md-divider>
             </template>
@@ -113,7 +113,7 @@
               <md-list-item>
                 <h3 md-line>{{ item }}</h3>
                 <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item] }} </div>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item] }}mg </div>
               </md-list-item>
               <md-divider *ngIf="!last" md-inset></md-divider>
             </template>
@@ -128,7 +128,7 @@
               <md-list-item>
                 <h3 md-line>{{ item }}</h3>
                 <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item] }} </div>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item] }}mg </div>
               </md-list-item>
               <md-divider *ngIf="!last" md-inset></md-divider>
             </template>

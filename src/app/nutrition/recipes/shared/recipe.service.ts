@@ -1,32 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
-  private allUsersRecipes: FirebaseListObservable<Recipe[]>;
-  private recipeImgUrl: firebase.storage.Reference;
-  private userRecipes: FirebaseListObservable<Recipe[]>;
-  constructor(private af: AngularFire, private auth: FirebaseAuth) {
-    this.allUsersRecipes = af.database.list('/recipes', {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-    auth.subscribe(authData => {
-      if (!!authData) {
-        this.userRecipes = af.database.list(`/recipes/${authData.uid}`, {
-          query: {
-            orderByChild: 'name'
-          }
-        });
-      }
-    });
-    this.recipeImgUrl = firebase.storage().ref().child('/recipes');
-  }
+  constructor() { }
 
   private portionRecipe(recipe: Recipe): void {
     for (let nutrientCategory in recipe.nutrition) {
@@ -42,27 +21,38 @@ export class RecipeService {
     }
   }
 
-  private removeHashkeys(recipe: Recipe): void {
-    recipe.ingredients.forEach((ingredient: Ingredient) => {
-      if (ingredient.hasOwnProperty('$key')) {
-        delete ingredient['$key'];
+  public filterIngredients(ingredients: Ingredient[], searchTerm: string = ''): Ingredient[] {
+    return ingredients.filter((ingredient: Ingredient) => ingredient.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+  }
+
+  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
+    return recipes.filter((recipe: Recipe) => {
+      let match: boolean = false,
+        matchedIngredients: number = 0;
+      if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+        match = true;
+        if (!!ingredients && !!ingredients.length) {
+          ingredients.forEach((item: string) => {
+            recipe.ingredients.forEach((ingredient: Ingredient) => {
+              if (ingredient.name === item) {
+                matchedIngredients++;
+              }
+            });
+          });
+          if (matchedIngredients !== ingredients.length) {
+            match = false;
+          }
+        }
       }
-      if (ingredient.hasOwnProperty('$exists')) {
-        delete ingredient['$exists'];
-      }
+      return match;
     });
   }
 
-  public addRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
-    this.userRecipes.push(recipe);
-  }
-
-  public downloadImg(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
-      (url: string) => url,
-      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
+  public paginate(data: any[], start: number, end: number): any[] {
+    if (start >= 1) {
+      data = data.slice(start - 1, end);
+    }
+    return data;
   }
 
   public setRecipeNutrition(recipe: Recipe): void {
@@ -100,90 +90,4 @@ export class RecipeService {
     this.portionRecipe(recipe);
   }
 
-  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
-    return recipes.filter((recipe: Recipe) => {
-      let match: boolean = false,
-        matchedIngredients: number = 0;
-        if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
-          match = true;
-          if (!!ingredients && !!ingredients.length) {
-            ingredients.forEach((item: string) => {
-              recipe.ingredients.forEach((ingredient: Ingredient) => {
-                if (ingredient.name === item) {
-                  matchedIngredients++;
-                }
-              });
-            });
-            if (matchedIngredients !== ingredients.length) {
-              match = false;
-            }
-          }
-        }
-      return match;
-    });
-  }
-
-  public getAllRecipes(): Observable<any> {
-    let allRecipes: Recipe[] = [];
-    return new Observable(observer => {
-      this.allUsersRecipes.subscribe(users => users.forEach(userRecipes => {
-        if (!!userRecipes) {
-          for (let recipeKey in userRecipes) {
-            let recipe = userRecipes[recipeKey];
-            if (recipe.hasOwnProperty('ingredients')) {
-              allRecipes.push(recipe);
-            }
-          }
-          observer.next(allRecipes);
-        }
-      }));
-    });
-
-  }
-
-  public getMyRecipes(authId: string): FirebaseListObservable<Recipe[]> {
-    return this.af.database.list(`/recipes/${authId}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
-    return this.af.database.object(`/recipes/${authId}/${key}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public removeRecipe(recipe: Recipe): void {
-    this.userRecipes.remove(recipe['$key']);
-  }
-
-  public uploadImage(img: File): void {
-    this.recipeImgUrl.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
-  }
-/*
-  public updateRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
-    this.userRecipes.update(recipe['$key'], {
-      name: recipe.name,
-      imgUrl: recipe.imgUrl,
-      category: recipe.category,
-      dietaries: recipe.dietaries,
-      chefName: recipe.chefName,
-      chefAvatar: recipe.chefAvatar,
-      ingredients: recipe.ingredients,
-      duration: recipe.duration,
-      difficulty: recipe.difficulty,
-      cookMethod: recipe.cookMethod,
-      cookTemperature: recipe.cookTemperature,
-      nutrition: recipe.nutrition,
-      servings: recipe.servings,
-      steps: recipe.steps,
-      quantity: recipe.quantity
-    });
-  }
-  */
 }

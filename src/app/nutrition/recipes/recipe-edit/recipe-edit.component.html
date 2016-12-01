@@ -1,102 +1,251 @@
-<md-card>
-  <md-card-title>Cooking time</md-card-title>
-  <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
-  <md-divider></md-divider>
-  <md-card-content layout-padding>
-    <form #recipeForm="ngForm">
-      <div class="pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
-        <md-icon>photo</md-icon>
-        <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
+<div layout="column" class="md-content recipe">
+  <div layout="column" layout-gt-md="row">
+    <md-card layout-padding flex>
+      <md-card-title>Cooking time</md-card-title>
+      <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
+      <md-divider></md-divider>
+      <md-card-content layout-padding>
+        <form #recipeForm="ngForm">
+          <div class="pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
+            <md-icon>photo</md-icon>
+            <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
           Image:
         </span>
-        <td-file-upload (click)="uploadReminder = true" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
-        </td-file-upload>
-        <div class="warn push-left-xs pad-xs" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
-          <md-icon>warning</md-icon>
-          <p>Don't forget to upload your avatar!</p>
-        </div>
-      </div>
-      <div layout="column" layout-gt-xs="row" class="pad-xs">
-        <md-input #nameInput #nameControl="ngModel" flex="35" placeholder="Name" type="text" maxlength="50" name="recipe.name" [(ngModel)]="recipe.name" required>
-          <span md-prefix><md-icon>cake</md-icon></span>
-          <md-hint align="start" [hidden]="nameControl.pristine" class="tc-red-600">
-            <span [hidden]="!nameControl.errors?.required">Required</span>
-          </md-hint>
-          <md-hint align="end">{{ nameInput.characterCount }} / 50</md-hint>
-        </md-input>
+            <td-file-upload (click)="uploadReminder = true" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+            </td-file-upload>
+            <div class="warn push-left-xs pad-xs" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
+              <md-icon>warning</md-icon>
+              <p>Don't forget to upload your avatar!</p>
+            </div>
+          </div>
+          <div layout="column" class="pad-xs">
+            <md-input #nameInput #nameControl="ngModel" flex placeholder="Name" type="text" maxlength="50" name="recipe.name" [(ngModel)]="recipe.name" required>
+              <span md-prefix><md-icon>cake</md-icon></span>
+              <md-hint align="start" [hidden]="nameControl.pristine" class="tc-red-600">
+                <span [hidden]="!nameControl.errors?.required">Required</span>
+              </md-hint>
+              <md-hint align="end">{{ nameInput.characterCount }} / 50</md-hint>
+            </md-input>
 
-        <md-input class="push-left-md" #descriptionInput #descriptionControl="ngModel" flex="65" placeholder="Description" type="text" maxlength="100" name="recipe.description" [(ngModel)]="recipe.description"
-          required>
-          <span md-prefix><md-icon>description</md-icon></span>
-          <md-hint align="start" [hidden]="descriptionControl.pristine" class="tc-red-600">
-            <span [hidden]="!descriptionControl.errors?.required">Required</span>
-          </md-hint>
-          <md-hint align="end">{{ descriptionInput.characterCount }} / 100</md-hint>
-        </md-input>
+            <md-input #descriptionInput #descriptionControl="ngModel" flex placeholder="Description" type="text" maxlength="100" name="recipe.description" [(ngModel)]="recipe.description" required>
+              <span md-prefix><md-icon>description</md-icon></span>
+              <md-hint align="start" [hidden]="descriptionControl.pristine" class="tc-red-600">
+                <span [hidden]="!descriptionControl.errors?.required">Required</span>
+              </md-hint>
+              <md-hint align="end">{{ descriptionInput.characterCount }} / 100</md-hint>
+            </md-input>
 
-      </div>
-      <div layout="column" layout-gt-xs="row" class="pad-xs">
-        <md-input #durationInput #durationControl="ngModel" flex="17" placeholder="Duration" type="number" min="1" max="3600" name="recipe.duration" [(ngModel)]="recipe.duration" required>
-          <span md-prefix><md-icon>timelapse</md-icon></span>
-          <md-hint align="start" [hidden]="durationControl.pristine" class="tc-red-600">
-            <span [hidden]="!durationControl.errors?.required">Required</span>
-          </md-hint>
-        </md-input>
-        <md-input class="push-left-md push-right-md" #temperatureInput #temperatureControl="ngModel" flex="17" placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature"
-          required>
-          <span md-prefix><md-icon>whatshot</md-icon></span>
-          <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
-            <span [hidden]="!temperatureControl.errors?.required">Required</span>
-          </md-hint>
-        </md-input>
-        <md-input #servingsInput #servingsControl="ngModel" flex="17" placeholder="Servings" type="number" min="1" max="100" name="recipe.servings" [(ngModel)]="recipe.servings" required>
-          <span md-prefix><md-icon>local_dining</md-icon></span>
-          <md-hint align="start" [hidden]="servingsControl.pristine" class="tc-red-600">
-            <span [hidden]="!servingsControl.errors?.required">Required</span>
-          </md-hint>
-        </md-input>
-        <div class="push-left-md push-right-md" layout="column" layout-gt-xs="row" layout-align="start center" flex="17">
-          <label for="recipe.difficulty" layout="row" layout-align="start center">
+          </div>
+          <div layout="column" layout-gt-xs="row" class="pad-xs">
+            <md-input #durationInput #durationControl="ngModel" flex placeholder="Duration" type="number" min="1" max="3600" name="recipe.duration" [(ngModel)]="recipe.duration" required>
+              <span md-prefix><md-icon>timelapse</md-icon></span>
+              <md-hint align="start" [hidden]="durationControl.pristine" class="tc-red-600">
+                <span [hidden]="!durationControl.errors?.required">Required</span>
+              </md-hint>
+            </md-input>
+            <md-input class="push-left-md push-right-md" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature"
+              required>
+              <span md-prefix><md-icon>whatshot</md-icon></span>
+              <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
+                <span [hidden]="!temperatureControl.errors?.required">Required</span>
+              </md-hint>
+            </md-input>
+            <md-input #servingsInput #servingsControl="ngModel" flex placeholder="Servings" type="number" min="1" max="100" name="recipe.servings" [(ngModel)]="recipe.servings" required>
+              <span md-prefix><md-icon>local_dining</md-icon></span>
+              <md-hint align="start" [hidden]="servingsControl.pristine" class="tc-red-600">
+                <span [hidden]="!servingsControl.errors?.required">Required</span>
+              </md-hint>
+            </md-input>
+          </div>
+          <div layout="column" layout-gt-xs="row" class="pad-xs">
+            <div layout="row" layout-align="start center" flex="40">
+              <label for="recipe.difficulty" layout="row" layout-align="start center">
               <md-icon>layers</md-icon>
               <span layout="row" layout-align="start center" class="tc-grey-500 pad-xs push-right-xs">
               Difficulty:
             </span>
               </label>
-          <select [(ngModel)]="recipe.difficulty" name="recipe.difficulty">
+              <select [(ngModel)]="recipe.difficulty" name="recipe.difficulty">
             <option *ngFor="let difficulty of difficulties" [value]="difficulty">
               {{ difficulty }}
             </option>
           </select>
-        </div>
-        <div layout="row" layout-align="start center" flex="17">
-          <label for="recipe.difficulty" layout="row" layout-align="start center">
+            </div>
+            <div layout="row" layout-align="start center" flex="55">
+              <label for="recipe.difficulty" layout="row" layout-align="start center">
               <md-icon>room_service</md-icon>
               <span layout="row" layout-align="start center" class="tc-grey-500 pad-xs push-right-xs">
               Cooking method:
             </span>
               </label>
-          <select [(ngModel)]="recipe.cookMethod" name="recipe.cookMethod">
+              <select [(ngModel)]="recipe.cookMethod" name="recipe.cookMethod">
             <option *ngFor="let method of cookMethods" [value]="method">
               {{ method }}
             </option>
           </select>
-        </div>
+            </div>
+          </div>
+        </form>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions layout="column" layout-align="center center">
+        <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || uploadReminder" (click)="signUp()">
+          Cook it!
+        </button>
+      </md-card-actions>
+    </md-card>
+    <md-card flex>
+      <td-search-box class="push-left push-right" placeholder="Search ingredients" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
+      <md-divider></md-divider>
+      <div *tdLoading="'ingredients.load'" loadingType="circular">
+        <md-card-content>
+          <md-list>
+            <div class="md-padding" *ngIf="!filteredIngredients || filteredIngredients.length === 0" layout="row" layout-align="center center">
+              <h3>No ingredients to display.</h3>
+            </div>
+            <template ngFor let-ingredient [ngForOf]="selectedIngredients">
+              <md-list-item>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                  <md-checkbox (click)="changeQty(ingredient)" flex [checked]="selectedIngredients.indexOf(ingredient) > -1">
+                    {{ ingredient.name }}
+                  </md-checkbox>
+                  <span flex class="pad-left-xxl md-caption tc-grey-500">{{ ingredient.amount }}</span>
+                  <span>
+                    <button md-icon-button [md-menu-trigger-for]="menu">
+                      <md-icon>more_vert</md-icon>
+                    </button>
+                  <md-menu x-position="before" #menu="mdMenu">
+                      <button md-menu-item>Delete</button>
+                  </md-menu>
+              </span>
+                </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+            <template ngFor let-ingredient [ngForOf]="filteredIngredients">
+              <md-list-item>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                  <md-checkbox (click)="changeQty(ingredient)" flex [checked]="selectedIngredients.indexOf(ingredient) > -1">
+                    {{ ingredient.name }}
+                  </md-checkbox>
+                  <span flex class="pad-left-xxl md-caption tc-grey-500">{{ ingredient.category }}</span>
+                  <span>
+                    <button md-icon-button [md-menu-trigger-for]="menu">
+                      <md-icon>more_vert</md-icon>
+                    </button>
+                  <md-menu x-position="before" #menu="mdMenu">
+                      <button md-menu-item>Delete</button>
+                  </md-menu>
+              </span>
+                </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions>
+          <td-paging-bar [firstLast]="true" [pageSize]="pageSize" [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
+        </md-card-actions>
       </div>
-    </form>
-  </md-card-content>
-  <md-divider></md-divider>
-  <md-card-actions layout="column" layout-align="center center">
-    <button md-raised-button flex color="accent" (click)="addIngredients()">
-      Add ingredients
-    </button>
-    <button md-raised-button flex color="accent" class="push-top-xs push-bottom-xs" (click)="addInstructions()">
-      Add instructions
-    </button>
-    <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || uploadReminder" (click)="signUp()">
-      Cook it!
-    </button>
-  </md-card-actions>
-</md-card>
+    </md-card>
+  </div>
+  <md-card flex>
+    <md-card-title flex layout="row" class="md-heading">
+      Instructions
+      <span flex></span>
+      <button md-icon-button color="accent" (click)="addInstruction()">
+          <md-icon>add</md-icon>
+      </button>
+    </md-card-title>
+    <md-divider></md-divider>
+    <md-card-content>
+      <md-list layout-padding>
+        <md-list-item *ngFor="let instruction of recipe.instructions; let i = index">
+          <div layout="row" layout-align="start center" style="width: 100%;">
+            <md-input flex #instructionInput #instructionControl="ngModel" placeholder="Step {{i + 1}}" type="text" maxlength="100" name="instruction {{i}}" [(ngModel)]="instructions[i]" required>
+              <span md-prefix><md-icon>playlist_add_check</md-icon></span>
+              <md-hint align="start" [hidden]="instructionControl.pristine" class="tc-red-600">
+                <span [hidden]="!instructionControl.errors?.required">Required</span>
+              </md-hint>
+              <md-hint align="end">{{ instructionInput.characterCount }} / 100</md-hint>
+            </md-input>
+            <button (click)="removeInstruction(i)" md-icon-button>
+            <md-icon>delete</md-icon>
+          </button>
+          </div>
+        </md-list-item>
+      </md-list>
+    </md-card-content>
+  </md-card>
+  <div layout="column" layout-gt-md="row">
+    <div layout="column" flex>
+      <md-card>
+        <md-card-title>Basic nutrients</md-card-title>
+        <md-card-content>
+          <md-list>
+            <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
+              <md-list-item>
+                <h3 md-line>{{ item }}</h3>
+                <span flex></span>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item] }}g </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-title>Amino acids</md-card-title>
+        <md-card-content>
+          <md-list>
+            <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
+              <md-list-item>
+                <h3 md-line>{{ item }}</h3>
+                <span flex></span>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item] }}g </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+    <div layout="column" flex>
+      <md-card>
+        <md-card-title>Vitamins</md-card-title>
+        <md-card-content>
+          <md-list>
+            <template let-item let-last="last" ngFor [ngForOf]="vitamins">
+              <md-list-item>
+                <h3 md-line>{{ item }}</h3>
+                <span flex></span>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item] }}mg </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+      </md-card>
+      <md-card>
+        <md-card-title>Minerals</md-card-title>
+        <md-card-content>
+          <md-list>
+            <template let-item let-last="last" ngFor [ngForOf]="minerals">
+              <md-list-item>
+                <h3 md-line>{{ item }}</h3>
+                <span flex></span>
+                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item] }}mg </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
+<!--
 <div layout="column" layout-gt-md="row">
   <md-card flex>
     <md-card-title>Ingredients</md-card-title>
@@ -130,3 +279,4 @@
     </md-list>
   </md-card>
 </div>
+-->

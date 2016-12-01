@@ -28,6 +28,7 @@ import { NutrientService } from './nutrients/shared/nutrient.service';
 import { NutritionComponent } from './nutrition.component';
 import { NutritionRoutingModule } from './nutrition-routing.module';
 import { NutritionInfoComponent } from './nutrition-info/nutrition-info.component';
+import { RecipeDataService } from './recipes/shared/recipe-data.service';
 import { RecipeDetailResolve } from './recipes/recipe-detail/recipe-detail-resolve.service';
 import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
@@ -69,6 +70,7 @@ import { RecipeService } from './recipes/shared/recipe.service';
     FoodService,
     NutrientDetailResolve,
     NutrientService,
+    RecipeDataService,
     RecipeDetailResolve,
     RecipeService
   ]
