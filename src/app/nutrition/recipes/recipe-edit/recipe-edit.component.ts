@@ -115,6 +115,8 @@ export class RecipeEditComponent implements OnInit {
     ];
   }
 
+  // TODO: move from component to helper service
+
   private sortByName(arr: any[]): any[] {
     return arr.sort((a, b) => {
       let x = a.name.toLowerCase(), y = b.name.toLowerCase();
