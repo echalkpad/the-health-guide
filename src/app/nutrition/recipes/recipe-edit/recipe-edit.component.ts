@@ -130,7 +130,11 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public cookRecipe(): void {
-    this.recipeDataSvc.addRecipe(this.recipe);
+    if (this.recipe.hasOwnProperty('$key')) {
+      this.recipeDataSvc.updateRecipe(this.recipe);
+    } else {
+      this.recipeDataSvc.addRecipe(this.recipe);
+    }
   }
 
   public changeQty(ingredient: Ingredient): void {
