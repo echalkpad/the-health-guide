@@ -125,11 +125,13 @@
                   </md-checkbox>
                   <span flex class="md-caption tc-grey-500">{{ ingredient.quantity }}g</span>
                   <span>
-                    <button (click)="changeQty(ingredient)" md-icon-button [md-menu-trigger-for]="menu">
+                    <button md-icon-button [md-menu-trigger-for]="menu">
                       <md-icon>more_vert</md-icon>
                     </button>
                   <md-menu x-position="before" #menu="mdMenu">
-                      <button md-menu-item>Delete</button>
+                      <button (click)="changeQty(ingredient)" md-menu-item>Edit</button>
+                      <button (click)="removeIngredient(ingredient)" md-menu-item>Delete</button>
+                      
                   </md-menu>
               </span>
                 </div>

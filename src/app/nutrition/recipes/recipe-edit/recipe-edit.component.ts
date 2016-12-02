@@ -141,7 +141,7 @@ export class RecipeEditComponent implements OnInit {
     let index: number = this.recipe.ingredients.indexOf(ingredient);
     if (index === -1) {
       this.dialogSvc.openPrompt({
-        message: "Enter the ingredient quantity in " + ingredient.hasOwnProperty("chef") ? 'units' : 'grams',
+        message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('chef') ? 'units' : 'grams'}`,
         disableClose: true,
         value: "100",
         title: `Enter ${ingredient.name}'s quantity`,
@@ -178,6 +178,10 @@ export class RecipeEditComponent implements OnInit {
     this.currentPage = pagingEvent.page;
     this.pageSize = pagingEvent.pageSize;
     this.filter();
+  }
+
+  public removeIngredient(ingredient: Ingredient): void {
+     this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
   }
 
   public removeInstruction(index: number) {
