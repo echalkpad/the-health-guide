@@ -1,6 +1,6 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
@@ -34,7 +34,7 @@ export class RecipeEditComponent implements OnInit {
   public recipe: Recipe;
   public startPage: number = 1;
   public tags: string[];
-  public uploadReminder: boolean = false;
+  public uploadReminder: boolean = true;
   public minerals: string[] = [];
   public vitamins: string[] = [];
   constructor(
@@ -46,6 +46,7 @@ export class RecipeEditComponent implements OnInit {
     public recipeDataSvc: RecipeDataService,
     public recipeSvc: RecipeService,
     private route: ActivatedRoute,
+    private router: Router,
     private titleSvc: Title
   ) {
 
@@ -130,16 +131,18 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public cookRecipe(): void {
+    this.recipe.instructions = [...this.instructions];
     if (this.recipe.hasOwnProperty('$key')) {
       this.recipeDataSvc.updateRecipe(this.recipe);
     } else {
       this.recipeDataSvc.addRecipe(this.recipe);
     }
+    this.router.navigate(['/nutrition/recipes']);
   }
 
-  public changeQty(ingredient: Ingredient): void {
+  public changeQty(ingredient: Ingredient, notRemove?: boolean): void {
     let index: number = this.recipe.ingredients.indexOf(ingredient);
-    if (index === -1) {
+    if (notRemove || index === -1) {
       this.dialogSvc.openPrompt({
         message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('chef') ? 'units' : 'grams'}`,
         disableClose: true,
@@ -149,8 +152,10 @@ export class RecipeEditComponent implements OnInit {
         if (value) {
           if (typeof +value === 'number') {
             ingredient.quantity = +value;
-            this.recipe.ingredients.push(ingredient);
-            this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
+            if (index === -1) {
+              this.recipe.ingredients.push(ingredient);
+              this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
+            }
             this.filter();
             this.syncNutrition();
           }
@@ -181,7 +186,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public removeIngredient(ingredient: Ingredient): void {
-     this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
+    this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
   }
 
   public removeInstruction(index: number) {
@@ -194,12 +199,9 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public uploadImage(img: File): void {
-    if (img) {
-      this.recipeDataSvc.uploadImage(img);
-      this.uploadReminder = true;
-    } else {
-      this.uploadReminder = false;
-    }
+    this.recipeDataSvc.uploadImage(img);
+    this.recipeDataSvc.downloadImg(img.name).then((url: string) => this.recipe.image = url);
+    this.uploadReminder = false;
   }
 
   ngAfterViewInit(): void {

@@ -5,19 +5,15 @@
       <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
       <md-divider></md-divider>
       <md-card-content layout-padding>
-        <form #recipeForm="ngForm">
-          <div layout="row" layout-align="start center" flex>
-            <md-icon>photo</md-icon>
-            <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
+        <div layout="row" layout-align="start center" flex>
+          <md-icon>photo</md-icon>
+          <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
               Image:
             </span>
-            <td-file-upload (click)="uploadImage()" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
-            </td-file-upload>
-            <div class="push-left-xs pad-xs" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
-              <md-icon>warning</md-icon>
-              <p class="warn">Click again to upload the image</p>
-            </div>
-          </div>
+          <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+          </td-file-upload>
+        </div>
+        <form #recipeForm="ngForm">
           <div layout="column" class="pad-xs">
             <md-input #nameInput #nameControl="ngModel" flex placeholder="Name" type="text" maxlength="50" name="recipe.name" [(ngModel)]="recipe.name" required>
               <span md-prefix><md-icon>cake</md-icon></span>
@@ -97,13 +93,14 @@
               </select>
             </div>
           </div>
+          <td-chips placeholder="Enter tag" [items]="tags" [(ngModel)]="recipe.tags" name="recipe.tags" [readOnly]="false" requireMatch>
+            <span md-prefix><md-icon>local_offer</md-icon></span>
+          </td-chips>
         </form>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="column" layout-align="center center">
-        <button md-raised-button flex color="accent"
-        [disabled]="!recipeForm.form.valid || uploadReminder || recipe.ingredients.length === 0 || recipe.instructions.length === 0"
-        (click)="cookRecipe()">
+        <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || uploadReminder || recipe.ingredients.length === 0 || recipe.instructions.length === 0 || recipe.tags.length === 0" (click)="cookRecipe()">
           Cook it!
         </button>
       </md-card-actions>
@@ -120,7 +117,7 @@
             <template ngFor let-ingredient [ngForOf]="recipe.ingredients">
               <md-list-item>
                 <div layout="row" layout-align="start center" style="width: 100%;">
-                  <md-checkbox (click)="changeQty(ingredient)" flex [checked]="recipe.ingredients.indexOf(ingredient) > -1">
+                  <md-checkbox (click)="changeQty(ingredient, false)" flex [checked]="recipe.ingredients.indexOf(ingredient) > -1">
                     {{ ingredient.name }}
                   </md-checkbox>
                   <span flex class="md-caption tc-grey-500">{{ ingredient.quantity }}g</span>
@@ -129,9 +126,8 @@
                       <md-icon>more_vert</md-icon>
                     </button>
                   <md-menu x-position="before" #menu="mdMenu">
-                      <button (click)="changeQty(ingredient)" md-menu-item>Edit</button>
-                      <button (click)="removeIngredient(ingredient)" md-menu-item>Delete</button>
-                      
+                      <button (click)="changeQty(ingredient, true)" md-menu-item>Edit</button>
+                      <button (click)="removeIngredient(ingredient)" md-menu-item>Delete</button>   
                   </md-menu>
               </span>
                 </div>

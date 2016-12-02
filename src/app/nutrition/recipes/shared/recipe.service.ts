@@ -90,7 +90,7 @@ export class RecipeService {
         // The ingredient is a basic food
         for (let nutrientCategory in ingredient) {
           let nutrients = ingredient[nutrientCategory];
-          if (typeof nutrients === 'number') {
+          if (typeof nutrients === 'number' && nutrientCategory !== 'quantity') {
             recipe.nutrition[nutrientCategory] += nutrients * (ingredient.quantity / 100);
           } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {

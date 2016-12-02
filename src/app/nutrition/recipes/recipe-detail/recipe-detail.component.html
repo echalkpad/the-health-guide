@@ -3,7 +3,7 @@
     <md-card layout-padding flex>
       <md-card-title class="md-display-1">{{ recipe.name }}</md-card-title>
       <md-card-subtitle class="md-subhead">Made by {{ recipe.chef.name }}</md-card-subtitle>
-      <img md-card-image class="recipe-img" [src]="'https://firebasestorage.googleapis.com/v0/b/the-health-guide.appspot.com/o/recipes%2Frecipe.jpg?alt=media&token=c14477d5-8024-486e-9113-fb81248b2c70' || recipe.imgUrl">
+      <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <md-list>
           <md-list-item>

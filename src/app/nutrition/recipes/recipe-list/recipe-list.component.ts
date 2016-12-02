@@ -49,6 +49,15 @@ export class RecipeListComponent implements OnInit {
     this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
+  public deleteRecipe(recipe: Recipe): void {
+    this.recipeDataSvc.removeRecipe(recipe);
+  }
+
+  public editRecipe(recipe: Recipe): void {
+    this.dataSvc.saveRecipe(recipe);
+    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key'], 'edit']);
+  }
+
   public filterRecipes(searchTerm: string): void {
     this.filteredRecipes = [...this.recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
   }

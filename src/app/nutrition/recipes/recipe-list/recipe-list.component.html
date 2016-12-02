@@ -40,12 +40,16 @@
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
-      <md-card-actions>
-        <button md-button color="accent" (click)="openDetails(recipe)">
+      <md-card-actions layout="row" layout-align="center center">
+        <button flex md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>
-        <button md-button color="warn">
+        <button flex md-button color="accent" (click)="editRecipe(recipe)">
+          <md-icon>open_in_new</md-icon>
+          Edit
+        </button>
+        <button flex md-button color="warn" (click)="deleteRecipe(recipe)">
           <md-icon>delete</md-icon>
           Remove
         </button>
@@ -65,12 +69,16 @@
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
-      <md-card-actions>
-        <button md-button color="accent" (click)="openDetails(recipe)">
+      <md-card-actions layout="row" layout-align="center center">
+        <button flex md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>
-        <button md-button color="warn">
+        <button flex md-button color="accent" (click)="editRecipe(recipe)">
+          <md-icon>open_in_new</md-icon>
+          Edit
+        </button>
+        <button flex md-button color="warn" (click)="deleteRecipe(recipe)">
           <md-icon>delete</md-icon>
           Remove
         </button>
@@ -90,12 +98,16 @@
         <p class="md-body-1">{{ recipe.category }}</p>
       </md-card-content>
       <md-divider></md-divider>
-      <md-card-actions>
-        <button md-button color="accent" (click)="openDetails(recipe)">
+      <md-card-actions layout="row" layout-align="center center">
+        <button flex md-button color="accent" (click)="openDetails(recipe)">
           <md-icon>open_in_new</md-icon>
           View more
         </button>
-        <button md-button color="warn">
+        <button flex md-button color="accent" (click)="editRecipe(recipe)">
+          <md-icon>open_in_new</md-icon>
+          Edit
+        </button>
+        <button flex md-button color="warn" (click)="deleteRecipe(recipe)">
           <md-icon>delete</md-icon>
           Remove
         </button>
