@@ -1,6 +1,23 @@
 # The Health Guide
 
-Lifestyle and Wellness web application implemented with Angular 2.
+Lifestyle and Wellness web application implemented with Angular 2, Covalent UI and Material Design.
+
+## Prerequisites
+
+Both the CLI and generated project have dependencies that require Node 4 or higher, together
+with NPM 3 or higher. Download it from https://nodejs.org/en/download/
+
+## Getting started
+Make sure you have the latest versions of node and npm
+Install electron globaly
+`npm install -g electron`
+
+Clone the repository, install the dependencies, and run the server
+```bash
+git clone -b web https://github.com/razvantomegea/the-health-guide.git
+cd the-health-guide
+npm install
+```
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
