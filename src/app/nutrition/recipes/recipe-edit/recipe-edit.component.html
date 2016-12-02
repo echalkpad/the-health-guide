@@ -3,6 +3,7 @@
     <md-card layout-padding flex>
       <md-card-title>Cooking time</md-card-title>
       <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
+      <img *ngIf="!!recipe.image" md-card-image class="recipe-img" [src]="recipe.image">
       <md-divider></md-divider>
       <md-card-content layout-padding>
         <div layout="row" layout-align="start center" flex>

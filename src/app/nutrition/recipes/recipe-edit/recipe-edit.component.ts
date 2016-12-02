@@ -222,6 +222,9 @@ export class RecipeEditComponent implements OnInit {
     this.route.data.subscribe((data: { recipe: Recipe }) => {
       if (!!data) {
         this.recipe = Object.assign({}, data.recipe);
+        if (this.recipe.image !== "") {
+          this.uploadReminder = false;
+        }
         this.instructions = [...this.recipe.instructions];
         this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
         console.log(this.recipe);
