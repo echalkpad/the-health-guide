@@ -55,7 +55,7 @@
         color: white;
     }
 
-    td-file-upload button {
+    td-file-upload md-raised-button {
         color: white!important;
     }
 
@@ -65,4 +65,8 @@
         }
         padding: auto;
     }
+}
+
+.warn {
+    color: red;
 }

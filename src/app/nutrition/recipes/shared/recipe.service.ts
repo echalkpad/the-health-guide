@@ -12,9 +12,23 @@ export class RecipeService {
       let nutrients = recipe.nutrition[nutrientCategory];
       if (typeof nutrients === 'number') {
         recipe.nutrition[nutrientCategory] /= +recipe.servings;
-      } else {
+        if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
+          recipe.nutrition[nutrientCategory] -= recipe.nutrition[nutrientCategory] * 0.15
+        }
+      } else if (typeof nutrients === 'object') {
         for (let nutrient in nutrients) {
           recipe.nutrition[nutrientCategory][nutrient] /= +recipe.servings;
+          if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
+            if (recipe.cookMethod === 'Freezing') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.05
+            } else if (nutrientCategory === 'vitamins') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.65
+            } else if (nutrientCategory === 'minerals') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.45
+            } else if (nutrientCategory === 'amino acids') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.15
+            }
+          }
         }
       }
       recipe.quantity /= +recipe.servings;
@@ -66,7 +80,7 @@ export class RecipeService {
           let nutrients = ingredient.nutrition[nutrientCategory];
           if (typeof nutrients === 'number') {
             recipe.nutrition[nutrientCategory] += nutrients * ingredient.amount;
-          } else {
+          } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
               recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.amount;
             }
@@ -78,7 +92,7 @@ export class RecipeService {
           let nutrients = ingredient[nutrientCategory];
           if (typeof nutrients === 'number') {
             recipe.nutrition[nutrientCategory] += nutrients * (ingredient.quantity / 100);
-          } else {
+          } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
               recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * (ingredient.quantity / 100);
             }
@@ -89,6 +103,7 @@ export class RecipeService {
       recipe.quantity += ingredient.quantity;
     });
     this.portionRecipe(recipe);
+    console.log(recipe);
   }
 
 }

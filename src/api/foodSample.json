@@ -1,7 +1,7 @@
 {
         "name": "",
         "category": "",
-        "energy": 0,
+        "Energy": 0,
         "macronutrients": {
             "Water": 0,
             "Protein": 0,

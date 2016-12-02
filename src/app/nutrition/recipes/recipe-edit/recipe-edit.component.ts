@@ -32,7 +32,6 @@ export class RecipeEditComponent implements OnInit {
   public instructions: string[] = [];
   public pageSize: number = 10;
   public recipe: Recipe;
-  public selectedIngredients: Ingredient[] = [];
   public startPage: number = 1;
   public tags: string[];
   public uploadReminder: boolean = false;
@@ -130,29 +129,35 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.instructions = [...this.instructions];
   }
 
+  public cookRecipe(): void {
+    this.recipeDataSvc.addRecipe(this.recipe);
+  }
+
   public changeQty(ingredient: Ingredient): void {
-    let index: number = this.selectedIngredients.indexOf(ingredient);
+    let index: number = this.recipe.ingredients.indexOf(ingredient);
     if (index === -1) {
       this.dialogSvc.openPrompt({
-        message: 'This is how simple it is to create a prompt with this wrapper service. Prompt something.',
+        message: "Enter the ingredient quantity in " + ingredient.hasOwnProperty("chef") ? 'units' : 'grams',
         disableClose: true,
         value: "100",
-        title: `Enter ${ingredient.name}'s quantity`, //OPTIONAL, hides if not provided
+        title: `Enter ${ingredient.name}'s quantity`,
       }).afterClosed().subscribe((value: string) => {
         if (value) {
           if (typeof +value === 'number') {
-            ingredient.amount = +value;
-            this.selectedIngredients.push(ingredient);
+            ingredient.quantity = +value;
+            this.recipe.ingredients.push(ingredient);
             this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
             this.filter();
+            this.syncNutrition();
           }
         }
       });
     } else {
-      this.selectedIngredients.splice(index, 1);
+      this.recipe.ingredients.splice(index, 1);
       this.ingredients.push(ingredient);
       this.ingredients = [...this.sortByName(this.ingredients)];
       this.filter();
+      this.syncNutrition();
     }
   }
 
@@ -176,8 +181,17 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.instructions = [...this.instructions];
   }
 
+  public syncNutrition(): void {
+    this.recipeSvc.setRecipeNutrition(this.recipe);
+  }
+
   public uploadImage(img: File): void {
-    this.recipeDataSvc.uploadImage(img);
+    if (img) {
+      this.recipeDataSvc.uploadImage(img);
+      this.uploadReminder = true;
+    } else {
+      this.uploadReminder = false;
+    }
   }
 
   ngAfterViewInit(): void {
