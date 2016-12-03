@@ -7,6 +7,7 @@ import { IPageChangeEvent } from '@covalent/paging';
 import { Auth } from '../../../auth/auth.model';
 import { AuthService } from '../../../auth/auth.service';
 import { Chef } from '../shared/chef.model';
+import { HelperService } from '../../../shared/helper.service';
 import { Food } from '../../food/shared/food.model';
 import { FoodService } from '../../food/shared/food.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
@@ -42,6 +43,7 @@ export class RecipeEditComponent implements OnInit {
     private detector: ChangeDetectorRef,
     private dialogSvc: TdDialogService,
     private foodSvc: FoodService,
+    private helperSvc: HelperService,
     private loadingSvc: TdLoadingService,
     public recipeDataSvc: RecipeDataService,
     public recipeSvc: RecipeService,
@@ -115,16 +117,6 @@ export class RecipeEditComponent implements OnInit {
     ];
   }
 
-  // TODO: move from component to helper service
-
-  private sortByName(arr: any[]): any[] {
-    return arr.sort((a, b) => {
-      let x = a.name.toLowerCase(), y = b.name.toLowerCase();
-      return x < y ? -1 : x > y ? 1 : 0;
-    });
-
-  }
-
   public addInstruction(): void {
     this.instructions.push('');
     this.recipe.instructions = [...this.instructions];
@@ -164,7 +156,7 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipe.ingredients.splice(index, 1);
       this.ingredients.push(ingredient);
-      this.ingredients = [...this.sortByName(this.ingredients)];
+      this.ingredients = [...this.helperSvc.sortByName(this.ingredients)];
       this.filter();
       this.syncNutrition();
     }
@@ -174,7 +166,7 @@ export class RecipeEditComponent implements OnInit {
     let newData: any[] = this.ingredients;
     newData = this.recipeSvc.filterIngredients(newData, searchTerm);
     this.filteredTotal = newData.length;
-    newData = this.recipeSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
+    newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
     this.filteredIngredients = newData;
   }
 

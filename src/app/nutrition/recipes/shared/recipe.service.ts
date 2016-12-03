@@ -62,14 +62,6 @@ export class RecipeService {
     });
   }
 
-  // TODO: move from component to helper service
-  public paginate(data: any[], start: number, end: number): any[] {
-    if (start >= 1) {
-      data = data.slice(start - 1, end);
-    }
-    return data;
-  }
-
   public setRecipeNutrition(recipe: Recipe): void {
     recipe.nutrition = new Nutrition();
     // Set total recipe nutrition and quantity in grams

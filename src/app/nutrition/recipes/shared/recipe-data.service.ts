@@ -46,7 +46,7 @@ export class RecipeDataService {
 
   public downloadImg(imgName: string): firebase.Promise<any> {
     let imgUrl: string = "";
-    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
+    return this.recipeImgUrl.child(`${imgName}`).getDownloadURL().then(
       (url: string) => url,
       (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
   }

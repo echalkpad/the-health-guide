@@ -1,0 +1,33 @@
+{
+  "rules": {
+    "activities": {
+      ".read": true,
+      ".write": false
+    },
+    "foods": {
+      ".read": true,
+      ".write": false
+    },
+    "macronutrients": {
+      ".read": true,
+      ".write": false
+    },
+    "micronutrients": {
+      ".read": true,
+      ".write": false
+    },
+    "recipes": {
+      ".read": true,
+      "$userId": {
+        ".read": true,
+        ".write": "$userId === auth.uid"
+      }
+    },
+    "users": {
+      "$userId": {
+        ".read": "$userId === auth.uid",
+        ".write": "$userId === auth.uid"
+      }
+    }
+  }
+}
