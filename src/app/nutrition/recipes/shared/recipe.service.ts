@@ -1,31 +1,151 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
-  private allUsersRecipes: FirebaseListObservable<Recipe[]>;
-  private recipeImgUrl: firebase.storage.Reference;
-  private userRecipes: FirebaseListObservable<Recipe[]>;
-  constructor(private af: AngularFire, private auth: FirebaseAuth) {
-    this.allUsersRecipes = af.database.list('/recipes', {
-      query: {
-        orderByChild: 'name'
+  constructor() { }
+
+  private checkHealthTags(recipe: Recipe): void {
+    /**
+     * The optimal recipe must have max. 900 kcal if it's a breakfast, 450 kcal otherwise,
+     * and must contain 45% carbs, 35% fat, 6% fiber, 20% protein, 15% sugars, 10% saturated fat
+     * 
+     * Carbs have 4.1 kcal/g
+     * Fat has 9 kcal/g
+     * Fiber has 2 kcal/g
+     * Protein has 4.1 kcal/g
+     * Sugars have 2.4 kcal/g
+     */
+    let energy: number = recipe.nutrition.Energy,
+      reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
+      reqCarb: number = energy * 0.45 / 4.1,
+      reqFat: number = energy * 0.35 / 9,
+      reqFiber: number = energy * 0.06 / 2,
+      reqProtein: number = energy * 0.2 / 4.1,
+      reqSatFat: number = energy * 0.1 / 9,
+      reqSugars: number = energy * 0.15 / 2.4;
+
+    if (energy > reqEnergy) {
+      if (recipe.tags.indexOf('High-calorie') === -1) {
+        recipe.tags.push('High-calorie');
       }
-    });
-    auth.subscribe(authData => {
-      if (!!authData) {
-        this.userRecipes = af.database.list(`/recipes/${authData.uid}`, {
-          query: {
-            orderByChild: 'name'
-          }
-        });
+      if (recipe.tags.indexOf('Low-calorie') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-calorie'), 1);
       }
-    });
-    this.recipeImgUrl = firebase.storage().ref().child('/recipes');
+    } else if (energy <= reqEnergy / 2) {
+      if (recipe.tags.indexOf('Low-calorie') === -1) {
+        recipe.tags.push('Low-calorie');
+      }
+      if (recipe.tags.indexOf('High-calorie') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-calorie'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-calorie') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-calorie'), 1);
+    } else if (recipe.tags.indexOf('Low-calorie') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-calorie'), 1);
+    }
+
+    if (recipe.nutrition.Fats > reqFat) {
+      if (recipe.tags.indexOf('High-fat (good)') === -1) {
+        recipe.tags.push('High-fat (good)');
+      }
+      if (recipe.tags.indexOf('Low-fat (bad)') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-fat (bad)'), 1);
+      }
+    } else if (recipe.nutrition.Fats <= reqFat / 2) {
+      if (recipe.tags.indexOf('Low-fat (bad)') === -1) {
+        recipe.tags.push('Low-fat (bad)');
+      }
+      if (recipe.tags.indexOf('High-fat (good)') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-fat (good)'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-fat (good)') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-fat (good)'), 1);
+    } else if (recipe.tags.indexOf('Low-fat (bad)') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-fat (bad)'), 1);
+    }
+
+    if (recipe.nutrition.Fiber > reqFiber) {
+      if (recipe.tags.indexOf('High-fiber') === -1) {
+        recipe.tags.push('High-fiber');
+      }
+      if (recipe.tags.indexOf('Low-fiber') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-fiber'), 1);
+      }
+    } else if (recipe.nutrition.Fiber <= reqFiber / 2) {
+      if (recipe.tags.indexOf('Low-fiber') === -1) {
+        recipe.tags.push('Low-fiber');
+      }
+      if (recipe.tags.indexOf('High-fiber') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-fiber'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-fiber') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-fiber'), 1);
+    } else if (recipe.tags.indexOf('Low-fiber') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-fiber'), 1);
+    }
+
+    if (recipe.nutrition.Protein > reqProtein) {
+      if (recipe.tags.indexOf('High-protein') === -1) {
+        recipe.tags.push('High-protein');
+      }
+      if (recipe.tags.indexOf('Low-protein') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-protein'), 1);
+      }
+    } else if (recipe.nutrition.Protein <= reqProtein / 2) {
+      if (recipe.tags.indexOf('Low-protein') === -1) {
+        recipe.tags.push('Low-protein');
+      }
+      if (recipe.tags.indexOf('High-protein') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-protein'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-protein') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-protein'), 1);
+    } else if (recipe.tags.indexOf('Low-protein') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-protein'), 1);
+    }
+
+    if (recipe.nutrition['Saturated fat'] > reqSatFat) {
+      if (recipe.tags.indexOf('High-fat (bad)') === -1) {
+        recipe.tags.push('High-fat (bad)');
+      }
+      if (recipe.tags.indexOf('Low-fat (good)') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-fat (good)'), 1);
+      }
+    } else if (recipe.nutrition['Saturated fat'] <= reqSatFat / 2) {
+      if (recipe.tags.indexOf('Low-fat (good)') === -1) {
+        recipe.tags.push('Low-fat (good)');
+      }
+      if (recipe.tags.indexOf('High-fat (bad)') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-fat (bad)'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-fat (bad)') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-fat (bad)'), 1);
+    } else if (recipe.tags.indexOf('Low-fat (good)') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-fat (good)'), 1);
+    }
+
+    if (recipe.nutrition.Sugars > reqSugars) {
+      if (recipe.tags.indexOf('High-sugar') === -1) {
+        recipe.tags.push('High-sugar');
+      }
+      if (recipe.tags.indexOf('Low-sugar') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('Low-sugar'), 1);
+      }
+    } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
+      if (recipe.tags.indexOf('Low-sugar') === -1) {
+        recipe.tags.push('Low-sugar');
+      }
+      if (recipe.tags.indexOf('High-fiber') !== -1) {
+        recipe.tags.splice(recipe.tags.indexOf('High-sugar'), 1);
+      }
+    } else if (recipe.tags.indexOf('High-fiber') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('High-sugar'), 1);
+    } else if (recipe.tags.indexOf('Low-sugar') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Low-sugar'), 1);
+    }
   }
 
   private portionRecipe(recipe: Recipe): void {
@@ -33,49 +153,82 @@ export class RecipeService {
       let nutrients = recipe.nutrition[nutrientCategory];
       if (typeof nutrients === 'number') {
         recipe.nutrition[nutrientCategory] /= +recipe.servings;
-      } else {
+        if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
+          recipe.nutrition[nutrientCategory] -= recipe.nutrition[nutrientCategory] * 0.15
+        }
+      } else if (typeof nutrients === 'object') {
         for (let nutrient in nutrients) {
           recipe.nutrition[nutrientCategory][nutrient] /= +recipe.servings;
+          if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
+            if (recipe.cookMethod === 'Freezing') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.05
+            } else if (nutrientCategory === 'vitamins') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.65
+            } else if (nutrientCategory === 'minerals') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.45
+            } else if (nutrientCategory === 'amino acids') {
+              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.15
+            }
+          }
         }
       }
-      recipe.quantity /= +recipe.servings;
     }
+    recipe.quantity = Math.floor(recipe.quantity/ +recipe.servings);
   }
 
-  private removeHashkeys(recipe: Recipe): void {
-    recipe.ingredients.forEach((ingredient: Ingredient) => {
-      if (ingredient.hasOwnProperty('$key')) {
-        delete ingredient['$key'];
+  public filterIngredients(ingredients: Ingredient[], searchTerm: string = ''): Ingredient[] {
+    return ingredients.filter((ingredient: Ingredient) => ingredient.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+  }
+
+  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
+    return recipes.filter((recipe: Recipe) => {
+      let match: boolean = false,
+        matchedIngredients: number = 0;
+      if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+        match = true;
+        if (!!ingredients && !!ingredients.length) {
+          ingredients.forEach((item: string) => {
+            recipe.ingredients.forEach((ingredient: Ingredient) => {
+              if (ingredient.name === item) {
+                matchedIngredients++;
+              }
+            });
+          });
+          if (matchedIngredients !== ingredients.length) {
+            match = false;
+          }
+        }
       }
-      if (ingredient.hasOwnProperty('$exists')) {
-        delete ingredient['$exists'];
-      }
+      return match;
     });
   }
 
-  public addRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
-    this.userRecipes.push(recipe);
-  }
-
-  public downloadImg(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    return this.recipeImgUrl.child(`${imgName}.jpg`).getDownloadURL().then(
-      (url: string) => url,
-      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
-  }
-
   public setRecipeNutrition(recipe: Recipe): void {
+    let dairyFree: boolean = true,
+      glutenFree: boolean = true,
+      soyFree: boolean = true,
+      vegan: boolean = true
     recipe.nutrition = new Nutrition();
+    recipe.quantity = 0;
     // Set total recipe nutrition and quantity in grams
     recipe.ingredients.forEach(ingredient => {
+      if (ingredient.category === 'Grains') {
+        glutenFree = false;
+      } else if (ingredient.category === 'Meat') {
+        vegan = false;
+      } else if (ingredient.category === 'Dairy') {
+        dairyFree = false;
+      } else if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
+        soyFree = false;
+      }
+      recipe.quantity += ingredient.quantity;
       if (ingredient.hasOwnProperty('chef')) {
         // The ingredient is a recipe
         for (let nutrientCategory in ingredient.nutrition) {
           let nutrients = ingredient.nutrition[nutrientCategory];
           if (typeof nutrients === 'number') {
             recipe.nutrition[nutrientCategory] += nutrients * ingredient.amount;
-          } else {
+          } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
               recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.amount;
             }
@@ -85,105 +238,39 @@ export class RecipeService {
         // The ingredient is a basic food
         for (let nutrientCategory in ingredient) {
           let nutrients = ingredient[nutrientCategory];
-          if (typeof nutrients === 'number') {
+          if (typeof nutrients === 'number' && nutrientCategory !== 'quantity') {
             recipe.nutrition[nutrientCategory] += nutrients * (ingredient.quantity / 100);
-          } else {
+          } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
               recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * (ingredient.quantity / 100);
             }
           }
         }
       }
-
-      recipe.quantity += ingredient.quantity;
     });
+    if (dairyFree) {
+      if (recipe.tags.indexOf('Dairy-free') === -1) {
+        recipe.tags.push('Dairy-free');
+      }
+    }
+    if (glutenFree) {
+      if (recipe.tags.indexOf('Gluten-free') === -1) {
+        recipe.tags.push('Gluten-free');
+      }
+    }
+    if (soyFree) {
+      if (recipe.tags.indexOf('Soy-free') === -1) {
+        recipe.tags.push('Soy-free');
+      }
+    }
+    if (vegan) {
+      if (recipe.tags.indexOf('Vegan') === -1) {
+        recipe.tags.push('Vegan');
+      }
+    }
     this.portionRecipe(recipe);
+    this.checkHealthTags(recipe);
+    console.log(recipe);
   }
 
-  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
-    return recipes.filter((recipe: Recipe) => {
-      let match: boolean = false,
-        matchedIngredients: number = 0;
-        if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
-          match = true;
-          if (!!ingredients && !!ingredients.length) {
-            ingredients.forEach((item: string) => {
-              recipe.ingredients.forEach((ingredient: Ingredient) => {
-                if (ingredient.name === item) {
-                  matchedIngredients++;
-                }
-              });
-            });
-            if (matchedIngredients !== ingredients.length) {
-              match = false;
-            }
-          }
-        }
-      return match;
-    });
-  }
-
-  public getAllRecipes(): Observable<any> {
-    let allRecipes: Recipe[] = [];
-    return new Observable(observer => {
-      this.allUsersRecipes.subscribe(users => users.forEach(userRecipes => {
-        if (!!userRecipes) {
-          for (let recipeKey in userRecipes) {
-            let recipe = userRecipes[recipeKey];
-            if (recipe.hasOwnProperty('ingredients')) {
-              allRecipes.push(recipe);
-            }
-          }
-          observer.next(allRecipes);
-        }
-      }));
-    });
-
-  }
-
-  public getMyRecipes(authId: string): FirebaseListObservable<Recipe[]> {
-    return this.af.database.list(`/recipes/${authId}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
-    return this.af.database.object(`/recipes/${authId}/${key}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public removeRecipe(recipe: Recipe): void {
-    this.userRecipes.remove(recipe['$key']);
-  }
-
-  public uploadImage(img: File): void {
-    this.recipeImgUrl.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
-  }
-/*
-  public updateRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
-    this.userRecipes.update(recipe['$key'], {
-      name: recipe.name,
-      imgUrl: recipe.imgUrl,
-      category: recipe.category,
-      dietaries: recipe.dietaries,
-      chefName: recipe.chefName,
-      chefAvatar: recipe.chefAvatar,
-      ingredients: recipe.ingredients,
-      duration: recipe.duration,
-      difficulty: recipe.difficulty,
-      cookMethod: recipe.cookMethod,
-      cookTemperature: recipe.cookTemperature,
-      nutrition: recipe.nutrition,
-      servings: recipe.servings,
-      steps: recipe.steps,
-      quantity: recipe.quantity
-    });
-  }
-  */
 }

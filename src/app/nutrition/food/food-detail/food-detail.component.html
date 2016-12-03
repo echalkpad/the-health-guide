@@ -1,14 +1,20 @@
 <div layout="column" class="md-content" layout-gt-md="row">
   <div layout="column" flex>
     <md-card>
-      <md-card-title>Basic</md-card-title>
+      <md-card-title>Basic nutrition</md-card-title>
       <md-card-content>
         <md-list>
+          <md-list-item>
+            <h3 md-line>Energy</h3>
+            <span flex></span>
+            <div class="md-caption tc-grey-500"> {{ food.Energy.toFixed() }}kcal </div>
+          </md-list-item>
+          <md-divider md-inset></md-divider>
           <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
             <md-list-item>
               <h3 md-line>{{ item }}</h3>
               <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ food[item] }} </div>
+              <div class="md-caption tc-grey-500"> {{ food[item].toFixed(2) }}g </div>
             </md-list-item>
             <md-divider *ngIf="!last" md-inset></md-divider>
           </template>
@@ -23,7 +29,7 @@
             <md-list-item>
               <h3 md-line>{{ item }}</h3>
               <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ food['amino acids'][item] }} </div>
+              <div class="md-caption tc-grey-500"> {{ food['amino acids'][item].toFixed(2) }}g </div>
             </md-list-item>
             <md-divider *ngIf="!last" md-inset></md-divider>
           </template>
@@ -40,7 +46,7 @@
             <md-list-item>
               <h3 md-line>{{ item }}</h3>
               <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ food['vitamins'][item] }} </div>
+              <div class="md-caption tc-grey-500"> {{ food['vitamins'][item].toFixed(2) }}mg </div>
             </md-list-item>
             <md-divider *ngIf="!last" md-inset></md-divider>
           </template>
@@ -55,7 +61,7 @@
             <md-list-item>
               <h3 md-line>{{ item }}</h3>
               <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ food['minerals'][item] }} </div>
+              <div class="md-caption tc-grey-500"> {{ food['minerals'][item].toFixed(2) }}mg </div>
             </md-list-item>
             <md-divider *ngIf="!last" md-inset></md-divider>
           </template>

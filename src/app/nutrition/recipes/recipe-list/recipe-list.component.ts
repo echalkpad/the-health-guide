@@ -11,6 +11,7 @@ import { DataService } from '../../shared/data.service';
 import { Food } from '../../food/shared/food.model';
 import { FoodService } from '../../food/shared/food.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
+import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
 
 @Component({
@@ -32,6 +33,7 @@ export class RecipeListComponent implements OnInit {
     private dialogService: TdDialogService,
     private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
+    private recipeDataSvc: RecipeDataService,
     private recipeSvc: RecipeService,
     private router: Router,
     private titleSvc: Title
@@ -47,13 +49,22 @@ export class RecipeListComponent implements OnInit {
     this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
+  public deleteRecipe(recipe: Recipe): void {
+    this.recipeDataSvc.removeRecipe(recipe);
+  }
+
+  public editRecipe(recipe: Recipe): void {
+    this.dataSvc.saveRecipe(recipe);
+    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key'], 'edit']);
+  }
+
   public filterRecipes(searchTerm: string): void {
     this.filteredRecipes = [...this.recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
   }
 
   public openDetails(recipe: Recipe): void {
     this.dataSvc.saveRecipe(recipe);
-    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe.$key]);
+    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key']]);
   }
 
   public removeIngredient(ingredient: string): void {
@@ -90,7 +101,7 @@ export class RecipeListComponent implements OnInit {
 
     this.auth = Object.assign({}, this.authSvc.getAuthData());
 
-    this.recipeSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
+    this.recipeDataSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];

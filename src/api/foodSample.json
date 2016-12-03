@@ -1,7 +1,7 @@
 {
         "name": "",
         "category": "",
-        "energy": 0,
+        "Energy": 0,
         "macronutrients": {
             "Water": 0,
             "Protein": 0,
@@ -61,7 +61,6 @@
             "Glycine": 0,
             "Proline": 0,
             "Serine": 0,
-            "Glutamine": 0,
-            "Asparagine": 0
+            "Glutamine": 0
         }
     }

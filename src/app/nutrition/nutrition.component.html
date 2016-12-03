@@ -1,18 +1,18 @@
 <td-layout-nav-list #list toolbarTitle="The Health Guide">
     <md-nav-list list-items>
-        <a md-list-item [routerLink]="['/nutrition']">
+        <a md-list-item [routerLink]="['/nutrition']" (click)="list.toggle()">
             <md-icon md-list-avatar>book</md-icon>
             <h3 md-line>About</h3>
         </a>
-        <a md-list-item [routerLink]="['food']">
+        <a md-list-item [routerLink]="['food']" (click)="list.toggle()">
             <md-icon md-list-avatar>local_grocery_store</md-icon>
             <h3 md-line>Food list</h3>
         </a>
-        <a md-list-item [routerLink]="['nutrients']">
+        <a md-list-item [routerLink]="['nutrients']" (click)="list.toggle()">
             <md-icon md-list-avatar>local_florist</md-icon>
             <h3 md-line>Nutrients</h3>
         </a>
-        <a md-list-item [routerLink]="['recipes']">
+        <a md-list-item [routerLink]="['recipes']" (click)="list.toggle()">
             <md-icon md-list-avatar>cake</md-icon>
             <h3 md-line>Recipes</h3>
         </a>
