@@ -39,7 +39,8 @@
                 <span [hidden]="!durationControl.errors?.required">Required</span>
               </md-hint>
             </md-input>
-            <md-input class="push-xs" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature" required>
+            <md-input class="push-xs" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature"
+              required>
               <span md-prefix><md-icon>whatshot</md-icon></span>
               <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
                 <span [hidden]="!temperatureControl.errors?.required">Required</span>
@@ -96,9 +97,17 @@
               </select>
             </div>
           </div>
-          <td-chips class="push-xs" flex placeholder="Enter tag" [items]="tags" [(ngModel)]="recipe.tags" name="recipe.tags" [readOnly]="false" requireMatch>
+          <md-divider></md-divider>
+          <td-chips flex placeholder="Enter tag" [items]="tags" [(ngModel)]="recipe.tags" name="recipe.tags" [readOnly]="false" requireMatch>
             <span md-prefix><md-icon>local_offer</md-icon></span>
           </td-chips>
+          <md-divider></md-divider>
+          <div class="pad-left-xs pad-right-xs pad-bottom-xs pad-top-md" layout="row" layout-align="start center">
+            <i class="fa fa-2x fa-balance-scale" aria-hidden="true"></i>
+            Quantity per serving
+            <span flex></span>
+            <span class="md-caption tc-grey-500">{{ recipe.quantity }}g</span>
+          </div>
         </form>
       </md-card-content>
       <md-divider></md-divider>
@@ -149,13 +158,6 @@
               </md-list-item>
               <md-divider md-inset></md-divider>
             </template>
-            <md-list-item>
-              <div layout="row" layout-align="start center" style="width: 100%;">
-                Quantity per serving
-                <span flex></span>
-                <span class="md-caption tc-grey-500">{{ recipe.quantity }}g</span>
-              </div>
-            </md-list-item>
           </md-list>
         </md-card-content>
         <md-divider></md-divider>
