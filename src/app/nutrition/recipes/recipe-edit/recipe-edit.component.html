@@ -1,6 +1,6 @@
 <div layout="column" class="md-content recipe">
   <div layout="column" layout-gt-lg="row">
-    <md-card layout-padding flex>
+    <md-card layout-padding flex="40">
       <md-card-title>Cooking time</md-card-title>
       <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
       <img *ngIf="!!recipe.image" md-card-image class="recipe-img" [src]="recipe.image">
@@ -11,7 +11,8 @@
           <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
               Image:
             </span>
-          <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+          <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadImage($event)" accept=".jpg,.jpeg,.png"
+            [disabled]="false">
           </td-file-upload>
         </div>
         <form #recipeForm="ngForm">
@@ -40,7 +41,8 @@
                 <span [hidden]="!durationControl.errors?.required">Required</span>
               </md-hint>
             </md-input>
-            <md-input class="push-left-md push-right-md" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature" required>
+            <md-input class="push-left-md push-right-md" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature"
+              required>
               <span md-prefix><md-icon>whatshot</md-icon></span>
               <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
                 <span [hidden]="!temperatureControl.errors?.required">Required</span>
@@ -68,7 +70,7 @@
               </select>
             </div>
             <div layout="row" layout-align="start center" flex class="push-left-md push-right-md">
-              <label for="recipe.difficulty" layout="row" layout-align="start center">
+              <label for="recipe.cookMethod" layout="row" layout-align="start center">
                 <md-icon>room_service</md-icon>
                 <span layout="row" layout-align="start center" class="tc-grey-500 pad-xs push-right-xs">
                   Cooking method:
@@ -87,7 +89,7 @@
                   Category
                 </span>
               </label>
-              <select [(ngModel)]="recipe.category" name="recipe.category">
+              <select (change)="syncNutrition()" [(ngModel)]="recipe.category" name="recipe.category">
                 <option *ngFor="let category of categories" [value]="category">
                   {{ category }}
                 </option>
@@ -106,7 +108,7 @@
         </button>
       </md-card-actions>
     </md-card>
-    <md-card flex>
+    <md-card flex="60">
       <td-search-box class="push-left push-right" placeholder="Search ingredients" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
       <md-divider></md-divider>
       <div *tdLoading="'ingredients.load'" loadingType="circular">
@@ -145,8 +147,15 @@
                   <span class="md-caption tc-grey-500">{{ ingredient.category }}</span>
                 </div>
               </md-list-item>
-              <md-divider *ngIf="!last" md-inset></md-divider>
+              <md-divider md-inset></md-divider>
             </template>
+            <md-list-item>
+              <div layout="row" layout-align="start center" style="width: 100%;">
+                Quantity per serving
+                <span flex></span>
+                <span class="md-caption tc-grey-500">{{ recipe.quantity }}g</span>
+              </div>
+            </md-list-item>
           </md-list>
         </md-card-content>
         <md-divider></md-divider>

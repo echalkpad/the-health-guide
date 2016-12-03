@@ -107,12 +107,25 @@ export class RecipeEditComponent implements OnInit {
     ];
 
     this.tags = [
+      "Dairy-free",
       "Gluten-free",
+      "High-calorie",
+      "High-carb",
+      "High-fat (bad)",
+      "High-fat (good)",
       "High-fiber",
       "High-protein",
+      "High-sugar",
+      "Low-calorie",
       "Low-carb",
-      "Low-fat",
+      "Low-fat (bad)",
+      "Low-fat (good)",
+      "Lof-fiber",
+      "Low-protein",
+      "Low-sugar",
       "Mediteranean",
+      "Soy-free",
+      "Vegan",
       "Vegetarian"
     ];
   }
@@ -123,6 +136,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public cookRecipe(): void {
+    this.syncNutrition();
     this.recipe.instructions = [...this.instructions];
     if (this.recipe.hasOwnProperty('$key')) {
       this.recipeDataSvc.updateRecipe(this.recipe);

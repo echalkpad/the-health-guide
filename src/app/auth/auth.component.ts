@@ -35,10 +35,15 @@ export class AuthComponent implements OnInit {
   }
 
   public passLogin(): void {
+    this.loadingSvc.register('auth.load');
     this.authSvc.login(this.user).then(success => setTimeout(() => {
+      this.loadingSvc.resolve('auth.load');
       let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
       this.router.navigate([redirect]);
-    }, 1000)).catch(err => this.showError(err));
+    }, 1000)).catch(err => {
+      this.loadingSvc.resolve('auth.load');
+      this.showError(err);
+    });
   }
 
   public register(): void {
@@ -53,10 +58,15 @@ export class AuthComponent implements OnInit {
     if (!this.user.avatar) {
       this.uploadReminder = true;
     } else {
+      this.loadingSvc.register('auth.load');
       this.authSvc.signUp(this.user).then(success => setTimeout(() => {
+        this.loadingSvc.resolve('auth.load');
         let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
         this.router.navigate([redirect]);
-      }, 1000)).catch(err => this.showError(err));
+      }, 1000)).catch(err => {
+        this.loadingSvc.resolve('auth.load');
+        this.showError(err);
+      });
     }
   }
 

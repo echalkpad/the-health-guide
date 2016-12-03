@@ -37,7 +37,7 @@
       <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.category }}</p>
+        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
@@ -66,7 +66,7 @@
       <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.category }}</p>
+        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
@@ -95,7 +95,7 @@
       <img md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.category }}</p>
+        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
