@@ -187,9 +187,7 @@ export class RecipeEditComponent implements OnInit {
       });
     } else {
       this.recipe.ingredients.splice(index, 1);
-      if (this.ingredients.indexOf(ingredient)) {
-        this.ingredients.push(ingredient);
-      }
+      this.ingredients.push(ingredient);
       this.ingredients = [...this.helperSvc.sortByName(this.ingredients)];
       this.filter();
       this.syncNutrition();
@@ -259,6 +257,14 @@ export class RecipeEditComponent implements OnInit {
     this.route.data.subscribe((data: { recipe: Recipe }) => {
       if (!!data) {
         this.recipe = Object.assign({}, data.recipe);
+        this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
+          this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
+            if (ingredient.name === rcpIngredient.name) {
+              this.ingredients.splice(idx, 1);
+              return;
+            }
+          });
+        });
         if (this.recipe.image !== "") {
           this.uploadReminder = false;
         }
