@@ -26,11 +26,14 @@ const nutritionRoutes: Routes = [
         children: [
             {
                 path: 'fitness',
-                component: FitnessComponent,
                 children: [
                     {
                         path: 'meal-nutrition',
                         component: MealNutritionComponent
+                    },
+                    {
+                        path: '',
+                        component: FitnessComponent
                     }
                 ]
             },

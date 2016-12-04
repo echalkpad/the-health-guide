@@ -3,6 +3,14 @@
     <md-icon>today</md-icon>
   </button>
   <p class="md-body-1">{{ currentDate }}</p>
+  <span flex></span>
+  <button md-icon-button [md-menu-trigger-for]="menu">
+    <md-icon>add</md-icon>
+  </button>
+  <md-menu #menu="mdMenu" x-position="before">
+    <button md-menu-item (click)="addMealTime()">Meal time</button>
+    <button md-menu-item>Activity</button>
+  </md-menu>
 </md-toolbar>
 <div layout="column" layout-gt-md="row" class="fitness">
   <div layout="column" *ngIf="mealTracker.mealTimes.length !== 0" flex>
@@ -39,7 +47,7 @@
       <md-divider></md-divider>
       <md-card-actions layout="column" layout-align="center center">
         <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
-        <button flex md-raised-button color="accent">View nutrition</button>
+        <button flex md-raised-button color="accent" [routerLink]="['meal-nutrition']">View nutrition</button>
       </md-card-actions>
     </md-card>
   </div>
@@ -92,8 +100,4 @@
       </md-card-actions>
     </div>
   </md-card>
-
-  <button md-fab class="floating md-whiteframe-z1" (click)="addMealTime()">
-    <md-icon>add</md-icon>
-  </button>
 </div>
