@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from '../auth/auth-guard.service';
 import { CanDeactivateGuard } from '../shared/can-deactivate-guard.service';
+import { FitnessComponent } from './fitness/fitness.component';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
@@ -22,6 +23,10 @@ const nutritionRoutes: Routes = [
         canActivate: [AuthGuard],
         component: NutritionComponent,
         children: [
+            {
+                path: 'fitness',
+                component: FitnessComponent
+            },
             {
                 path: 'food',
                 canActivateChild: [AuthGuard],

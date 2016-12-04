@@ -227,10 +227,10 @@ export class RecipeService {
         for (let nutrientCategory in ingredient.nutrition) {
           let nutrients = ingredient.nutrition[nutrientCategory];
           if (typeof nutrients === 'number') {
-            recipe.nutrition[nutrientCategory] += nutrients * ingredient.amount;
+            recipe.nutrition[nutrientCategory] += nutrients * ingredient.quantity;
           } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
-              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.amount;
+              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.quantity;
             }
           }
         }

@@ -15,8 +15,6 @@ export class AuthService {
   }
 
   public getAvatar(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    console.log(imgName);
     return this.userAvatars.child(`${imgName}`).getDownloadURL();
   }
 

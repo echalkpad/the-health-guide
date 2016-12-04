@@ -1,4 +1,5 @@
 import { DataService } from '../../shared/data.service';
+import { FitnessComponent } from '../../fitness/fitness.component';
 import { Food } from '../../food/shared/food.model';
 import { FoodDetailComponent } from '../../food/food-detail/food-detail.component';
 import { FoodDetailResolve } from '../../food/food-detail/food-detail-resolve.service';
@@ -19,6 +20,7 @@ import { RecipeListComponent } from '../../recipes/recipe-list/recipe-list.compo
 import { RecipeService } from '../../recipes/shared/recipe.service';
 
 export const nutritionDeclarations = [
+    FitnessComponent,
     FoodDetailComponent,
     FoodListComponent,
     NutritionComponent,

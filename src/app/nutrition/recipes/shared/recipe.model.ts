@@ -2,9 +2,7 @@ import { Chef } from './chef.model';
 import { Food } from '../../food/shared/food.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
-export interface Ingredient extends Food, Recipe {
-    amount: number;
-}
+export interface Ingredient extends Food, Recipe { }
 
 export class Recipe {
     constructor (

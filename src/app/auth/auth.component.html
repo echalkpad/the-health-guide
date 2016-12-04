@@ -5,7 +5,7 @@
   <div class="md-content" layout-gt-xs="row" layout-align-gt-xs="center start" layout-padding flex>
 
     <!-- Login form -->
-    <md-card flex-gt-xs="50" *ngIf="!registering">
+    <md-card flex *ngIf="!registering" class="register-card">
       <md-card-title>Login</md-card-title>
       <md-card-subtitle>Sign in via your current application account</md-card-subtitle>
       <md-divider></md-divider>
@@ -43,25 +43,25 @@
     </md-card>
 
     <!-- Registration form -->
-    <md-card flex-gt-xs="50" *ngIf="registering">
+    <md-card flex *ngIf="registering" class="register-card">
       <md-card-title>Create account</md-card-title>
       <md-card-subtitle>Create a new account for the application</md-card-subtitle>
       <md-divider></md-divider>
       <md-card-content>
-        <form #signupForm="ngForm">
-          <div class="push-left-xs pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
-            <md-icon>account_box</md-icon>
-            <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
+        <div class="push-left-xs pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
+          <md-icon *ngIf="!user.avatar">account_box</md-icon>
+          <div *ngIf="!!user.avatar" class="profile">
+            <img [src]="user.avatar" alt="User profile image">
+          </div>
+          <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
               Avatar:
             </span>
-            <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
-            </td-file-upload>
-          </div>
-          <div class="warn" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
-            <md-icon>warning</md-icon>
-            <h3>Don't forget to upload your avatar!</h3>
-          </div>
-          <md-divider></md-divider>
+          <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png"
+            [disabled]="false">
+          </td-file-upload>
+        </div>
+        <md-divider></md-divider>
+        <form #signupForm="ngForm">
           <div layout="row">
             <md-input #usernameInput #usernameControl="ngModel" flex placeholder="Username" type="text" maxlength="30" name="user.name" [(ngModel)]="user.name" required>
               <span md-prefix><md-icon>person</md-icon></span>

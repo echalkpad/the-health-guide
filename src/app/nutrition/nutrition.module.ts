@@ -12,7 +12,7 @@ import { nutritionDeclarations, nutritionImports, nutritionProviders } from './c
   ],
   entryComponents: [...thirdPartyEntries],
   declarations: [
-    ...nutritionDeclarations
+    ...nutritionDeclarations,
   ],
   providers: [
     ...nutritionProviders

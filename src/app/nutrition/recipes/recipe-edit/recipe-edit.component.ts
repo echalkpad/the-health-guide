@@ -233,7 +233,9 @@ export class RecipeEditComponent implements OnInit {
 
   public uploadImage(img: File): void {
     this.recipeDataSvc.uploadImage(img);
-    this.recipeDataSvc.downloadImg(img.name).then((url: string) => this.recipe.image = url).catch((err: Error) => this.showAlert(err));
+    setTimeout(() => this.recipeDataSvc.downloadImg(img.name)
+    .then((url: string) => this.recipe.image = url)
+    .catch((err: Error) => this.showAlert(err)), 1000);
     this.uploadReminder = false;
   }
 

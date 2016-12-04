@@ -25,9 +25,9 @@ export class AuthComponent implements OnInit {
     private router: Router
   ) { }
 
-  private showError(msg: any): void {
+  private showError(msg: string | Error): void {
     this.dialogService.openAlert({
-      message: msg,
+      message: msg.toString(),
       disableClose: false,
       title: 'Login failed',
       closeButton: 'Close'
@@ -71,8 +71,10 @@ export class AuthComponent implements OnInit {
   }
 
   public uploadAvatar(img: File): void {
-    this.user.avatar = img.name;
     this.authSvc.uploadAvatar(img);
+    setTimeout(() => this.authSvc.getAvatar(img.name)
+    .then((url: string) => this.user.avatar = url)
+    .catch((err: Error) => this.showError(err)), 1000);
     this.uploadReminder = false;
   }
 
