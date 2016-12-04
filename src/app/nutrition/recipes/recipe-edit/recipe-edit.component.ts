@@ -1,4 +1,4 @@
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -42,7 +42,6 @@ export class RecipeEditComponent implements OnInit {
   public vitamins: string[] = [];
   constructor(
     private authSvc: AuthService,
-    private detector: ChangeDetectorRef,
     private dialogSvc: TdDialogService,
     private foodSvc: FoodService,
     private helperSvc: HelperService,
