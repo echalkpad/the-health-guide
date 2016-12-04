@@ -7,6 +7,7 @@ import { FitnessComponent } from './fitness/fitness.component';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
+import { MealNutritionComponent } from './fitness/meal-nutrition/meal-nutrition.component';
 import { NutrientDetailComponent } from './nutrients/nutrient-detail/nutrient-detail.component';
 import { NutrientDetailResolve } from './nutrients/nutrient-detail/nutrient-detail-resolve.service';
 import { NutrientListComponent } from './nutrients/nutrient-list/nutrient-list.component';
@@ -25,7 +26,13 @@ const nutritionRoutes: Routes = [
         children: [
             {
                 path: 'fitness',
-                component: FitnessComponent
+                component: FitnessComponent,
+                children: [
+                    {
+                        path: 'meal-nutrition',
+                        component: MealNutritionComponent
+                    }
+                ]
             },
             {
                 path: 'food',
