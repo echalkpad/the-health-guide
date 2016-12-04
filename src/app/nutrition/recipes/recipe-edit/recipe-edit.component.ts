@@ -28,6 +28,7 @@ export class RecipeEditComponent implements OnInit {
   public categories: string[];
   public cookMethods: string[];
   public currentPage: number = 1;
+  public doneEditing: boolean = false;
   public difficulties: string[];
   public filteredIngredients: Ingredient[] = [];
   public filteredTotal: number = 0;
@@ -137,8 +138,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public canDeactivate(): Promise<boolean> | boolean {
-    console.log(this.recipeForm);
-    if (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "") {
+    if (this.doneEditing || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
       return true;
     }
     return new Promise(resolve => {
@@ -153,6 +153,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public cookRecipe(): void {
+    this.doneEditing = true;
     this.syncNutrition();
     this.recipe.instructions = [...this.instructions];
     if (this.recipe.hasOwnProperty('$key')) {
@@ -186,7 +187,9 @@ export class RecipeEditComponent implements OnInit {
       });
     } else {
       this.recipe.ingredients.splice(index, 1);
-      this.ingredients.push(ingredient);
+      if (this.ingredients.indexOf(ingredient)) {
+        this.ingredients.push(ingredient);
+      }
       this.ingredients = [...this.helperSvc.sortByName(this.ingredients)];
       this.filter();
       this.syncNutrition();
@@ -233,8 +236,8 @@ export class RecipeEditComponent implements OnInit {
   public uploadImage(img: File): void {
     this.recipeDataSvc.uploadImage(img);
     setTimeout(() => this.recipeDataSvc.downloadImg(img.name)
-    .then((url: string) => this.recipe.image = url)
-    .catch((err: Error) => this.showAlert(err)), 1000);
+      .then((url: string) => this.recipe.image = url)
+      .catch((err: Error) => this.showAlert(err)), 2000);
     this.uploadReminder = false;
   }
 
