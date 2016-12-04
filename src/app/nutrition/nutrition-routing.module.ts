@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { AuthGuard } from '../auth/auth-guard.service';
+import { CanDeactivateGuard } from '../shared/can-deactivate-guard.service';
 import { FoodDetailComponent } from './food/food-detail/food-detail.component';
 import { FoodDetailResolve } from './food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from './food/food-list/food-list.component';
@@ -71,7 +72,8 @@ const nutritionRoutes: Routes = [
                         component: RecipeEditComponent,
                         resolve: {
                             recipe: RecipeDetailResolve
-                        }
+                        },
+                        canDeactivate: [CanDeactivateGuard]
                     },
                     {
                         path: '',

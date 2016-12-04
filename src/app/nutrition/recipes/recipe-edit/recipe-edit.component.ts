@@ -1,4 +1,5 @@
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
@@ -20,6 +21,7 @@ import { RecipeService } from '../shared/recipe.service';
   styleUrls: ['./recipe-edit.component.scss']
 })
 export class RecipeEditComponent implements OnInit {
+  @ViewChild('recipeForm') recipeForm: FormControl;
   public aminoacids: string[] = [];
   public auth: Auth;
   public basicNutrients: string[] = [];
@@ -135,6 +137,22 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.instructions = [...this.instructions];
   }
 
+  public canDeactivate(): Promise<boolean> | boolean {
+    console.log(this.recipeForm);
+    if (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "") {
+      return true;
+    }
+    return new Promise(resolve => {
+      return this.dialogSvc.openConfirm({
+        message: 'Changes have been made! Are you sure you want to leave?',
+        disableClose: true,
+        title: 'Discard changes',
+        cancelButton: 'Disagree',
+        acceptButton: 'Agree',
+      }).afterClosed().subscribe((agree: boolean) => resolve(agree));
+    });
+  }
+
   public cookRecipe(): void {
     this.syncNutrition();
     this.recipe.instructions = [...this.instructions];
@@ -200,13 +218,22 @@ export class RecipeEditComponent implements OnInit {
     this.recipe.instructions = [...this.instructions];
   }
 
+  private showAlert(msg: string | Error): void {
+    this.dialogSvc.openAlert({
+      message: msg.toString(),
+      disableClose: false,
+      title: 'An error has occured',
+      closeButton: 'Close'
+    });
+  }
+
   public syncNutrition(): void {
     this.recipeSvc.setRecipeNutrition(this.recipe);
   }
 
   public uploadImage(img: File): void {
     this.recipeDataSvc.uploadImage(img);
-    this.recipeDataSvc.downloadImg(img.name).then((url: string) => this.recipe.image = url);
+    this.recipeDataSvc.downloadImg(img.name).then((url: string) => this.recipe.image = url).catch((err: Error) => this.showAlert(err));
     this.uploadReminder = false;
   }
 

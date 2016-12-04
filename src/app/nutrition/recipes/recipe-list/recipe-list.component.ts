@@ -30,7 +30,7 @@ export class RecipeListComponent implements OnInit {
   constructor(
     private authSvc: AuthService,
     private dataSvc: DataService,
-    private dialogService: TdDialogService,
+    private dialogSvc: TdDialogService,
     private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
     private recipeDataSvc: RecipeDataService,
@@ -73,7 +73,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   private showAlert(): void {
-    this.dialogService.openAlert({
+    this.dialogSvc.openAlert({
       message: 'Sorry, there is no data available at the moment! Please try again later!',
       disableClose: false,
       title: 'No data found',
