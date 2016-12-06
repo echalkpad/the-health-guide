@@ -106,8 +106,8 @@ export class RecipeDataService {
     });
   }
 
-  public uploadImage(img: File): void {
-    this.recipeImgUrl.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
+  public uploadImage(img: File): firebase.storage.UploadTask {
+    return this.recipeImgUrl.child(img.name).put(img);
   }
 
 }

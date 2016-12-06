@@ -66,7 +66,7 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
       if (!this.macronutrients.length || !this.micronutrients.length) {
         this.showAlert();
       }
-    }, 2000);
+    }, 5000);
     this.titleSvc.setTitle("Nutrients");
   }
 

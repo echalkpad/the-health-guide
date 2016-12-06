@@ -38,7 +38,7 @@ export class AuthComponent implements OnInit {
     this.loadingSvc.register('auth.load');
     this.authSvc.login(this.user).then(success => setTimeout(() => {
       this.loadingSvc.resolve('auth.load');
-      let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+      let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
       this.router.navigate([redirect]);
     }, 1000)).catch(err => {
       this.loadingSvc.resolve('auth.load');
@@ -61,7 +61,7 @@ export class AuthComponent implements OnInit {
       this.loadingSvc.register('auth.load');
       this.authSvc.signUp(this.user).then(success => setTimeout(() => {
         this.loadingSvc.resolve('auth.load');
-        let redirect = this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+        let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
         this.router.navigate([redirect]);
       }, 1000)).catch(err => {
         this.loadingSvc.resolve('auth.load');
@@ -71,11 +71,12 @@ export class AuthComponent implements OnInit {
   }
 
   public uploadAvatar(img: File): void {
-    this.authSvc.uploadAvatar(img);
-    setTimeout(() => this.authSvc.getAvatar(img.name)
-    .then((url: string) => this.user.avatar = url)
-    .catch((err: Error) => this.showError(err)), 1000);
-    this.uploadReminder = false;
+    this.authSvc.uploadAvatar(img).then((snapshot: firebase.storage.UploadTaskSnapshot) => {
+      this.authSvc.getAvatar(img.name)
+        .then((url: string) => this.user.avatar = url)
+        .catch((err: Error) => this.showError(err));
+      this.uploadReminder = false;
+    });
   }
 
   ngOnInit(): void {

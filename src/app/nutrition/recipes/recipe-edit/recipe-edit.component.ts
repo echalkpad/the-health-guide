@@ -232,16 +232,17 @@ export class RecipeEditComponent implements OnInit {
   }
 
   public uploadImage(img: File): void {
-    this.recipeDataSvc.uploadImage(img);
-    setTimeout(() => this.recipeDataSvc.downloadImg(img.name)
-      .then((url: string) => this.recipe.image = url)
-      .catch((err: Error) => this.showAlert(err)), 2000);
-    this.uploadReminder = false;
+    this.recipeDataSvc.uploadImage(img).then((snapshot: firebase.storage.UploadTaskSnapshot) => {
+      this.recipeDataSvc.downloadImg(img.name)
+        .then((url: string) => this.recipe.image = url)
+        .catch((err: Error) => this.showAlert(err));
+      this.uploadReminder = false;
+    });
   }
 
   ngAfterViewInit(): void {
     this.loadingSvc.register('ingredients.load');
-    setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 4000);
+    setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 5000);
     this.titleSvc.setTitle(this.recipe.name);
   }
 

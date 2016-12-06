@@ -63,8 +63,8 @@ export class AuthService {
     });
   }
 
-  public uploadAvatar(img: File): void {
-    this.userAvatars.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
+  public uploadAvatar(img: File): firebase.storage.UploadTask {
+    return this.userAvatars.child(img.name).put(img);
   }
 
 }
