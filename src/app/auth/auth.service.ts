@@ -1,5 +1,3 @@
-// TODO: add users database in firebase
-
 import { Injectable } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseObjectObservable } from 'angularfire2';
 
@@ -41,8 +39,9 @@ export class AuthService {
   }
 
   public logout(): void {
-    this.af.auth.logout();
+    // FIXME: error on logout for user access
     localStorage.removeItem('auth');
+    this.af.auth.logout();
   }
 
   public signUp(credentials: User): Promise<Object> {
@@ -51,7 +50,7 @@ export class AuthService {
         email: credentials.email,
         password: credentials.password
       }).then(authData => {
-        this.getAvatar(credentials.avatar).then((url: string) => {
+        this.getAvatar('user.png' || credentials.avatar).then((url: string) => {
           credentials.avatar = url;
           this.getUserData(authData.uid).set(credentials);
           localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));

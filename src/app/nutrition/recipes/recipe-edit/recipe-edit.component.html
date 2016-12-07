@@ -106,7 +106,7 @@
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="column" layout-align="center center">
-        <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || uploadReminder || recipe.ingredients.length === 0 || recipe.instructions.length === 0 || recipe.tags.length === 0" (click)="cookRecipe()">
+        <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || recipe.ingredients.length === 0 || recipe.instructions.length === 0 || recipe.tags.length === 0" (click)="cookRecipe()">
           Cook it!
         </button>
       </md-card-actions>

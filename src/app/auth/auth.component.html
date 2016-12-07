@@ -137,7 +137,7 @@
         <button md-raised-button flex color="accent" (click)="signIn()">
           Sign In
         </button>
-        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid || uploadReminder" (click)="signUp()">
+        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid" (click)="signUp()">
           Sign up
         </button>
       </md-card-actions>

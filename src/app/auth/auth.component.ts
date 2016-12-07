@@ -19,14 +19,14 @@ export class AuthComponent implements OnInit {
   public user = new User();
   constructor(
     private authSvc: AuthService,
-    private dialogService: TdDialogService,
+    private dialogSvc: TdDialogService,
     private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   private showError(msg: string | Error): void {
-    this.dialogService.openAlert({
+    this.dialogSvc.openAlert({
       message: msg.toString(),
       disableClose: false,
       title: 'Login failed',
@@ -55,8 +55,26 @@ export class AuthComponent implements OnInit {
   }
 
   public signUp(): void {
-    if (!this.user.avatar) {
-      this.uploadReminder = true;
+    if (this.user.avatar === "") {
+      this.dialogSvc.openConfirm({
+        message: 'Are you sure you want to proceed?',
+        disableClose: true,
+        title: 'No avatar uploaded',
+        cancelButton: 'Disagree',
+        acceptButton: 'Agree',
+      }).afterClosed().subscribe((agree: boolean) => {
+        if (!!agree) {
+          this.loadingSvc.register('auth.load');
+          this.authSvc.signUp(this.user).then(success => setTimeout(() => {
+            this.loadingSvc.resolve('auth.load');
+            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+            this.router.navigate([redirect]);
+          }, 1000)).catch(err => {
+            this.loadingSvc.resolve('auth.load');
+            this.showError(err);
+          });
+        }
+      });
     } else {
       this.loadingSvc.register('auth.load');
       this.authSvc.signUp(this.user).then(success => setTimeout(() => {
@@ -81,7 +99,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.authSvc.getAuthData()) {
-      setTimeout(() => this.router.navigate(['/home']), 1000);
+      setTimeout(() => this.router.navigate(['/home']), 2000);
     }
   }
 
