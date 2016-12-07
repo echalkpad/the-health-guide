@@ -28,7 +28,7 @@
 </md-toolbar>
 <div layout="column" layout-gt-lg="row" *tdLoading="'recipes.load'" loadingType="circular" class="recipe-list">
   <div layout="column" flex>
-    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 1">
+    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 1">
       <md-card-header>
         <img md-card-avatar [src]="recipe.chef.avatar">
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
@@ -57,7 +57,7 @@
     </md-card>
   </div>
   <div layout="column" flex>
-    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 2">
+    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 2">
       <md-card-header>
         <img md-card-avatar [src]="recipe.chef.avatar">
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
@@ -86,7 +86,7 @@
     </md-card>
   </div>
   <div layout="column" flex>
-    <md-card class="recipe" *ngFor="let recipe of filteredRecipes | group : 3 : 3">
+    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 3">
       <md-card-header>
         <img md-card-avatar [src]="recipe.chef.avatar">
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
