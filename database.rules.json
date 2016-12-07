@@ -25,7 +25,7 @@
     },
     "users": {
       "$userId": {
-        ".read": "$userId === auth.uid",
+        ".read": "true",
         ".write": "$userId === auth.uid"
       }
     }

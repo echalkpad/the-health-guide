@@ -41,20 +41,17 @@
     <!-- Registration form -->
     <md-card flex flex-gt-md="50" *ngIf="registering">
       <md-card-title>Create account</md-card-title>
-      <md-card-subtitle>Create a new account for the application</md-card-subtitle>
       <md-divider></md-divider>
       <md-card-content>
-        <div class="push-left-xs pad-xs push-bottom-xs" layout="column" layout-gt-xs="row" layout-align="start center" flex>
-          <md-icon *ngIf="!user.avatar">account_box</md-icon>
-          <div *ngIf="!!user.avatar" class="profile">
-            <img [src]="user.avatar" alt="User profile image">
-          </div>
-          <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
+        <div class="push-left-xs" layout="column" layout-gt-xs="row" layout-align="start center" flex>
+          <md-icon>account_box</md-icon>
+          <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-xs">
               Avatar:
             </span>
           <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
           </td-file-upload>
         </div>
+        <br>
         <md-divider></md-divider>
         <form #signupForm="ngForm" layout="column">
           <md-input class="push-xs" #usernameInput #usernameControl="ngModel" flex placeholder="Username" type="text" maxlength="30" name="user.name" [(ngModel)]="user.name" required>
@@ -98,8 +95,8 @@
               </md-hint>
             </md-input>
           </div>
-          <div layout="column" layout-gt-lg="row" layout-align="center center" flex>
-            <div class="push-xs" layout="row" layout-align="start center" flex>
+          <div class="pull-bottom-xl" layout="column" layout-gt-lg="row" layout-align="center center" flex>
+            <div layout="row" layout-align="start center" flex>
               <i class="fa fa-2x fa-transgender-alt push-left-xs" aria-hidden="true"></i>
               <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-right-xs">
               Gender:
@@ -116,7 +113,7 @@
                   Infancy
                 </div>
               </md-slide-toggle>
-              <md-slide-toggle class="push-xs pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.pregnancy" name="user.pregnancy" (change)="user.lactation = !user.pregnancy">
+              <md-slide-toggle class="pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.pregnancy" name="user.pregnancy" (change)="user.lactation = !user.pregnancy">
                 <div layout="row" layout-align="center center">
                   <md-icon>pregnant_woman</md-icon>
                   <span class="pad-left-xs text-xl">Pregnancy</span>

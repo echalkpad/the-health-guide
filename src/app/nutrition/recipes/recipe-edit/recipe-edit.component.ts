@@ -152,37 +152,25 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public cookRecipe(): void {
-        if (this.recipe.image === "") {
-            this.dialogSvc.openConfirm({
-                message: 'Are you sure you want to proceed?',
-                disableClose: true,
-                title: 'No image uploaded',
-                cancelButton: 'Disagree',
-                acceptButton: 'Agree',
-            }).afterClosed().subscribe((agree: boolean) => {
-                if (!!agree) {
-                    this.doneEditing = true;
-                    this.syncNutrition();
-                    this.recipe.instructions = [...this.instructions];
-                    if (this.recipe.hasOwnProperty('$key')) {
-                        this.recipeDataSvc.updateRecipe(this.recipe);
-                    } else {
-                        this.recipeDataSvc.addRecipe(this.recipe);
-                    }
-                    this.router.navigate(['/nutrition/recipes']);
-                }
-            });
-        } else {
-            this.doneEditing = true;
-            this.syncNutrition();
-            this.recipe.instructions = [...this.instructions];
+        this.loadingSvc.register('cook.load');
+        this.doneEditing = true;
+        this.syncNutrition();
+        this.recipe.instructions = [...this.instructions];
+        this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
+        setTimeout(() => {
             if (this.recipe.hasOwnProperty('$key')) {
                 this.recipeDataSvc.updateRecipe(this.recipe);
             } else {
                 this.recipeDataSvc.addRecipe(this.recipe);
             }
-            this.router.navigate(['/nutrition/recipes']);
-        }
+            this.loadingSvc.resolve('cook.load');
+            this.dialogSvc.openAlert({
+                message: 'Your recipe is done. Getting you back to your recipes',
+                disableClose: false,
+                title: 'Cooking done',
+                closeButton: 'Close'
+            }).afterClosed().subscribe(() => this.router.navigate(['/nutrition/recipes']));
+        }, 2000);
     }
 
     public changeQty(ingredient: Ingredient, notRemove?: boolean): void {
@@ -253,11 +241,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public uploadImage(img: File): void {
-        this.recipeDataSvc.uploadImage(img).then((snapshot: firebase.storage.UploadTaskSnapshot) => {
-            this.recipeDataSvc.downloadImg(img.name)
-                .then((url: string) => this.recipe.image = url)
-                .catch((err: Error) => this.showAlert(err, 'An error has occured'));
-        });
+        this.recipeDataSvc.uploadImage(img).then(() => this.recipe.image = img.name);
     }
 
     ngAfterViewInit(): void {

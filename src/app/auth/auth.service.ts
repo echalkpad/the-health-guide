@@ -30,8 +30,10 @@ export class AuthService {
         email: credentials.email,
         password: credentials.password
       }).then(authData => {
-        this.getUserData(authData.uid).subscribe((data: User) => localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, data.avatar, data.name))));
-        resolve(true);
+        this.getUserData(authData.uid).subscribe((data: User) => {
+          localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, data.avatar, data.name)));
+          resolve(true);
+        });
       }).catch(error => {
         reject(error);
       });
@@ -39,7 +41,6 @@ export class AuthService {
   }
 
   public logout(): void {
-    // FIXME: error on logout for user access
     localStorage.removeItem('auth');
     this.af.auth.logout();
   }
@@ -50,12 +51,15 @@ export class AuthService {
         email: credentials.email,
         password: credentials.password
       }).then(authData => {
-        this.getAvatar('user.png' || credentials.avatar).then((url: string) => {
-          credentials.avatar = url;
-          this.getUserData(authData.uid).set(credentials);
-          localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));
-          resolve(true);
-        }).catch(err => reject(err))
+        if (!!authData) {
+          console.log(credentials.avatar);
+          this.getAvatar(credentials.avatar).then((url: string) => {
+            credentials.avatar = url;
+            this.getUserData(authData.uid).set(credentials);
+            localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));
+            resolve(true);
+          }).catch(err => reject(err));
+        }
       }).catch(error => {
         reject(error);
       });

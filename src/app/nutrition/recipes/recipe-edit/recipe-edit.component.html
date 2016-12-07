@@ -1,9 +1,8 @@
-<div layout="column" class="md-content recipe">
+<div layout="column" class="recipe" *tdLoading="'cook.load'" loadingType="circular">
   <div layout="column" layout-gt-lg="row">
     <md-card flex>
       <md-card-title>Cooking time</md-card-title>
       <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
-      <img *ngIf="!!recipe.image" md-card-image class="recipe-img" [src]="recipe.image">
       <md-divider></md-divider>
       <md-card-content layout-padding>
         <div layout="column" layout-gt-xs="row" layout-align="start center" flex>

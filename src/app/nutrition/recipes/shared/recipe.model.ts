@@ -8,7 +8,7 @@ export class Recipe {
     constructor (
         public chef: Chef = new Chef(),
         public name: string = "",
-        public image: string = "",
+        public image: string = "recipe.jpg",
         public category: string = "",
         public tags: string[] = [],
         public ingredients: Ingredient[] = [],
