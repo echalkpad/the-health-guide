@@ -10,6 +10,8 @@ export class Nutrition {
         public satFat: number = 0,
         public monounsatFat: number = 0,
         public polyunsatFat: number = 0,
+        public omega3Fat: number = 0,
+        public omega6Fat: number = 0,
         public transFat: number = 0,
         public minerals: any = {
             "Calcium": 0,
@@ -70,6 +72,10 @@ export class Nutrition {
         delete this.monounsatFat;
         this["Polyunsaturated fat"] = polyunsatFat;
         delete this.polyunsatFat;
+        this["Omega-3 fat"] = omega3Fat;
+        delete this.omega3Fat;
+        this["Omega-6 fat"] = omega6Fat;
+        delete this.omega6Fat;
         this["Trans fat"] = transFat;
         delete this.transFat;
     }
