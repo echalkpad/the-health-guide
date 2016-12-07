@@ -18,7 +18,7 @@
             </md-hint>
             <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
           </md-input>
-          <md-input class="push-xs" #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
+          <md-input (keyup.enter)="passLogin()" class="push-xs" #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
             <span md-prefix><md-icon>lock</md-icon></span>
             <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
               <span [hidden]="!passControl.errors?.required">Required</span>

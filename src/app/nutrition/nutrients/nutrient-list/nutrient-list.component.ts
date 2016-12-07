@@ -66,7 +66,7 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
       if (!this.macronutrients.length || !this.micronutrients.length) {
         this.showAlert();
       }
-    }, 5000);
+    }, 3000);
     this.titleSvc.setTitle("Nutrients");
   }
 
@@ -75,12 +75,14 @@ export class NutrientListComponent implements AfterViewInit, OnInit {
       if (!!data && !!data.length) {
         this.macronutrients = [...data];
         this.filteredMacronutrients = [...data];
+        this.loadingSvc.resolve('macronutrients.load');
       }
     });
     this.nutrientSvc.getMicronutrients().subscribe((data: Nutrient[]) => {
       if (!!data && !!data.length) {
         this.micronutrients = [...data];
         this.filteredMicronutrients = [...data];
+        this.loadingSvc.resolve('micronutrients.load');
       }
     });
   }

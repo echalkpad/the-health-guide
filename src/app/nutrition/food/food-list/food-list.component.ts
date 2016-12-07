@@ -97,7 +97,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
       if (!this.data.length) {
         this.showAlert();
       }
-    }, 5000);
+    }, 3000);
     this.titleSvc.setTitle("Foods");
   }
 
@@ -106,6 +106,7 @@ export class FoodListComponent implements AfterViewInit, OnInit {
         if (!!data && !!data.length) {
           this.data = [...data];
           this.filter();
+          this.loadingSvc.resolve('food.load');
         }
       }
     );

@@ -78,7 +78,7 @@ export class RecipeListComponent implements OnInit {
       disableClose: false,
       title: 'No data found',
       closeButton: 'Close'
-    });
+    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
   }
 
   ngAfterViewInit(): void {
@@ -88,7 +88,7 @@ export class RecipeListComponent implements OnInit {
       if (!this.recipes) {
         this.showAlert();
       }
-    }, 5000);
+    }, 3000);
     this.titleSvc.setTitle("Recipes");
   }
 

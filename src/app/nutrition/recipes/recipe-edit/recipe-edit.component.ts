@@ -161,18 +161,15 @@ export class RecipeEditComponent implements OnInit {
                 acceptButton: 'Agree',
             }).afterClosed().subscribe((agree: boolean) => {
                 if (!!agree) {
-                    this.recipeDataSvc.downloadImg('recipe.jpg').then((url: string) => {
-                        this.recipe.image = url;
-                        this.doneEditing = true;
-                        this.syncNutrition();
-                        this.recipe.instructions = [...this.instructions];
-                        if (this.recipe.hasOwnProperty('$key')) {
-                            this.recipeDataSvc.updateRecipe(this.recipe);
-                        } else {
-                            this.recipeDataSvc.addRecipe(this.recipe);
-                        }
-                        this.router.navigate(['/nutrition/recipes']);
-                    });
+                    this.doneEditing = true;
+                    this.syncNutrition();
+                    this.recipe.instructions = [...this.instructions];
+                    if (this.recipe.hasOwnProperty('$key')) {
+                        this.recipeDataSvc.updateRecipe(this.recipe);
+                    } else {
+                        this.recipeDataSvc.addRecipe(this.recipe);
+                    }
+                    this.router.navigate(['/nutrition/recipes']);
                 }
             });
         } else {
@@ -265,7 +262,7 @@ export class RecipeEditComponent implements OnInit {
 
     ngAfterViewInit(): void {
         this.loadingSvc.register('ingredients.load');
-        setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 5000);
+        setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 3000);
         this.titleSvc.setTitle(this.recipe.name);
     }
 

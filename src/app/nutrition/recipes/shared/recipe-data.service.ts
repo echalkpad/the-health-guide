@@ -5,6 +5,8 @@ import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObserv
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
+const recipeImgUrl: string  = 'https://firebasestorage.googleapis.com/v0/b/the-health-guide.appspot.com/o/recipes%2Frecipe.jpg?alt=media&token=c645fc32-7273-43f5-a198-33b8a041a719';
+
 @Injectable()
 export class RecipeDataService {
   private allUsersRecipes: FirebaseListObservable<Recipe[]>;
@@ -41,6 +43,7 @@ export class RecipeDataService {
 
   public addRecipe(recipe: Recipe): void {
     this.removeHashkeys(recipe);
+    recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.push(recipe);
   }
 
@@ -88,6 +91,7 @@ export class RecipeDataService {
 
   public updateRecipe(recipe: Recipe): void {
     this.removeHashkeys(recipe);
+    recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.update(recipe['$key'], {
       name: recipe.name,
       image: recipe.image,
