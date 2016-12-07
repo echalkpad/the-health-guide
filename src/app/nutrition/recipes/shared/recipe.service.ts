@@ -173,7 +173,7 @@ export class RecipeService {
         }
       }
     }
-    recipe.quantity = Math.floor(recipe.quantity/ +recipe.servings);
+    recipe.quantity = Math.floor(recipe.quantity / +recipe.servings);
   }
 
   public filterIngredients(ingredients: Ingredient[], searchTerm: string = ''): Ingredient[] {
@@ -218,7 +218,8 @@ export class RecipeService {
         vegan = false;
       } else if (ingredient.category === 'Dairy') {
         dairyFree = false;
-      } else if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
+      }
+      if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
         soyFree = false;
       }
       recipe.quantity += ingredient.quantity;
@@ -227,10 +228,10 @@ export class RecipeService {
         for (let nutrientCategory in ingredient.nutrition) {
           let nutrients = ingredient.nutrition[nutrientCategory];
           if (typeof nutrients === 'number') {
-            recipe.nutrition[nutrientCategory] += nutrients * ingredient.amount;
+            recipe.nutrition[nutrientCategory] += nutrients * ingredient.quantity;
           } else if (typeof nutrients === 'object') {
             for (let nutrient in nutrients) {
-              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.amount;
+              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.quantity;
             }
           }
         }
@@ -252,22 +253,31 @@ export class RecipeService {
       if (recipe.tags.indexOf('Dairy-free') === -1) {
         recipe.tags.push('Dairy-free');
       }
+    } else if (recipe.tags.indexOf('Dairy-free') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Dairy-free'), 1);
     }
     if (glutenFree) {
       if (recipe.tags.indexOf('Gluten-free') === -1) {
         recipe.tags.push('Gluten-free');
       }
+    } else if (recipe.tags.indexOf('Gluten-free') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Gluten-free'), 1);
     }
     if (soyFree) {
       if (recipe.tags.indexOf('Soy-free') === -1) {
         recipe.tags.push('Soy-free');
       }
+    } else if (recipe.tags.indexOf('Soy-free') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Soy-free'), 1);
     }
     if (vegan) {
       if (recipe.tags.indexOf('Vegan') === -1) {
         recipe.tags.push('Vegan');
       }
+    } else if (recipe.tags.indexOf('Vegan') !== -1) {
+      recipe.tags.splice(recipe.tags.indexOf('Vegan'), 1);
     }
+
     this.portionRecipe(recipe);
     this.checkHealthTags(recipe);
     console.log(recipe);

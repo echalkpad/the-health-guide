@@ -10,7 +10,8 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public auth: Auth;
+  private handle: number;
+  public auth: Auth = new Auth("", "", "");
   public routeLinks: Object[];
 
   constructor(private authSvc: AuthService, private router: Router) {
@@ -24,15 +25,23 @@ export class AppComponent implements OnInit {
     ];
   }
 
+  private checkAuth(): void {
+    if (this.authSvc.getAuthData()) {
+      this.auth = Object.assign({}, this.authSvc.getAuthData());
+      clearInterval(this.handle);
+    }
+  }
+
   public logout(): void {
     this.authSvc.logout();
     this.router.navigate(['/']);
   }
 
   ngOnInit(): void {
-    this.auth = Object.assign({}, this.authSvc.getAuthData());
-    if (!this.auth) {
-      this.router.navigate(['/']);
+    if (!this.authSvc.getAuthData()) {
+      this.handle = setInterval(() => this.checkAuth(), 5000);
+    } else {
+      this.auth = Object.assign({}, this.authSvc.getAuthData());
     }
   }
 

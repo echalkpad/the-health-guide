@@ -5,6 +5,8 @@ import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObserv
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
+const recipeImgUrl: string  = 'https://firebasestorage.googleapis.com/v0/b/the-health-guide.appspot.com/o/recipes%2Frecipe.jpg?alt=media&token=c645fc32-7273-43f5-a198-33b8a041a719';
+
 @Injectable()
 export class RecipeDataService {
   private allUsersRecipes: FirebaseListObservable<Recipe[]>;
@@ -41,14 +43,12 @@ export class RecipeDataService {
 
   public addRecipe(recipe: Recipe): void {
     this.removeHashkeys(recipe);
+    recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.push(recipe);
   }
 
   public downloadImg(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    return this.recipeImgUrl.child(`${imgName}`).getDownloadURL().then(
-      (url: string) => url,
-      (err: Error) => this.recipeImgUrl.child("recipe.jpg").getDownloadURL().then((url: string) => url));
+    return this.recipeImgUrl.child(`${imgName}`).getDownloadURL();
   }
 
   public getAllRecipes(): Observable<any> {
@@ -91,6 +91,7 @@ export class RecipeDataService {
 
   public updateRecipe(recipe: Recipe): void {
     this.removeHashkeys(recipe);
+    recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.update(recipe['$key'], {
       name: recipe.name,
       image: recipe.image,
@@ -109,8 +110,8 @@ export class RecipeDataService {
     });
   }
 
-  public uploadImage(img: File): void {
-    this.recipeImgUrl.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
+  public uploadImage(img: File): firebase.storage.UploadTask {
+    return this.recipeImgUrl.child(img.name).put(img);
   }
 
 }

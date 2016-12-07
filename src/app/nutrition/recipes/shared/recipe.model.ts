@@ -2,15 +2,13 @@ import { Chef } from './chef.model';
 import { Food } from '../../food/shared/food.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
-export interface Ingredient extends Food, Recipe {
-    amount: number;
-}
+export interface Ingredient extends Food, Recipe { }
 
 export class Recipe {
     constructor (
         public chef: Chef = new Chef(),
         public name: string = "",
-        public image: string = "",
+        public image: string = "recipe.jpg",
         public category: string = "",
         public tags: string[] = [],
         public ingredients: Ingredient[] = [],

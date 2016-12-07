@@ -1,9 +1,13 @@
 import { DataService } from '../../shared/data.service';
+import { FitnessComponent } from '../../fitness/fitness.component';
+import { FitnessDataService } from '../../fitness/fitness-data.service';
+import { FitnessService } from '../../fitness/fitness.service';
 import { Food } from '../../food/shared/food.model';
 import { FoodDetailComponent } from '../../food/food-detail/food-detail.component';
 import { FoodDetailResolve } from '../../food/food-detail/food-detail-resolve.service';
 import { FoodListComponent } from '../../food/food-list/food-list.component';
 import { FoodService } from '../../food/shared/food.service';
+import { MealNutritionComponent } from '../../fitness/meal-nutrition/meal-nutrition.component';
 import { NutrientDetailComponent } from '../../nutrients/nutrient-detail/nutrient-detail.component';
 import { NutrientDetailResolve } from '../../nutrients/nutrient-detail/nutrient-detail-resolve.service';
 import { NutrientListComponent } from '../../nutrients/nutrient-list/nutrient-list.component';
@@ -19,8 +23,10 @@ import { RecipeListComponent } from '../../recipes/recipe-list/recipe-list.compo
 import { RecipeService } from '../../recipes/shared/recipe.service';
 
 export const nutritionDeclarations = [
+    FitnessComponent,
     FoodDetailComponent,
     FoodListComponent,
+    MealNutritionComponent,
     NutritionComponent,
     NutritionInfoComponent,
     NutrientListComponent,
@@ -34,6 +40,8 @@ export const nutritionImports = [NutritionRoutingModule];
 
 export const nutritionProviders = [
     DataService,
+    FitnessDataService,
+    FitnessService,
     FoodDetailResolve,
     FoodService,
     NutrientDetailResolve,

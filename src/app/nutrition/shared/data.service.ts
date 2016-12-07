@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Food } from '../food/shared/food.model';
+import { MealTime, MealTracker } from '../fitness/meal-tracker.model';
 import { Nutrient } from '../nutrients/shared/nutrient.model';
 import { Recipe } from '../recipes/shared/recipe.model';
 
@@ -14,6 +15,14 @@ export class DataService {
 
   public saveFood(food: Food): void {
     sessionStorage.setItem('food', JSON.stringify(Object.assign({}, food)));
+  }
+
+  public getMeals(): Food {
+    return JSON.parse(sessionStorage.getItem('meals'));
+  }
+
+  public saveMeals(meals: MealTime | MealTracker): void {
+    sessionStorage.setItem('meals', JSON.stringify(Object.assign({}, meals)));
   }
 
   public getNutrient(): Nutrient {

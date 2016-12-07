@@ -1,5 +1,3 @@
-// TODO: add users database in firebase
-
 import { Injectable } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseObjectObservable } from 'angularfire2';
 
@@ -15,8 +13,6 @@ export class AuthService {
   }
 
   public getAvatar(imgName: string): firebase.Promise<any> {
-    let imgUrl: string = "";
-    console.log(imgName);
     return this.userAvatars.child(`${imgName}`).getDownloadURL();
   }
 
@@ -34,8 +30,10 @@ export class AuthService {
         email: credentials.email,
         password: credentials.password
       }).then(authData => {
-        this.getUserData(authData.uid).subscribe((data: User) => localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, data.avatar, data.name))));
-        resolve(true);
+        this.getUserData(authData.uid).subscribe((data: User) => {
+          localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, data.avatar, data.name)));
+          resolve(true);
+        });
       }).catch(error => {
         reject(error);
       });
@@ -43,8 +41,8 @@ export class AuthService {
   }
 
   public logout(): void {
-    this.af.auth.logout();
     localStorage.removeItem('auth');
+    this.af.auth.logout();
   }
 
   public signUp(credentials: User): Promise<Object> {
@@ -53,20 +51,23 @@ export class AuthService {
         email: credentials.email,
         password: credentials.password
       }).then(authData => {
-        this.getAvatar(credentials.avatar).then((url: string) => {
-          credentials.avatar = url;
-          this.getUserData(authData.uid).set(credentials);
-          localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));
-          resolve(true);
-        }).catch(err => reject(err))
+        if (!!authData) {
+          console.log(credentials.avatar);
+          this.getAvatar(credentials.avatar).then((url: string) => {
+            credentials.avatar = url;
+            this.getUserData(authData.uid).set(credentials);
+            localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));
+            resolve(true);
+          }).catch(err => reject(err));
+        }
       }).catch(error => {
         reject(error);
       });
     });
   }
 
-  public uploadAvatar(img: File): void {
-    this.userAvatars.child(img.name).put(img).then(snapshot => console.log('Uploaded successfully'));
+  public uploadAvatar(img: File): firebase.storage.UploadTask {
+    return this.userAvatars.child(img.name).put(img);
   }
 
 }

@@ -2,33 +2,29 @@
   <md-toolbar color="primary" class="md-whiteframe-z1">
     <span>Login</span>
   </md-toolbar>
-  <div class="md-content" layout-gt-xs="row" layout-align-gt-xs="center start" layout-padding flex>
+  <div layout-gt-xs="row" layout-align="center start" layout-padding flex>
 
     <!-- Login form -->
-    <md-card flex-gt-xs="50" *ngIf="!registering">
+    <md-card flex flex-gt-md="50" *ngIf="!registering">
       <md-card-title>Login</md-card-title>
       <md-card-subtitle>Sign in via your current application account</md-card-subtitle>
       <md-divider></md-divider>
       <md-card-content layout-padding>
-        <form #loginForm="ngForm">
-          <div layout="row">
-            <md-input #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="user.email" [(ngModel)]="user.email" required>
-              <span md-prefix><md-icon>contact_mail</md-icon></span>
-              <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
-                <span [hidden]="!emailControl.errors?.required">Required</span>
-              </md-hint>
-              <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
-            </md-input>
-          </div>
-          <div layout="row">
-            <md-input #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
-              <span md-prefix><md-icon>lock</md-icon></span>
-              <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
-                <span [hidden]="!passControl.errors?.required">Required</span>
-              </md-hint>
-              <md-hint align="end">Something hard to guess</md-hint>
-            </md-input>
-          </div>
+        <form #loginForm="ngForm" layout="column">
+          <md-input class="push-xs" #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="user.email" [(ngModel)]="user.email" required>
+            <span md-prefix><md-icon>contact_mail</md-icon></span>
+            <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
+              <span [hidden]="!emailControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
+          </md-input>
+          <md-input (keyup.enter)="passLogin()" class="push-xs" #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
+            <span md-prefix><md-icon>lock</md-icon></span>
+            <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
+              <span [hidden]="!passControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">Something hard to guess</md-hint>
+          </md-input>
         </form>
       </md-card-content>
       <md-divider></md-divider>
@@ -43,113 +39,102 @@
     </md-card>
 
     <!-- Registration form -->
-    <md-card flex-gt-xs="50" *ngIf="registering">
+    <md-card flex flex-gt-md="50" *ngIf="registering">
       <md-card-title>Create account</md-card-title>
-      <md-card-subtitle>Create a new account for the application</md-card-subtitle>
       <md-divider></md-divider>
       <md-card-content>
-        <form #signupForm="ngForm">
-          <div class="push-left-xs pad-xs push-bottom-xs" layout="row" layout-align="start center" flex>
-            <md-icon>account_box</md-icon>
-            <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-left-xs push-right-xs">
+        <div class="push-left-xs" layout="column" layout-gt-xs="row" layout-align="start center" flex>
+          <md-icon>account_box</md-icon>
+          <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-xs">
               Avatar:
             </span>
-            <td-file-upload defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
-            </td-file-upload>
-          </div>
-          <div class="warn" *ngIf="uploadReminder" layout="row" layout-align="start center" flex>
-            <md-icon>warning</md-icon>
-            <h3>Don't forget to upload your avatar!</h3>
-          </div>
-          <md-divider></md-divider>
-          <div layout="row">
-            <md-input #usernameInput #usernameControl="ngModel" flex placeholder="Username" type="text" maxlength="30" name="user.name" [(ngModel)]="user.name" required>
-              <span md-prefix><md-icon>person</md-icon></span>
-              <md-hint align="start" [hidden]="usernameControl.pristine" class="tc-red-600">
-                <span [hidden]="!usernameControl.errors?.required">Required</span>
-              </md-hint>
-              <md-hint align="end">{{usernameInput.characterCount}} / 30</md-hint>
-            </md-input>
-          </div>
-          <div layout="row">
-            <md-input #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="user.email" [(ngModel)]="user.email" required>
-              <span md-prefix><md-icon>contact_mail</md-icon></span>
-              <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
-                <span [hidden]="!emailControl.errors?.required">Required</span>
-              </md-hint>
-              <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
-            </md-input>
-          </div>
-          <div layout="row">
-            <md-input #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
-              <span md-prefix><md-icon>lock</md-icon></span>
-              <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
-                <span [hidden]="!passControl.errors?.required">Required</span>
-              </md-hint>
-              <md-hint align="end">Something hard to guess</md-hint>
-            </md-input>
-          </div>
+          <td-file-upload md-tooltip="Click twice for image upload" tooltip-position="below" defaultColor="accent" activeColor="primary" cancelColor="warn" (upload)="uploadAvatar($event)" accept=".jpg,.jpeg,.png" [disabled]="false">
+          </td-file-upload>
+        </div>
+        <br>
+        <md-divider></md-divider>
+        <form #signupForm="ngForm" layout="column">
+          <md-input class="push-xs" #usernameInput #usernameControl="ngModel" flex placeholder="Username" type="text" maxlength="30" name="user.name" [(ngModel)]="user.name" required>
+            <span md-prefix><md-icon>person</md-icon></span>
+            <md-hint align="start" [hidden]="usernameControl.pristine" class="tc-red-600">
+              <span [hidden]="!usernameControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">{{usernameInput.characterCount}} / 30</md-hint>
+          </md-input>
+          <md-input class="push-xs" #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="user.email" [(ngModel)]="user.email" required>
+            <span md-prefix><md-icon>contact_mail</md-icon></span>
+            <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
+              <span [hidden]="!emailControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
+          </md-input>
+          <md-input class="push-xs" #passControl="ngModel" flex placeholder="Password" type="password" name="user.password" [(ngModel)]="user.password" required>
+            <span md-prefix><md-icon>lock</md-icon></span>
+            <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
+              <span [hidden]="!passControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">Something hard to guess</md-hint>
+          </md-input>
           <div layout="column" layout-gt-xs="row">
-            <md-input flex="33" #ageControl="ngModel" placeholder="Age ({{ infancy ? 'months' : 'years' }})" type="number" name="user.age" min="1" max="150" [(ngModel)]="user.age" required>
+            <md-input flex class="push-xs" #ageControl="ngModel" placeholder="Age ({{ infancy ? 'months' : 'years' }})" type="number" name="user.age" min="1" max="150" [(ngModel)]="user.age" required>
               <span md-prefix><md-icon>date_range</md-icon></span>
               <md-hint align="start" [hidden]="ageControl.pristine" class="tc-red-600">
                 <span [hidden]="!ageControl.errors?.required">Required</span>
               </md-hint>
             </md-input>
-
-            <md-input class="push-left-md push-right-md" flex="33" #heightControl="ngModel" placeholder="Height (cm)" type="number" name="user.height" min="1" max="250" [(ngModel)]="user.height" required>
+            <md-input flex class="push-xs" #heightControl="ngModel" placeholder="Height (cm)" type="number" name="user.height" min="1" max="250" [(ngModel)]="user.height" required>
               <span md-prefix><md-icon>date_range</md-icon></span>
               <md-hint align="start" [hidden]="heightControl.pristine" class="tc-red-600">
                 <span [hidden]="!heightControl.errors?.required">Required</span>
               </md-hint>
             </md-input>
-
-            <md-input flex="33" #weightControl="ngModel" placeholder="Weight (kg)" type="number" name="user.weight" min="1" max="350" [(ngModel)]="user.weight" required>
+            <md-input flex class="push-xs" #weightControl="ngModel" placeholder="Weight (kg)" type="number" name="user.weight" min="1" max="350" [(ngModel)]="user.weight" required>
               <span md-prefix><md-icon>date_range</md-icon></span>
               <md-hint align="start" [hidden]="weightControl.pristine" class="tc-red-600">
                 <span [hidden]="!weightControl.errors?.required">Required</span>
               </md-hint>
             </md-input>
           </div>
-          <div class="pad-xs" layout="row" layout-align="start center" flex>
-            <i class="fa fa-2x fa-transgender-alt push-left-xs" aria-hidden="true"></i>
-            <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-right-xs">
+          <div class="pull-bottom-xl" layout="column" layout-gt-lg="row" layout-align="center center" flex>
+            <div layout="row" layout-align="start center" flex>
+              <i class="fa fa-2x fa-transgender-alt push-left-xs" aria-hidden="true"></i>
+              <span layout="row" layout-align="start center" class="text-lg tc-grey-500 pad-xs push-right-xs">
               Gender:
             </span>
-            <md-radio-group name="user.gender" [(ngModel)]="user.gender" required>
-              <md-radio-button class="text-lg" value="female">Female</md-radio-button>
-              <md-radio-button class="text-lg" value="male">Male</md-radio-button>
-            </md-radio-group>
-          </div>
-
-          <div layout="column" layout-gt-xs="row" flex layout-align="start center">
-            <md-slide-toggle class="pad-xs" [(ngModel)]="user.infancy" name="user.infancy">
-              <div layout="row" layout-align="center center">
-                <md-icon>child_care</md-icon>
-                Infancy
-              </div>
-            </md-slide-toggle>
-            <md-slide-toggle class="pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.pregnancy" name="user.pregnancy" (change)="user.lactation = !user.pregnancy">
-              <div layout="row" layout-align="center center">
-                <md-icon>pregnant_woman</md-icon>
-                <span class="pad-left-xs text-xl">Pregnancy</span>
-              </div>
-            </md-slide-toggle>
-            <md-slide-toggle class="pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.lactation" name="user.lactation" (change)="user.pregnancy = !user.lactation">
-              <div layout="row" layout-align="center center">
-                <md-icon>child_friendly</md-icon>
-                <span class="pad-left-xs text-xl">Lactation</span>
-              </div>
-            </md-slide-toggle>
+              <md-radio-group name="user.gender" [(ngModel)]="user.gender" required>
+                <md-radio-button class="text-lg" value="female">Female</md-radio-button>
+                <md-radio-button class="text-lg" value="male">Male</md-radio-button>
+              </md-radio-group>
+            </div>
+            <div layout="column" layout-gt-xs="row" flex layout-align="start center">
+              <md-slide-toggle class="pad-xs" [(ngModel)]="user.infancy" name="user.infancy">
+                <div layout="row" layout-align="center center">
+                  <md-icon>child_care</md-icon>
+                  Infancy
+                </div>
+              </md-slide-toggle>
+              <md-slide-toggle class="pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.pregnancy" name="user.pregnancy" (change)="user.lactation = !user.pregnancy">
+                <div layout="row" layout-align="center center">
+                  <md-icon>pregnant_woman</md-icon>
+                  <span class="pad-left-xs text-xl">Pregnancy</span>
+                </div>
+              </md-slide-toggle>
+              <md-slide-toggle class="pad-xs" *ngIf="user.gender === 'female'" [(ngModel)]="user.lactation" name="user.lactation" (change)="user.pregnancy = !user.lactation">
+                <div layout="row" layout-align="center center">
+                  <md-icon>child_friendly</md-icon>
+                  <span class="pad-left-xs text-xl">Lactation</span>
+                </div>
+              </md-slide-toggle>
+            </div>
           </div>
         </form>
       </md-card-content>
       <md-divider></md-divider>
-      <md-card-actions layout="column" layout-align="center center">
+      <md-card-actions layout="column" layout-align="center center" flex>
         <button md-raised-button flex color="accent" (click)="signIn()">
           Sign In
         </button>
-        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid || uploadReminder" (click)="signUp()">
+        <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid" (click)="signUp()">
           Sign up
         </button>
       </md-card-actions>

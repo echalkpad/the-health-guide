@@ -30,7 +30,7 @@ export class RecipeListComponent implements OnInit {
   constructor(
     private authSvc: AuthService,
     private dataSvc: DataService,
-    private dialogService: TdDialogService,
+    private dialogSvc: TdDialogService,
     private foodSvc: FoodService,
     private loadingSvc: TdLoadingService,
     private recipeDataSvc: RecipeDataService,
@@ -73,12 +73,12 @@ export class RecipeListComponent implements OnInit {
   }
 
   private showAlert(): void {
-    this.dialogService.openAlert({
+    this.dialogSvc.openAlert({
       message: 'Sorry, there is no data available at the moment! Please try again later!',
       disableClose: false,
       title: 'No data found',
       closeButton: 'Close'
-    });
+    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
   }
 
   ngAfterViewInit(): void {
@@ -105,6 +105,7 @@ export class RecipeListComponent implements OnInit {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];
+        this.loadingSvc.resolve('recipes.load');
       }
     });
   }
