@@ -39,7 +39,7 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if (!this.authSvc.getAuthData()) {
-      this.handle = setInterval(() => this.checkAuth(), 3000);
+      this.handle = setInterval(() => this.checkAuth(), 5000);
     } else {
       this.auth = Object.assign({}, this.authSvc.getAuthData());
     }

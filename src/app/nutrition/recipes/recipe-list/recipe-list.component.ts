@@ -88,7 +88,7 @@ export class RecipeListComponent implements OnInit {
       if (!this.recipes) {
         this.showAlert();
       }
-    }, 3000);
+    }, 5000);
     this.titleSvc.setTitle("Recipes");
   }
 
@@ -105,6 +105,7 @@ export class RecipeListComponent implements OnInit {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];
+        this.loadingSvc.resolve('recipes.load');
       }
     });
   }

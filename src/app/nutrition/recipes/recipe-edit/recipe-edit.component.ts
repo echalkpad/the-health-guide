@@ -246,7 +246,7 @@ export class RecipeEditComponent implements OnInit {
 
     ngAfterViewInit(): void {
         this.loadingSvc.register('ingredients.load');
-        setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 3000);
+        setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 5000);
         this.titleSvc.setTitle(this.recipe.name);
     }
 
@@ -257,6 +257,7 @@ export class RecipeEditComponent implements OnInit {
                 this.ingredients = [...data];
                 this.filteredIngredients = [...data];
                 this.filter();
+                this.loadingSvc.resolve('ingredients.load');
             }
         });
         this.route.data.subscribe((data: { recipe: Recipe }) => {
