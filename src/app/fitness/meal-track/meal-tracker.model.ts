@@ -1,6 +1,6 @@
-import { Food } from '../food/shared/food.model';
-import { Recipe } from '../recipes/shared/recipe.model';
-import { Nutrition } from '../shared/nutrition.model';
+import { Food } from '../../nutrition/food/shared/food.model';
+import { Recipe } from '../../nutrition/recipes/shared/recipe.model';
+import { Nutrition } from '../../nutrition/shared/nutrition.model';
 
 export interface Meal extends Food, Recipe { }
 

@@ -4,15 +4,11 @@
   </button>
   <p class="md-body-1">{{ currentDate }}</p>
   <span flex></span>
-  <button md-icon-button [md-menu-trigger-for]="menu">
+  <button md-icon-button (click)="addMealTime()">
     <md-icon>add</md-icon>
   </button>
-  <md-menu #menu="mdMenu" x-position="before">
-    <button md-menu-item (click)="addMealTime()">Meal time</button>
-    <button md-menu-item>Activity</button>
-  </md-menu>
 </md-toolbar>
-<div layout="column" layout-gt-md="row" class="fitness">
+<div layout="column" layout-gt-md="row">
   <div layout="column" *ngIf="mealTracker.mealTimes.length !== 0" flex>
     <md-card class="meals" flex *ngFor="let mt of mealTracker.mealTimes; let i = index">
       <md-card-title>{{ mt.time }}</md-card-title>
@@ -45,9 +41,8 @@
         </md-list>
       </md-card-content>
       <md-divider></md-divider>
-      <md-card-actions layout="column" layout-align="center center">
+      <md-card-actions layout="column" layout-align="center center" flex>
         <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
-        <button flex md-raised-button color="accent" [routerLink]="['meal-nutrition']">View nutrition</button>
       </md-card-actions>
     </md-card>
   </div>

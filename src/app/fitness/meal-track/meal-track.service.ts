@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Meal } from './meal-tracker.model';
 
 @Injectable()
-export class FitnessService {
+export class MealTrackService {
 
   constructor() { }
 

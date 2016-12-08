@@ -6,21 +6,18 @@ import { IPageChangeEvent } from '@covalent/paging';
 
 import { Auth } from '../../auth/auth.model';
 import { AuthService } from '../../auth/auth.service';
-import { FitnessDataService } from './fitness-data.service';
-import { FitnessService } from './fitness.service';
-import { Food } from '../food/shared/food.model';
-import { FoodService } from '../food/shared/food.service';
+import { FoodService } from '../../nutrition/food/shared/food.service';
 import { HelperService } from '../../shared/helper.service';
 import { Meal, MealTime, MealTracker } from './meal-tracker.model';
-import { Recipe } from '../recipes/shared/recipe.model';
-import { RecipeDataService } from '../recipes/shared/recipe-data.service';
+import { MealTrackService } from './meal-track.service';
+import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.service';
 
 @Component({
-  selector: 'app-fitness',
-  templateUrl: './fitness.component.html',
-  styleUrls: ['./fitness.component.scss']
+  selector: 'app-meal-track',
+  templateUrl: './meal-track.component.html',
+  styleUrls: ['./meal-track.component.scss']
 })
-export class FitnessComponent implements AfterViewInit, OnInit {
+export class MealTrackComponent implements OnInit {
   public auth: Auth;
   public currentDate: string = "";
   public currentPage: number = 1
@@ -35,12 +32,11 @@ export class FitnessComponent implements AfterViewInit, OnInit {
   constructor(
     private authSvc: AuthService,
     private dialogSvc: TdDialogService,
-    private fitDataSvc: FitnessDataService,
-    private fitSvc: FitnessService,
     private foodSvc: FoodService,
     private helperSvc: HelperService,
     private loadingSvc: TdLoadingService,
-    public recipeDataSvc: RecipeDataService,
+    private recipeDataSvc: RecipeDataService,
+    private mtSvc: MealTrackService,
     private titleSvc: Title
   ) {
     let myDate = new Date(),
@@ -112,7 +108,7 @@ export class FitnessComponent implements AfterViewInit, OnInit {
 
   private filter(searchTerm: string = ''): void {
     let newData: any[] = this.meals;
-    newData = this.fitSvc.filterMeals(newData, searchTerm);
+    newData = this.mtSvc.filterMeals(newData, searchTerm);
     this.filteredTotal = newData.length;
     newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
     this.filteredMeals = newData;
