@@ -27,8 +27,37 @@
   </md-menu>
 </md-toolbar>
 <div layout="column" layout-gt-lg="row" *tdLoading="'recipes.load'" loadingType="circular" class="recipe-list">
-  <div layout="column" flex>
-    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 1">
+  <div class="recipe" layout="column" flex>
+    <md-card layout-padding *ngFor="let recipe of filteredRecipes | group : 3 : 1">
+      <md-card-header>
+        <img md-card-avatar [src]="recipe.chef.avatar">
+        <md-card-title>{{ recipe.chef.name }}</md-card-title>
+        <md-card-subtitle>Header subtitle</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image class="recipe-img" [src]="recipe.image">
+      <md-card-content layout-padding>
+        <h3 class="md-headline">{{ recipe.name }}</h3>
+        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions layout="row" layout-align="center center">
+        <button flex md-button color="accent" (click)="openDetails(recipe)">
+          <md-icon>open_in_new</md-icon>
+          View more
+        </button>
+        <button flex md-button color="accent" (click)="editRecipe(recipe)">
+          <md-icon>open_in_new</md-icon>
+          Edit
+        </button>
+        <button flex md-button color="warn" (click)="deleteRecipe(recipe)">
+          <md-icon>delete</md-icon>
+          Remove
+        </button>
+      </md-card-actions>
+    </md-card>
+  </div>
+  <div class="recipe" layout="column" flex>
+    <md-card layout-padding *ngFor="let recipe of filteredRecipes | group : 3 : 2">
       <md-card-header>
         <img md-card-avatar [src]="recipe.chef.avatar">
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
@@ -56,37 +85,8 @@
       </md-card-actions>
     </md-card>
   </div>
-  <div layout="column" flex>
-    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 2">
-      <md-card-header>
-        <img md-card-avatar [src]="recipe.chef.avatar">
-        <md-card-title>{{ recipe.chef.name }}</md-card-title>
-        <md-card-subtitle>Header subtitle</md-card-subtitle>
-      </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipe.image">
-      <md-card-content>
-        <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
-      </md-card-content>
-      <md-divider></md-divider>
-      <md-card-actions layout="row" layout-align="center center">
-        <button flex md-button color="accent" (click)="openDetails(recipe)">
-          <md-icon>open_in_new</md-icon>
-          View more
-        </button>
-        <button flex md-button color="accent" (click)="editRecipe(recipe)">
-          <md-icon>open_in_new</md-icon>
-          Edit
-        </button>
-        <button flex md-button color="warn" (click)="deleteRecipe(recipe)">
-          <md-icon>delete</md-icon>
-          Remove
-        </button>
-      </md-card-actions>
-    </md-card>
-  </div>
-  <div layout="column" flex>
-    <md-card *ngFor="let recipe of filteredRecipes | group : 3 : 3">
+  <div class="recipe" layout="column" flex>
+    <md-card layout-padding *ngFor="let recipe of filteredRecipes | group : 3 : 3">
       <md-card-header>
         <img md-card-avatar [src]="recipe.chef.avatar">
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
