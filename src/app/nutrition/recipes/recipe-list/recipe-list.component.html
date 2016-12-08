@@ -34,10 +34,10 @@
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipe.image">
+      <img layout-padding layout="column" layout-align="center center" md-card-image class="recipe-img" [src]="recipe.image">
       <md-card-content layout-padding>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
+        <p class="md-body-1">{{ recipe.description }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
@@ -63,10 +63,10 @@
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipe.image">
-      <md-card-content>
+      <img layout-padding layout="column" layout-align="center center" md-card-image class="recipe-img" [src]="recipe.image">
+      <md-card-content layout-padding>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
+        <p class="md-body-1">{{ recipe.description }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
@@ -92,10 +92,10 @@
         <md-card-title>{{ recipe.chef.name }}</md-card-title>
         <md-card-subtitle>Header subtitle</md-card-subtitle>
       </md-card-header>
-      <img md-card-image class="recipe-img" [src]="recipe.image">
-      <md-card-content>
+      <img layout-padding layout="column" layout-align="center center" md-card-image class="recipe-img" [src]="recipe.image">
+      <md-card-content layout-padding>
         <h3 class="md-headline">{{ recipe.name }}</h3>
-        <p class="md-body-1">{{ recipe.description | truncate: 50 }}</p>
+        <p class="md-body-1">{{ recipe.description }}</p>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="row" layout-align="center center">
