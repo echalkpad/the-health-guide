@@ -1,0 +1,18 @@
+:host /deep/ {
+.meals {
+     md-divider {
+        display: block;
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+    md-card-actions button {
+        margin: .5em;
+        width: 100%;
+        .fa {
+            position: relative;
+            left: -10px;
+            font-size: 20px;
+        }
+    }
+}
+}

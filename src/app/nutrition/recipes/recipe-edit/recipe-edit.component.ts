@@ -261,30 +261,22 @@ export class RecipeEditComponent implements OnInit {
             }
         });
         this.route.data.subscribe((data: { recipe: Recipe }) => {
-            if (!!data) {
-                this.recipe = Object.assign({}, data.recipe);
-                this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
-                    this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
-                        if (ingredient.name === rcpIngredient.name) {
-                            this.ingredients.splice(idx, 1);
-                            return;
-                        }
-                    });
+            this.recipe = Object.assign({}, data.recipe);
+            this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
+                this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
+                    if (ingredient.name === rcpIngredient.name) {
+                        this.ingredients.splice(idx, 1);
+                        return;
+                    }
                 });
+            });
 
-                this.instructions = [...this.recipe.instructions];
-                this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
-                console.log(this.recipe);
-                for (let prop in this.recipe.nutrition['amino acids']) {
-                    this.aminoacids.push(prop);
-                }
-                for (let prop in this.recipe.nutrition['vitamins']) {
-                    this.vitamins.push(prop);
-                }
-                for (let prop in this.recipe.nutrition['minerals']) {
-                    this.minerals.push(prop);
-                }
-            }
+            this.instructions = [...this.recipe.instructions];
+            this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
+            console.log(this.recipe);
+            this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
+            this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
+            this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         });
     }
 

@@ -9,8 +9,8 @@
   </button>
 </md-toolbar>
 <div layout="column" layout-gt-md="row">
-  <div layout="column" *ngIf="mealTracker.mealTimes.length !== 0" flex>
-    <md-card class="meals" flex *ngFor="let mt of mealTracker.mealTimes; let i = index">
+  <div layout="column" *ngIf="mealTrack.mealTimes.length !== 0" flex>
+    <md-card class="meals" flex *ngFor="let mt of mealTrack.mealTimes; let i = index">
       <md-card-title>{{ mt.time }}</md-card-title>
       <md-divider></md-divider>
       <md-card-content>

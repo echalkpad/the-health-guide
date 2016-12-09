@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
@@ -6,6 +7,7 @@ import { IPageChangeEvent } from '@covalent/paging';
 
 import { Auth } from '../../auth/auth.model';
 import { AuthService } from '../../auth/auth.service';
+import { DataService } from '../shared/data.service';
 import { FoodService } from '../../nutrition/food/shared/food.service';
 import { HelperService } from '../../shared/helper.service';
 import { Meal, MealTime, MealTracker } from './meal-tracker.model';
@@ -24,28 +26,24 @@ export class MealTrackComponent implements OnInit {
   public filteredMeals: Meal[] = [];
   public filteredTotal: number = 0;
   public meals: Meal[] = [];
-  public mealTracker: MealTracker = new MealTracker();
+  public mealTrack: MealTracker = new MealTracker();
   public pageSize: number = 10;
   public selectedAvailableMeals: Meal[] = [];
   public selectedAddedMeals: any[] = [];
   public startPage: number = 1;
   constructor(
     private authSvc: AuthService,
+    private dataSvc: DataService,
     private dialogSvc: TdDialogService,
     private foodSvc: FoodService,
     private helperSvc: HelperService,
     private loadingSvc: TdLoadingService,
     private recipeDataSvc: RecipeDataService,
     private mtSvc: MealTrackService,
+    private route: ActivatedRoute,
+    private router: Router,
     private titleSvc: Title
-  ) {
-    let myDate = new Date(),
-      currentDay = myDate.getDate(),
-      currentMonth = myDate.getMonth() + 1,
-      currentYear = myDate.getFullYear();
-    this.currentDate = ((currentDay < 10) ? '0' + currentDay : currentDay) + '/' +
-      ((currentMonth < 10) ? '0' + currentMonth : currentMonth) + '/' + currentYear;
-  }
+  ) { }
 
   public addMealTime(): void {
     let date: Date = new Date();
@@ -56,13 +54,13 @@ export class MealTrackComponent implements OnInit {
       title: 'Enter a time',
     }).afterClosed().subscribe((value: string) => {
       if (value) {
-        this.mealTracker.mealTimes.push(new MealTime(value));
+        this.mealTrack.mealTimes.push(new MealTime(value));
       }
     });
   }
 
   public addSelectedMeals(mtIndex: number): void {
-    this.mealTracker.mealTimes[mtIndex].meals = [...this.selectedAvailableMeals];
+    this.mealTrack.mealTimes[mtIndex].meals = [...this.selectedAvailableMeals];
   }
 
   public changeDate(): void {
@@ -142,6 +140,7 @@ export class MealTrackComponent implements OnInit {
 
   ngOnInit(): void {
     this.auth = Object.assign({}, this.authSvc.getAuthData());
+    this.currentDate = this.dataSvc.getCurrentDate();
     this.foodSvc.getFoods().subscribe((data: Meal[]) => {
       if (!!data && !!data.length) {
         this.meals = [...this.meals, ...data];
@@ -158,6 +157,7 @@ export class MealTrackComponent implements OnInit {
       }
     });
 
+    this.route.data.subscribe((data: { mealTrack: MealTracker }) => this.mealTrack = Object.assign({}, data.mealTrack));
   }
 
 }
