@@ -8,13 +8,94 @@
     <md-icon>add</md-icon>
   </button>
 </md-toolbar>
-<div layout="column" layout-gt-md="row">
-  <div layout="column" *ngIf="mealTrack.mealTimes.length !== 0" flex>
-    <md-card class="meals" flex *ngFor="let mt of mealTrack.mealTimes; let i = index">
-      <md-card-title>{{ mt.time }}</md-card-title>
-      <md-divider></md-divider>
-      <md-card-content>
-        <md-list>
+<md-card>
+  <td-search-box class="push-left push-right" placeholder="Search meals" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
+  <md-divider></md-divider>
+  <div *tdLoading="'meals.load'" loadingType="circular">
+    <md-card-content>
+      <md-list>
+        <div class="md-padding" *ngIf="!filteredMeals || filteredMeals.length === 0" layout="row" layout-align="center center">
+          <h3>No meals to display.</h3>
+        </div>
+        <template ngFor let-meal [ngForOf]="selectedAvailableMeals">
+          <md-list-item>
+            <div layout="row" layout-align="start center" style="width: 100%;">
+              <md-checkbox (click)="changeQty(meal, false)" flex [checked]="selectedAvailableMeals.indexOf(meal) > -1">
+                {{ meal.name }}
+              </md-checkbox>
+              <span flex class="md-caption tc-grey-500">{{ meal.quantity }}g</span>
+              <span>
+                    <button md-icon-button [md-menu-trigger-for]="menu">
+                      <md-icon>more_vert</md-icon>
+                    </button>
+                  <md-menu x-position="before" #menu="mdMenu">
+                      <button (click)="changeQty(meal, true)" md-menu-item>Edit</button>
+                      <button (click)="removeMeal(meal)" md-menu-item>Delete</button>   
+                  </md-menu>
+              </span>
+            </div>
+          </md-list-item>
+          <md-divider *ngIf="!last" md-inset></md-divider>
+        </template>
+        <template ngFor let-meal [ngForOf]="filteredMeals">
+          <md-list-item>
+            <div layout="row" layout-align="start center" style="width: 100%;">
+              <md-checkbox (click)="changeQty(meal)" flex>
+                {{ meal.name }}
+              </md-checkbox>
+              <span flex></span>
+              <span class="md-caption tc-grey-500">{{ meal.category }}</span>
+            </div>
+          </md-list-item>
+          <md-divider md-inset></md-divider>
+        </template>
+      </md-list>
+    </md-card-content>
+    <md-divider></md-divider>
+    <md-card-actions>
+      <td-paging-bar [firstLast]="true" [pageSize]="pageSize" [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
+    </md-card-actions>
+  </div>
+</md-card>
+
+<md-card class="meals" *ngFor="let mt of mealTrack.mealTimes; let i = index">
+  <md-card-title>{{ mt.time }}</md-card-title>
+  <md-divider></md-divider>
+  <md-card-content>
+    <table td-data-table>
+      <th td-data-table-column>
+        <md-icon>comment</md-icon>
+        <span>Comments</span>
+      </th>
+      <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
+        {{column.label}}
+      </th>
+      <tr td-data-table-row *ngFor="let row of mt.meals">
+        <td td-data-table-cell (click)="openPrompt(row, 'comments')">
+          <button md-button [class.md-accent]="!row['comments']">{{row['comments'] || 'Add Comment'}}</button>
+        </td>
+        <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+          {{row[column.name]}}
+        </td>
+      </tr>
+      <tr td-data-table-row>
+        <td td-data-table-cell></td>
+        <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+          {{ column.name === 'name' ? 'Total' : mt.nutrition[column.name] }}
+        </td>
+      </tr>
+    </table>
+  </md-card-content>
+  <md-divider></md-divider>
+  <md-card-actions layout="column" layout-align="center center">
+    <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
+  </md-card-actions>
+</md-card>
+
+<!--
+
+  
+  <md-list>
           <div class="md-padding" *ngIf="!mt.meals || mt.meals.length === 0" layout="row" layout-align="center center">
             <h3>No meals to display.</h3>
           </div>
@@ -39,60 +120,4 @@
             <md-divider *ngIf="!last" md-inset></md-divider>
           </template>
         </md-list>
-      </md-card-content>
-      <md-divider></md-divider>
-      <md-card-actions layout="column" layout-align="center center" flex>
-        <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
-      </md-card-actions>
-    </md-card>
-  </div>
-  <md-card flex>
-    <td-search-box class="push-left push-right" placeholder="Search meals" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
-    <md-divider></md-divider>
-    <div *tdLoading="'meals.load'" loadingType="circular">
-      <md-card-content>
-        <md-list>
-          <div class="md-padding" *ngIf="!filteredMeals || filteredMeals.length === 0" layout="row" layout-align="center center">
-            <h3>No meals to display.</h3>
-          </div>
-          <template ngFor let-meal [ngForOf]="selectedAvailableMeals">
-            <md-list-item>
-              <div layout="row" layout-align="start center" style="width: 100%;">
-                <md-checkbox (click)="changeQty(meal, false)" flex [checked]="selectedAvailableMeals.indexOf(meal) > -1">
-                  {{ meal.name }}
-                </md-checkbox>
-                <span flex class="md-caption tc-grey-500">{{ meal.quantity }}g</span>
-                <span>
-                    <button md-icon-button [md-menu-trigger-for]="menu">
-                      <md-icon>more_vert</md-icon>
-                    </button>
-                  <md-menu x-position="before" #menu="mdMenu">
-                      <button (click)="changeQty(meal, true)" md-menu-item>Edit</button>
-                      <button (click)="removeMeal(meal)" md-menu-item>Delete</button>   
-                  </md-menu>
-              </span>
-              </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-          <template ngFor let-meal [ngForOf]="filteredMeals">
-            <md-list-item>
-              <div layout="row" layout-align="start center" style="width: 100%;">
-                <md-checkbox (click)="changeQty(meal)" flex>
-                  {{ meal.name }}
-                </md-checkbox>
-                <span flex></span>
-                <span class="md-caption tc-grey-500">{{ meal.category }}</span>
-              </div>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
-      <md-divider></md-divider>
-      <md-card-actions>
-        <td-paging-bar [firstLast]="true" [pageSize]="pageSize" [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
-      </md-card-actions>
-    </div>
-  </md-card>
-</div>
+-->

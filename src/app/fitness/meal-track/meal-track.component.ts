@@ -25,6 +25,7 @@ export class MealTrackComponent implements OnInit {
   public currentPage: number = 1
   public filteredMeals: Meal[] = [];
   public filteredTotal: number = 0;
+  public mealData: Object[];
   public meals: Meal[] = [];
   public mealTrack: MealTracker = new MealTracker();
   public pageSize: number = 10;
@@ -43,7 +44,21 @@ export class MealTrackComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private titleSvc: Title
-  ) { }
+  ) {
+
+    this.mealData = [
+      { name: 'name', label: 'Food', numeric: false },
+      { name: 'Energy', label: 'Energy (kcal)', numeric: true },
+      { name: 'Protein', label: 'Protein (g)', numeric: true },
+      { name: 'Carbohydrates', label: 'Carbs (g)', numeric: true },
+      { name: 'Sugars', label: 'Sugars (g)', numeric: true },
+      { name: 'Fiber', label: 'Fiber (g)', numeric: true },
+      { name: 'Fats', label: 'Fat (g)', numeric: true },
+      { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true },
+      { name: 'Monounsaturated fat', label: 'Monounsaturated fat (g)', numeric: true },
+      { name: 'Polyunsaturated fat', label: 'Polyunsaturated fat (g)', numeric: true }
+    ];
+  }
 
   public addMealTime(): void {
     let date: Date = new Date();
