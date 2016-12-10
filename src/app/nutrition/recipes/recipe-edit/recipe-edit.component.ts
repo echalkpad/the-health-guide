@@ -177,7 +177,7 @@ export class RecipeEditComponent implements OnInit {
         let index: number = this.recipe.ingredients.indexOf(ingredient);
         if (notRemove || index === -1) {
             this.dialogSvc.openPrompt({
-                message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('chef') ? 'units' : 'grams'}`,
+                message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
                 disableClose: true,
                 value: "100",
                 title: `Enter ${ingredient.name}'s quantity`,

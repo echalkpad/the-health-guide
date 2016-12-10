@@ -223,7 +223,7 @@ export class RecipeService {
         soyFree = false;
       }
       recipe.quantity += ingredient.quantity;
-      if (ingredient.hasOwnProperty('chef')) {
+      if (ingredient.hasOwnProperty('nutrition')) {
         // The ingredient is a recipe
         for (let nutrientCategory in ingredient.nutrition) {
           let nutrients = ingredient.nutrition[nutrientCategory];

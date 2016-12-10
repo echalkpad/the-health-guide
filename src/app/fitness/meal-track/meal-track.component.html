@@ -35,7 +35,7 @@
                   <md-icon>more_vert</md-icon>
                 </button>
                 <md-menu x-position="before" #menu="mdMenu">
-                  <button (click)="changeQty(meal, selectedAvailableMeals, true, false)" md-menu-item>Edit</button>
+                  <button (click)="changeQty(meal, selectedAvailableMeals, false)" md-menu-item>Edit</button>
                   <button (click)="removeMeal(meal, selectedAvailableMeals)" md-menu-item>Delete</button>   
                 </md-menu>
               </span>
@@ -46,7 +46,7 @@
         <template ngFor let-meal [ngForOf]="filteredMeals">
           <md-list-item>
             <div layout="row" layout-align="start center" style="width: 100%;">
-              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true, true)" flex>
+              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true)" flex>
                 {{ meal.name }}
               </md-checkbox>
               <span flex></span>
@@ -64,7 +64,7 @@
   </div>
 </md-card>
 
-<md-card class="meals" *ngFor="let mt of mealTrack.mealTimes; let i = index">
+<md-card class="meals" *ngFor="let mt of mealTrack.mealTimes">
   <md-card-title>{{ mt.time }}</md-card-title>
   <md-divider></md-divider>
   <md-card-content>
@@ -81,12 +81,12 @@
               <md-icon>more_vert</md-icon>
           </button>
           <md-menu x-position="after" #menu="mdMenu">
-            <button (click)="changeQty(meal, mt.meals, false, false)" md-menu-item>Edit</button>
+            <button (click)="changeQty(meal, mt.meals, false, mt)" md-menu-item>Edit</button>
             <button (click)="removeMeal(meal, mt.meals)" md-menu-item>Delete</button>
           </md-menu>
         </td>
         <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-          {{meal.hasOwnProperty(column.name) ? meal[column.name] : meal.nutrition[column.name].toFixed()}}
+          {{ changeMealData(meal, column.name) }}
         </td>
       </tr>
       <tr td-data-table-row>
@@ -99,6 +99,6 @@
   </md-card-content>
   <md-divider></md-divider>
   <md-card-actions layout="column" layout-align="center center">
-    <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
+    <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
   </md-card-actions>
 </md-card>

@@ -61,18 +61,27 @@ export class MealTrackComponent implements OnInit {
     ];
   }
 
-  private toggleMeal(meal: Meal, meals: Meal[], isAvailable: boolean): void {
+  private showAlert(msg: string | Error): void {
+    this.dialogSvc.openAlert({
+      message: msg.toString(),
+      disableClose: false,
+      title: 'An error has occured',
+      closeButton: 'Close'
+    });
+  }
+
+  private toggleMeal(meal: Meal, meals: Meal[], notMealTime: boolean): void {
     let idx: number = meals.indexOf(meal);
     if (idx === -1) {
       meals.push(meal);
-      if (isAvailable) {
+      if (notMealTime) {
         this.meals.splice(this.meals.indexOf(meal), 1);
         this.meals = [...this.helperSvc.sortByName(this.meals)];
         this.filter();
       }
     } else {
       meals.splice(idx, 1);
-      if (isAvailable) {
+      if (notMealTime) {
         this.meals.push(meal);
         this.meals = [...this.helperSvc.sortByName(this.meals)];
         this.filter();
@@ -94,9 +103,9 @@ export class MealTrackComponent implements OnInit {
     });
   }
 
-  public addSelectedMeals(mtIndex: number): void {
-    console.log(this.selectedAvailableMeals);
-    this.mealTrack.mealTimes[mtIndex].meals = [...this.mealTrack.mealTimes[mtIndex].meals, ...this.selectedAvailableMeals];
+  public addSelectedMeals(mt: MealTime): void {
+    mt.meals = [...mt.meals, ...this.selectedAvailableMeals];
+    mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
   }
 
   public changeDate(): void {
@@ -112,24 +121,45 @@ export class MealTrackComponent implements OnInit {
     });
   }
 
-  public changeQty(meal: Meal, meals: Meal[], isAvailable: boolean, toggle: boolean): void {
+  public changeMealData(meal: Meal, prop: string): number | string {
+    let newData: number | string;
+    if (meal.hasOwnProperty(prop)) {
+      if (typeof meal[prop] === 'number' && prop !== 'quantity') {
+        newData = Math.floor(meal[prop] * meal.quantity / 100);
+      } else if (prop === 'quantity' && meal.hasOwnProperty('nutrition')){
+        newData = Math.floor(meal[prop] * meal.amount);
+      } else {
+        newData = meal[prop]
+      }
+    } else if (meal.nutrition.hasOwnProperty(prop)) {
+      newData = Math.floor(meal.nutrition[prop] * meal.amount);
+    }
+
+    return newData;
+  }
+
+  public changeQty(meal: Meal, meals: Meal[], toggle: boolean, mt?: MealTime): void {
     if (toggle) {
-      this.toggleMeal(meal, meals, isAvailable);
+      this.toggleMeal(meal, meals, mt ? false : true);
     }
     let idx: number = meals.indexOf(meal);
     if (idx !== -1) {
       this.dialogSvc.openPrompt({
-        message: `Enter the meal quantity in ${meal.hasOwnProperty('chef') ? 'units' : 'grams'}`,
+        message: `Enter the meal quantity in ${meal.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
         disableClose: true,
-        value: "100",
+        value: `${meal.hasOwnProperty('nutrition') ? '1' : '100'}`,
         title: `Enter ${meal.name}'s quantity`,
       }).afterClosed().subscribe((value: string) => {
         if (value) {
           if (typeof +value === 'number') {
-            if (meal.hasOwnProperty('chef')) {
-              meal.quantity *= +value;
+            if (meal.hasOwnProperty('nutrition')) {
+              meal.amount = +value;
             } else {
+              meal.amount = +value / 100;
               meal.quantity = +value;
+            }
+            if (mt) {
+              mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
             }
           }
         }
@@ -154,15 +184,6 @@ export class MealTrackComponent implements OnInit {
 
   public removeMeal(meal: Meal, meals: Meal[]): void {
     meals.splice(meals.indexOf(meal), 1);
-  }
-
-  private showAlert(msg: string | Error): void {
-    this.dialogSvc.openAlert({
-      message: msg.toString(),
-      disableClose: false,
-      title: 'An error has occured',
-      closeButton: 'Close'
-    });
   }
 
   public syncMealTrack(): void {
