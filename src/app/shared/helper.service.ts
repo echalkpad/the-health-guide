@@ -12,6 +12,17 @@ export class HelperService {
     return data;
   }
 
+  public removeHashkeys(items: any[]): void {
+    items.forEach(item => {
+      if (item.hasOwnProperty('$key')) {
+        delete item['$key'];
+      }
+      if (item.hasOwnProperty('$exists')) {
+        delete item['$exists'];
+      }
+    });
+  }
+
   public sortByName(arr: any[]): any[] {
     return arr.sort((a, b) => {
       let x = a.name.toLowerCase(), y = b.name.toLowerCase();

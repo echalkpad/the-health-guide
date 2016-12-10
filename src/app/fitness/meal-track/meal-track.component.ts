@@ -11,6 +11,7 @@ import { DataService } from '../shared/data.service';
 import { FoodService } from '../../nutrition/food/shared/food.service';
 import { HelperService } from '../../shared/helper.service';
 import { Meal, MealTime, MealTracker } from './meal-tracker.model';
+import { MealTrackDataService } from './meal-track-data.service';
 import { MealTrackService } from './meal-track.service';
 import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.service';
 
@@ -29,8 +30,8 @@ export class MealTrackComponent implements OnInit {
   public meals: Meal[] = [];
   public mealTrack: MealTracker = new MealTracker();
   public pageSize: number = 10;
+  public searchMeals: boolean = true;
   public selectedAvailableMeals: Meal[] = [];
-  public selectedAddedMeals: any[] = [];
   public startPage: number = 1;
   constructor(
     private authSvc: AuthService,
@@ -40,6 +41,7 @@ export class MealTrackComponent implements OnInit {
     private helperSvc: HelperService,
     private loadingSvc: TdLoadingService,
     private recipeDataSvc: RecipeDataService,
+    private mtDataSvc: MealTrackDataService,
     private mtSvc: MealTrackService,
     private route: ActivatedRoute,
     private router: Router,
@@ -48,16 +50,34 @@ export class MealTrackComponent implements OnInit {
 
     this.mealData = [
       { name: 'name', label: 'Food', numeric: false },
+      { name: 'quantity', label: 'Quantity (g)', numeric: true },
       { name: 'Energy', label: 'Energy (kcal)', numeric: true },
       { name: 'Protein', label: 'Protein (g)', numeric: true },
       { name: 'Carbohydrates', label: 'Carbs (g)', numeric: true },
       { name: 'Sugars', label: 'Sugars (g)', numeric: true },
       { name: 'Fiber', label: 'Fiber (g)', numeric: true },
       { name: 'Fats', label: 'Fat (g)', numeric: true },
-      { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true },
-      { name: 'Monounsaturated fat', label: 'Monounsaturated fat (g)', numeric: true },
-      { name: 'Polyunsaturated fat', label: 'Polyunsaturated fat (g)', numeric: true }
+      { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true }
     ];
+  }
+
+  private toggleMeal(meal: Meal, meals: Meal[], isAvailable: boolean): void {
+    let idx: number = meals.indexOf(meal);
+    if (idx === -1) {
+      meals.push(meal);
+      if (isAvailable) {
+        this.meals.splice(this.meals.indexOf(meal), 1);
+        this.meals = [...this.helperSvc.sortByName(this.meals)];
+        this.filter();
+      }
+    } else {
+      meals.splice(idx, 1);
+      if (isAvailable) {
+        this.meals.push(meal);
+        this.meals = [...this.helperSvc.sortByName(this.meals)];
+        this.filter();
+      }
+    }
   }
 
   public addMealTime(): void {
@@ -75,7 +95,8 @@ export class MealTrackComponent implements OnInit {
   }
 
   public addSelectedMeals(mtIndex: number): void {
-    this.mealTrack.mealTimes[mtIndex].meals = [...this.selectedAvailableMeals];
+    console.log(this.selectedAvailableMeals);
+    this.mealTrack.mealTimes[mtIndex].meals = [...this.mealTrack.mealTimes[mtIndex].meals, ...this.selectedAvailableMeals];
   }
 
   public changeDate(): void {
@@ -91,9 +112,12 @@ export class MealTrackComponent implements OnInit {
     });
   }
 
-  public changeQty(meal: Meal, notRemove?: boolean): void {
-    let index: number = this.selectedAvailableMeals.indexOf(meal);
-    if (notRemove || index === -1) {
+  public changeQty(meal: Meal, meals: Meal[], isAvailable: boolean, toggle: boolean): void {
+    if (toggle) {
+      this.toggleMeal(meal, meals, isAvailable);
+    }
+    let idx: number = meals.indexOf(meal);
+    if (idx !== -1) {
       this.dialogSvc.openPrompt({
         message: `Enter the meal quantity in ${meal.hasOwnProperty('chef') ? 'units' : 'grams'}`,
         disableClose: true,
@@ -102,20 +126,14 @@ export class MealTrackComponent implements OnInit {
       }).afterClosed().subscribe((value: string) => {
         if (value) {
           if (typeof +value === 'number') {
-            meal.quantity = +value;
-            if (index === -1) {
-              this.selectedAvailableMeals.push(meal);
-              this.meals.splice(this.meals.indexOf(meal), 1);
+            if (meal.hasOwnProperty('chef')) {
+              meal.quantity *= +value;
+            } else {
+              meal.quantity = +value;
             }
-            this.filter();
           }
         }
       });
-    } else {
-      this.selectedAvailableMeals.splice(index, 1);
-      this.meals.push(meal);
-      this.meals = [...this.helperSvc.sortByName(this.meals)];
-      this.filter();
     }
   }
 
@@ -134,8 +152,8 @@ export class MealTrackComponent implements OnInit {
     this.filter();
   }
 
-  public removeMeal(meal: Meal): void {
-    this.selectedAvailableMeals.splice(this.selectedAvailableMeals.indexOf(meal), 1);
+  public removeMeal(meal: Meal, meals: Meal[]): void {
+    meals.splice(meals.indexOf(meal), 1);
   }
 
   private showAlert(msg: string | Error): void {
@@ -145,6 +163,11 @@ export class MealTrackComponent implements OnInit {
       title: 'An error has occured',
       closeButton: 'Close'
     });
+  }
+
+  public syncMealTrack(): void {
+    this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
+    this.dataSvc.saveMealTrack(this.mealTrack);
   }
 
   ngAfterViewInit(): void {

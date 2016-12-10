@@ -4,11 +4,17 @@
   </button>
   <p class="md-body-1">{{ currentDate }}</p>
   <span flex></span>
-  <button md-icon-button (click)="addMealTime()">
+  <button md-tooltip="Sync meal track" tooltip-position="below" md-icon-button (click)="syncMealTrack()">
+    <md-icon>refresh</md-icon>
+  </button>
+  <md-slide-toggle [(ngModel)]="searchMeals">
+    Search meals
+  </md-slide-toggle>
+  <button md-tooltip="Add meal time" tooltip-position="below" md-icon-button (click)="addMealTime()">
     <md-icon>add</md-icon>
   </button>
 </md-toolbar>
-<md-card>
+<md-card *ngIf="searchMeals">
   <td-search-box class="push-left push-right" placeholder="Search meals" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
   <md-divider></md-divider>
   <div *tdLoading="'meals.load'" loadingType="circular">
@@ -20,18 +26,18 @@
         <template ngFor let-meal [ngForOf]="selectedAvailableMeals">
           <md-list-item>
             <div layout="row" layout-align="start center" style="width: 100%;">
-              <md-checkbox (click)="changeQty(meal, false)" flex [checked]="selectedAvailableMeals.indexOf(meal) > -1">
+              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true, true)" flex [checked]="selectedAvailableMeals.indexOf(meal) > -1">
                 {{ meal.name }}
               </md-checkbox>
               <span flex class="md-caption tc-grey-500">{{ meal.quantity }}g</span>
               <span>
-                    <button md-icon-button [md-menu-trigger-for]="menu">
-                      <md-icon>more_vert</md-icon>
-                    </button>
-                  <md-menu x-position="before" #menu="mdMenu">
-                      <button (click)="changeQty(meal, true)" md-menu-item>Edit</button>
-                      <button (click)="removeMeal(meal)" md-menu-item>Delete</button>   
-                  </md-menu>
+                <button md-icon-button [md-menu-trigger-for]="menu">
+                  <md-icon>more_vert</md-icon>
+                </button>
+                <md-menu x-position="before" #menu="mdMenu">
+                  <button (click)="changeQty(meal, selectedAvailableMeals, true, false)" md-menu-item>Edit</button>
+                  <button (click)="removeMeal(meal, selectedAvailableMeals)" md-menu-item>Delete</button>   
+                </md-menu>
               </span>
             </div>
           </md-list-item>
@@ -40,7 +46,7 @@
         <template ngFor let-meal [ngForOf]="filteredMeals">
           <md-list-item>
             <div layout="row" layout-align="start center" style="width: 100%;">
-              <md-checkbox (click)="changeQty(meal)" flex>
+              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true, true)" flex>
                 {{ meal.name }}
               </md-checkbox>
               <span flex></span>
@@ -64,18 +70,23 @@
   <md-card-content>
     <table td-data-table>
       <th td-data-table-column>
-        <md-icon>comment</md-icon>
-        <span>Comments</span>
+        Edit
       </th>
       <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
         {{column.label}}
       </th>
-      <tr td-data-table-row *ngFor="let row of mt.meals">
-        <td td-data-table-cell (click)="openPrompt(row, 'comments')">
-          <button md-button [class.md-accent]="!row['comments']">{{row['comments'] || 'Add Comment'}}</button>
+      <tr td-data-table-row *ngFor="let meal of mt.meals">
+        <td td-data-table-cell>
+          <button md-icon-button color="accent" [md-menu-trigger-for]="menu">
+              <md-icon>more_vert</md-icon>
+          </button>
+          <md-menu x-position="after" #menu="mdMenu">
+            <button (click)="changeQty(meal, mt.meals, false, false)" md-menu-item>Edit</button>
+            <button (click)="removeMeal(meal, mt.meals)" md-menu-item>Delete</button>
+          </md-menu>
         </td>
         <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-          {{row[column.name]}}
+          {{meal.hasOwnProperty(column.name) ? meal[column.name] : meal.nutrition[column.name].toFixed()}}
         </td>
       </tr>
       <tr td-data-table-row>
@@ -91,33 +102,3 @@
     <button flex md-raised-button color="accent" (click)="addSelectedMeals(i)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
   </md-card-actions>
 </md-card>
-
-<!--
-
-  
-  <md-list>
-          <div class="md-padding" *ngIf="!mt.meals || mt.meals.length === 0" layout="row" layout-align="center center">
-            <h3>No meals to display.</h3>
-          </div>
-          <template ngFor let-meal [ngForOf]="mt.meals">
-            <md-list-item>
-              <div layout="row" layout-align="start center" style="width: 100%;">
-                <md-checkbox flex [checked]="mt.meals.indexOf(meal) > -1">
-                  {{ meal.name }}
-                </md-checkbox>
-                <span flex class="md-caption tc-grey-500">{{ meal.quantity }}g</span>
-                <span>
-                    <button md-icon-button [md-menu-trigger-for]="menu">
-                      <md-icon>more_vert</md-icon>
-                    </button>
-                  <md-menu x-position="before" #menu="mdMenu">
-                      <button (click)="changeQty(meal, true)" md-menu-item>Edit</button>
-                      <button (click)="removeMeal(meal)" md-menu-item>Delete</button>   
-                  </md-menu>
-              </span>
-              </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
--->

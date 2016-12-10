@@ -14,7 +14,7 @@ export class MealTrackResolve implements Resolve<MealTracker> {
 
     public resolve(route: ActivatedRouteSnapshot): Promise<MealTracker> {
         return new Promise((resolve, reject) => {
-            if (!this.dataSvc.getMealTrack().date) {
+            if (!this.dataSvc.getMealTrack()) {
                 let mealTrack: MealTracker,
                     date: string = this.dataSvc.getCurrentDate();
                 this.mtDataSvc.getMealTrack(this.authSvc.getAuthData().id, date).subscribe((mt: MealTracker) => {
