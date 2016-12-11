@@ -1,5 +1,12 @@
 {
   "rules": {
+    "activity-tracks": {
+      ".read": true,
+      "$userId": {
+        ".read": "$userId === auth.uid",
+        ".write": "$userId === auth.uid"
+      }
+    },
     "activities": {
       ".read": true,
       ".write": false

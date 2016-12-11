@@ -154,10 +154,6 @@ export class MealTrackService {
     });
   }
 
-  public filterMeals(ingredients: Meal[], searchTerm: string = ''): Meal[] {
-    return ingredients.filter((ingredient: Meal) => ingredient.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
-  }
-
   public getMealTimeNutrition(mealTime: MealTime): MealTrackNutrition {
     let mtNutrition: MealTrackNutrition = new MealTrackNutrition();
     if (mealTime.meals.length > 0) {

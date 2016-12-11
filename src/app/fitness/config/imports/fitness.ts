@@ -1,4 +1,7 @@
 import { ActivityTrackComponent } from '../../activity-track/activity-track.component';
+import { ActivityTrackDataService } from '../../activity-track/activity-track-data.service';
+import { ActivityTrackResolve } from '../../activity-track/activity-track-resolve.service';
+import { ActivityTrackService } from '../../activity-track/activity-track.service';
 import { DataService } from '../../shared/data.service';
 import { FitnessComponent } from '../../fitness.component';
 import { FitnessRoutingModule } from '../../fitness-routing.module';
@@ -13,6 +16,9 @@ export const fitnessDeclarations = [ActivityTrackComponent, FitnessComponent, Me
 export const fitnessImports = [FitnessRoutingModule];
 
 export const fitnessProviders = [
+    ActivityTrackDataService,
+    ActivityTrackResolve,
+    ActivityTrackService,
     DataService,
     FitnessService,
     MealTrackDataService,

@@ -1,11 +1,20 @@
 import { Injectable } from '@angular/core';
 
+import { ActivityTracker } from '../activity-track/activity-tracker.model';
 import { Fitness } from '../fitness.model';
 import { MealTracker } from '../meal-track/meal-tracker.model';
 
 @Injectable()
 export class DataService {
   constructor() { }
+
+  public getActivityTrack(): ActivityTracker {
+    return JSON.parse(sessionStorage.getItem('activity-track'));
+  }
+
+  public saveActivityTrack(at: ActivityTracker): void {
+    sessionStorage.setItem('activity-track', JSON.stringify(Object.assign({}, at)));
+  }
 
   public getCurrentDate(): string {
     if (!sessionStorage.getItem('date')) {

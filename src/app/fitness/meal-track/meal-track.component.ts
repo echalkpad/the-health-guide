@@ -20,7 +20,7 @@ import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.se
   templateUrl: './meal-track.component.html',
   styleUrls: ['./meal-track.component.scss']
 })
-export class MealTrackComponent implements OnInit {
+export class MealTrackComponent implements AfterViewInit, OnInit {
   public aminoacids: string[] = [];
   public auth: Auth;
   public basicNutrients: string[] = [];
@@ -190,7 +190,7 @@ export class MealTrackComponent implements OnInit {
 
   private filter(searchTerm: string = ''): void {
     let newData: any[] = this.meals;
-    newData = this.mtSvc.filterMeals(newData, searchTerm);
+    newData = this.helperSvc.filterItems(newData, searchTerm);
     this.filteredTotal = newData.length;
     newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
     this.filteredMeals = newData;
