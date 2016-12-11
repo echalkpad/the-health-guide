@@ -3,7 +3,7 @@ import { User } from '../auth/user.model';
 
 export class Fitness extends User {
     constructor(
-        public ageLabel: string = "1-3 years",
+        public ageInterval: string = "1-3 years",
         public bmi: any = {
             data: 0,
             normal: true

@@ -12,6 +12,13 @@
       ".read": true,
       ".write": false
     },
+    "meal-tracks": {
+      ".read": true,
+      "$userId": {
+        ".read": "$userId === auth.uid",
+        ".write": "$userId === auth.uid"
+      }
+    },
     "micronutrients": {
       ".read": true,
       ".write": false
@@ -19,13 +26,14 @@
     "recipes": {
       ".read": true,
       "$userId": {
-        ".read": true,
+        ".read": "$userId === auth.uid",
         ".write": "$userId === auth.uid"
       }
     },
     "users": {
+      ".read": true,
       "$userId": {
-        ".read": "true",
+        ".read": "$userId === auth.uid",
         ".write": "$userId === auth.uid"
       }
     }

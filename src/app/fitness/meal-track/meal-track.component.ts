@@ -10,7 +10,7 @@ import { AuthService } from '../../auth/auth.service';
 import { DataService } from '../shared/data.service';
 import { FoodService } from '../../nutrition/food/shared/food.service';
 import { HelperService } from '../../shared/helper.service';
-import { Meal, MealTime, MealTracker } from './meal-tracker.model';
+import { Meal, MealTime, MealTracker, MealTrackNutrition } from './meal-tracker.model';
 import { MealTrackDataService } from './meal-track-data.service';
 import { MealTrackService } from './meal-track.service';
 import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.service';
@@ -21,7 +21,9 @@ import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.se
   styleUrls: ['./meal-track.component.scss']
 })
 export class MealTrackComponent implements OnInit {
+  public aminoacids: string[] = [];
   public auth: Auth;
+  public basicNutrients: string[] = [];
   public currentDate: string = "";
   public currentPage: number = 1
   public filteredMeals: Meal[] = [];
@@ -29,10 +31,14 @@ export class MealTrackComponent implements OnInit {
   public mealData: Object[];
   public meals: Meal[] = [];
   public mealTrack: MealTracker = new MealTracker();
+  public minerals: string[] = [];
   public pageSize: number = 10;
   public searchMeals: boolean = true;
   public selectedAvailableMeals: Meal[] = [];
   public startPage: number = 1;
+  public showNutrition: boolean = false;
+  public vitamins: string[] = [];
+
   constructor(
     private authSvc: AuthService,
     private dataSvc: DataService,
@@ -47,6 +53,19 @@ export class MealTrackComponent implements OnInit {
     private router: Router,
     private titleSvc: Title
   ) {
+
+    this.basicNutrients = [
+      "Water",
+      "Protein",
+      "Carbohydrates",
+      "Sugars",
+      "Fiber",
+      "Fats",
+      "Saturated fat",
+      "Monounsaturated fat",
+      "Polyunsaturated fat",
+      "Trans fat"
+    ];
 
     this.mealData = [
       { name: 'name', label: 'Food', numeric: false },
@@ -106,6 +125,7 @@ export class MealTrackComponent implements OnInit {
   public addSelectedMeals(mt: MealTime): void {
     mt.meals = [...mt.meals, ...this.selectedAvailableMeals];
     mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
+    this.mtSvc.setRemainingNutrition(this.mealTrack);
   }
 
   public changeDate(): void {
@@ -126,7 +146,7 @@ export class MealTrackComponent implements OnInit {
     if (meal.hasOwnProperty(prop)) {
       if (typeof meal[prop] === 'number' && prop !== 'quantity') {
         newData = Math.floor(meal[prop] * meal.quantity / 100);
-      } else if (prop === 'quantity' && meal.hasOwnProperty('nutrition')){
+      } else if (prop === 'quantity' && meal.hasOwnProperty('nutrition')) {
         newData = Math.floor(meal[prop] * meal.amount);
       } else {
         newData = meal[prop]
@@ -160,6 +180,7 @@ export class MealTrackComponent implements OnInit {
             }
             if (mt) {
               mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
+              this.mtSvc.setRemainingNutrition(this.mealTrack);
             }
           }
         }
@@ -182,8 +203,11 @@ export class MealTrackComponent implements OnInit {
     this.filter();
   }
 
-  public removeMeal(meal: Meal, meals: Meal[]): void {
-    meals.splice(meals.indexOf(meal), 1);
+  public removeMeal(meal: Meal, mt: MealTime): void {
+    mt.meals.splice(mt.meals.indexOf(meal), 1);
+    mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
+    this.mtSvc.setRemainingNutrition(this.mealTrack);
+
   }
 
   public syncMealTrack(): void {
@@ -216,7 +240,12 @@ export class MealTrackComponent implements OnInit {
       }
     });
 
-    this.route.data.subscribe((data: { mealTrack: MealTracker }) => this.mealTrack = Object.assign({}, data.mealTrack));
+    this.route.data.subscribe((data: { mealTrack: MealTracker }) => {
+      this.mealTrack = Object.assign({}, data.mealTrack);
+      this.aminoacids = Object.keys(this.mealTrack.nutrition['amino acids']);
+      this.vitamins = Object.keys(this.mealTrack.nutrition['vitamins']);
+      this.minerals = Object.keys(this.mealTrack.nutrition['minerals']);
+    });
   }
 
 }

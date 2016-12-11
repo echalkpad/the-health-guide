@@ -1,3 +1,16 @@
-<p>
-  activity-track works!
-</p>
+<md-toolbar layout-align="center">
+  <button md-icon-button (click)="changeDate()">
+    <md-icon>today</md-icon>
+  </button>
+  <p class="md-body-1">{{ currentDate }}</p>
+  <span flex></span>
+  <button md-tooltip="Sync meal track" tooltip-position="below" md-icon-button (click)="syncMealTrack()">
+    <md-icon>refresh</md-icon>
+  </button>
+  <md-slide-toggle [(ngModel)]="searchMeals">
+    Search meals
+  </md-slide-toggle>
+  <button md-tooltip="Add meal time" tooltip-position="below" md-icon-button (click)="addMealTime()">
+    <md-icon>add</md-icon>
+  </button>
+</md-toolbar>
