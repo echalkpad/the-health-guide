@@ -14,11 +14,12 @@ export class MealTrackResolve implements Resolve<MealTracker> {
 
     public resolve(route: ActivatedRouteSnapshot): Promise<MealTracker> {
         return new Promise((resolve, reject) => {
-            if (!this.dataSvc.getMealTrack()) {
+            let savedMt: MealTracker | null = this.dataSvc.getMealTrack();
+            if (!savedMt || !savedMt.hasOwnProperty('date')) {
                 let mealTrack: MealTracker,
                     date: string = this.dataSvc.getCurrentDate();
                 this.mtDataSvc.getMealTrack(this.authSvc.getAuthData().id, date).subscribe((mt: MealTracker) => {
-                    if (!!mt && !!mt.date) {
+                    if (!!mt && !!mt.hasOwnProperty('date')) {
                         mealTrack = mt;
                         this.dataSvc.saveMealTrack(mealTrack);
                         resolve(mealTrack);
@@ -31,7 +32,7 @@ export class MealTrackResolve implements Resolve<MealTracker> {
                     }
                 }, 3000);
             } else {
-                resolve(this.dataSvc.getMealTrack());
+                resolve(savedMt);
             }
         });
     }

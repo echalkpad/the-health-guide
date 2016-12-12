@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
 import { HelperService } from '../../shared/helper.service';
-import { Activity, ActivityType, ActivityTime, ActivityTracker } from './activity-tracker.model';
+import { Activity, ActivityTime, ActivityTracker } from './activity-tracker.model';
 
 @Injectable()
 export class ActivityTrackDataService {
-  private activities: FirebaseListObservable<ActivityType[]>;
+  private activities: FirebaseListObservable<Activity[]>;
   private activityTrack: FirebaseObjectObservable<ActivityTracker>;
   constructor(private af: AngularFire, private helperSvc: HelperService) {
     this.activities = af.database.list('/activities', {
@@ -16,7 +16,7 @@ export class ActivityTrackDataService {
     });
   }
 
-  public getActivities(): FirebaseListObservable<ActivityType[]> {
+  public getActivities(): FirebaseListObservable<Activity[]> {
     return this.activities;
   }
 

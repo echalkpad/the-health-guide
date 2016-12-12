@@ -7,170 +7,179 @@
   <button md-tooltip="Sync meal track" tooltip-position="below" md-icon-button (click)="syncMealTrack()">
     <md-icon>refresh</md-icon>
   </button>
-  <md-slide-toggle [(ngModel)]="showNutrition">
-    Show nutrition
-  </md-slide-toggle>
-  <md-slide-toggle [(ngModel)]="searchMeals">
-    Search meals
-  </md-slide-toggle>
   <button md-tooltip="Add meal time" tooltip-position="below" md-icon-button (click)="addMealTime()">
     <md-icon>add</md-icon>
   </button>
 </md-toolbar>
-<md-card *ngIf="searchMeals">
-  <td-search-box class="push-left push-right" placeholder="Search meals" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
-  <md-divider></md-divider>
-  <div *tdLoading="'meals.load'" loadingType="circular">
-    <md-card-content>
-      <md-list>
-        <div class="md-padding" *ngIf="!filteredMeals || filteredMeals.length === 0" layout="row" layout-align="center center">
-          <h3>No meals to display.</h3>
-        </div>
-        <template ngFor let-meal [ngForOf]="selectedAvailableMeals">
+<md-tab-group md-stretch-tabs>
+  <md-tab>
+    <template md-tab-label>Meal times</template>
+    <md-card class="meals" *ngFor="let mt of mealTrack.mealTimes">
+      <md-card-title>{{ mt.time }}</md-card-title>
+      <md-divider></md-divider>
+      <md-card-content>
+        <table td-data-table>
+          <th td-data-table-column>
+            Edit
+          </th>
+          <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
+            {{column.label}}
+          </th>
+          <tr td-data-table-row *ngFor="let meal of mt.meals">
+            <td td-data-table-cell>
+              <button md-icon-button color="accent" [md-menu-trigger-for]="menu">
+              <md-icon>more_vert</md-icon>
+          </button>
+              <md-menu x-position="after" #menu="mdMenu">
+                <button (click)="changeQty(meal, mt)" md-menu-item>Edit</button>
+                <button (click)="removeMeal(meal, mt)" md-menu-item>Delete</button>
+              </md-menu>
+            </td>
+            <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+              {{ changeMealData(meal, column.name) }}
+            </td>
+          </tr>
+          <tr td-data-table-row>
+            <td td-data-table-cell></td>
+            <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+              {{ column.name === 'name' ? 'Total' : mt.nutrition[column.name] }}
+            </td>
+          </tr>
+        </table>
+      </md-card-content>
+      <md-divider></md-divider>
+      <md-card-actions layout="column" layout-align="center center">
+        <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="!selectedMeals.length">Add selected meals</button>
+        <button flex md-raised-button color="warn" (click)="removeMealTime(mt)">Remove activity time</button>
+      </md-card-actions>
+    </md-card>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label>Select meals</template>
+    <md-card *ngIf="selectedMeals.length">
+      <md-card-title>Selected meals</md-card-title>
+      <md-card-content>
+        <template ngFor let-last="last" let-meal [ngForOf]="selectedMeals">
           <md-list-item>
-            <div layout="row" layout-align="start center" style="width: 100%;">
-              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true, true)" flex [checked]="selectedAvailableMeals.indexOf(meal) > -1">
-                {{ meal.name }}
-              </md-checkbox>
-              <span flex class="md-caption tc-grey-500">{{ meal.quantity }}g</span>
-              <span>
-                <button (click)="changeQty(meal, selectedAvailableMeals, false)" md-icon-button color="accent">
-                  <md-icon>create</md-icon>
-                </button>
-              </span>
+            <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+              <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
+                <md-icon>more_vert</md-icon>
+              </button>
+              <md-menu x-position="after" #menu="mdMenu">
+                <button (click)="changeQty(meal)" md-menu-item>Edit</button>
+                <button (click)="toggleSelectedMeal(meal)" md-menu-item>Delete</button>
+              </md-menu>
+              <span flex>{{ meal.name }}</span>
+              <span class="md-caption tc-grey-500">{{ meal.quantity }}q</span>
             </div>
           </md-list-item>
           <md-divider *ngIf="!last" md-inset></md-divider>
         </template>
-        <template ngFor let-meal [ngForOf]="filteredMeals">
-          <md-list-item>
-            <div layout="row" layout-align="start center" style="width: 100%;">
-              <md-checkbox (click)="changeQty(meal, selectedAvailableMeals, true)" flex>
-                {{ meal.name }}
-              </md-checkbox>
-              <span flex></span>
-              <span class="md-caption tc-grey-500">{{ meal.category }}</span>
+      </md-card-content>
+    </md-card>
+    <md-card>
+      <td-search-box class="push-left push-right" placeholder="Search meals" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
+      <md-divider></md-divider>
+      <div *tdLoading="'meals.load'" loadingType="circular">
+        <md-card-content>
+          <md-list>
+            <div class="md-padding" *ngIf="!filteredMeals || !filteredMeals.length" layout="row" layout-align="center center">
+              <h3>No meals to display.</h3>
             </div>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-        </template>
-      </md-list>
-    </md-card-content>
-    <md-divider></md-divider>
-    <md-card-actions>
-      <td-paging-bar [firstLast]="true" [pageSize]="pageSize" [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
-    </md-card-actions>
-  </div>
-</md-card>
-
-<md-card class="meals" *ngFor="let mt of mealTrack.mealTimes">
-  <md-card-title>{{ mt.time }}</md-card-title>
-  <md-divider></md-divider>
-  <md-card-content>
-    <table td-data-table>
-      <th td-data-table-column>
-        Edit
-      </th>
-      <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
-        {{column.label}}
-      </th>
-      <tr td-data-table-row *ngFor="let meal of mt.meals">
-        <td td-data-table-cell>
-          <button md-icon-button color="accent" [md-menu-trigger-for]="menu">
-              <md-icon>more_vert</md-icon>
-          </button>
-          <md-menu x-position="after" #menu="mdMenu">
-            <button (click)="changeQty(meal, mt.meals, false, mt)" md-menu-item>Edit</button>
-            <button (click)="removeMeal(meal, mt)" md-menu-item>Delete</button>
-          </md-menu>
-        </td>
-        <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-          {{ changeMealData(meal, column.name) }}
-        </td>
-      </tr>
-      <tr td-data-table-row>
-        <td td-data-table-cell></td>
-        <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-          {{ column.name === 'name' ? 'Total' : mt.nutrition[column.name] }}
-        </td>
-      </tr>
-    </table>
-  </md-card-content>
-  <md-divider></md-divider>
-  <md-card-actions layout="column" layout-align="center center">
-    <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="selectedAvailableMeals.length === 0">Add selected meals</button>
-  </md-card-actions>
-</md-card>
-
-<div *ngIf="showNutrition" layout="column" class="md-content" layout-gt-md="row">
-  <div layout="column" flex>
-    <md-card>
-      <md-card-title>Basic nutrition</md-card-title>
-      <md-card-content>
-        <md-list>
-          <md-list-item>
-            <h3 md-line>Energy</h3>
-            <span flex></span>
-            <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition.Energy }}% </div>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
-            <md-list-item>
-              <h3 md-line>{{ item }}</h3>
-              <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition[item] }}% </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
+            <template ngFor let-meal let-last="last" [ngForOf]="filteredMeals">
+              <md-list-item>
+                <div layout="row" layout-align="start center" style="width: 100%;">
+                  <md-checkbox #checkBox (click)="toggleSelectedMeal(meal, checkBox)" flex>
+                    {{ meal.name }}
+                  </md-checkbox>
+                  <span flex></span>
+                  <span class="md-caption tc-grey-500">{{ meal.category }}</span>
+                </div>
+              </md-list-item>
+              <md-divider *ngIf="!last" md-inset></md-divider>
+            </template>
+          </md-list>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions>
+          <td-paging-bar [firstLast]="true" [pageSize]="pageSize" [pageSizes]="[5, 10, 15, 20]" [total]="filteredTotal" (change)="page($event)"></td-paging-bar>
+        </md-card-actions>
+      </div>
     </md-card>
-    <md-card>
-      <md-card-title>Amino acids</md-card-title>
-      <md-card-content>
-        <md-list>
-          <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
-            <md-list-item>
-              <h3 md-line>{{ item }}</h3>
-              <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['amino acids'][item] }}% </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
-    </md-card>
-  </div>
-  <div layout="column" flex>
-    <md-card>
-      <md-card-title>Vitamins</md-card-title>
-      <md-card-content>
-        <md-list>
-          <template let-item let-last="last" ngFor [ngForOf]="vitamins">
-            <md-list-item>
-              <h3 md-line>{{ item }}</h3>
-              <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['vitamins'][item] }}% </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
-    </md-card>
-    <md-card>
-      <md-card-title>Minerals</md-card-title>
-      <md-card-content>
-        <md-list>
-          <template let-item let-last="last" ngFor [ngForOf]="minerals">
-            <md-list-item>
-              <h3 md-line>{{ item }}</h3>
-              <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['minerals'][item] }}% </div>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
-    </md-card>
-  </div>
-</div>
+  </md-tab>
+  <md-tab>
+    <template md-tab-label>Nutrition</template>
+    <div layout="column" class="md-content" layout-gt-md="row">
+      <div layout="column" flex>
+        <md-card>
+          <md-card-title>Basic nutrition</md-card-title>
+          <md-card-content>
+            <md-list>
+              <md-list-item>
+                <h3 md-line>Energy</h3>
+                <span flex></span>
+                <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition.Energy }}% </div>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
+                <md-list-item>
+                  <h3 md-line>{{ item }}</h3>
+                  <span flex></span>
+                  <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition[item] }}% </div>
+                </md-list-item>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </md-list>
+          </md-card-content>
+        </md-card>
+        <md-card>
+          <md-card-title>Amino acids</md-card-title>
+          <md-card-content>
+            <md-list>
+              <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
+                <md-list-item>
+                  <h3 md-line>{{ item }}</h3>
+                  <span flex></span>
+                  <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['amino acids'][item] }}% </div>
+                </md-list-item>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </md-list>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div layout="column" flex>
+        <md-card>
+          <md-card-title>Vitamins</md-card-title>
+          <md-card-content>
+            <md-list>
+              <template let-item let-last="last" ngFor [ngForOf]="vitamins">
+                <md-list-item>
+                  <h3 md-line>{{ item }}</h3>
+                  <span flex></span>
+                  <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['vitamins'][item] }}% </div>
+                </md-list-item>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </md-list>
+          </md-card-content>
+        </md-card>
+        <md-card>
+          <md-card-title>Minerals</md-card-title>
+          <md-card-content>
+            <md-list>
+              <template let-item let-last="last" ngFor [ngForOf]="minerals">
+                <md-list-item>
+                  <h3 md-line>{{ item }}</h3>
+                  <span flex></span>
+                  <div class="md-caption tc-grey-500"> {{ mealTrack.nutrition['minerals'][item] }}% </div>
+                </md-list-item>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </md-list>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+  </md-tab>
+</md-tab-group>

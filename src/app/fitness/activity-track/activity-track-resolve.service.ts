@@ -14,11 +14,12 @@ export class ActivityTrackResolve implements Resolve<ActivityTracker> {
 
     public resolve(route: ActivatedRouteSnapshot): Promise<ActivityTracker> {
         return new Promise((resolve, reject) => {
-            if (!this.dataSvc.getActivityTrack()) {
+            let savedAt: ActivityTracker | null = this.dataSvc.getActivityTrack();
+            if (!savedAt || !savedAt.hasOwnProperty('date') ) {
                 let activityTrack: ActivityTracker,
                     date: string = this.dataSvc.getCurrentDate();
                 this.atDataSvc.getActivityTrack(this.authSvc.getAuthData().id, date).subscribe((at: ActivityTracker) => {
-                    if (!!at && !!at.date) {
+                    if (!!at && !!at.hasOwnProperty('date')) {
                         activityTrack = at;
                         this.dataSvc.saveActivityTrack(activityTrack);
                         resolve(activityTrack);

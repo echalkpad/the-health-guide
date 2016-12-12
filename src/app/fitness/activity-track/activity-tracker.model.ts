@@ -1,23 +1,22 @@
-export interface ActivityType {
+export interface Activity {
     name: string;
-    types: [{
-        name: string,
-        met: number
-    }]
+    types: ActivityType[];
 }
 
-export class Activity {
+export class ActivityType {
     constructor(
         public name: string = "",
+        public label: string = "",
         public duration: number = 0,
-        public energyConsumption: number = 0
+        public energyConsumption: number = 0,
+        public met: number = 1
     ) { }
 }
 
 export class ActivityTime {
     constructor(
         public time: string = "",
-        public activities: Activity[] = [],
+        public activities: ActivityType[] = [],
         public duration: number = 0,
         public energyConsumption: number = 0
     ) { }
