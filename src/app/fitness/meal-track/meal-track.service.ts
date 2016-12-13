@@ -34,7 +34,7 @@ export class MealTrackService {
     return new Promise(resolve => {
       let energyConsumption: number = this.dataSvc.getEnergyConsumption() || 0,
         fit: Fitness = this.dataSvc.getFitness();
-      fit.dailyRequirements.Energy = fit.bmr + energyConsumption;
+      fit.dailyRequirements.Energy = fit.bmr + energyConsumption - 200;
       // Set macronutrient requirements
       this.nutrientSvc.getMacronutrients().subscribe((nutrients: Nutrient[]) => {
         if (!!nutrients && !!nutrients.length) {
