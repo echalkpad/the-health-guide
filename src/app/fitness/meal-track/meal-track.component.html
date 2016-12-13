@@ -14,45 +14,48 @@
 <md-tab-group md-stretch-tabs>
   <md-tab>
     <template md-tab-label>Meal times</template>
-    <md-card class="meals" *ngFor="let mt of mealTrack.mealTimes">
-      <md-card-title>{{ mt.time }}</md-card-title>
-      <md-divider></md-divider>
-      <md-card-content>
-        <table td-data-table>
-          <th td-data-table-column>
-            Edit
-          </th>
-          <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
-            {{column.label}}
-          </th>
-          <tr td-data-table-row *ngFor="let meal of mt.meals">
-            <td td-data-table-cell>
-              <button md-icon-button color="accent" [md-menu-trigger-for]="menu">
+    <div layout="column" flex *tdLoading="'meal-track.load'" loadingType="circular">
+      <md-card class="meals" *ngFor="let mt of mealTrack.mealTimes">
+        <md-card-title>{{ mt.time }}</md-card-title>
+        <md-divider></md-divider>
+        <md-card-content>
+          <table td-data-table>
+            <th td-data-table-column>
+              Edit
+            </th>
+            <th td-data-table-column *ngFor="let column of mealData" [numeric]="column.numeric">
+              {{column.label}}
+            </th>
+            <tr td-data-table-row *ngFor="let meal of mt.meals">
+              <td td-data-table-cell>
+                <button md-icon-button color="accent" [md-menu-trigger-for]="menu">
               <md-icon>more_vert</md-icon>
           </button>
-              <md-menu x-position="after" #menu="mdMenu">
-                <button (click)="changeQty(meal, mt)" md-menu-item>Edit</button>
-                <button (click)="removeMeal(meal, mt)" md-menu-item>Delete</button>
-              </md-menu>
-            </td>
-            <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-              {{ changeMealData(meal, column.name) }}
-            </td>
-          </tr>
-          <tr td-data-table-row>
-            <td td-data-table-cell></td>
-            <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
-              {{ column.name === 'name' ? 'Total' : mt.nutrition[column.name] }}
-            </td>
-          </tr>
-        </table>
-      </md-card-content>
-      <md-divider></md-divider>
-      <md-card-actions layout="column" layout-align="center center">
-        <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="!selectedMeals.length">Add selected meals</button>
-        <button flex md-raised-button color="warn" (click)="removeMealTime(mt)">Remove activity time</button>
-      </md-card-actions>
-    </md-card>
+                <md-menu x-position="after" #menu="mdMenu">
+                  <button (click)="changeQty(meal, mt)" md-menu-item>Edit</button>
+                  <button (click)="removeMeal(meal, mt)" md-menu-item>Delete</button>
+                </md-menu>
+              </td>
+              <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+                {{ changeMealData(meal, column.name) }}
+              </td>
+            </tr>
+            <tr td-data-table-row>
+              <td td-data-table-cell></td>
+              <td td-data-table-cell *ngFor="let column of mealData" [numeric]="column.numeric">
+                {{ column.name === 'name' ? 'Total' : mt.nutrition[column.name] }}
+              </td>
+            </tr>
+          </table>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions layout="column" layout-align="center center">
+          <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="!selectedMeals.length">Add selected meals</button>
+          <button flex md-raised-button color="warn" (click)="removeMealTime(mt)">Remove activity time</button>
+        </md-card-actions>
+      </md-card>
+    </div>
+
   </md-tab>
   <md-tab>
     <template md-tab-label>Select meals</template>
@@ -109,7 +112,7 @@
   </md-tab>
   <md-tab>
     <template md-tab-label>Nutrition</template>
-    <div layout="column" class="md-content" layout-gt-md="row">
+    <div layout="column" class="md-content" layout-gt-md="row" *tdLoading="'mt-nutrition.load'" loadingType="circular">
       <div layout="column" flex>
         <md-card>
           <md-card-title>Basic nutrition</md-card-title>

@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 
-import { TdDialogService } from '@covalent/core';
+import { TdDialogService, TdLoadingService } from '@covalent/core';
 
 import { Auth } from '../../auth/auth.model';
 import { AuthService } from '../../auth/auth.service';
@@ -33,16 +33,17 @@ export class ActivityTrackComponent implements OnInit {
     private dataSvc: DataService,
     private dialogSvc: TdDialogService,
     private helperSvc: HelperService,
+    private loadingSvc: TdLoadingService,
     private route: ActivatedRoute,
     private router: Router,
     private titleSvc: Title
   ) { }
 
-  private showAlert(msg: string | Error): void {
+  private showAlert(msg: string | Error, title: string): void {
     this.dialogSvc.openAlert({
       message: msg.toString(),
       disableClose: false,
-      title: 'An error has occured',
+      title: title,
       closeButton: 'Close'
     });
   }
@@ -64,6 +65,8 @@ export class ActivityTrackComponent implements OnInit {
 
   public addSelectedActivities(at: ActivityTime): void {
     at.activities = [...at.activities, ...this.selectedActivityTypes];
+    this.atSvc.setActivityTimeTotal(at);
+    this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public canDeactivate(): Promise<boolean> | boolean {
@@ -90,6 +93,7 @@ export class ActivityTrackComponent implements OnInit {
     }).afterClosed().subscribe((value: string) => {
       if (value) {
         this.currentDate = value;
+        this.syncActivityTrack();
       }
     });
   }
@@ -101,26 +105,32 @@ export class ActivityTrackComponent implements OnInit {
   public removeActivity(activity: ActivityType, at: ActivityTime): void {
     this.dirty = true;
     at.activities.splice(at.activities.indexOf(activity), 1);
+    this.atSvc.setActivityTimeTotal(at);
+    this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public removeActivityTime(at: ActivityTime): void {
     this.dirty = true;
     this.activityTrack.activityTimes.splice(this.activityTrack.activityTimes.indexOf(at), 1);
+    this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public syncActivityTrack(): void {
+    this.loadingSvc.register('activity-track.load');
     if (this.dirty) {
       this.atDataSvc.setActivityTrack(this.auth.id, this.activityTrack);
       this.dataSvc.saveActivityTrack(this.activityTrack);
+      this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
       this.dirty = false;
-    } else {
-      this.atDataSvc.getActivityTrack(this.auth.id, this.currentDate).subscribe((at: ActivityTracker) => {
-        if (!!at && !!at.hasOwnProperty('date')) {
-          this.activityTrack = at;
-          this.dataSvc.saveActivityTrack(at);
-        }
-      });
     }
+    this.atDataSvc.getActivityTrack(this.auth.id, this.currentDate).subscribe((at: ActivityTracker) => {
+      if (!!at && !!at.hasOwnProperty('date')) {
+        this.activityTrack = at;
+        this.dataSvc.saveActivityTrack(at);
+        this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
+        this.loadingSvc.resolve('activity-track.load');
+      }
+    });
   }
 
   public toggleActivity(activityType: ActivityType, label: string, checkbox?: any): void {
@@ -152,6 +162,19 @@ export class ActivityTrackComponent implements OnInit {
     }
   }
 
+  ngAfterViewInit(): void {
+    this.loadingSvc.register('activities.load');
+    this.loadingSvc.register('activity-track.load');
+    setTimeout(() => {
+      this.loadingSvc.resolve('activities.load');
+      this.loadingSvc.resolve('activity-track.load');
+      if (!this.activityTrack.activityTimes.length) {
+        this.showAlert("You haven't moved today. Start moving your butt!", "No activity today");
+      }
+    }, 4000);
+    this.titleSvc.setTitle('Activity tracker');
+  }
+
   ngOnInit(): void {
     this.auth = Object.assign({}, this.authSvc.getAuthData());
     this.currentDate = this.dataSvc.getCurrentDate();
@@ -162,7 +185,6 @@ export class ActivityTrackComponent implements OnInit {
     });
 
     this.route.data.subscribe((data: { activityTrack: ActivityTracker }) => this.activityTrack = Object.assign({}, data.activityTrack));
-    this.titleSvc.setTitle('Fitness');
   }
 
 }

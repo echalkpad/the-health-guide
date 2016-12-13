@@ -299,17 +299,6 @@ export class RecipeService {
 
     this.portionRecipe(recipe);
     this.checkHealthTags(recipe);
-    let fitness: Fitness = this.dataSvc.getFitness();
-    if (!!fitness && !!fitness.dailyRequirements.Energy) {
-      console.log('Total nutrition');
-      console.dir(recipe.nutrition);
-      console.log('Required nutrition');
-      console.dir(fitness.dailyRequirements);
-      this.setRemainingNutrition(recipe, fitness.dailyRequirements);
-      console.log('Remaining nutrition');
-      console.dir(recipe.nutrition);
-      recipe.remainingNutrition = true;
-    }
   }
 
 }

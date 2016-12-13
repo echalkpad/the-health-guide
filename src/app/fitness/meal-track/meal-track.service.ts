@@ -39,38 +39,6 @@ export class MealTrackService {
       this.nutrientSvc.getMacronutrients().subscribe((nutrients: Nutrient[]) => {
         if (!!nutrients && !!nutrients.length) {
           nutrients.forEach((nutrient: Nutrient) => {
-            if (fit.dailyRequirements.hasOwnProperty(nutrient.name) && nutrient.hasOwnProperty('intake')) {
-              if (fit.gender === 'female') {
-                if (fit.pregnancy) {
-                  fit.dailyRequirements[nutrient.name] = nutrient.intake.female.pregnancy[fit.ageInterval];
-                } else if (fit.lactation) {
-                  fit.dailyRequirements[nutrient.name] = nutrient.intake.female.lactation[fit.ageInterval];
-                } else {
-                  fit.dailyRequirements[nutrient.name] = nutrient.intake.female.normal[fit.ageInterval];
-                }
-              } else {
-                fit.dailyRequirements[nutrient.name] = nutrient.intake.male[fit.ageInterval];
-              }
-            }
-
-            if (nutrient.hasOwnProperty('classification') && nutrient.name !== 'Amino acids') {
-              nutrient.classification.forEach((subNutrient: Nutrient) => {
-                if (fit.dailyRequirements.hasOwnProperty(subNutrient.name) && subNutrient.hasOwnProperty('intake')) {
-                  if (fit.gender === 'female') {
-                    if (fit.pregnancy) {
-                      fit.dailyRequirements[subNutrient.name] = subNutrient.intake.female.pregnancy[fit.ageInterval];
-                    } else if (fit.lactation) {
-                      fit.dailyRequirements[subNutrient.name] = subNutrient.intake.female.lactation[fit.ageInterval];
-                    } else {
-                      fit.dailyRequirements[subNutrient.name] = subNutrient.intake.female.normal[fit.ageInterval];
-                    }
-                  } else {
-                    fit.dailyRequirements[subNutrient.name] = subNutrient.intake.male[fit.ageInterval];
-                  }
-                }
-              });
-            }
-
             if (nutrient.name === 'Amino acids') {
               nutrient.classification.forEach((subNutrient: Nutrient) => {
                 if (fit.dailyRequirements['amino acids'].hasOwnProperty(subNutrient.name) && subNutrient.hasOwnProperty('intake')) {
@@ -94,10 +62,15 @@ export class MealTrackService {
         // These nutrients are relative to the daily energy consumption
         fit.dailyRequirements.Water = fit.dailyRequirements.Energy;
         fit.dailyRequirements.Protein = (fit.dailyRequirements.Energy * 0.2) / 4.1;
-        fit.dailyRequirements.Carbohydrates = (fit.dailyRequirements.Energy * 0.5) / 4.1;
+        fit.dailyRequirements.Carbohydrates = (fit.dailyRequirements.Energy * 0.45) / 4.1;
         fit.dailyRequirements.Sugars = (fit.dailyRequirements.Energy * 0.1) / 4.1;
-        fit.dailyRequirements.Fats = (fit.dailyRequirements.Energy * 0.3) / 9;
-        fit.dailyRequirements['Trans fat'] = (fit.dailyRequirements.Energy * 0.01) / 9;
+        fit.dailyRequirements.Fats = (fit.dailyRequirements.Energy * 0.35) / 9;
+        fit.dailyRequirements.Fiber = (fit.dailyRequirements.Energy * 0.015);
+        fit.dailyRequirements['Monounsaturated fat'] = (fit.dailyRequirements.Energy * 0.2) / 9;
+        fit.dailyRequirements['Polyunsaturated fat'] = (fit.dailyRequirements.Energy * 0.15) / 9;
+        fit.dailyRequirements['Saturated fat'] = (fit.dailyRequirements.Energy * 0.15) / 9;
+        fit.dailyRequirements['Omega-3 fatty acids'] = (fit.dailyRequirements.Energy * 0.1) / 9;
+        fit.dailyRequirements['Omega-6 fatty acids'] = (fit.dailyRequirements.Energy * 0.05) / 9;
       });
 
       // Set micronutrient requirements
@@ -150,7 +123,7 @@ export class MealTrackService {
       setTimeout(() => {
         this.dataSvc.saveFitness(fit);
         resolve(fit.dailyRequirements);
-      }, 5000);
+      }, 10000);
     });
   }
 
@@ -197,29 +170,34 @@ export class MealTrackService {
     return mtNutrition;
   }
 
-  public setRemainingNutrition(mt: MealTracker): void {
-    mt.nutrition = this.getMealTrackNutrition(mt);
-    this.getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
-      for (let nutrientCategory in requiredNutrition) {
-        let reqNutrients = requiredNutrition[nutrientCategory],
-          totalNutrients = mt.nutrition[nutrientCategory];
-        if (typeof reqNutrients === 'number') {
-          if (!!reqNutrients) {
-            mt.nutrition[nutrientCategory] = Math.floor((totalNutrients / reqNutrients) * 100);
-          } else {
-            mt.nutrition[nutrientCategory] = !!totalNutrients ? 100 : 100 + totalNutrients;
+  public setMealTrackNutrition(mt: MealTracker): Promise<MealTrackNutrition> {
+    return new Promise(resolve => {
+      mt.nutrition = this.getMealTrackNutrition(mt);
+      this.getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
+        console.log("Required nutrition:", requiredNutrition);
+        console.log("Total nutrition:", mt.nutrition);
+        for (let nutrientCategory in requiredNutrition) {
+          let reqNutrients = requiredNutrition[nutrientCategory],
+            totalNutrients = mt.nutrition[nutrientCategory];
+          if (typeof reqNutrients === 'number') {
+            if (!!reqNutrients) {
+              mt.nutrition[nutrientCategory] = Math.floor((totalNutrients / reqNutrients) * 100);
+            } else {
+              mt.nutrition[nutrientCategory] = !!totalNutrients ? 100 : 100 + totalNutrients;
+            }
+          }
+          for (let nutrient in reqNutrients) {
+            if (reqNutrients[nutrient] > 0) {
+              mt.nutrition[nutrientCategory][nutrient] = Math.floor((totalNutrients[nutrient] / reqNutrients[nutrient]) * 100);
+            } else {
+              mt.nutrition[nutrientCategory][nutrient] = !!totalNutrients[nutrient] ? 100 : 100 + totalNutrients[nutrient];
+            }
           }
         }
-        for (let nutrient in reqNutrients) {
-          if (reqNutrients[nutrient] > 0) {
-            mt.nutrition[nutrientCategory][nutrient] = Math.floor((totalNutrients[nutrient] / reqNutrients[nutrient]) * 100);
-          } else {
-            mt.nutrition[nutrientCategory][nutrient] = !!totalNutrients[nutrient] ? 100 : 100 + totalNutrients[nutrient];
-          }
-        }
-      }
+        console.log("Remaining nutrition", mt.nutrition);
+        resolve(mt.nutrition);
+      });
     });
-
   }
 
 }

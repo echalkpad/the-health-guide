@@ -63,6 +63,8 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             "Saturated fat",
             "Monounsaturated fat",
             "Polyunsaturated fat",
+            "Omega-3 fatty acids",
+            "Omega-6 fatty acids",
             "Trans fat"
         ];
 
@@ -75,7 +77,9 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             { name: 'Sugars', label: 'Sugars (g)', numeric: true },
             { name: 'Fiber', label: 'Fiber (g)', numeric: true },
             { name: 'Fats', label: 'Fat (g)', numeric: true },
-            { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true }
+            { name: 'Saturated fat', label: 'Saturated fat (g)', numeric: true },
+            { name: 'Omega-3 fatty acids', label: 'Omega-3 (g)', numeric: true },
+            { name: 'Omega-6 fatty acids', label: 'Omega-6 (g)', numeric: true }
         ];
     }
 
@@ -106,8 +110,11 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public addSelectedMeals(mt: MealTime): void {
         this.dirty = true;
         mt.meals = [...mt.meals, ...this.selectedMeals];
-        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.mtSvc.setRemainingNutrition(this.mealTrack);
+        this.loadingSvc.register('mt-nutrition.load');
+        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+            this.mealTrack.nutrition = nutrition;
+            this.loadingSvc.resolve('mt-nutrition.load')
+        });
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
@@ -134,6 +141,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         }).afterClosed().subscribe((value: string) => {
             if (value) {
                 this.currentDate = value;
+                this.syncMealTrack();
             }
         });
     }
@@ -173,8 +181,11 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                         meal.quantity = +value;
                     }
                     if (mt) {
-                        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-                        this.mtSvc.setRemainingNutrition(this.mealTrack);
+                        this.loadingSvc.register('mt-nutrition.load');
+                        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+                            this.mealTrack.nutrition = nutrition;
+                            this.loadingSvc.resolve('mt-nutrition.load')
+                        });
                     }
                 }
             }
@@ -182,11 +193,11 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     public filter(searchTerm: string = ''): void {
-        let newData: any[] = this.meals;
+        let newData: Meal[] = this.meals;
         newData = this.helperSvc.filterItems(newData, searchTerm);
         this.filteredTotal = newData.length;
         newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
-        this.filteredMeals = newData;
+        this.filteredMeals = [...this.helperSvc.sortByName(newData)];
     }
 
     public page(pagingEvent: IPageChangeEvent): void {
@@ -199,30 +210,33 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public removeMeal(meal: Meal, mt: MealTime): void {
         this.dirty = true;
         mt.meals.splice(mt.meals.indexOf(meal), 1);
-        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.mtSvc.setRemainingNutrition(this.mealTrack);
+        this.mtSvc.setMealTrackNutrition(this.mealTrack);
     }
 
     public removeMealTime(mt: MealTime): void {
         this.dirty = true;
         this.mealTrack.mealTimes.splice(this.mealTrack.mealTimes.indexOf(mt), 1);
-        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.mtSvc.setRemainingNutrition(this.mealTrack);
+        this.loadingSvc.register('mt-nutrition.load');
+        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+            this.mealTrack.nutrition = nutrition;
+            this.loadingSvc.resolve('mt-nutrition.load')
+        });
     }
 
     public syncMealTrack(): void {
+        this.loadingSvc.register('meal-track.load');
         if (this.dirty) {
             this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
             this.dataSvc.saveMealTrack(this.mealTrack);
             this.dirty = false;
-        } else {
-            this.mtDataSvc.getMealTrack(this.auth.id, this.currentDate).subscribe((mt: MealTracker) => {
-                if (!!mt && !!mt.hasOwnProperty('date')) {
-                    this.mealTrack = mt;
-                    this.dataSvc.saveMealTrack(mt);
-                }
-            });
         }
+        this.mtDataSvc.getMealTrack(this.auth.id, this.currentDate).subscribe((mt: MealTracker) => {
+            if (!!mt && !!mt.hasOwnProperty('date')) {
+                this.mealTrack = mt;
+                this.dataSvc.saveMealTrack(mt);
+                this.loadingSvc.resolve('meal-track.load');
+            }
+        });
 
     }
 
@@ -258,40 +272,47 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             this.selectedMeals.splice(idx, 1);
             this.meals.push(meal);
         }
-        this.meals = [...this.helperSvc.sortByName(this.meals)];
         this.filter();
     }
 
     ngAfterViewInit(): void {
         this.loadingSvc.register('meals.load');
-        setTimeout(() => this.loadingSvc.resolve('meals.load'), 4000);
-        this.titleSvc.setTitle('Fitness');
+        this.loadingSvc.register('meal-track.load');
+        this.loadingSvc.register('mt-nutrition.load');
+        setTimeout(() => {
+            this.loadingSvc.resolve('meals.load');
+            this.loadingSvc.resolve('mt-nutrition.load');
+            this.loadingSvc.resolve('meal-track.load');
+            if (!this.mealTrack.mealTimes.length) {
+                this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
+            }
+        }, 10000);
+        this.titleSvc.setTitle('Meal tracker');
     }
 
     ngOnInit(): void {
+        let recipes: Meal[] = [], food: Meal[] = [];
         this.auth = Object.assign({}, this.authSvc.getAuthData());
         this.currentDate = this.dataSvc.getCurrentDate();
         this.foodSvc.getFoods().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
-                this.meals = [...this.meals, ...data];
-                this.filteredMeals = [...this.meals];
-                this.filter();
+                food = [...data];
             }
         });
 
         this.recipeDataSvc.getMyRecipes(this.auth.id).subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
-                this.meals = [...this.meals, ...data];
-                this.filteredMeals = [...this.meals];
-                this.filter();
+                recipes = [...data];
             }
         });
+        setTimeout(() => {
+            this.meals = [...food, ...recipes];
+            this.filteredMeals = [...this.meals];
+            this.filter();
+        }, 10000);
 
         this.route.data.subscribe((data: { mealTrack: MealTracker }) => {
             this.mealTrack = Object.assign({}, data.mealTrack);
-            if (!this.mealTrack.mealTimes.length) {
-                this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
-            }
             this.aminoacids = Object.keys(this.mealTrack.nutrition['amino acids']);
             this.vitamins = Object.keys(this.mealTrack.nutrition['vitamins']);
             this.minerals = Object.keys(this.mealTrack.nutrition['minerals']);

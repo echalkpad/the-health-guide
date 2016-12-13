@@ -31,7 +31,6 @@ export class FitnessComponent implements OnInit {
       fitness.weight = user.weight;
       fitness.ageInterval = this.fitSvc.getAgeInterval(fitness);
       this.fitSvc.setFitness(fitness);
-      console.log(fitness);
       this.dataSvc.saveFitness(fitness);
     });
   }

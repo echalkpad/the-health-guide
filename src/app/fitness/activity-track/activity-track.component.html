@@ -15,7 +15,7 @@
   </button>
 </md-toolbar>
 <div layout="column" layout-gt-xs="row">
-  <div layout="column" flex *ngIf="activityTrack.activityTimes.length">
+  <div layout="column" flex *tdLoading="'activity-track.load'" loadingType="circular">
     <md-card class="activities" *ngFor="let at of activityTrack.activityTimes" flex>
       <md-card-title>{{ at.time }}</md-card-title>
       <md-card-content>
@@ -34,8 +34,15 @@
               <span class="md-caption tc-grey-500">{{ activity.energyConsumption }}kcal</span>
             </div>
           </md-list-item>
-          <md-divider *ngIf="!last" md-inset></md-divider>
+          <md-divider md-inset></md-divider>
         </template>
+        <md-list-item>
+          <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+            <span flex class="push-left-lg">Total</span>
+            <span flex class="md-caption tc-grey-500">{{ at.duration }}min</span>
+            <span class="md-caption tc-grey-500">{{ at.energyConsumption }}kcal</span>
+          </div>
+        </md-list-item>
       </md-card-content>
       <md-divider></md-divider>
       <md-card-actions layout="column" layout-align="center center">
@@ -44,7 +51,7 @@
       </md-card-actions>
     </md-card>
   </div>
-  <div layout="column" flex>
+  <div layout="column" *ngIf="searchActivities" flex>
     <md-card *ngIf="selectedActivityTypes.length">
       <md-card-title>Selected activities</md-card-title>
       <md-card-content>
@@ -68,7 +75,7 @@
         </template>
       </md-card-content>
     </md-card>
-    <div layout-margin>
+    <div *tdLoading="'activities.load'" loadingType="circular" layout-margin>
       <td-expansion-panel *ngFor="let activity of activities" [label]="activity.name">
         <md-list>
           <md-list-item *ngFor="let type of activity.types">
@@ -79,6 +86,22 @@
         </md-list>
       </td-expansion-panel>
     </div>
-
   </div>
 </div>
+<md-card flex>
+  <md-card-title>Total</md-card-title>
+  <md-card-content>
+    <md-list-item>
+      <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+        <span flex>Duration</span>
+        <span flex class="md-caption tc-grey-500">{{ activityTrack.duration }}min</span>
+      </div>
+    </md-list-item>
+    <md-list-item>
+      <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+        <span flex>Energy consumption</span>
+        <span flex class="md-caption tc-grey-500">{{ activityTrack.energyConsumption }}kcal</span>
+      </div>
+    </md-list-item>
+  </md-card-content>
+</md-card>

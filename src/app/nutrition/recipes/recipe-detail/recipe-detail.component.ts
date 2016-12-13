@@ -32,6 +32,8 @@ export class RecipeDetailComponent implements OnInit {
       "Saturated fat",
       "Monounsaturated fat",
       "Polyunsaturated fat",
+      "Omega-3 fatty acids",
+      "Omega-6 fatty acids",
       "Trans fat"
     ];
   }

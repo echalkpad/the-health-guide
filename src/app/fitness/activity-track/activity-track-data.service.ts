@@ -30,7 +30,7 @@ export class ActivityTrackDataService {
 
   public setActivityTrack(authId: string, activityTrack: ActivityTracker): void {
     activityTrack.activityTimes.forEach((at: ActivityTime) => this.helperSvc.removeHashkeys(at.activities));
-    console.log(activityTrack);
+    console.log("Saving activity-track...", activityTrack);
     if (activityTrack.hasOwnProperty('$key')) {
       delete activityTrack['$key'];
       this.getActivityTrack(authId, activityTrack.date).update(activityTrack);

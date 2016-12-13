@@ -19,9 +19,10 @@ export class MealTrackDataService {
 
   public setMealTrack(authId: string, mealTrack: MealTracker): void {
     mealTrack.mealTimes.forEach((mt: MealTime) => this.helperSvc.removeHashkeys(mt.meals));
-    console.log(mealTrack);
+    console.log("Saving meal-track...", mealTrack);
     if (mealTrack.hasOwnProperty('$key')) {
       delete mealTrack['$key'];
+      delete mealTrack['$exists'];
       this.getMealTrack(authId, mealTrack.date).update(mealTrack);
     } else {
       this.getMealTrack(authId, mealTrack.date).set(mealTrack);
