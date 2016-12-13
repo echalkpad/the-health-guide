@@ -148,7 +148,7 @@ export class MealTrackService {
       });
 
       setTimeout(() => {
-        console.log(fit);
+        this.dataSvc.saveFitness(fit);
         resolve(fit.dailyRequirements);
       }, 5000);
     });

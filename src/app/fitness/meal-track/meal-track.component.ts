@@ -79,19 +79,11 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         ];
     }
 
-    private filter(searchTerm: string = ''): void {
-        let newData: any[] = this.meals;
-        newData = this.helperSvc.filterItems(newData, searchTerm);
-        this.filteredTotal = newData.length;
-        newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
-        this.filteredMeals = newData;
-    }
-
-    private showAlert(msg: string | Error): void {
+    private showAlert(msg: string | Error, title: string): void {
         this.dialogSvc.openAlert({
             message: msg.toString(),
             disableClose: false,
-            title: 'An error has occured',
+            title: title,
             closeButton: 'Close'
         });
     }
@@ -189,6 +181,14 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         });
     }
 
+    public filter(searchTerm: string = ''): void {
+        let newData: any[] = this.meals;
+        newData = this.helperSvc.filterItems(newData, searchTerm);
+        this.filteredTotal = newData.length;
+        newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
+        this.filteredMeals = newData;
+    }
+
     public page(pagingEvent: IPageChangeEvent): void {
         this.startPage = pagingEvent.fromRow;
         this.currentPage = pagingEvent.page;
@@ -274,7 +274,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.foodSvc.getFoods().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
                 this.meals = [...this.meals, ...data];
-                this.filteredMeals = [...this.filteredMeals, ...data];
+                this.filteredMeals = [...this.meals];
                 this.filter();
             }
         });
@@ -282,13 +282,16 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.recipeDataSvc.getMyRecipes(this.auth.id).subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
                 this.meals = [...this.meals, ...data];
-                this.filteredMeals = [...this.filteredMeals, ...data];
+                this.filteredMeals = [...this.meals];
                 this.filter();
             }
         });
 
         this.route.data.subscribe((data: { mealTrack: MealTracker }) => {
             this.mealTrack = Object.assign({}, data.mealTrack);
+            if (!this.mealTrack.mealTimes.length) {
+                this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
+            }
             this.aminoacids = Object.keys(this.mealTrack.nutrition['amino acids']);
             this.vitamins = Object.keys(this.mealTrack.nutrition['vitamins']);
             this.minerals = Object.keys(this.mealTrack.nutrition['minerals']);

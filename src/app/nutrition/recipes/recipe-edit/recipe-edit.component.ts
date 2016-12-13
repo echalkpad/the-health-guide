@@ -203,9 +203,9 @@ export class RecipeEditComponent implements OnInit {
         }
     }
 
-    private filter(searchTerm: string = ''): void {
+    public filter(searchTerm: string = ''): void {
         let newData: any[] = this.ingredients;
-        newData = this.recipeSvc.filterIngredients(newData, searchTerm);
+        newData = this.helperSvc.filterItems(newData, searchTerm);
         this.filteredTotal = newData.length;
         newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
         this.filteredIngredients = newData;

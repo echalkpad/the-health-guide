@@ -17,6 +17,7 @@ export class Recipe {
         public cookMethod: string = "Raw",
         public cookTemperature: number = 0,
         public nutrition: Nutrition = new Nutrition(),
+        public remainingNutrition: boolean = false,
         public servings: number = 1,
         public instructions: string[] = [],
         public quantity: number = 0,

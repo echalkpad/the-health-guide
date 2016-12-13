@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 
+import { DataService } from '../../../fitness/shared/data.service';
+import { Fitness } from '../../../fitness/fitness.model';
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
-  constructor() { }
+  constructor(private dataSvc: DataService) { }
 
   private checkHealthTags(recipe: Recipe): void {
     /**
@@ -176,8 +178,25 @@ export class RecipeService {
     recipe.quantity = Math.floor(recipe.quantity / +recipe.servings);
   }
 
-  public filterIngredients(ingredients: Ingredient[], searchTerm: string = ''): Ingredient[] {
-    return ingredients.filter((ingredient: Ingredient) => ingredient.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+  private setRemainingNutrition(recipe: Recipe, requiredNutrition: Nutrition): void {
+    for (let nutrientCategory in requiredNutrition) {
+      let reqNutrients = requiredNutrition[nutrientCategory],
+        totalNutrients = recipe.nutrition[nutrientCategory];
+      if (typeof reqNutrients === 'number') {
+        if (!!reqNutrients) {
+          recipe.nutrition[nutrientCategory] = Math.floor((totalNutrients / reqNutrients) * 100);
+        } else {
+          recipe.nutrition[nutrientCategory] = !!totalNutrients ? 100 : 100 + totalNutrients;
+        }
+      }
+      for (let nutrient in reqNutrients) {
+        if (reqNutrients[nutrient] > 0) {
+          recipe.nutrition[nutrientCategory][nutrient] = Math.floor((totalNutrients[nutrient] / reqNutrients[nutrient]) * 100);
+        } else {
+          recipe.nutrition[nutrientCategory][nutrient] = !!totalNutrients[nutrient] ? 100 : 100 + totalNutrients[nutrient];
+        }
+      }
+    }
   }
 
   public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
@@ -280,7 +299,17 @@ export class RecipeService {
 
     this.portionRecipe(recipe);
     this.checkHealthTags(recipe);
-    console.log(recipe);
+    let fitness: Fitness = this.dataSvc.getFitness();
+    if (!!fitness && !!fitness.dailyRequirements.Energy) {
+      console.log('Total nutrition');
+      console.dir(recipe.nutrition);
+      console.log('Required nutrition');
+      console.dir(fitness.dailyRequirements);
+      this.setRemainingNutrition(recipe, fitness.dailyRequirements);
+      console.log('Remaining nutrition');
+      console.dir(recipe.nutrition);
+      recipe.remainingNutrition = true;
+    }
   }
 
 }

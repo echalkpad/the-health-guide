@@ -3,13 +3,15 @@
         background-color: white;
         color: #4caf50;
     }
-    md-card-actions button {
-        margin: .5em;
-        width: 100%;
-        .fa {
-            position: relative;
-            left: -10px;
-            font-size: 20px;
+    .recipe-details {
+        md-card-actions button {
+            margin: .5em;
+            width: 100%;
+            .fa {
+                position: relative;
+                left: -10px;
+                font-size: 20px;
+            }
         }
     }
 }

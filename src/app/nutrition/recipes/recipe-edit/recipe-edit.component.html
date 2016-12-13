@@ -1,9 +1,9 @@
-<div layout="column" class="recipe" *tdLoading="'cook.load'" loadingType="circular">
+<div layout="column" *tdLoading="'cook.load'" loadingType="circular">
   <md-tab-group>
     <md-tab>
       <template md-tab-label>Details</template>
       <div layout="column" layout-gt-lg="row">
-        <md-card flex>
+        <md-card flex class="recipe-details">
           <md-card-title>Cooking time</md-card-title>
           <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
           <md-divider></md-divider>
@@ -129,15 +129,9 @@
                         {{ ingredient.name }}
                       </md-checkbox>
                       <span flex class="md-caption tc-grey-500">{{ ingredient.quantity }}g</span>
-                      <span>
-                    <button md-icon-button [md-menu-trigger-for]="menu">
-                      <md-icon>more_vert</md-icon>
-                    </button>
-                  <md-menu x-position="before" #menu="mdMenu">
-                      <button (click)="changeQty(ingredient, true)" md-menu-item>Edit</button>
-                      <button (click)="removeIngredient(ingredient)" md-menu-item>Delete</button>   
-                  </md-menu>
-              </span>
+                      <button md-icon-button (click)="changeQty(ingredient, true)">
+                        <md-icon>create</md-icon>
+                      </button>
                     </div>
                   </md-list-item>
                   <md-divider *ngIf="!last" md-inset></md-divider>
@@ -203,14 +197,14 @@
                 <md-list-item>
                   <h3 md-line>Energy</h3>
                   <span flex></span>
-                  <div class="md-caption tc-grey-500"> {{ recipe.nutrition.Energy.toFixed() }}kcal </div>
+                  <div class="md-caption tc-grey-500"> {{ recipe.nutrition.Energy.toFixed() }} {{ recipe.remainingNutrition ? '%' : 'kcal' }} </div>
                 </md-list-item>
                 <md-divider md-inset></md-divider>
                 <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
                   <md-list-item>
                     <h3 md-line>{{ item }}</h3>
                     <span flex></span>
-                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item].toFixed(2) }}g </div>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item].toFixed(2) }} {{ recipe.remainingNutrition ? '%' : 'g' }} </div>
                   </md-list-item>
                   <md-divider *ngIf="!last" md-inset></md-divider>
                 </template>
@@ -225,7 +219,7 @@
                   <md-list-item>
                     <h3 md-line>{{ item }}</h3>
                     <span flex></span>
-                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item].toFixed(2) }}g </div>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item].toFixed(2) }} {{ recipe.remainingNutrition ? '%' : 'g' }} </div>
                   </md-list-item>
                   <md-divider *ngIf="!last" md-inset></md-divider>
                 </template>
@@ -242,7 +236,7 @@
                   <md-list-item>
                     <h3 md-line>{{ item }}</h3>
                     <span flex></span>
-                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item].toFixed(2) }}mg </div>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item].toFixed(2) }} {{ recipe.remainingNutrition ? '%' : 'mg' }} </div>
                   </md-list-item>
                   <md-divider *ngIf="!last" md-inset></md-divider>
                 </template>
@@ -257,7 +251,7 @@
                   <md-list-item>
                     <h3 md-line>{{ item }}</h3>
                     <span flex></span>
-                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item].toFixed(2) }}mg </div>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item].toFixed(2) }} {{ recipe.remainingNutrition ? '%' : 'mg' }} </div>
                   </md-list-item>
                   <md-divider *ngIf="!last" md-inset></md-divider>
                 </template>
