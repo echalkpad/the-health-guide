@@ -1,6 +1,7 @@
 // TODO: Add user details (e.g. avatar, username) and save them in users database
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
@@ -22,7 +23,8 @@ export class AuthComponent implements OnInit {
         private dialogSvc: TdDialogService,
         private loadingSvc: TdLoadingService,
         private route: ActivatedRoute,
-        private router: Router
+        private router: Router,
+        private toast: MdSnackBar
     ) { }
 
     private showError(msg: string | Error): void {
@@ -73,7 +75,9 @@ export class AuthComponent implements OnInit {
     }
 
     public uploadAvatar(img: File): void {
-        this.authSvc.uploadAvatar(img).then(() => this.user.avatar = img.name);
+        this.authSvc.uploadAvatar(img).then(() => {
+            this.user.avatar = img.name; this.toast.open('Upload complete!', 'OK');
+        });
     }
 
     ngOnInit(): void {

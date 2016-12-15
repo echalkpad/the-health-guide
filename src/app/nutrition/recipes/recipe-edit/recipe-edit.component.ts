@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
@@ -50,7 +51,8 @@ export class RecipeEditComponent implements OnInit {
         public recipeSvc: RecipeService,
         private route: ActivatedRoute,
         private router: Router,
-        private titleSvc: Title
+        private titleSvc: Title,
+        private toast: MdSnackBar
     ) {
 
         this.basicNutrients = [
@@ -85,6 +87,7 @@ export class RecipeEditComponent implements OnInit {
 
         this.cookMethods = [
             "Baking",
+            "Blanching",
             "Boiling",
             "Braising",
             "Freezing",
@@ -165,13 +168,8 @@ export class RecipeEditComponent implements OnInit {
             } else {
                 this.recipeDataSvc.addRecipe(this.recipe);
             }
-            this.loadingSvc.resolve('cook.load');
-            this.dialogSvc.openAlert({
-                message: 'Your recipe is done. Getting you back to your recipes',
-                disableClose: false,
-                title: 'Cooking done',
-                closeButton: 'Close'
-            }).afterClosed().subscribe(() => this.router.navigate(['/nutrition/recipes']));
+            this.toast.open('Cooking done!', 'OK');
+            this.router.navigate(['/nutrition/recipes']);
         }, 2000);
     }
 
@@ -243,7 +241,10 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public uploadImage(img: File): void {
-        this.recipeDataSvc.uploadImage(img).then(() => this.recipe.image = img.name);
+        this.recipeDataSvc.uploadImage(img).then(() => {
+            this.recipe.image = img.name;
+            this.toast.open('Upload complete!', 'OK');
+        });
     }
 
     ngAfterViewInit(): void {

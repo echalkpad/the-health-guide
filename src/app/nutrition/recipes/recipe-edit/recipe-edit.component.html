@@ -1,4 +1,4 @@
-<div layout="column" *tdLoading="'cook.load'" loadingType="circular">
+<div layout="column">
   <md-tab-group>
     <md-tab>
       <template md-tab-label>Details</template>
@@ -38,7 +38,7 @@
                     <span [hidden]="!durationControl.errors?.required">Required</span>
                   </md-hint>
                 </md-input>
-                <md-input class="push-xs" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature" required>
+                <md-input class="push-xs" (change)="syncNutrition()" #temperatureInput #temperatureControl="ngModel" flex placeholder="Cooking tmperature" type="number" min="0" max="250" name="recipe.cookTemperature" [(ngModel)]="recipe.cookTemperature" required>
                   <span md-prefix><md-icon>whatshot</md-icon></span>
                   <md-hint align="start" [hidden]="temperatureControl.pristine" class="tc-red-600">
                     <span [hidden]="!temperatureControl.errors?.required">Required</span>
@@ -69,16 +69,16 @@
               <div layout="column" layout-gt-md="row">
                 <div class="push-xs" layout="row" layout-align="start center" flex>
                   <label for="recipe.cookMethod" layout="row" layout-align="start center">
-                <md-icon>room_service</md-icon>
-                <span layout="row" layout-align="start center" class="tc-grey-500 pad-xs push-right-xs">
-                  Cooking method:
-                </span>
-              </label>
-                  <select flex [(ngModel)]="recipe.cookMethod" name="recipe.cookMethod">
-                <option *ngFor="let method of cookMethods" [value]="method">
-                  {{ method }}
-                </option>
-              </select>
+                    <md-icon>room_service</md-icon>
+                    <span layout="row" layout-align="start center" class="tc-grey-500 pad-xs push-right-xs">
+                      Cooking method:
+                    </span>
+                  </label>
+                  <select flex [(ngModel)]="recipe.cookMethod" name="recipe.cookMethod" (change)="syncNutrition()">
+                    <option *ngFor="let method of cookMethods" [value]="method">
+                      {{ method }}
+                    </option>
+                  </select>
                 </div>
                 <div class="push-xs" layout="row" layout-align="start center" flex>
                   <label for="recipe.category" layout="row" layout-align="start center">

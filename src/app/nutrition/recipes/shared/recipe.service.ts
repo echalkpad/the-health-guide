@@ -7,7 +7,66 @@ import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
-  constructor(private dataSvc: DataService) { }
+  private tags: any;
+  constructor(private dataSvc: DataService) {
+    this.tags = {
+      dairyFree: true,
+      glutenFree: true,
+      soyFree: true,
+      vegan: true
+    }
+  }
+
+  private checkCarbTags(recipe: Recipe): void {
+    let energy: number = recipe.nutrition.Energy,
+      reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
+      reqCarb: number = energy * 0.45 / 4.1,
+      reqFiber: number = energy * 0.06 / 2,
+      reqSugars: number = energy * 0.15 / 2.4;
+
+    if (recipe.nutrition.Fiber > reqFiber) {
+      recipe.tags.push('High-fiber');
+    } else if (recipe.nutrition.Fiber <= reqFiber / 2) {
+      recipe.tags.push('Low-fiber');
+    }
+
+    if (recipe.nutrition.Sugars > reqSugars) {
+      recipe.tags.push('High-sugar');
+    } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
+      recipe.tags.push('Low-sugar');
+    }
+
+    if (recipe.nutrition.Carbohydrates > reqCarb) {
+      recipe.tags.push('High-carb');
+    } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
+      recipe.tags.push('Low-carb');
+    }
+
+  }
+
+  private checkCarbLoss(recipe: Recipe): void {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
+      recipe.nutrition.Carbohydrates -= recipe.nutrition.Carbohydrates * 0.15;
+      recipe.nutrition.Fiber -= recipe.nutrition.Fiber * 0.15;
+      recipe.nutrition.Sugars -= recipe.nutrition.Sugars * 0.15;
+    }
+    if (recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching') {
+      recipe.nutrition.Carbohydrates -= recipe.nutrition.Carbohydrates * 0.5;
+      recipe.nutrition.Fiber -= recipe.nutrition.Fiber * 0.5;
+      recipe.nutrition.Sugars -= recipe.nutrition.Sugars * 0.5;
+    }
+  }
+
+  private checkEnergyTags(recipe: Recipe): void {
+    let energy: number = recipe.nutrition.Energy,
+      reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450
+
+    if (energy > reqEnergy) {
+      recipe.tags.push('High-calorie');
+    } else if (energy <= reqEnergy / 2) {
+      recipe.tags.push('Low-calorie');
+    }
+  }
 
   private checkHealthTags(recipe: Recipe): void {
     /**
@@ -20,133 +79,124 @@ export class RecipeService {
      * Protein has 4.1 kcal/g
      * Sugars have 2.4 kcal/g
      */
+    recipe.tags.splice(0, recipe.tags.length);
+    this.checkEnergyTags(recipe);
+    this.checkProteinTags(recipe);
+    this.checkLipidTags(recipe);
+    this.checkCarbTags(recipe);
+    this.checkIngredientTags(recipe);
+  }
+
+  private checkIngredientTags(recipe: Recipe): void {
+    if (this.tags.dairyFree) {
+      recipe.tags.push('Dairy-free');
+    }
+
+    if (this.tags.glutenFree) {
+      recipe.tags.push('Gluten-free');
+    }
+
+    if (this.tags.soyFree) {
+      recipe.tags.push('Soy-free');
+    }
+
+    if (this.tags.vegan) {
+      recipe.tags.push('Vegan');
+    }
+  }
+
+  private checkLipidTags(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
-      reqCarb: number = energy * 0.45 / 4.1,
       reqFat: number = energy * 0.35 / 9,
-      reqFiber: number = energy * 0.06 / 2,
-      reqProtein: number = energy * 0.2 / 4.1,
-      reqSatFat: number = energy * 0.1 / 9,
-      reqSugars: number = energy * 0.15 / 2.4;
-
-    if (energy > reqEnergy) {
-      if (recipe.tags.indexOf('High-calorie') === -1) {
-        recipe.tags.push('High-calorie');
-      }
-      if (recipe.tags.indexOf('Low-calorie') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-calorie'), 1);
-      }
-    } else if (energy <= reqEnergy / 2) {
-      if (recipe.tags.indexOf('Low-calorie') === -1) {
-        recipe.tags.push('Low-calorie');
-      }
-      if (recipe.tags.indexOf('High-calorie') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-calorie'), 1);
-      }
-    } else if (recipe.tags.indexOf('High-calorie') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-calorie'), 1);
-    } else if (recipe.tags.indexOf('Low-calorie') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-calorie'), 1);
-    }
+      reqSatFat: number = energy * 0.1 / 9;
 
     if (recipe.nutrition.Fats > reqFat) {
-      if (recipe.tags.indexOf('High-fat (good)') === -1) {
-        recipe.tags.push('High-fat (good)');
-      }
-      if (recipe.tags.indexOf('Low-fat (bad)') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-fat (bad)'), 1);
-      }
+      recipe.tags.push('High-fat (good)');
     } else if (recipe.nutrition.Fats <= reqFat / 2) {
-      if (recipe.tags.indexOf('Low-fat (bad)') === -1) {
-        recipe.tags.push('Low-fat (bad)');
-      }
-      if (recipe.tags.indexOf('High-fat (good)') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-fat (good)'), 1);
-      }
-    } else if (recipe.tags.indexOf('High-fat (good)') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-fat (good)'), 1);
-    } else if (recipe.tags.indexOf('Low-fat (bad)') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-fat (bad)'), 1);
-    }
-
-    if (recipe.nutrition.Fiber > reqFiber) {
-      if (recipe.tags.indexOf('High-fiber') === -1) {
-        recipe.tags.push('High-fiber');
-      }
-      if (recipe.tags.indexOf('Low-fiber') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-fiber'), 1);
-      }
-    } else if (recipe.nutrition.Fiber <= reqFiber / 2) {
-      if (recipe.tags.indexOf('Low-fiber') === -1) {
-        recipe.tags.push('Low-fiber');
-      }
-      if (recipe.tags.indexOf('High-fiber') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-fiber'), 1);
-      }
-    } else if (recipe.tags.indexOf('High-fiber') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-fiber'), 1);
-    } else if (recipe.tags.indexOf('Low-fiber') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-fiber'), 1);
-    }
-
-    if (recipe.nutrition.Protein > reqProtein) {
-      if (recipe.tags.indexOf('High-protein') === -1) {
-        recipe.tags.push('High-protein');
-      }
-      if (recipe.tags.indexOf('Low-protein') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-protein'), 1);
-      }
-    } else if (recipe.nutrition.Protein <= reqProtein / 2) {
-      if (recipe.tags.indexOf('Low-protein') === -1) {
-        recipe.tags.push('Low-protein');
-      }
-      if (recipe.tags.indexOf('High-protein') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-protein'), 1);
-      }
-    } else if (recipe.tags.indexOf('High-protein') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-protein'), 1);
-    } else if (recipe.tags.indexOf('Low-protein') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-protein'), 1);
+      recipe.tags.push('Low-fat (bad)');
     }
 
     if (recipe.nutrition['Saturated fat'] > reqSatFat) {
-      if (recipe.tags.indexOf('High-fat (bad)') === -1) {
-        recipe.tags.push('High-fat (bad)');
-      }
-      if (recipe.tags.indexOf('Low-fat (good)') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-fat (good)'), 1);
-      }
+      recipe.tags.push('High-fat (bad)');
     } else if (recipe.nutrition['Saturated fat'] <= reqSatFat / 2) {
-      if (recipe.tags.indexOf('Low-fat (good)') === -1) {
-        recipe.tags.push('Low-fat (good)');
-      }
-      if (recipe.tags.indexOf('High-fat (bad)') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-fat (bad)'), 1);
-      }
-    } else if (recipe.tags.indexOf('High-fat (bad)') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-fat (bad)'), 1);
-    } else if (recipe.tags.indexOf('Low-fat (good)') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-fat (good)'), 1);
+      recipe.tags.push('Low-fat (good)');
     }
+  }
 
-    if (recipe.nutrition.Sugars > reqSugars) {
-      if (recipe.tags.indexOf('High-sugar') === -1) {
-        recipe.tags.push('High-sugar');
+  private checkLipidLoss(recipe: Recipe): void {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
+      recipe.nutrition.Fats -= recipe.nutrition.Fats * 0.15;
+      recipe.nutrition['Monounsaturated fat'] -= recipe.nutrition['Monounsaturated fat'] * 0.15;
+      recipe.nutrition['Polyunsaturated fat'] -= recipe.nutrition['Polyunsaturated fat'] * 0.15;
+      recipe.nutrition['Saturated fat'] -= recipe.nutrition['Saturated fat'] * 0.15;
+      recipe.nutrition['Trans fat'] -= recipe.nutrition['Trans fat'] * 0.15;
+    }
+    if (recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching') {
+      recipe.nutrition.Fats -= recipe.nutrition.Fats * 0.5;
+      recipe.nutrition['Monounsaturated fat'] -= recipe.nutrition['Monounsaturated fat'] * 0.5;
+      recipe.nutrition['Polyunsaturated fat'] -= recipe.nutrition['Polyunsaturated fat'] * 0.5;
+      recipe.nutrition['Saturated fat'] -= recipe.nutrition['Saturated fat'] * 0.5;
+      recipe.nutrition['Trans fat'] -= recipe.nutrition['Trans fat'] * 0.5;
+    }
+  }
+
+  private checkMineralLoss(recipe: Recipe): void {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching'  || recipe.cookMethod === 'Boiling') {
+      for (let mineral in recipe.nutrition['minerals']) {
+        recipe.nutrition['minerals'][mineral] -= recipe.nutrition['minerals'][mineral] * 0.6;
       }
-      if (recipe.tags.indexOf('Low-sugar') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('Low-sugar'), 1);
+    } else if (recipe.cookTemperature >= 100) {
+      for (let mineral in recipe.nutrition['minerals']) {
+        recipe.nutrition['minerals'][mineral] -= recipe.nutrition['minerals'][mineral] * 0.4;
       }
-    } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
-      if (recipe.tags.indexOf('Low-sugar') === -1) {
-        recipe.tags.push('Low-sugar');
+    }
+  }
+
+  private checkNutrientLoss(recipe: Recipe): void {
+    this.checkCarbLoss(recipe);
+    this.checkLipidLoss(recipe);
+    this.checkMineralLoss(recipe);
+    this.checkProteinLoss(recipe);
+    this.checkVitaminLoss(recipe);
+  }
+
+  private checkProteinLoss(recipe: Recipe): void {
+    if (recipe.cookTemperature >= 200  || recipe.cookMethod === 'Boiling') {
+      recipe.nutrition.Protein -= recipe.nutrition.Protein * 0.15;
+      for (let aa in recipe.nutrition['amino acids']) {
+        recipe.nutrition['amino acids'][aa] -= recipe.nutrition['amino acids'][aa] * 0.15;
       }
-      if (recipe.tags.indexOf('High-fiber') !== -1) {
-        recipe.tags.splice(recipe.tags.indexOf('High-sugar'), 1);
+    }
+    if (recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching') {
+      recipe.nutrition.Protein -= recipe.nutrition.Protein * 0.5;
+      for (let aa in recipe.nutrition['amino acids']) {
+        recipe.nutrition['amino acids'][aa] -= recipe.nutrition['amino acids'][aa] * 0.5;
       }
-    } else if (recipe.tags.indexOf('High-fiber') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('High-sugar'), 1);
-    } else if (recipe.tags.indexOf('Low-sugar') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Low-sugar'), 1);
+    }
+  }
+
+  private checkProteinTags(recipe: Recipe): void {
+    let energy: number = recipe.nutrition.Energy,
+      reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
+      reqProtein: number = energy * 0.2 / 4.1;
+
+    if (recipe.nutrition.Protein > reqProtein) {
+      recipe.tags.push('High-protein');
+    } else if (recipe.nutrition.Protein <= reqProtein / 2) {
+      recipe.tags.push('Low-protein');
+    }
+  }
+
+  private checkVitaminLoss(recipe: Recipe): void {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching'  || recipe.cookMethod === 'Boiling') {
+      for (let vitamin in recipe.nutrition['vitamins']) {
+        recipe.nutrition['vitamins'][vitamin] -= recipe.nutrition['vitamins'][vitamin] * 0.75;
+      }
+    } else if (recipe.cookTemperature >= 100) {
+      for (let vitamin in recipe.nutrition['vitamins']) {
+        recipe.nutrition['vitamins'][vitamin] -= recipe.nutrition['vitamins'][vitamin] * 0.5;
+      }
     }
   }
 
@@ -155,23 +205,9 @@ export class RecipeService {
       let nutrients = recipe.nutrition[nutrientCategory];
       if (typeof nutrients === 'number') {
         recipe.nutrition[nutrientCategory] /= +recipe.servings;
-        if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
-          recipe.nutrition[nutrientCategory] -= recipe.nutrition[nutrientCategory] * 0.15
-        }
       } else if (typeof nutrients === 'object') {
         for (let nutrient in nutrients) {
           recipe.nutrition[nutrientCategory][nutrient] /= +recipe.servings;
-          if (recipe.cookMethod !== 'Raw' || recipe.cookMethod !== 'Pickling' || recipe.cookMethod !== 'Pasteurization') {
-            if (recipe.cookMethod === 'Freezing') {
-              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.05
-            } else if (nutrientCategory === 'vitamins') {
-              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.65
-            } else if (nutrientCategory === 'minerals') {
-              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.45
-            } else if (nutrientCategory === 'amino acids') {
-              recipe.nutrition[nutrientCategory][nutrient] -= recipe.nutrition[nutrientCategory][nutrient] * 0.15
-            }
-          }
         }
       }
     }
@@ -223,23 +259,19 @@ export class RecipeService {
   }
 
   public setRecipeNutrition(recipe: Recipe): void {
-    let dairyFree: boolean = true,
-      glutenFree: boolean = true,
-      soyFree: boolean = true,
-      vegan: boolean = true
     recipe.nutrition = new Nutrition();
     recipe.quantity = 0;
     // Set total recipe nutrition and quantity in grams
     recipe.ingredients.forEach(ingredient => {
       if (ingredient.category === 'Grains') {
-        glutenFree = false;
+        this.tags.glutenFree = false;
       } else if (ingredient.category === 'Meat') {
-        vegan = false;
+        this.tags.vegan = false;
       } else if (ingredient.category === 'Dairy') {
-        dairyFree = false;
+        this.tags.dairyFree = false;
       }
       if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
-        soyFree = false;
+        this.tags.soyFree = false;
       }
       recipe.quantity += ingredient.quantity;
       if (ingredient.hasOwnProperty('nutrition')) {
@@ -268,35 +300,8 @@ export class RecipeService {
         }
       }
     });
-    if (dairyFree) {
-      if (recipe.tags.indexOf('Dairy-free') === -1) {
-        recipe.tags.push('Dairy-free');
-      }
-    } else if (recipe.tags.indexOf('Dairy-free') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Dairy-free'), 1);
-    }
-    if (glutenFree) {
-      if (recipe.tags.indexOf('Gluten-free') === -1) {
-        recipe.tags.push('Gluten-free');
-      }
-    } else if (recipe.tags.indexOf('Gluten-free') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Gluten-free'), 1);
-    }
-    if (soyFree) {
-      if (recipe.tags.indexOf('Soy-free') === -1) {
-        recipe.tags.push('Soy-free');
-      }
-    } else if (recipe.tags.indexOf('Soy-free') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Soy-free'), 1);
-    }
-    if (vegan) {
-      if (recipe.tags.indexOf('Vegan') === -1) {
-        recipe.tags.push('Vegan');
-      }
-    } else if (recipe.tags.indexOf('Vegan') !== -1) {
-      recipe.tags.splice(recipe.tags.indexOf('Vegan'), 1);
-    }
 
+    this.checkNutrientLoss(recipe);
     this.portionRecipe(recipe);
     this.checkHealthTags(recipe);
   }
