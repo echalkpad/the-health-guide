@@ -22,8 +22,8 @@ export class DataService {
         currentDay = myDate.getDate(),
         currentMonth = myDate.getMonth() + 1,
         currentYear = myDate.getFullYear(),
-        currentDate = ((currentDay < 10) ? '0' + currentDay : currentDay) + '/' +
-          ((currentMonth < 10) ? '0' + currentMonth : currentMonth) + '/' + currentYear;
+        currentDate = currentYear + '/' + ((currentMonth < 10) ? '0' + currentMonth : currentMonth) + '/' + 
+        ((currentDay < 10) ? '0' + currentDay : currentDay);
 
       sessionStorage.setItem('date', currentDate);
     }

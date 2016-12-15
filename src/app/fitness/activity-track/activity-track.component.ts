@@ -116,7 +116,6 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public syncActivityTrack(): void {
-    this.loadingSvc.register('activity-track.load');
     if (this.dirty) {
       this.atDataSvc.setActivityTrack(this.auth.id, this.activityTrack);
       this.dataSvc.saveActivityTrack(this.activityTrack);
@@ -128,9 +127,9 @@ export class ActivityTrackComponent implements OnInit {
         this.activityTrack = at;
         this.dataSvc.saveActivityTrack(at);
         this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
-        this.loadingSvc.resolve('activity-track.load');
       }
     });
+
   }
 
   public toggleActivity(activityType: ActivityType, label: string, checkbox?: any): void {

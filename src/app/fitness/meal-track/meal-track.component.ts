@@ -110,6 +110,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public addSelectedMeals(mt: MealTime): void {
         this.dirty = true;
         mt.meals = [...mt.meals, ...this.selectedMeals];
+        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
         this.loadingSvc.register('mt-nutrition.load');
         this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
             this.mealTrack.nutrition = nutrition;
@@ -181,6 +182,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                         meal.quantity = +value;
                     }
                     if (mt) {
+                        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
                         this.loadingSvc.register('mt-nutrition.load');
                         this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
                             this.mealTrack.nutrition = nutrition;
@@ -210,6 +212,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public removeMeal(meal: Meal, mt: MealTime): void {
         this.dirty = true;
         mt.meals.splice(mt.meals.indexOf(meal), 1);
+        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
         this.mtSvc.setMealTrackNutrition(this.mealTrack);
     }
 
@@ -224,7 +227,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     public syncMealTrack(): void {
-        this.loadingSvc.register('meal-track.load');
         if (this.dirty) {
             this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
             this.dataSvc.saveMealTrack(this.mealTrack);
@@ -234,7 +236,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             if (!!mt && !!mt.hasOwnProperty('date')) {
                 this.mealTrack = mt;
                 this.dataSvc.saveMealTrack(mt);
-                this.loadingSvc.resolve('meal-track.load');
             }
         });
 

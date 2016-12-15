@@ -23,13 +23,13 @@ import { RecipeService } from '../shared/recipe.service';
 })
 export class RecipeEditComponent implements OnInit {
     @ViewChild('recipeForm') recipeForm: FormControl;
+    private isDirty: boolean = false;
     public aminoacids: string[] = [];
     public auth: Auth;
     public basicNutrients: string[] = [];
     public categories: string[];
     public cookMethods: string[];
     public currentPage: number = 1;
-    public doneEditing: boolean = false;
     public difficulties: string[];
     public filteredIngredients: Ingredient[] = [];
     public filteredTotal: number = 0;
@@ -139,10 +139,11 @@ export class RecipeEditComponent implements OnInit {
     public addInstruction(): void {
         this.instructions.push('');
         this.recipe.instructions = [...this.instructions];
+        this.isDirty = true;
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
-        if (this.doneEditing || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
+        if (!this.isDirty || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
             return true;
         }
         return new Promise(resolve => {
@@ -157,8 +158,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public cookRecipe(): void {
-        this.loadingSvc.register('cook.load');
-        this.doneEditing = true;
+        this.isDirty = false;
         this.syncNutrition();
         this.recipe.instructions = [...this.instructions];
         this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
@@ -191,6 +191,7 @@ export class RecipeEditComponent implements OnInit {
                         }
                         this.filter();
                         this.syncNutrition();
+                        this.isDirty = true;
                     }
                 }
             });
@@ -220,11 +221,13 @@ export class RecipeEditComponent implements OnInit {
 
     public removeIngredient(ingredient: Ingredient): void {
         this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
+        this.isDirty = true;
     }
 
     public removeInstruction(index: number) {
         this.instructions.splice(index, 1);
         this.recipe.instructions = [...this.instructions];
+        this.isDirty = true;
     }
 
     private showAlert(msg: string | Error, title: string): void {
@@ -245,6 +248,7 @@ export class RecipeEditComponent implements OnInit {
             this.recipe.image = img.name;
             this.toast.open('Upload complete!', 'OK');
         });
+        this.isDirty = true;
     }
 
     ngAfterViewInit(): void {

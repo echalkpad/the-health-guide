@@ -15,41 +15,43 @@
   </button>
 </md-toolbar>
 <div layout="column" layout-gt-xs="row">
-  <div layout="column" flex *tdLoading="'activity-track.load'" loadingType="circular">
-    <md-card class="activities" *ngFor="let at of activityTrack.activityTimes" flex>
-      <md-card-title>{{ at.time }}</md-card-title>
-      <md-card-content>
-        <template ngFor let-activity let-last="last" [ngForOf]="at.activities">
-          <md-list-item>
-            <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
-              <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
+  <div *ngIf="activityTrack.activityTimes.length" layout="column" flex>
+    <div flex *tdLoading="'activity-track.load'" loadingType="circular">
+      <md-card class="activities" *ngFor="let at of activityTrack.activityTimes" flex>
+        <md-card-title>{{ at.time }}</md-card-title>
+        <md-card-content>
+          <template ngFor let-activity let-last="last" [ngForOf]="at.activities">
+            <md-list-item>
+              <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+                <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
                 <md-icon>more_vert</md-icon>
               </button>
-              <md-menu x-position="after" #menu="mdMenu">
-                <button (click)="changeDuration(activity, at.activities)" md-menu-item>Edit</button>
-                <button (click)="removeActivity(activity, at)" md-menu-item>Delete</button>
-              </md-menu>
-              <span flex>{{ activity.name }}</span>
-              <span flex class="md-caption tc-grey-500">{{ activity.duration }}min</span>
-              <span class="md-caption tc-grey-500">{{ activity.energyConsumption }}kcal</span>
+                <md-menu x-position="after" #menu="mdMenu">
+                  <button (click)="changeDuration(activity, at.activities)" md-menu-item>Edit</button>
+                  <button (click)="removeActivity(activity, at)" md-menu-item>Delete</button>
+                </md-menu>
+                <span flex>{{ activity.name }}</span>
+                <span flex class="md-caption tc-grey-500">{{ activity.duration }}min</span>
+                <span class="md-caption tc-grey-500">{{ activity.energyConsumption }}kcal</span>
+              </div>
+            </md-list-item>
+            <md-divider md-inset></md-divider>
+          </template>
+          <md-list-item>
+            <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+              <span flex class="push-left-lg">Total</span>
+              <span flex class="md-caption tc-grey-500">{{ at.duration }}min</span>
+              <span class="md-caption tc-grey-500">{{ at.energyConsumption }}kcal</span>
             </div>
           </md-list-item>
-          <md-divider md-inset></md-divider>
-        </template>
-        <md-list-item>
-          <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
-            <span flex class="push-left-lg">Total</span>
-            <span flex class="md-caption tc-grey-500">{{ at.duration }}min</span>
-            <span class="md-caption tc-grey-500">{{ at.energyConsumption }}kcal</span>
-          </div>
-        </md-list-item>
-      </md-card-content>
-      <md-divider></md-divider>
-      <md-card-actions layout="column" layout-align="center center">
-        <button flex md-raised-button color="accent" (click)="addSelectedActivities(at)" [disabled]="!selectedActivityTypes.length">Add selected meals</button>
-        <button flex md-raised-button color="warn" (click)="removeActivityTime(at)">Remove activity time</button>
-      </md-card-actions>
-    </md-card>
+        </md-card-content>
+        <md-divider></md-divider>
+        <md-card-actions layout="column" layout-align="center center">
+          <button flex md-raised-button color="accent" (click)="addSelectedActivities(at)" [disabled]="!selectedActivityTypes.length">Add selected meals</button>
+          <button flex md-raised-button color="warn" (click)="removeActivityTime(at)">Remove activity time</button>
+        </md-card-actions>
+      </md-card>
+    </div>
   </div>
   <div layout="column" *ngIf="searchActivities" flex>
     <md-card *ngIf="selectedActivityTypes.length">

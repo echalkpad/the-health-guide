@@ -63,7 +63,7 @@ export class MealTrackService {
         fit.dailyRequirements.Water = fit.dailyRequirements.Energy;
         fit.dailyRequirements.Protein = (fit.dailyRequirements.Energy * 0.2) / 4.1;
         fit.dailyRequirements.Carbohydrates = (fit.dailyRequirements.Energy * 0.45) / 4.1;
-        fit.dailyRequirements.Sugars = (fit.dailyRequirements.Energy * 0.1) / 4.1;
+        fit.dailyRequirements.Sugars = (fit.dailyRequirements.Energy * 0.15) / 4.1;
         fit.dailyRequirements.Fats = (fit.dailyRequirements.Energy * 0.35) / 9;
         fit.dailyRequirements.Fiber = (fit.dailyRequirements.Energy * 0.015);
         fit.dailyRequirements['Monounsaturated fat'] = (fit.dailyRequirements.Energy * 0.2) / 9;
@@ -173,9 +173,9 @@ export class MealTrackService {
   public setMealTrackNutrition(mt: MealTracker): Promise<MealTrackNutrition> {
     return new Promise(resolve => {
       mt.nutrition = this.getMealTrackNutrition(mt);
+      console.log("Total nutrition:", mt.nutrition);
       this.getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
         console.log("Required nutrition:", requiredNutrition);
-        console.log("Total nutrition:", mt.nutrition);
         for (let nutrientCategory in requiredNutrition) {
           let reqNutrients = requiredNutrition[nutrientCategory],
             totalNutrients = mt.nutrition[nutrientCategory];
