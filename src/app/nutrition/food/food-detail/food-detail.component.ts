@@ -39,16 +39,10 @@ export class FoodDetailComponent implements OnInit {
     this.route.data.subscribe((data: { food: Food }) => {
       if (!!data) {
         this.food = Object.assign({}, data.food);
-        for (let prop in this.food['amino acids']) {
-          this.aminoacids.push(prop);
-        }
-        for (let prop in this.food['vitamins']) {
-          this.vitamins.push(prop);
-        }
-        for (let prop in this.food['minerals']) {
-          this.minerals.push(prop);
-        }
-         this.titleSvc.setTitle(this.food.name);
+        this.aminoacids = Object.keys(this.food['amino acids']);
+        this.vitamins = Object.keys(this.food['vitamins']);
+        this.minerals = Object.keys(this.food['minerals']);
+        this.titleSvc.setTitle(this.food.name);
         this.detector.markForCheck();
       }
     });

@@ -7,3 +7,14 @@
         color: white;
     }
 }
+
+.recipe {
+    @media all and (min-width: 1280px) {
+        width: 30%;
+    }
+    width: 100%;
+}
+
+.recipe-img {
+    height: 20%;
+}

@@ -1,0 +1,20 @@
+<td-layout-nav-list #list toolbarTitle="The Health Guide">
+    <md-nav-list list-items>
+        <a md-list-item [routerLink]="['/fitness']" (click)="list.toggle()">
+            <md-icon md-list-avatar>book</md-icon>
+            <h3 md-line>About</h3>
+        </a>
+        <a md-list-item [routerLink]="['tracking', 'activities']" (click)="list.toggle()">
+            <md-icon md-list-avatar>timer</md-icon>
+            <h3 md-line>Activity track</h3>
+        </a>
+        <a md-list-item [routerLink]="['tracking', 'meals']" (click)="list.toggle()">
+            <md-icon md-list-avatar>restaurant</md-icon>
+            <h3 md-line>Meal track</h3>
+        </a>
+    </md-nav-list>
+    <div nav-toolbar-content layout="row" flex>
+      <span>{{ pageTitle }}</span>
+    </div>
+    <router-outlet></router-outlet>
+</td-layout-nav-list>

@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
@@ -22,13 +23,13 @@ import { RecipeService } from '../shared/recipe.service';
 })
 export class RecipeEditComponent implements OnInit {
     @ViewChild('recipeForm') recipeForm: FormControl;
+    private isDirty: boolean = false;
     public aminoacids: string[] = [];
     public auth: Auth;
     public basicNutrients: string[] = [];
     public categories: string[];
     public cookMethods: string[];
     public currentPage: number = 1;
-    public doneEditing: boolean = false;
     public difficulties: string[];
     public filteredIngredients: Ingredient[] = [];
     public filteredTotal: number = 0;
@@ -50,7 +51,8 @@ export class RecipeEditComponent implements OnInit {
         public recipeSvc: RecipeService,
         private route: ActivatedRoute,
         private router: Router,
-        private titleSvc: Title
+        private titleSvc: Title,
+        private toast: MdSnackBar
     ) {
 
         this.basicNutrients = [
@@ -63,6 +65,8 @@ export class RecipeEditComponent implements OnInit {
             "Saturated fat",
             "Monounsaturated fat",
             "Polyunsaturated fat",
+            "Omega-3 fatty acids",
+            "Omega-6 fatty acids",
             "Trans fat"
         ];
 
@@ -83,6 +87,7 @@ export class RecipeEditComponent implements OnInit {
 
         this.cookMethods = [
             "Baking",
+            "Blanching",
             "Boiling",
             "Braising",
             "Freezing",
@@ -110,20 +115,6 @@ export class RecipeEditComponent implements OnInit {
         this.tags = [
             "Dairy-free",
             "Gluten-free",
-            "High-calorie",
-            "High-carb",
-            "High-fat (bad)",
-            "High-fat (good)",
-            "High-fiber",
-            "High-protein",
-            "High-sugar",
-            "Low-calorie",
-            "Low-carb",
-            "Low-fat (bad)",
-            "Low-fat (good)",
-            "Lof-fiber",
-            "Low-protein",
-            "Low-sugar",
             "Mediteranean",
             "Soy-free",
             "Vegan",
@@ -134,10 +125,11 @@ export class RecipeEditComponent implements OnInit {
     public addInstruction(): void {
         this.instructions.push('');
         this.recipe.instructions = [...this.instructions];
+        this.isDirty = true;
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
-        if (this.doneEditing || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
+        if (this.isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
             return true;
         }
         return new Promise(resolve => {
@@ -152,8 +144,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public cookRecipe(): void {
-        this.loadingSvc.register('cook.load');
-        this.doneEditing = true;
+        this.isDirty = false;
         this.syncNutrition();
         this.recipe.instructions = [...this.instructions];
         this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
@@ -163,49 +154,39 @@ export class RecipeEditComponent implements OnInit {
             } else {
                 this.recipeDataSvc.addRecipe(this.recipe);
             }
-            this.loadingSvc.resolve('cook.load');
-            this.dialogSvc.openAlert({
-                message: 'Your recipe is done. Getting you back to your recipes',
-                disableClose: false,
-                title: 'Cooking done',
-                closeButton: 'Close'
-            }).afterClosed().subscribe(() => this.router.navigate(['/nutrition/recipes']));
+            this.toast.open('Cooking done!', 'OK');
+            this.router.navigate(['/nutrition/recipes']);
         }, 2000);
     }
 
-    public changeQty(ingredient: Ingredient, notRemove?: boolean): void {
-        let index: number = this.recipe.ingredients.indexOf(ingredient);
-        if (notRemove || index === -1) {
-            this.dialogSvc.openPrompt({
-                message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('chef') ? 'units' : 'grams'}`,
-                disableClose: true,
-                value: "100",
-                title: `Enter ${ingredient.name}'s quantity`,
-            }).afterClosed().subscribe((value: string) => {
-                if (value) {
-                    if (typeof +value === 'number') {
-                        ingredient.quantity = +value;
-                        if (index === -1) {
-                            this.recipe.ingredients.push(ingredient);
-                            this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
-                        }
-                        this.filter();
-                        this.syncNutrition();
-                    }
+    public changeQty(ingredient: Ingredient): void {
+        this.dialogSvc.openPrompt({
+            message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
+            disableClose: true,
+            value: "100",
+            title: `Enter ${ingredient.name}'s quantity`,
+        }).afterClosed().subscribe((value: string) => {
+            if (value) {
+                if (typeof +value === 'number') {
+                    ingredient.quantity = +value;
+                    this.syncNutrition();
+                    this.isDirty = true;
                 }
-            });
-        } else {
-            this.recipe.ingredients.splice(index, 1);
-            this.ingredients.push(ingredient);
-            this.ingredients = [...this.helperSvc.sortByName(this.ingredients)];
-            this.filter();
-            this.syncNutrition();
-        }
+            }
+        });
     }
 
-    private filter(searchTerm: string = ''): void {
+    public clearAllSelections(): void {
+        this.ingredients = [...this.ingredients, ...this.recipe.ingredients];
+        this.recipe.ingredients = [];
+        this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+        this.filter();
+        this.isDirty = true;
+    }
+
+    public filter(searchTerm: string = ''): void {
         let newData: any[] = this.ingredients;
-        newData = this.recipeSvc.filterIngredients(newData, searchTerm);
+        newData = this.helperSvc.filterItems(newData, searchTerm);
         this.filteredTotal = newData.length;
         newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
         this.filteredIngredients = newData;
@@ -220,11 +201,13 @@ export class RecipeEditComponent implements OnInit {
 
     public removeIngredient(ingredient: Ingredient): void {
         this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
+        this.isDirty = true;
     }
 
     public removeInstruction(index: number) {
         this.instructions.splice(index, 1);
         this.recipe.instructions = [...this.instructions];
+        this.isDirty = true;
     }
 
     private showAlert(msg: string | Error, title: string): void {
@@ -240,8 +223,42 @@ export class RecipeEditComponent implements OnInit {
         this.recipeSvc.setRecipeNutrition(this.recipe);
     }
 
+    public toggleIngredient(ingredient: Ingredient): void {
+        this.isDirty = true;
+        let idx: number = this.recipe.ingredients.indexOf(ingredient);
+        if (idx === -1) {
+            this.dialogSvc.openPrompt({
+                message: `Enter the meal quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
+                disableClose: true,
+                value: `${ingredient.hasOwnProperty('nutrition') ? '1' : '100'}`,
+                title: `Enter ${ingredient.name}'s quantity`,
+            }).afterClosed().subscribe((value: string) => {
+                if (value) {
+                    if (typeof +value === 'number') {
+                        ingredient.quantity = +value;
+                        this.syncNutrition();
+                        this.recipe.ingredients.push(ingredient);
+                        this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
+                        this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+                        this.filter();
+                    }
+                }
+            });
+        } else {
+            this.recipe.ingredients.splice(idx, 1);
+            this.ingredients.push(ingredient);
+            this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+            this.filter();
+        }
+
+    }
+
     public uploadImage(img: File): void {
-        this.recipeDataSvc.uploadImage(img).then(() => this.recipe.image = img.name);
+        this.recipeDataSvc.uploadImage(img).then(() => {
+            this.recipe.image = img.name;
+            this.toast.open('Upload complete!', 'OK');
+        });
+        this.isDirty = true;
     }
 
     ngAfterViewInit(): void {
@@ -261,30 +278,26 @@ export class RecipeEditComponent implements OnInit {
             }
         });
         this.route.data.subscribe((data: { recipe: Recipe }) => {
-            if (!!data) {
-                this.recipe = Object.assign({}, data.recipe);
-                this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
-                    this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
-                        if (ingredient.name === rcpIngredient.name) {
-                            this.ingredients.splice(idx, 1);
-                            return;
-                        }
-                    });
+            this.recipe = Object.assign({}, data.recipe);
+            // Workaround untill applied to all recipes
+            this.recipe.goodPoints = [] || this.recipe.goodPoints;
+            this.recipe.badPoints = [] || this.recipe.badPoints;
+            //
+            this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
+                this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
+                    if (ingredient.name === rcpIngredient.name) {
+                        this.ingredients.splice(idx, 1);
+                        return;
+                    }
                 });
+            });
 
-                this.instructions = [...this.recipe.instructions];
-                this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
-                console.log(this.recipe);
-                for (let prop in this.recipe.nutrition['amino acids']) {
-                    this.aminoacids.push(prop);
-                }
-                for (let prop in this.recipe.nutrition['vitamins']) {
-                    this.vitamins.push(prop);
-                }
-                for (let prop in this.recipe.nutrition['minerals']) {
-                    this.minerals.push(prop);
-                }
-            }
+            this.instructions = [...this.recipe.instructions];
+            this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
+            console.log(this.recipe);
+            this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
+            this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
+            this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         });
     }
 

@@ -72,9 +72,9 @@ export class Nutrition {
         delete this.monounsatFat;
         this["Polyunsaturated fat"] = polyunsatFat;
         delete this.polyunsatFat;
-        this["Omega-3 fat"] = omega3Fat;
+        this["Omega-3 fatty acids"] = omega3Fat;
         delete this.omega3Fat;
-        this["Omega-6 fat"] = omega6Fat;
+        this["Omega-6 fatty acids"] = omega6Fat;
         delete this.omega6Fat;
         this["Trans fat"] = transFat;
         delete this.transFat;

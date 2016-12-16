@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TdLoadingService } from '@covalent/core';
-
 @Component({
   selector: 'app-nutrition',
   templateUrl: './nutrition.component.html',

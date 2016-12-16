@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
+import { HelperService } from '../../../shared/helper.service';
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
@@ -12,7 +13,7 @@ export class RecipeDataService {
   private allUsersRecipes: FirebaseListObservable<Recipe[]>;
   private recipeImgUrl: firebase.storage.Reference;
   private userRecipes: FirebaseListObservable<Recipe[]>;
-  constructor(private af: AngularFire, private auth: FirebaseAuth) {
+  constructor(private af: AngularFire, private auth: FirebaseAuth, private helperSvc: HelperService) {
     this.allUsersRecipes = af.database.list('/recipes', {
       query: {
         orderByChild: 'name'
@@ -30,19 +31,8 @@ export class RecipeDataService {
     this.recipeImgUrl = firebase.storage().ref().child('/recipes');
   }
 
-  private removeHashkeys(recipe: Recipe): void {
-    recipe.ingredients.forEach((ingredient: Ingredient) => {
-      if (ingredient.hasOwnProperty('$key')) {
-        delete ingredient['$key'];
-      }
-      if (ingredient.hasOwnProperty('$exists')) {
-        delete ingredient['$exists'];
-      }
-    });
-  }
-
   public addRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
+    this.helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.push(recipe);
   }
@@ -90,13 +80,15 @@ export class RecipeDataService {
   }
 
   public updateRecipe(recipe: Recipe): void {
-    this.removeHashkeys(recipe);
+    this.helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this.userRecipes.update(recipe['$key'], {
       name: recipe.name,
       image: recipe.image,
       category: recipe.category,
       tags: recipe.tags,
+      goodPoints: recipe.goodPoints,
+      badPoints: recipe.badPoints,
       chef: recipe.chef,
       ingredients: recipe.ingredients,
       duration: recipe.duration,

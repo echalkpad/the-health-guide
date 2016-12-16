@@ -21,6 +21,9 @@ export class AppComponent implements OnInit {
       },
       {
         title: "Nutrition", route: "/nutrition", icon: "spa"
+      },
+      {
+        title: "Fitness", route: "/fitness", icon: "fitness_center"
       }
     ];
   }

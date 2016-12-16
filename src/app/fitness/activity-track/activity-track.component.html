@@ -1,0 +1,115 @@
+<md-toolbar layout-align="center">
+  <button md-icon-button (click)="changeDate()">
+    <md-icon>today</md-icon>
+  </button>
+  <p class="md-body-1">{{ currentDate }}</p>
+  <span flex></span>
+  <button md-tooltip="Sync activity track" tooltip-position="below" md-icon-button (click)="syncActivityTrack()">
+    <md-icon>refresh</md-icon>
+  </button>
+  <md-slide-toggle [(ngModel)]="searchActivities">
+    Search activies
+  </md-slide-toggle>
+  <button md-tooltip="Add activity time" tooltip-position="below" md-icon-button (click)="addActivityTime()">
+    <md-icon>add</md-icon>
+  </button>
+</md-toolbar>
+<div layout="column" flex *tdLoading="'activity-track.load'" loadingType="circular">
+  <div layout="column" layout-gt-xs="row">
+    <div *ngIf="activityTrack.activityTimes.length" layout="column" flex>
+        <md-card class="activities" *ngFor="let at of activityTrack.activityTimes" flex>
+          <md-card-title>{{ at.time }}</md-card-title>
+          <md-card-content>
+            <template ngFor let-activity let-last="last" [ngForOf]="at.activities">
+              <md-list-item>
+                <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+                  <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
+                  <md-icon>more_vert</md-icon>
+                </button>
+                  <md-menu x-position="after" #menu="mdMenu">
+                    <button (click)="changeDuration(activity, at)" md-menu-item>Edit</button>
+                    <button (click)="removeActivity(activity, at)" md-menu-item>Delete</button>
+                  </md-menu>
+                  <span flex>{{ activity.name }}</span>
+                  <span flex class="md-caption tc-grey-500">{{ activity.duration }}min</span>
+                  <span class="md-caption tc-grey-500">{{ activity.energyConsumption }}kcal</span>
+                </div>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+            </template>
+            <md-list-item>
+              <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+                <span flex class="push-left-lg">Total</span>
+                <span flex class="md-caption tc-grey-500">{{ at.duration }}min</span>
+                <span class="md-caption tc-grey-500">{{ at.energyConsumption }}kcal</span>
+              </div>
+            </md-list-item>
+          </md-card-content>
+          <md-divider></md-divider>
+          <md-card-actions layout="column" layout-align="center center">
+            <button flex md-raised-button color="accent" (click)="addSelectedActivities(at)" [disabled]="!selectedActivityTypes.length">Add selected meals</button>
+            <button flex md-raised-button color="warn" (click)="removeActivityTime(at)">Remove activity time</button>
+          </md-card-actions>
+        </md-card>
+    </div>
+    <div layout="column" *ngIf="searchActivities" flex>
+      <md-card *ngIf="selectedActivityTypes.length">
+        <md-card-title layout="row" layout-align="start center">
+          Selected activities
+          <span flex></span>
+          <button (click)="clearAllSelections()" md-icon-button>
+            <md-icon>clear</md-icon>
+          </button>
+        </md-card-title>
+        <md-card-content>
+          <template ngFor let-activity let-last="last" [ngForOf]="selectedActivityTypes">
+            <md-list-item>
+              <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+                <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
+                  <md-icon>more_vert</md-icon>
+                </button>
+                <md-menu x-position="after" #menu="mdMenu">
+                  <button (click)="changeDuration(activity)" md-menu-item>Edit</button>
+                  <button (click)="toggleActivity(activity, activity.label)" md-menu-item>Delete</button>
+                </md-menu>
+                <span flex>{{ activity.label }}</span>
+                <span flex class="md-caption tc-grey-500">{{ activity.name }}</span>
+                <span flex class="md-caption tc-grey-500">{{ activity.duration }}min</span>
+                <span class="md-caption tc-grey-500">{{ activity.energyConsumption }}kcal</span>
+              </div>
+            </md-list-item>
+            <md-divider *ngIf="!last" md-inset></md-divider>
+          </template>
+        </md-card-content>
+      </md-card>
+      <div layout-margin>
+        <td-expansion-panel *ngFor="let activity of activities" [label]="activity.name">
+          <md-list>
+            <md-list-item *ngFor="let type of activity.types">
+              <md-checkbox #checkBox (click)="toggleActivity(type, activity.name, checkBox)" flex>
+                {{ type.name }}
+              </md-checkbox>
+            </md-list-item>
+          </md-list>
+        </td-expansion-panel>
+      </div>
+    </div>
+  </div>
+  <md-card flex>
+    <md-card-title>Total</md-card-title>
+    <md-card-content>
+      <md-list-item>
+        <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+          <span flex>Duration</span>
+          <span flex class="md-caption tc-grey-500">{{ activityTrack.duration }}min</span>
+        </div>
+      </md-list-item>
+      <md-list-item>
+        <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+          <span flex>Energy consumption</span>
+          <span flex class="md-caption tc-grey-500">{{ activityTrack.energyConsumption }}kcal</span>
+        </div>
+      </md-list-item>
+    </md-card-content>
+  </md-card>
+</div>

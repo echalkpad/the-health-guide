@@ -1,9 +1,5 @@
 :host /deep/ {
-    .md-tab-header {
-        background-color: white;
-        color: #4caf50;
-    }
-    .recipe-details {
+    .activities {
         md-card-actions button {
             margin: .5em;
             width: 100%;
@@ -14,8 +10,8 @@
             }
         }
     }
-}
-
-.tag {
-    margin: 10px;
+    .md-tab-header {
+        background-color: white;
+        color: #4caf50;
+    }
 }

@@ -32,27 +32,21 @@ export class RecipeDetailComponent implements OnInit {
       "Saturated fat",
       "Monounsaturated fat",
       "Polyunsaturated fat",
+      "Omega-3 fatty acids",
+      "Omega-6 fatty acids",
       "Trans fat"
     ];
   }
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { recipe: Recipe }) => {
-      if (!!data) {
-        this.recipe = Object.assign({}, data.recipe);
+      this.recipe = Object.assign({}, data.recipe);
         console.log(this.recipe);
-        for (let prop in this.recipe.nutrition['amino acids']) {
-          this.aminoacids.push(prop);
-        }
-        for (let prop in this.recipe.nutrition['vitamins']) {
-          this.vitamins.push(prop);
-        }
-        for (let prop in this.recipe.nutrition['minerals']) {
-          this.minerals.push(prop);
-        }
+        this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
+        this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
+        this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         this.titleSvc.setTitle(this.recipe.name);
         this.detector.markForCheck();
-      }
     });
   }
 

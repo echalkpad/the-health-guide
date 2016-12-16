@@ -1,170 +1,217 @@
 <div layout="column" class="md-content recipe">
-  <div layout="column" layout-gt-md="row">
-    <md-card flex>
-      <md-card-title class="md-display-1">{{ recipe.name }}</md-card-title>
-      <md-card-subtitle class="md-subhead">Made by {{ recipe.chef.name }}</md-card-subtitle>
-      <img md-card-image class="recipe-img" [src]="recipe.image">
-      <md-card-content>
-        <md-list>
-          <md-list-item>
-            <md-icon md-list-avatar>brush</md-icon>
-            <h3 md-line>Category</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.category }} </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar>layers</md-icon>
-            <h3 md-line>Difficulty</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.difficulty }} </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar>timelapse</md-icon>
-            <h3 md-line>Duration</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.duration }} </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar>room_service</md-icon>
-            <h3 md-line>Cooking method</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.cookMethod }} </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar>whatshot</md-icon>
-            <h3 md-line>Cooking temperature</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.cookTemperature }} </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar><i class="fa fa-balance-scale" aria-hidden="true"></i></md-icon>
-            <h3 md-line>Quantity</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.quantity }}g </p>
-          </md-list-item>
-          <md-divider md-inset></md-divider>
-          <md-list-item>
-            <md-icon md-list-avatar>local_dining</md-icon>
-            <h3 md-line>Servings</h3>
-            <span flex></span>
-            <p class="md-caption tc-grey-500"> {{ recipe.servings }} </p>
-          </md-list-item>
-        </md-list>
-      </md-card-content>
-    </md-card>
-    <md-card flex>
-      <md-card-title class="md-heading">Ingredients</md-card-title>
-      <md-divider></md-divider>
-      <md-card-content>
-        <md-list>
-          <template let-ingredient let-last="last" ngFor [ngForOf]="recipe.ingredients">
-            <md-list-item>
-              <h3 md-line>{{ ingredient.name }}</h3>
-              <span flex></span>
-              <p class="md-caption tc-grey-500"> {{ ingredient.quantity }}g </p>
-            </md-list-item>
-            <md-divider *ngIf="!last" md-inset></md-divider>
-          </template>
-        </md-list>
-      </md-card-content>
-    </md-card>
-  </div>
-  <div layout="column" layout-gt-md="row">
-    <md-card flex>
-      <md-card-title class="md-heading">Tags</md-card-title>
-      <md-divider></md-divider>
-      <md-card-content>
-        <button md-raised-button class="tag" color="accent" *ngFor="let tag of recipe.tags">
-        <md-icon>local_offer</md-icon>
-        {{ tag }}
-        </button>
-      </md-card-content>
-    </md-card>
-    <md-card flex>
-      <md-card-title class="md-heading">Instructions</md-card-title>
-      <md-divider></md-divider>
-      <md-card-content>
-        <ol>
-          <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
-        </ol>
-      </md-card-content>
-    </md-card>
-  </div>
-  <div layout="column" layout-gt-md="row">
-    <div layout="column" flex>
-      <md-card>
-        <md-card-title>Basic nutrition</md-card-title>
-        <md-card-content>
-          <md-list>
-            <md-list-item>
-              <h3 md-line>Energy</h3>
-              <span flex></span>
-              <div class="md-caption tc-grey-500"> {{ recipe.nutrition.Energy.toFixed() }}kcal </div>
-            </md-list-item>
-            <md-divider md-inset></md-divider>
-            <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
+  <md-tab-group>
+    <md-tab>
+      <template md-tab-label>Details</template>
+      <div layout="column" layout-gt-md="row">
+        <md-card flex>
+          <md-card-title class="md-display-1">{{ recipe.name }}</md-card-title>
+          <md-card-subtitle class="md-subhead">Made by {{ recipe.chef.name }}</md-card-subtitle>
+          <img md-card-image class="recipe-img" [src]="recipe.image">
+          <md-card-content>
+            <md-list>
               <md-list-item>
-                <h3 md-line>{{ item }}</h3>
+                <md-icon md-list-avatar>brush</md-icon>
+                <h3 md-line>Category</h3>
                 <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item].toFixed(2) }}g </div>
+                <p class="md-caption tc-grey-500"> {{ recipe.category }} </p>
               </md-list-item>
-              <md-divider *ngIf="!last" md-inset></md-divider>
-            </template>
-          </md-list>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar>layers</md-icon>
+                <h3 md-line>Difficulty</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.difficulty }} </p>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar>timelapse</md-icon>
+                <h3 md-line>Duration</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.duration }} </p>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar>room_service</md-icon>
+                <h3 md-line>Cooking method</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.cookMethod }} </p>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar>whatshot</md-icon>
+                <h3 md-line>Cooking temperature</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.cookTemperature }} </p>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar><i class="fa fa-balance-scale" aria-hidden="true"></i></md-icon>
+                <h3 md-line>Quantity</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.quantity }}g </p>
+              </md-list-item>
+              <md-divider md-inset></md-divider>
+              <md-list-item>
+                <md-icon md-list-avatar>local_dining</md-icon>
+                <h3 md-line>Servings</h3>
+                <span flex></span>
+                <p class="md-caption tc-grey-500"> {{ recipe.servings }} </p>
+              </md-list-item>
+            </md-list>
+          </md-card-content>
+        </md-card>
+        <div layout="column" flex>
+          <md-card flex>
+            <md-card-title class="md-heading">Ingredients</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <md-list>
+                <template let-ingredient let-last="last" ngFor [ngForOf]="recipe.ingredients">
+                  <md-list-item>
+                    <h3 md-line>{{ ingredient.name }}</h3>
+                    <span flex></span>
+                    <p class="md-caption tc-grey-500"> {{ ingredient.quantity }}g </p>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Tags</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.tags" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_up_down</md-icon>
+                  No tags
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
+              <md-icon>local_offer</md-icon>
+              {{ tag }}
+              </button>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Good points</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.goodPoints" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_down</md-icon>
+                  No good points
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
+              <md-icon>thumb_up</md-icon>
+              {{ point }}
+              </button>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Bad points</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.badPoints" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_down</md-icon>
+                  No bad points
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="warn" *ngFor="let point of recipe.badPoints">
+              <md-icon>thumb_down</md-icon>
+              {{ point }}
+              </button>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+      <md-card flex>
+        <md-card-title class="md-heading">Instructions</md-card-title>
+        <md-divider></md-divider>
+        <md-card-content>
+          <ol>
+            <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
+          </ol>
         </md-card-content>
       </md-card>
-      <md-card>
-        <md-card-title>Amino acids</md-card-title>
-        <md-card-content>
-          <md-list>
-            <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
-              <md-list-item>
-                <h3 md-line>{{ item }}</h3>
-                <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item].toFixed(2) }}g </div>
-              </md-list-item>
-              <md-divider *ngIf="!last" md-inset></md-divider>
-            </template>
-          </md-list>
-        </md-card-content>
-      </md-card>
-    </div>
-    <div layout="column" flex>
-      <md-card>
-        <md-card-title>Vitamins</md-card-title>
-        <md-card-content>
-          <md-list>
-            <template let-item let-last="last" ngFor [ngForOf]="vitamins">
-              <md-list-item>
-                <h3 md-line>{{ item }}</h3>
-                <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item].toFixed(2) }}mg </div>
-              </md-list-item>
-              <md-divider *ngIf="!last" md-inset></md-divider>
-            </template>
-          </md-list>
-        </md-card-content>
-      </md-card>
-      <md-card>
-        <md-card-title>Minerals</md-card-title>
-        <md-card-content>
-          <md-list>
-            <template let-item let-last="last" ngFor [ngForOf]="minerals">
-              <md-list-item>
-                <h3 md-line>{{ item }}</h3>
-                <span flex></span>
-                <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item].toFixed(2) }}mg </div>
-              </md-list-item>
-              <md-divider *ngIf="!last" md-inset></md-divider>
-            </template>
-          </md-list>
-        </md-card-content>
-      </md-card>
-    </div>
-  </div>
+    </md-tab>
+    <md-tab>
+      <template md-tab-label>Nutrition</template>
+      <div layout="column" layout-gt-md="row">
+        <div layout="column" flex>
+          <md-card>
+            <md-card-title>Basic nutrition</md-card-title>
+            <md-card-content>
+              <md-list>
+                <md-list-item>
+                  <h3 md-line>Energy</h3>
+                  <span flex></span>
+                  <div class="md-caption tc-grey-500"> {{ recipe.nutrition.Energy.toFixed() }}kcal </div>
+                </md-list-item>
+                <md-divider md-inset></md-divider>
+                <template let-item let-last="last" ngFor [ngForOf]="basicNutrients">
+                  <md-list-item>
+                    <h3 md-line>{{ item }}</h3>
+                    <span flex></span>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition[item].toFixed(2) }}g </div>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+          <md-card>
+            <md-card-title>Amino acids</md-card-title>
+            <md-card-content>
+              <md-list>
+                <template let-item let-last="last" ngFor [ngForOf]="aminoacids">
+                  <md-list-item>
+                    <h3 md-line>{{ item }}</h3>
+                    <span flex></span>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['amino acids'][item].toFixed(2)}}g </div>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+        </div>
+        <div layout="column" flex>
+          <md-card>
+            <md-card-title>Vitamins</md-card-title>
+            <md-card-content>
+              <md-list>
+                <template let-item let-last="last" ngFor [ngForOf]="vitamins">
+                  <md-list-item>
+                    <h3 md-line>{{ item }}</h3>
+                    <span flex></span>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['vitamins'][item].toFixed(2) }}mg </div>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+          <md-card>
+            <md-card-title>Minerals</md-card-title>
+            <md-card-content>
+              <md-list>
+                <template let-item let-last="last" ngFor [ngForOf]="minerals">
+                  <md-list-item>
+                    <h3 md-line>{{ item }}</h3>
+                    <span flex></span>
+                    <div class="md-caption tc-grey-500"> {{ recipe.nutrition['minerals'][item].toFixed(2) }}mg </div>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+        </div>
+      </div>
+
+    </md-tab>
+  </md-tab-group>
 </div>

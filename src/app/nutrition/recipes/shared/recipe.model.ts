@@ -11,6 +11,8 @@ export class Recipe {
         public image: string = "recipe.jpg",
         public category: string = "",
         public tags: string[] = [],
+        public goodPoints: string[] = [],
+        public badPoints: string[] = [],
         public ingredients: Ingredient[] = [],
         public duration: number = 1,
         public difficulty: string = "Easy",
@@ -19,6 +21,7 @@ export class Recipe {
         public nutrition: Nutrition = new Nutrition(),
         public servings: number = 1,
         public instructions: string[] = [],
-        public quantity: number = 0
+        public quantity: number = 0,
+        public amount: number = 1
     ) {}
 }
