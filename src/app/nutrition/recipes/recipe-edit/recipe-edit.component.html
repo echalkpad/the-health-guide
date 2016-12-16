@@ -2,8 +2,9 @@
   <md-tab-group>
     <md-tab>
       <template md-tab-label>Details</template>
-      <div layout="column" layout-gt-lg="row">
-        <md-card flex class="recipe-details">
+      <div layout="column">
+        <div layout="column" layout-gt-lg="row">
+          <md-card flex class="recipe-details">
           <md-card-title>Cooking time</md-card-title>
           <md-card-subtitle>Create a new healthy and delicious recipe</md-card-subtitle>
           <md-divider></md-divider>
@@ -95,10 +96,6 @@
                 </div>
               </div>
               <md-divider></md-divider>
-              <td-chips flex placeholder="Enter tag" [items]="tags" [(ngModel)]="recipe.tags" name="recipe.tags" [readOnly]="false" requireMatch>
-                <span md-prefix><md-icon>local_offer</md-icon></span>
-              </td-chips>
-              <md-divider></md-divider>
               <div class="pad-left-xs pad-right-xs pad-bottom-xs pad-top-md" layout="row" layout-align="start center">
                 <i class="fa fa-2x fa-balance-scale" aria-hidden="true"></i> Quantity per serving
                 <span flex></span>
@@ -114,6 +111,57 @@
           </md-card-actions>
         </md-card>
         <div layout="column" flex>
+            <md-card flex>
+              <md-card-title class="md-heading">Tags</md-card-title>
+              <md-divider></md-divider>
+              <md-card-content>
+                <div *ngIf="!recipe.tags.length" flex class="text-center">
+                  <div flex layout="row" layout-align="center center" class="md-title">
+                    <md-icon class="push-right-xs">thumb_up_down</md-icon>
+                    No tags
+                  </div>
+                </div>
+                <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
+                <md-icon>local_offer</md-icon>
+                {{ tag }}
+                </button>
+              </md-card-content>
+            </md-card>
+            <md-card flex>
+              <md-card-title class="md-heading">Good points</md-card-title>
+              <md-divider></md-divider>
+              <md-card-content>
+                <div *ngIf="!recipe.goodPoints.length" flex class="text-center">
+                  <div flex layout="row" layout-align="center center" class="md-title">
+                    <md-icon class="push-right-xs">thumb_down</md-icon>
+                    No good points
+                  </div>
+                </div>
+                <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
+                <md-icon>thumb_up</md-icon>
+                {{ point }}
+                </button>
+              </md-card-content>
+            </md-card>
+            <md-card flex>
+              <md-card-title class="md-heading">Bad points</md-card-title>
+              <md-divider></md-divider>
+              <md-card-content>
+                <div *ngIf="!recipe.badPoints.length" flex class="text-center">
+                  <div flex layout="row" layout-align="center center" class="md-title">
+                    <md-icon class="push-right-xs">thumb_up</md-icon>
+                    No bad points
+                  </div>
+                </div>
+                <button md-raised-button class="tag" color="warn" *ngFor="let point of recipe.badPoints">
+                <md-icon>thumb_down</md-icon>
+                {{ point }}
+                </button>
+              </md-card-content>
+            </md-card>
+          </div>
+        </div>
+        <div layout="column" layout-gt-lg="row">
           <md-card flex *ngIf="recipe.ingredients.length">
             <md-card-title layout="row" layout-align="start center">
               Ingredients

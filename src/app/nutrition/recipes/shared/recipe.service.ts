@@ -17,7 +17,7 @@ export class RecipeService {
     }
   }
 
-  private checkCarbTags(recipe: Recipe): void {
+  private checkCarbPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqCarb: number = energy * 0.45 / 4.1,
@@ -25,21 +25,21 @@ export class RecipeService {
       reqSugars: number = energy * 0.15 / 2.4;
 
     if (recipe.nutrition.Fiber > reqFiber) {
-      recipe.tags.push('High-fiber');
+      recipe.goodPoints.push('High-fiber');
     } else if (recipe.nutrition.Fiber <= reqFiber / 2) {
-      recipe.tags.push('Low-fiber');
+      recipe.badPoints.push('Low-fiber');
     }
 
     if (recipe.nutrition.Sugars > reqSugars) {
-      recipe.tags.push('High-sugar');
+      recipe.badPoints.push('High-sugar');
     } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
-      recipe.tags.push('Low-sugar');
+      recipe.goodPoints.push('Low-sugar');
     }
 
     if (recipe.nutrition.Carbohydrates > reqCarb) {
-      recipe.tags.push('High-carb');
+      recipe.badPoints.push('High-carb');
     } else if (recipe.nutrition.Sugars <= reqSugars / 2) {
-      recipe.tags.push('Low-carb');
+      recipe.goodPoints.push('Low-carb');
     }
 
   }
@@ -57,14 +57,14 @@ export class RecipeService {
     }
   }
 
-  private checkEnergyTags(recipe: Recipe): void {
+  private checkEnergyPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450
 
     if (energy > reqEnergy) {
-      recipe.tags.push('High-calorie');
+      recipe.badPoints.push('High-calorie');
     } else if (energy <= reqEnergy / 2) {
-      recipe.tags.push('Low-calorie');
+      recipe.goodPoints.push('Low-calorie');
     }
   }
 
@@ -79,15 +79,18 @@ export class RecipeService {
      * Protein has 4.1 kcal/g
      * Sugars have 2.4 kcal/g
      */
+
+    recipe.goodPoints.splice(0, recipe.goodPoints.length);
+    recipe.badPoints.splice(0, recipe.badPoints.length);
     recipe.tags.splice(0, recipe.tags.length);
-    this.checkEnergyTags(recipe);
-    this.checkProteinTags(recipe);
-    this.checkLipidTags(recipe);
-    this.checkCarbTags(recipe);
-    this.checkIngredientTags(recipe);
+    this.checkEnergyPoints(recipe);
+    this.checkProteinPoints(recipe);
+    this.checkLipidPoints(recipe);
+    this.checkCarbPoints(recipe);
+    this.checkTags(recipe);
   }
 
-  private checkIngredientTags(recipe: Recipe): void {
+  private checkTags(recipe: Recipe): void {
     if (this.tags.dairyFree) {
       recipe.tags.push('Dairy-free');
     }
@@ -105,22 +108,22 @@ export class RecipeService {
     }
   }
 
-  private checkLipidTags(recipe: Recipe): void {
+  private checkLipidPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqFat: number = energy * 0.35 / 9,
       reqSatFat: number = energy * 0.1 / 9;
 
     if (recipe.nutrition.Fats > reqFat) {
-      recipe.tags.push('High-fat (good)');
+      recipe.goodPoints.push('High unsaturated fat');
     } else if (recipe.nutrition.Fats <= reqFat / 2) {
-      recipe.tags.push('Low-fat (bad)');
+      recipe.badPoints.push('Low unsaturated fat');
     }
 
     if (recipe.nutrition['Saturated fat'] > reqSatFat) {
-      recipe.tags.push('High-fat (bad)');
+      recipe.badPoints.push('High saturated fat');
     } else if (recipe.nutrition['Saturated fat'] <= reqSatFat / 2) {
-      recipe.tags.push('Low-fat (good)');
+      recipe.goodPoints.push('Low saturated fat');
     }
   }
 
@@ -176,15 +179,15 @@ export class RecipeService {
     }
   }
 
-  private checkProteinTags(recipe: Recipe): void {
+  private checkProteinPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqProtein: number = energy * 0.2 / 4.1;
 
     if (recipe.nutrition.Protein > reqProtein) {
-      recipe.tags.push('High-protein');
+      recipe.goodPoints.push('High-protein');
     } else if (recipe.nutrition.Protein <= reqProtein / 2) {
-      recipe.tags.push('Low-protein');
+      recipe.badPoints.push('Low-protein');
     }
   }
 
