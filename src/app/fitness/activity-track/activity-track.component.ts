@@ -21,8 +21,9 @@ export class ActivityTrackComponent implements OnInit {
   public activities: Activity[] = [];
   public activityTrack: ActivityTracker = new ActivityTracker();
   public auth: Auth;
+  public checkedActivities: HTMLInputElement[] = [];
   public currentDate: string = "";
-  public dirty: boolean = false;
+  public isDirty: boolean = false;
   public searchActivities: boolean = true;
   public selectedActivityTypes: ActivityType[] = [];
 
@@ -49,7 +50,7 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public addActivityTime(): void {
-    this.dirty = true;
+    this.isDirty = true;
     let date: Date = new Date();
     this.dialogSvc.openPrompt({
       message: 'Format: hh:mm',
@@ -70,7 +71,7 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public canDeactivate(): Promise<boolean> | boolean {
-    if (!this.dirty) {
+    if (this.isDirty === false) {
       return true;
     }
     return new Promise(resolve => {
@@ -98,29 +99,36 @@ export class ActivityTrackComponent implements OnInit {
     });
   }
 
+  public clearAllSelections(): void {
+    this.selectedActivityTypes = [];
+    this.checkedActivities.forEach((checkBox: HTMLInputElement) => checkBox.checked = false);
+    this.checkedActivities = [];
+    this.isDirty = true;
+  }
+
   public findActivityType(activityType: ActivityType, label: string): null | ActivityType {
     return this.atSvc.searchActivityType(this.selectedActivityTypes, activityType.name, label);
   }
 
   public removeActivity(activity: ActivityType, at: ActivityTime): void {
-    this.dirty = true;
+    this.isDirty = true;
     at.activities.splice(at.activities.indexOf(activity), 1);
     this.atSvc.setActivityTimeTotal(at);
     this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public removeActivityTime(at: ActivityTime): void {
-    this.dirty = true;
+    this.isDirty = true;
     this.activityTrack.activityTimes.splice(this.activityTrack.activityTimes.indexOf(at), 1);
     this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public syncActivityTrack(): void {
-    if (this.dirty) {
+    if (this.isDirty) {
       this.atDataSvc.setActivityTrack(this.auth.id, this.activityTrack);
       this.dataSvc.saveActivityTrack(this.activityTrack);
       this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
-      this.dirty = false;
+      this.isDirty = false;
     }
     this.atDataSvc.getActivityTrack(this.auth.id, this.currentDate).subscribe((at: ActivityTracker) => {
       if (!!at && !!at.hasOwnProperty('date')) {
@@ -132,8 +140,8 @@ export class ActivityTrackComponent implements OnInit {
 
   }
 
-  public toggleActivity(activityType: ActivityType, label: string, checkbox?: any): void {
-    this.dirty = true;
+  public toggleActivity(activityType: ActivityType, label: string, checkbox?: HTMLInputElement): void {
+    this.isDirty = true;
     let foundActivity: null | ActivityType = this.findActivityType(activityType, label);
     if (!foundActivity) {
       this.dialogSvc.openPrompt({
@@ -148,16 +156,19 @@ export class ActivityTrackComponent implements OnInit {
             this.selectedActivityTypes.push(newActivity);
             if (checkbox) {
               checkbox.checked = true;
+              this.checkedActivities.push(checkbox);
             }
           }
         } else if (checkbox) {
           checkbox.checked = false;
+          this.checkedActivities.splice(this.checkedActivities.indexOf(checkbox), 1);
         }
       });
     } else {
-      this.selectedActivityTypes.splice(
-        this.selectedActivityTypes.indexOf(foundActivity), 1
-      );
+      let index: number = this.selectedActivityTypes.indexOf(foundActivity);
+      this.selectedActivityTypes.splice(index, 1);
+      this.checkedActivities[index].checked = false;
+      this.checkedActivities.splice(index, 1);
     }
   }
 

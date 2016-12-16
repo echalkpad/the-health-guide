@@ -60,7 +60,13 @@
   <md-tab>
     <template md-tab-label>Select meals</template>
     <md-card *ngIf="selectedMeals.length">
-      <md-card-title>Selected meals</md-card-title>
+      <md-card-title layout="row" layout-align="start center">
+        Selected meals
+        <span flex></span>
+        <button (click)="clearAllSelections()" md-icon-button>
+          <md-icon>clear</md-icon>
+        </button>
+      </md-card-title>
       <md-card-content>
         <template ngFor let-last="last" let-meal [ngForOf]="selectedMeals">
           <md-list-item>
@@ -92,7 +98,7 @@
             <template ngFor let-meal let-last="last" [ngForOf]="filteredMeals">
               <md-list-item>
                 <div layout="row" layout-align="start center" style="width: 100%;">
-                  <md-checkbox #checkBox (click)="toggleSelectedMeal(meal, checkBox)" flex>
+                  <md-checkbox (click)="toggleSelectedMeal(meal)" flex>
                     {{ meal.name }}
                   </md-checkbox>
                   <span flex></span>

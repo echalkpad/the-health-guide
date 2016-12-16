@@ -35,7 +35,7 @@ export class RecipeEditComponent implements OnInit {
     public filteredTotal: number = 0;
     public ingredients: Ingredient[] = [];
     public instructions: string[] = [];
-    public pageSize: number = 10;
+    public pageSize: number = 5;
     public recipe: Recipe;
     public startPage: number = 1;
     public tags: string[];
@@ -143,7 +143,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
-        if (!this.isDirty || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
+        if (this.isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
             return true;
         }
         return new Promise(resolve => {
@@ -173,35 +173,29 @@ export class RecipeEditComponent implements OnInit {
         }, 2000);
     }
 
-    public changeQty(ingredient: Ingredient, notRemove?: boolean): void {
-        let index: number = this.recipe.ingredients.indexOf(ingredient);
-        if (notRemove || index === -1) {
-            this.dialogSvc.openPrompt({
-                message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
-                disableClose: true,
-                value: "100",
-                title: `Enter ${ingredient.name}'s quantity`,
-            }).afterClosed().subscribe((value: string) => {
-                if (value) {
-                    if (typeof +value === 'number') {
-                        ingredient.quantity = +value;
-                        if (index === -1) {
-                            this.recipe.ingredients.push(ingredient);
-                            this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
-                        }
-                        this.filter();
-                        this.syncNutrition();
-                        this.isDirty = true;
-                    }
+    public changeQty(ingredient: Ingredient): void {
+        this.dialogSvc.openPrompt({
+            message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
+            disableClose: true,
+            value: "100",
+            title: `Enter ${ingredient.name}'s quantity`,
+        }).afterClosed().subscribe((value: string) => {
+            if (value) {
+                if (typeof +value === 'number') {
+                    ingredient.quantity = +value;
+                    this.syncNutrition();
+                    this.isDirty = true;
                 }
-            });
-        } else {
-            this.recipe.ingredients.splice(index, 1);
-            this.ingredients.push(ingredient);
-            this.ingredients = [...this.helperSvc.sortByName(this.ingredients)];
-            this.filter();
-            this.syncNutrition();
-        }
+            }
+        });
+    }
+
+    public clearAllSelections(): void {
+        this.ingredients = [...this.ingredients, ...this.recipe.ingredients];
+        this.recipe.ingredients = [];
+        this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+        this.filter();
+        this.isDirty = true;
     }
 
     public filter(searchTerm: string = ''): void {
@@ -241,6 +235,36 @@ export class RecipeEditComponent implements OnInit {
 
     public syncNutrition(): void {
         this.recipeSvc.setRecipeNutrition(this.recipe);
+    }
+
+    public toggleIngredient(ingredient: Ingredient): void {
+        this.isDirty = true;
+        let idx: number = this.recipe.ingredients.indexOf(ingredient);
+        if (idx === -1) {
+            this.dialogSvc.openPrompt({
+                message: `Enter the meal quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
+                disableClose: true,
+                value: `${ingredient.hasOwnProperty('nutrition') ? '1' : '100'}`,
+                title: `Enter ${ingredient.name}'s quantity`,
+            }).afterClosed().subscribe((value: string) => {
+                if (value) {
+                    if (typeof +value === 'number') {
+                        ingredient.quantity = +value;
+                        this.syncNutrition();
+                        this.recipe.ingredients.push(ingredient);
+                        this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
+                        this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+                        this.filter();
+                    }
+                }
+            });
+        } else {
+            this.recipe.ingredients.splice(idx, 1);
+            this.ingredients.push(ingredient);
+            this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
+            this.filter();
+        }
+
     }
 
     public uploadImage(img: File): void {

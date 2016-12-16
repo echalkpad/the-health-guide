@@ -55,7 +55,13 @@
   </div>
   <div layout="column" *ngIf="searchActivities" flex>
     <md-card *ngIf="selectedActivityTypes.length">
-      <md-card-title>Selected activities</md-card-title>
+      <md-card-title layout="row" layout-align="start center">
+        Selected activities
+        <span flex></span>
+        <button (click)="clearAllSelections()" md-icon-button>
+          <md-icon>clear</md-icon>
+        </button>
+      </md-card-title>
       <md-card-content>
         <template ngFor let-activity let-last="last" [ngForOf]="selectedActivityTypes">
           <md-list-item>

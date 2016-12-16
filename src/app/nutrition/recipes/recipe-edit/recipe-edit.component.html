@@ -109,11 +109,39 @@
           <md-divider></md-divider>
           <md-card-actions layout="column" layout-align="center center">
             <button md-raised-button flex color="accent" [disabled]="!recipeForm.form.valid || recipe.ingredients.length === 0 || recipe.instructions.length === 0 || recipe.tags.length === 0" (click)="cookRecipe()">
-          Cook it!
-        </button>
+              Cook it!
+            </button>
           </md-card-actions>
         </md-card>
-        <md-card flex>
+        <div layout="column" flex>
+          <md-card flex *ngIf="recipe.ingredients.length">
+            <md-card-title layout="row" layout-align="start center">
+              Ingredients
+              <span flex></span>
+              <button (click)="clearAllSelections()" md-icon-button>
+                <md-icon>clear</md-icon>
+              </button>
+            </md-card-title>
+             <md-card-content>
+              <template ngFor let-ingredient let-last="last" [ngForOf]="recipe.ingredients">
+                <md-list-item>
+                  <div layout="row" layout-align="center center" style="width: 100%;" layout-padding>
+                    <button class="push-right-xl" md-icon-button color="accent" [md-menu-trigger-for]="menu">
+                      <md-icon>more_vert</md-icon>
+                    </button>
+                    <md-menu x-position="after" #menu="mdMenu">
+                      <button (click)="changeQty(ingredient)" md-menu-item>Edit</button>
+                      <button (click)="toggleIngredient(ingredient)" md-menu-item>Delete</button>
+                    </md-menu>
+                    <span flex>{{ ingredient.name }}</span>
+                    <span flex class="md-caption tc-grey-500">{{ ingredient.quantity }}</span>
+                  </div>
+                </md-list-item>
+                <md-divider *ngIf="!last" md-inset></md-divider>
+              </template>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
           <td-search-box class="push-left push-right" placeholder="Search ingredients" [alwaysVisible]="true" (searchDebounce)="filter($event)"></td-search-box>
           <md-divider></md-divider>
           <div *tdLoading="'ingredients.load'" loadingType="circular">
@@ -122,24 +150,10 @@
                 <div class="md-padding" *ngIf="!filteredIngredients || filteredIngredients.length === 0" layout="row" layout-align="center center">
                   <h3>No ingredients to display.</h3>
                 </div>
-                <template ngFor let-ingredient [ngForOf]="recipe.ingredients">
-                  <md-list-item>
-                    <div layout="row" layout-align="start center" style="width: 100%;">
-                      <md-checkbox (click)="changeQty(ingredient, false)" flex [checked]="recipe.ingredients.indexOf(ingredient) > -1">
-                        {{ ingredient.name }}
-                      </md-checkbox>
-                      <span flex class="md-caption tc-grey-500">{{ ingredient.quantity }}g</span>
-                      <button md-icon-button (click)="changeQty(ingredient, true)">
-                        <md-icon>create</md-icon>
-                      </button>
-                    </div>
-                  </md-list-item>
-                  <md-divider *ngIf="!last" md-inset></md-divider>
-                </template>
                 <template ngFor let-ingredient [ngForOf]="filteredIngredients">
                   <md-list-item>
                     <div layout="row" layout-align="start center" style="width: 100%;">
-                      <md-checkbox (click)="changeQty(ingredient)" flex>
+                      <md-checkbox (click)="toggleIngredient(ingredient)" flex>
                         {{ ingredient.name }}
                       </md-checkbox>
                       <span flex></span>
@@ -156,6 +170,7 @@
             </md-card-actions>
           </div>
         </md-card>
+        </div>
       </div>
       <md-card flex>
         <md-card-title flex layout="row" class="md-heading">
