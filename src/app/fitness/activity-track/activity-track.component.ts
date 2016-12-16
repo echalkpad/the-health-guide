@@ -173,7 +173,7 @@ export class ActivityTrackComponent implements OnInit {
       }).afterClosed().subscribe((value: string) => {
         if (value) {
           if (typeof +value === 'number') {
-            let newActivity: ActivityType = new ActivityType(activityType.name, label, +value, Math.floor(activityType.met * +value));
+            let newActivity: ActivityType = new ActivityType(activityType.name, label, +value, Math.floor(activityType.met * +value), activityType.met);
             this.selectedActivityTypes.push(newActivity);
             if (checkbox) {
               checkbox.checked = true;
