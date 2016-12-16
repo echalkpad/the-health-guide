@@ -60,64 +60,82 @@
             </md-list>
           </md-card-content>
         </md-card>
-        <md-card flex>
-          <md-card-title class="md-heading">Tags</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
-            <md-icon>local_offer</md-icon>
-            {{ tag }}
-            </button>
-          </md-card-content>
-        </md-card>
-        <md-card flex>
-          <md-card-title class="md-heading">Good points</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
-            <md-icon>thumb_up</md-icon>
-            {{ point }}
-            </button>
-          </md-card-content>
-        </md-card>
-        <md-card flex>
-          <md-card-title class="md-heading">Bad points</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.tags">
-            <md-icon>thumb_down</md-icon>
-            {{ point }}
-            </button>
-          </md-card-content>
-        </md-card>
+        <div layout="column" flex>
+          <md-card flex>
+            <md-card-title class="md-heading">Ingredients</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <md-list>
+                <template let-ingredient let-last="last" ngFor [ngForOf]="recipe.ingredients">
+                  <md-list-item>
+                    <h3 md-line>{{ ingredient.name }}</h3>
+                    <span flex></span>
+                    <p class="md-caption tc-grey-500"> {{ ingredient.quantity }}g </p>
+                  </md-list-item>
+                  <md-divider *ngIf="!last" md-inset></md-divider>
+                </template>
+              </md-list>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Tags</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.tags" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_up_down</md-icon>
+                  No tags
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
+              <md-icon>local_offer</md-icon>
+              {{ tag }}
+              </button>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Good points</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.goodPoints" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_down</md-icon>
+                  No good points
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
+              <md-icon>thumb_up</md-icon>
+              {{ point }}
+              </button>
+            </md-card-content>
+          </md-card>
+          <md-card flex>
+            <md-card-title class="md-heading">Bad points</md-card-title>
+            <md-divider></md-divider>
+            <md-card-content>
+              <div *ngIf="!recipe.badPoints" flex class="text-center">
+                <div flex layout="row" layout-align="center center" class="md-title">
+                  <md-icon class="push-right-xs">thumb_down</md-icon>
+                  No bad points
+                </div>
+              </div>
+              <button md-raised-button class="tag" color="warn" *ngFor="let point of recipe.badPoints">
+              <md-icon>thumb_down</md-icon>
+              {{ point }}
+              </button>
+            </md-card-content>
+          </md-card>
+        </div>
       </div>
-      <div layout="column" layout-gt-md="row">
-        <md-card flex>
-          <md-card-title class="md-heading">Ingredients</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <md-list>
-              <template let-ingredient let-last="last" ngFor [ngForOf]="recipe.ingredients">
-                <md-list-item>
-                  <h3 md-line>{{ ingredient.name }}</h3>
-                  <span flex></span>
-                  <p class="md-caption tc-grey-500"> {{ ingredient.quantity }}g </p>
-                </md-list-item>
-                <md-divider *ngIf="!last" md-inset></md-divider>
-              </template>
-            </md-list>
-          </md-card-content>
-        </md-card>
-        <md-card flex>
-          <md-card-title class="md-heading">Instructions</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <ol>
-              <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
-            </ol>
-          </md-card-content>
-        </md-card>
-      </div>
+      <md-card flex>
+        <md-card-title class="md-heading">Instructions</md-card-title>
+        <md-divider></md-divider>
+        <md-card-content>
+          <ol>
+            <li *ngFor="let instruction of recipe.instructions">{{ instruction }}</li>
+          </ol>
+        </md-card-content>
+      </md-card>
     </md-tab>
     <md-tab>
       <template md-tab-label>Nutrition</template>

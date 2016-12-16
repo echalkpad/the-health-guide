@@ -87,6 +87,8 @@ export class RecipeDataService {
       image: recipe.image,
       category: recipe.category,
       tags: recipe.tags,
+      goodPoints: recipe.goodPoints,
+      badPoints: recipe.badPoints,
       chef: recipe.chef,
       ingredients: recipe.ingredients,
       duration: recipe.duration,

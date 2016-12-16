@@ -279,6 +279,10 @@ export class RecipeEditComponent implements OnInit {
         });
         this.route.data.subscribe((data: { recipe: Recipe }) => {
             this.recipe = Object.assign({}, data.recipe);
+            // Workaround untill applied to all recipes
+            this.recipe.goodPoints = [] || this.recipe.goodPoints;
+            this.recipe.badPoints = [] || this.recipe.badPoints;
+            //
             this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
                 this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
                     if (ingredient.name === rcpIngredient.name) {
