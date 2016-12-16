@@ -102,7 +102,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         }).afterClosed().subscribe((value: string) => {
             if (value) {
                 this.mealTrack.mealTimes.push(new MealTime(value));
-                this.isDirty = true;
+                
             }
         });
     }
@@ -148,7 +148,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     public changeMealData(meal: Meal, prop: string): number | string {
-        this.isDirty = true;
         let newData: number | string;
         if (meal.hasOwnProperty(prop)) {
             if (typeof meal[prop] === 'number' && prop !== 'quantity') {
@@ -161,12 +160,10 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         } else if (meal.nutrition.hasOwnProperty(prop)) {
             newData = Math.floor(meal.nutrition[prop] * meal.amount);
         }
-
         return newData;
     }
 
     public changeQty(meal: Meal, mt?: MealTime): void {
-        this.isDirty = true;
         this.dialogSvc.openPrompt({
             message: `Enter the meal quantity in ${meal.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
             disableClose: true,
@@ -189,6 +186,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                             this.loadingSvc.resolve('mt-nutrition.load')
                         });
                     }
+                    this.isDirty = true;
                 }
             }
         });
@@ -238,7 +236,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         if (this.isDirty) {
             this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
             this.dataSvc.saveMealTrack(this.mealTrack);
-            this.isDirty = false;
         }
         this.mtDataSvc.getMealTrack(this.auth.id, this.currentDate).subscribe((mt: MealTracker) => {
             if (!!mt && !!mt.hasOwnProperty('date')) {
@@ -246,11 +243,10 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                 this.dataSvc.saveMealTrack(mt);
             }
         });
-
+        this.isDirty = false;
     }
 
     public toggleSelectedMeal(meal: Meal): void {
-        this.isDirty = true;
         let idx: number = this.selectedMeals.indexOf(meal);
         if (idx === -1) {
             this.dialogSvc.openPrompt({
@@ -271,6 +267,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                         this.meals.splice(this.meals.indexOf(meal), 1);
                         this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
                         this.filter();
+                        this.isDirty = true;
                     }
                 }
             });
@@ -279,6 +276,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             this.meals.push(meal);
             this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
             this.filter();
+            this.isDirty = true;
         }
 
     }
