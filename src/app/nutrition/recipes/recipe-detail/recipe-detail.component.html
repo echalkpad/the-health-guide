@@ -61,6 +61,38 @@
           </md-card-content>
         </md-card>
         <md-card flex>
+          <md-card-title class="md-heading">Tags</md-card-title>
+          <md-divider></md-divider>
+          <md-card-content>
+            <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
+            <md-icon>local_offer</md-icon>
+            {{ tag }}
+            </button>
+          </md-card-content>
+        </md-card>
+        <md-card flex>
+          <md-card-title class="md-heading">Good points</md-card-title>
+          <md-divider></md-divider>
+          <md-card-content>
+            <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
+            <md-icon>thumb_up</md-icon>
+            {{ point }}
+            </button>
+          </md-card-content>
+        </md-card>
+        <md-card flex>
+          <md-card-title class="md-heading">Bad points</md-card-title>
+          <md-divider></md-divider>
+          <md-card-content>
+            <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.tags">
+            <md-icon>thumb_down</md-icon>
+            {{ point }}
+            </button>
+          </md-card-content>
+        </md-card>
+      </div>
+      <div layout="column" layout-gt-md="row">
+        <md-card flex>
           <md-card-title class="md-heading">Ingredients</md-card-title>
           <md-divider></md-divider>
           <md-card-content>
@@ -74,18 +106,6 @@
                 <md-divider *ngIf="!last" md-inset></md-divider>
               </template>
             </md-list>
-          </md-card-content>
-        </md-card>
-      </div>
-      <div layout="column" layout-gt-md="row">
-        <md-card flex>
-          <md-card-title class="md-heading">Tags</md-card-title>
-          <md-divider></md-divider>
-          <md-card-content>
-            <button md-raised-button class="tag" color="accent" *ngFor="let tag of recipe.tags">
-            <md-icon>local_offer</md-icon>
-            {{ tag }}
-            </button>
           </md-card-content>
         </md-card>
         <md-card flex>
