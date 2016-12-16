@@ -99,6 +99,27 @@ export class ActivityTrackComponent implements OnInit {
     });
   }
 
+  public changeDuration(activityType: ActivityType, at?: ActivityTime): void {
+    this.dialogSvc.openPrompt({
+      message: 'Enter activity duration in minutes',
+      disableClose: true,
+      value: '1',
+      title: `Enter ${activityType.name}'s duration`,
+    }).afterClosed().subscribe((value: string) => {
+      if (value) {
+        if (typeof +value === 'number') {
+          activityType.duration = +value;
+          activityType.energyConsumption = Math.floor(activityType.met * +value);
+          if (at) {
+            this.atSvc.setActivityTimeTotal(at);
+            this.atSvc.setActivityTrackTotal(this.activityTrack);
+          }
+          this.isDirty = true;
+        }
+      }
+    });
+  }
+
   public clearAllSelections(): void {
     this.selectedActivityTypes = [];
     this.checkedActivities.forEach((checkBox: HTMLInputElement) => checkBox.checked = false);
@@ -167,16 +188,16 @@ export class ActivityTrackComponent implements OnInit {
     } else {
       let index: number = this.selectedActivityTypes.indexOf(foundActivity);
       this.selectedActivityTypes.splice(index, 1);
-      this.checkedActivities[index].checked = false;
+      if (!checkbox) {
+        this.checkedActivities[index].checked = false;
+      }
       this.checkedActivities.splice(index, 1);
     }
   }
 
   ngAfterViewInit(): void {
-    this.loadingSvc.register('activities.load');
     this.loadingSvc.register('activity-track.load');
     setTimeout(() => {
-      this.loadingSvc.resolve('activities.load');
       this.loadingSvc.resolve('activity-track.load');
       if (!this.activityTrack.activityTimes.length) {
         this.showAlert("You haven't moved today. Start moving your butt!", "No activity today");
