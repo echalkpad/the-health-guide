@@ -237,6 +237,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
             this.dataSvc.saveMealTrack(this.mealTrack);
         }
+        this.mealTrack = new MealTracker(this.currentDate);
         this.mtDataSvc.getMealTrack(this.auth.id, this.currentDate).subscribe((mt: MealTracker) => {
             if (!!mt && !!mt.hasOwnProperty('date')) {
                 this.mealTrack = mt;
