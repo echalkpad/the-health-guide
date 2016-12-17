@@ -9,6 +9,10 @@ export class HelperService {
     return items.filter((item: any) => item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
   }
 
+  public log10(data: number): number {
+    return (Math.log(data) / Math.log(10));
+  }
+
   public paginate(data: any[], start: number, end: number): any[] {
     if (start >= 1) {
       data = data.slice(start - 1, end);

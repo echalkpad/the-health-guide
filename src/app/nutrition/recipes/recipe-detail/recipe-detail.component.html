@@ -83,8 +83,7 @@
             <md-card-content>
               <div *ngIf="!recipe.tags" flex class="text-center">
                 <div flex layout="row" layout-align="center center" class="md-title">
-                  <md-icon class="push-right-xs">thumb_up_down</md-icon>
-                  No tags
+                  <i class="fa fa-meh-o push-right-xs" aria-hidden="true"></i> No tags
                 </div>
               </div>
               <button md-raised-button class="tag" color="primary" *ngFor="let tag of recipe.tags">
@@ -99,8 +98,7 @@
             <md-card-content>
               <div *ngIf="!recipe.goodPoints" flex class="text-center">
                 <div flex layout="row" layout-align="center center" class="md-title">
-                  <md-icon class="push-right-xs">thumb_down</md-icon>
-                  No good points
+                  <i class="fa fa-frown-o push-right-xs" aria-hidden="true"></i> No good points
                 </div>
               </div>
               <button md-raised-button class="tag" color="accent" *ngFor="let point of recipe.goodPoints">
@@ -115,8 +113,7 @@
             <md-card-content>
               <div *ngIf="!recipe.badPoints" flex class="text-center">
                 <div flex layout="row" layout-align="center center" class="md-title">
-                  <md-icon class="push-right-xs">thumb_down</md-icon>
-                  No bad points
+                  <i class="fa fa-smile-o push-right-xs" aria-hidden="true"></i> No bad points
                 </div>
               </div>
               <button md-raised-button class="tag" color="warn" *ngFor="let point of recipe.badPoints">

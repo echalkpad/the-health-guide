@@ -1,13 +1,24 @@
 import { Injectable } from '@angular/core';
+import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
 import { Auth } from '../auth/auth.model';
 import { AuthService } from '../auth/auth.service';
+import { DataService } from './shared/data.service';
 import { Fitness } from './fitness.model';
+import { HelperService } from '../shared/helper.service';
+import { User } from '../auth/user.model';
 
 @Injectable()
 export class FitnessService {
-
-  constructor() { }
+  private profile: FirebaseObjectObservable<Fitness>;
+  constructor(
+    private af: AngularFire,
+    private authSvc: AuthService,
+    private dataSvc: DataService,
+    private helperSvc: HelperService
+  ) {
+    this.profile = af.database.object(`/fitness/${authSvc.getAuthData().id}`);
+  }
 
   private setBMR(fit: Fitness): void {
     if (fit.gender === 'male') {
@@ -27,17 +38,9 @@ export class FitnessService {
   }
 
   private setBodyFatFemale(fit: Fitness): void {
-    let bodyFatWeight: number = 0, leanBodyMass: number = 0;
-    leanBodyMass = ((fit.weight * 2.205) * 0.732) + 8.987 +
-      (fit.wrist * 0.394 / 3.14) -
-      (fit.waist * 0.394 * 0.157) -
-      (fit.hips * 0.394 * 0.249) +
-      (fit.forearm * 0.434);
-    bodyFatWeight = (fit.weight * 2.205) - leanBodyMass;
-    fit.fatPercentage.data = +((bodyFatWeight * 100) / (fit.weight * 2.205)).toFixed(2);
-    if (fit.fatPercentage.data < 0) {
-      fit.fatPercentage.data = 0
-    }
+    fit.fatPercentage.data = Math.round(
+      (495 / (1.29579 - 0.35004 * this.helperSvc.log10(fit.waist + fit.hips - fit.neck) + 0.22100 * this.helperSvc.log10(fit.height)) - 450) * 10
+    ) / 10;
     if (fit.fatPercentage.data > 25 || fit.fatPercentage.data < 10) {
       fit.fatPercentage.normal = false;
     } else {
@@ -46,10 +49,9 @@ export class FitnessService {
   }
 
   private setBodyFatMale(fit: Fitness): void {
-    let bodyFatWeight: number = 0, leanBodyMass: number = 0;
-    leanBodyMass = (fit.weight * 2.205 * 1.082) + 94.42 - (fit.waist * 0.394 * 4.15);
-    bodyFatWeight = (fit.weight * 2.205) - leanBodyMass;
-    fit.fatPercentage.data = +((bodyFatWeight * 100) / (fit.weight * 2.205)).toFixed(2);
+    fit.fatPercentage.data = Math.round(
+      (495 / (1.0324 - 0.19077 * this.helperSvc.log10(fit.waist - fit.neck) + 0.15456 * this.helperSvc.log10(fit.height)) - 450) * 10
+    ) / 10;
     if (fit.fatPercentage.data > 20 || fit.fatPercentage.data < 2) {
       fit.fatPercentage.normal = false;
     } else {
@@ -73,10 +75,33 @@ export class FitnessService {
     return interval;
   }
 
+  public getProfile(): FirebaseObjectObservable<Fitness> {
+    return this.profile;
+  }
+
+  public saveProfile(profile: Fitness): void {
+    let user: User = this.dataSvc.getUser();
+    user.age = profile.age;
+    user.gender = profile.gender;
+    user.height = profile.height;
+    user.weight = profile.weight;
+    user.infancy = profile.infancy;
+    user.lactation = profile.lactation;
+    user.pregnancy = profile.pregnancy;
+    this.authSvc.saveUserData(this.authSvc.getAuthData().id, user);
+    if (profile.hasOwnProperty('$key')) {
+      delete profile['$key'];
+      delete profile['$exists'];
+      this.getProfile().update(profile);
+    } else {
+      this.getProfile().set(profile);
+    }
+  }
+
   public setFitness(fit: Fitness): void {
     this.setBMR(fit);
     this.setBMI(fit);
-    if (fit.gender === 'male') {
+    if (fit.gender === 'female') {
       this.setBodyFatFemale(fit);
     } else {
       this.setBodyFatMale(fit);

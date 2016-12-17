@@ -105,12 +105,12 @@ export class RecipeService {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqFat: number = energy * 0.35 / 9,
+      reqMuFat: number = energy * 0.15 /9,
+      reqPuFat: number = energy * 0.1 / 9,
       reqSatFat: number = energy * 0.1 / 9;
 
-    if (recipe.nutrition.Fats > reqFat) {
-      recipe.goodPoints.push('High unsaturated fat');
-    } else if (recipe.nutrition.Fats <= reqFat / 2) {
-      recipe.badPoints.push('Low unsaturated fat');
+    if (recipe.nutrition.Fats <= Math.min(reqMuFat, reqPuFat) / 2) {
+      recipe.badPoints.push('Low-fat');
     }
 
     if (recipe.nutrition['Saturated fat'] > reqSatFat) {

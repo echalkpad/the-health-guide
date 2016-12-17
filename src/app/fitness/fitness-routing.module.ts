@@ -6,6 +6,8 @@ import { ActivityTrackResolve } from './activity-track/activity-track-resolve.se
 import { AuthGuard } from '../auth/auth-guard.service';
 import { CanDeactivateGuard } from '../shared/can-deactivate-guard.service';
 import { FitnessComponent } from './fitness.component';
+import { FitnessProfileComponent } from './fitness-profile/fitness-profile.component';
+import { FitnessProfileResolve } from './fitness-profile/fitness-profile-resolve.service';
 import { MealTrackComponent } from './meal-track/meal-track.component';
 import { MealTrackResolve } from './meal-track/meal-track-resolve.service';
 
@@ -36,6 +38,14 @@ const fitnessRoutes: Routes = [
                     canDeactivate: [CanDeactivateGuard]
                 }
             ]
+        },
+        {
+            path: 'profile',
+            component: FitnessProfileComponent,
+            canActivate: [AuthGuard],
+            resolve: {
+                profile: FitnessProfileResolve
+            }
         }
     ]
   }

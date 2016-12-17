@@ -10,7 +10,7 @@ export class RecipeDetailResolve implements Resolve<Recipe> {
   constructor(private dataSvc: DataService) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Recipe> {
-    return new Promise((resolve, reject) => {
+    return new Promise(resolve => {
       resolve(this.dataSvc.getRecipe());
     });
   }

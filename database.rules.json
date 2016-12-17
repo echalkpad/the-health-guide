@@ -11,6 +11,13 @@
       ".read": true,
       ".write": false
     },
+    "fitness": {
+      ".read": true,
+      "$userId": {
+        ".read": "$userId === auth.uid",
+        ".write": "$userId === auth.uid"
+      }
+    },
     "foods": {
       ".read": true,
       ".write": false

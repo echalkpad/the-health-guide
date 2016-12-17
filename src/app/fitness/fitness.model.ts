@@ -14,10 +14,9 @@ export class Fitness extends User {
             data: 0,
             normal: true
         },
-        public forearm: number = 26,
+        public neck: number = 38,
         public hips: number = 80,
-        public waist: number = 75,
-        public wrist: number = 20
+        public waist: number = 75
     ) {
         super();
     }

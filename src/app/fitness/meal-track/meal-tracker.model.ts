@@ -17,8 +17,7 @@ export class MealTime {
     constructor(
         public time: string = "",
         public meals: Meal[] = [],
-        public nutrition: MealTrackNutrition = new MealTrackNutrition(),
-        public tags: string[] = []
+        public nutrition: MealTrackNutrition = new MealTrackNutrition()
     ) { }
 }
 
@@ -26,7 +25,6 @@ export class MealTracker {
     constructor(
         public date: string = "",
         public mealTimes: MealTime[] = [],
-        public nutrition: MealTrackNutrition = new MealTrackNutrition(),
-        public tags: string[] = []
+        public nutrition: MealTrackNutrition = new MealTrackNutrition()
     ) { }
 }

@@ -38,7 +38,6 @@ export class RecipeEditComponent implements OnInit {
     public pageSize: number = 10;
     public recipe: Recipe;
     public startPage: number = 1;
-    public tags: string[];
     public minerals: string[] = [];
     public vitamins: string[] = [];
     constructor(
@@ -110,15 +109,6 @@ export class RecipeEditComponent implements OnInit {
             "Intermidiate",
             "Advanced",
             "Master chef"
-        ];
-
-        this.tags = [
-            "Dairy-free",
-            "Gluten-free",
-            "Mediteranean",
-            "Soy-free",
-            "Vegan",
-            "Vegetarian"
         ];
     }
 
