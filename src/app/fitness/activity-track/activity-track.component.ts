@@ -151,6 +151,7 @@ export class ActivityTrackComponent implements OnInit {
       this.dataSvc.saveActivityTrack(this.activityTrack);
       this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     }
+    this.activityTrack = new ActivityTracker(this.currentDate);
     this.atDataSvc.getActivityTrack(this.auth.id, this.currentDate).subscribe((at: ActivityTracker) => {
       if (!!at && !!at.hasOwnProperty('date')) {
         this.activityTrack = at;
