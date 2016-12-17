@@ -147,7 +147,9 @@ export class RecipeEditComponent implements OnInit {
         this.isDirty = false;
         this.syncNutrition();
         this.recipe.instructions = [...this.instructions];
-        this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
+        if (this.recipe.image.indexOf('/recipes') === -1) {
+            this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
+        }
         setTimeout(() => {
             if (this.recipe.hasOwnProperty('$key')) {
                 this.recipeDataSvc.updateRecipe(this.recipe);
@@ -279,7 +281,7 @@ export class RecipeEditComponent implements OnInit {
             this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         });
-        
+
         this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
             if (!!data && !!data.length) {
                 this.ingredients = [...data];
