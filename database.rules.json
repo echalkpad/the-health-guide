@@ -35,6 +35,10 @@
       "$userId": {
         ".read": "$userId === auth.uid",
         ".write": "$userId === auth.uid"
+      },
+      "shared": {
+        ".read": true,
+        ".write": "auth != null"
       }
     },
     "users": {

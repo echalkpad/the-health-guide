@@ -8,14 +8,7 @@ import { Nutrition } from '../../shared/nutrition.model';
 @Injectable()
 export class RecipeService {
   private tags: any;
-  constructor(private dataSvc: DataService) {
-    this.tags = {
-      dairyFree: true,
-      glutenFree: true,
-      soyFree: true,
-      vegan: true
-    }
-  }
+  constructor(private dataSvc: DataService) { }
 
   private checkCarbPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
@@ -80,9 +73,8 @@ export class RecipeService {
      * Sugars have 2.4 kcal/g
      */
 
-    recipe.goodPoints.splice(0, recipe.goodPoints.length);
-    recipe.badPoints.splice(0, recipe.badPoints.length);
-    recipe.tags.splice(0, recipe.tags.length);
+    recipe.goodPoints = [];
+    recipe.badPoints = [];
     this.checkEnergyPoints(recipe);
     this.checkProteinPoints(recipe);
     this.checkLipidPoints(recipe);
@@ -91,19 +83,20 @@ export class RecipeService {
   }
 
   private checkTags(recipe: Recipe): void {
-    if (this.tags.dairyFree) {
+    recipe.tags = [];
+    if (this.tags.dairyFree === true) {
       recipe.tags.push('Dairy-free');
     }
 
-    if (this.tags.glutenFree) {
+    if (this.tags.glutenFree === true) {
       recipe.tags.push('Gluten-free');
     }
 
-    if (this.tags.soyFree) {
+    if (this.tags.soyFree === true) {
       recipe.tags.push('Soy-free');
     }
 
-    if (this.tags.vegan) {
+    if (this.tags.vegan === true) {
       recipe.tags.push('Vegan');
     }
   }
@@ -145,7 +138,7 @@ export class RecipeService {
   }
 
   private checkMineralLoss(recipe: Recipe): void {
-    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching'  || recipe.cookMethod === 'Boiling') {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching' || recipe.cookMethod === 'Boiling') {
       for (let mineral in recipe.nutrition['minerals']) {
         recipe.nutrition['minerals'][mineral] -= recipe.nutrition['minerals'][mineral] * 0.6;
       }
@@ -165,7 +158,7 @@ export class RecipeService {
   }
 
   private checkProteinLoss(recipe: Recipe): void {
-    if (recipe.cookTemperature >= 200  || recipe.cookMethod === 'Boiling') {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
       recipe.nutrition.Protein -= recipe.nutrition.Protein * 0.15;
       for (let aa in recipe.nutrition['amino acids']) {
         recipe.nutrition['amino acids'][aa] -= recipe.nutrition['amino acids'][aa] * 0.15;
@@ -192,7 +185,7 @@ export class RecipeService {
   }
 
   private checkVitaminLoss(recipe: Recipe): void {
-    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching'  || recipe.cookMethod === 'Boiling') {
+    if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching' || recipe.cookMethod === 'Boiling') {
       for (let vitamin in recipe.nutrition['vitamins']) {
         recipe.nutrition['vitamins'][vitamin] -= recipe.nutrition['vitamins'][vitamin] * 0.75;
       }
@@ -264,6 +257,12 @@ export class RecipeService {
   public setRecipeNutrition(recipe: Recipe): void {
     recipe.nutrition = new Nutrition();
     recipe.quantity = 0;
+    this.tags = {
+      dairyFree: true,
+      glutenFree: true,
+      soyFree: true,
+      vegan: true
+    }
     // Set total recipe nutrition and quantity in grams
     recipe.ingredients.forEach(ingredient => {
       if (ingredient.category === 'Grains') {
@@ -272,6 +271,7 @@ export class RecipeService {
         this.tags.vegan = false;
       } else if (ingredient.category === 'Dairy') {
         this.tags.dairyFree = false;
+        this.tags.vegan = false;
       }
       if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
         this.tags.soyFree = false;

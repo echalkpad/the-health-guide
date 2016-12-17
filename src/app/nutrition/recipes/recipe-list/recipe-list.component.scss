@@ -18,3 +18,10 @@
 .recipe-img {
     height: 20%;
 }
+
+:host /deep/ {
+    .md-tab-header {
+        background-color: white;
+        color: #4caf50;
+    }
+}

@@ -8,6 +8,7 @@ export class Recipe {
     constructor (
         public chef: Chef = new Chef(),
         public name: string = "",
+        public description: string = "",
         public image: string = "recipe.jpg",
         public category: string = "",
         public tags: string[] = [],
@@ -22,6 +23,7 @@ export class Recipe {
         public servings: number = 1,
         public instructions: string[] = [],
         public quantity: number = 0,
-        public amount: number = 1
+        public amount: number = 1,
+        public shared: boolean = false
     ) {}
 }
