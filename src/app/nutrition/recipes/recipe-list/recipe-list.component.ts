@@ -22,11 +22,12 @@ import { RecipeService } from '../shared/recipe.service';
 export class RecipeListComponent implements OnInit {
   public auth: Auth;
   public filteredRecipes: Recipe[];
+  public filteredSharedRecipes: Recipe[];
   public ingredients: string[];
   public query: string = 'name';
   public queryIngredients: string[] = [];
-  public recipeImg: string;
   public recipes: Recipe[];
+  public sharedRecipes: Recipe[];
   constructor(
     private authSvc: AuthService,
     private dataSvc: DataService,
@@ -38,6 +39,15 @@ export class RecipeListComponent implements OnInit {
     private router: Router,
     private titleSvc: Title
   ) { }
+
+  private showAlert(title?: string, msg?: string): void {
+    this.dialogSvc.openAlert({
+      message: 'Sorry, there is no data available at the moment! Please try again later!' || msg,
+      disableClose: false,
+      title: 'No data found' || title,
+      closeButton: 'Close'
+    });
+  }
 
   public addIngredient(ingredient: string): void {
     this.queryIngredients.push(ingredient);
@@ -60,6 +70,7 @@ export class RecipeListComponent implements OnInit {
 
   public filterRecipes(searchTerm: string): void {
     this.filteredRecipes = [...this.recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
+    this.filteredSharedRecipes = [...this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, searchTerm, this.queryIngredients)];
   }
 
   public openDetails(recipe: Recipe): void {
@@ -72,20 +83,16 @@ export class RecipeListComponent implements OnInit {
     this.filterRecipes('');
   }
 
-  private showAlert(): void {
-    this.dialogSvc.openAlert({
-      message: 'Sorry, there is no data available at the moment! Please try again later!',
-      disableClose: false,
-      title: 'No data found',
-      closeButton: 'Close'
-    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
-  }
-
   ngAfterViewInit(): void {
-    this.loadingSvc.register('recipes.load');
+    this.loadingSvc.register('my-recipes.load');
+    this.loadingSvc.register('shared-recipes.load');
     setTimeout(() => {
-      this.loadingSvc.resolve('recipes.load');
+      this.loadingSvc.resolve('my-recipes.load');
+      this.loadingSvc.resolve('shared-recipes.load');
       if (!this.recipes) {
+        this.showAlert('No recipes found', 'You have no recipes currently. Start cooking!');
+      }
+      if (!this.sharedRecipes) {
         this.showAlert();
       }
     }, 5000);
@@ -105,7 +112,15 @@ export class RecipeListComponent implements OnInit {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];
-        this.loadingSvc.resolve('recipes.load');
+        this.loadingSvc.resolve('my-recipes.load');
+      }
+    });
+
+    this.recipeDataSvc.getSharedRecipes().subscribe((data: Recipe[]) => {
+      if (!!data && !!data.length) {
+        this.sharedRecipes = [...data];
+        this.filteredSharedRecipes = [...data];
+        this.loadingSvc.resolve('shared-recipes.load');
       }
     });
   }

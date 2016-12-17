@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { ActivityTracker } from '../activity-track/activity-tracker.model';
 import { Fitness } from '../fitness.model';
 import { MealTracker } from '../meal-track/meal-tracker.model';
+import { User } from '../../auth/user.model';
 
 @Injectable()
 export class DataService {
@@ -52,6 +53,14 @@ export class DataService {
 
   public saveMealTrack(mt: MealTracker): void {
     sessionStorage.setItem('meal-track', JSON.stringify(Object.assign({}, mt)));
+  }
+
+  public getUser(): User {
+    return JSON.parse(sessionStorage.getItem('user'));
+  }
+
+  public saveUser(user: User): void {
+    sessionStorage.setItem('user', JSON.stringify(Object.assign({}, user)));
   }
 
 }

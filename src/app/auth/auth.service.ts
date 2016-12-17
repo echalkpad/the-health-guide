@@ -66,6 +66,12 @@ export class AuthService {
     });
   }
 
+  public saveUserData(authId: string, user: User): void {
+    delete user['$key'];
+    delete user['$exists'];
+    this.getUserData(authId).update(user);
+  }
+
   public uploadAvatar(img: File): firebase.storage.UploadTask {
     return this.userAvatars.child(img.name).put(img);
   }

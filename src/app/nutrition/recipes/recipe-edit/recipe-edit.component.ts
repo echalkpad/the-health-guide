@@ -38,7 +38,6 @@ export class RecipeEditComponent implements OnInit {
     public pageSize: number = 10;
     public recipe: Recipe;
     public startPage: number = 1;
-    public tags: string[];
     public minerals: string[] = [];
     public vitamins: string[] = [];
     constructor(
@@ -111,15 +110,6 @@ export class RecipeEditComponent implements OnInit {
             "Advanced",
             "Master chef"
         ];
-
-        this.tags = [
-            "Dairy-free",
-            "Gluten-free",
-            "Mediteranean",
-            "Soy-free",
-            "Vegan",
-            "Vegetarian"
-        ];
     }
 
     public addInstruction(): void {
@@ -147,7 +137,9 @@ export class RecipeEditComponent implements OnInit {
         this.isDirty = false;
         this.syncNutrition();
         this.recipe.instructions = [...this.instructions];
-        this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
+        if (this.recipe.image.indexOf('/recipes') === -1) {
+            this.recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
+        }
         setTimeout(() => {
             if (this.recipe.hasOwnProperty('$key')) {
                 this.recipeDataSvc.updateRecipe(this.recipe);
@@ -201,6 +193,7 @@ export class RecipeEditComponent implements OnInit {
 
     public removeIngredient(ingredient: Ingredient): void {
         this.recipe.ingredients.splice(this.recipe.ingredients.indexOf(ingredient), 1);
+        this.syncNutrition();
         this.isDirty = true;
     }
 
@@ -269,35 +262,31 @@ export class RecipeEditComponent implements OnInit {
 
     ngOnInit(): void {
         this.auth = Object.assign({}, this.authSvc.getAuthData());
-        this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
-            if (!!data && !!data.length) {
-                this.ingredients = [...data];
-                this.filteredIngredients = [...data];
-                this.filter();
-                this.loadingSvc.resolve('ingredients.load');
-            }
-        });
         this.route.data.subscribe((data: { recipe: Recipe }) => {
             this.recipe = Object.assign({}, data.recipe);
-            // Workaround untill applied to all recipes
-            this.recipe.goodPoints = [] || this.recipe.goodPoints;
-            this.recipe.badPoints = [] || this.recipe.badPoints;
-            //
-            this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
-                this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
-                    if (ingredient.name === rcpIngredient.name) {
-                        this.ingredients.splice(idx, 1);
-                        return;
-                    }
-                });
-            });
-
             this.instructions = [...this.recipe.instructions];
             this.recipe.chef = new Chef(this.auth.id, this.auth.name, this.auth.avatar);
             console.log(this.recipe);
             this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
             this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
+        });
+
+        this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
+            if (!!data && !!data.length) {
+                this.ingredients = [...data];
+                if (this.recipe && this.recipe.ingredients.length) {
+                    this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
+                        this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
+                            if (ingredient.name === rcpIngredient.name) {
+                                this.ingredients.splice(idx, 1);
+                            }
+                        });
+                    });
+                }
+                this.filter();
+                this.loadingSvc.resolve('ingredients.load');
+            }
         });
     }
 

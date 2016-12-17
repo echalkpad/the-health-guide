@@ -1,7 +1,6 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { TdLoadingService } from '@covalent/core';
 
 import { Recipe } from '../shared/recipe.model';
 

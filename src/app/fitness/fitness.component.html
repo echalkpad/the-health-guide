@@ -12,6 +12,10 @@
             <md-icon md-list-avatar>restaurant</md-icon>
             <h3 md-line>Meal track</h3>
         </a>
+        <a md-list-item [routerLink]="['profile']" (click)="list.toggle()">
+            <md-icon md-list-avatar>face</md-icon>
+            <h3 md-line>Profile</h3>
+        </a>
     </md-nav-list>
     <div nav-toolbar-content layout="row" flex>
       <span>{{ pageTitle }}</span>
