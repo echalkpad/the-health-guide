@@ -1,8 +1,8 @@
 import { Nutrition } from '../nutrition/shared/nutrition.model';
-import { User } from '../auth/user.model';
 
-export class Fitness extends User {
+export class Fitness {
     constructor(
+        public age: number = 1,
         public ageInterval: string = "1-3 years",
         public bmi: any = {
             data: 0,
@@ -14,10 +14,14 @@ export class Fitness extends User {
             data: 0,
             normal: true
         },
-        public neck: number = 38,
+        public gender: string = "",
+        public height: number = 1,
         public hips: number = 80,
-        public waist: number = 75
-    ) {
-        super();
-    }
+        public infancy: boolean = false,
+        public lactation: boolean = false,
+        public neck: number = 38,
+        public pregnancy: boolean = false,
+        public waist: number = 75,
+        public weight: number = 1
+    ) {  }
 }
