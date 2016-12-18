@@ -24,13 +24,16 @@ export class AppComponent implements OnInit {
       },
       {
         title: "Fitness", route: "/fitness", icon: "fitness_center"
-      }
+      },
+      {
+        title: "Account", route: "/account", icon: "account_circle"
+      },
     ];
   }
 
   private checkAuth(): void {
-    if (this.authSvc.getAuthData()) {
-      this.auth = Object.assign({}, this.authSvc.getAuthData());
+    if (this.authSvc.getAuth()) {
+      this.auth = Object.assign({}, this.authSvc.getAuth());
       clearInterval(this.handle);
     }
   }
@@ -41,10 +44,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.authSvc.getAuthData()) {
+    if (!this.authSvc.getAuth()) {
       this.handle = setInterval(() => this.checkAuth(), 5000);
     } else {
-      this.auth = Object.assign({}, this.authSvc.getAuthData());
+      this.auth = Object.assign({}, this.authSvc.getAuth());
     }
   }
 

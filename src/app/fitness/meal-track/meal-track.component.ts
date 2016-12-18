@@ -299,7 +299,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     ngOnInit(): void {
         let recipes: Meal[] = [], food: Meal[] = [];
-        this.auth = Object.assign({}, this.authSvc.getAuthData());
+        this.auth = Object.assign({}, this.authSvc.getAuth());
         this.currentDate = this.dataSvc.getCurrentDate();
         this.foodSvc.getFoods().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
