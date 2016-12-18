@@ -7,7 +7,7 @@ import { Fitness } from '../fitness.model';
 import { FitnessService } from '../fitness.service';
 
 @Injectable()
-export class FitnessProfileResolve implements Resolve<{Fitness, User}> {
+export class FitnessProfileResolve implements Resolve<Fitness> {
 
   constructor(
     private authSvc: AuthService,

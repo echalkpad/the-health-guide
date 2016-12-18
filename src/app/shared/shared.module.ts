@@ -3,6 +3,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { CanDeactivateGuard } from './can-deactivate-guard.service';
+import { DataService } from './data.service';
 import { GroupPipe } from './group.pipe';
 import { HelperService } from './helper.service';
 
@@ -18,7 +19,7 @@ export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule,
-      providers: [CanDeactivateGuard, HelperService]
+      providers: [CanDeactivateGuard, DataService, HelperService]
     };
   }
 }

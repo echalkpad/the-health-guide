@@ -1,3 +1,5 @@
+import { AccountEditComponent } from '../../account-edit/account-edit.component';
+import { AccountEditResolve } from '../../account-edit/account-edit-resolve.service';
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent } from '../../auth/auth.component';
 import { AuthGuard } from '../../auth/auth-guard.service';
@@ -8,8 +10,9 @@ import { HomeComponent } from '../../home/home.component';
 import { NutritionModule } from '../../nutrition/nutrition.module';
 
 export const thgDeclarations = [
-    HomeComponent,
-    AuthComponent
+    AccountEditComponent,
+    AuthComponent,
+    HomeComponent
 ];
 
 export const thgImports = [
@@ -19,6 +22,7 @@ export const thgImports = [
 ];
 
 export const thgProviders = [
+    AccountEditResolve,
     AuthGuard,
     AuthService,
     HelperService

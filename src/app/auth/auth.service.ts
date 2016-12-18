@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { AngularFire, AuthProviders, AuthMethods, FirebaseObjectObservable } from 'angularfire2';
 
 import { Auth } from './auth.model';
+import { DataService } from '../shared/data.service';
 import { User } from './user.model';
 
 @Injectable()
 export class AuthService {
   private userAvatars: firebase.storage.Reference;
   public redirectUrl: string;
-  constructor(private af: AngularFire) {
+  constructor(private af: AngularFire, private dataSvc: DataService) {
     this.userAvatars = firebase.storage().ref().child('/user-avatars');
   }
 
@@ -17,7 +18,7 @@ export class AuthService {
   }
 
   public getAuthData(): Auth {
-    return JSON.parse(localStorage.getItem('auth'));
+    return this.dataSvc.getAuth();
   }
 
   public getUserData(userId: string): FirebaseObjectObservable<User> {
@@ -31,7 +32,8 @@ export class AuthService {
         password: credentials.password
       }).then(authData => {
         this.getUserData(authData.uid).subscribe((data: User) => {
-          localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, data.avatar, data.name)));
+          this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
+          this.dataSvc.saveUser(data);
           resolve(true);
         });
       }).catch(error => {
@@ -52,11 +54,11 @@ export class AuthService {
         password: credentials.password
       }).then(authData => {
         if (!!authData) {
-          console.log(credentials.avatar);
           this.getAvatar(credentials.avatar).then((url: string) => {
             credentials.avatar = url;
             this.getUserData(authData.uid).set(credentials);
-            localStorage.setItem('auth', JSON.stringify(new Auth(authData.uid, credentials.avatar, credentials.name)));
+            this.dataSvc.saveAuth(new Auth(authData.uid, credentials.avatar, credentials.name));
+            this.dataSvc.saveUser(credentials);
             resolve(true);
           }).catch(err => reject(err));
         }

@@ -43,6 +43,7 @@ const fitnessRoutes: Routes = [
             path: 'profile',
             component: FitnessProfileComponent,
             canActivate: [AuthGuard],
+            canDeactivate: [CanDeactivateGuard],
             resolve: {
                 profile: FitnessProfileResolve
             }

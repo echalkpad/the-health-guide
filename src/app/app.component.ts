@@ -24,7 +24,10 @@ export class AppComponent implements OnInit {
       },
       {
         title: "Fitness", route: "/fitness", icon: "fitness_center"
-      }
+      },
+      {
+        title: "Account", route: "/account", icon: "account_circle"
+      },
     ];
   }
 
