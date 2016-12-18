@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFire, AuthProviders, AuthMethods, FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, AuthProviders, AuthMethods, FirebaseAuthState, FirebaseObjectObservable } from 'angularfire2';
 
 import { Auth } from './auth.model';
 import { DataService } from '../shared/data.service';
@@ -17,7 +17,17 @@ export class AuthService {
     return this.userAvatars.child(`${imgName}`).getDownloadURL();
   }
 
-  public getAuthData(): Auth {
+  public getAuthData(): Promise<firebase.User> {
+    return new Promise(resolve => {
+      this.af.auth.subscribe((authData: FirebaseAuthState) => {
+        if (!!authData) {
+          resolve(authData.auth);
+        }
+      });
+    });
+  }
+
+  public getAuth(): Auth {
     return this.dataSvc.getAuth();
   }
 
@@ -30,12 +40,14 @@ export class AuthService {
       this.af.auth.login({
         email: credentials.email,
         password: credentials.password
-      }).then(authData => {
-        this.getUserData(authData.uid).subscribe((data: User) => {
-          this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
-          this.dataSvc.saveUser(data);
-          resolve(true);
-        });
+      }).then((authData: FirebaseAuthState) => {
+        if (!!authData) {
+          this.getUserData(authData.uid).subscribe((data: User) => {
+            this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
+            this.dataSvc.saveUser(data);
+            resolve(true);
+          });
+        }
       }).catch(error => {
         reject(error);
       });
@@ -43,7 +55,8 @@ export class AuthService {
   }
 
   public logout(): void {
-    localStorage.removeItem('auth');
+    this.dataSvc.removeAuth();
+    this.dataSvc.removeUser();
     this.af.auth.logout();
   }
 
@@ -52,7 +65,7 @@ export class AuthService {
       this.af.auth.createUser({
         email: credentials.email,
         password: credentials.password
-      }).then(authData => {
+      }).then((authData: FirebaseAuthState) => {
         if (!!authData) {
           this.getAvatar(credentials.avatar).then((url: string) => {
             credentials.avatar = url;

@@ -13,7 +13,7 @@ export class AccountEditResolve  implements Resolve<User> {
   public resolve(route: ActivatedRouteSnapshot): Promise<User> {
     return new Promise(resolve => {
       if (!this.dataSvc.getUser()) {
-        this.authSvc.getUserData(this.authSvc.getAuthData().id).subscribe((data: User) => {
+        this.authSvc.getUserData(this.authSvc.getAuth().id).subscribe((data: User) => {
           if (!!data) {
             resolve(data);
           }

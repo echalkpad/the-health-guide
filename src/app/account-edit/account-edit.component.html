@@ -12,7 +12,7 @@
       </div>
       <br>
       <md-divider></md-divider>
-      <form #signupForm="ngForm" layout="column">
+      <form #accountForm="ngForm" layout="column">
         <md-input class="push-xs" #usernameInput #usernameControl="ngModel" flex placeholder="Username" type="text" maxlength="30" name="user.name" [(ngModel)]="user.name" required>
           <span md-prefix><md-icon>person</md-icon></span>
           <md-hint align="start" [hidden]="usernameControl.pristine" class="tc-red-600">
@@ -90,9 +90,9 @@
     </md-card-content>
     <md-divider></md-divider>
     <md-card-actions layout="column" layout-align="center center" flex>
-      <button md-raised-button flex color="accent" [disabled]="!signupForm.form.valid" (click)="signUp()">
-          Update account
-        </button>
+      <button md-raised-button flex color="accent" [disabled]="!accountForm.form.valid" (click)="updateAccount()">
+        Update account
+      </button>
     </md-card-actions>
   </td-layout-card-over>
 </td-layout-nav>

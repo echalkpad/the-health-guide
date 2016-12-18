@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private authSvc: AuthService, private titleSvc: Title) { }
 
   ngOnInit(): void {
-    this.auth = Object.assign({}, this.authSvc.getAuthData());
+    this.auth = Object.assign({}, this.authSvc.getAuth());
     this.titleSvc.setTitle("Home");
   }
 

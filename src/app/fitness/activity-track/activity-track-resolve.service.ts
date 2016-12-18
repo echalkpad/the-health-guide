@@ -18,7 +18,7 @@ export class ActivityTrackResolve implements Resolve<ActivityTracker> {
             if (!savedAt || !savedAt.hasOwnProperty('date') ) {
                 let activityTrack: ActivityTracker,
                     date: string = this.dataSvc.getCurrentDate();
-                this.atDataSvc.getActivityTrack(this.authSvc.getAuthData().id, date).subscribe((at: ActivityTracker) => {
+                this.atDataSvc.getActivityTrack(this.authSvc.getAuth().id, date).subscribe((at: ActivityTracker) => {
                     if (!!at && !!at.hasOwnProperty('date')) {
                         activityTrack = at;
                         this.dataSvc.saveActivityTrack(activityTrack);

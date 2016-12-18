@@ -17,7 +17,7 @@ export class FitnessService {
     private dataSvc: DataService,
     private helperSvc: HelperService
   ) {
-    this.profile = af.database.object(`/fitness/${authSvc.getAuthData().id}`);
+    this.profile = af.database.object(`/fitness/${authSvc.getAuth().id}`);
   }
 
   private setBMR(fit: Fitness): void {
@@ -88,7 +88,7 @@ export class FitnessService {
     user.infancy = profile.infancy;
     user.lactation = profile.lactation;
     user.pregnancy = profile.pregnancy;
-    this.authSvc.saveUserData(this.authSvc.getAuthData().id, user);
+    this.authSvc.saveUserData(this.authSvc.getAuth().id, user);
     if (profile.hasOwnProperty('$key')) {
       delete profile['$key'];
       delete profile['$exists'];

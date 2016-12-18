@@ -1,6 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { MdSnackBar } from '@angular/material';
 
+import { TdDialogService, TdLoadingService } from '@covalent/core';
+
+import { AccountEditService } from './account-edit.service';
 import { User } from '../auth/user.model';
 
 @Component({
@@ -9,8 +14,44 @@ import { User } from '../auth/user.model';
   styleUrls: ['./account-edit.component.scss']
 })
 export class AccountEditComponent implements OnInit {
+  @ViewChild('accountForm') accountForm: FormControl;
   public user: User;
-  constructor(private route: ActivatedRoute) { }
+  constructor(
+    private accountSvc: AccountEditService,
+    private dialogSvc: TdDialogService,
+    private route: ActivatedRoute,
+    private toast: MdSnackBar
+  ) { }
+
+  private showError(msg: string | Error): void {
+    this.dialogSvc.openAlert({
+      message: msg.toString(),
+      disableClose: false,
+      title: 'Update failed',
+      closeButton: 'Close'
+    });
+  }
+
+  public canDeactivate(): Promise<boolean> | boolean {
+        if (!this.accountForm.dirty) {
+            return true;
+        }
+        return new Promise(resolve => {
+            return this.dialogSvc.openConfirm({
+                message: 'Changes have been made! Are you sure you want to leave?',
+                disableClose: true,
+                title: 'Discard changes',
+                cancelButton: 'Disagree',
+                acceptButton: 'Agree',
+            }).afterClosed().subscribe((agree: boolean) => resolve(agree));
+        });
+    }
+
+  public updateAccount(): void {
+    this.accountSvc.updateAccount(this.user)
+      .then(() => this.toast.open('Update success!', 'OK'))
+      .catch((res: any) => this.showError(res));
+  }
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { account: User }) => {

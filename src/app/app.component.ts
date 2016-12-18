@@ -32,8 +32,8 @@ export class AppComponent implements OnInit {
   }
 
   private checkAuth(): void {
-    if (this.authSvc.getAuthData()) {
-      this.auth = Object.assign({}, this.authSvc.getAuthData());
+    if (this.authSvc.getAuth()) {
+      this.auth = Object.assign({}, this.authSvc.getAuth());
       clearInterval(this.handle);
     }
   }
@@ -44,10 +44,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    if (!this.authSvc.getAuthData()) {
+    if (!this.authSvc.getAuth()) {
       this.handle = setInterval(() => this.checkAuth(), 5000);
     } else {
-      this.auth = Object.assign({}, this.authSvc.getAuthData());
+      this.auth = Object.assign({}, this.authSvc.getAuth());
     }
   }
 

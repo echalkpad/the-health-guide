@@ -18,7 +18,7 @@ export class MealTrackResolve implements Resolve<MealTracker> {
             if (!savedMt || !savedMt.hasOwnProperty('date')) {
                 let mealTrack: MealTracker,
                     date: string = this.dataSvc.getCurrentDate();
-                this.mtDataSvc.getMealTrack(this.authSvc.getAuthData().id, date).subscribe((mt: MealTracker) => {
+                this.mtDataSvc.getMealTrack(this.authSvc.getAuth().id, date).subscribe((mt: MealTracker) => {
                     if (!!mt && !!mt.hasOwnProperty('date')) {
                         mealTrack = mt;
                         this.dataSvc.saveMealTrack(mealTrack);

@@ -207,7 +207,7 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.auth = Object.assign({}, this.authSvc.getAuthData());
+    this.auth = Object.assign({}, this.authSvc.getAuth());
     this.currentDate = this.dataSvc.getCurrentDate();
     this.atDataSvc.getActivities().subscribe((data: Activity[]) => {
       if (!!data && !!data.length) {

@@ -12,12 +12,20 @@ export class DataService {
     return JSON.parse(sessionStorage.getItem('auth'));
   }
 
+  public removeAuth(): void {
+    sessionStorage.removeItem('auth');
+  }
+
   public saveAuth(auth: Auth): void {
     sessionStorage.setItem('auth', JSON.stringify(Object.assign({}, auth)));
   }
 
   public getUser(): User {
     return JSON.parse(sessionStorage.getItem('user'));
+  }
+
+  public removeUser(): void {
+    sessionStorage.removeItem('user');
   }
 
   public saveUser(user: User): void {

@@ -20,7 +20,7 @@ export class FitnessComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.authSvc.getUserData(this.authSvc.getAuthData().id).subscribe((user: User) => {
+    this.authSvc.getUserData(this.authSvc.getAuth().id).subscribe((user: User) => {
       let fitness: Fitness = new Fitness();
       fitness.age = user.age;
       fitness.gender = user.gender;

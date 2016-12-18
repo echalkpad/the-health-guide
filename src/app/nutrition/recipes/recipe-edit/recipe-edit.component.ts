@@ -261,7 +261,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.auth = Object.assign({}, this.authSvc.getAuthData());
+        this.auth = Object.assign({}, this.authSvc.getAuth());
         this.route.data.subscribe((data: { recipe: Recipe }) => {
             this.recipe = Object.assign({}, data.recipe);
             this.instructions = [...this.recipe.instructions];
