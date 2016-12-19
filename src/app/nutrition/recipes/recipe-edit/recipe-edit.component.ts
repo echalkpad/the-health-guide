@@ -3,6 +3,8 @@ import { FormControl } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MdSnackBar } from '@angular/material';
+import { Observable } from 'rxjs/Observable';
+
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
@@ -23,7 +25,9 @@ import { RecipeService } from '../shared/recipe.service';
 })
 export class RecipeEditComponent implements OnInit {
     @ViewChild('recipeForm') recipeForm: FormControl;
+    private foods: Ingredient[] = [];
     private isDirty: boolean = false;
+    private recipes: Ingredient[] = [];
     public aminoacids: string[] = [];
     public auth: Auth;
     public basicNutrients: string[] = [];
@@ -232,7 +236,6 @@ export class RecipeEditComponent implements OnInit {
                         this.syncNutrition();
                         this.recipe.ingredients.push(ingredient);
                         this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
-                        this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
                         this.filter();
                     }
                 }
@@ -256,7 +259,11 @@ export class RecipeEditComponent implements OnInit {
 
     ngAfterViewInit(): void {
         this.loadingSvc.register('ingredients.load');
-        setTimeout(() => this.loadingSvc.resolve('ingredients.load'), 5000);
+        setTimeout(() => {
+            this.ingredients = [...this.helperSvc.sortByName([...this.foods, ...this.recipes])];
+            this.filter();
+            this.loadingSvc.resolve('ingredients.load');
+        }, 10000);
         this.titleSvc.setTitle(this.recipe.name);
     }
 
@@ -272,20 +279,34 @@ export class RecipeEditComponent implements OnInit {
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         });
 
-        this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
+
+        this.recipeDataSvc.getMyRecipes().subscribe((data: Ingredient[]) => {
             if (!!data && !!data.length) {
-                this.ingredients = [...data];
                 if (this.recipe && this.recipe.ingredients.length) {
-                    this.ingredients.forEach((ingredient: Ingredient, idx: number) => {
+                    data.forEach((recipe: Recipe, idx: number) => {
                         this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
-                            if (ingredient.name === rcpIngredient.name) {
-                                this.ingredients.splice(idx, 1);
+                            if (recipe.name === rcpIngredient.name) {
+                                data.splice(idx, 1);
                             }
                         });
                     });
                 }
-                this.filter();
-                this.loadingSvc.resolve('ingredients.load');
+                this.recipes = [...data];
+            }
+        });
+
+        this.foodSvc.getFoods().subscribe((data: Ingredient[]) => {
+            if (!!data && !!data.length) {
+                if (this.recipe && this.recipe.ingredients.length) {
+                    data.forEach((food: Food, idx: number) => {
+                        this.recipe.ingredients.forEach((rcpIngredient: Ingredient) => {
+                            if (food.name === rcpIngredient.name) {
+                                data.splice(idx, 1);
+                            }
+                        });
+                    });
+                }
+                this.foods = [...data]
             }
         });
     }

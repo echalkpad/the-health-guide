@@ -108,7 +108,7 @@ export class RecipeListComponent implements OnInit {
 
     this.auth = Object.assign({}, this.authSvc.getAuth());
 
-    this.recipeDataSvc.getMyRecipes(this.auth.id).subscribe((data: Recipe[]) => {
+    this.recipeDataSvc.getMyRecipes().subscribe((data: Recipe[]) => {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];

@@ -6,6 +6,7 @@ import { MdSnackBar } from '@angular/material';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
 import { AccountEditService } from './account-edit.service';
+import { AuthService } from '../auth/auth.service';
 import { User } from '../auth/user.model';
 
 @Component({
@@ -18,6 +19,7 @@ export class AccountEditComponent implements OnInit {
   public user: User;
   constructor(
     private accountSvc: AccountEditService,
+    private authSvc: AuthService,
     private dialogSvc: TdDialogService,
     private route: ActivatedRoute,
     private toast: MdSnackBar
@@ -52,6 +54,12 @@ export class AccountEditComponent implements OnInit {
       .then(() => this.toast.open('Update success!', 'OK'))
       .catch((res: any) => this.showError(res));
   }
+
+  public uploadAvatar(img: File): void {
+        this.authSvc.uploadAvatar(img).then(() => {
+            this.user.avatar = img.name; this.toast.open('Upload complete!', 'OK');
+        });
+    }
 
   ngOnInit(): void {
     this.route.data.subscribe((data: { account: User }) => {

@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { AngularFire, FirebaseAuth, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
+import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
+import { AuthService } from '../../../auth/auth.service';
 import { HelperService } from '../../../shared/helper.service';
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
@@ -13,19 +14,15 @@ export class RecipeDataService {
   private recipeImgUrl: firebase.storage.Reference;
   private sharedRecipes: FirebaseListObservable<Recipe[]>;
   private userRecipes: FirebaseListObservable<Recipe[]>;
-  constructor(private af: AngularFire, private auth: FirebaseAuth, private helperSvc: HelperService) {
-    this.sharedRecipes = af.database.list('/recipes/shared', {
+  constructor(private af: AngularFire, private authSvc: AuthService, private helperSvc: HelperService) {
+    this.userRecipes = af.database.list(`/recipes/${authSvc.getAuth().id}`, {
       query: {
         orderByChild: 'name'
       }
     });
-    auth.subscribe(authData => {
-      if (!!authData) {
-        this.userRecipes = af.database.list(`/recipes/${authData.uid}`, {
-          query: {
-            orderByChild: 'name'
-          }
-        });
+    this.sharedRecipes = af.database.list('/recipes/shared', {
+      query: {
+        orderByChild: 'name'
       }
     });
     this.recipeImgUrl = firebase.storage().ref().child('/recipes');
@@ -44,12 +41,8 @@ export class RecipeDataService {
     return this.recipeImgUrl.child(`${imgName}`).getDownloadURL();
   }
 
-  public getMyRecipes(authId: string): FirebaseListObservable<Recipe[]> {
-    return this.af.database.list(`/recipes/${authId}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
+  public getMyRecipes(): FirebaseListObservable<Recipe[]> {
+    return this.userRecipes;
   }
 
   public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {

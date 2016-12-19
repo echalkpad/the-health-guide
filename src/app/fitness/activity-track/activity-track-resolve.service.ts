@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
 
-import { Auth } from '../../auth/auth.model';
-import { AuthService } from '../../auth/auth.service';
 import { DataService } from '../shared/data.service';
 import { ActivityTracker } from './activity-tracker.model';
 import { ActivityTrackDataService } from './activity-track-data.service';
@@ -10,7 +8,7 @@ import { ActivityTrackDataService } from './activity-track-data.service';
 @Injectable()
 export class ActivityTrackResolve implements Resolve<ActivityTracker> {
 
-    constructor(private atDataSvc: ActivityTrackDataService, private authSvc: AuthService, private dataSvc: DataService) { }
+    constructor(private atDataSvc: ActivityTrackDataService, private dataSvc: DataService) { }
 
     public resolve(route: ActivatedRouteSnapshot): Promise<ActivityTracker> {
         return new Promise((resolve, reject) => {
@@ -18,7 +16,7 @@ export class ActivityTrackResolve implements Resolve<ActivityTracker> {
             if (!savedAt || !savedAt.hasOwnProperty('date') ) {
                 let activityTrack: ActivityTracker,
                     date: string = this.dataSvc.getCurrentDate();
-                this.atDataSvc.getActivityTrack(this.authSvc.getAuth().id, date).subscribe((at: ActivityTracker) => {
+                this.atDataSvc.getActivityTrack(date).subscribe((at: ActivityTracker) => {
                     if (!!at && !!at.hasOwnProperty('date')) {
                         activityTrack = at;
                         this.dataSvc.saveActivityTrack(activityTrack);
