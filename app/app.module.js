@@ -1,6 +1,7 @@
 "use strict";
 var core_1 = require("@angular/core");
 var platform_1 = require("nativescript-angular/platform");
+var angular_1 = require("nativescript-telerik-ui/sidedrawer/angular");
 var firebase = require("nativescript-plugin-firebase");
 firebase.init({
     persist: true,
@@ -16,7 +17,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [app_component_1.AppComponent],
+            declarations: [angular_1.SIDEDRAWER_DIRECTIVES, app_component_1.AppComponent],
             bootstrap: [app_component_1.AppComponent],
             imports: [platform_1.NativeScriptModule],
             schemas: [core_1.NO_ERRORS_SCHEMA]

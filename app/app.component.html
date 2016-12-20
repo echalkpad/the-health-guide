@@ -1,8 +1,31 @@
 <ActionBar class="action-bar" title="The Health Guide">
+  <NavigationButton icon="res://ic_menu_black_24dp" (tap)=openDrawer()></NavigationButton>
 </ActionBar>
-<StackLayout class="p-20">
-    <Label text="Tap the button" class="h1 text-center"></Label>
-    <Button text="TAP" (tap)="onTap()" class="btn btn-primary"></Button>
-    <Label [text]="message" class="h2 text-center" textWrap="true"></Label>
-    <HtmlView html="<pre>{{ demoData | json }}</pre>" ></HtmlView>
-</StackLayout>
+<RadSideDrawer tkExampleTitle tkToggleNavButton>
+  <StackLayout tkDrawerContent class="sidedrawer-left">
+    <StackLayout class="sidedrawer-header">
+      <Label text="Navigation Menu"></Label>
+    </StackLayout>
+    <StackLayout class="sidedrawer-content">
+      <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+        <Image class="sidedrawer-list-item-icon" row="0" col="0" src="res://ic_menu_black_24dp"></Image>
+        <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
+      </GridLayout>
+      <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+        <Image class="sidedrawer-list-item-icon" row="0" col="0" src="res://ic_menu_black_24dp"></Image>
+        <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
+      </GridLayout>
+      <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+        <Image class="sidedrawer-list-item-icon" row="0" col="0" src="res://ic_menu_black_24dp"></Image>
+        <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
+      </GridLayout>
+      <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+        <Image class="sidedrawer-list-item-icon" row="0" col="0" src="res://ic_menu_black_24dp"></Image>
+        <Label class="sidedrawer-list-item-text" row="0" col="1" text="A Link"></Label>
+      </GridLayout>
+    </StackLayout>
+  </StackLayout>
+  <StackLayout tkMainContent>
+    <Button text="&#xf1e0;Test" class="font-awesome" (tap)=openDrawer()></Button>
+  </StackLayout>
+</RadSideDrawer>

@@ -1,5 +1,6 @@
 import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 import { NativeScriptModule } from "nativescript-angular/platform";
+import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
 
 import firebase = require("nativescript-plugin-firebase");
 
@@ -18,7 +19,7 @@ firebase.init({
 import { AppComponent } from "./app.component";
 
 @NgModule({
-    declarations: [AppComponent],
+    declarations: [SIDEDRAWER_DIRECTIVES, AppComponent],
     bootstrap: [AppComponent],
     imports: [NativeScriptModule],
     schemas: [NO_ERRORS_SCHEMA]
