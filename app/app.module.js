@@ -6,9 +6,7 @@ firebase.init({
     persist: true,
     storageBucket: 'gs://the-health-guide.appspot.com/'
 }).then(function (instance) {
-    console.log(instance);
-    instance = 'https://the-health-guide.firebaseio.com';
-    console.log("firebase.init");
+    console.log("firebase.init", instance);
 }, function (error) {
     console.log("firebase.init error: " + error);
 });

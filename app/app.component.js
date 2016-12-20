@@ -1,5 +1,6 @@
 "use strict";
 var core_1 = require("@angular/core");
+var firebase = require("nativescript-plugin-firebase");
 var AppComponent = (function () {
     function AppComponent() {
         this.counter = 16;
@@ -18,6 +19,10 @@ var AppComponent = (function () {
     });
     AppComponent.prototype.onTap = function () {
         this.counter--;
+    };
+    AppComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        firebase.addChildEventListener(function (data) { return _this.demoData = data; }, '/demo');
     };
     AppComponent = __decorate([
         core_1.Component({
