@@ -5,32 +5,12 @@ var firebase = require("nativescript-plugin-firebase");
 var AppComponent = (function () {
     function AppComponent(changeDetectionRef) {
         this.changeDetectionRef = changeDetectionRef;
-        this.counter = 16;
     }
-    Object.defineProperty(AppComponent.prototype, "message", {
-        get: function () {
-            if (this.counter > 0) {
-                return this.counter + " taps left ....";
-            }
-            else {
-                return "Hoorraaay! \nYou are ready to start building!";
-            }
-        },
-        enumerable: true,
-        configurable: true
-    });
-    AppComponent.prototype.openDrawer = function () {
-        this.drawerComponent.sideDrawer.showDrawer();
-    };
     AppComponent.prototype.toggle = function () {
         this.drawer.toggleDrawerState();
     };
-    AppComponent.prototype.onTap = function () {
-        this.counter--;
-    };
     AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        firebase.addChildEventListener(function (data) { return _this.demoData = data; }, '/demo');
+        firebase.addChildEventListener(function (data) { return console.log(data); }, '/demo');
         this.drawer = this.drawerComponent.sideDrawer;
         this.changeDetectionRef.detectChanges();
     };
