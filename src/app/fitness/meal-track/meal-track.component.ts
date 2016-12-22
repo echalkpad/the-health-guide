@@ -98,7 +98,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         }).afterClosed().subscribe((value: string) => {
             if (value) {
                 this.mealTrack.mealTimes.push(new MealTime(value));
-                
+
             }
         });
     }
@@ -243,7 +243,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.isDirty = false;
     }
 
-    public toggleSelectedMeal(meal: Meal): void {
+    public toggleSelectedMeal(meal: Meal, checkBox?: HTMLInputElement): void {
         let idx: number = this.selectedMeals.indexOf(meal);
         if (idx === -1) {
             this.dialogSvc.openPrompt({
@@ -260,11 +260,18 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                             meal.amount = +value / 100;
                             meal.quantity = +value;
                         }
+                        if (checkBox) {
+                            checkBox.checked = true;
+                        }
                         this.selectedMeals.push(meal);
                         this.meals.splice(this.meals.indexOf(meal), 1);
                         this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
                         this.filter();
                         this.isDirty = true;
+                    }
+                } else {
+                    if (checkBox) {
+                        checkBox.checked = false;
                     }
                 }
             });

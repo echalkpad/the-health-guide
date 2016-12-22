@@ -233,6 +233,9 @@ export class RecipeEditComponent implements OnInit {
                 if (value) {
                     if (typeof +value === 'number') {
                         ingredient.quantity = +value;
+                        if (checkBox) {
+                            checkBox.checked = true;
+                        }
                         this.syncNutrition();
                         this.recipe.ingredients.push(ingredient);
                         this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);

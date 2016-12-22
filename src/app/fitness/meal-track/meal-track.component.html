@@ -51,7 +51,7 @@
         <md-divider></md-divider>
         <md-card-actions layout="column" layout-align="center center">
           <button flex md-raised-button color="accent" (click)="addSelectedMeals(mt)" [disabled]="!selectedMeals.length">Add selected meals</button>
-          <button flex md-raised-button color="warn" (click)="removeMealTime(mt)">Remove activity time</button>
+          <button flex md-raised-button color="warn" (click)="removeMealTime(mt)">Remove meal time</button>
         </md-card-actions>
       </md-card>
     </div>
@@ -98,7 +98,7 @@
             <template ngFor let-meal let-last="last" [ngForOf]="filteredMeals">
               <md-list-item>
                 <div layout="row" layout-align="start center" style="width: 100%;">
-                  <md-checkbox (click)="toggleSelectedMeal(meal)" flex>
+                  <md-checkbox #checkbox (click)="toggleSelectedMeal(meal, checkbox)" flex>
                     {{ meal.name }}
                   </md-checkbox>
                   <span flex></span>
