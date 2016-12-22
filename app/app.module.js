@@ -1,25 +1,18 @@
 "use strict";
 var core_1 = require("@angular/core");
-var platform_1 = require("nativescript-angular/platform");
-var angular_1 = require("nativescript-telerik-ui/sidedrawer/angular");
-var firebase = require("nativescript-plugin-firebase");
-firebase.init({
-    persist: true,
-    storageBucket: 'gs://the-health-guide.appspot.com/'
-}).then(function (instance) {
-    console.log("firebase.init", instance);
-}, function (error) {
-    console.log("firebase.init error: " + error);
-});
 var app_component_1 = require("./app.component");
+var third_party_1 = require('./config/imports/third-party');
+var thg_1 = require('./config/imports/thg');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            declarations: [angular_1.SIDEDRAWER_DIRECTIVES, app_component_1.AppComponent],
+            declarations: third_party_1.thirdPartyDeclarations.concat([
+                app_component_1.AppComponent
+            ], thg_1.thgDeclarations),
             bootstrap: [app_component_1.AppComponent],
-            imports: [platform_1.NativeScriptModule],
+            imports: thg_1.thgImports.slice(),
             schemas: [core_1.NO_ERRORS_SCHEMA]
         }), 
         __metadata('design:paramtypes', [])
