@@ -220,7 +220,7 @@ export class RecipeEditComponent implements OnInit {
         this.recipeSvc.setRecipeNutrition(this.recipe);
     }
 
-    public toggleIngredient(ingredient: Ingredient): void {
+    public toggleIngredient(ingredient: Ingredient, checkBox?: HTMLInputElement): void {
         this.isDirty = true;
         let idx: number = this.recipe.ingredients.indexOf(ingredient);
         if (idx === -1) {
@@ -237,6 +237,10 @@ export class RecipeEditComponent implements OnInit {
                         this.recipe.ingredients.push(ingredient);
                         this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
                         this.filter();
+                    }
+                } else {
+                    if (checkBox) {
+                        checkBox.checked = false
                     }
                 }
             });
