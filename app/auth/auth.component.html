@@ -1,7 +1,7 @@
-<StackLayout #loginForm>
+<StackLayout [formGroup]="loginForm">
     <TextField hint="Email Address" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
     <TextField hint="Password" secure="true"></TextField>
 
-    <Button class="btn" text="Sign in"></Button>
-    <Button class="btn" text="Sign up for Groceries"></Button>
+    <Button class="btn btn-primary" text="Sign in"></Button>
+    <Button class="btn btn-primary" text="Sign up for Groceries"></Button>
 </StackLayout>

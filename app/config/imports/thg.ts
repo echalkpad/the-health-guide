@@ -1,5 +1,6 @@
-import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { NativeScriptModule } from "nativescript-angular/platform";
+import { NativeScriptFormsModule } from "nativescript-angular/forms";
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent } from '../../auth/auth.component';
@@ -16,8 +17,9 @@ export const thgEntries = [
 ];
 
 export const thgImports = [
-    NativeScriptModule,
     NativeScriptFormsModule,
+    NativeScriptModule,
+    ReactiveFormsModule,
     AppRoutingModule
 ];
 
