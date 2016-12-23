@@ -8,7 +8,8 @@ import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg'
 
 @NgModule({
   declarations: [
-    
+    AppComponent,
+    ...thgDeclarations
   ],
   imports: [
     BrowserModule,
