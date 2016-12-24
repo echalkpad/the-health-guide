@@ -4,15 +4,14 @@ import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui/
 
 @Component({
     selector: "thg-app",
-    templateUrl: "app.component.html",
-    changeDetection: ChangeDetectionStrategy.OnPush
+    templateUrl: "app.component.html"
 })
 export class AppComponent implements OnInit {
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     private drawer: SideDrawerType;
     constructor(private changeDetectionRef: ChangeDetectorRef) { }
 
-    public toggleDrawer() {
+    public toggleDrawer(): void {
         this.drawer.toggleDrawerState();
     }
 
