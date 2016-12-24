@@ -14,6 +14,9 @@ import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg'
     imports: [
       ...thgImports
     ],
+    providers: [
+      ...thgProviders
+    ],
     schemas: [NO_ERRORS_SCHEMA]
 })
 export class AppModule { }

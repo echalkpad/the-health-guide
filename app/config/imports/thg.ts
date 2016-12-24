@@ -7,6 +7,7 @@ import { AuthComponent } from '../../auth/auth.component';
 import { AuthGuard } from '../../auth/auth-guard.service';
 import { AuthService } from '../../auth/auth.service';
 import { HomeComponent } from '../../home/home.component';
+import { SharedModule } from '../../shared/shared.module';
 
 export const thgDeclarations = [
     AuthComponent,
@@ -20,7 +21,8 @@ export const thgImports = [
     NativeScriptFormsModule,
     NativeScriptModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule.forRoot()
 ];
 
 export const thgProviders = [

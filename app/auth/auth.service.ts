@@ -45,7 +45,7 @@ export class AuthService {
         });
 
     }
-    public login(credentials: User): Promise<Object> {
+    public login(credentials: { email: string, password: string }): Promise<Object> {
         return new Promise((resolve, reject) => {
             firebase.login({
                 type: firebase.LoginType.PASSWORD,
@@ -53,7 +53,7 @@ export class AuthService {
                 password: credentials.password
             }).then((authData: firebase.User) => {
                 if (!!authData) {
-                    console.log(authData);
+                    console.log(JSON.stringify(authData));
                     this.getUserData(authData.uid).then((data: User) => {
                         this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
                         this.dataSvc.saveUser(data);
