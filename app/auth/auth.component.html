@@ -1,8 +1,8 @@
-<div [formGroup]="loginForm">
+<FlexboxLayout [formGroup]="loginForm" height="100%" flexDirection="column" justifyContent="center" flexWrap="wrap" alignItems="stretch" alignContent="center" alignSelf="center" class="p-15">
     <TextField hint="Email Address" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email" autocorrect="false" autocapitalizationType="none"></TextField>
     <TextField hint="Password" name="password" [(ngModel)]="password" id="password" formControlName="password" secure="true"></TextField>
 
     <Button [isEnabled]="loginForm.valid" class="btn btn-primary" text="Sign in" (tap)="passLogin()"></Button>
     <Button class="btn btn-primary" text="Sign up for Groceries"></Button>
     
-</div>
+</FlexboxLayout>
