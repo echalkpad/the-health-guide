@@ -1,11 +1,11 @@
-<ActionBar class="action-bar" title="The Health Guide">
+<ActionBar class="action-bar z-depth-3" title="The Health Guide">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)=toggleDrawer()></NavigationButton>
 </ActionBar>
 <RadSideDrawer>
     <StackLayout tkDrawerContent class="sidedrawer-left">
         <StackLayout class="sidedrawer-header">
             <Image class="sidedrawer-header-avatar" [src]="auth.avatar"></Image>
-            <Label [text]="auth.name" textWrap="true" class="text-center"></Label>
+            <Label [text]="auth.name" textWrap="true" class="text-center p-t-5"></Label>
         </StackLayout>
         <StackLayout class="sidedrawer-content">
             <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/home']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft">
