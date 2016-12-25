@@ -3,11 +3,9 @@ import { NativeScriptFormsModule } from "nativescript-angular/forms";
 import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from '../../app-routing.module';
-import { AuthComponent } from '../../auth/auth.component';
-import { AuthGuard } from '../../auth/auth-guard.service';
-import { AuthService } from '../../auth/auth.service';
+import { AuthComponent, AuthGuard, AuthService } from '../../auth';
 import { HomeComponent } from '../../home/home.component';
-import { SharedModule } from '../../shared/shared.module';
+import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
     AuthComponent,

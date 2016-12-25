@@ -54,9 +54,10 @@ export class AuthService {
             }).then((authData: firebase.User) => {
                 if (!!authData) {
                     console.log(JSON.stringify(authData));
+                    this.dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
                     this.getUserData(authData.uid).then((data: User) => {
-                        this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
                         this.dataSvc.saveUser(data);
+                        console.log(JSON.stringify(this.dataSvc.getAuth()), data);
                         resolve(true);
                     });
                 }
@@ -83,7 +84,7 @@ export class AuthService {
                         `/users/${authData.key}`,
                         credentials
                     )
-                    this.dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name));
+                    this.dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
                     this.dataSvc.saveUser(credentials);
                     resolve(true);
                 }

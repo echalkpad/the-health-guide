@@ -1,22 +1,14 @@
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewChild } from "@angular/core";
-
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui/sidedrawer/angular";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "thg-app",
-    templateUrl: "app.component.html"
+    template: "<page-router-outlet></page-router-outlet>"
 })
 export class AppComponent implements OnInit {
-    @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
-    constructor(private changeDetectionRef: ChangeDetectorRef) { }
-
-    public toggleDrawer(): void {
-        this.drawer.toggleDrawerState();
-    }
+    
+    constructor() { }
 
     ngOnInit(): void {
-        this.drawer = this.drawerComponent.sideDrawer;
-        this.changeDetectionRef.detectChanges();
+
     }
 }

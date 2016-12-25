@@ -5,6 +5,7 @@ import * as dialogs from "ui/dialogs";
 
 import { Auth } from './auth.model'
 import { AuthService } from './auth.service';
+import { DataService } from '../shared';
 import { User } from './user.model';
 
 const EMAIL_REGEX: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -22,6 +23,7 @@ export class AuthComponent implements OnInit {
     public password: string = '';
     constructor(
         private authSvc: AuthService,
+        private dataSvc: DataService,
         private fb: FormBuilder,
         private route: ActivatedRoute,
         private router: Router,
@@ -54,5 +56,9 @@ export class AuthComponent implements OnInit {
         });
         this.emailControl = this.loginForm.controls['email'];
         this.passwordControl = this.loginForm.controls['password'];
+
+        if (!!this.dataSvc.getAuth()) {
+            setTimeout(() => this.router.navigate(['/home']), 1000);
+        }
     }
 }

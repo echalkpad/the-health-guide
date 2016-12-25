@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import * as appSettings from "application-settings";
 
-import { Auth } from '../auth/auth.model';
-import { User } from '../auth/user.model';
+import { Auth, User } from '../auth';
 
 @Injectable()
 export class DataService {
@@ -10,6 +9,9 @@ export class DataService {
   constructor() { }
 
   public getAuth(): Auth {
+    if (!appSettings.getString('auth')) {
+      return null;
+    }
     return JSON.parse(appSettings.getString('auth'));
   }
 
@@ -22,6 +24,9 @@ export class DataService {
   }
 
   public getUser(): User {
+    if (!appSettings.getString('user')) {
+      return null;
+    }
     return JSON.parse(appSettings.getString('user'));
   }
 
