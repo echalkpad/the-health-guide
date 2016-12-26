@@ -4,9 +4,13 @@
     alignContent="center" alignSelf="center" class="p-15">
     <TextField hint="Email Address" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email"
         autocorrect="false" autocapitalizationType="none"></TextField>
+    <Label *ngIf="loginForm.controls['email'].hasError('required') && !loginForm.pristine" color="red" text="Email is required" textWrap="true"></Label>
+    <Label *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].dirty" color="red" text="Email is invalid" textWrap="true"></Label>
     <TextField hint="Password" name="password" [(ngModel)]="password" id="password" formControlName="password" secure="true"></TextField>
-
+    <Label *ngIf="loginForm.controls['password'].hasError('required') && !loginForm.pristine" color="red" text="Password is required" textWrap="true"></Label>
+    <Label *ngIf="loginForm.controls['password'].hasError('minlength') && loginForm.controls['password'].dirty" color="red" text="Password is too short" textWrap="true"></Label>
+    <Label *ngIf="loginForm.controls['password'].hasError('maxlength') && loginForm.controls['password'].dirty" color="red" text="Password is too long" textWrap="true"></Label>
     <Button [isEnabled]="loginForm.valid" class="btn btn-primary" text="Sign in" (tap)="passLogin()"></Button>
-    <Button class="btn btn-primary" text="Sign up for Groceries"></Button>
+    <Button class="btn btn-primary" text="Sign up"></Button>
 
 </FlexboxLayout>

@@ -1,4 +1,5 @@
-import { SIDEDRAWER_DIRECTIVES } from "nativescript-telerik-ui/sidedrawer/angular";
+import { SIDEDRAWER_DIRECTIVES } from 'nativescript-telerik-ui/sidedrawer/angular';
+import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui/listview/angular';
 import * as firebase from 'nativescript-plugin-firebase';
 
 firebase.init({
@@ -20,5 +21,6 @@ export const thirdPartyEntries = [
 ];
 
 export const thirdPartyDeclarations = [
-    SIDEDRAWER_DIRECTIVES
+    SIDEDRAWER_DIRECTIVES,
+    LISTVIEW_DIRECTIVES
 ];
