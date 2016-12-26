@@ -12,10 +12,10 @@
 
 .sidedrawer-list-item {
     &.active {
-        background-color: rgba($primary, 0.2);
-        color: $secondary;
+        background-color: rgba($blue, 0.2);
+        color: $grey-dark;
         .fa {
-            color: $secondary;
+            color: $grey-dark;
         }
     }
 }
