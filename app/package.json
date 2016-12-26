@@ -1,29 +1,38 @@
 {
-    "private": false,
+    "author": "Razvan Tomegea <razvan.tomegea@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/razvantomegea/the-health-guide/issues"
+  },
+  "description": "Lifestyle and Wellness application implemented with Angular 2 and Nativescript.",
+  "engines": {
+    "node": ">= 4.2.1",
+    "npm": ">= 3"
+  },
+  "homepage": "http://the-health-guide.firebaseapp.com/",
+  "keywords": [
+    "wellness",
+    "mobile",
+    "angular",
+    "nativescript",
+    "lifestyle"
+  ],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/razvantomegea/the-health-guide/blob/mobile/LICENSE"
+    }
+  ],
+  "name": "the-health-guide",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/razvantomegea/the-health-guide/tree/mobile"
+  },
+  "version": "1.0.0",
     "nativescript": {
         "id": "org.nativescript.helloworldng"
     },
-    "name": "tns-template-hello-world-ng",
     "main": "main.js",
-    "version": "2.4.3",
-    "author": "Telerik <support@telerik.com>",
-    "description": "Nativescript Angular Hello World template",
-    "license": "BSD",
-    "keywords": [
-        "telerik",
-        "mobile",
-        "angular",
-        "nativescript",
-        "{N}",
-        "tns",
-        "appbuilder",
-        "template"
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/NativeScript/template-hello-world-ng"
-    },
-    "homepage": "https://github.com/NativeScript/template-hello-world-ng",
     "android": {
         "v8Flags": "--expose_gc"
     },
