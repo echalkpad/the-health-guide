@@ -1,0 +1,21 @@
+@import 'app-common';
+
+.sidedrawer-header {
+    text-align: center;
+    height: 33%;
+    .sidedrawer-header-avatar {
+        margin-top: -10em;
+        width: 75%;
+        height: 75%;
+    }
+}
+
+.sidedrawer-list-item {
+    &.active {
+        background-color: rgba($primary, 0.2);
+        color: $secondary;
+        .fa {
+            color: $secondary;
+        }
+    }
+}

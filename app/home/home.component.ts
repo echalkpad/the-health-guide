@@ -1,9 +1,4 @@
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewChild } from "@angular/core";
-
-import { RadSideDrawerComponent, SideDrawerType } from "nativescript-telerik-ui/sidedrawer/angular";
-
-import { Auth } from '../auth';
-import { DataService } from '../shared';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 
 @Component({
     moduleId: module.id,
@@ -13,18 +8,10 @@ import { DataService } from '../shared';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-    @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
-    private drawer: SideDrawerType;
-    public auth: Auth = new Auth();
-    constructor(private changeDetectionRef: ChangeDetectorRef, private dataSvc: DataService) { }
-
-    public toggleDrawer(): void {
-        this.drawer.toggleDrawerState();
-    }
+   
+    constructor(private changeDetectionRef: ChangeDetectorRef) { }
 
     ngOnInit(): void {
-        this.drawer = this.drawerComponent.sideDrawer;
         this.changeDetectionRef.detectChanges();
-        this.auth = this.dataSvc.getAuth();
     }
 }

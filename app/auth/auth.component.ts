@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import * as dialogs from "ui/dialogs";
 
 import { Auth } from './auth.model'
@@ -25,8 +25,7 @@ export class AuthComponent implements OnInit {
         private authSvc: AuthService,
         private dataSvc: DataService,
         private fb: FormBuilder,
-        private route: ActivatedRoute,
-        private router: Router,
+        private router: Router
     ) { }
 
     private showAlert(title: string, msg: Error | string): void {
@@ -42,8 +41,8 @@ export class AuthComponent implements OnInit {
 
     public passLogin(): void {
         this.authSvc.login(this.loginForm.value).then(success => {
-            //let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
-            this.router.navigate(["/home"]);
+            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+            this.router.navigate([redirect]);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
         });
@@ -58,7 +57,7 @@ export class AuthComponent implements OnInit {
         this.passwordControl = this.loginForm.controls['password'];
 
         if (!!this.dataSvc.getAuth()) {
-            setTimeout(() => this.router.navigate(['/home']), 1000);
+             this.router.navigate(['/home'])
         }
     }
 }

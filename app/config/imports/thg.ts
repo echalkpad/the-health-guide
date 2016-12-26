@@ -4,11 +4,13 @@ import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent, AuthGuard, AuthService } from '../../auth';
+import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { HomeComponent } from '../../home/home.component';
 import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
     AuthComponent,
+    DashboardComponent,
     HomeComponent
 ];
 
