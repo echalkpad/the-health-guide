@@ -14,11 +14,17 @@ import { DataService, DrawerService } from '../shared';
 export class DashboardComponent implements OnInit {
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     public auth: Auth = new Auth();
-    constructor(private changeDetectionRef: ChangeDetectorRef, private dataSvc: DataService, private drawerSvc: DrawerService) { }
+    constructor(
+        private changeDetectionRef: ChangeDetectorRef,
+        private dataSvc: DataService,
+        private drawerSvc: DrawerService
+    ) {}
 
     ngOnInit(): void {
         this.drawerSvc.drawer = this.drawerComponent.sideDrawer;
+        if (this.dataSvc.getAuth()) {
+            this.auth = this.dataSvc.getAuth();
+        }
         this.changeDetectionRef.detectChanges();
-        this.auth = this.dataSvc.getAuth();
     }
 }

@@ -40,7 +40,7 @@ export class AuthComponent implements OnInit {
 
     public passLogin(): void {
         this.authSvc.login(this.loginForm.value).then(success => {
-            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
+            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/';
             this.router.navigate([redirect]);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
@@ -54,7 +54,7 @@ export class AuthComponent implements OnInit {
         });
 
         if (!!this.dataSvc.getAuth()) {
-             this.router.navigate(['/home'])
+             this.router.navigate(['/'])
         }
     }
 }

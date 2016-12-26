@@ -2,7 +2,7 @@ import { NgModule, NO_ERRORS_SCHEMA } from "@angular/core";
 
 import { AppComponent } from "./app.component";
 import { thirdPartyDeclarations } from './config/imports/third-party'
-import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg';
+import { thgDeclarations, thgEntries, thgImports, thgProviders } from './config/imports/thg';
 
 @NgModule({
     declarations: [
@@ -10,6 +10,7 @@ import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg'
       AppComponent,
     ...thgDeclarations
     ],
+    entryComponents: [...thgEntries],
     bootstrap: [AppComponent],
     imports: [
       ...thgImports

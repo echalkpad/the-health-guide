@@ -5,16 +5,36 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent, AuthGuard, AuthService } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
+import { FoodDetailComponent, FoodDetailResolve, FoodListComponent, FoodService } from '../../food';
 import { HomeComponent } from '../../home/home.component';
+import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent, NutrientService } from '../../nutrients';
+import { RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
 import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
     AuthComponent,
     DashboardComponent,
-    HomeComponent
+    FoodDetailComponent,
+    FoodListComponent,
+    HomeComponent,
+    NutrientDetailComponent,
+    NutrientListComponent,
+    RecipeDetailComponent,
+    RecipeEditComponent,
+    RecipeListComponent
 ];
 
 export const thgEntries = [
+    AuthComponent,
+    DashboardComponent,
+    FoodDetailComponent,
+    FoodListComponent,
+    HomeComponent,
+    NutrientDetailComponent,
+    NutrientListComponent,
+    RecipeDetailComponent,
+    RecipeEditComponent,
+    RecipeListComponent
 ];
 
 export const thgImports = [
@@ -27,5 +47,11 @@ export const thgImports = [
 
 export const thgProviders = [
     AuthGuard,
-    AuthService
+    AuthService,
+    FoodDetailResolve,
+    FoodService,
+    NutrientDetailResolve,
+    NutrientService,
+    RecipeDetailResolve,
+    RecipeService
 ];

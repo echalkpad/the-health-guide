@@ -5,19 +5,19 @@
             <Label [text]="auth.name" textWrap="true" class="text-center p-t-5"></Label>
         </StackLayout>
         <StackLayout class="sidedrawer-content">
-            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/home']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft">
+            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
                 <Label text="&#xf015;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                 <Label class="sidedrawer-list-item-text" row="0" col="1" text="Home"></Label>
             </GridLayout>
-            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/food']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
                 <Label text="&#xf07a;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                 <Label class="sidedrawer-list-item-text" row="0" col="1" text="Food"></Label>
             </GridLayout>
-            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/nutrients']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
                 <Label text="&#xf06c;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                 <Label class="sidedrawer-list-item-text" row="0" col="1" text="Nutrients"></Label>
             </GridLayout>
-            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
+            <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/recipes']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
                 <Label text="&#xf1fd;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                 <Label class="sidedrawer-list-item-text" row="0" col="1" text="Recipes"></Label>
             </GridLayout>
