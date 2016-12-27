@@ -17,20 +17,20 @@ export class FoodService {
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
             }
-            );
+        );
     }
 
-    public getFood(userId: string): Promise<Food> {
+    public getFood(): Promise<Food[]> {
         return new Promise((resolve, reject) => {
             firebase.query(
-                (res) => {
+                (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
                         reject(res);
                     } else {
-                        resolve(res);
+                        resolve(res.value);
                     }
                 },
-                '/food',
+                'foods',
                 {
                     singleEvent: true,
                     orderBy: {
