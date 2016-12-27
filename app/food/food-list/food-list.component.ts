@@ -1,7 +1,10 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { Router } from '@angular/router';
+import { RouterExtensions } from "nativescript-angular/router";
+
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
-import { DrawerService } from '../../shared';
+import { DataService, DrawerService } from '../../shared';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
 
@@ -9,14 +12,21 @@ import { FoodService } from '../shared/food.service';
   moduleId: module.id,
   selector: 'thg-food',
   templateUrl: 'food-list.component.html',
-  styleUrls: ['food-list.component.css']
+  styleUrls: ['food-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnInit {
   private allFoods: Food[];
   private foodLimit: number = 10;
   public isLoading: boolean = true;
   public partialFoods: Food[];
-  constructor(private changeDetectionRef: ChangeDetectorRef, public drawerSvc: DrawerService, private foodSvc: FoodService) { }
+  constructor(
+    private changeDetectionRef: ChangeDetectorRef,
+    private dataSvc: DataService,
+    public drawerSvc: DrawerService,
+    private foodSvc: FoodService,
+    private router: RouterExtensions
+  ) { }
 
   public loadMoreFoods(args: ListViewEventData): void {
     this.foodLimit += 10;
@@ -31,7 +41,10 @@ export class FoodListComponent implements OnInit {
   }
 
   public openDetails(args?: ListViewEventData): void {
-    console.log(args.object.getSelectedItems());
+    let selected: Food = args.object.getSelectedItems()[0];
+    console.log(JSON.stringify(selected));
+    this.dataSvc.saveFood(selected);
+    setTimeout(() => this.router.navigate(['/food', selected.$key]), 1000);
   }
 
   public refreshFoods(args?: ListViewEventData): void {
@@ -42,6 +55,7 @@ export class FoodListComponent implements OnInit {
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
+      this.changeDetectionRef.markForCheck();
     });
   }
 
