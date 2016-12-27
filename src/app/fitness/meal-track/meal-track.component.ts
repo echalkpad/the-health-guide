@@ -105,7 +105,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     public addSelectedMeals(mt: MealTime): void {
         this.isDirty = true;
-        mt.meals = [...mt.meals, ...this.selectedMeals];
+        mt.meals = [...mt.meals, ...this.selectedMeals.map((meal: Meal) => Object.assign({}, meal))];
         mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
         this.loadingSvc.register('mt-nutrition.load');
         this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
@@ -230,8 +230,13 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     public syncMealTrack(): void {
         if (this.isDirty) {
-            this.mtDataSvc.setMealTrack(this.mealTrack);
-            this.dataSvc.saveMealTrack(this.mealTrack);
+            this.loadingSvc.register('mt-nutrition.load');
+            this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+                this.mealTrack.nutrition = nutrition;
+                this.mtDataSvc.setMealTrack(this.mealTrack);
+                this.dataSvc.saveMealTrack(this.mealTrack);
+                this.loadingSvc.resolve('mt-nutrition.load')
+            });
         }
         this.mealTrack = new MealTracker(this.currentDate);
         this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
@@ -296,7 +301,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             if (!this.mealTrack.mealTimes.length) {
                 this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
             }
-        }, 1000);
+        }, 10000);
         this.titleSvc.setTitle('Meal tracker');
     }
 

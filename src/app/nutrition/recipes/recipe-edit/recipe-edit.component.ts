@@ -240,6 +240,7 @@ export class RecipeEditComponent implements OnInit {
                         this.recipe.ingredients.push(ingredient);
                         this.ingredients.splice(this.ingredients.indexOf(ingredient), 1);
                         this.filter();
+                        this.syncNutrition();
                     }
                 } else {
                     if (checkBox) {
@@ -252,6 +253,7 @@ export class RecipeEditComponent implements OnInit {
             this.ingredients.push(ingredient);
             this.filteredIngredients = [...this.helperSvc.sortByName(this.ingredients)];
             this.filter();
+            this.syncNutrition();
         }
 
     }

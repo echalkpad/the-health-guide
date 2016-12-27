@@ -172,6 +172,7 @@ export class MealTrackService {
 
   public setMealTrackNutrition(mt: MealTracker): Promise<MealTrackNutrition> {
     return new Promise(resolve => {
+      let remainingNutrition: MealTrackNutrition = new MealTrackNutrition();
       mt.nutrition = this.getMealTrackNutrition(mt);
       console.log("Total nutrition:", mt.nutrition);
       this.getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
@@ -181,21 +182,21 @@ export class MealTrackService {
             totalNutrients = mt.nutrition[nutrientCategory];
           if (typeof reqNutrients === 'number') {
             if (!!reqNutrients) {
-              mt.nutrition[nutrientCategory] = Math.floor((totalNutrients / reqNutrients) * 100);
+              remainingNutrition[nutrientCategory] = Math.floor((totalNutrients / reqNutrients) * 100);
             } else {
-              mt.nutrition[nutrientCategory] = !!totalNutrients ? 100 : 100 + totalNutrients;
+              remainingNutrition[nutrientCategory] = !totalNutrients ? 100 : 100 + totalNutrients;
             }
           }
           for (let nutrient in reqNutrients) {
             if (reqNutrients[nutrient] > 0) {
-              mt.nutrition[nutrientCategory][nutrient] = Math.floor((totalNutrients[nutrient] / reqNutrients[nutrient]) * 100);
+              remainingNutrition[nutrientCategory][nutrient] = Math.floor((totalNutrients[nutrient] / reqNutrients[nutrient]) * 100);
             } else {
-              mt.nutrition[nutrientCategory][nutrient] = !!totalNutrients[nutrient] ? 100 : 100 + totalNutrients[nutrient];
+              remainingNutrition[nutrientCategory][nutrient] = !totalNutrients[nutrient] ? 100 : 100 + totalNutrients[nutrient];
             }
           }
         }
-        console.log("Remaining nutrition", mt.nutrition);
-        resolve(mt.nutrition);
+        console.log("Remaining nutrition", remainingNutrition);
+        resolve(remainingNutrition);
       });
     });
   }

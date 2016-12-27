@@ -61,7 +61,7 @@ export class ActivityTrackComponent implements OnInit {
 
   public addSelectedActivities(at: ActivityTime): void {
     this.isDirty = true;
-    at.activities = [...at.activities, ...this.selectedActivityTypes];
+    at.activities = [...at.activities, ...this.selectedActivityTypes.map((activity: ActivityType) => Object.assign({}, activity))];
     this.atSvc.setActivityTimeTotal(at);
     this.atSvc.setActivityTrackTotal(this.activityTrack);
   }
