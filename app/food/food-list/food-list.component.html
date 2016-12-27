@@ -1,16 +1,13 @@
 <ActionBar class="action-bar" title="Food">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
 </ActionBar>
-<ActivityIndicator *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
 <GridLayout rows="*">
-    <RadListView [items]="partialFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)">
-        <ListViewLinearLayout tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default">
-            <template tkListItemTemplate let-item="item">
-                <StackLayout orientation="vertical">
-                    <Label class="nameLabel" [text]="item.name"></Label>
-                    <StackLayout class="hr-light"></StackLayout>
-                </StackLayout>
-            </template>
-        </ListViewLinearLayout>
+    <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
+    <RadListView class="list-group" [items]="partialFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+        <template tkListItemTemplate let-item="item">
+            <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">
+                <Label class="list-group-item-heading" [text]="item.name"></Label>
+            </StackLayout>
+        </template>
     </RadListView>
 </GridLayout>

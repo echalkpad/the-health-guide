@@ -30,6 +30,10 @@ export class FoodListComponent implements OnInit {
     }
   }
 
+  public openDetails(args?: ListViewEventData): void {
+    console.log(args.object.getSelectedItems());
+  }
+
   public refreshFoods(args?: ListViewEventData): void {
     this.foodSvc.getFood().then((data: Food[]) => {
       this.allFoods = [...data];

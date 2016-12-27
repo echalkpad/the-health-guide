@@ -20,6 +20,7 @@ export class AuthComponent implements OnInit {
     public loginForm: FormGroup;
     public email: string = '';
     public password: string = '';
+    public isLoading: boolean = false;
     constructor(
         private authSvc: AuthService,
         private dataSvc: DataService,
@@ -39,9 +40,13 @@ export class AuthComponent implements OnInit {
     }
 
     public passLogin(): void {
+        this.isLoading = true;
         this.authSvc.login(this.loginForm.value).then(success => {
             let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/';
-            this.router.navigate([redirect]);
+            setTimeout(() => {
+                this.isLoading = false;
+                this.router.navigate([redirect]);
+            }, 3000);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
         });
