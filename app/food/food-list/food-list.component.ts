@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { Router } from '@angular/router';
-import { RouterExtensions } from "nativescript-angular/router";
 
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
@@ -25,7 +24,7 @@ export class FoodListComponent implements OnInit {
     private dataSvc: DataService,
     public drawerSvc: DrawerService,
     private foodSvc: FoodService,
-    private router: RouterExtensions
+    private router: Router
   ) { }
 
   public loadMoreFoods(args: ListViewEventData): void {

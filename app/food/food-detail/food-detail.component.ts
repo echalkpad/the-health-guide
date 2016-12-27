@@ -1,6 +1,5 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { ActivatedRoute } from '@angular/router';
-import { RouterExtensions } from "nativescript-angular/router";
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Food } from '../shared/food.model';
 
@@ -8,7 +7,8 @@ import { Food } from '../shared/food.model';
   moduleId: module.id,
   selector: 'thg-food-detail',
   templateUrl: 'food-detail.component.html',
-  styleUrls: ['food-detail.component.css']
+  styleUrls: ['food-detail.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodDetailComponent implements OnInit {
   public aminoacids: string[] = [];
@@ -19,11 +19,11 @@ export class FoodDetailComponent implements OnInit {
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private route: ActivatedRoute,
-    private router: RouterExtensions
+    private router: Router
   ) { }
 
   public goBack(): void {
-    this.router.back();
+    this.router.navigate(['/food']);
   }
 
   ngOnInit(): void {
@@ -32,6 +32,7 @@ export class FoodDetailComponent implements OnInit {
       this.aminoacids = Object.keys(this.food['amino acids']);
       this.vitamins = Object.keys(this.food['vitamins']);
       this.minerals = Object.keys(this.food['minerals']);
+      this.changeDetectionRef.detectChanges();
     });
 
   }
