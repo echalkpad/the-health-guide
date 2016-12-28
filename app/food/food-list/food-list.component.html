@@ -3,11 +3,16 @@
 </ActionBar>
 <GridLayout rows="*">
     <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
-    <RadListView class="list-group" [items]="partialFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+    <RadListView class="list-group" [items]="partialFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)"
+        pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
         <template tkListItemTemplate let-item="item">
-            <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">
-                <Label class="list-group-item-heading" [text]="item.name"></Label>
-            </StackLayout>
+            <GridLayout class="list-group-item" rows="*" columns="auto, *" borderBottomWidth="1" borderBottomColor="Cyan">
+                <StackLayout col="0" verticalAlignment="center">
+                    <Label class="list-group-item-heading" [text]="item.name"></Label>
+                    <Label class="list-group-item-text" [text]="item.category"></Label>
+                </StackLayout>
+                <Label col="1" text="100g" class="list-group-item-text text-right text-muted" verticalAlignment="center"></Label>
+            </GridLayout>
         </template>
     </RadListView>
 </GridLayout>

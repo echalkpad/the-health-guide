@@ -20,7 +20,20 @@ export class FoodDetailComponent implements OnInit {
     private changeDetectionRef: ChangeDetectorRef,
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+    this.basicNutrients = [
+      "Water",
+      "Protein",
+      "Carbohydrates",
+      "Sugars",
+      "Fiber",
+      "Fats",
+      "Saturated fat",
+      "Monounsaturated fat",
+      "Polyunsaturated fat",
+      "Trans fat"
+    ];
+  }
 
   public goBack(): void {
     this.router.navigate(['/food']);

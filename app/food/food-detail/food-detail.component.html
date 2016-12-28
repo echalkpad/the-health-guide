@@ -1,3 +1,45 @@
 <ActionBar class="action-bar" [title]="food.name">
   <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
+<TabView>
+  <StackLayout *tabItem="{title: 'Basic'}">
+    <ListView class="list-group" [items]="basicNutrients" separatorColor="gray">
+  <template let-basic="item">
+    <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+      <Label col="0" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+      <Label col="1" text="{{food[basic]}}g" class="list-group-item-text text-right text-muted" verticalAlignment="center"></Label>
+    </GridLayout>
+  </template>
+</ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Amino acids'}">
+    <ListView class="list-group" [items]="aminoacids" separatorColor="gray">
+  <template let-basic="item">
+    <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+      <Label col="0" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+      <Label col="1" text="{{food['amino acids'][basic]}}g" class="list-group-item-text text-right text-muted" verticalAlignment="center"></Label>
+    </GridLayout>
+  </template>
+</ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Minerals'}">
+    <ListView class="list-group" [items]="minerals" separatorColor="gray">
+  <template let-basic="item">
+    <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+      <Label col="0" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+      <Label col="1" text="{{food.minerals[basic]}}mg" class="list-group-item-text text-right text-muted" verticalAlignment="center"></Label>
+    </GridLayout>
+  </template>
+</ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Vitamins'}">
+    <ListView class="list-group" [items]="vitamins" separatorColor="gray">
+  <template let-basic="item">
+    <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+      <Label col="0" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+      <Label col="1" text="{{food.vitamins[basic]}}mg" class="list-group-item-text text-right text-muted" verticalAlignment="center"></Label>
+    </GridLayout>
+  </template>
+</ListView>
+  </StackLayout>
+</TabView>
