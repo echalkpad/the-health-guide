@@ -6,6 +6,7 @@ import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 import { DataService, DrawerService } from '../../shared';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
+import { HelperService } from '../../shared';
 
 @Component({
   moduleId: module.id,
@@ -16,16 +17,25 @@ import { FoodService } from '../shared/food.service';
 })
 export class FoodListComponent implements OnInit {
   private allFoods: Food[];
+  private filteredFoods: Food[];
   private foodLimit: number = 10;
   public isLoading: boolean = true;
   public partialFoods: Food[];
+  public searchInput: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private dataSvc: DataService,
     public drawerSvc: DrawerService,
     private foodSvc: FoodService,
+    private helperSvc: HelperService,
     private router: Router
   ) { }
+
+  public clearSearch(): void {
+    this.searchInput = '';
+    this.filteredFoods = [...this.allFoods];
+    this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
+  }
 
   public loadMoreFoods(args: ListViewEventData): void {
     this.foodLimit += 10;
@@ -48,14 +58,20 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData): void {
     this.foodSvc.getFood().then((data: Food[]) => {
-      this.allFoods = [...data];
-      this.partialFoods = this.allFoods.slice(0, this.foodLimit);
+      this.allFoods = this.helperSvc.sortByName(data);
+      this.filteredFoods = [...this.allFoods];
+      this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
       this.isLoading = false;
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.changeDetectionRef.markForCheck();
     });
+  }
+
+  public searchFood(searchTerm: string): void {
+    this.filteredFoods = this.helperSvc.filterItems(this.allFoods, searchTerm);
+    this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
   }
 
   ngOnInit(): void {
