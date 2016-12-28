@@ -11,10 +11,15 @@ $primary: $blue !default;
 $secondary: $grey-dark !default;
 $light-green: #00C853 !default;
 $accent: $light-green !default;
-button,
-.btn,
+$light-blue: rgba($blue, 0.2) !default;
+
 .btn-primary {
     background-color: $light-green;
+}
+
+.btn-outline {
+    border-color: $light-green;
+    color: $light-green;
 }
 
 .fa {

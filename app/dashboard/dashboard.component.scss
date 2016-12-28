@@ -7,7 +7,7 @@
 
 .sidedrawer-list-item {
     &.active {
-        background-color: rgba($blue, 0.2);
+        background-color: $light-blue;
         color: $grey-dark;
         .fa {
             color: $grey-dark;

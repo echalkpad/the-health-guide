@@ -1,1 +1,18 @@
 @import 'app-common';
+.input-field {
+    margin-bottom: 5em;
+    margin-left: 15em;
+    margin-right: 15em;
+}
+
+TextField {
+    border-width: 1px;
+    border-color: $light-blue;
+    padding: 10em;
+    font-size: 15px;
+}
+
+.btn {
+    font-size: 15px;
+    padding: 1em;
+}
