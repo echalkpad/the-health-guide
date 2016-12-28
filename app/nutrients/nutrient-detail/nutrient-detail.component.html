@@ -1,7 +1,7 @@
 <ActionBar class="action-bar" [title]="nutrient.name">
   <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-<StackLayout>
-    <Label text="Description" class="h1" textWrap="true"></Label>
-    <HtmlView [html]="nutrient.description"></HtmlView>
+<StackLayout class="p-10">
+    <Label text="Description" class="h2" textWrap="true"></Label>
+    <HtmlView [html]="nutrient.description" class="m-10"></HtmlView>
 </StackLayout>
