@@ -3,10 +3,9 @@ import { Router } from '@angular/router';
 
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
-import { DataService, DrawerService } from '../../shared';
+import { DataService, DrawerService, HelperService } from '../../shared';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
-import { HelperService } from '../../shared';
 
 @Component({
   moduleId: module.id,
@@ -20,6 +19,7 @@ export class FoodListComponent implements OnInit {
   private filteredFoods: Food[];
   private foodLimit: number = 10;
   public isLoading: boolean = true;
+  public isSearching: boolean = false;
   public partialFoods: Food[];
   public searchInput: string = '';
   constructor(

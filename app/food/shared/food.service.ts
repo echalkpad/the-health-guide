@@ -12,7 +12,7 @@ export class FoodService {
             true
         ).then(
             function () {
-                console.log("firebase.keepInSync is ON for /users");
+                console.log("firebase.keepInSync is ON for foods");
             },
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
