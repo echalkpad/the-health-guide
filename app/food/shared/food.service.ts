@@ -8,7 +8,7 @@ import { Food } from './food.model';
 export class FoodService {
     constructor() {
         firebase.keepInSync(
-            '/food',
+            '/foods',
             true
         ).then(
             function () {
@@ -17,7 +17,7 @@ export class FoodService {
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
             }
-        );
+            );
     }
 
     public getFood(): Promise<Food[]> {

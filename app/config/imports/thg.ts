@@ -8,7 +8,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { FoodDetailComponent, FoodDetailResolve, FoodListComponent, FoodService } from '../../food';
 import { HomeComponent } from '../../home/home.component';
 import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent, NutrientService } from '../../nutrients';
-import { RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
+import { RecipeDataService, RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
 import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
@@ -52,6 +52,7 @@ export const thgProviders = [
     FoodService,
     NutrientDetailResolve,
     NutrientService,
+    RecipeDataService,
     RecipeDetailResolve,
     RecipeService
 ];
