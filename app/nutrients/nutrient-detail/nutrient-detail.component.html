@@ -1,7 +1,27 @@
 <ActionBar class="action-bar" [title]="nutrient.name">
   <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-<StackLayout class="p-10">
-    <Label text="Description" class="h2" textWrap="true"></Label>
-    <HtmlView [html]="nutrient.description" class="m-10"></HtmlView>
-</StackLayout>
+
+<TabView>
+  <StackLayout *tabItem="{title: 'Summary'}" class="p-20">
+    <HtmlView [html]="nutrient.description"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Classifications'}" class="p-20">
+    <HtmlView [html]="nutrientClassification"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Functions'}" class="p-20">
+    <HtmlView [html]="nutrientFunctions"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Disease preventions'}" class="p-20">
+    <HtmlView [html]="nutrientDiseases"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Relationship with nutrients'}" class="p-20">
+    <HtmlView [html]="nutrient.nutrientRelationship"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Deficiency'}" class="p-20">
+    <HtmlView [html]="nutrient.deficiency"></HtmlView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Toxicity'}" class="p-20">
+    <HtmlView [html]="nutrient.toxicity"></HtmlView>
+  </StackLayout>
+</TabView>
