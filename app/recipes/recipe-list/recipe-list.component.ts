@@ -143,6 +143,8 @@ export class RecipeListComponent implements OnInit {
       this.filteredPrivate = [...this.privateRecipes.slice(0, this.recipeLimit)];
       this.sharedRecipes = [...data[1]];
       this.filteredShared = [...this.privateRecipes.slice(0, this.recipeLimit)];
+      this.isLoadingPrivate = false;
+      this.isLoadingShared = false;
       this.changeDetectionRef.markForCheck();
     });
   }
