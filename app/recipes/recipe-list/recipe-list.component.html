@@ -19,13 +19,13 @@
                     <StackLayout class="list-group-item active">
                         <Image [src]="recipe.image"></Image>
                         <StackLayout backgroundColor="white" class="list-group-item">
-                            <Label class="list-group-item-heading" [text]="recipe.name"></Label>
-                            <Label class="list-group-item-text" text="by {{recipe.chef.name}}"></Label>
+                            <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
+                            <Label class="list-group-item-text text-muted" text="by {{recipe.chef.name}}"></Label>
                             <StackLayout class="hr-light"></StackLayout>
                             <FlexboxLayout flexWrap="wrap" justifyContent="space-between" flexDirection="row" alignItems="stretch" alignContent="center" class="list-group-item-actions">
-                                <Button col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
-                                <Button col="1" class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
-                                <Button col="2" class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
+                                <Button class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
+                                <Button class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
+                                <Button class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
                             </FlexboxLayout>
                         </StackLayout>
                     </StackLayout>
@@ -42,13 +42,17 @@
             <RadListView row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePublic($event)"
                 pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press">
                 <template tkListItemTemplate let-recipe="item">
-                    <GridLayout rows="* auto" columns="*" class="list-group-item active">
-                        <Image row="0" col="0" [src]="recipe.image"></Image>
-                        <StackLayout row="1" col="0" backgroundColor="white" class="list-group-item">
-                            <Label class="list-group-item-heading" [text]="recipe.name"></Label>
-                            <Label class="list-group-item-text" [text]="recipe.description"></Label>
+                    <StackLayout class="list-group-item active">
+                        <Image [src]="recipe.image"></Image>
+                        <StackLayout backgroundColor="white" class="list-group-item">
+                            <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
+                            <Label class="list-group-item-text text-muted" text="by {{recipe.chef.name}}"></Label>
+                            <StackLayout class="hr-light"></StackLayout>
+                            <FlexboxLayout flexWrap="wrap" justifyContent="space-between" flexDirection="row" alignItems="stretch" alignContent="center" class="list-group-item-actions">
+                                <Button class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
+                            </FlexboxLayout>
                         </StackLayout>
-                    </GridLayout>
+                    </StackLayout>
                 </template>
             </RadListView>
         </GridLayout>
