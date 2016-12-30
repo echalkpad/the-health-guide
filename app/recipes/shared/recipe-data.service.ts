@@ -39,7 +39,7 @@ export class RecipeDataService {
       );
   }
 
-  public getMyRecipes(): Promise<Recipe[]> {
+  public getPrivateRecipes(): Promise<Recipe[]> {
     return new Promise((resolve, reject) => {
       firebase.query(
         (res: firebase.FBData) => {

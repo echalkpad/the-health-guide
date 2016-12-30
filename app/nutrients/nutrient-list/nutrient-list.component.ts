@@ -12,7 +12,8 @@ import { NutrientService } from '../shared/nutrient.service';
   moduleId: module.id,
   selector: 'thg-nutrients',
   templateUrl: 'nutrient-list.component.html',
-  styleUrls: ['nutrient-list.component.css']
+  styleUrls: ['nutrient-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NutrientListComponent implements OnInit {
   private macronutrients: Nutrient[];
@@ -121,7 +122,7 @@ export class NutrientListComponent implements OnInit {
       this.filteredMicronutrients = [...this.micronutrients];
       this.isLoadingMacros = false;
       this.isLoadingMicros = false;
-      this.changeDetectionRef.detectChanges();
+      this.changeDetectionRef.markForCheck();
     });
   }
 }

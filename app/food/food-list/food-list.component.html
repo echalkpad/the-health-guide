@@ -8,7 +8,7 @@
 <GridLayout rows="*">
     <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'"
         [busy]="isLoading"></ActivityIndicator>
-    <RadListView row="1" class="list-group" [items]="partialFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)"
+    <RadListView row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)"
         pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
         <template tkListItemTemplate let-food="item">
             <GridLayout class="list-group-item" rows="*" columns="auto, *" borderBottomWidth="1" borderBottomColor="Cyan">

@@ -1,1 +1,36 @@
 @import 'app-common';
+
+.fa {
+    font-family: 'FontAwesome';
+    font-size: 14px;
+}
+
+.hr-light {
+    margin-top: 10em;
+    margin-bottom: 10em;
+    margin-right: -10em;
+    margin-left: -10em;
+}
+
+.list-group-item-actions {
+    padding: -10em;
+    margin: -10em;
+}
+
+.action-btn {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.action-btn-open {
+    color: $blue;
+}
+
+.action-btn-edit {
+    color: $light-green;
+}
+
+.action-btn-remove {
+    color: $error;
+}

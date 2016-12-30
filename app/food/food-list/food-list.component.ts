@@ -15,34 +15,32 @@ import { FoodService } from '../shared/food.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnInit {
-  private allFoods: Food[];
-  private filteredFoods: Food[];
+  private foods: Food[];
   private foodLimit: number = 10;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
-  public partialFoods: Food[];
+  public filteredFoods: Food[];
   public searchInput: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private dataSvc: DataService,
-    public drawerSvc: DrawerService,
     private foodSvc: FoodService,
     private helperSvc: HelperService,
-    private router: Router
+    private router: Router,
+    public drawerSvc: DrawerService,
   ) { }
 
   public clearSearch(): void {
     this.searchInput = '';
-    this.filteredFoods = [...this.allFoods];
-    this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
+    this.filteredFoods = [...this.foods].slice(0, this.foodLimit);
   }
 
   public loadMoreFoods(args: ListViewEventData): void {
     this.foodLimit += 10;
-    if (this.allFoods.length > this.partialFoods.length) {
-      this.partialFoods.push(...this.allFoods.slice(this.partialFoods.length, this.foodLimit));
+    if (this.foods.length > this.filteredFoods.length) {
+      this.filteredFoods.push(...this.foods.slice(this.filteredFoods.length, this.foodLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(this.partialFoods.length - 1);
+        args.object.scrollToIndex(this.filteredFoods.length - 1);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -58,9 +56,8 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData): void {
     this.foodSvc.getFood().then((data: Food[]) => {
-      this.allFoods = this.helperSvc.sortByName(data);
-      this.filteredFoods = [...this.allFoods];
-      this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
+      this.foods = this.helperSvc.sortByName(data);
+      this.filteredFoods = [...this.foods].slice(0, this.foodLimit);
       this.isLoading = false;
       if (args) {
         args.object.notifyPullToRefreshFinished();
@@ -70,8 +67,7 @@ export class FoodListComponent implements OnInit {
   }
 
   public searchFood(searchTerm: string): void {
-    this.filteredFoods = this.helperSvc.filterItems(this.allFoods, searchTerm);
-    this.partialFoods = this.filteredFoods.slice(0, this.foodLimit);
+    this.filteredFoods = this.helperSvc.filterItems(this.foods, searchTerm).slice(0, this.foodLimit);
   }
 
   ngOnInit(): void {

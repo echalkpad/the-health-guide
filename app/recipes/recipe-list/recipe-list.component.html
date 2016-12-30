@@ -1,18 +1,56 @@
 <ActionBar class="action-bar" title="Recipes">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
+    <ActionItem (tap)="isSearching = !isSearching" ios.systemIcon="12" ios.position="right" android.systemIcon="ic_menu_search_holo_dark"
+        text="Search"></ActionItem>
+    <ActionItem (tap)="changeQuery()">
+        <Button text="&#xf0b0;" class="fa action-item"></Button>
+    </ActionItem>
 </ActionBar>
-
-<GridLayout rows="*">
-    <RadListView row="1" class="list-group" [items]="filteredRecipes" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)"
-        pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
-        <template tkListItemTemplate let-recipe="item">
-            <GridLayout rows="* auto" columns="*" class="list-group-item active">
-                <Image row="0" col="0" [src]="recipe.image"></Image>
-                <StackLayout row="1" col="0" backgroundColor="white" class="list-group-item">
-                    <Label class="list-group-item-heading" [text]="recipe.name"></Label>
-                    <Label class="list-group-item-text" [text]="recipe.description"></Label>
-                </StackLayout>
-            </GridLayout>
-        </template>
-    </RadListView>
-</GridLayout>
+<TabView>
+    <StackLayout *tabItem="{title: 'My recipes'}">
+        <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
+            (submit)="searchPrivate(searchTerm.text)"></SearchBar>
+        <GridLayout rows="*">
+            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'"
+                [busy]="isLoadingPrivate"></ActivityIndicator>
+            <RadListView row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)"
+                pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press">
+                <template tkListItemTemplate let-recipe="item">
+                    <StackLayout class="list-group-item active">
+                        <Image [src]="recipe.image"></Image>
+                        <StackLayout backgroundColor="white" class="list-group-item">
+                            <Label class="list-group-item-heading" [text]="recipe.name"></Label>
+                            <Label class="list-group-item-text" text="by {{recipe.chef.name}}"></Label>
+                            <StackLayout class="hr-light"></StackLayout>
+                            <FlexboxLayout flexWrap="wrap" justifyContent="space-between" flexDirection="row" alignItems="stretch" alignContent="center" class="list-group-item-actions">
+                                <Button col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
+                                <Button col="1" class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
+                                <Button col="2" class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
+                            </FlexboxLayout>
+                        </StackLayout>
+                    </StackLayout>
+                </template>
+            </RadListView>
+        </GridLayout>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Other recipes'}">
+        <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchShared()" [text]="searchInputShared"
+            (submit)="searchShared(searchTerm.text)"></SearchBar>
+        <GridLayout rows="*">
+            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
+                [busy]="isLoadingShared"></ActivityIndicator>
+            <RadListView row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePublic($event)"
+                pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press">
+                <template tkListItemTemplate let-recipe="item">
+                    <GridLayout rows="* auto" columns="*" class="list-group-item active">
+                        <Image row="0" col="0" [src]="recipe.image"></Image>
+                        <StackLayout row="1" col="0" backgroundColor="white" class="list-group-item">
+                            <Label class="list-group-item-heading" [text]="recipe.name"></Label>
+                            <Label class="list-group-item-text" [text]="recipe.description"></Label>
+                        </StackLayout>
+                    </GridLayout>
+                </template>
+            </RadListView>
+        </GridLayout>
+    </StackLayout>
+</TabView>
