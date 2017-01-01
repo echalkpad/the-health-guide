@@ -3,6 +3,7 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
+import { SetupItemViewArgs } from "nativescript-angular/directives";
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -53,8 +54,9 @@ export class MealSearchComponent implements OnInit {
     }
 
     public loadMoreMeals(args: ListViewEventData): void {
+        // FIXME: Infinite Loading
         let that = new WeakRef(this);
-        that.get().mealsLimit += 10;
+        that.get().mealsLimit += 20;
         if (that.get().meals.length > that.get().filteredMeals.length) {
             that.get().filteredMeals.push(...that.get().meals.slice(that.get().filteredMeals.length, that.get().mealsLimit));
             setTimeout(() => {
@@ -78,10 +80,14 @@ export class MealSearchComponent implements OnInit {
         });
     }
 
+    public removeSelection(selection: SetupItemViewArgs): void {
+        this.selections.splice(selection.index, 1);
+    }
+
     public searchMeals(searchTerm: string): void {
-        this.filteredMeals = this.meals.filter(
+        this.filteredMeals = [...this.meals.filter(
             (meal: Meal) => meal.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1
-        ).slice(0, this.mealsLimit);
+        ).slice(0, this.mealsLimit)];
     }
 
     public toggleSelection(args: ListViewEventData): void {

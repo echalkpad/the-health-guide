@@ -151,15 +151,20 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.queryIngredients = this.mealSearchSvc.getSelections();
     Promise.all([
       this.recipeDataSvc.getPrivateRecipes(),
       this.recipeDataSvc.getSharedRecipes()
     ]).then((data: Array<Recipe[]>) => {
       this.privateRecipes = [...data[0]];
-      this.filteredPrivate = [...this.privateRecipes.slice(0, this.recipeLimit)];
       this.sharedRecipes = [...data[1]];
-      this.filteredShared = [...this.privateRecipes.slice(0, this.recipeLimit)];
+      this.queryIngredients = [...this.mealSearchSvc.getSelections()];
+      if (!!this.queryIngredients.length) {
+        this.filteredPrivate = this.recipeSvc.filterRecipes(this.privateRecipes, this.query, '', this.queryIngredients).slice(0, this.recipeLimit);
+        this.filteredShared = this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, '', this.queryIngredients).slice(0, this.recipeLimit);
+      } else {
+        this.filteredPrivate = [...this.privateRecipes.slice(0, this.recipeLimit)];
+        this.filteredShared = [...this.privateRecipes.slice(0, this.recipeLimit)];
+      }
       this.isLoadingPrivate = false;
       this.isLoadingShared = false;
       this.changeDetectionRef.markForCheck();

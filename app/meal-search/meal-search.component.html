@@ -7,10 +7,11 @@
     </ActionBar>
     <TabView>
         <StackLayout *tabItem="{title: 'Selections'}">
-            <ListView [items]="selections" class="list-group" (itemTap)="onItemTap($event)" separatorColor="cyan">
+            <ListView [items]="selections" class="list-group" (itemTap)="removeSelection($event)" separatorColor="cyan">
                 <template let-selection="item" let-i="index" let-odd="odd" let-even="even">
-                    <GridLayout class="list-group-item">
-                        <Label [text]="selection.name"></Label>
+                    <GridLayout class="list-group-item" rows="*" columns="30, *">
+                        <Label row="0" col="0" class="fa" text="&#xf014;" color="red"></Label>
+                        <Label row="0" col="1" [text]="selection.name"></Label>
                     </GridLayout>
                 </template>
             </ListView>
@@ -23,7 +24,7 @@
                 <RadListView row="1" class="list-group" [items]="filteredMeals" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreMeals($event)"
                     pullToRefresh="true" (pullToRefreshInitiated)="refreshMeals($event)" selectionBehavior="Press" (itemSelected)="toggleSelection($event)">
                     <template tkListItemTemplate let-meal="item">
-                        <GridLayout class="list-group-item" rows="*" columns="50, *" borderBottomWidth="1" borderBottomColor="Cyan" verticalAlignment="center">
+                        <GridLayout class="list-group-item" rows="*" columns="30, *" borderBottomWidth="1" borderBottomColor="Cyan" verticalAlignment="center">
                             <Label row="0" col="0" class="fa" text="{{ meal.isSelected ? '&#xf046;' : '&#xf096;' }}"></Label>
                             <Label row="0" col="1" class="list-group-item-heading" textWrap="true" [text]="meal.name"></Label>
                         </GridLayout>
