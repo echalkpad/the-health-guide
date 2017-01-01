@@ -1,7 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
-
-import 'rxjs/add/operator/switchMap';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -12,7 +10,8 @@ import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';
-import { MealSearchComponent, MealSearchService } from '../../meal-search';
+import { MealSearchComponent } from '../../meal-search';
+import { MealSearchService } from '../../meal-search/meal-search.service'
 import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -45,7 +44,6 @@ export class RecipeListComponent implements OnInit {
     private recipeDataSvc: RecipeDataService,
     private recipeSvc: RecipeService,
     private router: RouterExtensions,
-    private vcRef: ViewContainerRef,
     public drawerSvc: DrawerService
   ) { }
 

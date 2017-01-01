@@ -22,12 +22,12 @@ import { RecipeDataService } from '../recipes';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MealSearchComponent implements OnInit {
-    private mealsLimit: number = 5;
+    private mealsLimit: number = 20;
     public filteredMeals: Meal[];
     public isLoading: boolean = true;
     public selections: Meal[];
     public meals: Meal[];
-    public searchInputPrivate: string = '';
+    public searchInput: string = '';
     constructor(
         private changeDetectionRef: ChangeDetectorRef,
         private foodSvc: FoodService,
@@ -38,11 +38,12 @@ export class MealSearchComponent implements OnInit {
     ) {  }
 
     public cancel(): void {
+        this.mealSearchSvc.clearSelections();
         this.router.back();
     }
 
     public clearSearch(): void {
-        this.searchInputPrivate = '';
+        this.searchInput = '';
         this.filteredMeals = [...this.meals];
     }
 
@@ -100,7 +101,7 @@ export class MealSearchComponent implements OnInit {
             this.recipeDataSvc.getSharedRecipes(),
             this.foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.helpSvc.sortByName([...data[0], ...data[1]]);
+            this.meals = this.helpSvc.sortByName([...data[0], ...data[1]]).slice(0, this.mealsLimit);
             this.filteredMeals = [...this.meals];
             this.isLoading = false;
             this.changeDetectionRef.markForCheck();
