@@ -1,17 +1,19 @@
+// Angular
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { Resolve } from '@angular/router';
 
-import { DataService } from '../../shared/data.service';
+// THG
 import { Nutrient } from '../shared/nutrient.model';
+import { NutrientService } from '../shared/nutrient.service';
 
 @Injectable()
 export class NutrientDetailResolve implements Resolve<Nutrient> {
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private nutrientSvc: NutrientService) { }
 
-  public resolve(route: ActivatedRouteSnapshot): Promise<Nutrient> {
+  public resolve(): Promise<Nutrient> {
     return new Promise((resolve, reject) => {
-      resolve(this.dataSvc.getNutrient());
+      resolve(this.nutrientSvc.getNutrient());
     });
   }
 

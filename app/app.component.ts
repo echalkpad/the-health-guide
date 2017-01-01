@@ -1,6 +1,10 @@
+// Angular
 import { Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
 
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
+
+// THG
 import { DataService } from './shared';
 
 @Component({
@@ -9,7 +13,7 @@ import { DataService } from './shared';
 })
 export class AppComponent implements OnInit {
     
-    constructor(private dataSvc: DataService, private router: Router) { }
+    constructor(private dataSvc: DataService, private router: RouterExtensions) { }
 
     ngOnInit(): void {
         if (!this.dataSvc.getAuth()) {

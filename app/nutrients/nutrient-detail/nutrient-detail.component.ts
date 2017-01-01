@@ -1,7 +1,11 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ActivatedRoute } from '@angular/router';
 
-import { ActivatedRoute, Router } from '@angular/router';
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
 
+// THG
 import { Nutrient } from '../shared/nutrient.model';
 
 @Component({
@@ -19,11 +23,11 @@ export class NutrientDetailComponent implements OnInit {
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private route: ActivatedRoute,
-    private router: Router
+    private router: RouterExtensions
   ) { }
 
   public goBack(): void {
-    this.router.navigate(['/nutrients']);
+    this.router.back();
   }
 
   ngOnInit(): void {

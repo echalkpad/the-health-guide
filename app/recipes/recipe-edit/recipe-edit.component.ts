@@ -1,3 +1,4 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 
 @Component({

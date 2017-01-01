@@ -1,11 +1,15 @@
+// Angular
 import { Injectable } from '@angular/core';
 
+// Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
+// THG
 import { Food } from './food.model';
 
 @Injectable()
 export class FoodService {
+    private food: Food;
     constructor() {
         firebase.keepInSync(
             '/foods',
@@ -20,7 +24,11 @@ export class FoodService {
             );
     }
 
-    public getFood(): Promise<Food[]> {
+    public getFood(): Food {
+        return this.food;
+    }
+
+    public getFoods(): Promise<Food[]> {
         return new Promise((resolve, reject) => {
             firebase.query(
                 (res: firebase.FBData) => {
@@ -40,6 +48,9 @@ export class FoodService {
                 }
             );
         });
+    }
 
+    public storeFood(food: Food): void {
+        this.food = food;
     }
 }

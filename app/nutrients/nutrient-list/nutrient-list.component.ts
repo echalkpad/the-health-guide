@@ -1,10 +1,15 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
-import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 
-import { DataService, DrawerService, HelperService } from '../../shared';
+// Telerik
+import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+
+// THG
+import { DrawerService, HelperService } from '../../shared';
 import { Nutrient } from '../shared/nutrient.model';
 import { NutrientService } from '../shared/nutrient.service';
 
@@ -28,11 +33,10 @@ export class NutrientListComponent implements OnInit {
   public searchInputMicros: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
-    private dataSvc: DataService,
     public drawerSvc: DrawerService,
     private helperSvc: HelperService,
     private nutrientSvc: NutrientService,
-    private router: Router
+    private router: RouterExtensions
   ) { }
 
   public changeQuery(): void {
@@ -79,7 +83,7 @@ export class NutrientListComponent implements OnInit {
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
     let selected: Nutrient = args.object.getSelectedItems()[0];
     console.log(JSON.stringify(selected));
-    this.dataSvc.saveNutrient(selected);
+    this.nutrientSvc.storeNutrient(selected);
     setTimeout(() => this.router.navigate([`/nutrients/${nutrientGroup}`, selected.$key]), 1000);
   }
 

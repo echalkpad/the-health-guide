@@ -1,11 +1,15 @@
+// Angular
 import { Injectable } from '@angular/core';
 
+// Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
+// THG
 import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
+  private nutrient: Nutrient;
   constructor() {
     firebase.keepInSync(
       '/macronutrients',
@@ -89,6 +93,14 @@ export class NutrientService {
         }
       );
     });
+  }
+
+  public getNutrient(): Nutrient {
+    return this.nutrient;
+  }
+
+  public storeNutrient(nutrient: Nutrient): void {
+    this.nutrient = nutrient;
   }
 
 }

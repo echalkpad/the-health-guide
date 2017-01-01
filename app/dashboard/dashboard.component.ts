@@ -1,7 +1,10 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewChild } from '@angular/core';
 
+// Nativescript
 import { RadSideDrawerComponent } from "nativescript-telerik-ui/sidedrawer/angular";
 
+// THG
 import { Auth, AuthService } from '../auth';
 import { DataService, DrawerService } from '../shared';
 

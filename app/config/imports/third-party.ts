@@ -1,5 +1,8 @@
+// Telerik
 import { SIDEDRAWER_DIRECTIVES } from 'nativescript-telerik-ui/sidedrawer/angular';
 import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui/listview/angular';
+
+// Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
 firebase.init({

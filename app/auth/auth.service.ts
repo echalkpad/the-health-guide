@@ -1,7 +1,11 @@
+// Angular
 import { Injectable } from '@angular/core';
+
+// Nativescript
 import * as firebase from 'nativescript-plugin-firebase';
 import * as fs from "file-system";
 
+// THG
 import { Auth } from './auth.model';
 import { DataService } from '../shared/data.service';
 import { User } from './user.model';

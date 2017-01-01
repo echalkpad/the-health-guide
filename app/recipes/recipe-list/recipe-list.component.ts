@@ -1,10 +1,14 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { ListViewEventData } from 'nativescript-telerik-ui/listview';
-import { Router } from '@angular/router';
 
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 
-import { DataService, DrawerService, HelperService } from '../../shared';
+// Telerik
+import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+
+import { DrawerService, HelperService } from '../../shared';
 import { Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -32,11 +36,10 @@ export class RecipeListComponent implements OnInit {
   public searchInputPublic: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
-    private dataSvc: DataService,
     private helperSvc: HelperService,
     private recipeDataSvc: RecipeDataService,
     private recipeSvc: RecipeService,
-    private router: Router,
+    private router: RouterExtensions,
     public drawerSvc: DrawerService,
   ) { }
 
@@ -100,7 +103,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public openDetails(recipe: Recipe): void {
-    this.dataSvc.saveRecipe(recipe);
+    this.recipeDataSvc.storeRecipe(recipe);
     setTimeout(() => this.router.navigate(['/recipes', recipe['$key']]), 1000);
   }
 

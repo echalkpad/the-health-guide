@@ -1,17 +1,19 @@
+// Angular
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, Resolve } from '@angular/router';
+import { Resolve } from '@angular/router';
 
-import { DataService } from '../../shared/data.service';
+// THG
 import { Recipe } from '../shared/recipe.model';
+import { RecipeDataService } from '../shared/recipe-data.service';
 
 @Injectable()
 export class RecipeDetailResolve implements Resolve<Recipe> {
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private recipeDataSvc: RecipeDataService) { }
 
-  public resolve(route: ActivatedRouteSnapshot): Promise<Recipe> {
+  public resolve(): Promise<Recipe> {
     return new Promise(resolve => {
-      resolve(this.dataSvc.getRecipe());
+      resolve(this.recipeDataSvc.getRecipe());
     });
   }
 

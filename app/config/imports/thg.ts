@@ -1,12 +1,18 @@
-import { NativeScriptModule } from 'nativescript-angular/platform';
-import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+// Angular
 import { ReactiveFormsModule } from '@angular/forms'
 
+// Nativescript
+import { NativeScriptModule } from 'nativescript-angular/platform';
+import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+import { ModalDialogService } from "nativescript-angular/modal-dialog";
+
+// THG
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent, AuthGuard, AuthService } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { FoodDetailComponent, FoodDetailResolve, FoodListComponent, FoodService } from '../../food';
 import { HomeComponent } from '../../home/home.component';
+import { MealSearchComponent } from '../../meal-search';
 import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent, NutrientService } from '../../nutrients';
 import { RecipeDataService, RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
 import { SharedModule } from '../../shared';
@@ -17,6 +23,7 @@ export const thgDeclarations = [
     FoodDetailComponent,
     FoodListComponent,
     HomeComponent,
+    MealSearchComponent,
     NutrientDetailComponent,
     NutrientListComponent,
     RecipeDetailComponent,
@@ -30,6 +37,7 @@ export const thgEntries = [
     FoodDetailComponent,
     FoodListComponent,
     HomeComponent,
+    MealSearchComponent,
     NutrientDetailComponent,
     NutrientListComponent,
     RecipeDetailComponent,
@@ -50,6 +58,7 @@ export const thgProviders = [
     AuthService,
     FoodDetailResolve,
     FoodService,
+    ModalDialogService,
     NutrientDetailResolve,
     NutrientService,
     RecipeDataService,

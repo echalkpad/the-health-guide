@@ -1,8 +1,12 @@
+// Angular
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from "ui/dialogs";
 
+// THG
 import { Auth } from './auth.model'
 import { AuthService } from './auth.service';
 import { DataService } from '../shared';
@@ -25,7 +29,7 @@ export class AuthComponent implements OnInit {
         private authSvc: AuthService,
         private dataSvc: DataService,
         private fb: FormBuilder,
-        private router: Router
+        private router: RouterExtensions
     ) { }
 
     private showAlert(title: string, msg: Error | string): void {

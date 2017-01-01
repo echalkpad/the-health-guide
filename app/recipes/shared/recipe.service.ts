@@ -1,5 +1,7 @@
+// Angular
 import { Injectable } from '@angular/core';
 
+// THG
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 

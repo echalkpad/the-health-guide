@@ -1,7 +1,9 @@
+// Angular
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+// THG
 import { CanDeactivateGuard } from './can-deactivate-guard.service';
 import { DataService } from './data.service';
 import { DrawerService } from './drawer.service';

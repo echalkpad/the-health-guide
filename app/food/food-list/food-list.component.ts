@@ -1,9 +1,14 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { Router } from '@angular/router';
 
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
+
+// Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
-import { DataService, DrawerService, HelperService } from '../../shared';
+//THG
+import { DrawerService, HelperService } from '../../shared';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
 
@@ -23,10 +28,9 @@ export class FoodListComponent implements OnInit {
   public searchInput: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
-    private dataSvc: DataService,
     private foodSvc: FoodService,
     private helperSvc: HelperService,
-    private router: Router,
+    private router: RouterExtensions,
     public drawerSvc: DrawerService,
   ) { }
 
@@ -50,12 +54,12 @@ export class FoodListComponent implements OnInit {
   public openDetails(args?: ListViewEventData): void {
     let selected: Food = args.object.getSelectedItems()[0];
     console.log(JSON.stringify(selected));
-    this.dataSvc.saveFood(selected);
+    this.foodSvc.storeFood(selected);
     setTimeout(() => this.router.navigate(['/food', selected.$key]), 1000);
   }
 
   public refreshFoods(args?: ListViewEventData): void {
-    this.foodSvc.getFood().then((data: Food[]) => {
+    this.foodSvc.getFoods().then((data: Food[]) => {
       this.foods = this.helperSvc.sortByName(data);
       this.filteredFoods = [...this.foods].slice(0, this.foodLimit);
       this.isLoading = false;

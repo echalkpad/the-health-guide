@@ -1,8 +1,13 @@
+// Angular
 import { Injectable } from '@angular/core';
+
+// RxJS
 import { Observable } from 'rxjs/Observable';
 
+// Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
+// THG
 import { DataService } from '../../shared';
 import { HelperService } from '../../shared';
 import { Ingredient, Recipe } from './recipe.model';
@@ -13,6 +18,8 @@ const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-he
 @Injectable()
 export class RecipeDataService {
   private auth: string;
+  private ingredients: Ingredient[];
+  private recipe: Recipe;
   constructor(private dataSvc: DataService, private helperSvc: HelperService) {
     this.auth = dataSvc.getAuth().id;
     firebase.keepInSync(
@@ -37,6 +44,10 @@ export class RecipeDataService {
         console.log("firebase.keepInSync error: " + error);
       }
       );
+  }
+
+  public getIngredients(): Ingredient[] {
+    return this.ingredients;
   }
 
   public getPrivateRecipes(): Promise<Recipe[]> {
@@ -65,6 +76,10 @@ export class RecipeDataService {
     });
   }
 
+  public getRecipe(): Recipe {
+    return this.recipe;
+  }
+
   public getSharedRecipes(): Promise<Recipe[]> {
     return new Promise((resolve, reject) => {
       firebase.query(
@@ -72,7 +87,7 @@ export class RecipeDataService {
           if (res.hasOwnProperty('error')) {
             reject(res);
           } else {
-             let recipes: Recipe[] = [];
+            let recipes: Recipe[] = [];
             for (let recipeKey in res.value) {
               recipes.push(res.value[recipeKey]);
             }
@@ -89,6 +104,14 @@ export class RecipeDataService {
         }
       );
     });
+  }
+
+  public storeIngredients(ingredients: Ingredient[]): void {
+    this.ingredients = ingredients;
+  }
+
+  public storeRecipe(recipe: Recipe): void {
+    this.recipe = recipe;
   }
 
 }

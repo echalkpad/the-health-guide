@@ -1,0 +1,1 @@
+export { MealSearchComponent } from './meal-search.component';

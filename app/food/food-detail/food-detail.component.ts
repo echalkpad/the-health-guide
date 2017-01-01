@@ -1,6 +1,11 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
+// Nativescript
+import { RouterExtensions } from 'nativescript-angular/router';
+
+// THG
 import { Food } from '../shared/food.model';
 
 @Component({
@@ -19,7 +24,7 @@ export class FoodDetailComponent implements OnInit {
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private route: ActivatedRoute,
-    private router: Router
+    private router: RouterExtensions
   ) {
     this.basicNutrients = [
       "Water",
@@ -36,7 +41,7 @@ export class FoodDetailComponent implements OnInit {
   }
 
   public goBack(): void {
-    this.router.navigate(['/food']);
+    this.router.back();
   }
 
   ngOnInit(): void {

@@ -1,5 +1,7 @@
+// Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 
+// THG
 import { DrawerService } from '../shared';
 
 @Component({

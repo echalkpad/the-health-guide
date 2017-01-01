@@ -1,4 +1,7 @@
+// Angular
 import { Injectable } from '@angular/core';
+
+// Telerik
 import { SideDrawerType } from 'nativescript-telerik-ui/sidedrawer/angular';
 
 @Injectable()
