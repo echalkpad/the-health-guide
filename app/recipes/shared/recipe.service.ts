@@ -231,7 +231,7 @@ export class RecipeService {
     }
   }
 
-  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
+  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: Ingredient[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
         matchedIngredients: number = 0,
@@ -239,9 +239,9 @@ export class RecipeService {
       if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
         match = true;
         if (!!ingredients && !!ingredients.length) {
-          ingredients.forEach((item: string) => {
+          ingredients.forEach((item: Ingredient) => {
             recipe.ingredients.forEach((ingredient: Ingredient) => {
-              if (ingredient.name === item) {
+              if (ingredient.name === item.name) {
                 matchedIngredients++;
               }
             });

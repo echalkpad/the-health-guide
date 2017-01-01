@@ -40,11 +40,12 @@ export class FoodListComponent implements OnInit {
   }
 
   public loadMoreFoods(args: ListViewEventData): void {
-    this.foodLimit += 10;
-    if (this.foods.length > this.filteredFoods.length) {
-      this.filteredFoods.push(...this.foods.slice(this.filteredFoods.length, this.foodLimit));
+    let that = new WeakRef(this);
+    that.get().foodLimit += 10;
+    if (that.get().foods.length > that.get().filteredFoods.length) {
+      that.get().filteredFoods.push(...that.get().foods.slice(that.get().filteredFoods.length, that.get().foodLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(this.filteredFoods.length - 1);
+        args.object.scrollToIndex(that.get().filteredFoods.length - 1);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -59,14 +60,17 @@ export class FoodListComponent implements OnInit {
   }
 
   public refreshFoods(args?: ListViewEventData): void {
-    this.foodSvc.getFoods().then((data: Food[]) => {
-      this.foods = this.helperSvc.sortByName(data);
-      this.filteredFoods = [...this.foods].slice(0, this.foodLimit);
-      this.isLoading = false;
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.changeDetectionRef.markForCheck();
+    let that = new WeakRef(this);
+    that.get().foodSvc.getFoods().then((data: Food[]) => {
+      that.get().foods = that.get().helperSvc.sortByName(data);
+      that.get().filteredFoods = [...that.get().foods].slice(0, that.get().foodLimit);
+      that.get().isLoading = false;
+      setTimeout(() => {
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        that.get().changeDetectionRef.markForCheck();
+      }, 2000);
     });
   }
 

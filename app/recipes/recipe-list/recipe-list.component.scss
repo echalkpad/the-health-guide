@@ -6,21 +6,17 @@
 }
 
 .hr-light {
-    margin-top: 20em;
-    margin-bottom: 20em;
-    margin-right: -10em;
-    margin-left: -10em;
+    margin: 20em -10em;
 }
 
 .list-group-item-actions {
-    padding: -10em;
-    margin: -10em;
+    margin: -10em 0;
+    width: 100%;
 }
 
 .action-btn {
     padding: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
 }
 
 .action-btn-open {

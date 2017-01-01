@@ -88,22 +88,28 @@ export class NutrientListComponent implements OnInit {
   }
 
   public refreshMacros(args: ListViewEventData): void {
-    this.nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
-      this.macronutrients = this.helperSvc.sortByName(data);
-      this.filteredMacronutrients = [...this.macronutrients];
-      this.isLoadingMacros = false;
-      args.object.notifyPullToRefreshFinished();
-      this.changeDetectionRef.markForCheck();
+    let that = new WeakRef(this);
+    that.get().nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
+      that.get().macronutrients = that.get().helperSvc.sortByName(data);
+      that.get().filteredMacronutrients = [...that.get().macronutrients];
+      that.get().isLoadingMacros = false;
+      setTimeout(() => {
+        args.object.notifyPullToRefreshFinished();
+        that.get().changeDetectionRef.markForCheck();
+      }, 2000);
     });
   }
 
   public refreshMicros(args: ListViewEventData): void {
-    this.nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
-      this.micronutrients = this.helperSvc.sortByName(data);
-      this.filteredMicronutrients = [...this.micronutrients];
-      this.isLoadingMicros = false;
-      args.object.notifyPullToRefreshFinished();
-      this.changeDetectionRef.markForCheck();
+    let that = new WeakRef(this);
+    that.get().nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
+      that.get().micronutrients = that.get().helperSvc.sortByName(data);
+      that.get().filteredMicronutrients = [...that.get().micronutrients];
+      that.get().isLoadingMicros = false;
+      setTimeout(() => {
+        args.object.notifyPullToRefreshFinished();
+        that.get().changeDetectionRef.markForCheck();
+      }, 2000);
     });
   }
 

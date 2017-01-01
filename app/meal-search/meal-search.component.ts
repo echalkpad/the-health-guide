@@ -2,7 +2,7 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 // Nativescript
-import { ModalDialogParams } from "nativescript-angular/modal-dialog";
+import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -36,9 +36,17 @@ export class MealSearchComponent implements OnInit {
         this.selections = params.context;
     }
 
+    public cancel(): void {
+        this.params.closeCallback([]);
+    }
+
     public clearSearch(): void {
         this.searchInputPrivate = '';
         this.filteredMeals = [...this.meals];
+    }
+
+    public done(): void {
+        this.params.closeCallback(this.selections);
     }
 
     public loadMore(args: ListViewEventData): void {
@@ -66,15 +74,20 @@ export class MealSearchComponent implements OnInit {
     }
 
     public searchMeals(searchTerm: string): void {
-    this.filteredMeals = this.meals.filter(
-        (meal: Meal) => meal.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1
-    ).slice(0, this.mealsLimit);
-  }
+        this.filteredMeals = this.meals.filter(
+            (meal: Meal) => meal.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1
+        ).slice(0, this.mealsLimit);
+    }
 
-    public toggleSelection(selection: Meal): void {
-        this.selections.splice(this.selections.indexOf(
-            this.selections.filter((meal: Meal) => meal.name === selection.name)[0]
-        ), 1)
+    public toggleSelection(args: ListViewEventData): void {
+        let selected: Meal = args.object.getSelectedItems()[0];
+        if (!!selected['isSelected']) {
+            this.selections.splice(this.selections.indexOf(selected, 1));
+            selected['isSelected'] = false;
+        } else {
+            this.selections.push(selected);
+            selected['isSelected'] = true;
+        }
     }
 
     ngOnInit(): void {

@@ -2,8 +2,8 @@
 </ActionBar>
 <GridLayout rows="*">
     <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
-    <FlexboxLayout *ngIf="!isLoading" [formGroup]="loginForm" height="100%" flexDirection="column" justifyContent="center" flexWrap="wrap"
-        alignItems="stretch" alignContent="center" alignSelf="center" class="p-15">
+    <StackLayout *ngIf="!isLoading" [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center"
+        minHeight="100" minWidth="300">
         <StackLayout class="input-field">
             <TextField hint="Email address" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email"
                 autocorrect="false" autocapitalizationType="none"></TextField>
@@ -23,5 +23,5 @@
         </StackLayout>
         <Button [isEnabled]="loginForm.valid" class="btn btn-outline" text="Sign in" (tap)="passLogin()"></Button>
         <Button class="btn" text="Sign up"></Button>
-    </FlexboxLayout>
+    </StackLayout>
 </GridLayout>

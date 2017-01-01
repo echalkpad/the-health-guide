@@ -1,15 +1,18 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
+import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
+// THG
 import { DrawerService, HelperService } from '../../shared';
-import { Recipe } from '../shared/recipe.model';
+import { MealSearchComponent } from '../../meal-search';
+import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
 
@@ -22,7 +25,7 @@ import { RecipeService } from '../shared/recipe.service';
 })
 export class RecipeListComponent implements OnInit {
   private privateRecipes: Recipe[];
-  private recipeLimit: number = 5;
+  private recipeLimit: number = 3;
   private sharedRecipes: Recipe[];
   public filteredPrivate: Recipe[];
   public filteredShared: Recipe[];
@@ -31,16 +34,18 @@ export class RecipeListComponent implements OnInit {
   public isLoadingShared: boolean = true;
   public isSearching: boolean = false;
   public query: string = 'name';
-  public queryIngredients: string[] = [];
+  public queryIngredients: Ingredient[] = [];
   public searchInputPrivate: string = '';
   public searchInputPublic: string = '';
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private helperSvc: HelperService,
+    private modalSvc: ModalDialogService,
     private recipeDataSvc: RecipeDataService,
     private recipeSvc: RecipeService,
     private router: RouterExtensions,
-    public drawerSvc: DrawerService,
+    private vcRef: ViewContainerRef,
+    public drawerSvc: DrawerService
   ) { }
 
   public changeQuery(): void {
@@ -59,6 +64,13 @@ export class RecipeListComponent implements OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
+          this.modalSvc.showModal(MealSearchComponent, {
+            viewContainerRef: this.vcRef,
+            context: this.queryIngredients,
+            fullscreen: true
+          }).then((ingredients: Ingredient[]) => {
+            this.queryIngredients = [...ingredients];
+          });
           break;
 
         default:
@@ -79,11 +91,12 @@ export class RecipeListComponent implements OnInit {
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
-    this.recipeLimit += 10;
-    if (this.privateRecipes.length > this.filteredPrivate.length) {
-      this.filteredPrivate.push(...this.privateRecipes.slice(this.filteredPrivate.length, this.recipeLimit));
+    let that = new WeakRef(this);
+    that.get().recipeLimit += 10;
+    if (that.get().privateRecipes.length > that.get().filteredPrivate.length) {
+      that.get().filteredPrivate.push(...that.get().privateRecipes.slice(that.get().filteredPrivate.length, that.get().recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(this.filteredPrivate.length - 1);
+        args.object.scrollToIndex(that.get().filteredPrivate.length - 1);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -91,11 +104,12 @@ export class RecipeListComponent implements OnInit {
   }
 
   public loadMoreShared(args: ListViewEventData): void {
-    this.recipeLimit += 10;
-    if (this.sharedRecipes.length > this.filteredShared.length) {
-      this.filteredShared.push(...this.sharedRecipes.slice(this.filteredShared.length, this.recipeLimit));
+    let that = new WeakRef(this);
+    that.get().recipeLimit += 10;
+    if (that.get().sharedRecipes.length > that.get().filteredShared.length) {
+      that.get().filteredShared.push(...that.get().sharedRecipes.slice(that.get().filteredShared.length, that.get().recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(this.filteredShared.length - 1);
+        args.object.scrollToIndex(that.get().filteredShared.length - 1);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -108,24 +122,30 @@ export class RecipeListComponent implements OnInit {
   }
 
   public refreshPrivate(args: ListViewEventData): void {
-    this.recipeDataSvc.getPrivateRecipes().then((data: Recipe[]) => {
-      this.privateRecipes = this.helperSvc.sortByName(data);
-      this.filteredPrivate = [...this.privateRecipes];
-      this.filteredPrivate = this.filteredPrivate.slice(0, this.recipeLimit);
-      this.isLoadingPrivate = false;
-      args.object.notifyPullToRefreshFinished();
-      this.changeDetectionRef.markForCheck();
+    let that = new WeakRef(this);
+    that.get().recipeDataSvc.getPrivateRecipes().then((data: Recipe[]) => {
+      that.get().privateRecipes = that.get().helperSvc.sortByName(data);
+      that.get().filteredPrivate = [...that.get().privateRecipes];
+      that.get().filteredPrivate = that.get().filteredPrivate.slice(0, that.get().recipeLimit);
+      that.get().isLoadingPrivate = false;
+      setTimeout(() => {
+        args.object.notifyPullToRefreshFinished();
+        that.get().changeDetectionRef.markForCheck();
+      }, 2000);
     });
   }
 
   public refreshShared(args: ListViewEventData): void {
-    this.recipeDataSvc.getSharedRecipes().then((data: Recipe[]) => {
-      this.sharedRecipes = this.helperSvc.sortByName(data);
-      this.filteredShared = [...this.privateRecipes];
-      this.filteredShared = this.filteredShared.slice(0, this.recipeLimit);
-      this.isLoadingShared = false;
-      args.object.notifyPullToRefreshFinished();
-      this.changeDetectionRef.markForCheck();
+    let that = new WeakRef(this);
+    that.get().recipeDataSvc.getSharedRecipes().then((data: Recipe[]) => {
+      that.get().sharedRecipes = that.get().helperSvc.sortByName(data);
+      that.get().filteredShared = [...that.get().privateRecipes];
+      that.get().filteredShared = that.get().filteredShared.slice(0, that.get().recipeLimit);
+      that.get().isLoadingShared = false;
+      setTimeout(() => {
+        args.object.notifyPullToRefreshFinished();
+        that.get().changeDetectionRef.markForCheck();
+      }, 2000);
     });
   }
 
