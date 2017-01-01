@@ -1,17 +1,18 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
 
+import 'rxjs/add/operator/switchMap';
+
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
-import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';
-import { MealSearchComponent } from '../../meal-search';
+import { MealSearchComponent, MealSearchService } from '../../meal-search';
 import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -40,7 +41,7 @@ export class RecipeListComponent implements OnInit {
   constructor(
     private changeDetectionRef: ChangeDetectorRef,
     private helperSvc: HelperService,
-    private modalSvc: ModalDialogService,
+    private mealSearchSvc: MealSearchService,
     private recipeDataSvc: RecipeDataService,
     private recipeSvc: RecipeService,
     private router: RouterExtensions,
@@ -64,13 +65,7 @@ export class RecipeListComponent implements OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
-          this.modalSvc.showModal(MealSearchComponent, {
-            viewContainerRef: this.vcRef,
-            context: this.queryIngredients,
-            fullscreen: true
-          }).then((ingredients: Ingredient[]) => {
-            this.queryIngredients = [...ingredients];
-          });
+          this.router.navigate(['/meal-search']);
           break;
 
         default:
@@ -158,6 +153,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.queryIngredients = this.mealSearchSvc.getSelections();
     Promise.all([
       this.recipeDataSvc.getPrivateRecipes(),
       this.recipeDataSvc.getSharedRecipes()

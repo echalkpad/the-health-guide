@@ -2,7 +2,7 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 // Nativescript
-import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
+import { RouterExtensions } from 'nativescript-angular/router';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -11,13 +11,15 @@ import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 import { FoodService } from '../food';
 import { HelperService } from '../shared';
 import { Meal } from './meal.model';
+import { MealSearchService } from './meal-search.service';
 import { RecipeDataService } from '../recipes';
 
 @Component({
     moduleId: module.id,
     selector: 'thg-meal-search',
     templateUrl: 'meal-search.component.html',
-    styleUrls: ['meal-search.component.css']
+    styleUrls: ['meal-search.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MealSearchComponent implements OnInit {
     private mealsLimit: number = 5;
@@ -30,14 +32,13 @@ export class MealSearchComponent implements OnInit {
         private changeDetectionRef: ChangeDetectorRef,
         private foodSvc: FoodService,
         private helpSvc: HelperService,
-        private params: ModalDialogParams,
-        private recipeDataSvc: RecipeDataService
-    ) {
-        this.selections = params.context;
-    }
+        private mealSearchSvc: MealSearchService,
+        private recipeDataSvc: RecipeDataService,
+        private router: RouterExtensions
+    ) {  }
 
     public cancel(): void {
-        this.params.closeCallback([]);
+        this.router.back();
     }
 
     public clearSearch(): void {
@@ -46,15 +47,17 @@ export class MealSearchComponent implements OnInit {
     }
 
     public done(): void {
-        this.params.closeCallback(this.selections);
+        this.mealSearchSvc.saveSelections(this.selections);
+        this.router.back();
     }
 
-    public loadMore(args: ListViewEventData): void {
-        this.mealsLimit += 10;
-        if (this.meals.length > this.filteredMeals.length) {
-            this.filteredMeals.push(...this.meals.slice(this.filteredMeals.length, this.mealsLimit));
+    public loadMoreMeals(args: ListViewEventData): void {
+        let that = new WeakRef(this);
+        that.get().mealsLimit += 10;
+        if (that.get().meals.length > that.get().filteredMeals.length) {
+            that.get().filteredMeals.push(...that.get().meals.slice(that.get().filteredMeals.length, that.get().mealsLimit));
             setTimeout(() => {
-                args.object.scrollToIndex(this.filteredMeals.length - 1);
+                args.object.scrollToIndex(that.get().filteredMeals.length - 1);
                 args.object.notifyLoadOnDemandFinished();
                 args.returnValue = true;
             }, 2000);
@@ -62,14 +65,15 @@ export class MealSearchComponent implements OnInit {
     }
 
     public refreshMeals(args: ListViewEventData): void {
+        let that = new WeakRef(this);
         Promise.all<Meal[]>([
-            this.recipeDataSvc.getSharedRecipes(),
-            this.foodSvc.getFoods()
+            that.get().recipeDataSvc.getSharedRecipes(),
+            that.get().foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.helpSvc.sortByName([...data[0], data[1]]);
-            this.filteredMeals = [...this.meals];
+            that.get().meals = that.get().helpSvc.sortByName([...data[0], data[1]]);
+            that.get().filteredMeals = [...that.get().meals];
             args.object.notifyPullToRefreshFinished();
-            this.changeDetectionRef.markForCheck();
+            that.get().changeDetectionRef.markForCheck();
         });
     }
 
@@ -91,11 +95,12 @@ export class MealSearchComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.selections = [...this.mealSearchSvc.getSelections()];
         Promise.all<Meal[]>([
             this.recipeDataSvc.getSharedRecipes(),
             this.foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.helpSvc.sortByName([...data[0], data[1]]);
+            this.meals = this.helpSvc.sortByName([...data[0], ...data[1]]);
             this.filteredMeals = [...this.meals];
             this.isLoading = false;
             this.changeDetectionRef.markForCheck();

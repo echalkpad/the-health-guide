@@ -8,6 +8,7 @@ import { CanDeactivateGuard } from './shared/can-deactivate-guard.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { FoodDetailComponent, FoodDetailResolve, FoodListComponent } from './food';
 import { HomeComponent } from './home/home.component';
+import { MealSearchComponent } from './meal-search';
 import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent } from './nutrients';
 import { RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent } from './recipes';
 
@@ -41,6 +42,10 @@ const appRoutes: Routes = [
             component: FoodListComponent
           }
         ]
+      },
+      {
+        path: 'meal-search',
+        component: MealSearchComponent
       },
       {
         path: 'nutrients',
