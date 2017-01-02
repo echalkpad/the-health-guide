@@ -1,12 +1,15 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnInit, OnDestroy } from '@angular/core';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
+import * as fs from 'file-system';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+
+import * as firebase from 'nativescript-plugin-firebase';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';
@@ -21,9 +24,9 @@ import { RecipeService } from '../shared/recipe.service';
   selector: 'thg-recipes',
   templateUrl: 'recipe-list.component.html',
   styleUrls: ['recipe-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.Default
 })
-export class RecipeListComponent implements OnInit {
+export class RecipeListComponent implements OnDestroy, OnInit {
   private privateRecipes: Recipe[];
   private recipeLimit: number = 3;
   private sharedRecipes: Recipe[];
@@ -83,13 +86,30 @@ export class RecipeListComponent implements OnInit {
     this.filteredShared = [...this.sharedRecipes];
   }
 
+  public getImagePath(imageUrl: string): string {
+    let documents: fs.Folder = fs.knownFolders.documents(),
+      imageName: string = imageUrl.slice(imageUrl.indexOf('%2F') + 3, imageUrl.indexOf('?alt')).split('%20').join(' '),
+      imgPath = fs.path.join(documents.path, 'recipes', imageName);
+
+    if (!fs.File.exists(imgPath)) {
+      firebase.downloadFile({
+        remoteFullPath: `/recipes/${imageName}`,
+        localFile: fs.File.fromPath(imgPath)
+      }).then(
+        () => console.log('File downloaded successfully'),
+        (err: Error) => console.log('An error has occured:', err)
+        );
+    }
+    return imgPath;
+  }
+
   public loadMorePrivate(args: ListViewEventData): void {
     let that = new WeakRef(this);
-    that.get().recipeLimit += 10;
+    that.get().recipeLimit += 3;
     if (that.get().privateRecipes.length > that.get().filteredPrivate.length) {
       that.get().filteredPrivate.push(...that.get().privateRecipes.slice(that.get().filteredPrivate.length, that.get().recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(that.get().filteredPrivate.length - 1);
+        args.object.scrollToIndex(that.get().filteredPrivate.length - 3);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -98,11 +118,11 @@ export class RecipeListComponent implements OnInit {
 
   public loadMoreShared(args: ListViewEventData): void {
     let that = new WeakRef(this);
-    that.get().recipeLimit += 10;
+    that.get().recipeLimit += 3;
     if (that.get().sharedRecipes.length > that.get().filteredShared.length) {
       that.get().filteredShared.push(...that.get().sharedRecipes.slice(that.get().filteredShared.length, that.get().recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(that.get().filteredShared.length - 1);
+        args.object.scrollToIndex(that.get().filteredShared.length - 3);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
       }, 2000);
@@ -111,7 +131,7 @@ export class RecipeListComponent implements OnInit {
 
   public openDetails(recipe: Recipe): void {
     this.recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this.router.navigate(['/recipes', recipe['$key']]), 1000);
+    setTimeout(() => this.router.navigate(['/recipes', recipe.chef.id, recipe['$key']]), 1000);
   }
 
   public refreshPrivate(args: ListViewEventData): void {
@@ -120,11 +140,7 @@ export class RecipeListComponent implements OnInit {
       that.get().privateRecipes = that.get().helperSvc.sortByName(data);
       that.get().filteredPrivate = [...that.get().privateRecipes];
       that.get().filteredPrivate = that.get().filteredPrivate.slice(0, that.get().recipeLimit);
-      that.get().isLoadingPrivate = false;
-      setTimeout(() => {
-        args.object.notifyPullToRefreshFinished();
-        that.get().changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.notifyPullToRefreshFinished();
     });
   }
 
@@ -134,11 +150,7 @@ export class RecipeListComponent implements OnInit {
       that.get().sharedRecipes = that.get().helperSvc.sortByName(data);
       that.get().filteredShared = [...that.get().privateRecipes];
       that.get().filteredShared = that.get().filteredShared.slice(0, that.get().recipeLimit);
-      that.get().isLoadingShared = false;
-      setTimeout(() => {
-        args.object.notifyPullToRefreshFinished();
-        that.get().changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.notifyPullToRefreshFinished();
     });
   }
 
@@ -163,11 +175,17 @@ export class RecipeListComponent implements OnInit {
         this.filteredShared = this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, '', this.queryIngredients).slice(0, this.recipeLimit);
       } else {
         this.filteredPrivate = [...this.privateRecipes.slice(0, this.recipeLimit)];
-        this.filteredShared = [...this.privateRecipes.slice(0, this.recipeLimit)];
+        this.filteredShared = [...this.sharedRecipes.slice(0, this.recipeLimit)];
       }
       this.isLoadingPrivate = false;
       this.isLoadingShared = false;
-      this.changeDetectionRef.markForCheck();
     });
+  }
+
+  ngOnDestroy(): void {
+    fs.knownFolders.documents().getFolder('recipes').remove().then(
+      () => console.log('Recipes folder deleted successfully'),
+      (err: Error) => console.log('The folder could not be deleted:', err)
+    );
   }
 }

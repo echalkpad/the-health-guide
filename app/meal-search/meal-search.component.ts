@@ -32,7 +32,7 @@ export class MealSearchComponent implements OnInit {
     constructor(
         private changeDetectionRef: ChangeDetectorRef,
         private foodSvc: FoodService,
-        private helpSvc: HelperService,
+        private helperSvc: HelperService,
         private mealSearchSvc: MealSearchService,
         private recipeDataSvc: RecipeDataService,
         private router: RouterExtensions
@@ -73,7 +73,7 @@ export class MealSearchComponent implements OnInit {
             that.get().recipeDataSvc.getSharedRecipes(),
             that.get().foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            that.get().meals = that.get().helpSvc.sortByName([...data[0], data[1]]);
+            that.get().meals = that.get().helperSvc.sortByName([...data[0], data[1]]);
             that.get().filteredMeals = [...that.get().meals];
             args.object.notifyPullToRefreshFinished();
             that.get().changeDetectionRef.markForCheck();
@@ -85,9 +85,7 @@ export class MealSearchComponent implements OnInit {
     }
 
     public searchMeals(searchTerm: string): void {
-        this.filteredMeals = [...this.meals.filter(
-            (meal: Meal) => meal.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1
-        ).slice(0, this.mealsLimit)];
+        this.filteredMeals = this.helperSvc.filterItems(this.meals, searchTerm).slice(0, this.mealsLimit);
     }
 
     public toggleSelection(args: ListViewEventData): void {
@@ -107,7 +105,7 @@ export class MealSearchComponent implements OnInit {
             this.recipeDataSvc.getSharedRecipes(),
             this.foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.helpSvc.sortByName([...data[0], ...data[1]]).slice(0, this.mealsLimit);
+            this.meals = this.helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this.mealsLimit);
             this.filteredMeals = [...this.meals];
             this.isLoading = false;
             this.changeDetectionRef.markForCheck();
