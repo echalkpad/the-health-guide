@@ -56,7 +56,6 @@ export class MealSearchComponent implements OnInit {
     }
 
     public loadMoreMeals(args: ListViewEventData): void {
-        // FIXME: Infinite Loading
         this._mealsLimit += 20;
         if (this.meals.length > this.filteredMeals.length) {
             this.filteredMeals.push(...this.meals.slice(this.filteredMeals.length, this._mealsLimit));
@@ -106,8 +105,8 @@ export class MealSearchComponent implements OnInit {
             this._recipeDataSvc.getSharedRecipes(),
             this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this._helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this._mealsLimit);
-            this.filteredMeals = [...this.meals];
+            this.meals = this._helperSvc.sortByName([...data[0], ...data[1]]);
+            this.filteredMeals = [...this.meals.slice(0, this._mealsLimit)];
             this.isLoading = false;
             this._changeDetectionRef.detectChanges();
             this._changeDetectionRef.markForCheck();
