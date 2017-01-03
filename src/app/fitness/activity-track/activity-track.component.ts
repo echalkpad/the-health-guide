@@ -111,7 +111,7 @@ export class ActivityTrackComponent implements OnInit {
             this.atSvc.setActivityTimeTotal(at);
             this.atSvc.setActivityTrackTotal(this.activityTrack);
           }
-          
+
         }
       }
     });
@@ -121,7 +121,7 @@ export class ActivityTrackComponent implements OnInit {
     this.selectedActivityTypes = [];
     this.checkedActivities.forEach((checkBox: HTMLInputElement) => checkBox.checked = false);
     this.checkedActivities = [];
-    
+
   }
 
   public findActivityType(activityType: ActivityType, label: string): null | ActivityType {
@@ -147,14 +147,16 @@ export class ActivityTrackComponent implements OnInit {
       this.dataSvc.saveActivityTrack(this.activityTrack);
       this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     }
-    this.activityTrack = new ActivityTracker(this.currentDate);
-    this.atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
-      if (!!at && !!at.hasOwnProperty('date')) {
-        this.activityTrack = at;
-        this.dataSvc.saveActivityTrack(at);
-        this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
-      }
-    });
+    setTimeout(() => {
+      this.atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
+        if (!!at && !!at.hasOwnProperty('date')) {
+          this.activityTrack = new ActivityTracker(this.currentDate);
+          this.activityTrack = at;
+          this.dataSvc.saveActivityTrack(at);
+          this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
+        }
+      });
+    }, 2000);
     this.isDirty = false;
   }
 

@@ -176,11 +176,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                     }
                     if (mt) {
                         mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-                        this.loadingSvc.register('mt-nutrition.load');
-                        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-                            this.mealTrack.nutrition = nutrition;
-                            this.loadingSvc.resolve('mt-nutrition.load')
-                        });
                     }
                     this.isDirty = true;
                 }
@@ -215,7 +210,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.isDirty = true;
         mt.meals.splice(mt.meals.indexOf(meal), 1);
         mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.mtSvc.setMealTrackNutrition(this.mealTrack);
     }
 
     public removeMealTime(mt: MealTime): void {
@@ -238,13 +232,15 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                 this.loadingSvc.resolve('mt-nutrition.load')
             });
         }
-        this.mealTrack = new MealTracker(this.currentDate);
-        this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
-            if (!!mt && !!mt.hasOwnProperty('date')) {
-                this.mealTrack = mt;
-                this.dataSvc.saveMealTrack(mt);
-            }
-        });
+        setTimeout(() => {
+            this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
+                if (!!mt && !!mt.hasOwnProperty('date')) {
+                    this.mealTrack = new MealTracker(this.currentDate);
+                    this.mealTrack = mt;
+                    this.dataSvc.saveMealTrack(mt);
+                }
+            });
+        }, 2000);
         this.isDirty = false;
     }
 
