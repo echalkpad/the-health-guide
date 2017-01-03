@@ -43,9 +43,11 @@ export class FoodListComponent implements OnInit {
     this._foodLimit += 10;
     if (this._foods.length > this.filteredFoods.length) {
       this.filteredFoods.push(...this._foods.slice(this.filteredFoods.length, this._foodLimit));
-      args.object.scrollToIndex(this.filteredFoods.length - 1);
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
+      this.__changeDetectionRef.detectChanges();
+      this.__changeDetectionRef.markForCheck();
+      setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
     }
   }
 

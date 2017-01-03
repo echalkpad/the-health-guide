@@ -92,11 +92,11 @@ export class RecipeListComponent implements OnInit {
     this._recipeLimit += 3;
     if (this._privateRecipes.length > this.filteredPrivate.length) {
       this.filteredPrivate.push(...this._privateRecipes.slice(this.filteredPrivate.length, this._recipeLimit));
-      args.object.scrollToIndex(this.filteredPrivate.length - 3);
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
+      setTimeout(() => args.object.scrollToIndex(this.filteredPrivate.length - 3), 1000);
     }
   }
 
@@ -104,11 +104,11 @@ export class RecipeListComponent implements OnInit {
     this._recipeLimit += 3;
     if (this._sharedRecipes.length > this.filteredShared.length) {
       this.filteredShared.push(...this._sharedRecipes.slice(this.filteredShared.length, this._recipeLimit));
-      args.object.scrollToIndex(this.filteredShared.length - 3);
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
+      setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 3), 1000);
     }
   }
 
