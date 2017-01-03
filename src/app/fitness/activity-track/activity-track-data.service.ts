@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFire, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2';
 
+import { AuthService } from '../../auth/auth.service';
 import { HelperService } from '../../shared/helper.service';
 import { Activity, ActivityTime, ActivityTracker } from './activity-tracker.model';
 
 @Injectable()
 export class ActivityTrackDataService {
   private activities: FirebaseListObservable<Activity[]>;
-  private activityTrack: FirebaseObjectObservable<ActivityTracker>;
-  constructor(private af: AngularFire, private helperSvc: HelperService) {
+  constructor(private af: AngularFire, private authSvc: AuthService, private helperSvc: HelperService) {
     this.activities = af.database.list('/activities', {
       query: {
         orderByChild: 'name'
@@ -20,22 +20,22 @@ export class ActivityTrackDataService {
     return this.activities;
   }
 
-  public getActivityTrack(authId: string, date: string): FirebaseObjectObservable<ActivityTracker> {
-    return this.af.database.object(`/activity-tracks/${authId}/${date}`);
+  public getActivityTrack(date: string): FirebaseObjectObservable<ActivityTracker> {
+    return this.af.database.object(`/activity-tracks/${this.authSvc.getAuth().id}/${date}`);
   }
 
-  public removeActivityTrack(authId: string, date: string): void {
-    this.getActivityTrack(authId, date).remove();
+  public removeActivityTrack(date: string): void {
+    this.getActivityTrack(date).remove();
   }
 
-  public setActivityTrack(authId: string, activityTrack: ActivityTracker): void {
+  public setActivityTrack(activityTrack: ActivityTracker): void {
     activityTrack.activityTimes.forEach((at: ActivityTime) => this.helperSvc.removeHashkeys(at.activities));
     console.log("Saving activity-track...", activityTrack);
     if (activityTrack.hasOwnProperty('$key')) {
       delete activityTrack['$key'];
-      this.getActivityTrack(authId, activityTrack.date).update(activityTrack);
+      this.getActivityTrack(activityTrack.date).update(activityTrack);
     } else {
-      this.getActivityTrack(authId, activityTrack.date).set(activityTrack);
+      this.getActivityTrack(activityTrack.date).set(activityTrack);
     }
   }
 

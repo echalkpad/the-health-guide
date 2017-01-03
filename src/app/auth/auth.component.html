@@ -64,7 +64,7 @@
           <md-hint align="end">Something hard to guess</md-hint>
         </md-input>
         <div layout="column" layout-gt-xs="row">
-          <md-input flex class="push-xs" #ageControl="ngModel" placeholder="Age ({{ infancy ? 'months' : 'years' }})" type="number" name="user.age" min="1" max="150" [(ngModel)]="user.age" required>
+          <md-input flex class="push-xs" #ageControl="ngModel" placeholder="Age ({{ user.infancy ? 'months' : 'years' }})" type="number" name="user.age" min="1" max="150" [(ngModel)]="user.age" required>
             <span md-prefix><md-icon>date_range</md-icon></span>
             <md-hint align="start" [hidden]="ageControl.pristine" class="tc-red-600">
               <span [hidden]="!ageControl.errors?.required">Required</span>

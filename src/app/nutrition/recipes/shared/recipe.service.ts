@@ -234,8 +234,9 @@ export class RecipeService {
   public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: string[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
-        matchedIngredients: number = 0;
-      if (recipe[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+        matchedIngredients: number = 0,
+        recipeQuery: string = (query === 'ingredients') ? recipe.name : recipe[query]
+      if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
         match = true;
         if (!!ingredients && !!ingredients.length) {
           ingredients.forEach((item: string) => {

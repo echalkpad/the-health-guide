@@ -4,8 +4,6 @@ import { Title } from '@angular/platform-browser';
 
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
-import { Auth } from '../../auth/auth.model';
-import { AuthService } from '../../auth/auth.service';
 import { DataService } from '../shared/data.service';
 import { HelperService } from '../../shared/helper.service';
 import { Activity, ActivityTime, ActivityTracker, ActivityType } from './activity-tracker.model';
@@ -20,7 +18,6 @@ import { ActivityTrackService } from './activity-track.service';
 export class ActivityTrackComponent implements OnInit {
   public activities: Activity[] = [];
   public activityTrack: ActivityTracker = new ActivityTracker();
-  public auth: Auth;
   public checkedActivities: HTMLInputElement[] = [];
   public currentDate: string = "";
   public isDirty: boolean = false;
@@ -30,7 +27,6 @@ export class ActivityTrackComponent implements OnInit {
   constructor(
     private atSvc: ActivityTrackService,
     private atDataSvc: ActivityTrackDataService,
-    private authSvc: AuthService,
     private dataSvc: DataService,
     private dialogSvc: TdDialogService,
     private helperSvc: HelperService,
@@ -147,12 +143,12 @@ export class ActivityTrackComponent implements OnInit {
 
   public syncActivityTrack(): void {
     if (this.isDirty) {
-      this.atDataSvc.setActivityTrack(this.auth.id, this.activityTrack);
+      this.atDataSvc.setActivityTrack(this.activityTrack);
       this.dataSvc.saveActivityTrack(this.activityTrack);
       this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     }
     this.activityTrack = new ActivityTracker(this.currentDate);
-    this.atDataSvc.getActivityTrack(this.auth.id, this.currentDate).subscribe((at: ActivityTracker) => {
+    this.atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
       if (!!at && !!at.hasOwnProperty('date')) {
         this.activityTrack = at;
         this.dataSvc.saveActivityTrack(at);
@@ -207,7 +203,6 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.auth = Object.assign({}, this.authSvc.getAuth());
     this.currentDate = this.dataSvc.getCurrentDate();
     this.atDataSvc.getActivities().subscribe((data: Activity[]) => {
       if (!!data && !!data.length) {

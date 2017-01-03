@@ -5,8 +5,6 @@ import { Title } from '@angular/platform-browser';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 import { IPageChangeEvent } from '@covalent/paging';
 
-import { Auth } from '../../auth/auth.model';
-import { AuthService } from '../../auth/auth.service';
 import { DataService } from '../shared/data.service';
 import { FoodService } from '../../nutrition/food/shared/food.service';
 import { HelperService } from '../../shared/helper.service';
@@ -22,7 +20,6 @@ import { RecipeDataService } from '../../nutrition/recipes/shared/recipe-data.se
 })
 export class MealTrackComponent implements AfterViewInit, OnInit {
     public aminoacids: string[] = [];
-    public auth: Auth;
     public basicNutrients: string[] = [];
     public currentDate: string = "";
     public currentPage: number = 1;
@@ -39,7 +36,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public vitamins: string[] = [];
 
     constructor(
-        private authSvc: AuthService,
         private dataSvc: DataService,
         private dialogSvc: TdDialogService,
         private foodSvc: FoodService,
@@ -102,7 +98,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         }).afterClosed().subscribe((value: string) => {
             if (value) {
                 this.mealTrack.mealTimes.push(new MealTime(value));
-                
+
             }
         });
     }
@@ -234,11 +230,11 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     public syncMealTrack(): void {
         if (this.isDirty) {
-            this.mtDataSvc.setMealTrack(this.auth.id, this.mealTrack);
+            this.mtDataSvc.setMealTrack(this.mealTrack);
             this.dataSvc.saveMealTrack(this.mealTrack);
         }
         this.mealTrack = new MealTracker(this.currentDate);
-        this.mtDataSvc.getMealTrack(this.auth.id, this.currentDate).subscribe((mt: MealTracker) => {
+        this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
             if (!!mt && !!mt.hasOwnProperty('date')) {
                 this.mealTrack = mt;
                 this.dataSvc.saveMealTrack(mt);
@@ -247,7 +243,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.isDirty = false;
     }
 
-    public toggleSelectedMeal(meal: Meal): void {
+    public toggleSelectedMeal(meal: Meal, checkBox?: HTMLInputElement): void {
         let idx: number = this.selectedMeals.indexOf(meal);
         if (idx === -1) {
             this.dialogSvc.openPrompt({
@@ -264,11 +260,18 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                             meal.amount = +value / 100;
                             meal.quantity = +value;
                         }
+                        if (checkBox) {
+                            checkBox.checked = true;
+                        }
                         this.selectedMeals.push(meal);
                         this.meals.splice(this.meals.indexOf(meal), 1);
                         this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
                         this.filter();
                         this.isDirty = true;
+                    }
+                } else {
+                    if (checkBox) {
+                        checkBox.checked = false;
                     }
                 }
             });
@@ -293,13 +296,12 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             if (!this.mealTrack.mealTimes.length) {
                 this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
             }
-        }, 10000);
+        }, 1000);
         this.titleSvc.setTitle('Meal tracker');
     }
 
     ngOnInit(): void {
         let recipes: Meal[] = [], food: Meal[] = [];
-        this.auth = Object.assign({}, this.authSvc.getAuth());
         this.currentDate = this.dataSvc.getCurrentDate();
         this.foodSvc.getFoods().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
@@ -307,7 +309,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             }
         });
 
-        this.recipeDataSvc.getMyRecipes(this.auth.id).subscribe((data: Meal[]) => {
+        this.recipeDataSvc.getMyRecipes().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
                 recipes = [...data];
             }

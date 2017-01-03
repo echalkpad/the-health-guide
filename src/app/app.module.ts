@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router';
+
 import { thirdPartyImports } from './config/imports/third-party'
 import { AppComponent } from './app.component';
 import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg';
