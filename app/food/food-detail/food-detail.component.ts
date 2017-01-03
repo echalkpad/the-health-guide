@@ -22,7 +22,7 @@ export class FoodDetailComponent implements OnInit {
   public food: Food;
   public vitamins: string[] = [];
   constructor(
-    private __changeDetectionRef: ChangeDetectorRef,
+    private _changeDetectionRef: ChangeDetectorRef,
     private _route: ActivatedRoute,
     private _router: RouterExtensions
   ) {
@@ -50,7 +50,7 @@ export class FoodDetailComponent implements OnInit {
       this.aminoacids = Object.keys(this.food['amino acids']);
       this.vitamins = Object.keys(this.food['vitamins']);
       this.minerals = Object.keys(this.food['minerals']);
-      this.__changeDetectionRef.detectChanges();
+      this._changeDetectionRef.detectChanges();
     });
 
   }

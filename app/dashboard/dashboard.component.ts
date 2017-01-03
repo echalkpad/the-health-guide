@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
     public auth: Auth = new Auth();
     constructor(
         private _authSvc: AuthService,
-        private __changeDetectionRef: ChangeDetectorRef,
+        private _changeDetectionRef: ChangeDetectorRef,
         private _dataSvc: DataService,
         public drawerSvc: DrawerService
     ) {}
@@ -34,6 +34,6 @@ export class DashboardComponent implements OnInit {
         if (this._dataSvc.getAuth()) {
             this.auth = this._dataSvc.getAuth();
         }
-        this.__changeDetectionRef.detectChanges();
+        this._changeDetectionRef.detectChanges();
     }
 }

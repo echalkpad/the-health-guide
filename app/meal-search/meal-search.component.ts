@@ -30,11 +30,11 @@ export class MealSearchComponent implements OnInit {
     public meals: Meal[];
     public searchInput: string = '';
     constructor(
-        private __changeDetectionRef: ChangeDetectorRef,
+        private _changeDetectionRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
-        private __helperSvc: HelperService,
+        private _helperSvc: HelperService,
         private _mealSearchSvc: MealSearchService,
-        private __recipeDataSvc: RecipeDataService,
+        private _recipeDataSvc: RecipeDataService,
         private _router: RouterExtensions
     ) { }
 
@@ -46,8 +46,8 @@ export class MealSearchComponent implements OnInit {
     public clearSearch(): void {
         this.searchInput = '';
         this.filteredMeals = [...this.meals];
-        this.__changeDetectionRef.detectChanges();
-        this.__changeDetectionRef.markForCheck();
+        this._changeDetectionRef.detectChanges();
+        this._changeDetectionRef.markForCheck();
     }
 
     public done(): void {
@@ -57,31 +57,27 @@ export class MealSearchComponent implements OnInit {
 
     public loadMoreMeals(args: ListViewEventData): void {
         // FIXME: Infinite Loading
-        
         this._mealsLimit += 20;
         if (this.meals.length > this.filteredMeals.length) {
             this.filteredMeals.push(...this.meals.slice(this.filteredMeals.length, this._mealsLimit));
-            setTimeout(() => {
-                args.object.scrollToIndex(this.filteredMeals.length - 1);
-                args.object.notifyLoadOnDemandFinished();
-                args.returnValue = true;
-                this.__changeDetectionRef.detectChanges();
-                this.__changeDetectionRef.markForCheck();
-            }, 2000);
+            args.object.notifyLoadOnDemandFinished();
+            args.returnValue = true;
+            this._changeDetectionRef.detectChanges();
+            this._changeDetectionRef.markForCheck();
+            setTimeout(() => args.object.scrollToIndex(this.filteredMeals.length - 10), 1000);
         }
     }
 
     public refreshMeals(args: ListViewEventData): void {
-        
         Promise.all<Meal[]>([
-            this.__recipeDataSvc.getSharedRecipes(),
+            this._recipeDataSvc.getSharedRecipes(),
             this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.__helperSvc.sortByName([...data[0], data[1]]);
+            this.meals = this._helperSvc.sortByName([...data[0], data[1]]);
             this.filteredMeals = [...this.meals];
             args.object.notifyPullToRefreshFinished();
-            this.__changeDetectionRef.detectChanges();
-            this.__changeDetectionRef.markForCheck();
+            this._changeDetectionRef.detectChanges();
+            this._changeDetectionRef.markForCheck();
         });
     }
 
@@ -90,7 +86,7 @@ export class MealSearchComponent implements OnInit {
     }
 
     public searchMeals(searchTerm: string): void {
-        this.filteredMeals = this.__helperSvc.filterItems(this.meals, searchTerm).slice(0, this._mealsLimit);
+        this.filteredMeals = this._helperSvc.filterItems(this.meals, searchTerm).slice(0, this._mealsLimit);
     }
 
     public toggleSelection(args: ListViewEventData): void {
@@ -107,14 +103,14 @@ export class MealSearchComponent implements OnInit {
     ngOnInit(): void {
         this.selections = [...this._mealSearchSvc.getSelections()];
         Promise.all<Meal[]>([
-            this.__recipeDataSvc.getSharedRecipes(),
+            this._recipeDataSvc.getSharedRecipes(),
             this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.__helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this._mealsLimit);
+            this.meals = this._helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this._mealsLimit);
             this.filteredMeals = [...this.meals];
             this.isLoading = false;
-            this.__changeDetectionRef.detectChanges();
-            this.__changeDetectionRef.markForCheck();
+            this._changeDetectionRef.detectChanges();
+            this._changeDetectionRef.markForCheck();
         });
     }
 }

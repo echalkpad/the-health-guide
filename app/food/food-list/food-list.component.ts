@@ -27,9 +27,9 @@ export class FoodListComponent implements OnInit {
   public filteredFoods: Food[];
   public searchInput: string = '';
   constructor(
-    private __changeDetectionRef: ChangeDetectorRef,
+    private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
-    private __helperSvc: HelperService,
+    private _helperSvc: HelperService,
     private _router: RouterExtensions,
     public drawerSvc: DrawerService,
   ) { }
@@ -45,8 +45,8 @@ export class FoodListComponent implements OnInit {
       this.filteredFoods.push(...this._foods.slice(this.filteredFoods.length, this._foodLimit));
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
-      this.__changeDetectionRef.detectChanges();
-      this.__changeDetectionRef.markForCheck();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
       setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
     }
   }
@@ -60,19 +60,19 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData): void {
     this._foodSvc.getFoods().then((data: Food[]) => {
-      this._foods = this.__helperSvc.sortByName(data);
+      this._foods = this._helperSvc.sortByName(data);
       this.filteredFoods = [...this._foods].slice(0, this._foodLimit);
       this.isLoading = false;
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
-      this.__changeDetectionRef.detectChanges();
-      this.__changeDetectionRef.markForCheck();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
   }
 
   public searchFood(searchTerm: string): void {
-    this.filteredFoods = this.__helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit);
+    this.filteredFoods = this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit);
   }
 
   ngOnInit(): void {
