@@ -26,10 +26,10 @@ export class AuthComponent implements OnInit {
     public password: string = '';
     public isLoading: boolean = false;
     constructor(
-        private authSvc: AuthService,
-        private dataSvc: DataService,
-        private fb: FormBuilder,
-        private router: RouterExtensions
+        private _authSvc: AuthService,
+        private _dataSvc: DataService,
+        private _fb: FormBuilder,
+        private _router: RouterExtensions
     ) { }
 
     private showAlert(title: string, msg: Error | string): void {
@@ -45,11 +45,11 @@ export class AuthComponent implements OnInit {
 
     public passLogin(): void {
         this.isLoading = true;
-        this.authSvc.login(this.loginForm.value).then(success => {
-            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/';
+        this._authSvc.login(this.loginForm.value).then(success => {
+            let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/';
             setTimeout(() => {
                 this.isLoading = false;
-                this.router.navigate([redirect]);
+                this._router.navigate([redirect]);
             }, 3000);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
@@ -57,13 +57,13 @@ export class AuthComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.loginForm = this.fb.group({
+        this.loginForm = this._fb.group({
             email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
             password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
         });
 
-        if (!!this.dataSvc.getAuth()) {
-             this.router.navigate(['/'])
+        if (!!this._dataSvc.getAuth()) {
+             this._router.navigate(['/'])
         }
     }
 }

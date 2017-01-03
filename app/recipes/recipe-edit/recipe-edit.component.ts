@@ -10,9 +10,9 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@
 })
 export class RecipeEditComponent implements OnInit {
 
-    constructor(private changeDetectionRef: ChangeDetectorRef) { }
+    constructor(private _changeDetectionRef: ChangeDetectorRef) { }
 
     ngOnInit(): void {
-        this.changeDetectionRef.detectChanges();
+        this._changeDetectionRef.detectChanges();
     }
 }

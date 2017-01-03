@@ -1,15 +1,13 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnInit } from '@angular/core';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
-import * as fs from 'file-system';
+import * as application from 'application';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
-
-import * as firebase from 'nativescript-plugin-firebase';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';
@@ -24,12 +22,12 @@ import { RecipeService } from '../shared/recipe.service';
   selector: 'thg-recipes',
   templateUrl: 'recipe-list.component.html',
   styleUrls: ['recipe-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.Default
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RecipeListComponent implements OnDestroy, OnInit {
-  private privateRecipes: Recipe[];
-  private recipeLimit: number = 3;
-  private sharedRecipes: Recipe[];
+export class RecipeListComponent implements OnInit {
+  private _privateRecipes: Recipe[];
+  private _recipeLimit: number = 3;
+  private _sharedRecipes: Recipe[];
   public filteredPrivate: Recipe[];
   public filteredShared: Recipe[];
   public ingredients: string[];
@@ -41,12 +39,12 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public searchInputPrivate: string = '';
   public searchInputPublic: string = '';
   constructor(
-    private changeDetectionRef: ChangeDetectorRef,
-    private helperSvc: HelperService,
-    private mealSearchSvc: MealSearchService,
-    private recipeDataSvc: RecipeDataService,
-    private recipeSvc: RecipeService,
-    private router: RouterExtensions,
+    private _changeDetectionRef: ChangeDetectorRef,
+    private _helperSvc: HelperService,
+    private _mealSearchSvc: MealSearchService,
+    private _recipeDataSvc: RecipeDataService,
+    private _recipeSvc: RecipeService,
+    private _router: RouterExtensions,
     public drawerSvc: DrawerService
   ) { }
 
@@ -66,7 +64,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
-          this.router.navigate(['/meal-search']);
+          this._router.navigate(['/meal-search']);
           break;
 
         default:
@@ -78,114 +76,107 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public clearSearchPrivate(): void {
     this.searchInputPrivate = '';
-    this.filteredPrivate = [...this.privateRecipes];
+    this.filteredPrivate = [...this._privateRecipes];
+    this._changeDetectionRef.detectChanges();
+    this._changeDetectionRef.markForCheck();
   }
 
   public clearSearchShared(): void {
     this.searchInputPublic = '';
-    this.filteredShared = [...this.sharedRecipes];
-  }
-
-  public getImagePath(imageUrl: string): string {
-    let documents: fs.Folder = fs.knownFolders.documents(),
-      imageName: string = imageUrl.slice(imageUrl.indexOf('%2F') + 3, imageUrl.indexOf('?alt')).split('%20').join(' '),
-      imgPath = fs.path.join(documents.path, 'recipes', imageName);
-
-    if (!fs.File.exists(imgPath)) {
-      firebase.downloadFile({
-        remoteFullPath: `/recipes/${imageName}`,
-        localFile: fs.File.fromPath(imgPath)
-      }).then(
-        () => console.log('File downloaded successfully'),
-        (err: Error) => console.log('An error has occured:', err)
-        );
-    }
-    return imgPath;
+    this.filteredShared = [...this._sharedRecipes];
+    this._changeDetectionRef.detectChanges();
+    this._changeDetectionRef.markForCheck();
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().recipeLimit += 3;
-    if (that.get().privateRecipes.length > that.get().filteredPrivate.length) {
-      that.get().filteredPrivate.push(...that.get().privateRecipes.slice(that.get().filteredPrivate.length, that.get().recipeLimit));
+    
+    this._recipeLimit += 3;
+    if (this._privateRecipes.length > this.filteredPrivate.length) {
+      this.filteredPrivate.push(...this._privateRecipes.slice(this.filteredPrivate.length, this._recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(that.get().filteredPrivate.length - 3);
+        args.object.scrollToIndex(this.filteredPrivate.length - 3);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
+        this._changeDetectionRef.detectChanges();
+        this._changeDetectionRef.markForCheck();
       }, 2000);
     }
   }
 
   public loadMoreShared(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().recipeLimit += 3;
-    if (that.get().sharedRecipes.length > that.get().filteredShared.length) {
-      that.get().filteredShared.push(...that.get().sharedRecipes.slice(that.get().filteredShared.length, that.get().recipeLimit));
+    
+    this._recipeLimit += 3;
+    if (this._sharedRecipes.length > this.filteredShared.length) {
+      this.filteredShared.push(...this._sharedRecipes.slice(this.filteredShared.length, this._recipeLimit));
       setTimeout(() => {
-        args.object.scrollToIndex(that.get().filteredShared.length - 3);
+        args.object.scrollToIndex(this.filteredShared.length - 3);
         args.object.notifyLoadOnDemandFinished();
         args.returnValue = true;
+        this._changeDetectionRef.detectChanges();
+        this._changeDetectionRef.markForCheck();
       }, 2000);
     }
   }
 
   public openDetails(recipe: Recipe): void {
-    this.recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this.router.navigate(['/recipes', recipe.chef.id, recipe['$key']]), 1000);
+    this._recipeDataSvc.storeRecipe(recipe);
+    setTimeout(() => this._router.navigate(['/recipes', recipe.chef.id, recipe['$key']]), 1000);
   }
 
   public refreshPrivate(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().recipeDataSvc.getPrivateRecipes().then((data: Recipe[]) => {
-      that.get().privateRecipes = that.get().helperSvc.sortByName(data);
-      that.get().filteredPrivate = [...that.get().privateRecipes];
-      that.get().filteredPrivate = that.get().filteredPrivate.slice(0, that.get().recipeLimit);
+    
+    this._recipeDataSvc.getPrivateRecipes().then((data: Recipe[]) => {
+      this._privateRecipes = this._helperSvc.sortByName(data);
+      this.filteredPrivate = [...this._privateRecipes];
+      this.filteredPrivate = this.filteredPrivate.slice(0, this._recipeLimit);
       args.object.notifyPullToRefreshFinished();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
   }
 
   public refreshShared(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().recipeDataSvc.getSharedRecipes().then((data: Recipe[]) => {
-      that.get().sharedRecipes = that.get().helperSvc.sortByName(data);
-      that.get().filteredShared = [...that.get().privateRecipes];
-      that.get().filteredShared = that.get().filteredShared.slice(0, that.get().recipeLimit);
+    this._recipeDataSvc.getSharedRecipes().then((data: Recipe[]) => {
+      this._sharedRecipes = this._helperSvc.sortByName(data);
+      this.filteredShared = [...this._privateRecipes];
+      this.filteredShared = this.filteredShared.slice(0, this._recipeLimit);
       args.object.notifyPullToRefreshFinished();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
   }
 
   public searchPrivate(searchTerm: string): void {
-    this.filteredPrivate = this.recipeSvc.filterRecipes(this.privateRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this.recipeLimit);
+    this.filteredPrivate = this._recipeSvc.filterRecipes(this._privateRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._recipeLimit);
+    this._changeDetectionRef.detectChanges();
+    this._changeDetectionRef.markForCheck();
   }
 
   public searchShared(searchTerm: string): void {
-    this.filteredShared = this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this.recipeLimit);
+    this.filteredShared = this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._recipeLimit);
+    this._changeDetectionRef.detectChanges();
+    this._changeDetectionRef.markForCheck();
   }
 
   ngOnInit(): void {
     Promise.all([
-      this.recipeDataSvc.getPrivateRecipes(),
-      this.recipeDataSvc.getSharedRecipes()
+      this._recipeDataSvc.getPrivateRecipes(),
+      this._recipeDataSvc.getSharedRecipes()
     ]).then((data: Array<Recipe[]>) => {
-      this.privateRecipes = [...data[0]];
-      this.sharedRecipes = [...data[1]];
-      this.queryIngredients = [...this.mealSearchSvc.getSelections()];
+      this._privateRecipes = [...data[0]];
+      this._sharedRecipes = [...data[1]];
+      this.queryIngredients = [...this._mealSearchSvc.getSelections()];
       if (!!this.queryIngredients.length) {
-        this.filteredPrivate = this.recipeSvc.filterRecipes(this.privateRecipes, this.query, '', this.queryIngredients).slice(0, this.recipeLimit);
-        this.filteredShared = this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, '', this.queryIngredients).slice(0, this.recipeLimit);
+        this.filteredPrivate = this._recipeSvc.filterRecipes(this._privateRecipes, this.query, '', this.queryIngredients).slice(0, this._recipeLimit);
+        this.filteredShared = this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, '', this.queryIngredients).slice(0, this._recipeLimit);
       } else {
-        this.filteredPrivate = [...this.privateRecipes.slice(0, this.recipeLimit)];
-        this.filteredShared = [...this.sharedRecipes.slice(0, this.recipeLimit)];
+        this.filteredPrivate = [...this._privateRecipes.slice(0, this._recipeLimit)];
+        this.filteredShared = [...this._sharedRecipes.slice(0, this._recipeLimit)];
       }
       this.isLoadingPrivate = false;
       this.isLoadingShared = false;
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
-  }
-
-  ngOnDestroy(): void {
-    fs.knownFolders.documents().getFolder('recipes').remove().then(
-      () => console.log('Recipes folder deleted successfully'),
-      (err: Error) => console.log('The folder could not be deleted:', err)
-    );
   }
 }

@@ -7,23 +7,23 @@ import { AuthService } from './auth.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate, CanActivateChild {
-  constructor(private authSvc: AuthService, private router: Router) { }
+  constructor(private _authSvc: AuthService, private _router: Router) { }
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     let url: string = state.url;
     return this.checkLogin(url);
   }
 
-  canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+  public canActivateChild(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     return this.canActivate(route, state);
   }
 
-  checkLogin(url: string): boolean {
-    if (this.authSvc.getAuth()) {
+  public checkLogin(url: string): boolean {
+    if (this._authSvc.getAuth()) {
       return true;
     }
-    this.authSvc.redirectUrl = url;
-    this.router.navigate(['/login']);
+    this._authSvc.redirectUrl = url;
+    this._router.navigate(['/login']);
     return false;
   }
 }

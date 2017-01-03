@@ -13,9 +13,9 @@ import { DrawerService } from '../shared';
 })
 export class HomeComponent implements OnInit {
    
-    constructor(private changeDetectionRef: ChangeDetectorRef, public drawerSvc: DrawerService) { }
+    constructor(private __changeDetectionRef: ChangeDetectorRef, public drawerSvc: DrawerService) { }
 
     ngOnInit(): void {
-        this.changeDetectionRef.detectChanges();
+        this.__changeDetectionRef.detectChanges();
     }
 }

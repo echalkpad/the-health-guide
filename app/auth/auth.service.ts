@@ -13,7 +13,7 @@ import { User } from './user.model';
 @Injectable()
 export class AuthService {
     public redirectUrl: string;
-    constructor(private dataSvc: DataService) {
+    constructor(private _dataSvc: DataService) {
     }
 
     public getAvatar(imgName: string): any {
@@ -21,11 +21,11 @@ export class AuthService {
     }
 
     public getAuthData(): any {
-        //return this.dataSvc.getAuthData();
+        //return this._dataSvc.getAuthData();
     }
 
     public getAuth(): Auth {
-        return this.dataSvc.getAuth();
+        return this._dataSvc.getAuth();
     }
 
     public getUserData(userId: string): Promise<User> {
@@ -58,10 +58,10 @@ export class AuthService {
             }).then((authData: firebase.User) => {
                 if (!!authData) {
                     console.log(JSON.stringify(authData));
-                    this.dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
+                    this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
                     this.getUserData(authData.uid).then((data: User) => {
-                        this.dataSvc.saveUser(data);
-                        console.log(JSON.stringify(this.dataSvc.getAuth()), data);
+                        this._dataSvc.saveUser(data);
+                        console.log(JSON.stringify(this._dataSvc.getAuth()), data);
                         resolve(true);
                     });
                 }
@@ -72,8 +72,8 @@ export class AuthService {
     }
 
     public logout(): void {
-        this.dataSvc.removeAuth();
-        this.dataSvc.removeUser();
+        this._dataSvc.removeAuth();
+        this._dataSvc.removeUser();
         firebase.logout();
     }
 
@@ -88,8 +88,8 @@ export class AuthService {
                         `/users/${authData.key}`,
                         credentials
                     )
-                    this.dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
-                    this.dataSvc.saveUser(credentials);
+                    this._dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
+                    this._dataSvc.saveUser(credentials);
                     resolve(true);
                 }
             }).catch(error => {

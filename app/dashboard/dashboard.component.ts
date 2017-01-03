@@ -12,27 +12,28 @@ import { DataService, DrawerService } from '../shared';
     moduleId: module.id,
     selector: 'thg-dashboard',
     templateUrl: 'dashboard.component.html',
-    styleUrls: ['dashboard.component.css']
+    styleUrls: ['dashboard.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnInit {
     @ViewChild(RadSideDrawerComponent) public drawerComponent: RadSideDrawerComponent;
     public auth: Auth = new Auth();
     constructor(
-        private authSvc: AuthService,
-        private changeDetectionRef: ChangeDetectorRef,
-        private dataSvc: DataService,
-        private drawerSvc: DrawerService
+        private _authSvc: AuthService,
+        private __changeDetectionRef: ChangeDetectorRef,
+        private _dataSvc: DataService,
+        public drawerSvc: DrawerService
     ) {}
 
     public logout(): void {
-        this.authSvc.logout();
+        this._authSvc.logout();
     }
 
     ngOnInit(): void {
         this.drawerSvc.drawer = this.drawerComponent.sideDrawer;
-        if (this.dataSvc.getAuth()) {
-            this.auth = this.dataSvc.getAuth();
+        if (this._dataSvc.getAuth()) {
+            this.auth = this._dataSvc.getAuth();
         }
-        this.changeDetectionRef.detectChanges();
+        this.__changeDetectionRef.detectChanges();
     }
 }

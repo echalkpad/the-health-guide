@@ -8,12 +8,11 @@ import { FoodService } from '../shared/food.service';
 
 @Injectable()
 export class FoodDetailResolve implements Resolve<Food> {
-  private food: Food;
-  constructor(private foodSvc: FoodService) { }
+  constructor(private _foodSvc: FoodService) { }
 
   public resolve(): Promise<Food> {
     return new Promise((resolve, reject) => {
-      resolve(this.foodSvc.getFood());
+      resolve(this._foodSvc.getFood());
     });
   }
 

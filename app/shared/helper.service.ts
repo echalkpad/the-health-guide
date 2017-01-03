@@ -2,11 +2,10 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class HelperService {
-
   constructor() { }
 
   public filterItems(items: any[], searchTerm: string = ''): any[] {
-    return items.filter((item: any) => item.name.toLowerCase().indexOf(searchTerm.toLowerCase()) > -1);
+    return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1);
   }
 
   public log10(data: number): number {

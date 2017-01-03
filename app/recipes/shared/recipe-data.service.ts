@@ -17,13 +17,13 @@ const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-he
 
 @Injectable()
 export class RecipeDataService {
-  private auth: string;
-  private ingredients: Ingredient[];
-  private recipe: Recipe;
-  constructor(private dataSvc: DataService, private helperSvc: HelperService) {
-    this.auth = dataSvc.getAuth().id;
+  private _auth: string;
+  private _ingredients: Ingredient[];
+  private _recipe: Recipe;
+  constructor(private _dataSvc: DataService, private _helperSvc: HelperService) {
+    this._auth = _dataSvc.getAuth().id;
     firebase.keepInSync(
-      `/recipes${this.auth}`,
+      `/recipes${this._auth}`,
       true
     ).then(
       function () {
@@ -47,7 +47,7 @@ export class RecipeDataService {
   }
 
   public getIngredients(): Ingredient[] {
-    return this.ingredients;
+    return this._ingredients;
   }
 
   public getPrivateRecipes(): Promise<Recipe[]> {
@@ -64,7 +64,7 @@ export class RecipeDataService {
             setTimeout(() => resolve(recipes), 3000);
           }
         },
-        `recipes/${this.auth}`,
+        `recipes/${this._auth}`,
         {
           singleEvent: true,
           orderBy: {
@@ -77,7 +77,7 @@ export class RecipeDataService {
   }
 
   public getRecipe(): Recipe {
-    return this.recipe;
+    return this._recipe;
   }
 
   public getSharedRecipes(): Promise<Recipe[]> {
@@ -107,11 +107,11 @@ export class RecipeDataService {
   }
 
   public storeIngredients(ingredients: Ingredient[]): void {
-    this.ingredients = ingredients;
+    this._ingredients = ingredients;
   }
 
   public storeRecipe(recipe: Recipe): void {
-    this.recipe = recipe;
+    this._recipe = recipe;
   }
 
 }

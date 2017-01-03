@@ -9,7 +9,7 @@ import { Food } from './food.model';
 
 @Injectable()
 export class FoodService {
-    private food: Food;
+    private _food: Food;
     constructor() {
         firebase.keepInSync(
             '/foods',
@@ -25,7 +25,7 @@ export class FoodService {
     }
 
     public getFood(): Food {
-        return this.food;
+        return this._food;
     }
 
     public getFoods(): Promise<Food[]> {
@@ -51,6 +51,6 @@ export class FoodService {
     }
 
     public storeFood(food: Food): void {
-        this.food = food;
+        this._food = food;
     }
 }

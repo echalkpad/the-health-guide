@@ -23,60 +23,65 @@ import { RecipeDataService } from '../recipes';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MealSearchComponent implements OnInit {
-    private mealsLimit: number = 20;
+    private _mealsLimit: number = 20;
     public filteredMeals: Meal[];
     public isLoading: boolean = true;
     public selections: Meal[];
     public meals: Meal[];
     public searchInput: string = '';
     constructor(
-        private changeDetectionRef: ChangeDetectorRef,
-        private foodSvc: FoodService,
-        private helperSvc: HelperService,
-        private mealSearchSvc: MealSearchService,
-        private recipeDataSvc: RecipeDataService,
-        private router: RouterExtensions
-    ) {  }
+        private __changeDetectionRef: ChangeDetectorRef,
+        private _foodSvc: FoodService,
+        private __helperSvc: HelperService,
+        private _mealSearchSvc: MealSearchService,
+        private __recipeDataSvc: RecipeDataService,
+        private _router: RouterExtensions
+    ) { }
 
     public cancel(): void {
-        this.mealSearchSvc.clearSelections();
-        this.router.back();
+        this._mealSearchSvc.clearSelections();
+        this._router.back();
     }
 
     public clearSearch(): void {
         this.searchInput = '';
         this.filteredMeals = [...this.meals];
+        this.__changeDetectionRef.detectChanges();
+        this.__changeDetectionRef.markForCheck();
     }
 
     public done(): void {
-        this.mealSearchSvc.saveSelections(this.selections);
-        this.router.back();
+        this._mealSearchSvc.saveSelections(this.selections);
+        this._router.back();
     }
 
     public loadMoreMeals(args: ListViewEventData): void {
         // FIXME: Infinite Loading
-        let that = new WeakRef(this);
-        that.get().mealsLimit += 20;
-        if (that.get().meals.length > that.get().filteredMeals.length) {
-            that.get().filteredMeals.push(...that.get().meals.slice(that.get().filteredMeals.length, that.get().mealsLimit));
+        
+        this._mealsLimit += 20;
+        if (this.meals.length > this.filteredMeals.length) {
+            this.filteredMeals.push(...this.meals.slice(this.filteredMeals.length, this._mealsLimit));
             setTimeout(() => {
-                args.object.scrollToIndex(that.get().filteredMeals.length - 1);
+                args.object.scrollToIndex(this.filteredMeals.length - 1);
                 args.object.notifyLoadOnDemandFinished();
                 args.returnValue = true;
+                this.__changeDetectionRef.detectChanges();
+                this.__changeDetectionRef.markForCheck();
             }, 2000);
         }
     }
 
     public refreshMeals(args: ListViewEventData): void {
-        let that = new WeakRef(this);
+        
         Promise.all<Meal[]>([
-            that.get().recipeDataSvc.getSharedRecipes(),
-            that.get().foodSvc.getFoods()
+            this.__recipeDataSvc.getSharedRecipes(),
+            this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            that.get().meals = that.get().helperSvc.sortByName([...data[0], data[1]]);
-            that.get().filteredMeals = [...that.get().meals];
+            this.meals = this.__helperSvc.sortByName([...data[0], data[1]]);
+            this.filteredMeals = [...this.meals];
             args.object.notifyPullToRefreshFinished();
-            that.get().changeDetectionRef.markForCheck();
+            this.__changeDetectionRef.detectChanges();
+            this.__changeDetectionRef.markForCheck();
         });
     }
 
@@ -85,7 +90,7 @@ export class MealSearchComponent implements OnInit {
     }
 
     public searchMeals(searchTerm: string): void {
-        this.filteredMeals = this.helperSvc.filterItems(this.meals, searchTerm).slice(0, this.mealsLimit);
+        this.filteredMeals = this.__helperSvc.filterItems(this.meals, searchTerm).slice(0, this._mealsLimit);
     }
 
     public toggleSelection(args: ListViewEventData): void {
@@ -100,15 +105,16 @@ export class MealSearchComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.selections = [...this.mealSearchSvc.getSelections()];
+        this.selections = [...this._mealSearchSvc.getSelections()];
         Promise.all<Meal[]>([
-            this.recipeDataSvc.getSharedRecipes(),
-            this.foodSvc.getFoods()
+            this.__recipeDataSvc.getSharedRecipes(),
+            this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
-            this.meals = this.helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this.mealsLimit);
+            this.meals = this.__helperSvc.sortByName([...data[0], ...data[1]]).slice(0, this._mealsLimit);
             this.filteredMeals = [...this.meals];
             this.isLoading = false;
-            this.changeDetectionRef.markForCheck();
+            this.__changeDetectionRef.detectChanges();
+            this.__changeDetectionRef.markForCheck();
         });
     }
 }

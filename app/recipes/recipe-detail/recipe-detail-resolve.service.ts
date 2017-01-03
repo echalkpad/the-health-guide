@@ -9,11 +9,11 @@ import { RecipeDataService } from '../shared/recipe-data.service';
 @Injectable()
 export class RecipeDetailResolve implements Resolve<Recipe> {
 
-  constructor(private recipeDataSvc: RecipeDataService) { }
+  constructor(private _recipeDataSvc: RecipeDataService) { }
 
   public resolve(): Promise<Recipe> {
     return new Promise(resolve => {
-      resolve(this.recipeDataSvc.getRecipe());
+      resolve(this._recipeDataSvc.getRecipe());
     });
   }
 

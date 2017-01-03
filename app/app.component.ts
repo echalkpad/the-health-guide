@@ -13,11 +13,11 @@ import { DataService } from './shared';
 })
 export class AppComponent implements OnInit {
     
-    constructor(private dataSvc: DataService, private router: RouterExtensions) { }
+    constructor(private _dataSvc: DataService, private _router: RouterExtensions) { }
 
     ngOnInit(): void {
-        if (!this.dataSvc.getAuth()) {
-            this.router.navigate(['/login']);
+        if (!this._dataSvc.getAuth()) {
+            this._router.navigate(['/login']);
         }
     }
 }

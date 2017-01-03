@@ -21,8 +21,8 @@ import { NutrientService } from '../shared/nutrient.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class NutrientListComponent implements OnInit {
-  private macronutrients: Nutrient[];
-  private micronutrients: Nutrient[];
+  private _macronutrients: Nutrient[];
+  private _micronutrients: Nutrient[];
   public filteredMacronutrients: Nutrient[];
   public filteredMicronutrients: Nutrient[];
   public isLoadingMacros: boolean = true;
@@ -32,11 +32,11 @@ export class NutrientListComponent implements OnInit {
   public searchInputMacros: string = '';
   public searchInputMicros: string = '';
   constructor(
-    private changeDetectionRef: ChangeDetectorRef,
-    public drawerSvc: DrawerService,
-    private helperSvc: HelperService,
-    private nutrientSvc: NutrientService,
-    private router: RouterExtensions
+    private _changeDetectionRef: ChangeDetectorRef,
+    private _helperSvc: HelperService,
+    private _nutrientSvc: NutrientService,
+    private _router: RouterExtensions,
+    public drawerSvc: DrawerService
   ) { }
 
   public changeQuery(): void {
@@ -72,67 +72,67 @@ export class NutrientListComponent implements OnInit {
 
   public clearSearchMacros(): void {
     this.searchInputMacros = '';
-    this.filteredMacronutrients = [...this.macronutrients];
+    this.filteredMacronutrients = [...this._macronutrients];
   }
 
   public clearSearchMicros(): void {
     this.searchInputMicros = '';
-    this.filteredMicronutrients = [...this.micronutrients];
+    this.filteredMicronutrients = [...this._micronutrients];
   }
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
     let selected: Nutrient = args.object.getSelectedItems()[0];
     console.log(JSON.stringify(selected));
-    this.nutrientSvc.storeNutrient(selected);
-    setTimeout(() => this.router.navigate([`/nutrients/${nutrientGroup}`, selected.$key]), 1000);
+    this._nutrientSvc.storeNutrient(selected);
+    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key]), 1000);
   }
 
   public refreshMacros(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
-      that.get().macronutrients = that.get().helperSvc.sortByName(data);
-      that.get().filteredMacronutrients = [...that.get().macronutrients];
-      that.get().isLoadingMacros = false;
+    
+    this._nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
+      this._macronutrients = this._helperSvc.sortByName(data);
+      this.filteredMacronutrients = [...this._macronutrients];
+      this.isLoadingMacros = false;
       setTimeout(() => {
         args.object.notifyPullToRefreshFinished();
-        that.get().changeDetectionRef.markForCheck();
+        this._changeDetectionRef.markForCheck();
       }, 2000);
     });
   }
 
   public refreshMicros(args: ListViewEventData): void {
-    let that = new WeakRef(this);
-    that.get().nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
-      that.get().micronutrients = that.get().helperSvc.sortByName(data);
-      that.get().filteredMicronutrients = [...that.get().micronutrients];
-      that.get().isLoadingMicros = false;
+    
+    this._nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
+      this._micronutrients = this._helperSvc.sortByName(data);
+      this.filteredMicronutrients = [...this._micronutrients];
+      this.isLoadingMicros = false;
       setTimeout(() => {
         args.object.notifyPullToRefreshFinished();
-        that.get().changeDetectionRef.markForCheck();
+        this._changeDetectionRef.markForCheck();
       }, 2000);
     });
   }
 
   public searchMacros(searchTerm: string): void {
-    this.filteredMacronutrients = this.nutrientSvc.filterNutrient(this.macronutrients, this.query, searchTerm);
+    this.filteredMacronutrients = this._nutrientSvc.filterNutrient(this._macronutrients, this.query, searchTerm);
   }
 
   public searchMicros(searchTerm: string): void {
-    this.filteredMicronutrients = this.nutrientSvc.filterNutrient(this.micronutrients, this.query, searchTerm);
+    this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
   }
 
   ngOnInit(): void {
     Promise.all([
-      this.nutrientSvc.getMacronutrients(),
-      this.nutrientSvc.getMicronutrients()
+      this._nutrientSvc.getMacronutrients(),
+      this._nutrientSvc.getMicronutrients()
     ]).then((data: Array<Nutrient[]>) => {
-      this.macronutrients = this.helperSvc.sortByName(data[0]);
-      this.micronutrients = this.helperSvc.sortByName(data[1]);
-      this.filteredMacronutrients = [...this.macronutrients];
-      this.filteredMicronutrients = [...this.micronutrients];
+      this._macronutrients = this._helperSvc.sortByName(data[0]);
+      this._micronutrients = this._helperSvc.sortByName(data[1]);
+      this.filteredMacronutrients = [...this._macronutrients];
+      this.filteredMicronutrients = [...this._micronutrients];
       this.isLoadingMacros = false;
       this.isLoadingMicros = false;
-      this.changeDetectionRef.markForCheck();
+      this._changeDetectionRef.markForCheck();
     });
   }
 }

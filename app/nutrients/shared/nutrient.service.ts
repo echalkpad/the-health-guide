@@ -9,7 +9,7 @@ import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
-  private nutrient: Nutrient;
+  private _nutrient: Nutrient;
   constructor() {
     firebase.keepInSync(
       '/macronutrients',
@@ -96,11 +96,11 @@ export class NutrientService {
   }
 
   public getNutrient(): Nutrient {
-    return this.nutrient;
+    return this._nutrient;
   }
 
   public storeNutrient(nutrient: Nutrient): void {
-    this.nutrient = nutrient;
+    this._nutrient = nutrient;
   }
 
 }

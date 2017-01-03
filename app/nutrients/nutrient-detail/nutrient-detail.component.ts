@@ -21,17 +21,17 @@ export class NutrientDetailComponent implements OnInit {
   public nutrientDiseases: string = '';
   public nutrientFunctions: string = '';
   constructor(
-    private changeDetectionRef: ChangeDetectorRef,
-    private route: ActivatedRoute,
-    private router: RouterExtensions
+    private _changeDetectionRef: ChangeDetectorRef,
+    private _route: ActivatedRoute,
+    private _router: RouterExtensions
   ) { }
 
   public goBack(): void {
-    this.router.back();
+    this._router.back();
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { nutrient: Nutrient }) => {
+    this._route.data.subscribe((data: { nutrient: Nutrient }) => {
       this.nutrient = data.nutrient;
       if (this.nutrient.hasOwnProperty('classification')) {
         this.nutrient.classification.forEach((item: any) => {
@@ -48,7 +48,7 @@ export class NutrientDetailComponent implements OnInit {
         this.nutrientFunctions += `&#8226; ${item}<br/>`;
       });
 
-      this.changeDetectionRef.detectChanges();
+      this._changeDetectionRef.detectChanges();
     });
   }
 }
