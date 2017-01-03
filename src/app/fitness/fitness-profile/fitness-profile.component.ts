@@ -16,25 +16,24 @@ import { User } from '../../auth/user.model';
   styleUrls: ['./fitness-profile.component.scss']
 })
 export class FitnessProfileComponent implements AfterViewInit, OnInit {
-  private isDirty: boolean = false;
-  private userData: User;
+  private _isDirty: boolean = false;
   public profile: Fitness;
   constructor(
-    private authSvc: AuthService,
-    private dataSvc: DataService,
-    private dialogSvc: TdDialogService,
-    private fitSvc: FitnessService,
+    private _authSvc: AuthService,
+    private _dataSvc: DataService,
+    private _dialogSvc: TdDialogService,
+    private _fitSvc: FitnessService,
     private loadSvc: TdLoadingService,
-    private route: ActivatedRoute,
-    private toast: MdSnackBar
+    private _route: ActivatedRoute,
+    private _toast: MdSnackBar
   ) { }
 
   public canDeactivate(): Promise<boolean> | boolean {
-        if (this.isDirty === false) {
+        if (this._isDirty === false) {
             return true;
         }
         return new Promise(resolve => {
-            return this.dialogSvc.openConfirm({
+            return this._dialogSvc.openConfirm({
                 message: 'Changes have been made! Are you sure you want to leave?',
                 disableClose: true,
                 title: 'Discard changes',
@@ -45,14 +44,14 @@ export class FitnessProfileComponent implements AfterViewInit, OnInit {
     }
 
   public setFitness(): void {
-    this.isDirty = true;
-    this.fitSvc.setFitness(this.profile);
+    this._isDirty = true;
+    this._fitSvc.setFitness(this.profile);
   }
 
   public saveProfile(): void {
-    this.fitSvc.saveProfile(this.profile);
-    this.isDirty = false;
-    setTimeout(() => this.toast.open('Update complete!', 'OK'), 3000);
+    this._fitSvc.saveProfile(this.profile);
+    this._isDirty = false;
+    setTimeout(() => this._toast.open('Update complete!', 'OK'), 3000);
   }
 
   ngAfterViewInit(): void {
@@ -61,7 +60,7 @@ export class FitnessProfileComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { profile: Fitness }) => {
+    this._route.data.subscribe((data: { profile: Fitness }) => {
       this.profile = data.profile;
       this.loadSvc.resolve('profile.load')
     });

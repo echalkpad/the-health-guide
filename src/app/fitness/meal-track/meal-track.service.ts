@@ -10,9 +10,9 @@ import { Nutrition } from '../../nutrition/shared/nutrition.model';
 @Injectable()
 export class MealTrackService {
 
-  constructor(private dataSvc: DataService, private nutrientSvc: NutrientService) { }
+  constructor(private _dataSvc: DataService, private _nutrientSvc: NutrientService) { }
 
-  private getMealTrackNutrition(mealTrack: MealTracker): MealTrackNutrition {
+  private _getMealTrackNutrition(mealTrack: MealTracker): MealTrackNutrition {
     let mtNutrition: MealTrackNutrition = new MealTrackNutrition();
     mealTrack.mealTimes.forEach((mt: MealTime) => {
       for (let nutrientCategory in mt.nutrition) {
@@ -30,13 +30,13 @@ export class MealTrackService {
     return mtNutrition;
   }
 
-  private getNutritionRequirements(): Promise<MealTrackNutrition> {
+  private _getNutritionRequirements(): Promise<MealTrackNutrition> {
     return new Promise(resolve => {
-      let energyConsumption: number = this.dataSvc.getEnergyConsumption(),
-        fit: Fitness = this.dataSvc.getFitness();
+      let energyConsumption: number = this._dataSvc.getEnergyConsumption(),
+        fit: Fitness = this._dataSvc.getFitness();
       fit.dailyRequirements.Energy = fit.bmr + energyConsumption - 200;
       // Set macronutrient requirements
-      this.nutrientSvc.getMacronutrients().subscribe((nutrients: Nutrient[]) => {
+      this._nutrientSvc.getMacronutrients().subscribe((nutrients: Nutrient[]) => {
         if (!!nutrients && !!nutrients.length) {
           nutrients.forEach((nutrient: Nutrient) => {
             if (nutrient.name === 'Amino acids') {
@@ -74,7 +74,7 @@ export class MealTrackService {
       });
 
       // Set micronutrient requirements
-      this.nutrientSvc.getMicronutrients().subscribe((nutrients: Nutrient[]) => {
+      this._nutrientSvc.getMicronutrients().subscribe((nutrients: Nutrient[]) => {
         if (!!nutrients && !!nutrients.length) {
           nutrients.forEach((nutrient: Nutrient) => {
             if (fit.dailyRequirements.vitamins.hasOwnProperty(nutrient.name) && nutrient.hasOwnProperty('intake')) {
@@ -121,7 +121,7 @@ export class MealTrackService {
       });
 
       setTimeout(() => {
-        this.dataSvc.saveFitness(fit);
+        this._dataSvc.saveFitness(fit);
         resolve(fit.dailyRequirements);
       }, 10000);
     });
@@ -173,9 +173,9 @@ export class MealTrackService {
   public setMealTrackNutrition(mt: MealTracker): Promise<MealTrackNutrition> {
     return new Promise(resolve => {
       let remainingNutrition: MealTrackNutrition = new MealTrackNutrition();
-      mt.nutrition = this.getMealTrackNutrition(mt);
+      mt.nutrition = this._getMealTrackNutrition(mt);
       console.log("Total nutrition:", mt.nutrition);
-      this.getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
+      this._getNutritionRequirements().then((requiredNutrition: MealTrackNutrition) => {
         console.log("Required nutrition:", requiredNutrition);
         for (let nutrientCategory in requiredNutrition) {
           let reqNutrients = requiredNutrition[nutrientCategory],

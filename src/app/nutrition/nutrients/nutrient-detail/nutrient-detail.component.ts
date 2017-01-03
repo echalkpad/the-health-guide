@@ -14,18 +14,18 @@ import { Nutrient } from '../shared/nutrient.model';
 export class NutrientDetailComponent implements OnInit {
   public nutrient: Nutrient;
   constructor(
-    private detector: ChangeDetectorRef,
-    private route: ActivatedRoute,
-    private titleSvc: Title
+    private _detector: ChangeDetectorRef,
+    private _route: ActivatedRoute,
+    private _titleSvc: Title
   ) { }
 
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { nutrient: Nutrient }) => {
+    this._route.data.subscribe((data: { nutrient: Nutrient }) => {
       if (!!data) {
         this.nutrient = Object.assign({}, data.nutrient);
-        this.titleSvc.setTitle(this.nutrient.name);
-        this.detector.markForCheck();
+        this._titleSvc.setTitle(this.nutrient.name);
+        this._detector.markForCheck();
       }
     });
   }

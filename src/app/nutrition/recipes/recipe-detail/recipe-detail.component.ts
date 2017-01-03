@@ -17,9 +17,9 @@ export class RecipeDetailComponent implements OnInit {
   public minerals: string[] = [];
   public vitamins: string[] = [];
   constructor(
-    private detector: ChangeDetectorRef,
-    private route: ActivatedRoute,
-    private titleSvc: Title
+    private _detector: ChangeDetectorRef,
+    private _route: ActivatedRoute,
+    private _titleSvc: Title
   ) {
     this.basicNutrients = [
       "Water",
@@ -38,14 +38,14 @@ export class RecipeDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { recipe: Recipe }) => {
+    this._route.data.subscribe((data: { recipe: Recipe }) => {
       this.recipe = Object.assign({}, data.recipe);
         console.log(this.recipe);
         this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
         this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
         this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-        this.titleSvc.setTitle(this.recipe.name);
-        this.detector.markForCheck();
+        this._titleSvc.setTitle(this.recipe.name);
+        this._detector.markForCheck();
     });
   }
 

@@ -9,20 +9,20 @@ import { FitnessService } from '../fitness.service';
 export class FitnessProfileResolve implements Resolve<Fitness> {
 
   constructor(
-    private dataSvc: DataService,
-    private fitSvc: FitnessService
+    private _dataSvc: DataService,
+    private _fitSvc: FitnessService
   ) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Fitness> {
     return new Promise(resolve => {
-      if (!this.dataSvc.getFitness()) {
-        this.fitSvc.getProfile().subscribe((profile: Fitness) => {
+      if (!this._dataSvc.getFitness()) {
+        this._fitSvc.getProfile().subscribe((profile: Fitness) => {
           if (!!profile) {
             resolve(profile);
           }
         });
       } else {
-        resolve(this.dataSvc.getFitness());
+        resolve(this._dataSvc.getFitness());
       }
     });
   }

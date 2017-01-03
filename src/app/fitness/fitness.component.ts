@@ -13,14 +13,14 @@ import { User } from '../auth/user.model';
 })
 export class FitnessComponent implements OnInit {
   public pageTitle: string = "Fitness";
-  constructor(private authSvc: AuthService, private dataSvc: DataService, private fitSvc: FitnessService) { }
+  constructor(private _authSvc: AuthService, private _dataSvc: DataService, private _fitSvc: FitnessService) { }
 
   public changeTitle(title: string): void {
     this.pageTitle = title;
   }
 
   ngOnInit(): void {
-    this.authSvc.getUserData(this.authSvc.getAuth().id).subscribe((user: User) => {
+    this._authSvc.getUserData(this._authSvc.getAuth().id).subscribe((user: User) => {
       let fitness: Fitness = new Fitness();
       fitness.age = user.age;
       fitness.gender = user.gender;
@@ -29,11 +29,11 @@ export class FitnessComponent implements OnInit {
       fitness.lactation = user.lactation;
       fitness.pregnancy = user.pregnancy;
       fitness.weight = user.weight;
-      fitness.ageInterval = this.fitSvc.getAgeInterval(fitness);
-      this.fitSvc.setFitness(fitness);
-      this.fitSvc.saveProfile(fitness);
-      this.dataSvc.saveFitness(fitness);
-      this.dataSvc.saveUser(user);
+      fitness.ageInterval = this._fitSvc.getAgeInterval(fitness);
+      this._fitSvc.setFitness(fitness);
+      this._fitSvc.saveProfile(fitness);
+      this._dataSvc.saveFitness(fitness);
+      this._dataSvc.saveUser(user);
     });
   }
 

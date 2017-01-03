@@ -8,18 +8,18 @@ import { User } from '../auth/user.model';
 @Injectable()
 export class AccountEditResolve  implements Resolve<User> {
 
-  constructor(private authSvc: AuthService, private dataSvc: DataService) { }
+  constructor(private _authSvc: AuthService, private _dataSvc: DataService) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<User> {
     return new Promise(resolve => {
-      if (!this.dataSvc.getUser()) {
-        this.authSvc.getUserData(this.authSvc.getAuth().id).subscribe((data: User) => {
+      if (!this._dataSvc.getUser()) {
+        this._authSvc.getUserData(this._authSvc.getAuth().id).subscribe((data: User) => {
           if (!!data) {
             resolve(data);
           }
         });
       } else {
-        resolve(this.dataSvc.getUser());
+        resolve(this._dataSvc.getUser());
       }
     });
   }

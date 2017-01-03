@@ -5,15 +5,15 @@ import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
-  private macronutrients: FirebaseListObservable<Nutrient[]>;
-  private micronutrients: FirebaseListObservable<Nutrient[]>;
-  constructor(private af: AngularFire) {
-    this.macronutrients = af.database.list('/macronutrients', {
+  private _macronutrients: FirebaseListObservable<Nutrient[]>;
+  private _micronutrients: FirebaseListObservable<Nutrient[]>;
+  constructor(private _af: AngularFire) {
+    this._macronutrients = _af.database.list('/macronutrients', {
       query: {
         orderByChild: 'name'
       }
     });
-    this.micronutrients = af.database.list('/micronutrients', {
+    this._micronutrients = _af.database.list('/micronutrients', {
       query: {
         orderByChild: 'name'
       }
@@ -36,15 +36,15 @@ export class NutrientService {
   }
 
   public getMacronutrients(): FirebaseListObservable<Nutrient[]> {
-    return this.macronutrients;
+    return this._macronutrients;
   }
 
   public getMicronutrients(): FirebaseListObservable<Nutrient[]> {
-    return this.micronutrients;
+    return this._micronutrients;
   }
 
   public getNutrient(category: string, key: string | number): FirebaseObjectObservable<Nutrient> {
-    return this.af.database.object(`/${category}/${key}`);
+    return this._af.database.object(`/${category}/${key}`);
   }
 
 }

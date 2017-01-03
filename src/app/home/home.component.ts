@@ -11,11 +11,11 @@ import { AuthService } from '../auth/auth.service';
 })
 export class HomeComponent implements OnInit {
   public auth: Auth;
-  constructor(private authSvc: AuthService, private titleSvc: Title) { }
+  constructor(private _authSvc: AuthService, private _titleSvc: Title) { }
 
   ngOnInit(): void {
-    this.auth = Object.assign({}, this.authSvc.getAuth());
-    this.titleSvc.setTitle("Home");
+    this.auth = Object.assign({}, this._authSvc.getAuth());
+    this._titleSvc.setTitle("Home");
   }
 
 }

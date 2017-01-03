@@ -7,10 +7,10 @@ import { Meal, MealTime, MealTracker } from './meal-tracker.model';
 
 @Injectable()
 export class MealTrackDataService {
-  constructor(private af: AngularFire, private authSvc: AuthService, private helperSvc: HelperService) { }
+  constructor(private _af: AngularFire, private _authSvc: AuthService, private _helperSvc: HelperService) { }
 
   public getMealTrack(date: string): FirebaseObjectObservable<MealTracker> {
-    return this.af.database.object(`/meal-tracks/${this.authSvc.getAuth().id}/${date}`);
+    return this._af.database.object(`/meal-tracks/${this._authSvc.getAuth().id}/${date}`);
   }
 
   public removeMealTrack(date: string): void {
@@ -18,7 +18,7 @@ export class MealTrackDataService {
   }
 
   public setMealTrack(mealTrack: MealTracker): void {
-    mealTrack.mealTimes.forEach((mt: MealTime) => this.helperSvc.removeHashkeys(mt.meals));
+    mealTrack.mealTimes.forEach((mt: MealTime) => this._helperSvc.removeHashkeys(mt.meals));
     console.log("Saving meal-track...", mealTrack);
     if (mealTrack.hasOwnProperty('$key')) {
       delete mealTrack['$key'];

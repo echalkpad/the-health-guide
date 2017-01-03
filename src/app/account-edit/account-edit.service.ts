@@ -8,11 +8,11 @@ import { User } from '../auth/user.model';
 @Injectable()
 export class AccountEditService {
 
-  constructor(private authSvc: AuthService, private dataSvc: DataService) { }
+  constructor(private _authSvc: AuthService, private _dataSvc: DataService) { }
 
   public updateAccount(account: User): Promise<boolean> {
     return new Promise((resolve, reject) => {
-      this.authSvc.getAuthData().then((auth: firebase.User) => {
+      this._authSvc.getAuthData().then((auth: firebase.User) => {
         Promise.all([
           auth.updateEmail(account.email),
           auth.updatePassword(account.password),
@@ -21,9 +21,9 @@ export class AccountEditService {
             photoURL: account.avatar
           })
         ]).then(() => {
-          this.authSvc.saveUserData(auth.uid, account);
-          this.dataSvc.saveAuth(new Auth(auth.uid, account.avatar, account.name));
-          this.dataSvc.saveUser(account);
+          this._authSvc.saveUserData(auth.uid, account);
+          this._dataSvc.saveAuth(new Auth(auth.uid, account.avatar, account.name));
+          this._dataSvc.saveUser(account);
           resolve(true);
         }).catch((res: any) => reject(res));
       });

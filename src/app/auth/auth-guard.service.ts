@@ -5,7 +5,7 @@ import { AuthService } from './auth.service';
 
 @Injectable()
 export class AuthGuard implements CanActivate, CanActivateChild {
-  constructor(private authSvc: AuthService, private router: Router) { }
+  constructor(private _authSvc: AuthService, private _router: Router) { }
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     let url: string = state.url;
@@ -17,11 +17,11 @@ export class AuthGuard implements CanActivate, CanActivateChild {
   }
 
   checkLogin(url: string): boolean {
-    if (this.authSvc.getAuth()) {
+    if (this._authSvc.getAuth()) {
       return true;
     }
-    this.authSvc.redirectUrl = url;
-    this.router.navigate(['/']);
+    this._authSvc.redirectUrl = url;
+    this._router.navigate(['/']);
     return false;
   }
 }

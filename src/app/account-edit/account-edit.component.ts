@@ -18,15 +18,15 @@ export class AccountEditComponent implements OnInit {
   @ViewChild('accountForm') accountForm: FormControl;
   public user: User;
   constructor(
-    private accountSvc: AccountEditService,
-    private authSvc: AuthService,
-    private dialogSvc: TdDialogService,
-    private route: ActivatedRoute,
-    private toast: MdSnackBar
+    private _accountSvc: AccountEditService,
+    private _authSvc: AuthService,
+    private _dialogSvc: TdDialogService,
+    private _route: ActivatedRoute,
+    private _toast: MdSnackBar
   ) { }
 
-  private showError(msg: string | Error): void {
-    this.dialogSvc.openAlert({
+  private _showError(msg: string | Error): void {
+    this._dialogSvc.openAlert({
       message: msg.toString(),
       disableClose: false,
       title: 'Update failed',
@@ -39,7 +39,7 @@ export class AccountEditComponent implements OnInit {
             return true;
         }
         return new Promise(resolve => {
-            return this.dialogSvc.openConfirm({
+            return this._dialogSvc.openConfirm({
                 message: 'Changes have been made! Are you sure you want to leave?',
                 disableClose: true,
                 title: 'Discard changes',
@@ -50,19 +50,19 @@ export class AccountEditComponent implements OnInit {
     }
 
   public updateAccount(): void {
-    this.accountSvc.updateAccount(this.user)
-      .then(() => this.toast.open('Update success!', 'OK'))
-      .catch((res: any) => this.showError(res));
+    this._accountSvc.updateAccount(this.user)
+      .then(() => this._toast.open('Update success!', 'OK'))
+      .catch((res: any) => this._showError(res));
   }
 
   public uploadAvatar(img: File): void {
-        this.authSvc.uploadAvatar(img).then(() => {
-            this.user.avatar = img.name; this.toast.open('Upload complete!', 'OK');
+        this._authSvc.uploadAvatar(img).then(() => {
+            this.user.avatar = img.name; this._toast.open('Upload complete!', 'OK');
         });
     }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { account: User }) => {
+    this._route.data.subscribe((data: { account: User }) => {
       this.user = data.account;
     });
   }

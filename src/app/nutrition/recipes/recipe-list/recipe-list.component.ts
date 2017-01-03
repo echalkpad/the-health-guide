@@ -29,19 +29,19 @@ export class RecipeListComponent implements OnInit {
   public recipes: Recipe[];
   public sharedRecipes: Recipe[];
   constructor(
-    private authSvc: AuthService,
-    private dataSvc: DataService,
-    private dialogSvc: TdDialogService,
-    private foodSvc: FoodService,
-    private loadingSvc: TdLoadingService,
-    private recipeDataSvc: RecipeDataService,
-    private recipeSvc: RecipeService,
-    private router: Router,
-    private titleSvc: Title
+    private _authSvc: AuthService,
+    private _dataSvc: DataService,
+    private _dialogSvc: TdDialogService,
+    private _foodSvc: FoodService,
+    private _loadingSvc: TdLoadingService,
+    private _recipeDataSvc: RecipeDataService,
+    private _recipeSvc: RecipeService,
+    private _router: Router,
+    private _titleSvc: Title
   ) { }
 
-  private showAlert(title?: string, msg?: string): void {
-    this.dialogSvc.openAlert({
+  private _showAlert(title?: string, msg?: string): void {
+    this._dialogSvc.openAlert({
       message: 'Sorry, there is no data available at the moment! Please try again later!' || msg,
       disableClose: false,
       title: 'No data found' || title,
@@ -55,27 +55,27 @@ export class RecipeListComponent implements OnInit {
   }
 
   public createRecipe(): void {
-    this.dataSvc.saveRecipe(new Recipe(this.auth));
-    this.router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
+    this._dataSvc.saveRecipe(new Recipe(this.auth));
+    this._router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
   }
 
   public deleteRecipe(recipe: Recipe): void {
-    this.recipeDataSvc.removeRecipe(recipe);
+    this._recipeDataSvc.removeRecipe(recipe);
   }
 
   public editRecipe(recipe: Recipe): void {
-    this.dataSvc.saveRecipe(recipe);
-    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key'], 'edit']);
+    this._dataSvc.saveRecipe(recipe);
+    this._router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key'], 'edit']);
   }
 
   public filterRecipes(searchTerm: string): void {
-    this.filteredRecipes = [...this.recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
-    this.filteredSharedRecipes = [...this.recipeSvc.filterRecipes(this.sharedRecipes, this.query, searchTerm, this.queryIngredients)];
+    this.filteredRecipes = [...this._recipeSvc.filterRecipes(this.recipes, this.query, searchTerm, this.queryIngredients)];
+    this.filteredSharedRecipes = [...this._recipeSvc.filterRecipes(this.sharedRecipes, this.query, searchTerm, this.queryIngredients)];
   }
 
   public openDetails(recipe: Recipe): void {
-    this.dataSvc.saveRecipe(recipe);
-    this.router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key']]);
+    this._dataSvc.saveRecipe(recipe);
+    this._router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key']]);
   }
 
   public removeIngredient(ingredient: string): void {
@@ -84,43 +84,43 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.loadingSvc.register('my-recipes.load');
-    this.loadingSvc.register('shared-recipes.load');
+    this._loadingSvc.register('my-recipes.load');
+    this._loadingSvc.register('shared-recipes.load');
     setTimeout(() => {
-      this.loadingSvc.resolve('my-recipes.load');
-      this.loadingSvc.resolve('shared-recipes.load');
+      this._loadingSvc.resolve('my-recipes.load');
+      this._loadingSvc.resolve('shared-recipes.load');
       if (!this.recipes) {
-        this.showAlert('No recipes found', 'You have no recipes currently. Start cooking!');
+        this._showAlert('No recipes found', 'You have no recipes currently. Start cooking!');
       }
       if (!this.sharedRecipes) {
-        this.showAlert();
+        this._showAlert();
       }
     }, 5000);
-    this.titleSvc.setTitle("Recipes");
+    this._titleSvc.setTitle("Recipes");
   }
 
   ngOnInit(): void {
-    this.foodSvc.getFoods().subscribe((data: Food[]) => {
+    this._foodSvc.getFoods().subscribe((data: Food[]) => {
       if (!!data && !!data.length) {
         this.ingredients = [...data.map((item: Food) => item.name)];
       }
     });
 
-    this.auth = Object.assign({}, this.authSvc.getAuth());
+    this.auth = Object.assign({}, this._authSvc.getAuth());
 
-    this.recipeDataSvc.getMyRecipes().subscribe((data: Recipe[]) => {
+    this._recipeDataSvc.getPrivateRecipes().subscribe((data: Recipe[]) => {
       if (!!data && !!data.length) {
         this.recipes = [...data];
         this.filteredRecipes = [...data];
-        this.loadingSvc.resolve('my-recipes.load');
+        this._loadingSvc.resolve('my-recipes.load');
       }
     });
 
-    this.recipeDataSvc.getSharedRecipes().subscribe((data: Recipe[]) => {
+    this._recipeDataSvc.getSharedRecipes().subscribe((data: Recipe[]) => {
       if (!!data && !!data.length) {
         this.sharedRecipes = [...data];
         this.filteredSharedRecipes = [...data];
-        this.loadingSvc.resolve('shared-recipes.load');
+        this._loadingSvc.resolve('shared-recipes.load');
       }
     });
   }

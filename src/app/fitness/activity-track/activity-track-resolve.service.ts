@@ -8,18 +8,18 @@ import { ActivityTrackDataService } from './activity-track-data.service';
 @Injectable()
 export class ActivityTrackResolve implements Resolve<ActivityTracker> {
 
-    constructor(private atDataSvc: ActivityTrackDataService, private dataSvc: DataService) { }
+    constructor(private _atDataSvc: ActivityTrackDataService, private _dataSvc: DataService) { }
 
     public resolve(route: ActivatedRouteSnapshot): Promise<ActivityTracker> {
         return new Promise((resolve, reject) => {
-            let savedAt: ActivityTracker | null = this.dataSvc.getActivityTrack();
+            let savedAt: ActivityTracker | null = this._dataSvc.getActivityTrack();
             if (!savedAt || !savedAt.hasOwnProperty('date') ) {
                 let activityTrack: ActivityTracker,
-                    date: string = this.dataSvc.getCurrentDate();
-                this.atDataSvc.getActivityTrack(date).subscribe((at: ActivityTracker) => {
+                    date: string = this._dataSvc.getCurrentDate();
+                this._atDataSvc.getActivityTrack(date).subscribe((at: ActivityTracker) => {
                     if (!!at && !!at.hasOwnProperty('date')) {
                         activityTrack = at;
-                        this.dataSvc.saveActivityTrack(activityTrack);
+                        this._dataSvc.saveActivityTrack(activityTrack);
                         resolve(activityTrack);
                     }
                 });
@@ -30,7 +30,7 @@ export class ActivityTrackResolve implements Resolve<ActivityTracker> {
                     }
                 }, 3000);
             } else {
-                resolve(this.dataSvc.getActivityTrack());
+                resolve(this._dataSvc.getActivityTrack());
             }
         });
     }

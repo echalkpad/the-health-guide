@@ -7,11 +7,11 @@ import { Nutrient } from '../shared/nutrient.model';
 @Injectable()
 export class NutrientDetailResolve implements Resolve<Nutrient> {
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private _dataSvc: DataService) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Nutrient> {
     return new Promise((resolve, reject) => {
-      resolve(this.dataSvc.getNutrient());
+      resolve(this._dataSvc.getNutrient());
     });
   }
 

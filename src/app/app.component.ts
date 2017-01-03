@@ -10,11 +10,11 @@ import { AuthService } from './auth/auth.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  private handle: number;
+  private _handle: number;
   public auth: Auth = new Auth("", "", "");
   public routeLinks: Object[];
 
-  constructor(private authSvc: AuthService, private router: Router) {
+  constructor(private _authSvc: AuthService, private _router: Router) {
     this.routeLinks = [
       {
         title: "Home", route: "/home", icon: "home"
@@ -31,23 +31,23 @@ export class AppComponent implements OnInit {
     ];
   }
 
-  private checkAuth(): void {
-    if (this.authSvc.getAuth()) {
-      this.auth = Object.assign({}, this.authSvc.getAuth());
-      clearInterval(this.handle);
+  private _checkAuth(): void {
+    if (this._authSvc.getAuth()) {
+      this.auth = Object.assign({}, this._authSvc.getAuth());
+      clearInterval(this._handle);
     }
   }
 
   public logout(): void {
-    this.authSvc.logout();
-    this.router.navigate(['/']);
+    this._authSvc.logout();
+    this._router.navigate(['/']);
   }
 
   ngOnInit(): void {
-    if (!this.authSvc.getAuth()) {
-      this.handle = setInterval(() => this.checkAuth(), 5000);
+    if (!this._authSvc.getAuth()) {
+      this._handle = setInterval(() => this._checkAuth(), 5000);
     } else {
-      this.auth = Object.assign({}, this.authSvc.getAuth());
+      this.auth = Object.assign({}, this._authSvc.getAuth());
     }
   }
 

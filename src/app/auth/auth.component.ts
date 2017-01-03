@@ -19,16 +19,16 @@ export class AuthComponent implements OnInit {
     public uploadReminder: boolean = false;
     public user = new User();
     constructor(
-        private authSvc: AuthService,
-        private dialogSvc: TdDialogService,
-        private loadingSvc: TdLoadingService,
-        private route: ActivatedRoute,
-        private router: Router,
-        private toast: MdSnackBar
+        private _authSvc: AuthService,
+        private _dialogSvc: TdDialogService,
+        private _loadingSvc: TdLoadingService,
+        private _route: ActivatedRoute,
+        private _router: Router,
+        private _toast: MdSnackBar
     ) { }
 
-    private showError(msg: string | Error): void {
-        this.dialogSvc.openAlert({
+    private _showError(msg: string | Error): void {
+        this._dialogSvc.openAlert({
             message: msg.toString(),
             disableClose: false,
             title: 'Login failed',
@@ -37,14 +37,14 @@ export class AuthComponent implements OnInit {
     }
 
     public passLogin(): void {
-        this.loadingSvc.register('auth.load');
-        this.authSvc.login(this.user).then(success => {
-            this.loadingSvc.resolve('auth.load');
-            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
-            this.router.navigate([redirect]);
+        this._loadingSvc.register('auth.load');
+        this._authSvc.login(this.user).then(success => {
+            this._loadingSvc.resolve('auth.load');
+            let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/home';
+            this._router.navigate([redirect]);
         }).catch(err => {
-            this.loadingSvc.resolve('auth.load');
-            this.showError(err);
+            this._loadingSvc.resolve('auth.load');
+            this._showError(err);
         });
     }
 
@@ -57,32 +57,32 @@ export class AuthComponent implements OnInit {
     }
 
     public signUp(): void {
-        this.loadingSvc.register('auth.load');
-        this.authSvc.signUp(this.user).then(() => {
-            this.loadingSvc.resolve('auth.load');
-            let redirect = !!this.authSvc.redirectUrl ? this.authSvc.redirectUrl : '/home';
-            this.dialogSvc.openAlert({
+        this._loadingSvc.register('auth.load');
+        this._authSvc.signUp(this.user).then(() => {
+            this._loadingSvc.resolve('auth.load');
+            let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/home';
+            this._dialogSvc.openAlert({
                 message: 'Account created successfully',
                 disableClose: false,
                 title: 'Success',
                 closeButton: 'Close'
-            }).afterClosed().subscribe(() => this.router.navigate([redirect]));
-            this.router.navigate([redirect])
+            }).afterClosed().subscribe(() => this._router.navigate([redirect]));
+            this._router.navigate([redirect])
         }).catch(err => {
-            this.loadingSvc.resolve('auth.load');
-            this.showError(err);
+            this._loadingSvc.resolve('auth.load');
+            this._showError(err);
         });
     }
 
     public uploadAvatar(img: File): void {
-        this.authSvc.uploadAvatar(img).then(() => {
-            this.user.avatar = img.name; this.toast.open('Upload complete!', 'OK');
+        this._authSvc.uploadAvatar(img).then(() => {
+            this.user.avatar = img.name; this._toast.open('Upload complete!', 'OK');
         });
     }
 
     ngOnInit(): void {
-        if (this.authSvc.getAuth()) {
-            setTimeout(() => this.router.navigate(['/home']), 1000);
+        if (this._authSvc.getAuth()) {
+            setTimeout(() => this._router.navigate(['/home']), 1000);
         }
     }
 

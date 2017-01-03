@@ -17,9 +17,9 @@ export class FoodDetailComponent implements OnInit {
   public food: Food;
   public vitamins: string[] = [];
   constructor(
-    private detector: ChangeDetectorRef,
-    private route: ActivatedRoute,
-    private titleSvc: Title
+    private _detector: ChangeDetectorRef,
+    private _route: ActivatedRoute,
+    private _titleSvc: Title
   ) {
     this.basicNutrients = [
       "Water",
@@ -36,14 +36,14 @@ export class FoodDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.data.subscribe((data: { food: Food }) => {
+    this._route.data.subscribe((data: { food: Food }) => {
       if (!!data) {
         this.food = Object.assign({}, data.food);
         this.aminoacids = Object.keys(this.food['amino acids']);
         this.vitamins = Object.keys(this.food['vitamins']);
         this.minerals = Object.keys(this.food['minerals']);
-        this.titleSvc.setTitle(this.food.name);
-        this.detector.markForCheck();
+        this._titleSvc.setTitle(this.food.name);
+        this._detector.markForCheck();
       }
     });
   }

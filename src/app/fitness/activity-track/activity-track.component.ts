@@ -25,19 +25,19 @@ export class ActivityTrackComponent implements OnInit {
   public selectedActivityTypes: ActivityType[] = [];
 
   constructor(
-    private atSvc: ActivityTrackService,
-    private atDataSvc: ActivityTrackDataService,
-    private dataSvc: DataService,
-    private dialogSvc: TdDialogService,
-    private helperSvc: HelperService,
-    private loadingSvc: TdLoadingService,
-    private route: ActivatedRoute,
-    private router: Router,
-    private titleSvc: Title
+    private _atSvc: ActivityTrackService,
+    private _atDataSvc: ActivityTrackDataService,
+    private _dataSvc: DataService,
+    private _dialogSvc: TdDialogService,
+    private _helperSvc: HelperService,
+    private _loadingSvc: TdLoadingService,
+    private _route: ActivatedRoute,
+    private _router: Router,
+    private _titleSvc: Title
   ) { }
 
-  private showAlert(msg: string | Error, title: string): void {
-    this.dialogSvc.openAlert({
+  private _showAlert(msg: string | Error, title: string): void {
+    this._dialogSvc.openAlert({
       message: msg.toString(),
       disableClose: false,
       title: title,
@@ -47,7 +47,7 @@ export class ActivityTrackComponent implements OnInit {
 
   public addActivityTime(): void {
     let date: Date = new Date();
-    this.dialogSvc.openPrompt({
+    this._dialogSvc.openPrompt({
       message: 'Format: hh:mm',
       disableClose: true,
       value: `${date.getHours()}:${(date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes()}`,
@@ -62,8 +62,8 @@ export class ActivityTrackComponent implements OnInit {
   public addSelectedActivities(at: ActivityTime): void {
     this.isDirty = true;
     at.activities = [...at.activities, ...this.selectedActivityTypes.map((activity: ActivityType) => Object.assign({}, activity))];
-    this.atSvc.setActivityTimeTotal(at);
-    this.atSvc.setActivityTrackTotal(this.activityTrack);
+    this._atSvc.setActivityTimeTotal(at);
+    this._atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public canDeactivate(): Promise<boolean> | boolean {
@@ -71,7 +71,7 @@ export class ActivityTrackComponent implements OnInit {
       return true;
     }
     return new Promise(resolve => {
-      return this.dialogSvc.openConfirm({
+      return this._dialogSvc.openConfirm({
         message: 'Changes have been made! Are you sure you want to leave?',
         disableClose: true,
         title: 'Discard changes',
@@ -82,7 +82,7 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public changeDate(): void {
-    this.dialogSvc.openPrompt({
+    this._dialogSvc.openPrompt({
       message: 'Format: dd/MM/YYYY',
       disableClose: true,
       value: this.currentDate,
@@ -96,7 +96,7 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public changeDuration(activityType: ActivityType, at?: ActivityTime): void {
-    this.dialogSvc.openPrompt({
+    this._dialogSvc.openPrompt({
       message: 'Enter activity duration in minutes',
       disableClose: true,
       value: '1',
@@ -108,8 +108,8 @@ export class ActivityTrackComponent implements OnInit {
           activityType.energyConsumption = Math.floor(activityType.met * +value);
           this.isDirty = true;
           if (at) {
-            this.atSvc.setActivityTimeTotal(at);
-            this.atSvc.setActivityTrackTotal(this.activityTrack);
+            this._atSvc.setActivityTimeTotal(at);
+            this._atSvc.setActivityTrackTotal(this.activityTrack);
           }
 
         }
@@ -125,30 +125,30 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public findActivityType(activityType: ActivityType, label: string): null | ActivityType {
-    return this.atSvc.searchActivityType(this.selectedActivityTypes, activityType.name, label);
+    return this._atSvc.searchActivityType(this.selectedActivityTypes, activityType.name, label);
   }
 
   public removeActivity(activity: ActivityType, at: ActivityTime): void {
     at.activities.splice(at.activities.indexOf(activity), 1);
     this.isDirty = true;
-    this.atSvc.setActivityTimeTotal(at);
-    this.atSvc.setActivityTrackTotal(this.activityTrack);
+    this._atSvc.setActivityTimeTotal(at);
+    this._atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public removeActivityTime(at: ActivityTime): void {
     this.activityTrack.activityTimes.splice(this.activityTrack.activityTimes.indexOf(at), 1);
     this.isDirty = true;
-    this.atSvc.setActivityTrackTotal(this.activityTrack);
+    this._atSvc.setActivityTrackTotal(this.activityTrack);
   }
 
   public syncActivityTrack(): void {
-    this.dataSvc.saveActivityTrack(this.activityTrack);
-    this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
+    this._dataSvc.saveActivityTrack(this.activityTrack);
+    this._dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     if (this.isDirty) {
-      this.atDataSvc.setActivityTrack(this.activityTrack);
+      this._atDataSvc.setActivityTrack(this.activityTrack);
     }
     setTimeout(() => {
-      this.atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
+      this._atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
         if (!!at && !!at.hasOwnProperty('date')) {
           this.activityTrack = new ActivityTracker(this.currentDate);
           this.activityTrack = at;
@@ -161,7 +161,7 @@ export class ActivityTrackComponent implements OnInit {
   public toggleActivity(activityType: ActivityType, label: string, checkbox?: HTMLInputElement): void {
     let foundActivity: null | ActivityType = this.findActivityType(activityType, label);
     if (!foundActivity) {
-      this.dialogSvc.openPrompt({
+      this._dialogSvc.openPrompt({
         message: 'Enter activity duration in minutes',
         disableClose: true,
         value: '1',
@@ -192,25 +192,25 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   ngAfterViewInit(): void {
-    this.loadingSvc.register('activity-track.load');
+    this._loadingSvc.register('activity-track.load');
     setTimeout(() => {
-      this.loadingSvc.resolve('activity-track.load');
+      this._loadingSvc.resolve('activity-track.load');
       if (!this.activityTrack.activityTimes.length) {
-        this.showAlert("You haven't moved today. Start moving your butt!", "No activity today");
+        this._showAlert("You haven't moved today. Start moving your butt!", "No activity today");
       }
     }, 4000);
-    this.titleSvc.setTitle('Activity tracker');
+    this._titleSvc.setTitle('Activity tracker');
   }
 
   ngOnInit(): void {
-    this.currentDate = this.dataSvc.getCurrentDate();
-    this.atDataSvc.getActivities().subscribe((data: Activity[]) => {
+    this.currentDate = this._dataSvc.getCurrentDate();
+    this._atDataSvc.getActivities().subscribe((data: Activity[]) => {
       if (!!data && !!data.length) {
         this.activities = [...data];
       }
     });
 
-    this.route.data.subscribe((data: { activityTrack: ActivityTracker }) => this.activityTrack = Object.assign({}, data.activityTrack));
+    this._route.data.subscribe((data: { activityTrack: ActivityTracker }) => this.activityTrack = Object.assign({}, data.activityTrack));
   }
 
 }
