@@ -88,28 +88,24 @@ export class NutrientListComponent implements OnInit {
   }
 
   public refreshMacros(args: ListViewEventData): void {
-    
     this._nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
       this._macronutrients = this._helperSvc.sortByName(data);
       this.filteredMacronutrients = [...this._macronutrients];
       this.isLoadingMacros = false;
-      setTimeout(() => {
-        args.object.notifyPullToRefreshFinished();
-        this._changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.notifyPullToRefreshFinished();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
   }
 
   public refreshMicros(args: ListViewEventData): void {
-    
     this._nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
       this._micronutrients = this._helperSvc.sortByName(data);
       this.filteredMicronutrients = [...this._micronutrients];
       this.isLoadingMicros = false;
-      setTimeout(() => {
-        args.object.notifyPullToRefreshFinished();
-        this._changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.notifyPullToRefreshFinished();
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     });
   }
 

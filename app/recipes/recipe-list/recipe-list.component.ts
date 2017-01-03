@@ -89,32 +89,26 @@ export class RecipeListComponent implements OnInit {
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
-    
     this._recipeLimit += 3;
     if (this._privateRecipes.length > this.filteredPrivate.length) {
       this.filteredPrivate.push(...this._privateRecipes.slice(this.filteredPrivate.length, this._recipeLimit));
-      setTimeout(() => {
-        args.object.scrollToIndex(this.filteredPrivate.length - 3);
-        args.object.notifyLoadOnDemandFinished();
-        args.returnValue = true;
-        this._changeDetectionRef.detectChanges();
-        this._changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.scrollToIndex(this.filteredPrivate.length - 3);
+      args.object.notifyLoadOnDemandFinished();
+      args.returnValue = true;
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     }
   }
 
   public loadMoreShared(args: ListViewEventData): void {
-    
     this._recipeLimit += 3;
     if (this._sharedRecipes.length > this.filteredShared.length) {
       this.filteredShared.push(...this._sharedRecipes.slice(this.filteredShared.length, this._recipeLimit));
-      setTimeout(() => {
-        args.object.scrollToIndex(this.filteredShared.length - 3);
-        args.object.notifyLoadOnDemandFinished();
-        args.returnValue = true;
-        this._changeDetectionRef.detectChanges();
-        this._changeDetectionRef.markForCheck();
-      }, 2000);
+      args.object.scrollToIndex(this.filteredShared.length - 3);
+      args.object.notifyLoadOnDemandFinished();
+      args.returnValue = true;
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
     }
   }
 
@@ -124,7 +118,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   public refreshPrivate(args: ListViewEventData): void {
-    
     this._recipeDataSvc.getPrivateRecipes().then((data: Recipe[]) => {
       this._privateRecipes = this._helperSvc.sortByName(data);
       this.filteredPrivate = [...this._privateRecipes];

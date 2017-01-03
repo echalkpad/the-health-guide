@@ -43,11 +43,9 @@ export class FoodListComponent implements OnInit {
     this._foodLimit += 10;
     if (this._foods.length > this.filteredFoods.length) {
       this.filteredFoods.push(...this._foods.slice(this.filteredFoods.length, this._foodLimit));
-      setTimeout(() => {
-        args.object.scrollToIndex(this.filteredFoods.length - 1);
-        args.object.notifyLoadOnDemandFinished();
-        args.returnValue = true;
-      }, 2000);
+      args.object.scrollToIndex(this.filteredFoods.length - 1);
+      args.object.notifyLoadOnDemandFinished();
+      args.returnValue = true;
     }
   }
 
@@ -63,13 +61,11 @@ export class FoodListComponent implements OnInit {
       this._foods = this.__helperSvc.sortByName(data);
       this.filteredFoods = [...this._foods].slice(0, this._foodLimit);
       this.isLoading = false;
-      setTimeout(() => {
-        if (args) {
-          args.object.notifyPullToRefreshFinished();
-        }
-        this.__changeDetectionRef.detectChanges();
-        this.__changeDetectionRef.markForCheck();
-      }, 2000);
+      if (args) {
+        args.object.notifyPullToRefreshFinished();
+      }
+      this.__changeDetectionRef.detectChanges();
+      this.__changeDetectionRef.markForCheck();
     });
   }
 
