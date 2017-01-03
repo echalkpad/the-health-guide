@@ -32,7 +32,7 @@ export class MealTrackService {
 
   private getNutritionRequirements(): Promise<MealTrackNutrition> {
     return new Promise(resolve => {
-      let energyConsumption: number = this.dataSvc.getEnergyConsumption() || 0,
+      let energyConsumption: number = this.dataSvc.getEnergyConsumption(),
         fit: Fitness = this.dataSvc.getFitness();
       fit.dailyRequirements.Energy = fit.bmr + energyConsumption - 200;
       // Set macronutrient requirements

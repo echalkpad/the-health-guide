@@ -142,18 +142,16 @@ export class ActivityTrackComponent implements OnInit {
   }
 
   public syncActivityTrack(): void {
+    this.dataSvc.saveActivityTrack(this.activityTrack);
+    this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     if (this.isDirty) {
       this.atDataSvc.setActivityTrack(this.activityTrack);
-      this.dataSvc.saveActivityTrack(this.activityTrack);
-      this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
     }
     setTimeout(() => {
       this.atDataSvc.getActivityTrack(this.currentDate).subscribe((at: ActivityTracker) => {
         if (!!at && !!at.hasOwnProperty('date')) {
           this.activityTrack = new ActivityTracker(this.currentDate);
           this.activityTrack = at;
-          this.dataSvc.saveActivityTrack(at);
-          this.dataSvc.saveEnergyConsumption(this.activityTrack.energyConsumption);
         }
       });
     }, 2000);

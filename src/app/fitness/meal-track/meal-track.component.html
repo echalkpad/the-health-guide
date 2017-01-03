@@ -79,7 +79,7 @@
                 <button (click)="toggleSelectedMeal(meal)" md-menu-item>Delete</button>
               </md-menu>
               <span flex>{{ meal.name }}</span>
-              <span class="md-caption tc-grey-500">{{ meal.quantity }}q</span>
+              <span class="md-caption tc-grey-500">{{ meal.hasOwnProperty('nutrition') ? meal.amount : meal.quantity + 'g' }}</span>
             </div>
           </md-list-item>
           <md-divider *ngIf="!last" md-inset></md-divider>

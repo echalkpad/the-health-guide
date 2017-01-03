@@ -32,7 +32,7 @@ export class DataService {
   }
 
   public getEnergyConsumption(): number {
-    return +sessionStorage.getItem('energy');
+    return 0 || +sessionStorage.getItem('energy');
   }
 
   public saveEnergyConsumption(energy: number): void {

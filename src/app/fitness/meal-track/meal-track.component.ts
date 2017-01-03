@@ -107,11 +107,6 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         this.isDirty = true;
         mt.meals = [...mt.meals, ...this.selectedMeals.map((meal: Meal) => Object.assign({}, meal))];
         mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.loadingSvc.register('mt-nutrition.load');
-        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-            this.mealTrack.nutrition = nutrition;
-            this.loadingSvc.resolve('mt-nutrition.load')
-        });
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
@@ -215,29 +210,23 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public removeMealTime(mt: MealTime): void {
         this.isDirty = true;
         this.mealTrack.mealTimes.splice(this.mealTrack.mealTimes.indexOf(mt), 1);
-        this.loadingSvc.register('mt-nutrition.load');
-        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-            this.mealTrack.nutrition = nutrition;
-            this.loadingSvc.resolve('mt-nutrition.load')
-        });
     }
 
     public syncMealTrack(): void {
-        if (this.isDirty) {
-            this.loadingSvc.register('mt-nutrition.load');
-            this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-                this.mealTrack.nutrition = nutrition;
+        this.loadingSvc.register('mt-nutrition.load');
+        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+            this.mealTrack.nutrition = nutrition;
+            if (this.isDirty) {
                 this.mtDataSvc.setMealTrack(this.mealTrack);
                 this.dataSvc.saveMealTrack(this.mealTrack);
-                this.loadingSvc.resolve('mt-nutrition.load')
-            });
-        }
+            }
+            this.loadingSvc.resolve('mt-nutrition.load')
+        });
         setTimeout(() => {
             this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
                 if (!!mt && !!mt.hasOwnProperty('date')) {
                     this.mealTrack = new MealTracker(this.currentDate);
                     this.mealTrack = mt;
-                    this.dataSvc.saveMealTrack(mt);
                 }
             });
         }, 2000);
