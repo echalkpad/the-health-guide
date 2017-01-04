@@ -14,7 +14,7 @@ import { Nutrient } from '../shared/nutrient.model';
 export class NutrientDetailComponent implements OnInit {
   public nutrient: Nutrient;
   constructor(
-    private _detector: ChangeDetectorRef,
+    private _changeDetectionRef: ChangeDetectorRef,
     private _route: ActivatedRoute,
     private _titleSvc: Title
   ) { }
@@ -25,7 +25,7 @@ export class NutrientDetailComponent implements OnInit {
       if (!!data) {
         this.nutrient = Object.assign({}, data.nutrient);
         this._titleSvc.setTitle(this.nutrient.name);
-        this._detector.markForCheck();
+        this._changeDetectionRef.detectChanges();
       }
     });
   }

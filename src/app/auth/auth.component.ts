@@ -1,5 +1,6 @@
 // TODO: Add user details (e.g. avatar, username) and save them in users database
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { MdSnackBar } from '@angular/material';
 
@@ -24,6 +25,7 @@ export class AuthComponent implements OnInit {
         private _loadingSvc: TdLoadingService,
         private _route: ActivatedRoute,
         private _router: Router,
+        private _titleSvc: Title,
         private _toast: MdSnackBar
     ) { }
 
@@ -84,6 +86,7 @@ export class AuthComponent implements OnInit {
         if (this._authSvc.getAuth()) {
             setTimeout(() => this._router.navigate(['/home']), 1000);
         }
+        this._titleSvc.setTitle('Authentication');
     }
 
 }

@@ -5,10 +5,10 @@ import { ActivatedRoute } from '@angular/router';
 import { Recipe } from '../shared/recipe.model';
 
 @Component({
-  changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-recipe-detail',
   templateUrl: './recipe-detail.component.html',
-  styleUrls: ['./recipe-detail.component.scss']
+  styleUrls: ['./recipe-detail.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RecipeDetailComponent implements OnInit {
   public recipe: Recipe;
@@ -17,7 +17,7 @@ export class RecipeDetailComponent implements OnInit {
   public minerals: string[] = [];
   public vitamins: string[] = [];
   constructor(
-    private _detector: ChangeDetectorRef,
+    private _changeDetectionRef: ChangeDetectorRef,
     private _route: ActivatedRoute,
     private _titleSvc: Title
   ) {
@@ -45,7 +45,7 @@ export class RecipeDetailComponent implements OnInit {
         this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
         this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         this._titleSvc.setTitle(this.recipe.name);
-        this._detector.markForCheck();
+        this._changeDetectionRef.detectChanges();
     });
   }
 

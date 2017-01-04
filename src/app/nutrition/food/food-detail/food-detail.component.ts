@@ -17,7 +17,7 @@ export class FoodDetailComponent implements OnInit {
   public food: Food;
   public vitamins: string[] = [];
   constructor(
-    private _detector: ChangeDetectorRef,
+    private _changeDetectionRef: ChangeDetectorRef,
     private _route: ActivatedRoute,
     private _titleSvc: Title
   ) {
@@ -43,7 +43,7 @@ export class FoodDetailComponent implements OnInit {
         this.vitamins = Object.keys(this.food['vitamins']);
         this.minerals = Object.keys(this.food['minerals']);
         this._titleSvc.setTitle(this.food.name);
-        this._detector.markForCheck();
+        this._changeDetectionRef.markForCheck();
       }
     });
   }

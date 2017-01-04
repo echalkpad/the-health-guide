@@ -28,13 +28,14 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
     private _dataSvc: DataService,
-    private dataTableSvc: TdDataTableService,
+    private _dataTableSvc: TdDataTableService,
     private _dialogSvc: TdDialogService,
-    private foodSvc: FoodService,
+    private _foodSvc: FoodService,
     private _loadingSvc: TdLoadingService,
     private _router: Router,
     private _titleSvc: Title
   ) {
+
     this.columns = [
       { name: 'name', label: 'Food' },
       { name: 'Energy', label: 'Energy (kcal)', numeric: true },
@@ -51,10 +52,10 @@ export class FoodListComponent implements AfterViewInit, OnInit {
 
   private _filter(): void {
     let newData: any[] = this.data;
-    newData = this.dataTableSvc.filterData(newData, this.searchTerm, true);
+    newData = this._dataTableSvc.filterData(newData, this.searchTerm, true);
     this.filteredTotal = newData.length;
-    newData = this.dataTableSvc.sortData(newData, this.sortBy, this.sortOrder);
-    newData = this.dataTableSvc.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
+    newData = this._dataTableSvc.sortData(newData, this.sortBy, this.sortOrder);
+    newData = this._dataTableSvc.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
     this.filteredData = newData;
   }
 
@@ -102,13 +103,13 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   }
 
   ngOnInit(): void {
-    this.foodSvc.getFoods().subscribe((data: Food[]) => {
-        if (!!data && !!data.length) {
-          this.data = [...data];
-          this._filter();
-          this._loadingSvc.resolve('food.load');
-        }
+    this._foodSvc.getFoods().subscribe((data: Food[]) => {
+      if (!!data && !!data.length) {
+        this.data = [...data];
+        this._filter();
+        this._loadingSvc.resolve('food.load');
       }
+    }
     );
   }
 

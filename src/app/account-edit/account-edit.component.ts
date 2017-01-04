@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MdSnackBar } from '@angular/material';
@@ -22,6 +23,7 @@ export class AccountEditComponent implements OnInit {
     private _authSvc: AuthService,
     private _dialogSvc: TdDialogService,
     private _route: ActivatedRoute,
+    private _titleSvc: Title,
     private _toast: MdSnackBar
   ) { }
 
@@ -35,19 +37,19 @@ export class AccountEditComponent implements OnInit {
   }
 
   public canDeactivate(): Promise<boolean> | boolean {
-        if (!this.accountForm.dirty) {
-            return true;
-        }
-        return new Promise(resolve => {
-            return this._dialogSvc.openConfirm({
-                message: 'Changes have been made! Are you sure you want to leave?',
-                disableClose: true,
-                title: 'Discard changes',
-                cancelButton: 'Disagree',
-                acceptButton: 'Agree',
-            }).afterClosed().subscribe((agree: boolean) => resolve(agree));
-        });
+    if (!this.accountForm.dirty) {
+      return true;
     }
+    return new Promise(resolve => {
+      return this._dialogSvc.openConfirm({
+        message: 'Changes have been made! Are you sure you want to leave?',
+        disableClose: true,
+        title: 'Discard changes',
+        cancelButton: 'Disagree',
+        acceptButton: 'Agree',
+      }).afterClosed().subscribe((agree: boolean) => resolve(agree));
+    });
+  }
 
   public updateAccount(): void {
     this._accountSvc.updateAccount(this.user)
@@ -56,15 +58,16 @@ export class AccountEditComponent implements OnInit {
   }
 
   public uploadAvatar(img: File): void {
-        this._authSvc.uploadAvatar(img).then(() => {
-            this.user.avatar = img.name; this._toast.open('Upload complete!', 'OK');
-        });
-    }
+    this._authSvc.uploadAvatar(img).then(() => {
+      this.user.avatar = img.name; this._toast.open('Upload complete!', 'OK');
+    });
+  }
 
   ngOnInit(): void {
     this._route.data.subscribe((data: { account: User }) => {
       this.user = data.account;
     });
+    this._titleSvc.setTitle('Account');
   }
 
 }
