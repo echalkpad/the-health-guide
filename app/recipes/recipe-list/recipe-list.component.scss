@@ -9,12 +9,15 @@
     margin: 20em -10em;
 }
 
-.list-group {
-    padding: 0;
-    margin: 0;
+.card {
+    margin: -10em;
 }
 
-.list-group-item-actions {
+.card-header {
+    background-color: white;
+}
+
+.card-actions {
     margin: -10em 0;
     width: 100%;
 }
@@ -34,8 +37,4 @@
 
 .action-btn-remove {
     color: $error;
-}
-
-.list-group-item-header {
-    background-color: white;
 }

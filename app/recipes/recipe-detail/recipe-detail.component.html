@@ -3,15 +3,67 @@
 </ActionBar>
 <TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
   <StackLayout #tabViewItem *tabItem="{title: 'Details'}">
-    <Label text="This is Label in Tab 1"></Label>
+    <FrescoDrawee verticalAlignment="center" aspectRatio="1.33" [imageUri]="recipe.image"></FrescoDrawee>
+    <Label [text]="recipe.description" textWrap="true"></Label>
+    
   </StackLayout>
   <StackLayout #tabViewItem *tabItem="{title: 'Ingredients'}">
-    <Label text="This is Label in Tab 2"></Label>
+    <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
+      <template let-ingredient="item">
+        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+          <Label col="0" textWrap="true" [text]="ingredient" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{ingredient.quantity}}g" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
   </StackLayout>
   <StackLayout #tabViewItem *tabItem="{title: 'Instructions'}">
-    <Label text="This is Label in Tab 2"></Label>
+    <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
+      <template let-step="item" let-index="index">
+        <StackLayout class="list-group-item" isUserInteractionEnabled="false">
+          <Label textWrap="true" text="{{index}}. {{step}}" class="list-group-item-heading" verticalAlignment="center"></Label>
+        </StackLayout>
+      </template>
+    </ListView>
   </StackLayout>
-  <StackLayout #tabViewItem *tabItem="{title: 'Nutrition'}">
-    <Label text="This is Label in Tab 2"></Label>
+  <StackLayout *tabItem="{title: 'Basic nutrition'}">
+    <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
+      <template let-basic="item" let-index="index">
+        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+          <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{recipe.nutrition[basic]}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Amino acids'}">
+    <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
+      <template let-aa="item">
+        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+          <Label col="0" textWrap="true" [text]="aa" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{recipe.nutrition['amino acids'][aa].toFixed(3)}}g" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Minerals'}">
+    <ListView class="list-group" [items]="minerals" separatorColor="cyan">
+      <template let-mineral="item">
+        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+          <Label col="0" textWrap="true" [text]="mineral" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{recipe.nutrition.minerals[mineral].toFixed(3)}}mg" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
+  </StackLayout>
+  <StackLayout *tabItem="{title: 'Vitamins'}">
+    <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
+      <template let-vitamin="item">
+        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+          <Label col="0" textWrap="true" [text]="vitamin" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{recipe.nutrition.vitamins[vitamin].toFixed(3)}}mg" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+        </GridLayout>
+      </template>
+    </ListView>
   </StackLayout>
 </TabView> `

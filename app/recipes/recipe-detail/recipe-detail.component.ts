@@ -18,7 +18,7 @@ import { Recipe } from '../shared/recipe.model';
 export class RecipeDetailComponent implements OnInit {
     public recipe: Recipe;
     public aminoacids: string[] = [];
-    public basicNutrients: string[] = [];
+    public basicNutrition: string[] = [];
     public minerals: string[] = [];
     public vitamins: string[] = [];
     constructor(
@@ -26,7 +26,8 @@ export class RecipeDetailComponent implements OnInit {
         private _route: ActivatedRoute,
         private _router: RouterExtensions
     ) {
-        this.basicNutrients = [
+        this.basicNutrition = [
+            'Energy',
             'Water',
             'Protein',
             'Carbohydrates',
@@ -36,8 +37,6 @@ export class RecipeDetailComponent implements OnInit {
             'Saturated fat',
             'Monounsaturated fat',
             'Polyunsaturated fat',
-            'Omega-3 fatty acids',
-            'Omega-6 fatty acids',
             'Trans fat'
         ];
     }

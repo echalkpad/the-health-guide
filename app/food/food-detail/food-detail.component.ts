@@ -17,7 +17,7 @@ import { Food } from '../shared/food.model';
 })
 export class FoodDetailComponent implements OnInit {
   public aminoacids: string[] = [];
-  public basicNutrients: string[] = [];
+  public basicNutrition: string[] = [];
   public minerals: string[] = [];
   public food: Food;
   public vitamins: string[] = [];
@@ -27,7 +27,8 @@ export class FoodDetailComponent implements OnInit {
     private _router: RouterExtensions
   ) {
     
-    this.basicNutrients = [
+    this.basicNutrition = [
+      'Energy',
       'Water',
       'Protein',
       'Carbohydrates',
