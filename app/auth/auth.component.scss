@@ -1,8 +1,8 @@
 @import 'app-common';
-.input-field {
-    margin-bottom: 5em;
-    margin-left: 15em;
-    margin-right: 15em;
+
+.fa {
+    font-family: 'FontAwesome';
+    font-size: 15px;
 }
 
 TextField {
@@ -10,6 +10,12 @@ TextField {
     border-color: $light-blue;
     padding: 10em;
     font-size: 15px;
+}
+
+.input-field {
+    margin-bottom: 5em;
+    margin-left: 20em;
+    margin-right: 20em;
 }
 
 .btn {

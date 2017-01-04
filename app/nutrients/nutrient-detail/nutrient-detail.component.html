@@ -2,7 +2,7 @@
   <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 
-<TabView>
+<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
   <StackLayout *tabItem="{title: 'Summary'}" class="p-20">
     <HtmlView [html]="nutrient.description"></HtmlView>
   </StackLayout>

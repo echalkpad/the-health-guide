@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 // Nativescript
@@ -26,17 +26,18 @@ export class FoodDetailComponent implements OnInit {
     private _route: ActivatedRoute,
     private _router: RouterExtensions
   ) {
+    
     this.basicNutrients = [
-      "Water",
-      "Protein",
-      "Carbohydrates",
-      "Sugars",
-      "Fiber",
-      "Fats",
-      "Saturated fat",
-      "Monounsaturated fat",
-      "Polyunsaturated fat",
-      "Trans fat"
+      'Water',
+      'Protein',
+      'Carbohydrates',
+      'Sugars',
+      'Fiber',
+      'Fats',
+      'Saturated fat',
+      'Monounsaturated fat',
+      'Polyunsaturated fat',
+      'Trans fat'
     ];
   }
 

@@ -1,7 +1,7 @@
 <RadSideDrawer>
     <StackLayout tkDrawerContent class="sidedrawer-left">
         <StackLayout class="sidedrawer-header">
-            <Image [src]="auth.avatar" height="100" width="100" class="img-circle"></Image>
+            <FrescoDrawee roundAsCircle="true" width="120" height="120" verticalAlignment="center" actualImageScaleType="fitCenter" aspectRatio="1" [imageUri]="auth.avatar"></FrescoDrawee>
             <Label [text]="auth.name" textWrap="true" class="text-center p-t-5"></Label>
         </StackLayout>
         <StackLayout class="sidedrawer-content">

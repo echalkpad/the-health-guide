@@ -114,7 +114,7 @@ export class RecipeListComponent implements OnInit {
 
   public openDetails(recipe: Recipe): void {
     this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', recipe.chef.id, recipe['$key']]), 1000);
+    setTimeout(() => this._router.navigate(['/recipes', recipe['$key']]), 1000);
   }
 
   public refreshPrivate(args: ListViewEventData): void {

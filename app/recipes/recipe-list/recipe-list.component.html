@@ -6,7 +6,7 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView>
+<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
     <StackLayout *tabItem="{title: 'My recipes'}">
         <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
             (submit)="searchPrivate(searchTerm.text)"></SearchBar>
@@ -17,10 +17,14 @@
                 pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press">
                 <template tkListItemTemplate let-recipe="item">
                     <StackLayout class="list-group-item active">
+                        <StackLayout orientation="horizontal" class="list-group-item-header p-20">
+                            <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
+                            <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="text-muted footnote" verticalAlignment="center"></Label>
+                        </StackLayout>
                         <FrescoDrawee verticalAlignment="center" aspectRatio="1.33" [imageUri]="recipe.image"></FrescoDrawee>
                         <StackLayout backgroundColor="white" class="list-group-item">
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
-                            <Label class="list-group-item-text text-muted" text="by {{recipe.chef.name}}"></Label>
+                            <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>
                             <GridLayout rows="*" columns="*, auto, *" class="list-group-item-actions" verticalAlignment="center">
                                 <Button row="0" col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>

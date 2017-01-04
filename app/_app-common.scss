@@ -7,11 +7,16 @@
 @import 'nativescript-theme-core/scss/index';
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
-$primary: $blue !default;
+$ocean: #5677FC !default;
+$primary: $ocean !default;
 $secondary: $grey-dark !default;
-$light-green: #00C853 !default;
+$light-green: #00c853 !default;
 $accent: $light-green !default;
-$light-blue: rgba($blue, 0.2) !default;
+$light-blue: rgba($ocean, 0.2) !default;
+
+.action-bar {
+    background-color: $ocean;
+}
 
 .btn-primary {
     background-color: $light-green;

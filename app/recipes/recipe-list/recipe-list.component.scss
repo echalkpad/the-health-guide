@@ -25,7 +25,7 @@
 }
 
 .action-btn-open {
-    color: $blue;
+    color: $ocean;
 }
 
 .action-btn-edit {
@@ -34,4 +34,8 @@
 
 .action-btn-remove {
     color: $error;
+}
+
+.list-group-item-header {
+    background-color: white;
 }

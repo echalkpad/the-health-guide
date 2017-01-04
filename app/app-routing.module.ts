@@ -67,14 +67,14 @@ const appRoutes: Routes = [
         path: 'recipes',
         children: [
           {
-            path: ':authId/:key',
+            path: ':key',
             component: RecipeDetailComponent,
             resolve: {
               recipe: RecipeDetailResolve
             }
           },
           {
-            path: ':authId/:key/edit',
+            path: ':authId/:key',
             component: RecipeEditComponent,
             resolve: {
               recipe: RecipeDetailResolve

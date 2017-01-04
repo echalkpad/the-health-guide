@@ -1,5 +1,9 @@
 @import 'app-common';
 
+.sidedrawer-left, .sidedrawer-header, .sidedrawer-content {
+    background-color: white;
+}
+
 .sidedrawer-header {
     text-align: center;
     height: 33%;
@@ -7,10 +11,10 @@
 
 .sidedrawer-list-item {
     &.active {
-        background-color: $light-blue;
-        color: $grey-dark;
+        background-color: white;
+        color: $ocean;
         .fa {
-            color: $grey-dark;
+            color: $ocean;
         }
     }
 }

@@ -1,0 +1,17 @@
+<ActionBar class="action-bar" [title]="recipe.name">
+  <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+</ActionBar>
+<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
+  <StackLayout #tabViewItem *tabItem="{title: 'Details'}">
+    <Label text="This is Label in Tab 1"></Label>
+  </StackLayout>
+  <StackLayout #tabViewItem *tabItem="{title: 'Ingredients'}">
+    <Label text="This is Label in Tab 2"></Label>
+  </StackLayout>
+  <StackLayout #tabViewItem *tabItem="{title: 'Instructions'}">
+    <Label text="This is Label in Tab 2"></Label>
+  </StackLayout>
+  <StackLayout #tabViewItem *tabItem="{title: 'Nutrition'}">
+    <Label text="This is Label in Tab 2"></Label>
+  </StackLayout>
+</TabView> `

@@ -6,7 +6,7 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView>
+<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
     <StackLayout *tabItem="{title: 'Macronutrients'}">
         <SearchBar *ngIf="!isLoadingMacros && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchMacros()" [text]="searchInputMacros"
             (submit)="searchMacros(searchTerm.text)"></SearchBar>
