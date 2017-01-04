@@ -22,18 +22,18 @@ export class RecipeDetailComponent implements OnInit {
     private _titleSvc: Title
   ) {
     this.basicNutrients = [
-      "Water",
-      "Protein",
-      "Carbohydrates",
-      "Sugars",
-      "Fiber",
-      "Fats",
-      "Saturated fat",
-      "Monounsaturated fat",
-      "Polyunsaturated fat",
-      "Omega-3 fatty acids",
-      "Omega-6 fatty acids",
-      "Trans fat"
+      'Water',
+      'Protein',
+      'Carbohydrates',
+      'Sugars',
+      'Fiber',
+      'Fats',
+      'Saturated fat',
+      'Monounsaturated fat',
+      'Polyunsaturated fat',
+      'Omega-3 fatty acids',
+      'Omega-6 fatty acids',
+      'Trans fat'
     ];
   }
 

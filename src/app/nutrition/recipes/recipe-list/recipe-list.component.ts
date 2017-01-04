@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
 
-import { FirebaseListObservable } from "angularfire2";
+import { FirebaseListObservable } from 'angularfire2';
 import { TdDialogService, TdLoadingService } from '@covalent/core';
 
 import { Auth } from '../../../auth/auth.model';
@@ -65,7 +65,7 @@ export class RecipeListComponent implements OnInit {
 
   public editRecipe(recipe: Recipe): void {
     this._dataSvc.saveRecipe(recipe);
-    this._router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key'], 'edit']);
+    this._router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key']]);
   }
 
   public filterRecipes(searchTerm: string): void {
@@ -75,7 +75,7 @@ export class RecipeListComponent implements OnInit {
 
   public openDetails(recipe: Recipe): void {
     this._dataSvc.saveRecipe(recipe);
-    this._router.navigate(['/nutrition/recipes', this.auth.id, recipe['$key']]);
+    this._router.navigate(['/nutrition/recipes', recipe['$key']]);
   }
 
   public removeIngredient(ingredient: string): void {
@@ -96,7 +96,7 @@ export class RecipeListComponent implements OnInit {
         this._showAlert();
       }
     }, 5000);
-    this._titleSvc.setTitle("Recipes");
+    this._titleSvc.setTitle('Recipes');
   }
 
   ngOnInit(): void {

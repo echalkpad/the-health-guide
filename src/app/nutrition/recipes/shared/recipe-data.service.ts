@@ -28,7 +28,7 @@ export class RecipeDataService {
     this._recipeImgUrl = firebase.storage().ref().child('/recipes');
   }
 
-  public addRecipe(recipe: Recipe): void {
+  private _addRecipe(recipe: Recipe): void {
     this._helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this._privateRecipes.push(recipe);
@@ -37,34 +37,7 @@ export class RecipeDataService {
     }
   }
 
-  public downloadImg(imgName: string): firebase.Promise<any> {
-    return this._recipeImgUrl.child(`${imgName}`).getDownloadURL();
-  }
-
-  public getPrivateRecipes(): FirebaseListObservable<Recipe[]> {
-    return this._privateRecipes;
-  }
-
-  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
-    return this._af.database.object(`/recipes/${authId}/${key}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public getSharedRecipes(): FirebaseListObservable<Recipe[]> {
-    return this._sharedRecipes;
-  }
-
-  public removeRecipe(recipe: Recipe): void {
-    this._privateRecipes.remove(recipe['$key']);
-    if (recipe.shared === true) {
-      this._sharedRecipes.remove(recipe['$key']);
-    }
-  }
-
-  public updateRecipe(recipe: Recipe): void {
+  private _updateRecipe(recipe: Recipe): void {
     this._helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
     this._privateRecipes.update(recipe['$key'], {
@@ -109,6 +82,41 @@ export class RecipeDataService {
         quantity: recipe.quantity,
         shared: recipe.shared
       });
+    }
+  }
+
+  public downloadImg(imgName: string): firebase.Promise<any> {
+    return this._recipeImgUrl.child(`${imgName}`).getDownloadURL();
+  }
+
+  public getPrivateRecipes(): FirebaseListObservable<Recipe[]> {
+    return this._privateRecipes;
+  }
+
+  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
+    return this._af.database.object(`/recipes/${authId}/${key}`, {
+      query: {
+        orderByChild: 'name'
+      }
+    });
+  }
+
+  public getSharedRecipes(): FirebaseListObservable<Recipe[]> {
+    return this._sharedRecipes;
+  }
+
+  public removeRecipe(recipe: Recipe): void {
+    this._privateRecipes.remove(recipe['$key']);
+    if (recipe.shared === true) {
+      this._sharedRecipes.remove(recipe['$key']);
+    }
+  }
+
+  public cookRecipe(recipe: Recipe): void {
+    if (recipe.hasOwnProperty('$key')) {
+      this._updateRecipe(recipe);
+    } else {
+      this._addRecipe(recipe);
     }
   }
 

@@ -59,64 +59,64 @@ export class RecipeEditComponent implements OnInit {
     ) {
 
         this.basicNutrients = [
-            "Water",
-            "Protein",
-            "Carbohydrates",
-            "Sugars",
-            "Fiber",
-            "Fats",
-            "Saturated fat",
-            "Monounsaturated fat",
-            "Polyunsaturated fat",
-            "Omega-3 fatty acids",
-            "Omega-6 fatty acids",
-            "Trans fat"
+            'Water',
+            'Protein',
+            'Carbohydrates',
+            'Sugars',
+            'Fiber',
+            'Fats',
+            'Saturated fat',
+            'Monounsaturated fat',
+            'Polyunsaturated fat',
+            'Omega-3 fatty acids',
+            'Omega-6 fatty acids',
+            'Trans fat'
         ];
 
         this.categories = [
-            "Appetizers",
-            "Beverages",
-            "Breakfasts",
-            "Casserolles",
-            "Desserts",
-            "Holidays",
-            "Main dishes",
-            "Salads",
-            "Sandwiches",
-            "Sauces",
-            "Side dishes",
-            "Soups"
+            'Appetizers',
+            'Beverages',
+            'Breakfasts',
+            'Casserolles',
+            'Desserts',
+            'Holidays',
+            'Main dishes',
+            'Salads',
+            'Sandwiches',
+            'Sauces',
+            'Side dishes',
+            'Soups'
         ];
 
         this.cookMethods = [
-            "Baking",
-            "Blanching",
-            "Boiling",
-            "Braising",
-            "Freezing",
-            "Frying",
-            "Grilling",
-            "Microwaving",
-            "Pasteurization",
-            "Pickling",
-            "Poaching",
-            "Raw",
-            "Sauteing",
-            "Simmering",
-            "Slow cooking",
-            "Smoking",
-            "Steaming"
+            'Baking',
+            'Blanching',
+            'Boiling',
+            'Braising',
+            'Freezing',
+            'Frying',
+            'Grilling',
+            'Microwaving',
+            'Pasteurization',
+            'Pickling',
+            'Poaching',
+            'Raw',
+            'Sauteing',
+            'Simmering',
+            'Slow cooking',
+            'Smoking',
+            'Steaming'
         ];
 
         this.difficulties = [
-            "Easy",
-            "Intermidiate",
-            "Advanced",
-            "Master chef"
+            'Easy',
+            'Intermidiate',
+            'Advanced',
+            'Master chef'
         ];
     }
 
-     private _showAlert(msg: string | Error, title: string): void {
+    private _showAlert(msg: string | Error, title: string): void {
         this._dialogSvc.openAlert({
             message: msg.toString(),
             disableClose: false,
@@ -132,7 +132,7 @@ export class RecipeEditComponent implements OnInit {
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
-        if (this._isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === "")) {
+        if (this._isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === '')) {
             return true;
         }
         return new Promise(resolve => {
@@ -154,11 +154,7 @@ export class RecipeEditComponent implements OnInit {
             this._recipeDataSvc.downloadImg(this.recipe.image).then((url: string) => this.recipe.image = url);
         }
         setTimeout(() => {
-            if (this.recipe.hasOwnProperty('$key')) {
-                this._recipeDataSvc.updateRecipe(this.recipe);
-            } else {
-                this._recipeDataSvc.addRecipe(this.recipe);
-            }
+            this._recipeDataSvc.cookRecipe(this.recipe);
             this._toast.open('Cooking done!', 'OK');
             this._router.navigate(['/nutrition/recipes']);
         }, 2000);
@@ -168,7 +164,7 @@ export class RecipeEditComponent implements OnInit {
         this._dialogSvc.openPrompt({
             message: `Enter the ingredient quantity in ${ingredient.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
             disableClose: true,
-            value: "100",
+            value: '100',
             title: `Enter ${ingredient.name}'s quantity`,
         }).afterClosed().subscribe((value: string) => {
             if (value) {
