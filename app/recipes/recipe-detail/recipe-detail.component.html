@@ -3,7 +3,7 @@
 </ActionBar>
 <TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
   <StackLayout #tabViewItem *tabItem="{title: 'Details'}">
-    <FrescoDrawee verticalAlignment="center" aspectRatio="1.33" [imageUri]="recipe.image"></FrescoDrawee>
+    <FrescoDrawee verticalAlignment="center" aspectRatio="1.5" [imageUri]="recipe.image"></FrescoDrawee>
     <Label [text]="recipe.description" textWrap="true"></Label>
     
   </StackLayout>
@@ -11,7 +11,7 @@
     <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
       <template let-ingredient="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="ingredient" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <Label col="0" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{ingredient.quantity}}g" class="text-muted text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
