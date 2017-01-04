@@ -31,7 +31,7 @@
       <template let-basic="item" let-index="index">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{recipe.nutrition[basic]}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" text="{{recipe.nutrition[basic].toFixed(2)}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
     </ListView>
