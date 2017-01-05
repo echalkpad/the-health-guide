@@ -1,0 +1,20 @@
+@import 'app-common';
+
+.recipe-description {
+    margin: 5em 10em 10em 10em;
+    font-style: italic;
+    padding: 10em;
+    border-color: $light-blue;
+    border-width: 1px;
+}
+
+.recipe-highlights {
+    width: 100%;
+    padding: 10em auto;
+    margin: 10em;
+}
+
+.recipe-details {
+    padding: 10em 0;
+    margin: 0 20em;
+}
