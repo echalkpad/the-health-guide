@@ -117,6 +117,10 @@ export class NutrientListComponent implements OnInit {
     this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
   }
 
+  public toggleSearching(): void {
+    this.isSearching = !this.isSearching;
+  }
+
   ngOnInit(): void {
     Promise.all([
       this._nutrientSvc.getMacronutrients(),

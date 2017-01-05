@@ -37,7 +37,7 @@ export class RecipeListComponent implements OnInit {
   public query: string = 'name';
   public queryIngredients: Ingredient[] = [];
   public searchInputPrivate: string = '';
-  public searchInputPublic: string = '';
+  public searchInputShared: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
@@ -82,7 +82,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   public clearSearchShared(): void {
-    this.searchInputPublic = '';
+    this.searchInputShared = '';
     this.filteredShared = [...this._sharedRecipes];
     this._changeDetectionRef.detectChanges();
     this._changeDetectionRef.markForCheck();
@@ -149,6 +149,10 @@ export class RecipeListComponent implements OnInit {
     this.filteredShared = this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._recipeLimit);
     this._changeDetectionRef.detectChanges();
     this._changeDetectionRef.markForCheck();
+  }
+
+  public toggleSearching(): void {
+    this.isSearching = !this.isSearching;
   }
 
   ngOnInit(): void {

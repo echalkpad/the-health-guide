@@ -13,7 +13,7 @@
         </StackLayout>
         <StackLayout row="0" col="1" class="text-center" borderColor="Cyan" borderLeftWidth="1" borderRightWidth="1">
           <Label [text]="recipe.difficulty" class="h1" textWrap="true"></Label>
-          <Label text="&#xf2c9; Difficulty" class="fa body" textWrap="true"></Label>
+          <Label text="&#xf042; Difficulty" class="fa body" textWrap="true"></Label>
         </StackLayout>
         <StackLayout row="0" col="2" class="text-center">
           <Label [text]="recipe.servings" class="h1" textWrap="true"></Label>
@@ -39,13 +39,13 @@
       <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
         <Label row="0" col="0" text="&#xf2c8;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
         <Label row="0" col="1" text="Cook temperature" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-        <Label row="0" col="2" [text]="recipe.cookTemperature" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+        <Label row="0" col="2" text="{{recipe.cookTemperature}}C" class="footnote" textWrap="true" verticalAlignment="center"></Label>
       </GridLayout>
       <StackLayout class="hr-light"></StackLayout>
       <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
         <Label row="0" col="0" text="&#xf24e;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
         <Label row="0" col="1" text="Quantity" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-        <Label row="0" col="2" [text]="recipe.quantity" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+        <Label row="0" col="2" text="{{recipe.quantity}}g" class="footnote" textWrap="true" verticalAlignment="center"></Label>
       </GridLayout>
     </FlexboxLayout>
   </ScrollView>

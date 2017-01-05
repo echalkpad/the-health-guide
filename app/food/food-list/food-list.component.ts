@@ -75,6 +75,10 @@ export class FoodListComponent implements OnInit {
     this.filteredFoods = this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit);
   }
 
+  public toggleSearching(): void {
+    this.isSearching = !this.isSearching;
+  }
+
   ngOnInit(): void {
     this.refreshFoods();
   }

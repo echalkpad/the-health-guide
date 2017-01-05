@@ -1,7 +1,8 @@
 <ActionBar class="action-bar" title="Food">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
-    <ActionItem (tap)="isSearching = !isSearching" ios.systemIcon="12" ios.position="right" android.systemIcon="ic_menu_search_holo_dark"
-        text="Search"></ActionItem>
+    <ActionItem (tap)="toggleSearching()">
+        <Button text="&#xf002;" class="fa action-item"></Button>
+    </ActionItem>
 </ActionBar>
 <SearchBar *ngIf="!isLoading && isSearching" #searchTerm hint="Search food" (clear)="clearSearch()" [text]="searchInput"
     (submit)="searchFood(searchTerm.text)"></SearchBar>

@@ -1,14 +1,15 @@
 <ActionBar class="action-bar" title="Recipes">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
-    <ActionItem (tap)="isSearching = !isSearching" ios.systemIcon="12" ios.position="right" android.systemIcon="ic_menu_search_holo_dark"
-        text="Search"></ActionItem>
+    <ActionItem (tap)="toggleSearching()">
+        <Button text="&#xf002;" class="fa action-item"></Button>
+    </ActionItem>
     <ActionItem (tap)="changeQuery()">
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
 <TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
     <StackLayout *tabItem="{title: 'My recipes'}">
-        <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
+        <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
             (submit)="searchPrivate(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'"
@@ -38,7 +39,7 @@
         </GridLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Other recipes'}">
-        <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchShared()" [text]="searchInputShared"
+        <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchShared()" [text]="searchInputShared"
             (submit)="searchShared(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
