@@ -61,14 +61,14 @@ const nutritionRoutes: Routes = [
                 canActivateChild: [AuthGuard],
                 children: [
                     {
-                        path: ':authId/:key',
+                        path: ':key',
                         component: RecipeDetailComponent,
                         resolve: {
                             recipe: RecipeDetailResolve
                         }
                     },
                     {
-                        path: ':authId/:key/edit',
+                        path: ':authId/:key',
                         component: RecipeEditComponent,
                         resolve: {
                             recipe: RecipeDetailResolve

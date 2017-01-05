@@ -27,14 +27,15 @@ export class FoodListComponent implements AfterViewInit, OnInit {
   public sortBy: string = 'name';
   public sortOrder: TdDataTableSortingOrder = TdDataTableSortingOrder.Ascending;
   constructor(
-    private dataSvc: DataService,
-    private dataTableSvc: TdDataTableService,
-    private dialogService: TdDialogService,
-    private foodSvc: FoodService,
-    private loadingSvc: TdLoadingService,
-    private router: Router,
-    private titleSvc: Title
+    private _dataSvc: DataService,
+    private _dataTableSvc: TdDataTableService,
+    private _dialogSvc: TdDialogService,
+    private _foodSvc: FoodService,
+    private _loadingSvc: TdLoadingService,
+    private _router: Router,
+    private _titleSvc: Title
   ) {
+
     this.columns = [
       { name: 'name', label: 'Food' },
       { name: 'Energy', label: 'Energy (kcal)', numeric: true },
@@ -49,66 +50,66 @@ export class FoodListComponent implements AfterViewInit, OnInit {
     ];
   }
 
-  private filter(): void {
+  private _filter(): void {
     let newData: any[] = this.data;
-    newData = this.dataTableSvc.filterData(newData, this.searchTerm, true);
+    newData = this._dataTableSvc.filterData(newData, this.searchTerm, true);
     this.filteredTotal = newData.length;
-    newData = this.dataTableSvc.sortData(newData, this.sortBy, this.sortOrder);
-    newData = this.dataTableSvc.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
+    newData = this._dataTableSvc.sortData(newData, this.sortBy, this.sortOrder);
+    newData = this._dataTableSvc.pageData(newData, this.fromRow, this.currentPage * this.pageSize);
     this.filteredData = newData;
   }
 
-  private showAlert(): void {
-    this.dialogService.openAlert({
+  private _showAlert(): void {
+    this._dialogSvc.openAlert({
       message: 'Sorry, there is no data available at the moment! Please try again later!',
       disableClose: false,
       title: 'No data found',
       closeButton: 'Close'
-    }).afterClosed().subscribe(() => this.router.navigate(['/nutrition']));
+    }).afterClosed().subscribe(() => this._router.navigate(['/nutrition']));
   }
 
   public openDetails(ev: { row: Food }): void {
-    this.dataSvc.saveFood(ev.row);
-    this.router.navigate(['/nutrition/food', ev.row.$key]);
+    this._dataSvc.saveFood(ev.row);
+    this._router.navigate(['/nutrition/food', ev.row.$key]);
   }
 
   public search(searchTerm: string): void {
     this.searchTerm = searchTerm;
-    this.filter();
+    this._filter();
   }
 
   public page(pagingEvent: IPageChangeEvent): void {
     this.fromRow = pagingEvent.fromRow;
     this.currentPage = pagingEvent.page;
     this.pageSize = pagingEvent.pageSize;
-    this.filter();
+    this._filter();
   }
 
   public sort(sortEvent: ITdDataTableSortChangeEvent): void {
     this.sortBy = sortEvent.name;
     this.sortOrder = sortEvent.order;
-    this.filter();
+    this._filter();
   }
 
   ngAfterViewInit(): void {
-    this.loadingSvc.register('food.load');
+    this._loadingSvc.register('food.load');
     setTimeout(() => {
-      this.loadingSvc.resolve('food.load');
+      this._loadingSvc.resolve('food.load');
       if (!this.data.length) {
-        this.showAlert();
+        this._showAlert();
       }
     }, 5000);
-    this.titleSvc.setTitle("Foods");
+    this._titleSvc.setTitle("Foods");
   }
 
   ngOnInit(): void {
-    this.foodSvc.getFoods().subscribe((data: Food[]) => {
-        if (!!data && !!data.length) {
-          this.data = [...data];
-          this.filter();
-          this.loadingSvc.resolve('food.load');
-        }
+    this._foodSvc.getFoods().subscribe((data: Food[]) => {
+      if (!!data && !!data.length) {
+        this.data = [...data];
+        this._filter();
+        this._loadingSvc.resolve('food.load');
       }
+    }
     );
   }
 

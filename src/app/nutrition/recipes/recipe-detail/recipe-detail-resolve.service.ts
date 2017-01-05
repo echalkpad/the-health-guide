@@ -7,11 +7,11 @@ import { Recipe } from '../shared/recipe.model';
 @Injectable()
 export class RecipeDetailResolve implements Resolve<Recipe> {
 
-  constructor(private dataSvc: DataService) { }
+  constructor(private _dataSvc: DataService) { }
 
   public resolve(route: ActivatedRouteSnapshot): Promise<Recipe> {
     return new Promise(resolve => {
-      resolve(this.dataSvc.getRecipe());
+      resolve(this._dataSvc.getRecipe());
     });
   }
 

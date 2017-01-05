@@ -7,10 +7,10 @@ import { Nutrition } from '../../shared/nutrition.model';
 
 @Injectable()
 export class RecipeService {
-  private tags: any;
-  constructor(private dataSvc: DataService) { }
+  private _tags: any;
+  constructor(private __dataSvc: DataService) { }
 
-  private checkCarbPoints(recipe: Recipe): void {
+  private _checkCarbPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqCarb: number = energy * 0.45 / 4.1,
@@ -37,7 +37,7 @@ export class RecipeService {
 
   }
 
-  private checkCarbLoss(recipe: Recipe): void {
+  private _checkCarbLoss(recipe: Recipe): void {
     if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
       recipe.nutrition.Carbohydrates -= recipe.nutrition.Carbohydrates * 0.15;
       recipe.nutrition.Fiber -= recipe.nutrition.Fiber * 0.15;
@@ -50,7 +50,7 @@ export class RecipeService {
     }
   }
 
-  private checkEnergyPoints(recipe: Recipe): void {
+  private _checkEnergyPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450
 
@@ -61,7 +61,7 @@ export class RecipeService {
     }
   }
 
-  private checkHealthTags(recipe: Recipe): void {
+  private _checkHealthTags(recipe: Recipe): void {
     /**
      * The optimal recipe must have max. 900 kcal if it's a breakfast, 450 kcal otherwise,
      * and must contain 45% carbs, 35% fat, 6% fiber, 20% protein, 15% sugars, 10% saturated fat
@@ -75,33 +75,33 @@ export class RecipeService {
 
     recipe.goodPoints = [];
     recipe.badPoints = [];
-    this.checkEnergyPoints(recipe);
-    this.checkProteinPoints(recipe);
-    this.checkLipidPoints(recipe);
-    this.checkCarbPoints(recipe);
-    this.checkTags(recipe);
+    this._checkEnergyPoints(recipe);
+    this._checkProteinPoints(recipe);
+    this._checkLipidPoints(recipe);
+    this._checkCarbPoints(recipe);
+    this._checkTags(recipe);
   }
 
-  private checkTags(recipe: Recipe): void {
+  private _checkTags(recipe: Recipe): void {
     recipe.tags = [];
-    if (this.tags.dairyFree === true) {
+    if (this._tags.dairyFree === true) {
       recipe.tags.push('Dairy-free');
     }
 
-    if (this.tags.glutenFree === true) {
+    if (this._tags.glutenFree === true) {
       recipe.tags.push('Gluten-free');
     }
 
-    if (this.tags.soyFree === true) {
+    if (this._tags.soyFree === true) {
       recipe.tags.push('Soy-free');
     }
 
-    if (this.tags.vegan === true) {
+    if (this._tags.vegan === true) {
       recipe.tags.push('Vegan');
     }
   }
 
-  private checkLipidPoints(recipe: Recipe): void {
+  private _checkLipidPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqFat: number = energy * 0.35 / 9,
@@ -120,7 +120,7 @@ export class RecipeService {
     }
   }
 
-  private checkLipidLoss(recipe: Recipe): void {
+  private _checkLipidLoss(recipe: Recipe): void {
     if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
       recipe.nutrition.Fats -= recipe.nutrition.Fats * 0.15;
       recipe.nutrition['Monounsaturated fat'] -= recipe.nutrition['Monounsaturated fat'] * 0.15;
@@ -137,7 +137,7 @@ export class RecipeService {
     }
   }
 
-  private checkMineralLoss(recipe: Recipe): void {
+  private _checkMineralLoss(recipe: Recipe): void {
     if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching' || recipe.cookMethod === 'Boiling') {
       for (let mineral in recipe.nutrition['minerals']) {
         recipe.nutrition['minerals'][mineral] -= recipe.nutrition['minerals'][mineral] * 0.6;
@@ -149,15 +149,15 @@ export class RecipeService {
     }
   }
 
-  private checkNutrientLoss(recipe: Recipe): void {
-    this.checkCarbLoss(recipe);
-    this.checkLipidLoss(recipe);
-    this.checkMineralLoss(recipe);
-    this.checkProteinLoss(recipe);
-    this.checkVitaminLoss(recipe);
+  private _checkNutrientLoss(recipe: Recipe): void {
+    this._checkCarbLoss(recipe);
+    this._checkLipidLoss(recipe);
+    this._checkMineralLoss(recipe);
+    this._checkProteinLoss(recipe);
+    this._checkVitaminLoss(recipe);
   }
 
-  private checkProteinLoss(recipe: Recipe): void {
+  private _checkProteinLoss(recipe: Recipe): void {
     if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Boiling') {
       recipe.nutrition.Protein -= recipe.nutrition.Protein * 0.15;
       for (let aa in recipe.nutrition['amino acids']) {
@@ -172,7 +172,7 @@ export class RecipeService {
     }
   }
 
-  private checkProteinPoints(recipe: Recipe): void {
+  private _checkProteinPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
       reqEnergy: number = (recipe.category === 'Breakfasts') ? 900 : 450,
       reqProtein: number = energy * 0.2 / 4.1;
@@ -184,7 +184,7 @@ export class RecipeService {
     }
   }
 
-  private checkVitaminLoss(recipe: Recipe): void {
+  private _checkVitaminLoss(recipe: Recipe): void {
     if (recipe.cookTemperature >= 200 || recipe.cookMethod === 'Microwaving' || recipe.cookMethod === 'Blanching' || recipe.cookMethod === 'Boiling') {
       for (let vitamin in recipe.nutrition['vitamins']) {
         recipe.nutrition['vitamins'][vitamin] -= recipe.nutrition['vitamins'][vitamin] * 0.75;
@@ -196,7 +196,7 @@ export class RecipeService {
     }
   }
 
-  private portionRecipe(recipe: Recipe): void {
+  private _portionRecipe(recipe: Recipe): void {
     for (let nutrientCategory in recipe.nutrition) {
       let nutrients = recipe.nutrition[nutrientCategory];
       if (typeof nutrients === 'number') {
@@ -210,7 +210,7 @@ export class RecipeService {
     recipe.quantity = Math.floor(recipe.quantity / +recipe.servings);
   }
 
-  private setRemainingNutrition(recipe: Recipe, requiredNutrition: Nutrition): void {
+  private _setRemainingNutrition(recipe: Recipe, requiredNutrition: Nutrition): void {
     for (let nutrientCategory in requiredNutrition) {
       let reqNutrients = requiredNutrition[nutrientCategory],
         totalNutrients = recipe.nutrition[nutrientCategory];
@@ -258,7 +258,7 @@ export class RecipeService {
   public setRecipeNutrition(recipe: Recipe): void {
     recipe.nutrition = new Nutrition();
     recipe.quantity = 0;
-    this.tags = {
+    this._tags = {
       dairyFree: true,
       glutenFree: true,
       soyFree: true,
@@ -267,15 +267,15 @@ export class RecipeService {
     // Set total recipe nutrition and quantity in grams
     recipe.ingredients.forEach(ingredient => {
       if (ingredient.category === 'Grains') {
-        this.tags.glutenFree = false;
+        this._tags.glutenFree = false;
       } else if (ingredient.category === 'Meat') {
-        this.tags.vegan = false;
+        this._tags.vegan = false;
       } else if (ingredient.category === 'Dairy') {
-        this.tags.dairyFree = false;
-        this.tags.vegan = false;
+        this._tags.dairyFree = false;
+        this._tags.vegan = false;
       }
       if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
-        this.tags.soyFree = false;
+        this._tags.soyFree = false;
       }
       recipe.quantity += ingredient.quantity;
       if (ingredient.hasOwnProperty('nutrition')) {
@@ -305,9 +305,9 @@ export class RecipeService {
       }
     });
 
-    this.checkNutrientLoss(recipe);
-    this.portionRecipe(recipe);
-    this.checkHealthTags(recipe);
+    this._checkNutrientLoss(recipe);
+    this._portionRecipe(recipe);
+    this._checkHealthTags(recipe);
   }
 
 }

@@ -8,18 +8,18 @@ import { MealTrackDataService } from './meal-track-data.service';
 @Injectable()
 export class MealTrackResolve implements Resolve<MealTracker> {
 
-    constructor(private dataSvc: DataService, private mtDataSvc: MealTrackDataService) { }
+    constructor(private _dataSvc: DataService, private _mtDataSvc: MealTrackDataService) { }
 
     public resolve(route: ActivatedRouteSnapshot): Promise<MealTracker> {
         return new Promise((resolve, reject) => {
-            let savedMt: MealTracker | null = this.dataSvc.getMealTrack();
+            let savedMt: MealTracker | null = this._dataSvc.getMealTrack();
             if (!savedMt || !savedMt.hasOwnProperty('date')) {
                 let mealTrack: MealTracker,
-                    date: string = this.dataSvc.getCurrentDate();
-                this.mtDataSvc.getMealTrack(date).subscribe((mt: MealTracker) => {
+                    date: string = this._dataSvc.getCurrentDate();
+                this._mtDataSvc.getMealTrack(date).subscribe((mt: MealTracker) => {
                     if (!!mt && !!mt.hasOwnProperty('date')) {
                         mealTrack = mt;
-                        this.dataSvc.saveMealTrack(mealTrack);
+                        this._dataSvc.saveMealTrack(mealTrack);
                         resolve(mealTrack);
                     }
                 });

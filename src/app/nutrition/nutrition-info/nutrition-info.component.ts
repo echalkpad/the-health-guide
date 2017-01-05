@@ -8,10 +8,10 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 })
 export class NutritionInfoComponent implements OnInit {
 
-  constructor(private detector: ChangeDetectorRef) { }
+  constructor(private _changeDetectionRef: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    this.detector.detach();
+    this._changeDetectionRef.detach();
   }
 
 }

@@ -7,19 +7,19 @@ import { User } from './user.model';
 
 @Injectable()
 export class AuthService {
-  private userAvatars: firebase.storage.Reference;
+  private _userAvatars: firebase.storage.Reference;
   public redirectUrl: string;
-  constructor(private af: AngularFire, private dataSvc: DataService) {
-    this.userAvatars = firebase.storage().ref().child('/user-avatars');
+  constructor(private _af: AngularFire, private _dataSvc: DataService) {
+    this._userAvatars = firebase.storage().ref().child('/user-avatars');
   }
 
   public getAvatar(imgName: string): firebase.Promise<any> {
-    return this.userAvatars.child(`${imgName}`).getDownloadURL();
+    return this._userAvatars.child(`${imgName}`).getDownloadURL();
   }
 
   public getAuthData(): Promise<firebase.User> {
     return new Promise(resolve => {
-      this.af.auth.subscribe((authData: FirebaseAuthState) => {
+      this._af.auth.subscribe((authData: FirebaseAuthState) => {
         if (!!authData) {
           resolve(authData.auth);
         }
@@ -28,23 +28,23 @@ export class AuthService {
   }
 
   public getAuth(): Auth {
-    return this.dataSvc.getAuth();
+    return this._dataSvc.getAuth();
   }
 
   public getUserData(userId: string): FirebaseObjectObservable<User> {
-    return this.af.database.object(`/users/${userId}`);
+    return this._af.database.object(`/users/${userId}`);
   }
 
   public login(credentials: User): Promise<Object> {
     return new Promise((resolve, reject) => {
-      this.af.auth.login({
+      this._af.auth.login({
         email: credentials.email,
         password: credentials.password
       }).then((authData: FirebaseAuthState) => {
         if (!!authData) {
           this.getUserData(authData.uid).subscribe((data: User) => {
-            this.dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
-            this.dataSvc.saveUser(data);
+            this._dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.name));
+            this._dataSvc.saveUser(data);
             resolve(true);
           });
         }
@@ -55,14 +55,14 @@ export class AuthService {
   }
 
   public logout(): void {
-    this.dataSvc.removeAuth();
-    this.dataSvc.removeUser();
-    this.af.auth.logout();
+    this._dataSvc.removeAuth();
+    this._dataSvc.removeUser();
+    this._af.auth.logout();
   }
 
   public signUp(credentials: User): Promise<Object> {
     return new Promise((resolve, reject) => {
-      this.af.auth.createUser({
+      this._af.auth.createUser({
         email: credentials.email,
         password: credentials.password
       }).then((authData: FirebaseAuthState) => {
@@ -70,8 +70,8 @@ export class AuthService {
           this.getAvatar(credentials.avatar).then((url: string) => {
             credentials.avatar = url;
             this.getUserData(authData.uid).set(credentials);
-            this.dataSvc.saveAuth(new Auth(authData.uid, credentials.avatar, credentials.name));
-            this.dataSvc.saveUser(credentials);
+            this._dataSvc.saveAuth(new Auth(authData.uid, credentials.avatar, credentials.name));
+            this._dataSvc.saveUser(credentials);
             resolve(true);
           }).catch(err => reject(err));
         }
@@ -88,7 +88,7 @@ export class AuthService {
   }
 
   public uploadAvatar(img: File): firebase.storage.UploadTask {
-    return this.userAvatars.child(img.name).put(img);
+    return this._userAvatars.child(img.name).put(img);
   }
 
 }

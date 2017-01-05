@@ -11,63 +11,36 @@ const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-he
 
 @Injectable()
 export class RecipeDataService {
-  private recipeImgUrl: firebase.storage.Reference;
-  private sharedRecipes: FirebaseListObservable<Recipe[]>;
-  private userRecipes: FirebaseListObservable<Recipe[]>;
-  constructor(private af: AngularFire, private authSvc: AuthService, private helperSvc: HelperService) {
-    this.userRecipes = af.database.list(`/recipes/${authSvc.getAuth().id}`, {
+  private _recipeImgUrl: firebase.storage.Reference;
+  private _privateRecipes: FirebaseListObservable<Recipe[]>;
+  private _sharedRecipes: FirebaseListObservable<Recipe[]>;
+  constructor(private _af: AngularFire, private _authSvc: AuthService, private _helperSvc: HelperService) {
+    this._privateRecipes = _af.database.list(`/recipes/${_authSvc.getAuth().id}`, {
       query: {
         orderByChild: 'name'
       }
     });
-    this.sharedRecipes = af.database.list('/recipes/shared', {
+    this._sharedRecipes = _af.database.list('/recipes/shared', {
       query: {
         orderByChild: 'name'
       }
     });
-    this.recipeImgUrl = firebase.storage().ref().child('/recipes');
+    this._recipeImgUrl = firebase.storage().ref().child('/recipes');
   }
 
-  public addRecipe(recipe: Recipe): void {
-    this.helperSvc.removeHashkeys(recipe.ingredients);
+  private _addRecipe(recipe: Recipe): void {
+    this._helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
-    this.userRecipes.push(recipe);
+    this._privateRecipes.push(recipe);
     if (recipe.shared === true) {
-      this.sharedRecipes.push(recipe);
+      this._sharedRecipes.push(recipe);
     }
   }
 
-  public downloadImg(imgName: string): firebase.Promise<any> {
-    return this.recipeImgUrl.child(`${imgName}`).getDownloadURL();
-  }
-
-  public getMyRecipes(): FirebaseListObservable<Recipe[]> {
-    return this.userRecipes;
-  }
-
-  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
-    return this.af.database.object(`/recipes/${authId}/${key}`, {
-      query: {
-        orderByChild: 'name'
-      }
-    });
-  }
-
-  public getSharedRecipes(): FirebaseListObservable<Recipe[]> {
-    return this.sharedRecipes;
-  }
-
-  public removeRecipe(recipe: Recipe): void {
-    this.userRecipes.remove(recipe['$key']);
-    if (recipe.shared === true) {
-      this.sharedRecipes.remove(recipe['$key']);
-    }
-  }
-
-  public updateRecipe(recipe: Recipe): void {
-    this.helperSvc.removeHashkeys(recipe.ingredients);
+  private _updateRecipe(recipe: Recipe): void {
+    this._helperSvc.removeHashkeys(recipe.ingredients);
     recipe.image = (recipe.image === "") ? recipeImgUrl : recipe.image;
-    this.userRecipes.update(recipe['$key'], {
+    this._privateRecipes.update(recipe['$key'], {
       name: recipe.name,
       description: recipe.description,
       image: recipe.image,
@@ -89,7 +62,7 @@ export class RecipeDataService {
     });
 
     if (recipe.shared === true) {
-      this.sharedRecipes.update(recipe['$key'], {
+      this._sharedRecipes.update(recipe['$key'], {
         name: recipe.name,
         description: recipe.description,
         image: recipe.image,
@@ -112,8 +85,43 @@ export class RecipeDataService {
     }
   }
 
+  public downloadImg(imgName: string): firebase.Promise<any> {
+    return this._recipeImgUrl.child(`${imgName}`).getDownloadURL();
+  }
+
+  public getPrivateRecipes(): FirebaseListObservable<Recipe[]> {
+    return this._privateRecipes;
+  }
+
+  public getRecipe(authId: string, key: string): FirebaseObjectObservable<Recipe> {
+    return this._af.database.object(`/recipes/${authId}/${key}`, {
+      query: {
+        orderByChild: 'name'
+      }
+    });
+  }
+
+  public getSharedRecipes(): FirebaseListObservable<Recipe[]> {
+    return this._sharedRecipes;
+  }
+
+  public removeRecipe(recipe: Recipe): void {
+    this._privateRecipes.remove(recipe['$key']);
+    if (recipe.shared === true) {
+      this._sharedRecipes.remove(recipe['$key']);
+    }
+  }
+
+  public cookRecipe(recipe: Recipe): void {
+    if (recipe.hasOwnProperty('$key')) {
+      this._updateRecipe(recipe);
+    } else {
+      this._addRecipe(recipe);
+    }
+  }
+
   public uploadImage(img: File): firebase.storage.UploadTask {
-    return this.recipeImgUrl.child(img.name).put(img);
+    return this._recipeImgUrl.child(img.name).put(img);
   }
 
 }

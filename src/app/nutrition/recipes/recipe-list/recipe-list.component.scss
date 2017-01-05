@@ -24,4 +24,37 @@
         background-color: white;
         color: #4caf50;
     }
+    .md-card-actions {
+        padding: .25em 0;
+        margin: 0;
+        [md-button] {
+            padding: 0;
+        }
+        .md-icon {
+            font-size: 20px;
+            margin-right: .25em;
+        }
+
+        .md-button-wrapper {
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+            flex-direction: row;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-align-content: center;
+            -ms-flex-line-pack: center;
+            align-content: center;
+            -webkit-align-items: center;
+            -ms-flex-align: center;
+            align-items: center;
+            font-size: 16px;
+        }
+    }
 }

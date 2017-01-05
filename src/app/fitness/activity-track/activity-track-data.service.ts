@@ -7,9 +7,9 @@ import { Activity, ActivityTime, ActivityTracker } from './activity-tracker.mode
 
 @Injectable()
 export class ActivityTrackDataService {
-  private activities: FirebaseListObservable<Activity[]>;
-  constructor(private af: AngularFire, private authSvc: AuthService, private helperSvc: HelperService) {
-    this.activities = af.database.list('/activities', {
+  private _activities: FirebaseListObservable<Activity[]>;
+  constructor(private _af: AngularFire, private _authSvc: AuthService, private _helperSvc: HelperService) {
+    this._activities = _af.database.list('/activities', {
       query: {
         orderByChild: 'name'
       }
@@ -17,11 +17,11 @@ export class ActivityTrackDataService {
   }
 
   public getActivities(): FirebaseListObservable<Activity[]> {
-    return this.activities;
+    return this._activities;
   }
 
   public getActivityTrack(date: string): FirebaseObjectObservable<ActivityTracker> {
-    return this.af.database.object(`/activity-tracks/${this.authSvc.getAuth().id}/${date}`);
+    return this._af.database.object(`/activity-tracks/${this._authSvc.getAuth().id}/${date}`);
   }
 
   public removeActivityTrack(date: string): void {
@@ -29,7 +29,7 @@ export class ActivityTrackDataService {
   }
 
   public setActivityTrack(activityTrack: ActivityTracker): void {
-    activityTrack.activityTimes.forEach((at: ActivityTime) => this.helperSvc.removeHashkeys(at.activities));
+    activityTrack.activityTimes.forEach((at: ActivityTime) => this._helperSvc.removeHashkeys(at.activities));
     console.log("Saving activity-track...", activityTrack);
     if (activityTrack.hasOwnProperty('$key')) {
       delete activityTrack['$key'];

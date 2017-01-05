@@ -36,17 +36,17 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public vitamins: string[] = [];
 
     constructor(
-        private dataSvc: DataService,
-        private dialogSvc: TdDialogService,
-        private foodSvc: FoodService,
-        private helperSvc: HelperService,
-        private loadingSvc: TdLoadingService,
-        private recipeDataSvc: RecipeDataService,
-        private mtDataSvc: MealTrackDataService,
-        private mtSvc: MealTrackService,
-        private route: ActivatedRoute,
-        private router: Router,
-        private titleSvc: Title
+        private _dataSvc: DataService,
+        private _dialogSvc: TdDialogService,
+        private _foodSvc: FoodService,
+        private _helperSvc: HelperService,
+        private _loadingSvc: TdLoadingService,
+        private _recipeDataSvc: RecipeDataService,
+        private _mtDataSvc: MealTrackDataService,
+        private _mtSvc: MealTrackService,
+        private _route: ActivatedRoute,
+        private _router: Router,
+        private _titleSvc: Title
     ) {
 
         this.basicNutrients = [
@@ -79,8 +79,8 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         ];
     }
 
-    private showAlert(msg: string | Error, title: string): void {
-        this.dialogSvc.openAlert({
+    private _showAlert(msg: string | Error, title: string): void {
+        this._dialogSvc.openAlert({
             message: msg.toString(),
             disableClose: false,
             title: title,
@@ -90,7 +90,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     public addMealTime(): void {
         let date: Date = new Date();
-        this.dialogSvc.openPrompt({
+        this._dialogSvc.openPrompt({
             message: 'Format: hh:mm',
             disableClose: true,
             value: `${date.getHours()}:${(date.getMinutes() < 10) ? '0' + date.getMinutes() : date.getMinutes()}`,
@@ -105,13 +105,8 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
 
     public addSelectedMeals(mt: MealTime): void {
         this.isDirty = true;
-        mt.meals = [...mt.meals, ...this.selectedMeals];
-        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.loadingSvc.register('mt-nutrition.load');
-        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-            this.mealTrack.nutrition = nutrition;
-            this.loadingSvc.resolve('mt-nutrition.load')
-        });
+        mt.meals = [...mt.meals, ...this.selectedMeals.map((meal: Meal) => Object.assign({}, meal))];
+        mt.nutrition = this._mtSvc.getMealTimeNutrition(mt);
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
@@ -119,7 +114,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             return true;
         }
         return new Promise(resolve => {
-            return this.dialogSvc.openConfirm({
+            return this._dialogSvc.openConfirm({
                 message: 'Changes have been made! Are you sure you want to leave?',
                 disableClose: true,
                 title: 'Discard changes',
@@ -130,7 +125,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     public changeDate(): void {
-        this.dialogSvc.openPrompt({
+        this._dialogSvc.openPrompt({
             message: 'Format: dd/MM/YYYY',
             disableClose: true,
             value: this.currentDate,
@@ -160,7 +155,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     public changeQty(meal: Meal, mt?: MealTime): void {
-        this.dialogSvc.openPrompt({
+        this._dialogSvc.openPrompt({
             message: `Enter the meal quantity in ${meal.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
             disableClose: true,
             value: `${meal.hasOwnProperty('nutrition') ? '1' : '100'}`,
@@ -175,12 +170,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                         meal.quantity = +value;
                     }
                     if (mt) {
-                        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-                        this.loadingSvc.register('mt-nutrition.load');
-                        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-                            this.mealTrack.nutrition = nutrition;
-                            this.loadingSvc.resolve('mt-nutrition.load')
-                        });
+                        mt.nutrition = this._mtSvc.getMealTimeNutrition(mt);
                     }
                     this.isDirty = true;
                 }
@@ -191,16 +181,16 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public clearAllSelections(): void {
         this.meals = [...this.meals, ...this.selectedMeals];
         this.selectedMeals = [];
-        this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
+        this.filteredMeals = [...this._helperSvc.sortByName(this.meals)];
         this.filter();
         this.isDirty = true;
     }
 
     public filter(searchTerm: string = ''): void {
         let newData: Meal[] = this.meals;
-        newData = this.helperSvc.filterItems(newData, searchTerm);
+        newData = this._helperSvc.filterItems(newData, searchTerm);
         this.filteredTotal = newData.length;
-        newData = this.helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
+        newData = this._helperSvc.paginate(newData, this.startPage, this.currentPage * this.pageSize);
         this.filteredMeals = newData;
     }
 
@@ -214,39 +204,39 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     public removeMeal(meal: Meal, mt: MealTime): void {
         this.isDirty = true;
         mt.meals.splice(mt.meals.indexOf(meal), 1);
-        mt.nutrition = this.mtSvc.getMealTimeNutrition(mt);
-        this.mtSvc.setMealTrackNutrition(this.mealTrack);
+        mt.nutrition = this._mtSvc.getMealTimeNutrition(mt);
     }
 
     public removeMealTime(mt: MealTime): void {
         this.isDirty = true;
         this.mealTrack.mealTimes.splice(this.mealTrack.mealTimes.indexOf(mt), 1);
-        this.loadingSvc.register('mt-nutrition.load');
-        this.mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
-            this.mealTrack.nutrition = nutrition;
-            this.loadingSvc.resolve('mt-nutrition.load')
-        });
     }
 
     public syncMealTrack(): void {
-        if (this.isDirty) {
-            this.mtDataSvc.setMealTrack(this.mealTrack);
-            this.dataSvc.saveMealTrack(this.mealTrack);
-        }
-        this.mealTrack = new MealTracker(this.currentDate);
-        this.mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
-            if (!!mt && !!mt.hasOwnProperty('date')) {
-                this.mealTrack = mt;
-                this.dataSvc.saveMealTrack(mt);
+        this._loadingSvc.register('mt-nutrition.load');
+        this._mtSvc.setMealTrackNutrition(this.mealTrack).then((nutrition: MealTrackNutrition) => {
+            this.mealTrack.nutrition = nutrition;
+            if (this.isDirty) {
+                this._mtDataSvc.setMealTrack(this.mealTrack);
+                this._dataSvc.saveMealTrack(this.mealTrack);
             }
+            this._loadingSvc.resolve('mt-nutrition.load')
         });
+        setTimeout(() => {
+            this._mtDataSvc.getMealTrack(this.currentDate).subscribe((mt: MealTracker) => {
+                if (!!mt && !!mt.hasOwnProperty('date')) {
+                    this.mealTrack = new MealTracker(this.currentDate);
+                    this.mealTrack = mt;
+                }
+            });
+        }, 2000);
         this.isDirty = false;
     }
 
     public toggleSelectedMeal(meal: Meal, checkBox?: HTMLInputElement): void {
         let idx: number = this.selectedMeals.indexOf(meal);
         if (idx === -1) {
-            this.dialogSvc.openPrompt({
+            this._dialogSvc.openPrompt({
                 message: `Enter the meal quantity in ${meal.hasOwnProperty('nutrition') ? 'units' : 'grams'}`,
                 disableClose: true,
                 value: `${meal.hasOwnProperty('nutrition') ? '1' : '100'}`,
@@ -265,7 +255,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
                         }
                         this.selectedMeals.push(meal);
                         this.meals.splice(this.meals.indexOf(meal), 1);
-                        this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
+                        this.filteredMeals = [...this._helperSvc.sortByName(this.meals)];
                         this.filter();
                         this.isDirty = true;
                     }
@@ -278,7 +268,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
         } else {
             this.selectedMeals.splice(idx, 1);
             this.meals.push(meal);
-            this.filteredMeals = [...this.helperSvc.sortByName(this.meals)];
+            this.filteredMeals = [...this._helperSvc.sortByName(this.meals)];
             this.filter();
             this.isDirty = true;
         }
@@ -286,30 +276,30 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
     }
 
     ngAfterViewInit(): void {
-        this.loadingSvc.register('meals.load');
-        this.loadingSvc.register('meal-track.load');
-        this.loadingSvc.register('mt-nutrition.load');
+        this._loadingSvc.register('meals.load');
+        this._loadingSvc.register('meal-track.load');
+        this._loadingSvc.register('mt-nutrition.load');
         setTimeout(() => {
-            this.loadingSvc.resolve('meals.load');
-            this.loadingSvc.resolve('mt-nutrition.load');
-            this.loadingSvc.resolve('meal-track.load');
+            this._loadingSvc.resolve('meals.load');
+            this._loadingSvc.resolve('mt-nutrition.load');
+            this._loadingSvc.resolve('meal-track.load');
             if (!this.mealTrack.mealTimes.length) {
-                this.showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
+                this._showAlert("You haven't served any meals today. Start adding meals!", "No meals for today");
             }
-        }, 1000);
-        this.titleSvc.setTitle('Meal tracker');
+        }, 10000);
+        this._titleSvc.setTitle('Meal tracker');
     }
 
     ngOnInit(): void {
         let recipes: Meal[] = [], food: Meal[] = [];
-        this.currentDate = this.dataSvc.getCurrentDate();
-        this.foodSvc.getFoods().subscribe((data: Meal[]) => {
+        this.currentDate = this._dataSvc.getCurrentDate();
+        this._foodSvc.getFoods().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
                 food = [...data];
             }
         });
 
-        this.recipeDataSvc.getMyRecipes().subscribe((data: Meal[]) => {
+        this._recipeDataSvc.getPrivateRecipes().subscribe((data: Meal[]) => {
             if (!!data && !!data.length) {
                 recipes = [...data];
             }
@@ -320,7 +310,7 @@ export class MealTrackComponent implements AfterViewInit, OnInit {
             this.filter();
         }, 10000);
 
-        this.route.data.subscribe((data: { mealTrack: MealTracker }) => {
+        this._route.data.subscribe((data: { mealTrack: MealTracker }) => {
             this.mealTrack = Object.assign({}, data.mealTrack);
             this.aminoacids = Object.keys(this.mealTrack.nutrition['amino acids']);
             this.vitamins = Object.keys(this.mealTrack.nutrition['vitamins']);

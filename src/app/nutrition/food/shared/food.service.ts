@@ -5,9 +5,9 @@ import { Food } from './food.model';
 
 @Injectable()
 export class FoodService {
-    private foods: FirebaseListObservable<Food[]>;
-    constructor(private af: AngularFire) {
-        this.foods = af.database.list('/foods', {
+    private _foods: FirebaseListObservable<Food[]>;
+    constructor(private _af: AngularFire) {
+        this._foods = _af.database.list('/foods', {
             query: {
                 orderByChild: 'name'
             }
@@ -15,10 +15,10 @@ export class FoodService {
     }
 
     public getFood(key: string | number): FirebaseObjectObservable<Food> {
-        return this.af.database.object(`/foods/${key}`);
+        return this._af.database.object(`/foods/${key}`);
     }
 
     public getFoods(): FirebaseListObservable<Food[]> {
-        return this.foods;
+        return this._foods;
     }
 }
