@@ -58,8 +58,10 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public refreshFoods(args?: ListViewEventData): void {
     this._foods = [];
     this._foodSvc.getFoods(this._foodLimit).subscribe((data: Food) => {
-      this._foods.push(data);
-      this.filteredFoods = [...this._foods];
+      if (this._foods.indexOf(data) === -1) {
+        this._foods.push(data);
+      }
+      this.filteredFoods = this._helperSvc.sortByName([...this._foods]);
       this.isLoading = false;
       if (args) {
         args.object.notifyPullToRefreshFinished();

@@ -26,14 +26,16 @@ export class FoodService {
                 (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
                         this._foodObserver.error(res['error']);
-                        console.log(res);
                     } else {
-                        this._foodObserver.next(res.value);
+                        for (let recipeKey in res.value) {
+                            this._foodObserver.next(res.value[recipeKey])
+                        }
                     }
                 },
                 '/foods',
                 {
-                    singleEvent: false,
+                    // Do not know how to handle duplicate items
+                    singleEvent: true,
                     orderBy: {
                         type: firebase.QueryOrderByType.CHILD,
                         value: 'name'
@@ -58,7 +60,7 @@ export class FoodService {
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
             }
-        );
+            );
     }
 
     public storeFood(food: Food): void {
