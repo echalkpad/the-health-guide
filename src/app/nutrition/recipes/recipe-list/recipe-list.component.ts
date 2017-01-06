@@ -56,7 +56,7 @@ export class RecipeListComponent implements OnInit {
 
   public createRecipe(): void {
     this._dataSvc.saveRecipe(new Recipe(this.auth));
-    this._router.navigate([`/nutrition/recipes/${this.auth.id}/0/edit`]);
+    this._router.navigate([`/nutrition/recipes/${this.auth.id}/0`]);
   }
 
   public deleteRecipe(recipe: Recipe): void {
