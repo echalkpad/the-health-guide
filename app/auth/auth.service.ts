@@ -1,5 +1,8 @@
 // Angular
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
+import { NextObserver, ErrorObserver, CompletionObserver } from 'rxjs/Observer';
 
 // Nativescript
 import * as firebase from 'nativescript-plugin-firebase';
@@ -13,32 +16,27 @@ import { User } from './user.model';
 @Injectable()
 export class AuthService {
     public redirectUrl: string;
-    constructor(private _dataSvc: DataService) {
-    }
+    constructor(private _dataSvc: DataService) { }
 
     public getAvatar(imgName: string): any {
 
-    }
-
-    public getAuthData(): any {
-        //return this._dataSvc.getAuthData();
     }
 
     public getAuth(): Auth {
         return this._dataSvc.getAuth();
     }
 
-    public getUserData(userId: string): Promise<User> {
-        return new Promise((resolve, reject) => {
+    public getUserData(): Observable<User> {
+        return new Observable((observer: Subscriber<User>) => {
             firebase.query(
-                (res) => {
+                (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
-                        reject(res);
+                        observer.error(res['error']);
                     } else {
-                        resolve(res);
+                        observer.next(res.value);
                     }
                 },
-                `users/${userId}`,
+                `/users/${this._dataSvc.getAuth().id}`,
                 {
                     singleEvent: true,
                     orderBy: {
@@ -47,8 +45,22 @@ export class AuthService {
                 }
             );
         });
-
     }
+
+    public keepOnSyncUser(): void {
+        firebase.keepInSync(
+            `/users/${this._dataSvc.getAuth().id}`,
+            true
+        ).then(
+            function () {
+                console.log("firebase.keepInSync is ON for /users");
+            },
+            function (error) {
+                console.log("firebase.keepInSync error: " + error);
+            }
+        );
+    }
+
     public login(credentials: { email: string, password: string }): Promise<Object> {
         return new Promise((resolve, reject) => {
             firebase.login({
@@ -59,9 +71,10 @@ export class AuthService {
                 if (!!authData) {
                     console.log(JSON.stringify(authData));
                     this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
-                    this.getUserData(authData.uid).then((data: User) => {
+                    this.keepOnSyncUser();
+                    this.getUserData().subscribe((data: User) => {
                         this._dataSvc.saveUser(data);
-                        console.log(JSON.stringify(this._dataSvc.getAuth()), data);
+                        console.log(JSON.stringify(this._dataSvc.getUser()));
                         resolve(true);
                     });
                 }

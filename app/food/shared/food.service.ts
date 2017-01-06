@@ -1,5 +1,7 @@
 // Angular
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
@@ -10,7 +12,42 @@ import { Food } from './food.model';
 @Injectable()
 export class FoodService {
     private _food: Food;
-    constructor() {
+    private _foodObserver: Subscriber<Food>;
+    constructor() { }
+
+    public getFood(): Food {
+        return this._food;
+    }
+
+    public getFoods(count: number): Observable<Food> {
+        return new Observable((observer: Subscriber<Food>) => {
+            this._foodObserver = observer;
+            firebase.query(
+                (res: firebase.FBData) => {
+                    if (res.hasOwnProperty('error')) {
+                        this._foodObserver.error(res['error']);
+                        console.log(res);
+                    } else {
+                        this._foodObserver.next(res.value);
+                    }
+                },
+                '/foods',
+                {
+                    singleEvent: false,
+                    orderBy: {
+                        type: firebase.QueryOrderByType.CHILD,
+                        value: 'name'
+                    },
+                    limit: {
+                        type: firebase.QueryLimitType.FIRST,
+                        value: count
+                    }
+                }
+            );
+        });
+    }
+
+    public keepOnSyncFoods(): void {
         firebase.keepInSync(
             '/foods',
             true
@@ -21,36 +58,14 @@ export class FoodService {
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
             }
-            );
-    }
-
-    public getFood(): Food {
-        return this._food;
-    }
-
-    public getFoods(): Promise<Food[]> {
-        return new Promise((resolve, reject) => {
-            firebase.query(
-                (res: firebase.FBData) => {
-                    if (res.hasOwnProperty('error')) {
-                        reject(res);
-                    } else {
-                        resolve(res.value);
-                    }
-                },
-                'foods',
-                {
-                    singleEvent: true,
-                    orderBy: {
-                        type: firebase.QueryOrderByType.CHILD,
-                        value: 'name'
-                    }
-                }
-            );
-        });
+        );
     }
 
     public storeFood(food: Food): void {
         this._food = food;
+    }
+
+    public unsubscribeFoods(): void {
+        this._foodObserver.unsubscribe();
     }
 }

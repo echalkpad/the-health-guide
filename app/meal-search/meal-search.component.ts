@@ -68,7 +68,8 @@ export class MealSearchComponent implements OnInit {
     }
 
     public refreshMeals(args: ListViewEventData): void {
-        Promise.all<Meal[]>([
+        /**
+         * Promise.all<Meal[]>([
             this._recipeDataSvc.getSharedRecipes(),
             this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
@@ -78,6 +79,7 @@ export class MealSearchComponent implements OnInit {
             this._changeDetectionRef.detectChanges();
             this._changeDetectionRef.markForCheck();
         });
+         */
     }
 
     public removeSelection(selection: SetupItemViewArgs): void {
@@ -101,7 +103,8 @@ export class MealSearchComponent implements OnInit {
 
     ngOnInit(): void {
         this.selections = [...this._mealSearchSvc.getSelections()];
-        Promise.all<Meal[]>([
+        /**
+         * Promise.all<Meal[]>([
             this._recipeDataSvc.getSharedRecipes(),
             this._foodSvc.getFoods()
         ]).then((data: Array<Meal[]>) => {
@@ -111,5 +114,6 @@ export class MealSearchComponent implements OnInit {
             this._changeDetectionRef.detectChanges();
             this._changeDetectionRef.markForCheck();
         });
+         */
     }
 }

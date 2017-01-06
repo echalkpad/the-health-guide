@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from "@angular/core";
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -16,11 +16,10 @@ import { FoodService } from '../shared/food.service';
   moduleId: module.id,
   selector: 'thg-food',
   templateUrl: 'food-list.component.html',
-  styleUrls: ['food-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  styleUrls: ['food-list.component.css']
 })
-export class FoodListComponent implements OnInit {
-  private _foods: Food[];
+export class FoodListComponent implements OnDestroy, OnInit {
+  private _foods: Food[] = [];
   private _foodLimit: number = 10;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
@@ -41,14 +40,12 @@ export class FoodListComponent implements OnInit {
 
   public loadMoreFoods(args: ListViewEventData): void {
     this._foodLimit += 10;
-    if (this._foods.length > this.filteredFoods.length) {
-      this.filteredFoods.push(...this._foods.slice(this.filteredFoods.length, this._foodLimit));
-      args.object.notifyLoadOnDemandFinished();
-      args.returnValue = true;
-      this._changeDetectionRef.detectChanges();
-      this._changeDetectionRef.markForCheck();
-      setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
-    }
+    this.refreshFoods();
+    args.object.notifyLoadOnDemandFinished();
+    args.returnValue = true;
+    this._changeDetectionRef.detectChanges();
+    this._changeDetectionRef.markForCheck();
+    setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
   }
 
   public openDetails(args?: ListViewEventData): void {
@@ -59,9 +56,10 @@ export class FoodListComponent implements OnInit {
   }
 
   public refreshFoods(args?: ListViewEventData): void {
-    this._foodSvc.getFoods().then((data: Food[]) => {
-      this._foods = this._helperSvc.sortByName(data);
-      this.filteredFoods = [...this._foods].slice(0, this._foodLimit);
+    this._foods = [];
+    this._foodSvc.getFoods(this._foodLimit).subscribe((data: Food) => {
+      this._foods.push(data);
+      this.filteredFoods = [...this._foods];
       this.isLoading = false;
       if (args) {
         args.object.notifyPullToRefreshFinished();
@@ -80,6 +78,11 @@ export class FoodListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this._foodSvc.keepOnSyncFoods();
     this.refreshFoods();
+  }
+
+  ngOnDestroy(): void {
+    this._foodSvc.unsubscribeFoods();
   }
 }
