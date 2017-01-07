@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 
 // RxJS
 import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
@@ -19,31 +20,11 @@ const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-he
 export class RecipeDataService {
   private _auth: string;
   private _ingredients: Ingredient[];
+  private _privateObserver: Subscriber<firebase.FBData>;
   private _recipe: Recipe;
+  private _sharedObserver: Subscriber<firebase.FBData>;
   constructor(private _dataSvc: DataService, private _helperSvc: HelperService) {
     this._auth = _dataSvc.getAuth().id;
-    firebase.keepInSync(
-      `/recipes${this._auth}`,
-      true
-    ).then(
-      function () {
-        console.log("firebase.keepInSync is ON for private recipes");
-      },
-      function (error) {
-        console.log("firebase.keepInSync error: " + error);
-      }
-      );
-    firebase.keepInSync(
-      '/recipes/shared',
-      true
-    ).then(
-      function () {
-        console.log("firebase.keepInSync is ON for shared recipes");
-      },
-      function (error) {
-        console.log("firebase.keepInSync error: " + error);
-      }
-      );
   }
 
   public getIngredients(): Ingredient[] {
@@ -104,6 +85,28 @@ export class RecipeDataService {
         }
       );
     });
+  }
+
+  public keepOnSyncPrivate(): void {
+    firebase.keepInSync(`/recipes${this._auth}`,true).then(
+      function () {
+        console.log("firebase.keepInSync is ON for private recipes");
+      },
+      function (error) {
+        console.log("firebase.keepInSync error: " + error);
+      }
+    );
+  }
+
+  public keepOnSyncShared(): void {
+    firebase.keepInSync('/recipes/shared', true).then(
+      function () {
+        console.log("firebase.keepInSync is ON for shared recipes");
+      },
+      function (error) {
+        console.log("firebase.keepInSync error: " + error);
+      }
+    );
   }
 
   public storeIngredients(ingredients: Ingredient[]): void {
