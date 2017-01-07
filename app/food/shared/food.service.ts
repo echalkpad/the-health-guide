@@ -12,41 +12,30 @@ import { Food } from './food.model';
 @Injectable()
 export class FoodService {
     private _food: Food;
-    private _foodObserver: Subscriber<Food>;
+    private _foodObserver: Subscriber<firebase.FBData>;
     constructor() { }
 
     public getFood(): Food {
         return this._food;
     }
 
-    public getFoods(count: number, searchTerm: string): Observable<Food> {
-        return new Observable((observer: Subscriber<Food>) => {
+    public getFoods(searchTerm: string): Observable<firebase.FBData> {
+        return new Observable((observer: Subscriber<firebase.FBData>) => {
             this._foodObserver = observer;
             firebase.query(
                 (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
                         this._foodObserver.error(res['error']);
                     } else {
-                        for (let recipeKey in res.value) {
-                            this._foodObserver.next(res.value[recipeKey])
-                        }
+                        this._foodObserver.next(res);
                     }
                 },
                 '/foods',
                 {
-                    // Do not know how to handle duplicate items
-                    singleEvent: true,
+                    singleEvent: false,
                     orderBy: {
                         type: firebase.QueryOrderByType.CHILD,
                         value: 'name'
-                    },
-                    range: {
-                        type: firebase.QueryRangeType.EQUAL_TO,
-                        value: searchTerm
-                    },
-                    limit: {
-                        type: firebase.QueryLimitType.FIRST,
-                        value: count
                     }
                 }
             );
@@ -54,17 +43,14 @@ export class FoodService {
     }
 
     public keepOnSyncFoods(): void {
-        firebase.keepInSync(
-            '/foods',
-            true
-        ).then(
+        firebase.keepInSync('/foods', true).then(
             function () {
                 console.log("firebase.keepInSync is ON for foods");
             },
             function (error) {
                 console.log("firebase.keepInSync error: " + error);
             }
-            );
+        );
     }
 
     public storeFood(food: Food): void {
