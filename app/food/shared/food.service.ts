@@ -20,6 +20,9 @@ export class FoodService {
     }
 
     public getFoods(searchTerm: string): Observable<firebase.FBData> {
+        if (this._foodObserver && !this._foodObserver.closed) {
+            this._foodObserver.unsubscribe();
+        }
         return new Observable((observer: Subscriber<firebase.FBData>) => {
             this._foodObserver = observer;
             firebase.query(
@@ -55,9 +58,5 @@ export class FoodService {
 
     public storeFood(food: Food): void {
         this._food = food;
-    }
-
-    public unsubscribeFoods(): void {
-        this._foodObserver.unsubscribe();
     }
 }
