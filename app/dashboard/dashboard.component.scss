@@ -1,20 +1,30 @@
 @import 'app-common';
 
-.sidedrawer-left, .sidedrawer-header, .sidedrawer-content {
-    background-color: white;
+.sidedrawer-left {
+    background-image: url('~/images/gradient3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .sidedrawer-header {
     text-align: center;
     height: 33%;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
 }
 
 .sidedrawer-list-item {
+    color: rgba(255,255,255,.5);
+    .fa {
+        color: rgba(255,255,255,.5);
+    }
     &.active {
-        background-color: white;
-        color: $ocean;
+        background-color: transparent;
+        color: $light-green;
         .fa {
-            color: $ocean;
+            color: $light-green;
         }
     }
 }

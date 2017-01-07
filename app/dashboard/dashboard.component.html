@@ -1,8 +1,8 @@
 <RadSideDrawer>
     <StackLayout tkDrawerContent class="sidedrawer-left">
         <StackLayout class="sidedrawer-header">
-            <FrescoDrawee roundAsCircle="true" width="120" height="120" verticalAlignment="center" actualImageScaleType="fitCenter" aspectRatio="1" [imageUri]="auth.avatar"></FrescoDrawee>
-            <Label [text]="auth.name" textWrap="true" class="text-center p-t-5"></Label>
+            <FrescoDrawee roundAsCircle="true" width="50%" height="50%" verticalAlignment="center" actualImageScaleType="fitCenter" aspectRatio="1" [imageUri]="auth.avatar"></FrescoDrawee>
+            <Label [text]="auth.name" textWrap="true" class="text-center p-t-10"></Label>
         </StackLayout>
         <StackLayout class="sidedrawer-content">
             <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/']" nsRouterLinkActive="active"

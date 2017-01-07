@@ -1,20 +1,37 @@
 @import 'app-common';
 
+.auth {
+    background-image: url('~/images/gradient3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.title {
+    margin-bottom: 100em;
+    color: rgba(255, 255, 255, .5);
+    font-size: 40px;
+    text-align: center;
+}
+
 .fa {
     font-size: 15px;
 }
 
 TextField {
     border-width: 1px;
-    border-color: $light-blue;
+    border-color: rgba(255, 255, 255, .5);
     padding: 10em;
     font-size: 15px;
+    color: rgba(255, 255, 255, .5);
+    placeholder-color: rgba(255, 255, 255, .5);
 }
 
 .input-field {
     margin-bottom: 5em;
     margin-left: 20em;
     margin-right: 20em;
+    color: rgba(255, 255, 255, .5);
 }
 
 .btn {

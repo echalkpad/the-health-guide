@@ -16,7 +16,8 @@ import { FoodService } from '../shared/food.service';
   moduleId: module.id,
   selector: 'thg-food',
   templateUrl: 'food-list.component.html',
-  styleUrls: ['food-list.component.css']
+  styleUrls: ['food-list.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnDestroy, OnInit {
   private _foods: Food[] = [];
@@ -57,7 +58,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
 
   public refreshFoods(args?: ListViewEventData): void {
     this._foods = [];
-    this._foodSvc.getFoods(this._foodLimit).subscribe((data: Food) => {
+    this._foodSvc.getFoods(this._foodLimit, this.searchInput).subscribe((data: Food) => {
       if (this._foods.indexOf(data) === -1) {
         this._foods.push(data);
       }
@@ -72,7 +73,8 @@ export class FoodListComponent implements OnDestroy, OnInit {
   }
 
   public searchFood(searchTerm: string): void {
-    this.filteredFoods = this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit);
+    //this.filteredFoods = this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit);
+    this.refreshFoods();
   }
 
   public toggleSearching(): void {

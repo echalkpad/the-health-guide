@@ -13,9 +13,10 @@ $secondary: $grey-dark !default;
 $light-green: #00c853 !default;
 $accent: $light-green !default;
 $light-blue: rgba($ocean, 0.2) !default;
+$dark-indigo: #0E253B;
 
 .action-bar {
-    background-color: $ocean;
+    background-color: $dark-indigo;
 }
 
 .btn-primary {

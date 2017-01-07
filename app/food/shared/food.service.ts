@@ -19,7 +19,7 @@ export class FoodService {
         return this._food;
     }
 
-    public getFoods(count: number): Observable<Food> {
+    public getFoods(count: number, searchTerm: string): Observable<Food> {
         return new Observable((observer: Subscriber<Food>) => {
             this._foodObserver = observer;
             firebase.query(
@@ -39,6 +39,10 @@ export class FoodService {
                     orderBy: {
                         type: firebase.QueryOrderByType.CHILD,
                         value: 'name'
+                    },
+                    range: {
+                        type: firebase.QueryRangeType.EQUAL_TO,
+                        value: searchTerm
                     },
                     limit: {
                         type: firebase.QueryLimitType.FIRST,
