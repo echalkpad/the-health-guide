@@ -1,5 +1,7 @@
 // Angular
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
@@ -9,32 +11,10 @@ import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
+  private _macroObserver: Subscriber<firebase.FBData>;
+  private _microObserver: Subscriber<firebase.FBData>;
   private _nutrient: Nutrient;
-  constructor() {
-    firebase.keepInSync(
-      '/macronutrients',
-      true
-    ).then(
-      function () {
-        console.log("firebase.keepInSync is ON for macronutrients");
-      },
-      function (error) {
-        console.log("firebase.keepInSync error: " + error);
-      }
-      );
-
-    firebase.keepInSync(
-      '/micronutrients',
-      true
-    ).then(
-      function () {
-        console.log("firebase.keepInSync is ON for micronutrients");
-      },
-      function (error) {
-        console.log("firebase.keepInSync error: " + error);
-      }
-      );
-  }
+  constructor() { }
 
   public filterNutrient(nutrients: Nutrient[], query: string, searchTerm: string): Nutrient[] {
     return nutrients.filter((item: Nutrient) => {
@@ -51,19 +31,23 @@ export class NutrientService {
     });
   }
 
-  public getMacronutrients(): Promise<Nutrient[]> {
-    return new Promise((resolve, reject) => {
+  public getMacronutrients(): Observable<firebase.FBData> {
+    if (this._macroObserver && !this._macroObserver.closed) {
+      this._macroObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<firebase.FBData>) => {
+      this._macroObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
-            reject(res);
+            this._macroObserver.error(res['error']);
           } else {
-            resolve(res.value);
+            this._macroObserver.next(res);
           }
         },
-        'macronutrients',
+        '/macronutrients',
         {
-          singleEvent: true,
+          singleEvent: false,
           orderBy: {
             type: firebase.QueryOrderByType.CHILD,
             value: 'name'
@@ -73,19 +57,23 @@ export class NutrientService {
     });
   }
 
-  public getMicronutrients(): Promise<Nutrient[]> {
-    return new Promise((resolve, reject) => {
+  public getMicronutrients(): Observable<firebase.FBData> {
+    if (this._microObserver && !this._microObserver.closed) {
+      this._microObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<firebase.FBData>) => {
+      this._microObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
-            reject(res);
+            this._microObserver.error(res['error']);
           } else {
-            resolve(res.value);
+            this._microObserver.next(res);
           }
         },
-        'micronutrients',
+        '/micronutrients',
         {
-          singleEvent: true,
+          singleEvent: false,
           orderBy: {
             type: firebase.QueryOrderByType.CHILD,
             value: 'name'
@@ -97,6 +85,28 @@ export class NutrientService {
 
   public getNutrient(): Nutrient {
     return this._nutrient;
+  }
+
+  public keepOnSyncMacronutrients(): void {
+    firebase.keepInSync('/macronutrients', true).then(
+      function () {
+        console.log("firebase.keepInSync is ON for macronutrients");
+      },
+      function (error) {
+        console.log("firebase.keepInSync error: " + error);
+      }
+    );
+  }
+
+  public keepOnSyncMicronutrients(): void {
+    firebase.keepInSync('/micronutrients', true).then(
+      function () {
+        console.log("firebase.keepInSync is ON for micronutrients");
+      },
+      function (error) {
+        console.log("firebase.keepInSync error: " + error);
+      }
+    );
   }
 
   public storeNutrient(nutrient: Nutrient): void {

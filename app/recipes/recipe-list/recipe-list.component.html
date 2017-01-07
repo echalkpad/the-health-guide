@@ -7,7 +7,7 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#0E253B">
     <StackLayout *tabItem="{title: 'My recipes'}">
         <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
             (submit)="searchPrivate(searchTerm.text)"></SearchBar>

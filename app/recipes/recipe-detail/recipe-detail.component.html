@@ -1,7 +1,7 @@
 <ActionBar class="action-bar" [title]="recipe.name">
   <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#fff" selectedTabTextColor="#fff" tabTextColor="Cyan" tabBackgroundColor="#5677FC">
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#0E253B">
   <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
     <FlexboxLayout flexDirection="column">
       <FrescoDrawee verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>

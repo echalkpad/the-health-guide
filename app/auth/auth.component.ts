@@ -5,7 +5,6 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
-import { topmost } from 'ui/frame';
 import { Page } from 'ui/page';
 
 // THG
@@ -23,7 +22,6 @@ const EMAIL_REGEX: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)
     styleUrls: ['auth.component.css']
 })
 export class AuthComponent implements OnInit {
-    private _page: Page;
     public loginForm: FormGroup;
     public email: string = '';
     public password: string = '';
@@ -32,6 +30,7 @@ export class AuthComponent implements OnInit {
         private _authSvc: AuthService,
         private _dataSvc: DataService,
         private _fb: FormBuilder,
+        private _page: Page,
         private _router: RouterExtensions
     ) { }
 
@@ -60,7 +59,6 @@ export class AuthComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this._page = <Page>topmost().currentPage;
         this._page.actionBarHidden = true;
         this.loginForm = this._fb.group({
             email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],

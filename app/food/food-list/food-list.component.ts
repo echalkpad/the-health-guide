@@ -3,11 +3,11 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnIni
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
- 
+
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
- // Telerik
+// Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 //THG
@@ -63,17 +63,27 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData): void {
     this._foods = [];
-    this._foodSvc.getFoods(this.searchInput).subscribe((data: firebase.FBData) => {
-      if (this._foods.length < this._foodLimit && data.value.name.toLocaleLowerCase().indexOf(this.searchInput.toLocaleLowerCase()) !== -1) {
+    this._foodSvc.getFoods().subscribe((data: firebase.FBData) => {
+      if (
+        this._foods.length < this._foodLimit
+        && data.value.name.toLocaleLowerCase().indexOf(this.searchInput.toLocaleLowerCase()) !== -1
+        && data.type === 'ChildAdded'
+      ) {
         let newFood: Food = data.value;
         newFood.$key = data.key;
         this._foods.push(newFood);
-      } else {
+      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
         this._foods.forEach((food: Food, idx: number) => {
           if (food.$key === data.key) {
             let newFood: Food = data.value;
             newFood.$key = data.key;
             this._foods[idx] = newFood;
+          }
+        });
+      } else if (data.type === 'ChildRemoved') {
+        this._foods.forEach((food: Food, idx: number) => {
+          if (food.$key === data.key) {
+            this._foods.splice(idx, 1);
           }
         });
       }

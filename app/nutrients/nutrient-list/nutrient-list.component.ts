@@ -5,6 +5,9 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 
+// Firebase
+import * as firebase from 'nativescript-plugin-firebase';
+
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
@@ -82,28 +85,69 @@ export class NutrientListComponent implements OnInit {
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
     let selected: Nutrient = args.object.getSelectedItems()[0];
-    console.log(JSON.stringify(selected));
     this._nutrientSvc.storeNutrient(selected);
     setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key]), 1000);
   }
 
-  public refreshMacros(args: ListViewEventData): void {
-    this._nutrientSvc.getMacronutrients().then((data: Nutrient[]) => {
-      this._macronutrients = this._helperSvc.sortByName(data);
+  public refreshMacros(args?: ListViewEventData): void {
+    this._macronutrients = [];
+    this._nutrientSvc.getMacronutrients().subscribe((data: firebase.FBData) => {
+      if (data.type === 'ChildAdded') {
+        let newNutrient: Nutrient = data.value;
+        newNutrient.$key = data.key;
+        this._macronutrients.push(newNutrient);
+      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
+        this._macronutrients.forEach((food: Nutrient, idx: number) => {
+          if (food.$key === data.key) {
+            let newNutrient: Nutrient = data.value;
+            newNutrient.$key = data.key;
+            this._macronutrients[idx] = newNutrient;
+          }
+        });
+      } else if (data.type === 'ChildRemoved') {
+        this._macronutrients.forEach((food: Nutrient, idx: number) => {
+          if (food.$key === data.key) {
+            this._macronutrients.splice(idx, 1);
+          }
+        });
+      }
       this.filteredMacronutrients = [...this._macronutrients];
       this.isLoadingMacros = false;
-      args.object.notifyPullToRefreshFinished();
+      if (args) {
+        args.object.notifyPullToRefreshFinished();
+      }
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     });
   }
 
-  public refreshMicros(args: ListViewEventData): void {
-    this._nutrientSvc.getMicronutrients().then((data: Nutrient[]) => {
-      this._micronutrients = this._helperSvc.sortByName(data);
+  public refreshMicros(args?: ListViewEventData): void {
+    this._micronutrients = [];
+    this._nutrientSvc.getMicronutrients().subscribe((data: firebase.FBData) => {
+      if (data.type === 'ChildAdded') {
+        let newNutrient: Nutrient = data.value;
+        newNutrient.$key = data.key;
+        this._micronutrients.push(newNutrient);
+      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
+        this._micronutrients.forEach((food: Nutrient, idx: number) => {
+          if (food.$key === data.key) {
+            let newNutrient: Nutrient = data.value;
+            newNutrient.$key = data.key;
+            this._micronutrients[idx] = newNutrient;
+          }
+        });
+      } else if (data.type === 'ChildRemoved') {
+        this._micronutrients.forEach((food: Nutrient, idx: number) => {
+          if (food.$key === data.key) {
+            this._micronutrients.splice(idx, 1);
+          }
+        });
+      }
       this.filteredMicronutrients = [...this._micronutrients];
       this.isLoadingMicros = false;
-      args.object.notifyPullToRefreshFinished();
+      if (args) {
+        args.object.notifyPullToRefreshFinished();
+      }
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     });
@@ -122,17 +166,9 @@ export class NutrientListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    Promise.all([
-      this._nutrientSvc.getMacronutrients(),
-      this._nutrientSvc.getMicronutrients()
-    ]).then((data: Array<Nutrient[]>) => {
-      this._macronutrients = this._helperSvc.sortByName(data[0]);
-      this._micronutrients = this._helperSvc.sortByName(data[1]);
-      this.filteredMacronutrients = [...this._macronutrients];
-      this.filteredMicronutrients = [...this._micronutrients];
-      this.isLoadingMacros = false;
-      this.isLoadingMicros = false;
-      this._changeDetectionRef.markForCheck();
-    });
+    this._nutrientSvc.keepOnSyncMacronutrients();
+    this.refreshMacros();
+    this._nutrientSvc.keepOnSyncMicronutrients();
+    this.refreshMicros();
   }
 }
