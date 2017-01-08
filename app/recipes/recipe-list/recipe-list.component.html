@@ -14,16 +14,16 @@
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'"
                 [busy]="isLoadingPrivate"></ActivityIndicator>
-            <RadListView row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)"
+            <RadListView *ngIf="!isLoadingPrivate" row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)"
                 pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press">
                 <template tkListItemTemplate let-recipe="item">
-                    <StackLayout class="list-group-item active card">
-                        <StackLayout orientation="horizontal" class="card-header p-20">
+                    <StackLayout class="list-group-item active card p-0">
+                        <StackLayout orientation="horizontal" class="card-header">
                             <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
                             <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="footnote" verticalAlignment="center"></Label>
                         </StackLayout>
-                        <FrescoDrawee verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
-                        <StackLayout backgroundColor="white" class="list-group-item">
+                        <FrescoDrawee class="card-img" verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
+                        <StackLayout class="list-group-item">
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
                             <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>
@@ -44,16 +44,16 @@
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
                 [busy]="isLoadingShared"></ActivityIndicator>
-            <RadListView row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePublic($event)"
+            <RadListView *ngIf="!isLoadingShared" row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePublic($event)"
                 pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press">
                 <template tkListItemTemplate let-recipe="item">
                     <StackLayout class="list-group-item active card">
-                        <StackLayout orientation="horizontal" class="card-header p-20">
+                        <StackLayout orientation="horizontal" class="card-header">
                             <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
                             <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="footnote" verticalAlignment="center"></Label>
                         </StackLayout>
-                        <FrescoDrawee verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
-                        <StackLayout backgroundColor="white" class="list-group-item">
+                        <FrescoDrawee  class="card-img" verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
+                        <StackLayout class="list-group-item">
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
                             <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>

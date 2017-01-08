@@ -4,12 +4,10 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
+import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
-
-// Telerik
-import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';

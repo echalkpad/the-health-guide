@@ -1,24 +1,27 @@
 @import 'app-common';
-
 .fa {
     font-size: 14px;
 }
 
 .hr-light {
-    margin: 20em -10em;
+    margin: 20em 0;
+    background-color: $ocean;
 }
 
 .card {
-    margin: -10em;
+    margin: 5em 5em 0 5em;
+    border-color: $ocean;
+    border-width: 2px;
+    border-radius: 3em;
 }
 
 .card-header {
     background-color: white;
+    margin-bottom: 20em;
 }
 
 .card-actions {
-    margin: -10em 0;
-    width: 100%;
+    margin: -10em;
 }
 
 .action-btn {

@@ -1,15 +1,13 @@
-// Telerik
+// Nativescript
 import { SIDEDRAWER_DIRECTIVES } from 'nativescript-telerik-ui/sidedrawer/angular';
 import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui/listview/angular';
-
-// Firebase
-import * as firebase from 'nativescript-plugin-firebase';
-
-// frescoModule
 import { NSFRESCO_DIRECTIVES } from 'nativescript-fresco/angular';
 import { FrescoDrawee } from 'nativescript-fresco';
 import * as frescoModule from 'nativescript-fresco';
 import * as applicationModule from 'application';
+
+// Firebase
+import * as firebase from 'nativescript-plugin-firebase';
 
 firebase.init({
     persist: true,

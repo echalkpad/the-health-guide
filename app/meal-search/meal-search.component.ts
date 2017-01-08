@@ -4,8 +4,6 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import { SetupItemViewArgs } from "nativescript-angular/directives";
-
-// Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 // THG

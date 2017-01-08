@@ -31,23 +31,23 @@ export class RecipeDataService {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(): Promise<Recipe[]> {
-    return new Promise((resolve, reject) => {
+  public getPrivateRecipes(): Observable<firebase.FBData> {
+    if (this._privateObserver && !this._privateObserver.closed) {
+      this._privateObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<firebase.FBData>) => {
+      this._privateObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
-            reject(res);
+            this._privateObserver.error(res['error']);
           } else {
-            let recipes: Recipe[] = [];
-            for (let recipeKey in res.value) {
-              recipes.push(res.value[recipeKey]);
-            }
-            setTimeout(() => resolve(recipes), 3000);
+            this._privateObserver.next(res);
           }
         },
         `recipes/${this._auth}`,
         {
-          singleEvent: true,
+          singleEvent: false,
           orderBy: {
             type: firebase.QueryOrderByType.CHILD,
             value: 'name'
@@ -61,23 +61,23 @@ export class RecipeDataService {
     return this._recipe;
   }
 
-  public getSharedRecipes(): Promise<Recipe[]> {
-    return new Promise((resolve, reject) => {
+  public getSharedRecipes(): Observable<firebase.FBData> {
+    if (this._sharedObserver && !this._sharedObserver.closed) {
+      this._sharedObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<firebase.FBData>) => {
+      this._sharedObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
-            reject(res);
+            this._sharedObserver.error(res['error']);
           } else {
-            let recipes: Recipe[] = [];
-            for (let recipeKey in res.value) {
-              recipes.push(res.value[recipeKey]);
-            }
-            setTimeout(() => resolve(recipes), 3000);
+            this._sharedObserver.next(res);
           }
         },
         'recipes/shared',
         {
-          singleEvent: true,
+          singleEvent: false,
           orderBy: {
             type: firebase.QueryOrderByType.CHILD,
             value: 'name'
@@ -88,7 +88,7 @@ export class RecipeDataService {
   }
 
   public keepOnSyncPrivate(): void {
-    firebase.keepInSync(`/recipes${this._auth}`,true).then(
+    firebase.keepInSync(`/recipes${this._auth}`, true).then(
       function () {
         console.log("firebase.keepInSync is ON for private recipes");
       },
