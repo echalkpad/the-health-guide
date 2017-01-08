@@ -57,8 +57,8 @@
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
                             <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>
-                            <GridLayout rows="*" columns="*, auto, *" class="card-actions" verticalAlignment="center">
-                                <Button row="0" col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
+                            <GridLayout rows="*" class="card-actions" verticalAlignment="center">
+                                <Button row="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
                             </GridLayout>
                         </StackLayout>
                     </StackLayout>
