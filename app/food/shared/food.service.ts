@@ -14,36 +14,40 @@ import { Food } from './food.model';
 @Injectable()
 export class FoodService {
     private _food: Food;
-    private _foodObserver: Subscriber<firebase.FBData>;
+    private _foods: Food[];
+    private _foodObserver: Subscriber<Food>;
     constructor() { }
 
     public getFood(): Food {
         return this._food;
     }
 
-    public getFoods(): Observable<firebase.FBData> {
-        if (this._foodObserver && !this._foodObserver.closed) {
-            this._foodObserver.unsubscribe();
-        }
-        return new Observable((observer: Subscriber<firebase.FBData>) => {
-            this._foodObserver = observer;
-            firebase.query(
-                (res: firebase.FBData) => {
-                    if (res.hasOwnProperty('error')) {
-                        this._foodObserver.error(res['error']);
-                    } else {
-                        this._foodObserver.next(res);
+    public getFoods(withFetch?: boolean): Promise<Food[]> {
+        return new Promise((resolve, reject) => {
+            if (!withFetch && !!this._foods && !!this._foods.length) {
+                resolve(this._foods);
+            } else {
+                this.keepOnSyncFoods();
+                this._foods = [];
+                firebase.query(
+                    (res: firebase.FBData) => {
+                        if (res.hasOwnProperty('error')) {
+                            reject(res['error']);
+                        } else {
+                            this._foods = [...res.value];
+                            resolve(res.value);
+                        }
+                    },
+                    '/foods',
+                    {
+                        singleEvent: true,
+                        orderBy: {
+                            type: firebase.QueryOrderByType.CHILD,
+                            value: 'name'
+                        }
                     }
-                },
-                '/foods',
-                {
-                    singleEvent: false,
-                    orderBy: {
-                        type: firebase.QueryOrderByType.CHILD,
-                        value: 'name'
-                    }
-                }
-            );
+                );
+            }
         });
     }
 

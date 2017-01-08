@@ -9,11 +9,11 @@ import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { AppRoutingModule } from '../../app-routing.module';
 import { AuthComponent, AuthGuard, AuthService } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { FoodDetailComponent, FoodDetailResolve, FoodListComponent, FoodService } from '../../food';
+import { FoodDetailComponent, FoodListComponent, FoodService } from '../../food';
 import { HomeComponent } from '../../home/home.component';
 import { MealSearchComponent, MealSearchService } from '../../meal-search';
-import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent, NutrientService } from '../../nutrients';
-import { RecipeDataService, RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
+import { NutrientDetailComponent, NutrientListComponent, NutrientService } from '../../nutrients';
+import { RecipeDataService, RecipeDetailComponent, RecipeEditComponent, RecipeListComponent, RecipeService } from '../../recipes';
 import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
@@ -55,12 +55,9 @@ export const thgImports = [
 export const thgProviders = [
     AuthGuard,
     AuthService,
-    FoodDetailResolve,
     FoodService,
     MealSearchService,
-    NutrientDetailResolve,
     NutrientService,
     RecipeDataService,
-    RecipeDetailResolve,
     RecipeService
 ];

@@ -6,11 +6,11 @@ import { AuthComponent } from './auth/auth.component';
 import { AuthGuard } from './auth/auth-guard.service';
 import { CanDeactivateGuard } from './shared/can-deactivate-guard.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { FoodDetailComponent, FoodDetailResolve, FoodListComponent } from './food';
+import { FoodDetailComponent, FoodListComponent } from './food';
 import { HomeComponent } from './home/home.component';
 import { MealSearchComponent } from './meal-search';
-import { NutrientDetailComponent, NutrientDetailResolve, NutrientListComponent } from './nutrients';
-import { RecipeDetailComponent, RecipeDetailResolve, RecipeEditComponent, RecipeListComponent } from './recipes';
+import { NutrientDetailComponent, NutrientListComponent } from './nutrients';
+import { RecipeDetailComponent, RecipeEditComponent, RecipeListComponent } from './recipes';
 
 const appRoutes: Routes = [
   {
@@ -33,9 +33,6 @@ const appRoutes: Routes = [
           {
             path: ':key',
             component: FoodDetailComponent,
-            resolve: {
-              food: FoodDetailResolve
-            }
           },
           {
             path: '',
@@ -52,10 +49,7 @@ const appRoutes: Routes = [
         children: [
           {
             path: ':category/:key',
-            component: NutrientDetailComponent,
-            resolve: {
-              nutrient: NutrientDetailResolve
-            }
+            component: NutrientDetailComponent
           },
           {
             path: '',
@@ -68,17 +62,11 @@ const appRoutes: Routes = [
         children: [
           {
             path: ':key',
-            component: RecipeDetailComponent,
-            resolve: {
-              recipe: RecipeDetailResolve
-            }
+            component: RecipeDetailComponent
           },
           {
             path: ':authId/:key',
             component: RecipeEditComponent,
-            resolve: {
-              recipe: RecipeDetailResolve
-            },
             canDeactivate: [CanDeactivateGuard]
           },
           {

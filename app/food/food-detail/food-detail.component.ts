@@ -1,12 +1,12 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 
 // THG
 import { Food } from '../shared/food.model';
+import { FoodService } from '../shared/food.service';
 
 @Component({
   moduleId: module.id,
@@ -23,10 +23,10 @@ export class FoodDetailComponent implements OnInit {
   public vitamins: string[] = [];
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
-    private _route: ActivatedRoute,
+    private _foodSvc: FoodService,
     private _router: RouterExtensions
   ) {
-    
+
     this.basicNutrition = [
       'Energy',
       'Water',
@@ -47,13 +47,11 @@ export class FoodDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._route.data.subscribe((data: { food: Food }) => {
-      this.food = data.food;
-      this.aminoacids = Object.keys(this.food['amino acids']);
-      this.vitamins = Object.keys(this.food['vitamins']);
-      this.minerals = Object.keys(this.food['minerals']);
-      this._changeDetectionRef.detectChanges();
-    });
+    this.food = this._foodSvc.getFood();
+    this.aminoacids = Object.keys(this.food['amino acids']);
+    this.vitamins = Object.keys(this.food['vitamins']);
+    this.minerals = Object.keys(this.food['minerals']);
+    this._changeDetectionRef.detectChanges();
 
   }
 }

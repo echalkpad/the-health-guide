@@ -14,7 +14,7 @@
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMacros ? 'visible' : 'collapse'"
                 [busy]="isLoadingMacros"></ActivityIndicator>
-            <RadListView row="0" class="list-group" [items]="filteredMacronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMacros($event)"
+            <RadListView row="0" class="list-group" [items]="filteredMacronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMacros($event, true)"
                 selectionBehavior="Press" (itemSelected)="openDetails($event, 'macronutrients')">
                 <template tkListItemTemplate let-nutrient="item">
                     <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">
@@ -31,7 +31,7 @@
         <GridLayout rows="*">
             <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMicros ? 'visible' : 'collapse'"
                 [busy]="isLoadingMicros"></ActivityIndicator>
-            <RadListView row="0" class="list-group" [items]="filteredMicronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMicros($event)"
+            <RadListView row="0" class="list-group" [items]="filteredMicronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMicros($event, true)"
                 selectionBehavior="Press" (itemSelected)="openDetails($event, 'micronutrients')">
                 <template tkListItemTemplate let-nutrient="item">
                     <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">

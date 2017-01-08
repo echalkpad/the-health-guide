@@ -1,28 +1,27 @@
 @import 'app-common';
-
 .fa {
     font-size: 14px;
 }
 
 .hr-light {
     margin: 20em 0;
-    background-color: skyblue;
 }
 
-.card {
-    margin: 5em 5em 0 5em;
-    border-color: skyblue;
-    border-width: 2px;
-    border-radius: 3em;
+.list-group-item,
+.active {
+    margin: -10em!important;
+    background-color: white;
+    width: 98%!important;
 }
 
 .card-header {
+    padding: 15em;
     background-color: white;
-    margin-bottom: 20em;
 }
 
 .card-actions {
     margin: -10em;
+    width: 100%;
 }
 
 .action-btn {

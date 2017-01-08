@@ -1,5 +1,5 @@
 // Angular
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 // Nativescript
@@ -19,7 +19,8 @@ const EMAIL_REGEX: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)
     moduleId: module.id,
     selector: 'thg-auth',
     templateUrl: 'auth.component.html',
-    styleUrls: ['auth.component.css']
+    styleUrls: ['auth.component.css'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthComponent implements OnInit {
     public loginForm: FormGroup;
@@ -28,6 +29,7 @@ export class AuthComponent implements OnInit {
     public isLoading: boolean = false;
     constructor(
         private _authSvc: AuthService,
+        private _changeDetectionRef: ChangeDetectorRef,
         private _dataSvc: DataService,
         private _fb: FormBuilder,
         private _page: Page,
@@ -52,7 +54,7 @@ export class AuthComponent implements OnInit {
             setTimeout(() => {
                 this.isLoading = false;
                 this._router.navigate([redirect]);
-            }, 3000);
+            }, 1000);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
         });
@@ -64,9 +66,6 @@ export class AuthComponent implements OnInit {
             email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
             password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
         });
-
-        if (!!this._dataSvc.getAuth()) {
-             this._router.navigate(['/'])
-        }
+        this._changeDetectionRef.detectChanges();
     }
 }

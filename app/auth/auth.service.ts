@@ -1,8 +1,5 @@
 // Angular
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { Subscriber } from 'rxjs/Subscriber';
-import { NextObserver, ErrorObserver, CompletionObserver } from 'rxjs/Observer';
 
 // Nativescript
 import * as firebase from 'nativescript-plugin-firebase';
@@ -26,14 +23,14 @@ export class AuthService {
         return this._dataSvc.getAuth();
     }
 
-    public getUserData(): Observable<User> {
-        return new Observable((observer: Subscriber<User>) => {
+    public getUserData(): Promise<User> {
+        return new Promise((resolve, reject) => {
             firebase.query(
                 (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
-                        observer.error(res['error']);
+                         reject(res['error']);
                     } else {
-                        observer.next(res.value);
+                        resolve(res.value);
                     }
                 },
                 `/users/${this._dataSvc.getAuth().id}`,
@@ -48,10 +45,7 @@ export class AuthService {
     }
 
     public keepOnSyncUser(): void {
-        firebase.keepInSync(
-            `/users/${this._dataSvc.getAuth().id}`,
-            true
-        ).then(
+        firebase.keepInSync(`/users/${this._dataSvc.getAuth().id}`, true).then(
             function () {
                 console.log("firebase.keepInSync is ON for /users");
             },
@@ -72,7 +66,7 @@ export class AuthService {
                     console.log(JSON.stringify(authData));
                     this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
                     this.keepOnSyncUser();
-                    this.getUserData().subscribe((data: User) => {
+                    this.getUserData().then((data: User) => {
                         this._dataSvc.saveUser(data);
                         console.log(JSON.stringify(this._dataSvc.getUser()));
                         resolve(true);
