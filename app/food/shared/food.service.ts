@@ -22,25 +22,29 @@ export class FoodService {
         return this._food;
     }
 
-    public getFoods(withFetch?: boolean): Promise<Food[]> {
-        return new Promise((resolve, reject) => {
+    public getFoods(withFetch?: boolean): Observable<Food> {
+        if (!!this._foodObserver && !this._foodObserver.closed) {
+            this._foodObserver.unsubscribe();
+        }
+        return new Observable((observer: Subscriber<Food>) => {
+            this._foodObserver = observer;
             if (!withFetch && !!this._foods && !!this._foods.length) {
-                resolve(this._foods);
+                this._foods.forEach((item: Food) => this._foodObserver.next(item));
             } else {
                 this.keepOnSyncFoods();
                 this._foods = [];
                 firebase.query(
                     (res: firebase.FBData) => {
                         if (res.hasOwnProperty('error')) {
-                            reject(res['error']);
-                        } else {
-                            this._foods = [...res.value];
-                            resolve(res.value);
+                            this._foodObserver.error(res['error']);
+                        } else if (res.type === 'ChildAdded') {
+                            this._foods.push(res.value);
+                            this._foodObserver.next(res.value);
                         }
                     },
                     '/foods',
                     {
-                        singleEvent: true,
+                        singleEvent: false,
                         orderBy: {
                             type: firebase.QueryOrderByType.CHILD,
                             value: 'name'

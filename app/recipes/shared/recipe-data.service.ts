@@ -20,9 +20,11 @@ const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-he
 export class RecipeDataService {
   private _auth: string;
   private _ingredients: Ingredient[];
-  private _privateObserver: Subscriber<firebase.FBData>;
+  private _privateObserver: Subscriber<Recipe>;
+  private _privateRecipes: Recipe[];
   private _recipe: Recipe;
-  private _sharedObserver: Subscriber<firebase.FBData>;
+  private _sharedObserver: Subscriber<Recipe>;
+  private _sharedRecipes: Recipe[];
   constructor(private _dataSvc: DataService, private _helperSvc: HelperService) {
     this._auth = _dataSvc.getAuth().id;
   }
@@ -31,29 +33,36 @@ export class RecipeDataService {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(): Observable<firebase.FBData> {
+  public getPrivateRecipes(withFetch?: boolean): Observable<Recipe> {
     if (this._privateObserver && !this._privateObserver.closed) {
       this._privateObserver.unsubscribe();
     }
-    return new Observable((observer: Subscriber<firebase.FBData>) => {
+    return new Observable((observer: Subscriber<Recipe>) => {
       this._privateObserver = observer;
-      firebase.query(
-        (res: firebase.FBData) => {
-          if (res.hasOwnProperty('error')) {
-            this._privateObserver.error(res['error']);
-          } else {
-            this._privateObserver.next(res);
+      if (!withFetch && !!this._privateRecipes && !!this._privateRecipes.length) {
+        this._privateRecipes.forEach((item: Recipe) => this._privateObserver.next(item));
+      } else {
+        this.keepOnSyncPrivate();
+        this._privateRecipes = [];
+        firebase.query(
+          (res: firebase.FBData) => {
+            if (res.hasOwnProperty('error')) {
+              this._privateObserver.error(res['error']);
+            } else if (res.type === 'ChildAdded') {
+              this._privateRecipes.push(res.value);
+              this._privateObserver.next(res.value);
+            }
+          },
+          `recipes/${this._auth}`,
+          {
+            singleEvent: false,
+            orderBy: {
+              type: firebase.QueryOrderByType.CHILD,
+              value: 'name'
+            }
           }
-        },
-        `recipes/${this._auth}`,
-        {
-          singleEvent: false,
-          orderBy: {
-            type: firebase.QueryOrderByType.CHILD,
-            value: 'name'
-          }
-        }
-      );
+        );
+      }
     });
   }
 
@@ -61,29 +70,36 @@ export class RecipeDataService {
     return this._recipe;
   }
 
-  public getSharedRecipes(): Observable<firebase.FBData> {
+  public getSharedRecipes(withFetch?: boolean): Observable<Recipe> {
     if (this._sharedObserver && !this._sharedObserver.closed) {
       this._sharedObserver.unsubscribe();
     }
-    return new Observable((observer: Subscriber<firebase.FBData>) => {
+    return new Observable((observer: Subscriber<Recipe>) => {
       this._sharedObserver = observer;
-      firebase.query(
-        (res: firebase.FBData) => {
-          if (res.hasOwnProperty('error')) {
-            this._sharedObserver.error(res['error']);
-          } else {
-            this._sharedObserver.next(res);
+      if (!withFetch && !!this._sharedRecipes && !!this._sharedRecipes.length) {
+        this._sharedRecipes.forEach((item: Recipe) => this._sharedObserver.next(item));
+      } else {
+        this.keepOnSyncShared();
+        this._sharedRecipes = [];
+        firebase.query(
+          (res: firebase.FBData) => {
+            if (res.hasOwnProperty('error')) {
+              this._sharedObserver.error(res['error']);
+            } else if (res.type === 'ChildAdded') {
+              this._sharedRecipes.push(res.value);
+              this._sharedObserver.next(res.value);
+            }
+          },
+          `recipes/${this._auth}`,
+          {
+            singleEvent: false,
+            orderBy: {
+              type: firebase.QueryOrderByType.CHILD,
+              value: 'name'
+            }
           }
-        },
-        'recipes/shared',
-        {
-          singleEvent: false,
-          orderBy: {
-            type: firebase.QueryOrderByType.CHILD,
-            value: 'name'
-          }
-        }
-      );
+        );
+      }
     });
   }
 

@@ -7,11 +7,16 @@
     margin: 20em 0;
 }
 
+.list-group {
+    width: 100%!important;
+    margin: 0 -10em;
+}
+
 .list-group-item,
 .active {
-    margin: -10em!important;
+    margin: -10em -10em -20em -10em;
     background-color: white;
-    width: 98%!important;
+    width: 100%;
 }
 
 .card-header {
@@ -20,8 +25,9 @@
 }
 
 .card-actions {
-    margin: -10em;
-    width: 100%;
+    margin-top: -10em;
+    margin-bottom: 10em;
+    width: 100%!important;
 }
 
 .action-btn {

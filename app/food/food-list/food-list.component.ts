@@ -45,7 +45,7 @@ export class FoodListComponent implements OnInit {
     args.object.notifyLoadOnDemandFinished();
     args.returnValue = true;
     if (this.filteredFoods.length > 10) {
-      setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 5), 500);
+      setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
     }
   }
 
@@ -57,15 +57,16 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
     this._foods = [];
-    this._foodSvc.getFoods(withFetch).then((data: Food[]) => {
-      this._foods = [...data];
+    this._foodSvc.getFoods(withFetch).subscribe((data: Food) => this._foods.push(data));
+    setTimeout(() => {
       this.filteredFoods = [...this._helperSvc.sortByName(this._foods).slice(0, this._foodLimit)];
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoading = false;
       this._changeDetectionRef.detectChanges();
-    });
+      this._changeDetectionRef.markForCheck();
+    }, 5000);
   }
 
   public searchFood(searchTerm: string): void {
@@ -80,70 +81,3 @@ export class FoodListComponent implements OnInit {
     this.refreshFoods();
   }
 }
-
-/**
- * Observable version
- * public clearSearch(): void {
-    this.searchInput = '';
-    this.refreshFoods();
-  }
-
-  public loadMoreFoods(args: ListViewEventData): void {
-    this._foodLimit += 10;
-    this.refreshFoods();
-
-    setTimeout(() => {
-      args.object.notifyLoadOnDemandFinished();
-      args.returnValue = true;
-      if (this.filteredFoods.length > 10) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 5), 500);
-      }
-    }, 3000);
-  }
-
-  public refreshFoods(args?: ListViewEventData): void {
-    this._foods = [];
-    this._foodSvc.getFoods().subscribe((data: firebase.FBData) => {
-      if (
-        this._foods.length < this._foodLimit
-        && data.value.name.toLocaleLowerCase().indexOf(this.searchInput.toLocaleLowerCase()) !== -1
-        && data.type === 'ChildAdded'
-      ) {
-        let newFood: Food = data.value;
-        newFood.$key = data.key;
-        this._foods.push(newFood);
-      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
-        this._foods.forEach((food: Food, idx: number) => {
-          if (food.$key === data.key) {
-            let newFood: Food = data.value;
-            newFood.$key = data.key;
-            this._foods[idx] = newFood;
-          }
-        });
-      } else if (data.type === 'ChildRemoved') {
-        this._foods.forEach((food: Food, idx: number) => {
-          if (food.$key === data.key) {
-            this._foods.splice(idx, 1);
-          }
-        });
-      }
-      this.filteredFoods = [...this._foods];
-      this.isLoading = false;
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this._changeDetectionRef.detectChanges();
-      this._changeDetectionRef.markForCheck();
-    });
-  }
-
-  public searchFood(searchTerm: string): void {
-    this.searchInput = searchTerm;
-    this.refreshFoods();
-  }
-
-  ngOnInit(): void {
-    this._foodSvc.keepOnSyncFoods();
-    this.refreshFoods();
-  }
- */

@@ -6,9 +6,6 @@ import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
-// Firebase
-import * as firebase from 'nativescript-plugin-firebase';
-
 // THG
 import { DrawerService, HelperService } from '../../shared';
 import { Nutrient } from '../shared/nutrient.model';
@@ -88,23 +85,31 @@ export class NutrientListComponent implements OnInit {
   }
 
   public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
-    this._nutrientSvc.getMacronutrients(withFetch).then((data: Nutrient[]) => {
-      this._micronutrients = [...data];
+    this._macronutrients = [];
+    this._nutrientSvc.getMacronutrients(withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
+    setTimeout(() => {
       this.filteredMacronutrients = [...this._helperSvc.sortByName(this._macronutrients)];
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
-    });
+      this.isLoadingMacros = false;
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
+    }, 3000);
   }
 
   public refreshMicros(args?: ListViewEventData, withFetch?: boolean): void {
-    this._nutrientSvc.getMicronutrients(withFetch).then((data: Nutrient[]) => {
-      this._micronutrients = [...data];
+    this._micronutrients = [];
+    this._nutrientSvc.getMicronutrients(withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
+    setTimeout(() => {
       this.filteredMicronutrients = [...this._helperSvc.sortByName(this._micronutrients)];
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
-    });
+      this.isLoadingMicros = false;
+      this._changeDetectionRef.detectChanges();
+      this._changeDetectionRef.markForCheck();
+    }, 3000);
   }
 
   public searchMacros(searchTerm: string): void {
@@ -120,59 +125,7 @@ export class NutrientListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    Promise.all([
-      this._nutrientSvc.getMacronutrients(),
-      this._nutrientSvc.getMicronutrients()
-    ]).then((data: Array<Nutrient[]>) => {
-      this._macronutrients = [...data[0]];
-      this._micronutrients = [...data[1]];
-      this.filteredMacronutrients = [...this._helperSvc.sortByName(this._macronutrients)];
-      this.filteredMicronutrients = [...this._helperSvc.sortByName(this._micronutrients)];
-      this.isLoadingMacros = false;
-      this.isLoadingMicros = false;
-      this._changeDetectionRef.detectChanges();
-    });
-  }
-}
-
-/**
- * Observable version
- * public refreshMacros(args?: ListViewEventData): void {
-    this._macronutrients = [];
-    this._nutrientSvc.getMacronutrients().subscribe((data: firebase.FBData) => {
-      if (data.type === 'ChildAdded') {
-        let newNutrient: Nutrient = data.value;
-        newNutrient.$key = data.key;
-        this._macronutrients.push(newNutrient);
-      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
-        this._macronutrients.forEach((food: Nutrient, idx: number) => {
-          if (food.$key === data.key) {
-            let newNutrient: Nutrient = data.value;
-            newNutrient.$key = data.key;
-            this._macronutrients[idx] = newNutrient;
-          }
-        });
-      } else if (data.type === 'ChildRemoved') {
-        this._macronutrients.forEach((food: Nutrient, idx: number) => {
-          if (food.$key === data.key) {
-            this._macronutrients.splice(idx, 1);
-          }
-        });
-      }
-      this.filteredMacronutrients = [...this._macronutrients];
-      this.isLoadingMacros = false;
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this._changeDetectionRef.detectChanges();
-      this._changeDetectionRef.markForCheck();
-    });
-  }
-
-  ngOnInit(): void {
-    this._nutrientSvc.keepOnSyncMacronutrients();
     this.refreshMacros();
-    this._nutrientSvc.keepOnSyncMicronutrients();
     this.refreshMicros();
   }
- */
+}

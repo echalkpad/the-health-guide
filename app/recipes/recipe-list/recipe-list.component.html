@@ -27,69 +27,43 @@
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
                             <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>
-                            <GridLayout rows="*" columns="*, auto, *" class="card-actions" verticalAlignment="center" horizontalAlignment="center">
+                            <GridLayout rows="*" columns="*, *, *" class="card-actions" verticalAlignment="center" horizontalAlignment="center">
                                 <Button row="0" col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
-                                <Button row="0" col="1" class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
+                                <Button row="0" col="1" class="btn action-btn action-btn-edit fa m-l-20 m-r-20" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
                                 <Button row="0" col="2" class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
                             </GridLayout>
                         </StackLayout>
                     </StackLayout>
                 </template>
             </RadListView>
-            <!--
-            <RadListView *ngIf="!isLoadingPrivate" row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)"
-                pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press">
-                <template tkListItemTemplate let-recipe="item">
-                    <StackLayout class="list-group-item active card p-0">
-                        <StackLayout orientation="horizontal" class="card-header">
-                            <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
-                            <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="footnote" verticalAlignment="center"></Label>
-                        </StackLayout>
-                        <FrescoDrawee class="card-img" verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
-                        <StackLayout class="list-group-item">
-                            <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
-                            <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
-                            <StackLayout class="hr-light"></StackLayout>
-                            <GridLayout rows="*" columns="*, auto, *" class="card-actions" verticalAlignment="center">
-                                <Button row="0" col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
-                                <Button row="0" col="1" class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="openDetails(recipe)"></Button>
-                                <Button row="0" col="2" class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
-                            </GridLayout>
-                        </StackLayout>
-                    </StackLayout>
-                </template>
-            </RadListView>
-            -->
         </GridLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Other recipes'}">
         <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchShared()" [text]="searchInputShared"
             (submit)="searchShared(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
-            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
+            <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
                 [busy]="isLoadingShared"></ActivityIndicator>
-                <!--
-            <RadListView *ngIf="!isLoadingShared" row="1" class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePublic($event)"
+            <RadListView class="list-group" [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)"
                 pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press">
                 <template tkListItemTemplate let-recipe="item">
-                    <StackLayout class="list-group-item active card">
+                    <StackLayout class="list-group-item active">
                         <StackLayout orientation="horizontal" class="card-header">
                             <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
                             <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="footnote" verticalAlignment="center"></Label>
                         </StackLayout>
                         <FrescoDrawee class="card-img" verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
-                        <StackLayout class="list-group-item">
+                        <StackLayout backgroundColor="white" class="list-group-item">
                             <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
                             <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
                             <StackLayout class="hr-light"></StackLayout>
-                            <GridLayout rows="*" class="card-actions" verticalAlignment="center">
-                                <Button row="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
+                            <GridLayout rows="*" class="card-actions" verticalAlignment="center" horizontalAlignment="center">
+                                <Button class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
                             </GridLayout>
                         </StackLayout>
                     </StackLayout>
                 </template>
             </RadListView>
-            -->
         </GridLayout>
     </StackLayout>
 </TabView>

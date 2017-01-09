@@ -1,6 +1,10 @@
 // Angular
 import { Injectable } from '@angular/core';
 
+// RxJS
+import { Observable } from 'rxjs/Observable';
+import { Subscriber } from 'rxjs/Subscriber';
+
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -10,7 +14,9 @@ import { Nutrient } from './nutrient.model';
 @Injectable()
 export class NutrientService {
   private _macronutrients: Nutrient[];
+  private _macroObserver: Subscriber<Nutrient>;
   private _micronutrients: Nutrient[];
+  private _microObserver: Subscriber<Nutrient>;
   private _nutrient: Nutrient;
   constructor() { }
 
@@ -29,25 +35,29 @@ export class NutrientService {
     });
   }
 
-  public getMacronutrients(withFetch?: boolean): Promise<Nutrient[]> {
-    return new Promise((resolve, reject) => {
+  public getMacronutrients(withFetch?: boolean): Observable<Nutrient> {
+    if (this._macroObserver && !this._macroObserver.closed) {
+      this._macroObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<Nutrient>) => {
+      this._macroObserver = observer;
       if (!withFetch && !!this._macronutrients && !!this._macronutrients.length) {
-        resolve(this._macronutrients);
+        this._macronutrients.forEach((item: Nutrient) => this._macroObserver.next(item));
       } else {
-        this.keepOnSyncMacronutrients();
+        this.keepOnSyncMicronutrients();
         this._macronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
-              reject(res['error']);
-            } else {
-              this._macronutrients = [...res.value];
-              resolve(res.value);
+              this._macroObserver.error(res['error']);
+            } else if (res.type === 'ChildAdded') {
+              this._macronutrients.push(res.value);
+              this._macroObserver.next(res.value);
             }
           },
           '/macronutrients',
           {
-            singleEvent: true,
+            singleEvent: false,
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
@@ -58,25 +68,29 @@ export class NutrientService {
     });
   }
 
-  public getMicronutrients(withFetch?: boolean): Promise<Nutrient[]> {
-    return new Promise((resolve, reject) => {
+  public getMicronutrients(withFetch?: boolean): Observable<Nutrient> {
+    if (this._microObserver && !this._microObserver.closed) {
+      this._microObserver.unsubscribe();
+    }
+    return new Observable((observer: Subscriber<Nutrient>) => {
+      this._microObserver = observer;
       if (!withFetch && !!this._micronutrients && !!this._micronutrients.length) {
-        resolve(this._micronutrients);
+        this._micronutrients.forEach((item: Nutrient) => this._microObserver.next(item));
       } else {
         this.keepOnSyncMicronutrients();
         this._micronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
-              reject(res['error']);
-            } else {
-              this._micronutrients = [...res.value];
-              resolve(res.value);
+              this._microObserver.error(res['error']);
+            } else if (res.type === 'ChildAdded') {
+              this._micronutrients.push(res.value);
+              this._microObserver.next(res.value);
             }
           },
           '/micronutrients',
           {
-            singleEvent: true,
+            singleEvent: false,
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
@@ -122,29 +136,5 @@ export class NutrientService {
 
 /**
  * Observable version
- * public getMicronutrients(): Promise<Nutrient[]> {
-    if (this._microObserver && !this._microObserver.closed) {
-      this._microObserver.unsubscribe();
-    }
-    return new Observable((observer: Subscriber<firebase.FBData>) => {
-      this._microObserver = observer;
-      firebase.query(
-        (res: firebase.FBData) => {
-          if (res.hasOwnProperty('error')) {
-            this._microObserver.error(res['error']);
-          } else {
-            this._microObserver.next(res);
-          }
-        },
-        '/micronutrients',
-        {
-          singleEvent: false,
-          orderBy: {
-            type: firebase.QueryOrderByType.CHILD,
-            value: 'name'
-          }
-        }
-      );
-    });
-  }
+ * 
  */

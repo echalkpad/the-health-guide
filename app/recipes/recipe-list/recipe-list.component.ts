@@ -78,36 +78,32 @@ export class RecipeListComponent implements OnInit {
 
   public clearSearchPrivate(): void {
     this.searchInputPrivate = '';
-    this.refreshPrivate();
+    this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
   }
 
   public clearSearchShared(): void {
     this.searchInputShared = '';
-    this.refreshShared();
+    this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
-    this._privateLimit += 5;
-    this.refreshPrivate();
-    setTimeout(() => {
-      args.object.notifyLoadOnDemandFinished();
-      args.returnValue = true;
-      if (this.filteredPrivate.length > 5) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredPrivate.length - 5), 500);
-      }
-    }, 3000);
+    this._sharedLimit += 5;
+    this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
+    args.object.notifyLoadOnDemandFinished();
+    args.returnValue = true;
+    if (this.filteredPrivate.length > 5) {
+      setTimeout(() => args.object.scrollToIndex(this.filteredPrivate.length - 5), 1000);
+    }
   }
 
   public loadMoreShared(args: ListViewEventData): void {
     this._sharedLimit += 5;
-    this.refreshPrivate();
-    setTimeout(() => {
-      args.object.notifyLoadOnDemandFinished();
-      args.returnValue = true;
-      if (this.filteredShared.length > 5) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 5), 500);
-      }
-    }, 3000);
+    this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
+    args.object.notifyLoadOnDemandFinished();
+    args.returnValue = true;
+    if (this.filteredShared.length > 5) {
+      setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 5), 1000);
+    }
   }
 
   public openDetails(recipe: Recipe): void {
@@ -115,86 +111,40 @@ export class RecipeListComponent implements OnInit {
     setTimeout(() => this._router.navigate(['/recipes', recipe['$key']]), 1000);
   }
 
-  public refreshPrivate(args?: ListViewEventData): void {
+  public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
     this._privateRecipes = [];
-    this._recipeDataSvc.getPrivateRecipes().subscribe((data: firebase.FBData) => {
-      if (
-        this._privateRecipes.length < this._privateLimit
-        && data.value.name.toLocaleLowerCase().indexOf(this.searchInputPrivate.toLocaleLowerCase()) !== -1
-        && data.type === 'ChildAdded'
-      ) {
-        let newRecipe: Recipe = data.value;
-        newRecipe.$key = data.key;
-        this._privateRecipes.push(newRecipe);
-      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
-        this._privateRecipes.forEach((food: Recipe, idx: number) => {
-          if (food.$key === data.key) {
-            let newRecipe: Recipe = data.value;
-            newRecipe.$key = data.key;
-            this._privateRecipes[idx] = newRecipe;
-          }
-        });
-      } else if (data.type === 'ChildRemoved') {
-        this._privateRecipes.forEach((food: Recipe, idx: number) => {
-          if (food.$key === data.key) {
-            this._privateRecipes.splice(idx, 1);
-          }
-        });
-      }
-      this.filteredPrivate = [...this._privateRecipes];
-      this.isLoadingPrivate = false;
+    this._recipeDataSvc.getPrivateRecipes(withFetch).subscribe((data: Recipe) => this._privateRecipes.push(data));
+    setTimeout(() => {
+      this.filteredPrivate = [...this._privateRecipes.slice(0, this._privateLimit)];
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
+      this.isLoadingPrivate = false;
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
-    });
+    }, 3000);
   }
 
-  public refreshShared(args?: ListViewEventData): void {
-    this._privateRecipes = [];
-    this._recipeDataSvc.getSharedRecipes().subscribe((data: firebase.FBData) => {
-      if (
-        this._privateRecipes.length < this._privateLimit
-        && data.value.name.toLocaleLowerCase().indexOf(this.searchInputShared.toLocaleLowerCase()) !== -1
-        && data.type === 'ChildAdded'
-      ) {
-        let newRecipe: Recipe = data.value;
-        newRecipe.$key = data.key;
-        this._privateRecipes.push(newRecipe);
-      } else if (data.type === 'ChildChanged' || data.type === 'ChildMoved') {
-        this._privateRecipes.forEach((food: Recipe, idx: number) => {
-          if (food.$key === data.key) {
-            let newRecipe: Recipe = data.value;
-            newRecipe.$key = data.key;
-            this._privateRecipes[idx] = newRecipe;
-          }
-        });
-      } else if (data.type === 'ChildRemoved') {
-        this._privateRecipes.forEach((food: Recipe, idx: number) => {
-          if (food.$key === data.key) {
-            this._privateRecipes.splice(idx, 1);
-          }
-        });
-      }
-      this.filteredShared = [...this._privateRecipes];
-      this.isLoadingShared = false;
+  public refreshShared(args?: ListViewEventData, withFetch?: boolean): void {
+    this._sharedRecipes = [];
+    this._recipeDataSvc.getSharedRecipes(withFetch).subscribe((data: Recipe) => this._sharedRecipes.push(data));
+    setTimeout(() => {
+      this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
+      this.isLoadingShared = false;
       this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
-    });
+    }, 3000);
   }
 
   public searchPrivate(searchTerm: string): void {
-    this.searchInputPrivate = searchTerm;
-    this.refreshPrivate();
+    this.filteredPrivate = [...this._recipeSvc.filterRecipes(this._privateRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._privateLimit)];
   }
 
   public searchShared(searchTerm: string): void {
-    this.searchInputShared = searchTerm;
-    this.refreshShared();
+    this.filteredShared = [...this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._sharedLimit)];
   }
 
   public toggleSearching(): void {
@@ -202,11 +152,7 @@ export class RecipeListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => {
-      this._recipeDataSvc.keepOnSyncPrivate();
-      this.refreshPrivate();
-      this._recipeDataSvc.keepOnSyncShared();
-      this.refreshShared();
-    }, 3000);
+    this.refreshPrivate();
+    this.refreshShared();
   }
 }
