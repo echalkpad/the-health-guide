@@ -1,7 +1,7 @@
 <ActionBar class="action-bar" [title]="recipe.name">
-  <NavigationButton text="Back" android.systemIcon="ic_menu_back" (tap)="goBack()"></NavigationButton>
+  <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#0E253B">
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
   <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
     <FlexboxLayout flexDirection="column" class="form" [formGroup]="recipeForm">
       <StackLayout class="input-field">

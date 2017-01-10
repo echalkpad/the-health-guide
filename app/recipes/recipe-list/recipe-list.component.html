@@ -7,7 +7,7 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#0E253B">
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
     <StackLayout *tabItem="{title: 'My recipes'}">
         <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
             (submit)="searchPrivate(searchTerm.text)"></SearchBar>
@@ -57,7 +57,7 @@
                         </ios>
                         <StackLayout row="1" cssClass="recipe-container">
                             <Label [text]="recipe.name" cssClass="recipe-title"></Label>
-                            <Label text="made by {{recipe.chef.name}}" cssClass="recipe-author"></Label>
+                            <Label text="by {{recipe.chef.name}}" cssClass="recipe-author"></Label>
                         </StackLayout>
                     </GridLayout>
                 </template>
