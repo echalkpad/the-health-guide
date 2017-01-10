@@ -1,11 +1,12 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import { Page } from 'ui/page';
+import { setTimeout } from 'timer';
 
 // THG
 import { Auth } from './auth.model'

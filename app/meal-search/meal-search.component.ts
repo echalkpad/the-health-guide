@@ -5,6 +5,7 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 import { RouterExtensions } from 'nativescript-angular/router';
 import { SetupItemViewArgs } from "nativescript-angular/directives";
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+import { setTimeout } from 'timer';
 
 // THG
 import { FoodService } from '../food';

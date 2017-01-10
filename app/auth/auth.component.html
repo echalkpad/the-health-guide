@@ -1,9 +1,9 @@
 <GridLayout>
     <GridLayout rows="*" class="auth">
-        <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
-        <Label row="0" *ngIf="!isLoading" text="The Health Guide" class="title" textWrap="true"></Label>
-        <StackLayout row="1" *ngIf="!isLoading" [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center"
+        <ActivityIndicator class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
+        <StackLayout *ngIf="!isLoading" [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center"
             minHeight="100" minWidth="300">
+            <Label text="The Health Guide" class="title" textWrap="true"></Label>
             <StackLayout class="input-field">
                 <Label *ngIf="email.length" text="&#xf2bc; Email" class="label fa" textWrap="true"></Label>
                 <TextField hint="&#xf2bc; Email" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email"

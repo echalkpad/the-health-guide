@@ -5,6 +5,7 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+import { setTimeout } from 'timer';
 
 // THG
 import { DrawerService, HelperService } from '../../shared';

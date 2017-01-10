@@ -8,9 +8,11 @@ import * as firebase from 'nativescript-plugin-firebase';
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import * as application from 'application';
-import { ListViewEventData } from 'nativescript-telerik-ui/listview';
+import { ListViewEventData, RadListView } from 'nativescript-telerik-ui/listview';
+import { setTimeout } from 'timer';
 
 // THG
+import { AuthService } from '../../auth';
 import { DrawerService, HelperService } from '../../shared';
 import { MealSearchComponent } from '../../meal-search';
 import { MealSearchService } from '../../meal-search/meal-search.service'
@@ -28,7 +30,7 @@ import { RecipeService } from '../shared/recipe.service';
 export class RecipeListComponent implements OnInit {
   private _privateLimit: number = 5;
   private _privateRecipes: Recipe[];
-  private _sharedLimit: number = 5;
+  private _sharedLimit: number = 10;
   private _sharedRecipes: Recipe[];
   public filteredPrivate: Recipe[];
   public filteredShared: Recipe[];
@@ -41,6 +43,7 @@ export class RecipeListComponent implements OnInit {
   public searchInputPrivate: string = '';
   public searchInputShared: string = '';
   constructor(
+    private _authSvc: AuthService,
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
     private _mealSearchSvc: MealSearchService,
@@ -86,6 +89,11 @@ export class RecipeListComponent implements OnInit {
     this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
   }
 
+  public editRecipe(recipe: Recipe): void {
+    this._recipeDataSvc.storeRecipe(recipe);
+    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key]), 1000);
+  }
+
   public loadMorePrivate(args: ListViewEventData): void {
     this._sharedLimit += 5;
     this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
@@ -97,18 +105,25 @@ export class RecipeListComponent implements OnInit {
   }
 
   public loadMoreShared(args: ListViewEventData): void {
-    this._sharedLimit += 5;
+    this._sharedLimit += 10;
     this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
     args.object.notifyLoadOnDemandFinished();
     args.returnValue = true;
-    if (this.filteredShared.length > 5) {
-      setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 5), 1000);
+    if (this.filteredShared.length > 10) {
+      setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 10), 1000);
     }
   }
 
   public openDetails(recipe: Recipe): void {
     this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', recipe['$key']]), 1000);
+    setTimeout(() => this._router.navigate(['/recipes', recipe.$key]), 1000);
+  }
+
+  public openShared(args: ListViewEventData): void {
+    let listview = args.object as RadListView,
+      recipe: Recipe = listview.getSelectedItems()[0];
+    this._recipeDataSvc.storeRecipe(recipe);
+    setTimeout(() => this._router.navigate(['/recipes', recipe.$key]), 1000);
   }
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {

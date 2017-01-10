@@ -3,6 +3,7 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnIni
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
+import { setTimeout } from 'timer';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';

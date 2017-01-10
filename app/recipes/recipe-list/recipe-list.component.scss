@@ -19,6 +19,22 @@
     width: 100%;
 }
 
+.recipe-container {
+	height: 54;
+    background-color: white;
+    padding: 8 16;
+}
+
+.recipe-title {
+	font-size: 16;
+    color: #455b66;
+}
+
+.recipe-author {
+	font-size: 11;
+    color: #455b66;
+}
+
 .card-header {
     padding: 15em;
     background-color: white;

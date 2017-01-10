@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
