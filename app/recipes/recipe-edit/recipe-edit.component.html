@@ -14,25 +14,41 @@
       </StackLayout>
       <StackLayout class="input-field">
         <Label *ngIf="recipe.description.length" text="&#xf2bc; Description" class="label fa" textWrap="true"></Label>
-        <TextView hint="&#xf2bc; Description" name="description" [(ngModel)]="recipe.description" id="description" formControlName="description" keyboardType="text"
-          autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
+        <TextView hint="&#xf2bc; Description" name="description" [(ngModel)]="recipe.description" id="description" formControlName="description"
+          keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
         </TextView>
         <Label *ngIf="recipeForm.controls['description'].hasError('required') && !recipeForm.pristine" color="red" text="Description is required"
           textWrap="true"></Label>
       </StackLayout>
       <GridLayout rows="*" columns="*, *, *">
         <StackLayout col="0" class="input-field">
-          <Label class="label" text="Focused  TextField" textWrap="true"></Label>
-          <TextField class="input input-border" id="firstTextFieldId" hint="Focused TextField" text=""></TextField>
+          <Label *ngIf="recipe.duration" text="&#xf2bc; Duration" class="label fa" textWrap="true"></Label>
+          <TextField hint="&#xf2bc; Duration" name="duration" [(ngModel)]="recipe.duration" id="duration" formControlName="duration"
+            keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
+          </TextField>
+          <Label *ngIf="recipeForm.controls['duration'].hasError('required') && !recipeForm.pristine" color="red" text="Duration is required"
+            textWrap="true"></Label>
         </StackLayout>
         <StackLayout col="1" class="input-field">
-          <Label class="label" text="Focused  TextField" textWrap="true"></Label>
-          <TextField class="input input-border" id="firstTextFieldId" hint="Focused TextField" text=""></TextField>
+          <Label *ngIf="recipe.cookTemperature" text="&#xf2bc; Temperature" class="label fa" textWrap="true"></Label>
+          <TextField hint="&#xf2bc; Temperature" name="cookTemperature" [(ngModel)]="recipe.cookTemperature" id="cookTemperature" formControlName="cookTemperature"
+            keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
+          </TextField>
+          <Label *ngIf="recipeForm.controls['cookTemperature'].hasError('required') && !recipeForm.pristine" color="red" text="Temperature is required"
+            textWrap="true"></Label>
         </StackLayout>
         <StackLayout col="2" class="input-field">
-          <Label class="label" text="Focused  TextField" textWrap="true"></Label>
-          <TextField class="input input-border" id="firstTextFieldId" hint="Focused TextField" text=""></TextField>
+          <Label *ngIf="recipe.servings" text="&#xf2bc; Servings" class="label fa" textWrap="true"></Label>
+          <TextField hint="&#xf2bc; Servings" name="servings" [(ngModel)]="recipe.servings" id="servings" formControlName="servings"
+            keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
+          </TextField>
+          <Label *ngIf="recipeForm.controls['servings'].hasError('required') && !recipeForm.pristine" color="red" text="Servings is required"
+            textWrap="true"></Label>
         </StackLayout>
+      </GridLayout>
+      <GridLayout rows="*" columns="*, *, *">
+        <ListPicker col="0" #picker class="p-15" [items]="categories" [selectedIndex]="selectedCategory" (selectedIndexChange)="changeCategory(picker)">
+        </ListPicker>
       </GridLayout>
     </FlexboxLayout>
   </ScrollView>

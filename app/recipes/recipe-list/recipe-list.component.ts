@@ -34,10 +34,12 @@ export class RecipeListComponent implements OnInit {
   private _sharedRecipes: Recipe[];
   public filteredPrivate: Recipe[];
   public filteredShared: Recipe[];
+  public gridView: boolean = false;
   public ingredients: string[];
   public isLoadingPrivate: boolean = true;
   public isLoadingShared: boolean = true;
   public isSearching: boolean = false;
+  public listView: boolean = true;
   public query: string = 'name';
   public queryIngredients: Ingredient[] = [];
   public searchInputPrivate: string = '';
@@ -52,6 +54,13 @@ export class RecipeListComponent implements OnInit {
     private _router: RouterExtensions,
     public drawerSvc: DrawerService
   ) { }
+
+  private _editRecipe(args: ListViewEventData): void {
+    let listview = args.object as RadListView,
+      recipe: Recipe = listview.getSelectedItems()[0];
+    this._recipeDataSvc.storeRecipe(recipe);
+    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key]), 1000);
+  }
 
   public changeQuery(): void {
     dialogs.action({
@@ -79,6 +88,16 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
+  public changeView(viewType: string): void {
+    if (viewType === 'grid') {
+      this.listView = false;
+      this.gridView = true;
+    } else if (viewType === 'list') {
+      this.gridView = false;
+      this.listView = true;
+    }
+  }
+
   public clearSearchPrivate(): void {
     this.searchInputPrivate = '';
     this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
@@ -87,11 +106,6 @@ export class RecipeListComponent implements OnInit {
   public clearSearchShared(): void {
     this.searchInputShared = '';
     this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
-  }
-
-  public editRecipe(recipe: Recipe): void {
-    this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key]), 1000);
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
@@ -114,12 +128,7 @@ export class RecipeListComponent implements OnInit {
     }
   }
 
-  public openDetails(recipe: Recipe): void {
-    this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', recipe.$key]), 1000);
-  }
-
-  public openShared(args: ListViewEventData): void {
+  public openDetails(args: ListViewEventData): void {
     let listview = args.object as RadListView,
       recipe: Recipe = listview.getSelectedItems()[0];
     this._recipeDataSvc.storeRecipe(recipe);
@@ -160,6 +169,29 @@ export class RecipeListComponent implements OnInit {
 
   public searchShared(searchTerm: string): void {
     this.filteredShared = [...this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._sharedLimit)];
+  }
+
+  public showOptions(args: ListViewEventData): void {
+    let
+      options = {
+        title: 'Recipe options',
+        message: 'Choose what to do with your recipe',
+        cancelButtonText: 'Cancel',
+        actions: ['View details', 'Edit recipe', 'Delete recipe']
+      };
+    dialogs.action(options).then((result: string) => {
+      switch (result) {
+        case 'View details':
+          this.openDetails(args);
+          break;
+        case 'Edit recipe':
+          this._editRecipe(args);
+          break;
+
+        default:
+          break;
+      }
+    });
   }
 
   public toggleSearching(): void {

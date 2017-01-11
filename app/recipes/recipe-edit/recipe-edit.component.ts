@@ -5,6 +5,7 @@ import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms'
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
+import { ListPicker } from 'ui/list-picker';
 import { setTimeout } from 'timer';
 
 // THG
@@ -33,9 +34,12 @@ export class RecipeEditComponent implements OnInit {
     public filteredTotal: number = 0;
     public ingredients: Ingredient[] = [];
     public instructions: string[] = [];
+    public minerals: string[] = [];
     public recipe: Recipe;
     public recipeForm: FormGroup;
-    public minerals: string[] = [];
+    public selectedCategory: number;
+    public selectedCookMethod: number;
+    public selectedDifficulty: number;
     public vitamins: string[] = [];
     constructor(
         private _changeDetectionRef: ChangeDetectorRef,
@@ -102,19 +106,46 @@ export class RecipeEditComponent implements OnInit {
         ];
     }
 
+    public changeCategory(picker: ListPicker) {
+        this.selectedCategory = picker.selectedIndex;
+        this.recipe.category = this.categories[this.selectedCategory];
+    }
+
     public goBack(): void {
         this._router.back();
     }
 
     ngOnInit(): void {
         this.recipe = this._recipeDataSvc.getRecipe();
+        this.categories.forEach((item: string, idx: number) => {
+            if (this.recipe.category === item) {
+                this.selectedCategory = idx;
+            }
+        });
+
+        this.cookMethods.forEach((item: string, idx: number) => {
+            if (this.recipe.cookMethod === item) {
+                this.selectedCookMethod = idx;
+            }
+        });
+
+        this.difficulties.forEach((item: string, idx: number) => {
+            if (this.recipe.difficulty === item) {
+                this.selectedDifficulty = idx;
+            }
+        });
         this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
         this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
         this.minerals = Object.keys(this.recipe.nutrition['minerals']);
         this.recipeForm = this._fb.group({
             name: [this.recipe.name, [Validators.required, Validators.maxLength(20)]],
             description: [this.recipe.description, [Validators.required, Validators.maxLength(100)]],
-            cookTemperature: [this.recipe.cookTemperature, [Validators.required]]
+            cookTemperature: [this.recipe.cookTemperature, [Validators.required]],
+            duration: [this.recipe.duration, [Validators.required, Validators.maxLength(3)]],
+            servings: [this.recipe.servings, [Validators.required, Validators.maxLength(3)]],
+            difficulty: [this.recipe.difficulty, [Validators.required]],
+            cookMethod: [this.recipe.cookMethod, [Validators.required]],
+            category: [this.recipe.category, [Validators.required]]
         });
         this._changeDetectionRef.detectChanges();
     }

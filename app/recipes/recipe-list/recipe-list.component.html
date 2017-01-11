@@ -1,5 +1,11 @@
 <ActionBar class="action-bar" title="Recipes">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
+    <ActionItem (tap)="changeView('grid')">
+        <Button text="&#xf009;" class="fa action-item"></Button>
+    </ActionItem>
+    <ActionItem (tap)="changeView('list')">
+        <Button text="&#xf03a;" class="fa action-item"></Button>
+    </ActionItem>
     <ActionItem (tap)="toggleSearching()">
         <Button text="&#xf002;" class="fa action-item"></Button>
     </ActionItem>
@@ -14,26 +20,23 @@
         <GridLayout rows="*">
             <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'"
                 [busy]="isLoadingPrivate"></ActivityIndicator>
-            <RadListView class="list-group" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)"
-                pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press">
+            <RadListView [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)" pullToRefresh="true"
+                (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press" (itemSelected)="showOptions($event)">
+                <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
+                <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
-                    <StackLayout class="list-group-item active">
-                        <StackLayout orientation="horizontal" class="card-header">
-                            <FrescoDrawee roundAsCircle="true" class="thumb" verticalAlignment="center" aspectRatio="1" [imageUri]="recipe.chef.avatar"></FrescoDrawee>
-                            <Label text="Made by {{recipe.chef.name}}" textWrap="true" class="footnote" verticalAlignment="center"></Label>
+                    <GridLayout rows="*, auto">
+                        <android>
+                            <FrescoDrawee [imageUri]="recipe.image" height="150"></FrescoDrawee>
+                        </android>
+                        <ios>
+                            <Image [imageUri]="recipe.image" stretch="aspectFill" loadMode="async"></Image>
+                        </ios>
+                        <StackLayout row="1" cssClass="recipe-container">
+                            <Label [text]="recipe.name" cssClass="recipe-title"></Label>
+                            <Label text="by {{recipe.chef.name}}" cssClass="recipe-author"></Label>
                         </StackLayout>
-                        <FrescoDrawee class="card-img" verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
-                        <StackLayout backgroundColor="white" class="list-group-item">
-                            <Label class="list-group-item-heading h2" [text]="recipe.name"></Label>
-                            <Label class="list-group-item-text text-muted" [text]="recipe.description"></Label>
-                            <StackLayout class="hr-light"></StackLayout>
-                            <GridLayout rows="*" columns="*, *, *" class="card-actions" verticalAlignment="center" horizontalAlignment="center">
-                                <Button row="0" col="0" class="btn action-btn action-btn-open fa" text="&#xf08e; Read more" (tap)="openDetails(recipe)"></Button>
-                                <Button row="0" col="1" class="btn action-btn action-btn-edit fa" text="&#xf044; Edit" (tap)="editRecipe(recipe)"></Button>
-                                <Button row="0" col="2" class="btn action-btn action-btn-remove fa" text="&#xf014; Remove" (tap)="openDetails(recipe)"></Button>
-                            </GridLayout>
-                        </StackLayout>
-                    </StackLayout>
+                    </GridLayout>
                 </template>
             </RadListView>
         </GridLayout>
@@ -45,8 +48,9 @@
             <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
                 [busy]="isLoadingShared"></ActivityIndicator>
             <RadListView [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)" pullToRefresh="true"
-                (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openShared($event)">
-                <ListViewGridLayout tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
+                (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+                <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
+                <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
                     <GridLayout rows="*, auto">
                         <android>
