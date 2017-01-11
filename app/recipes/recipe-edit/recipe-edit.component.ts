@@ -38,7 +38,7 @@ export class RecipeEditComponent implements OnInit {
     public recipe: Recipe;
     public recipeForm: FormGroup;
     public selectedCategory: number;
-    public selectedCookMethod: number;
+    public selectedCookMethod: number = 0;
     public selectedDifficulty: number;
     public vitamins: string[] = [];
     constructor(
@@ -111,29 +111,22 @@ export class RecipeEditComponent implements OnInit {
         this.recipe.category = this.categories[this.selectedCategory];
     }
 
+    public changeCookMethod(picker: ListPicker) {
+        this.selectedCookMethod = picker.selectedIndex;
+        this.recipe.cookMethod = this.cookMethods[this.selectedCookMethod];
+    }
+
+    public changeDifficulty(picker: ListPicker) {
+        this.selectedDifficulty = picker.selectedIndex;
+        this.recipe.difficulty = this.difficulties[this.selectedDifficulty];
+    }
+
     public goBack(): void {
         this._router.back();
     }
 
     ngOnInit(): void {
         this.recipe = this._recipeDataSvc.getRecipe();
-        this.categories.forEach((item: string, idx: number) => {
-            if (this.recipe.category === item) {
-                this.selectedCategory = idx;
-            }
-        });
-
-        this.cookMethods.forEach((item: string, idx: number) => {
-            if (this.recipe.cookMethod === item) {
-                this.selectedCookMethod = idx;
-            }
-        });
-
-        this.difficulties.forEach((item: string, idx: number) => {
-            if (this.recipe.difficulty === item) {
-                this.selectedDifficulty = idx;
-            }
-        });
         this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
         this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
         this.minerals = Object.keys(this.recipe.nutrition['minerals']);

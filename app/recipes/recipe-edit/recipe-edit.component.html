@@ -46,8 +46,9 @@
             textWrap="true"></Label>
         </StackLayout>
       </GridLayout>
-      <GridLayout rows="*" columns="*, *, *">
-        <ListPicker col="0" #picker class="p-15" [items]="categories" [selectedIndex]="selectedCategory" (selectedIndexChange)="changeCategory(picker)">
+      <GridLayout rows="*" columns="auto, *">
+        <Label col="0" text="&#xf2bc; Category" class="label fa" textWrap="true"></Label>
+        <ListPicker class="picker" col="1" #categoryPicker [items]="categories" [selectedIndex]="selectedCategory" (selectedIndexChange)="changeCategory(categoryPicker)">
         </ListPicker>
       </GridLayout>
     </FlexboxLayout>
