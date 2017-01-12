@@ -1,7 +1,11 @@
 <ActionBar class="action-bar" [title]="recipe.name">
   <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
+  <ActionItem *ngIf="recipeTabIdx === 1" (tap)="addIngredient()">
+    <Button text="&#xf067;" class="fa action-item"></Button>
+  </ActionItem>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+<TabView [(ngModel)]="recipeTabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)"
+  tabBackgroundColor="#151F2F">
   <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
     <FlexboxLayout flexDirection="column" class="form" [formGroup]="recipeForm">
       <StackLayout class="input-field">
@@ -46,19 +50,32 @@
             textWrap="true"></Label>
         </StackLayout>
       </GridLayout>
-      <GridLayout rows="*" columns="auto, *">
-        <Label col="0" text="&#xf2bc; Category" class="label fa" textWrap="true"></Label>
+      <GridLayout rows="auto" columns="auto, auto">
+        <Label col="0" text="&#xf2bc; Category" class="fa" textWrap="true"></Label>
         <ListPicker class="picker" col="1" #categoryPicker [items]="categories" [selectedIndex]="selectedCategory" (selectedIndexChange)="changeCategory(categoryPicker)">
+        </ListPicker>
+      </GridLayout>
+      <GridLayout rows="auto" columns="auto, auto">
+        <Label col="0" text="&#xf2bc; Cook method" class="fa" textWrap="true"></Label>
+        <ListPicker class="picker" col="1" #cookMethodPicker [items]="cookMethods" [selectedIndex]="selectedCookMethod" (selectedIndexChange)="changeCookMethod(cookMethodPicker)">
+        </ListPicker>
+      </GridLayout>
+      <GridLayout rows="auto" columns="auto, auto">
+        <Label col="0" text="&#xf2bc; Difficulty" class="fa" textWrap="true"></Label>
+        <ListPicker class="picker" col="1" #difficultyPicker [items]="difficulties" [selectedIndex]="selectedDifficulty" (selectedIndexChange)="changeDifficulty(difficultyPicker)">
         </ListPicker>
       </GridLayout>
     </FlexboxLayout>
   </ScrollView>
   <StackLayout #tabViewItem *tabItem="{title: 'Ingredients'}">
     <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
-      <template let-ingredient="item">
-        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{ingredient.quantity}}g" class="text-muted text-right footnote" verticalAlignment="center"></Label>
+      <template let-ingredient="item" let-index="index">
+        <GridLayout class="list-group-item" rows="auto" columns="30, *, auto, 10" isUserInteractionEnabled="false">
+          <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeIngredient(index)" verticalAlignment="center"></Label>
+          <Label col="1" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
+          <TextField col="2" [(ngModel)]="ingredient.quantity" hint="Grams" keyboardType="number" autocorrect="false" autocapitalizationType="none"
+            class="text-muted text-right footnote" verticalAlignment="center" returnKeyType="done"></TextField>
+          <Label col="3" textWrap="true" text="g" class="text-muted text-left footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
     </ListView>
@@ -66,9 +83,14 @@
   <StackLayout #tabViewItem *tabItem="{title: 'Instructions'}">
     <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
       <template let-step="item" let-index="index">
-        <StackLayout class="list-group-item" isUserInteractionEnabled="false">
-          <Label textWrap="true" text="{{index + 1}}. {{step}}" class="list-group-item-heading" verticalAlignment="center"></Label>
-        </StackLayout>
+        <GridLayout class="list-group-item" rows="*" columns="30, *" isUserInteractionEnabled="false">
+          <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeInstruction(index)" verticalAlignment="center"></Label>
+          <StackLayout col="1" class="input-field">
+            <Label text="Step {{index + 1}}" class="label" textWrap="true" verticalAlignment="center"></Label>
+            <TextField [(ngModel)]="recipe.instructions[index]" hint="Step {{index}}" keyboardType="text" autocorrect="false" autocapitalizationType="none"
+              class="body" verticalAlignment="center" returnKeyType="done"></TextField>
+          </StackLayout>
+        </GridLayout>
       </template>
     </ListView>
   </StackLayout>

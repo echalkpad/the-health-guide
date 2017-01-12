@@ -36,6 +36,7 @@ export class RecipeEditComponent implements OnInit {
     public instructions: string[] = [];
     public minerals: string[] = [];
     public recipe: Recipe;
+    public recipeTabIdx: number = 0;
     public recipeForm: FormGroup;
     public selectedCategory: number;
     public selectedCookMethod: number = 0;
@@ -45,7 +46,7 @@ export class RecipeEditComponent implements OnInit {
         private _changeDetectionRef: ChangeDetectorRef,
         private _fb: FormBuilder,
         private _helperSvc: HelperService,
-        private _recipeSvc: RecipeDataService,
+        private _recipeSvc: RecipeService,
         private _recipeDataSvc: RecipeDataService,
         private _router: RouterExtensions
     ) {
@@ -106,23 +107,63 @@ export class RecipeEditComponent implements OnInit {
         ];
     }
 
+    public addInstruction(): void {
+        this.recipe.instructions.push('');
+        this._isDirty = true;
+    }
+
+    public canDeactivate(): Promise<boolean> | boolean {
+        if (this._isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === '')) {
+            return true;
+        }
+        return new Promise(resolve => {
+            dialogs.confirm({
+                title: "Race selection",
+                message: 'Changes have been made! Are you sure you want to leave?',
+                okButtonText: 'Agree',
+                cancelButtonText: 'Disagree'
+            }).then((result: boolean) => {
+                resolve(result);
+            });
+        });
+    }
+
     public changeCategory(picker: ListPicker) {
         this.selectedCategory = picker.selectedIndex;
         this.recipe.category = this.categories[this.selectedCategory];
+        this._isDirty = true;
     }
 
     public changeCookMethod(picker: ListPicker) {
         this.selectedCookMethod = picker.selectedIndex;
         this.recipe.cookMethod = this.cookMethods[this.selectedCookMethod];
+        this._isDirty = true;
     }
 
     public changeDifficulty(picker: ListPicker) {
         this.selectedDifficulty = picker.selectedIndex;
         this.recipe.difficulty = this.difficulties[this.selectedDifficulty];
+        this._isDirty = true;
     }
 
     public goBack(): void {
         this._router.back();
+    }
+
+    public removeIngredient(index: number): void {
+        this.recipe.ingredients.splice(index, 1);
+        this.syncNutrition();
+        this._isDirty = true;
+    }
+
+    public removeInstruction(index: number) {
+        this.instructions.splice(index, 1);
+        this.recipe.instructions = [...this.instructions];
+        this._isDirty = true;
+    }
+
+    public syncNutrition(): void {
+        this._recipeSvc.setRecipeNutrition(this.recipe);
     }
 
     ngOnInit(): void {

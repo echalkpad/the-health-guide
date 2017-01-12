@@ -1,5 +1,5 @@
 // Angular
-import { ReactiveFormsModule } from '@angular/forms'
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Nativescript
 import { NativeScriptModule } from 'nativescript-angular/platform';
