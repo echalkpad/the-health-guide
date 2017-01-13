@@ -18,7 +18,7 @@
         <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate" (submit)="searchPrivate(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
             <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'" [busy]="isLoadingPrivate"></ActivityIndicator>
-            <RadListView *ngIf="tabIdx === 0" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press" (itemSelected)="showOptions($event)">
+            <RadListView *ngIf="tabView.selectedIndex === 0" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press" (itemSelected)="showOptions($event)">
                 <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
                 <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
@@ -42,7 +42,7 @@
         <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchShared()" [text]="searchInputShared" (submit)="searchShared(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
             <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'" [busy]="isLoadingShared"></ActivityIndicator>
-            <RadListView *ngIf="tabIdx === 1" [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+            <RadListView *ngIf="tabView.selectedIndex === 1" [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
                 <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
                 <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
