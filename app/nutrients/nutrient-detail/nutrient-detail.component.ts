@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -23,6 +24,7 @@ export class NutrientDetailComponent implements OnInit {
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _nutrientSvc: NutrientService,
+    private _route: ActivatedRoute,
     private _router: RouterExtensions
   ) { }
 
@@ -31,21 +33,22 @@ export class NutrientDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.nutrient = this._nutrientSvc.getNutrient();
-    console.log(JSON.stringify(this.nutrient));
-    if (this.nutrient.hasOwnProperty('classification')) {
-      this.nutrient.classification.forEach((item: any) => {
-        this.nutrientClassification += `<h3>${item.name}</h3><p>${item.description}</p>`;
+    this._route.queryParams.subscribe((params: Params) => {
+      this.nutrient = JSON.parse(params['nutrient']);
+      if (this.nutrient.hasOwnProperty('classification')) {
+        this.nutrient.classification.forEach((item: any) => {
+          this.nutrientClassification += `<h3>${item.name}</h3><p>${item.description}</p>`;
+        });
+      } else {
+        this.nutrientClassification = 'There are no major classifications for this nutrient';
+      }
+      this.nutrient.diseasePrev.forEach((item: string) => {
+        this.nutrientDiseases += `&#8226; ${item}<br/>`;
       });
-    } else {
-      this.nutrientClassification = 'There are no major classifications for this nutrient';
-    }
-    this.nutrient.diseasePrev.forEach((item: string) => {
-      this.nutrientDiseases += `&#8226; ${item}<br/>`;
-    });
 
-    this.nutrient.functions.forEach((item: string) => {
-      this.nutrientFunctions += `&#8226; ${item}<br/>`;
+      this.nutrient.functions.forEach((item: string) => {
+        this.nutrientFunctions += `&#8226; ${item}<br/>`;
+      });
     });
   }
 }

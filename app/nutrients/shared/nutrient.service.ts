@@ -17,7 +17,6 @@ export class NutrientService {
   private _macroObserver: Subscriber<Nutrient>;
   private _micronutrients: Nutrient[];
   private _microObserver: Subscriber<Nutrient>;
-  private _nutrient: Nutrient;
   constructor() { }
 
   public filterNutrient(nutrients: Nutrient[], query: string, searchTerm: string): Nutrient[] {
@@ -101,10 +100,6 @@ export class NutrientService {
     });
   }
 
-  public getNutrient(): Nutrient {
-    return this._nutrient;
-  }
-
   public keepOnSyncMacronutrients(): void {
     firebase.keepInSync('/macronutrients', true).then(
       function () {
@@ -127,14 +122,4 @@ export class NutrientService {
     );
   }
 
-  public storeNutrient(nutrient: Nutrient): void {
-    this._nutrient = nutrient;
-  }
-
 }
-
-
-/**
- * Observable version
- * 
- */

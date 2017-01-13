@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -24,6 +25,7 @@ export class FoodDetailComponent implements OnInit {
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
+    private _route: ActivatedRoute,
     private _router: RouterExtensions
   ) {
 
@@ -47,11 +49,12 @@ export class FoodDetailComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.food = this._foodSvc.getFood();
-    this.aminoacids = Object.keys(this.food['amino acids']);
-    this.vitamins = Object.keys(this.food['vitamins']);
-    this.minerals = Object.keys(this.food['minerals']);
-    this._changeDetectionRef.detectChanges();
-
+    this._route.queryParams.subscribe((params: Params) => {
+      this.food = JSON.parse(params['food']);
+      this.aminoacids = Object.keys(this.food['amino acids']);
+      this.vitamins = Object.keys(this.food['vitamins']);
+      this.minerals = Object.keys(this.food['minerals']);
+      this._changeDetectionRef.detectChanges();
+    });
   }
 }

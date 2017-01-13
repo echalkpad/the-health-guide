@@ -7,15 +7,12 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+<TabView #tabView (selectedIndexChanged)="tabIdxChange(tabView.selectedIndex)" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
     <StackLayout *tabItem="{title: 'Macronutrients'}">
-        <SearchBar *ngIf="!isLoadingMacros && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchMacros()" [text]="searchInputMacros"
-            (submit)="searchMacros(searchTerm.text)"></SearchBar>
+        <SearchBar *ngIf="!isLoadingMacros && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchMacros()" [text]="searchInputMacros" (submit)="searchMacros(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
-            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMacros ? 'visible' : 'collapse'"
-                [busy]="isLoadingMacros"></ActivityIndicator>
-            <RadListView row="0" class="list-group" [items]="filteredMacronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMacros($event, true)"
-                selectionBehavior="Press" (itemSelected)="openDetails($event, 'macronutrients')">
+            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMacros ? 'visible' : 'collapse'" [busy]="isLoadingMacros"></ActivityIndicator>
+            <RadListView row="0" class="list-group" [items]="filteredMacronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMacros($event, true)" selectionBehavior="Press" (itemSelected)="openDetails($event, 'macronutrients')">
                 <template tkListItemTemplate let-nutrient="item">
                     <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">
                         <Label class="list-group-item-heading" textWrap="true" [text]="nutrient.name"></Label>
@@ -26,13 +23,10 @@
         </GridLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Micronutrients'}">
-        <SearchBar *ngIf="!isLoadingMicros && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchMicros()" [text]="searchInputMicros"
-            (submit)="searchMicros(searchTerm.text)"></SearchBar>
+        <SearchBar *ngIf="!isLoadingMicros && isSearching" #searchTerm hint="Search nutrient" (clear)="clearSearchMicros()" [text]="searchInputMicros" (submit)="searchMicros(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
-            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMicros ? 'visible' : 'collapse'"
-                [busy]="isLoadingMicros"></ActivityIndicator>
-            <RadListView row="0" class="list-group" [items]="filteredMicronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMicros($event, true)"
-                selectionBehavior="Press" (itemSelected)="openDetails($event, 'micronutrients')">
+            <ActivityIndicator row="0" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMicros ? 'visible' : 'collapse'" [busy]="isLoadingMicros"></ActivityIndicator>
+            <RadListView row="0" class="list-group" [items]="filteredMicronutrients" pullToRefresh="true" (pullToRefreshInitiated)="refreshMicros($event, true)" selectionBehavior="Press" (itemSelected)="openDetails($event, 'micronutrients')">
                 <template tkListItemTemplate let-nutrient="item">
                     <StackLayout class="list-group-item" borderBottomWidth="1" borderBottomColor="Cyan">
                         <Label class="list-group-item-heading" textWrap="true" [text]="nutrient.name"></Label>

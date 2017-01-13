@@ -16,7 +16,6 @@ $light-green: #00c853 !default;
 $accent: $light-green !default;
 $light-blue: rgba($ocean, 0.2) !default;
 $dark-indigo: #151F2F;
-
 .action-bar {
     background-color: $dark-indigo;
 }
@@ -36,6 +35,14 @@ $dark-indigo: #151F2F;
 
 .hr-light {
     background-color: $light-blue;
+}
+
+.icon {
+    font-family: 'icomoon';
+}
+
+.mdi {
+    font-family: 'Material Icons', 'MaterialIcons-Regular';
 }
 
 .text-10 {

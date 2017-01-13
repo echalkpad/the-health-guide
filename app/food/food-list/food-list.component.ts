@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from "@angular/core";
+import { NavigationExtras } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -51,9 +52,11 @@ export class FoodListComponent implements OnInit {
   }
 
   public openDetails(args?: ListViewEventData): void {
-    let selected: Food = args.object.getSelectedItems()[0];
-    this._foodSvc.storeFood(selected);
-    setTimeout(() => this._router.navigate(['/food', selected.$key]), 1000);
+    let selected: Food = args.object.getSelectedItems()[0],
+    navExtras: NavigationExtras = {
+        queryParams: { food: JSON.stringify(selected) }
+      };
+    setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 1000);
   }
 
   public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
@@ -79,6 +82,6 @@ export class FoodListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.refreshFoods();
+    setTimeout(() => this.refreshFoods(), 3000);
   }
 }

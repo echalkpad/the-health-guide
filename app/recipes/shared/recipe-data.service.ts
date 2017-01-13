@@ -22,7 +22,6 @@ export class RecipeDataService {
   private _ingredients: Ingredient[];
   private _privateObserver: Subscriber<Recipe>;
   private _privateRecipes: Recipe[];
-  private _recipe: Recipe;
   private _sharedObserver: Subscriber<Recipe>;
   private _sharedRecipes: Recipe[];
   constructor(private _dataSvc: DataService, private _helperSvc: HelperService) {
@@ -64,10 +63,6 @@ export class RecipeDataService {
         );
       }
     });
-  }
-
-  public getRecipe(): Recipe {
-    return this._recipe;
   }
 
   public getSharedRecipes(withFetch?: boolean): Observable<Recipe> {
@@ -127,10 +122,6 @@ export class RecipeDataService {
 
   public storeIngredients(ingredients: Ingredient[]): void {
     this._ingredients = ingredients;
-  }
-
-  public storeRecipe(recipe: Recipe): void {
-    this._recipe = recipe;
   }
 
 }

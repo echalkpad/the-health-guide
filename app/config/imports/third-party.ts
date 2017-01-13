@@ -5,6 +5,7 @@ import { NSFRESCO_DIRECTIVES } from 'nativescript-fresco/angular';
 import { FrescoDrawee } from 'nativescript-fresco';
 import * as frescoModule from 'nativescript-fresco';
 import * as applicationModule from 'application';
+import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
@@ -19,7 +20,7 @@ firebase.init({
     (error) => {
         console.log('firebase.init error: ' + error);
     }
-);
+    );
 
 if (applicationModule.android) {
     applicationModule.on('launch', () => {
@@ -29,6 +30,9 @@ if (applicationModule.android) {
 }
 
 export const thirdPartyImports = [
+    TNSFontIconModule.forRoot({
+        'mdi': 'material-design-icons.css'
+    })
 ];
 
 export const thirdPartyEntries = [

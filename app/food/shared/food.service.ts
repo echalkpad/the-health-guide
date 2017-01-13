@@ -13,14 +13,9 @@ import { Food } from './food.model';
 
 @Injectable()
 export class FoodService {
-    private _food: Food;
     private _foods: Food[];
     private _foodObserver: Subscriber<Food>;
     constructor() { }
-
-    public getFood(): Food {
-        return this._food;
-    }
 
     public getFoods(withFetch?: boolean): Observable<Food> {
         if (!!this._foodObserver && !this._foodObserver.closed) {
@@ -58,15 +53,11 @@ export class FoodService {
     public keepOnSyncFoods(): void {
         firebase.keepInSync('/foods', true).then(
             function () {
-                console.log("firebase.keepInSync is ON for foods");
+                console.log('firebase.keepInSync is ON for foods');
             },
             function (error) {
-                console.log("firebase.keepInSync error: " + error);
+                console.log('firebase.keepInSync error: ' + error);
             }
         );
-    }
-
-    public storeFood(food: Food): void {
-        this._food = food;
     }
 }

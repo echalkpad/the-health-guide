@@ -1,6 +1,7 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -36,11 +37,11 @@ export class RecipeEditComponent implements OnInit {
     public instructions: string[] = [];
     public minerals: string[] = [];
     public recipe: Recipe;
-    public recipeTabIdx: number = 0;
     public recipeForm: FormGroup;
     public selectedCategory: number;
     public selectedCookMethod: number = 0;
     public selectedDifficulty: number;
+    public tabIdx: number = 0;
     public vitamins: string[] = [];
     constructor(
         private _changeDetectionRef: ChangeDetectorRef,
@@ -48,6 +49,7 @@ export class RecipeEditComponent implements OnInit {
         private _helperSvc: HelperService,
         private _recipeSvc: RecipeService,
         private _recipeDataSvc: RecipeDataService,
+        private _route: ActivatedRoute,
         private _router: RouterExtensions
     ) {
         this.basicNutrition = [
@@ -167,21 +169,24 @@ export class RecipeEditComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.recipe = this._recipeDataSvc.getRecipe();
-        this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
-        this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
-        this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-        this.recipeForm = this._fb.group({
-            name: [this.recipe.name, [Validators.required, Validators.maxLength(20)]],
-            description: [this.recipe.description, [Validators.required, Validators.maxLength(100)]],
-            cookTemperature: [this.recipe.cookTemperature, [Validators.required]],
-            duration: [this.recipe.duration, [Validators.required, Validators.maxLength(3)]],
-            servings: [this.recipe.servings, [Validators.required, Validators.maxLength(3)]],
-            difficulty: [this.recipe.difficulty, [Validators.required]],
-            cookMethod: [this.recipe.cookMethod, [Validators.required]],
-            category: [this.recipe.category, [Validators.required]]
+        this._route.queryParams.subscribe((params: Params) => {
+            this.recipe = JSON.parse(params['recipe']);
+            this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
+            this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
+            this.minerals = Object.keys(this.recipe.nutrition['minerals']);
+            this.recipeForm = this._fb.group({
+                name: [this.recipe.name, [Validators.required, Validators.maxLength(20)]],
+                description: [this.recipe.description, [Validators.required, Validators.maxLength(100)]],
+                cookTemperature: [this.recipe.cookTemperature, [Validators.required]],
+                duration: [this.recipe.duration, [Validators.required, Validators.maxLength(3)]],
+                servings: [this.recipe.servings, [Validators.required, Validators.maxLength(3)]],
+                difficulty: [this.recipe.difficulty, [Validators.required]],
+                cookMethod: [this.recipe.cookMethod, [Validators.required]],
+                category: [this.recipe.category, [Validators.required]]
+            });
+            this._changeDetectionRef.detectChanges();
         });
-        this._changeDetectionRef.detectChanges();
+
     }
 
 }

@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
 
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
@@ -44,6 +45,7 @@ export class RecipeListComponent implements OnInit {
   public queryIngredients: Ingredient[] = [];
   public searchInputPrivate: string = '';
   public searchInputShared: string = '';
+  public tabIdx: number = 0;
   constructor(
     private _authSvc: AuthService,
     private _changeDetectionRef: ChangeDetectorRef,
@@ -57,9 +59,11 @@ export class RecipeListComponent implements OnInit {
 
   private _editRecipe(args: ListViewEventData): void {
     let listview = args.object as RadListView,
-      recipe: Recipe = listview.getSelectedItems()[0];
-    this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key]), 1000);
+      recipe: Recipe = listview.getSelectedItems()[0],
+      navExtras: NavigationExtras = {
+        queryParams: { recipe: JSON.stringify(recipe) }
+      }
+    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key], navExtras), 1000);
   }
 
   public changeQuery(): void {
@@ -130,9 +134,11 @@ export class RecipeListComponent implements OnInit {
 
   public openDetails(args: ListViewEventData): void {
     let listview = args.object as RadListView,
-      recipe: Recipe = listview.getSelectedItems()[0];
-    this._recipeDataSvc.storeRecipe(recipe);
-    setTimeout(() => this._router.navigate(['/recipes', recipe.$key]), 1000);
+      recipe: Recipe = listview.getSelectedItems()[0],
+      navExtras: NavigationExtras = {
+        queryParams: { recipe: JSON.stringify(recipe) }
+      };
+    setTimeout(() => this._router.navigate(['/recipes', recipe.$key], navExtras), 1000);
   }
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
@@ -172,13 +178,12 @@ export class RecipeListComponent implements OnInit {
   }
 
   public showOptions(args: ListViewEventData): void {
-    let
-      options = {
-        title: 'Recipe options',
-        message: 'Choose what to do with your recipe',
-        cancelButtonText: 'Cancel',
-        actions: ['View details', 'Edit recipe', 'Delete recipe']
-      };
+    let options = {
+      title: 'Recipe options',
+      message: 'Choose what to do with your recipe',
+      cancelButtonText: 'Cancel',
+      actions: ['View details', 'Edit recipe', 'Delete recipe']
+    };
     dialogs.action(options).then((result: string) => {
       switch (result) {
         case 'View details':
@@ -194,12 +199,17 @@ export class RecipeListComponent implements OnInit {
     });
   }
 
+  public tabIdxChange(tabIdx: number): void {
+    if (tabIdx === 1 && this.isLoadingShared) {
+      setTimeout(() => this.refreshShared(), 1000);
+    }
+  }
+
   public toggleSearching(): void {
     this.isSearching = !this.isSearching;
   }
 
   ngOnInit(): void {
-    this.refreshPrivate();
-    this.refreshShared();
+    setTimeout(() => this.refreshPrivate(), 3000);
   }
 }

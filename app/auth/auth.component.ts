@@ -67,6 +67,5 @@ export class AuthComponent implements OnInit {
             email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
             password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
         });
-        this._changeDetectionRef.detectChanges();
     }
 }

@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -80,9 +81,11 @@ export class NutrientListComponent implements OnInit {
   }
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
-    let selected: Nutrient = args.object.getSelectedItems()[0];
-    this._nutrientSvc.storeNutrient(selected);
-    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key]), 1000);
+    let selected: Nutrient = args.object.getSelectedItems()[0],
+      navExtras: NavigationExtras = {
+        queryParams: { nutrient: JSON.stringify(selected) }
+      }
+    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key], navExtras), 1000);
   }
 
   public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
@@ -121,12 +124,17 @@ export class NutrientListComponent implements OnInit {
     this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
   }
 
+  public tabIdxChange(tabIdx): void {
+    if (tabIdx === 1 && this.isLoadingMicros) {
+      setTimeout(() => this.refreshMicros(), 1000);
+    }
+  }
+
   public toggleSearching(): void {
     this.isSearching = !this.isSearching;
   }
 
   ngOnInit(): void {
-    this.refreshMacros();
-    this.refreshMicros();
+    setTimeout(() => this.refreshMacros(), 3000);
   }
 }

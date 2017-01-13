@@ -13,15 +13,12 @@
         <Button text="&#xf0b0;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+<TabView #tabView (selectedIndexChanged)="tabIdxChange(tabView.selectedIndex)" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
     <StackLayout *tabItem="{title: 'My recipes'}">
-        <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate"
-            (submit)="searchPrivate(searchTerm.text)"></SearchBar>
+        <SearchBar *ngIf="!isLoadingPrivate && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchPrivate()" [text]="searchInputPrivate" (submit)="searchPrivate(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
-            <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'"
-                [busy]="isLoadingPrivate"></ActivityIndicator>
-            <RadListView [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)" pullToRefresh="true"
-                (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press" (itemSelected)="showOptions($event)">
+            <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingPrivate ? 'visible' : 'collapse'" [busy]="isLoadingPrivate"></ActivityIndicator>
+            <RadListView *ngIf="tabIdx === 0" [items]="filteredPrivate" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMorePrivate($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshPrivate($event)" selectionBehavior="Press" (itemSelected)="showOptions($event)">
                 <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
                 <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
@@ -42,13 +39,10 @@
         </GridLayout>
     </StackLayout>
     <StackLayout *tabItem="{title: 'Other recipes'}">
-        <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchShared()" [text]="searchInputShared"
-            (submit)="searchShared(searchTerm.text)"></SearchBar>
+        <SearchBar *ngIf="!isLoadingShared && isSearching" #searchTerm hint="Search recipe" (clear)="clearSearchShared()" [text]="searchInputShared" (submit)="searchShared(searchTerm.text)"></SearchBar>
         <GridLayout rows="*">
-            <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'"
-                [busy]="isLoadingShared"></ActivityIndicator>
-            <RadListView [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)" pullToRefresh="true"
-                (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+            <ActivityIndicator class="activity-indicator" width="75" height="75" [visibility]="isLoadingShared ? 'visible' : 'collapse'" [busy]="isLoadingShared"></ActivityIndicator>
+            <RadListView *ngIf="tabIdx === 1" [items]="filteredShared" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreShared($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshShared($event)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
                 <ListViewGridLayout *ngIf="gridView" tkListViewLayout scrollDirection="Vertical" itemHeight="250" spanCount="2"></ListViewGridLayout>
                 <ListViewLinearLayout *ngIf="listView" tkListViewLayout scrollDirection="Vertical" itemInsertAnimation="Default" itemDeleteAnimation="Default"></ListViewLinearLayout>
                 <template tkListItemTemplate let-recipe="item">
