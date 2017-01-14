@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscriber } from 'rxjs/Subscriber';
 
+// Nativescript
+import * as connectivity from 'connectivity';
+
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -35,7 +38,8 @@ export class NutrientService {
   }
 
   public getMacronutrients(withFetch?: boolean): Observable<Nutrient> {
-    if (this._macroObserver && !this._macroObserver.closed) {
+    let connectionType = connectivity.getConnectionType();
+    if ((this._macroObserver && !this._macroObserver.closed) || connectionType === connectivity.connectionType.none) {
       this._macroObserver.unsubscribe();
     }
     return new Observable((observer: Subscriber<Nutrient>) => {
@@ -43,7 +47,9 @@ export class NutrientService {
       if (!withFetch && !!this._macronutrients && !!this._macronutrients.length) {
         this._macronutrients.forEach((item: Nutrient) => this._macroObserver.next(item));
       } else {
-        this.keepOnSyncMicronutrients();
+        if (connectionType === connectivity.connectionType.mobile) {
+          this.keepOnSyncMicronutrients();
+        }
         this._macronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
@@ -68,7 +74,8 @@ export class NutrientService {
   }
 
   public getMicronutrients(withFetch?: boolean): Observable<Nutrient> {
-    if (this._microObserver && !this._microObserver.closed) {
+    let connectionType = connectivity.getConnectionType();
+    if ((this._microObserver && !this._microObserver.closed) || connectionType === connectivity.connectionType.none) {
       this._microObserver.unsubscribe();
     }
     return new Observable((observer: Subscriber<Nutrient>) => {
@@ -76,7 +83,9 @@ export class NutrientService {
       if (!withFetch && !!this._micronutrients && !!this._micronutrients.length) {
         this._micronutrients.forEach((item: Nutrient) => this._microObserver.next(item));
       } else {
-        this.keepOnSyncMicronutrients();
+        if (connectionType === connectivity.connectionType.mobile) {
+          this.keepOnSyncMicronutrients();
+        }
         this._micronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {

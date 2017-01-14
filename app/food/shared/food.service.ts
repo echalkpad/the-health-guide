@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscriber } from 'rxjs/Subscriber';
 
+// Nativescript
+import * as connectivity from 'connectivity';
+
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -18,7 +21,8 @@ export class FoodService {
     constructor() { }
 
     public getFoods(withFetch?: boolean): Observable<Food> {
-        if (!!this._foodObserver && !this._foodObserver.closed) {
+        let connectionType = connectivity.getConnectionType();
+        if ((!!this._foodObserver && !this._foodObserver.closed) || connectionType === connectivity.connectionType.none) {
             this._foodObserver.unsubscribe();
         }
         return new Observable((observer: Subscriber<Food>) => {
@@ -26,7 +30,9 @@ export class FoodService {
             if (!withFetch && !!this._foods && !!this._foods.length) {
                 this._foods.forEach((item: Food) => this._foodObserver.next(item));
             } else {
-                this.keepOnSyncFoods();
+                if (connectionType === connectivity.connectionType.mobile) {
+                    this.keepOnSyncFoods();
+                }
                 this._foods = [];
                 firebase.query(
                     (res: firebase.FBData) => {

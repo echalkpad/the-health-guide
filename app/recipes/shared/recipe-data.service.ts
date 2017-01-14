@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscriber } from 'rxjs/Subscriber';
 
+// Nativescript
+import * as connectivity from 'connectivity';
+
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -33,15 +36,18 @@ export class RecipeDataService {
   }
 
   public getPrivateRecipes(withFetch?: boolean): Observable<Recipe> {
+    let connectionType = connectivity.getConnectionType();
     if (this._privateObserver && !this._privateObserver.closed) {
       this._privateObserver.unsubscribe();
     }
     return new Observable((observer: Subscriber<Recipe>) => {
       this._privateObserver = observer;
-      if (!withFetch && !!this._privateRecipes && !!this._privateRecipes.length) {
+      if ((!withFetch && !!this._privateRecipes && !!this._privateRecipes.length) || connectionType === connectivity.connectionType.none) {
         this._privateRecipes.forEach((item: Recipe) => this._privateObserver.next(item));
       } else {
-        this.keepOnSyncPrivate();
+        if (connectionType === connectivity.connectionType.mobile) {
+          this.keepOnSyncPrivate();
+        }
         this._privateRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {
@@ -66,15 +72,18 @@ export class RecipeDataService {
   }
 
   public getSharedRecipes(withFetch?: boolean): Observable<Recipe> {
+    let connectionType = connectivity.getConnectionType();
     if (this._sharedObserver && !this._sharedObserver.closed) {
       this._sharedObserver.unsubscribe();
     }
     return new Observable((observer: Subscriber<Recipe>) => {
       this._sharedObserver = observer;
-      if (!withFetch && !!this._sharedRecipes && !!this._sharedRecipes.length) {
+      if ((!withFetch && !!this._sharedRecipes && !!this._sharedRecipes.length) || connectionType === connectivity.connectionType.none) {
         this._sharedRecipes.forEach((item: Recipe) => this._sharedObserver.next(item));
       } else {
-        this.keepOnSyncShared();
+        if (connectionType === connectivity.connectionType.mobile) {
+          this.keepOnSyncShared();
+        }
         this._sharedRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {

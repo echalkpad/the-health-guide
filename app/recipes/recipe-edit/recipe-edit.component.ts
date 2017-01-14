@@ -5,6 +5,7 @@ import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
+import { ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 import * as dialogs from 'ui/dialogs';
 import { ListPicker } from 'ui/list-picker';
 import { setTimeout } from 'timer';
@@ -120,7 +121,7 @@ export class RecipeEditComponent implements OnInit {
         }
         return new Promise(resolve => {
             dialogs.confirm({
-                title: "Race selection",
+                title: 'Race selection',
                 message: 'Changes have been made! Are you sure you want to leave?',
                 okButtonText: 'Agree',
                 cancelButtonText: 'Disagree'
@@ -130,22 +131,81 @@ export class RecipeEditComponent implements OnInit {
         });
     }
 
-    public changeCategory(picker: ListPicker) {
-        this.selectedCategory = picker.selectedIndex;
-        this.recipe.category = this.categories[this.selectedCategory];
-        this._isDirty = true;
-    }
+    public changeDetail(detail: string): void {
+        let options: dialogs.ActionOptions | dialogs.PromptOptions;
+        switch (detail) {
+            case 'name':
+                options = {
+                    title: 'Recipe name',
+                    defaultText: this.recipe.name,
+                    inputType: dialogs.inputType.text,
+                    okButtonText: 'Ok',
+                    cancelButtonText: 'Cancel'
+                };
+                dialogs.prompt(options).then((result: dialogs.PromptResult) => {
+                    if (result.text !== 'Cancel') {
+                        this.recipe.name = result.text;
+                    }
+                });
+                break;
+            case 'description':
+                options = {
+                    title: 'Recipe description',
+                    defaultText: this.recipe.description,
+                    inputType: dialogs.inputType.text,
+                    okButtonText: 'Ok',
+                    cancelButtonText: 'Cancel'
+                };
+                dialogs.prompt(options).then((result: dialogs.PromptResult) => {
+                    if (result.text !== 'Cancel') {
+                        this.recipe.description = result.text;
+                    }
+                });
+                break;
+            case 'difficulty':
+                options = {
+                    title: 'Recipe difficulty',
+                    message: 'Choose the cooking difficulty',
+                    cancelButtonText: 'Cancel',
+                    actions: [...this.difficulties]
+                };
+                dialogs.action(options).then((result: string) => {
+                    if (result !== 'Cancel') {
+                        this.recipe.difficulty = result;
+                    }
+                });
+                break;
+            case 'cookMethod':
+                options = {
+                    title: 'Recipe cook method',
+                    message: 'Choose the cooking method',
+                    cancelButtonText: 'Cancel',
+                    actions: [...this.cookMethods]
+                };
+                dialogs.action(options).then((result: string) => {
+                    if (result !== 'Cancel') {
+                        this.recipe.cookMethod = result;
+                    }
+                });
+                break;
+            case 'category':
+                options = {
+                    title: 'Recipe category',
+                    message: 'Choose the recipe category',
+                    cancelButtonText: 'Cancel',
+                    actions: [...this.categories]
+                };
+                dialogs.action(options).then((result: string) => {
+                    if (result !== 'Cancel') {
+                        this.recipe.category = result;
+                    }
+                });
+                break;
 
-    public changeCookMethod(picker: ListPicker) {
-        this.selectedCookMethod = picker.selectedIndex;
-        this.recipe.cookMethod = this.cookMethods[this.selectedCookMethod];
-        this._isDirty = true;
-    }
-
-    public changeDifficulty(picker: ListPicker) {
-        this.selectedDifficulty = picker.selectedIndex;
-        this.recipe.difficulty = this.difficulties[this.selectedDifficulty];
-        this._isDirty = true;
+            default:
+                break;
+        }
+        this._changeDetectionRef.detectChanges();
     }
 
     public goBack(): void {
@@ -174,7 +234,8 @@ export class RecipeEditComponent implements OnInit {
             this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
             this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-            this.recipeForm = this._fb.group({
+            /**
+             * this.recipeForm = this._fb.group({
                 name: [this.recipe.name, [Validators.required, Validators.maxLength(20)]],
                 description: [this.recipe.description, [Validators.required, Validators.maxLength(100)]],
                 cookTemperature: [this.recipe.cookTemperature, [Validators.required]],
@@ -184,6 +245,7 @@ export class RecipeEditComponent implements OnInit {
                 cookMethod: [this.recipe.cookMethod, [Validators.required]],
                 category: [this.recipe.category, [Validators.required]]
             });
+             */
             this._changeDetectionRef.detectChanges();
         });
 

@@ -4,9 +4,128 @@
         <Button text="&#xf067;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<TabView [(ngModel)]="tabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+<TabView [(ngModel)]="tabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)"
+    tabBackgroundColor="#151F2F">
     <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
-        <FlexboxLayout flexDirection="column" class="form" [formGroup]="recipeForm">
+        <FlexboxLayout flexDirection="column" class="list-group">
+            <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="changeDetail('name')">
+                <StackLayout col="0" verticalAlignment="center">
+                    <Label class="list-group-item-heading" textWrap="true" text="Name"></Label>
+                    <Label class="list-group-item-text" textWrap="true" [text]="recipe.name"></Label>
+                </StackLayout>
+                <Label col="1" text="Edit" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="changeDetail('description')">
+                <StackLayout col="0" verticalAlignment="center">
+                    <Label class="list-group-item-heading" textWrap="true" text="Description"></Label>
+                    <Label class="list-group-item-text" textWrap="true" [text]="recipe.description"></Label>
+                </StackLayout>
+                <Label col="1" text="Edit" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="changeDetail('category')">
+                <StackLayout col="0" verticalAlignment="center">
+                    <Label class="list-group-item-heading" textWrap="true" text="Category"></Label>
+                    <Label class="list-group-item-text" textWrap="true" [text]="recipe.category"></Label>
+                </StackLayout>
+                <Label col="1" text="Edit" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="changeDetail('difficulty')">
+                <StackLayout col="0" verticalAlignment="center">
+                    <Label class="list-group-item-heading" textWrap="true" text="Difficulty"></Label>
+                    <Label class="list-group-item-text" textWrap="true" [text]="recipe.difficulty"></Label>
+                </StackLayout>
+                <Label col="1" text="Edit" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="auto, *">
+                <GridLayout row="0" rows="*" columns="auto, *" verticalAlignment="center">
+                    <Label col="0" class="list-group-item-heading" textWrap="true" text="Cooking temperature"></Label>
+                    <Label col="1" class="list-group-item-text text-right footnote" textWrap="true" text="{{recipe.cookTemperature}}°C"></Label>
+                </GridLayout>
+                <GridLayout row="1" rows="*" columns="auto, *, auto" verticalAlignment="center">
+                    <Label col="0" text="&#xf2c8;" textWrap="true" fontSize="15" class="fa text-left footnote" verticalAlignment="center"></Label>
+                    <Slider col="1" minValue="0" maxValue="250" [(ngModel)]="recipe.cookTemperature" verticalAlignment="center"></Slider>
+                    <Label col="2" text="&#xf2c8;" textWrap="true" fontSize="20" class="fa text-right footnote" verticalAlignment="center"></Label>
+                </GridLayout>
+            </GridLayout>
+        </FlexboxLayout>
+    </ScrollView>
+    <StackLayout #tabViewItem *tabItem="{title: 'Ingredients'}">
+        <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
+            <template let-ingredient="item" let-index="index">
+                <GridLayout class="list-group-item" rows="auto" columns="30, *, auto, 10" isUserInteractionEnabled="false">
+                    <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeIngredient(index)" verticalAlignment="center"></Label>
+                    <Label col="1" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
+                    <TextField col="2" [(ngModel)]="ingredient.quantity" hint="Grams" keyboardType="number" autocorrect="false" autocapitalizationType="none"
+                        class="text-muted text-right footnote" verticalAlignment="center" returnKeyType="done"></TextField>
+                    <Label col="3" textWrap="true" text="g" class="text-muted text-left footnote" verticalAlignment="center"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout #tabViewItem *tabItem="{title: 'Instructions'}">
+        <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
+            <template let-step="item" let-index="index">
+                <GridLayout class="list-group-item" rows="*" columns="30, *" isUserInteractionEnabled="false">
+                    <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeInstruction(index)" verticalAlignment="center"></Label>
+                    <StackLayout col="1" class="input-field">
+                        <Label text="Step {{index + 1}}" class="label" textWrap="true" verticalAlignment="center"></Label>
+                        <TextField [(ngModel)]="recipe.instructions[index]" hint="Step {{index}}" keyboardType="text" autocorrect="false" autocapitalizationType="none"
+                            class="body" verticalAlignment="center" returnKeyType="done"></TextField>
+                    </StackLayout>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Basic nutrition'}">
+        <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
+            <template let-basic="item" let-index="index">
+                <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+                    <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
+                    <Label col="1" textWrap="true" text="{{recipe.nutrition[basic].toFixed(2)}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote"
+                        verticalAlignment="center"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Amino acids'}">
+        <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
+            <template let-aa="item">
+                <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+                    <Label col="0" textWrap="true" [text]="aa" class="list-group-item-heading" verticalAlignment="center"></Label>
+                    <Label col="1" textWrap="true" text="{{recipe.nutrition['amino acids'][aa].toFixed(3)}}g" class="text-muted text-right footnote"
+                        verticalAlignment="center"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Minerals'}">
+        <ListView class="list-group" [items]="minerals" separatorColor="cyan">
+            <template let-mineral="item">
+                <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+                    <Label col="0" textWrap="true" [text]="mineral" class="list-group-item-heading" verticalAlignment="center"></Label>
+                    <Label col="1" textWrap="true" text="{{recipe.nutrition.minerals[mineral].toFixed(3)}}mg" class="text-muted text-right footnote"
+                        verticalAlignment="center"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Vitamins'}">
+        <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
+            <template let-vitamin="item">
+                <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
+                    <Label col="0" textWrap="true" [text]="vitamin" class="list-group-item-heading" verticalAlignment="center"></Label>
+                    <Label col="1" textWrap="true" text="{{recipe.nutrition.vitamins[vitamin].toFixed(3)}}mg" class="text-muted text-right footnote"
+                        verticalAlignment="center"></Label>
+                </GridLayout>
+            </template>
+        </ListView>
+    </StackLayout>
+</TabView>
+
+
+
+<!--
+    <FlexboxLayout flexDirection="column" class="form" [formGroup]="recipeForm">
             <StackLayout class="input-field">
                 <Label *ngIf="recipe.name.length" text="&#xf2bc; Name" class="label fa" textWrap="true"></Label>
                 <TextField hint="&#xf2bc; Name" name="name" [(ngModel)]="recipe.name" id="name" formControlName="name" keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done" class="input">
@@ -56,76 +175,5 @@
                 </ListPicker>
             </GridLayout>
         </FlexboxLayout>
-    </ScrollView>
-    <StackLayout #tabViewItem *tabItem="{title: 'Ingredients'}">
-        <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
-            <template let-ingredient="item" let-index="index">
-        <GridLayout class="list-group-item" rows="auto" columns="30, *, auto, 10" isUserInteractionEnabled="false">
-          <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeIngredient(index)" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <TextField col="2" [(ngModel)]="ingredient.quantity" hint="Grams" keyboardType="number" autocorrect="false" autocapitalizationType="none"
-            class="text-muted text-right footnote" verticalAlignment="center" returnKeyType="done"></TextField>
-          <Label col="3" textWrap="true" text="g" class="text-muted text-left footnote" verticalAlignment="center"></Label>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout #tabViewItem *tabItem="{title: 'Instructions'}">
-        <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
-            <template let-step="item" let-index="index">
-        <GridLayout class="list-group-item" rows="*" columns="30, *" isUserInteractionEnabled="false">
-          <Label col="0" color="red" class="fa text-left" text="&#xf014;" (tap)="removeInstruction(index)" verticalAlignment="center"></Label>
-          <StackLayout col="1" class="input-field">
-            <Label text="Step {{index + 1}}" class="label" textWrap="true" verticalAlignment="center"></Label>
-            <TextField [(ngModel)]="recipe.instructions[index]" hint="Step {{index}}" keyboardType="text" autocorrect="false" autocapitalizationType="none"
-              class="body" verticalAlignment="center" returnKeyType="done"></TextField>
-          </StackLayout>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Basic nutrition'}">
-        <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
-            <template let-basic="item" let-index="index">
-        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{recipe.nutrition[basic].toFixed(2)}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote"
-            verticalAlignment="center"></Label>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Amino acids'}">
-        <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
-            <template let-aa="item">
-        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="aa" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{recipe.nutrition['amino acids'][aa].toFixed(3)}}g" class="text-muted text-right footnote"
-            verticalAlignment="center"></Label>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Minerals'}">
-        <ListView class="list-group" [items]="minerals" separatorColor="cyan">
-            <template let-mineral="item">
-        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="mineral" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{recipe.nutrition.minerals[mineral].toFixed(3)}}mg" class="text-muted text-right footnote"
-            verticalAlignment="center"></Label>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Vitamins'}">
-        <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
-            <template let-vitamin="item">
-        <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
-          <Label col="0" textWrap="true" [text]="vitamin" class="list-group-item-heading" verticalAlignment="center"></Label>
-          <Label col="1" textWrap="true" text="{{recipe.nutrition.vitamins[vitamin].toFixed(3)}}mg" class="text-muted text-right footnote"
-            verticalAlignment="center"></Label>
-        </GridLayout>
-      </template>
-        </ListView>
-    </StackLayout>
-</TabView>
+
+        -->

@@ -58,6 +58,7 @@ export class AuthComponent implements OnInit {
             }, 1000);
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
+            this.isLoading = false;
         });
     }
 

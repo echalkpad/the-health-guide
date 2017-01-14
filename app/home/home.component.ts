@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 
 // THG
 import { DrawerService } from '../shared';
@@ -12,7 +12,7 @@ import { DrawerService } from '../shared';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent implements OnInit {
-   
+
     constructor(private _changeDetectionRef: ChangeDetectorRef, public drawerSvc: DrawerService) { }
 
     ngOnInit(): void {
