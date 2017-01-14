@@ -137,7 +137,7 @@ export class RecipeEditComponent implements OnInit {
             case 'name':
                 options = {
                     title: 'Recipe name',
-                    defaultText: this.recipe.name,
+                    defaultText: this.recipe.name.toString(),
                     inputType: dialogs.inputType.text,
                     okButtonText: 'Ok',
                     cancelButtonText: 'Cancel'
@@ -151,7 +151,7 @@ export class RecipeEditComponent implements OnInit {
             case 'description':
                 options = {
                     title: 'Recipe description',
-                    defaultText: this.recipe.description,
+                    defaultText: this.recipe.description.toString(),
                     inputType: dialogs.inputType.text,
                     okButtonText: 'Ok',
                     cancelButtonText: 'Cancel'
@@ -205,7 +205,7 @@ export class RecipeEditComponent implements OnInit {
             default:
                 break;
         }
-        this._changeDetectionRef.detectChanges();
+        this._changeDetectionRef.markForCheck();
     }
 
     public goBack(): void {
