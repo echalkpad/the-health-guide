@@ -13,6 +13,7 @@ import * as firebase from 'nativescript-plugin-firebase';
 
 // THG
 import { Food } from './food.model';
+import { MAX_SAFE_INTEGER } from '../../shared'
 
 @Injectable()
 export class FoodService {
@@ -20,27 +21,37 @@ export class FoodService {
     private _foodObserver: Subscriber<Food>;
     constructor() { }
 
-    public getFoods(withFetch?: boolean): Observable<Food> {
+    public filterFoodByName(food: Food, searchTerm: string): boolean {
+        console.log(food.name);
+        return food.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1;
+    }
+
+    public getFoods(limit: number, searchTerm: string, withFetch?: boolean): Observable<Food> {
         let connectionType = connectivity.getConnectionType();
-        if ((!!this._foodObserver && !this._foodObserver.closed) || connectionType === connectivity.connectionType.none) {
-            this._foodObserver.unsubscribe();
-        }
+        limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+
         return new Observable((observer: Subscriber<Food>) => {
             this._foodObserver = observer;
-            if (!withFetch && !!this._foods && !!this._foods.length) {
+            if (!!this._foods && (!withFetch || connectionType === connectivity.connectionType.none)) {
                 this._foods.forEach((item: Food) => this._foodObserver.next(item));
             } else {
-                if (connectionType === connectivity.connectionType.mobile) {
-                    this.keepOnSyncFoods();
-                }
+                this.keepOnSyncFoods();
                 this._foods = [];
                 firebase.query(
                     (res: firebase.FBData) => {
                         if (res.hasOwnProperty('error')) {
                             this._foodObserver.error(res['error']);
-                        } else if (res.type === 'ChildAdded') {
+                        } else if (res.type === 'ChildAdded' && this._foods.length < limit && this.filterFoodByName(res.value, searchTerm)) {
                             this._foods.push(res.value);
                             this._foodObserver.next(res.value);
+                        } else if (this._foods.length === limit) {
+                            this._foodObserver.complete();
+                        } else if (limit === MAX_SAFE_INTEGER) {
+                            setTimeout(() => {
+                                if (!this._foodObserver.closed) {
+                                    this._foodObserver.complete();
+                                }
+                            }, 10000);
                         }
                     },
                     '/foods',
@@ -49,6 +60,10 @@ export class FoodService {
                         orderBy: {
                             type: firebase.QueryOrderByType.CHILD,
                             value: 'name'
+                        },
+                        limit: {
+                            type: firebase.QueryLimitType.FIRST,
+                            value: limit
                         }
                     }
                 );
@@ -65,5 +80,11 @@ export class FoodService {
                 console.log('firebase.keepInSync error: ' + error);
             }
         );
+    }
+
+    public unsubscribeFoods(): void {
+        if (!!this._foodObserver && this._foodObserver.closed) {
+            this._foodObserver.unsubscribe();
+        }
     }
 }

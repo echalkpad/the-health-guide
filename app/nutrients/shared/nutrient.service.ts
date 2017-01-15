@@ -22,7 +22,21 @@ export class NutrientService {
   private _microObserver: Subscriber<Nutrient>;
   constructor() { }
 
-  public filterNutrient(nutrients: Nutrient[], query: string, searchTerm: string): Nutrient[] {
+  public filterNutrient(nutrient: Nutrient, query: string, searchTerm: string): boolean {
+    let match: boolean = false;
+    if (typeof nutrient[query] === 'object') {
+      nutrient[query].forEach((prop: string) => {
+        if (prop.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+          match = true;
+        }
+      });
+      return match;
+    }
+
+    return nutrient[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+  }
+
+  public filterNutrients(nutrients: Nutrient[], query: string, searchTerm: string): Nutrient[] {
     return nutrients.filter((item: Nutrient) => {
       let match: boolean = false;
       if (typeof item[query] === 'object') {
@@ -37,27 +51,26 @@ export class NutrientService {
     });
   }
 
-  public getMacronutrients(withFetch?: boolean): Observable<Nutrient> {
-    let connectionType = connectivity.getConnectionType();
-    if ((this._macroObserver && !this._macroObserver.closed) || connectionType === connectivity.connectionType.none) {
-      this._macroObserver.unsubscribe();
-    }
+  public getMacronutrients(query: string, searchTerm: string, withFetch?: boolean): Observable<Nutrient> {
+    let connectionType = connectivity.getConnectionType(),
+      limit: number = 50;
+
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._macroObserver = observer;
-      if (!withFetch && !!this._macronutrients && !!this._macronutrients.length) {
+      if (!!this._macronutrients && (!withFetch || connectivity.connectionType.none)) {
         this._macronutrients.forEach((item: Nutrient) => this._macroObserver.next(item));
       } else {
-        if (connectionType === connectivity.connectionType.mobile) {
-          this.keepOnSyncMicronutrients();
-        }
+        this.keepOnSyncMicronutrients();
         this._macronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._macroObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded') {
+            } else if (res.type === 'ChildAdded' && this._macronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
               this._macronutrients.push(res.value);
               this._macroObserver.next(res.value);
+            } else if (this._macronutrients.length === limit) {
+              this._macroObserver.complete();
             }
           },
           '/macronutrients',
@@ -66,6 +79,10 @@ export class NutrientService {
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
+            },
+            limit: {
+              type: firebase.QueryLimitType.FIRST,
+              value: limit
             }
           }
         );
@@ -73,27 +90,26 @@ export class NutrientService {
     });
   }
 
-  public getMicronutrients(withFetch?: boolean): Observable<Nutrient> {
-    let connectionType = connectivity.getConnectionType();
-    if ((this._microObserver && !this._microObserver.closed) || connectionType === connectivity.connectionType.none) {
-      this._microObserver.unsubscribe();
-    }
+  public getMicronutrients(query: string, searchTerm: string, withFetch?: boolean): Observable<Nutrient> {
+    let connectionType = connectivity.getConnectionType(),
+      limit: number = 50;
+
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._microObserver = observer;
-      if (!withFetch && !!this._micronutrients && !!this._micronutrients.length) {
+      if (!!this._micronutrients && (!withFetch || connectivity.connectionType.none)) {
         this._micronutrients.forEach((item: Nutrient) => this._microObserver.next(item));
       } else {
-        if (connectionType === connectivity.connectionType.mobile) {
-          this.keepOnSyncMicronutrients();
-        }
+        this.keepOnSyncMicronutrients();
         this._micronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._microObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded') {
+            } else if (res.type === 'ChildAdded' && this._micronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
               this._micronutrients.push(res.value);
               this._microObserver.next(res.value);
+            } else if (this._micronutrients.length === limit) {
+              this._microObserver.complete();
             }
           },
           '/micronutrients',
@@ -102,6 +118,10 @@ export class NutrientService {
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
+            },
+            limit: {
+              type: firebase.QueryLimitType.FIRST,
+              value: limit
             }
           }
         );
@@ -129,6 +149,15 @@ export class NutrientService {
         console.log("firebase.keepInSync error: " + error);
       }
     );
+  }
+
+  public unsubscribeNutrients(): void {
+    if (!!this._macroObserver && this._macroObserver.closed) {
+      this._macroObserver.unsubscribe();
+    }
+    if (!!this._microObserver && this._microObserver.closed) {
+      this._microObserver.unsubscribe();
+    }
   }
 
 }

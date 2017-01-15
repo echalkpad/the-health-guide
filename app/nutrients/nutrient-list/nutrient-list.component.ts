@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Nativescript
@@ -20,7 +20,7 @@ import { NutrientService } from '../shared/nutrient.service';
   styleUrls: ['nutrient-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NutrientListComponent implements OnInit {
+export class NutrientListComponent implements OnDestroy, OnInit {
   private _macronutrients: Nutrient[];
   private _micronutrients: Nutrient[];
   public filteredMacronutrients: Nutrient[];
@@ -29,8 +29,8 @@ export class NutrientListComponent implements OnInit {
   public isLoadingMicros: boolean = true;
   public isSearching: boolean = false;
   public query: string = 'name';
-  public searchInputMacros: string = '';
-  public searchInputMicros: string = '';
+  public searchInputMacros: string;
+  public searchInputMicros: string;
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
@@ -72,12 +72,14 @@ export class NutrientListComponent implements OnInit {
 
   public clearSearchMacros(): void {
     this.searchInputMacros = '';
-    this.filteredMacronutrients = [...this._macronutrients];
+    //this.filteredMacronutrients = [...this._macronutrients];
+    this.refreshMacros(null, true);
   }
 
   public clearSearchMicros(): void {
     this.searchInputMicros = '';
-    this.filteredMicronutrients = [...this._micronutrients];
+    //this.filteredMicronutrients = [...this._micronutrients];
+    this.refreshMacros(null, true);
   }
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
@@ -90,7 +92,7 @@ export class NutrientListComponent implements OnInit {
 
   public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
     this._macronutrients = [];
-    this._nutrientSvc.getMacronutrients(withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
+    this._nutrientSvc.getMacronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
     setTimeout(() => {
       this.filteredMacronutrients = [...this._helperSvc.sortByName(this._macronutrients)];
       if (args) {
@@ -104,7 +106,7 @@ export class NutrientListComponent implements OnInit {
 
   public refreshMicros(args?: ListViewEventData, withFetch?: boolean): void {
     this._micronutrients = [];
-    this._nutrientSvc.getMicronutrients(withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
+    this._nutrientSvc.getMicronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
     setTimeout(() => {
       this.filteredMicronutrients = [...this._helperSvc.sortByName(this._micronutrients)];
       if (args) {
@@ -117,11 +119,15 @@ export class NutrientListComponent implements OnInit {
   }
 
   public searchMacros(searchTerm: string): void {
-    this.filteredMacronutrients = this._nutrientSvc.filterNutrient(this._macronutrients, this.query, searchTerm);
+    //this.filteredMacronutrients = this._nutrientSvc.filterNutrient(this._macronutrients, this.query, searchTerm);
+    this.searchInputMacros = searchTerm;
+    this.refreshMacros(null, true);
   }
 
   public searchMicros(searchTerm: string): void {
-    this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
+    //this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
+    this.searchInputMicros = searchTerm;
+    this.refreshMicros(null, true);
   }
 
   public tabIdxChange(tabIdx): void {
@@ -135,6 +141,13 @@ export class NutrientListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.searchInputMacros = '';
+    this.searchInputMicros = '';
     setTimeout(() => this.refreshMacros(), 3000);
+  }
+
+  ngOnDestroy(): void {
+    this._changeDetectionRef.detach();
+    this._nutrientSvc.unsubscribeNutrients();
   }
 }

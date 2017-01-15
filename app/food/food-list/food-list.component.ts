@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from "@angular/core";
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Nativescript
@@ -21,13 +21,13 @@ import { FoodService } from '../shared/food.service';
   styleUrls: ['food-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FoodListComponent implements OnInit {
+export class FoodListComponent implements OnDestroy, OnInit {
   private _foods: Food[] = [];
   private _foodLimit: number = 10;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
   public filteredFoods: Food[];
-  public searchInput: string = '';
+  public searchInput: string;
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
@@ -38,22 +38,25 @@ export class FoodListComponent implements OnInit {
 
   public clearSearch(): void {
     this.searchInput = '';
-    this.filteredFoods = [...this._foods.slice(0, this._foodLimit)];
+    //this.filteredFoods = [...this._foods.slice(0, this._foodLimit)];
+    this.refreshFoods(null, true);
   }
 
   public loadMoreFoods(args: ListViewEventData): void {
     this._foodLimit += 10;
-    this.filteredFoods = [...this._foods.slice(0, this._foodLimit)];
-    args.object.notifyLoadOnDemandFinished();
-    args.returnValue = true;
-    if (this.filteredFoods.length > 10) {
-      setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
-    }
+    this.refreshFoods(null, true);
+    setTimeout(() => {
+      args.object.notifyLoadOnDemandFinished();
+      args.returnValue = true;
+      if (this.filteredFoods.length > 10) {
+        setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
+      }
+    }, 5000);
   }
 
   public openDetails(args?: ListViewEventData): void {
     let selected: Food = args.object.getSelectedItems()[0],
-    navExtras: NavigationExtras = {
+      navExtras: NavigationExtras = {
         queryParams: { food: JSON.stringify(selected) }
       };
     setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 1000);
@@ -61,7 +64,7 @@ export class FoodListComponent implements OnInit {
 
   public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
     this._foods = [];
-    this._foodSvc.getFoods(withFetch).subscribe((data: Food) => this._foods.push(data));
+    this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this._foods.push(data));
     setTimeout(() => {
       this.filteredFoods = [...this._helperSvc.sortByName(this._foods).slice(0, this._foodLimit)];
       if (args) {
@@ -74,7 +77,9 @@ export class FoodListComponent implements OnInit {
   }
 
   public searchFood(searchTerm: string): void {
-    this.filteredFoods = [...this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit)];
+    //this.filteredFoods = [...this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit)];
+    this.searchInput = searchTerm;
+    this.refreshFoods(null, true);
   }
 
   public toggleSearching(): void {
@@ -82,6 +87,12 @@ export class FoodListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.searchInput = '';
     setTimeout(() => this.refreshFoods(), 3000);
+  }
+
+  ngOnDestroy(): void {
+    this._changeDetectionRef.detach();
+    this._foodSvc.unsubscribeFoods();
   }
 }

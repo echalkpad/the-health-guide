@@ -15,6 +15,8 @@ import * as firebase from 'nativescript-plugin-firebase';
 import { DataService } from '../../shared';
 import { HelperService } from '../../shared';
 import { Ingredient, Recipe } from './recipe.model';
+import { RecipeService } from './recipe.service';
+import { MAX_SAFE_INTEGER } from '../../shared'
 import { Nutrition } from '../../shared/nutrition.model';
 
 const recipeImgUrl: string = 'https://firebasestorage.googleapis.com/v0/b/the-health-guide.appspot.com/o/recipes%2Frecipe.jpg?alt=media&token=c645fc32-7273-43f5-a198-33b8a041a719';
@@ -27,7 +29,7 @@ export class RecipeDataService {
   private _privateRecipes: Recipe[];
   private _sharedObserver: Subscriber<Recipe>;
   private _sharedRecipes: Recipe[];
-  constructor(private _dataSvc: DataService, private _helperSvc: HelperService) {
+  constructor(private _dataSvc: DataService, private _helperSvc: HelperService, private _recipeSvc: RecipeService) {
     this._auth = _dataSvc.getAuth().id;
   }
 
@@ -35,27 +37,32 @@ export class RecipeDataService {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(withFetch?: boolean): Observable<Recipe> {
+  public getPrivateRecipes(limit: number, query: string, searchTerm: string, ingredients?: Ingredient[], withFetch?: boolean): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
-    if (this._privateObserver && !this._privateObserver.closed) {
-      this._privateObserver.unsubscribe();
-    }
+    limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+
     return new Observable((observer: Subscriber<Recipe>) => {
       this._privateObserver = observer;
-      if ((!withFetch && !!this._privateRecipes && !!this._privateRecipes.length) || connectionType === connectivity.connectionType.none) {
+      if (!!this._privateRecipes && (!withFetch || connectionType === connectivity.connectionType.none)) {
         this._privateRecipes.forEach((item: Recipe) => this._privateObserver.next(item));
       } else {
-        if (connectionType === connectivity.connectionType.mobile) {
-          this.keepOnSyncPrivate();
-        }
+        this.keepOnSyncPrivate();
         this._privateRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._privateObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded') {
+            } else if (res.type === 'ChildAdded' && this._privateRecipes.length < limit && this._recipeSvc.filterRecipe(res.value, query, searchTerm, ingredients)) {
               this._privateRecipes.push(res.value);
               this._privateObserver.next(res.value);
+            } else if (this._privateRecipes.length === limit) {
+              this._privateObserver.complete();
+            } else if (limit === MAX_SAFE_INTEGER) {
+              setTimeout(() => {
+                if (!this._privateObserver.closed) {
+                  this._privateObserver.complete();
+                }
+              }, 10000);
             }
           },
           `recipes/${this._auth}`,
@@ -64,6 +71,10 @@ export class RecipeDataService {
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
+            },
+            limit: {
+              type: firebase.QueryLimitType.FIRST,
+              value: limit
             }
           }
         );
@@ -71,27 +82,32 @@ export class RecipeDataService {
     });
   }
 
-  public getSharedRecipes(withFetch?: boolean): Observable<Recipe> {
+  public getSharedRecipes(limit: number, query: string, searchTerm: string, ingredients?: Ingredient[], withFetch?: boolean): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
-    if (this._sharedObserver && !this._sharedObserver.closed) {
-      this._sharedObserver.unsubscribe();
-    }
+    limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+
     return new Observable((observer: Subscriber<Recipe>) => {
       this._sharedObserver = observer;
-      if ((!withFetch && !!this._sharedRecipes && !!this._sharedRecipes.length) || connectionType === connectivity.connectionType.none) {
+      if (!!this._sharedRecipes && (!withFetch || connectionType === connectivity.connectionType.none)) {
         this._sharedRecipes.forEach((item: Recipe) => this._sharedObserver.next(item));
       } else {
-        if (connectionType === connectivity.connectionType.mobile) {
-          this.keepOnSyncShared();
-        }
+        this.keepOnSyncShared();
         this._sharedRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._sharedObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded') {
+            } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.filterRecipe(res.value, query, searchTerm, ingredients)) {
               this._sharedRecipes.push(res.value);
               this._sharedObserver.next(res.value);
+            } else if (this._sharedRecipes.length === limit) {
+              this._sharedObserver.complete();
+            } else if (limit === MAX_SAFE_INTEGER) {
+              setTimeout(() => {
+                if (!this._sharedObserver.closed) {
+                  this._sharedObserver.complete();
+                }
+              }, 10000);
             }
           },
           `recipes/${this._auth}`,
@@ -100,6 +116,10 @@ export class RecipeDataService {
             orderBy: {
               type: firebase.QueryOrderByType.CHILD,
               value: 'name'
+            },
+            limit: {
+              type: firebase.QueryLimitType.FIRST,
+              value: limit
             }
           }
         );
@@ -131,6 +151,15 @@ export class RecipeDataService {
 
   public storeIngredients(ingredients: Ingredient[]): void {
     this._ingredients = ingredients;
+  }
+
+  public unsubscribeRecipes(): void {
+    if (!!this._privateObserver && this._privateObserver.closed) {
+      this._privateObserver.unsubscribe();
+    }
+    if (!!this._sharedObserver && this._sharedObserver.closed) {
+      this._sharedObserver.unsubscribe();
+    }
   }
 
 }

@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 
+export const MAX_SAFE_INTEGER: number = 900719925474099;
+
 @Injectable()
 export class HelperService {
   constructor() { }
