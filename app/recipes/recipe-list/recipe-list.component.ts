@@ -43,8 +43,8 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public listView: boolean = true;
   public query: string = 'name';
   public queryIngredients: Ingredient[] = [];
-  public searchInputPrivate: string;
-  public searchInputShared: string;
+  public searchInputPrivate: string = '';
+  public searchInputShared: string = '';
   public tabIdx: number = 0;
   constructor(
     private _authSvc: AuthService,
@@ -223,8 +223,6 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    this.searchInputPrivate = '';
-    this.searchInputShared = '';
     setTimeout(() => this.refreshPrivate(), 3000);
   }
 

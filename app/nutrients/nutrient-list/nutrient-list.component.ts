@@ -29,8 +29,8 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public isLoadingMicros: boolean = true;
   public isSearching: boolean = false;
   public query: string = 'name';
-  public searchInputMacros: string;
-  public searchInputMicros: string;
+  public searchInputMacros: string = '';
+  public searchInputMicros: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
@@ -141,8 +141,6 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    this.searchInputMacros = '';
-    this.searchInputMicros = '';
     setTimeout(() => this.refreshMacros(), 3000);
   }
 

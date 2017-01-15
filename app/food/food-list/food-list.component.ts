@@ -27,7 +27,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public isLoading: boolean = true;
   public isSearching: boolean = false;
   public filteredFoods: Food[];
-  public searchInput: string;
+  public searchInput: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
@@ -87,7 +87,6 @@ export class FoodListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    this.searchInput = '';
     setTimeout(() => this.refreshFoods(), 3000);
   }
 

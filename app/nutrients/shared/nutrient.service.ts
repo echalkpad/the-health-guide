@@ -152,10 +152,10 @@ export class NutrientService {
   }
 
   public unsubscribeNutrients(): void {
-    if (!!this._macroObserver && this._macroObserver.closed) {
+    if (!!this._macroObserver && !this._macroObserver.closed) {
       this._macroObserver.unsubscribe();
     }
-    if (!!this._microObserver && this._microObserver.closed) {
+    if (!!this._microObserver && !this._microObserver.closed) {
       this._microObserver.unsubscribe();
     }
   }
