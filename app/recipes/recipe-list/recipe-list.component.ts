@@ -16,7 +16,8 @@ import { setTimeout } from 'timer';
 // THG
 import { AuthService } from '../../auth';
 import { DrawerService, HelperService } from '../../shared';
-import { MealSearchComponent, MealSearchService } from '../../meal-search';
+import { MealSearchComponent } from '../../meal-search';
+//import { MealSearchService } from '../../meal-search/meal-search.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -49,7 +50,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     private _authSvc: AuthService,
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
-    private _mealSearchSvc: MealSearchService,
+    //private _mealSearchSvc: MealSearchService,
     private _modalSvc: ModalDialogService,
     private _recipeDataSvc: RecipeDataService,
     private _recipeSvc: RecipeService,
@@ -83,12 +84,14 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
+          /*
           this._mealSearchSvc.saveSelections(this.queryIngredients);
           let navExtras: NavigationExtras = {
             queryParams: { meals: JSON.stringify(this.queryIngredients) }
           };
           this._router.navigate(['/meal-search'], navExtras);
-          /*
+          */
+          
           let options: ModalDialogOptions = {
             viewContainerRef: this._viewRef,
             context: {
@@ -99,7 +102,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
         this._modalSvc.showModal(MealSearchComponent, options)
             .then((ingredients: Ingredient[]) => this.queryIngredients = [...ingredients]);
-            */
+            
           break;
 
         default:
@@ -240,7 +243,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    this.queryIngredients = this._mealSearchSvc.getSelections();
+    //this.queryIngredients = this._mealSearchSvc.getSelections();
     setTimeout(() => this.refreshPrivate(), 3000);
   }
 

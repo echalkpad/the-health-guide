@@ -57,7 +57,7 @@ export class NutrientService {
 
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._macroObserver = observer;
-      if (!!this._macronutrients && (!withFetch || connectivity.connectionType.none)) {
+      if (!!this._macronutrients && !withFetch) {
         this._macronutrients.forEach((item: Nutrient) => this._macroObserver.next(item));
       } else {
         this.keepOnSyncMicronutrients();
@@ -96,7 +96,7 @@ export class NutrientService {
 
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._microObserver = observer;
-      if (!!this._micronutrients && (!withFetch || connectivity.connectionType.none)) {
+      if (!!this._micronutrients && !withFetch) {
         this._micronutrients.forEach((item: Nutrient) => this._microObserver.next(item));
       } else {
         this.keepOnSyncMicronutrients();

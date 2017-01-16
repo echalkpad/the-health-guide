@@ -32,7 +32,7 @@ export class FoodService {
 
         return new Observable((observer: Subscriber<Food>) => {
             this._foodObserver = observer;
-            if (!!this._foods && (!withFetch || connectionType === connectivity.connectionType.none)) {
+            if (!!this._foods && !withFetch) {
                 this._foods.forEach((item: Food) => this._foodObserver.next(item));
             } else {
                 this.keepOnSyncFoods();
@@ -46,12 +46,6 @@ export class FoodService {
                             this._foodObserver.next(res.value);
                         } else if (this._foods.length === limit) {
                             this._foodObserver.complete();
-                        } else if (limit === MAX_SAFE_INTEGER) {
-                            setTimeout(() => {
-                                if (!this._foodObserver.closed) {
-                                    this._foodObserver.complete();
-                                }
-                            }, 10000);
                         }
                     },
                     '/foods',

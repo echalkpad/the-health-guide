@@ -1,13 +1,9 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-
-// RxJs
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/observable/forkJoin';
+//import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
-import { RouterExtensions } from 'nativescript-angular/router';
+//import { RouterExtensions } from 'nativescript-angular/router';
 import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
 import { SetupItemViewArgs } from 'nativescript-angular/directives';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -17,7 +13,7 @@ import { setTimeout } from 'timer';
 import { FoodService } from '../food';
 import { HelperService } from '../shared';
 import { Meal } from './meal.model';
-import { MealSearchService } from './meal-search.service';
+//import { MealSearchService } from './meal-search.service';
 import { RecipeDataService } from '../recipes';
 
 @Component({
@@ -43,17 +39,19 @@ export class MealSearchComponent implements OnInit {
         private _changeDetectionRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
         private _helperSvc: HelperService,
-        private _mealSearchSvc: MealSearchService,
+        //private _mealSearchSvc: MealSearchService,
         private _params: ModalDialogParams,
         private _recipeDataSvc: RecipeDataService,
-        private _route: ActivatedRoute,
-        private _router: RouterExtensions
+        //private _route: ActivatedRoute,
+        //private _router: RouterExtensions
     ) { }
 
     public cancel(): void {
-        //this._params.closeCallback([]);
+        this._params.closeCallback([]);
+        /*
         this._mealSearchSvc.clearSelections();
         this._router.back();
+        */
     }
 
     public clearSearchFoods(): void {
@@ -67,9 +65,11 @@ export class MealSearchComponent implements OnInit {
     }
 
     public done(): void {
-        //this._params.closeCallback(this.selections);
+        this._params.closeCallback(this.selections);
+        /*
         this._mealSearchSvc.saveSelections(this.selections);
         this._router.back();
+        */
     }
 
     public loadMoreFoods(args: ListViewEventData): void {
@@ -112,7 +112,7 @@ export class MealSearchComponent implements OnInit {
 
     public refreshRecipes(args?: ListViewEventData, withFetch?: boolean): void {
         this._recipes = [];
-        this._recipeDataSvc.getSharedRecipes(this._recipesLimit, this.searchInputRecipes, withFetch).subscribe((data: Meal) => this._recipes.push(data));
+        this._recipeDataSvc.getPrivateRecipes(this._recipesLimit, this.searchInputRecipes, withFetch).subscribe((data: Meal) => this._recipes.push(data));
         setTimeout(() => {
             this.filteredRecipes = [...this._recipes.slice(0, this._recipesLimit)];
             if (args) {
@@ -140,7 +140,7 @@ export class MealSearchComponent implements OnInit {
 
     public tabIdxChange(tabIdx: number): void {
         if (tabIdx === 2 && this.isLoadingRecipes) {
-            this.refreshRecipes()
+            this.refreshRecipes();
         }
     }
 
@@ -156,14 +156,14 @@ export class MealSearchComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        /*
         if (!!this._params.context.meals) {
             this.selections = [...this._params.context.meals];
         }
-        */
+        /*
         this._route.queryParams.subscribe((params: Params) => {
             this.selections = JSON.parse(params['meals']);
         });
+        */
         this.refreshFoods();
     }
 

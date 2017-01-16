@@ -244,7 +244,7 @@ export class RecipeService {
     );
   }
 
-  public filterRecipe(recipe: Recipe, query: string, searchTerm: string, ingredients: Ingredient[]): boolean {
+  public filterRecipe(recipe: Recipe, query: string = 'name', searchTerm: string = '', ingredients: Ingredient[] = []): boolean {
     let match: boolean = false,
       matchedIngredients: number = 0,
       recipeQuery: string = (query === 'ingredients') ? recipe.name :

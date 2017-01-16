@@ -37,13 +37,13 @@ export class RecipeDataService {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(limit: number, searchTerm: string, withFetch?: boolean, query: string = 'name', ingredients?: Ingredient[]): Observable<Recipe> {
+  public getPrivateRecipes(limit: number, searchTerm: string, withFetch?: boolean, query?: string, ingredients?: Ingredient[]): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
       this._privateObserver = observer;
-      if (!!this._privateRecipes && (!withFetch || connectionType === connectivity.connectionType.none)) {
+      if (!!this._privateRecipes && !withFetch) {
         this._privateRecipes.forEach((item: Recipe) => this._privateObserver.next(item));
       } else {
         this.keepOnSyncPrivate();
@@ -57,12 +57,6 @@ export class RecipeDataService {
               this._privateObserver.next(res.value);
             } else if (this._privateRecipes.length === limit) {
               this._privateObserver.complete();
-            } else if (limit === MAX_SAFE_INTEGER) {
-              setTimeout(() => {
-                if (!this._privateObserver.closed) {
-                  this._privateObserver.complete();
-                }
-              }, 10000);
             }
           },
           `recipes/${this._auth}`,
@@ -82,13 +76,13 @@ export class RecipeDataService {
     });
   }
 
-  public getSharedRecipes(limit: number, searchTerm: string, withFetch?: boolean, query: string = 'name', ingredients?: Ingredient[]): Observable<Recipe> {
+  public getSharedRecipes(limit: number, searchTerm: string, withFetch?: boolean, query?: string, ingredients?: Ingredient[]): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
       this._sharedObserver = observer;
-      if (!!this._sharedRecipes && (!withFetch || connectionType === connectivity.connectionType.none)) {
+      if (!!this._sharedRecipes && !withFetch) {
         this._sharedRecipes.forEach((item: Recipe) => this._sharedObserver.next(item));
       } else {
         this.keepOnSyncShared();
@@ -102,12 +96,6 @@ export class RecipeDataService {
               this._sharedObserver.next(res.value);
             } else if (this._sharedRecipes.length === limit) {
               this._sharedObserver.complete();
-            } else if (limit === MAX_SAFE_INTEGER) {
-              setTimeout(() => {
-                if (!this._sharedObserver.closed) {
-                  this._sharedObserver.complete();
-                }
-              }, 10000);
             }
           },
           `recipes/${this._auth}`,
