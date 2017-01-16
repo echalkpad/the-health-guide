@@ -3,9 +3,11 @@
     <ActionItem *ngIf="tabIdx === 1" (tap)="addIngredient()">
         <Button text="&#xf067;" class="fa action-item"></Button>
     </ActionItem>
+    <ActionItem *ngIf="tabIdx === 2" (tap)="addInstruction()">
+        <Button text="&#xf067;" class="fa action-item"></Button>
+    </ActionItem>
 </ActionBar>
-<TabView [(ngModel)]="tabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)"
-    tabBackgroundColor="#151F2F">
+<TabView [(ngModel)]="tabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
     <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
         <FlexboxLayout flexDirection="column" class="list-group">
             <GridLayout class="list-group-item" rows="*" columns="auto, *" (tap)="changeDetail('name')">
@@ -41,11 +43,39 @@
                     <Label col="0" class="list-group-item-heading" textWrap="true" text="Cooking temperature"></Label>
                     <Label col="1" class="list-group-item-text text-right footnote" textWrap="true" text="{{recipe.cookTemperature}}°C"></Label>
                 </GridLayout>
-                <GridLayout row="1" rows="*" columns="auto, *, auto" verticalAlignment="center">
+                <GridLayout class="m-t-15" row="1" rows="*" columns="auto, *, auto" verticalAlignment="center">
                     <Label col="0" text="&#xf2c8;" textWrap="true" fontSize="15" class="fa text-left footnote" verticalAlignment="center"></Label>
                     <Slider col="1" minValue="0" maxValue="250" [(ngModel)]="recipe.cookTemperature" verticalAlignment="center"></Slider>
                     <Label col="2" text="&#xf2c8;" textWrap="true" fontSize="20" class="fa text-right footnote" verticalAlignment="center"></Label>
                 </GridLayout>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="auto, *">
+                <GridLayout row="0" rows="*" columns="auto, *" verticalAlignment="center">
+                    <Label col="0" class="list-group-item-heading" textWrap="true" text="Duration"></Label>
+                    <Label col="1" class="list-group-item-text text-right footnote" textWrap="true" text="{{recipe.duration}} minutes"></Label>
+                </GridLayout>
+                <GridLayout class="m-t-15" row="1" rows="*" columns="auto, *, auto" verticalAlignment="center">
+                    <Label col="0" text="&#xf017;" textWrap="true" fontSize="15" class="fa text-left footnote" verticalAlignment="center"></Label>
+                    <Slider col="1" minValue="1" maxValue="240" [(ngModel)]="recipe.duration" verticalAlignment="center"></Slider>
+                    <Label col="2" text="&#xf017;" textWrap="true" fontSize="20" class="fa text-right footnote" verticalAlignment="center"></Label>
+                </GridLayout>
+            </GridLayout>
+            <GridLayout class="list-group-item" rows="auto, *">
+                <GridLayout row="0" rows="*" columns="auto, *" verticalAlignment="center">
+                    <Label col="0" class="list-group-item-heading" textWrap="true" text="Servings"></Label>
+                    <Label col="1" class="list-group-item-text text-right footnote" textWrap="true" text="{{recipe.servings}} portions"></Label>
+                </GridLayout>
+                <GridLayout class="m-t-15" row="1" rows="*" columns="auto, *, auto" verticalAlignment="center">
+                    <Label col="0" text="&#xf0f5;" textWrap="true" fontSize="15" class="fa text-left footnote" verticalAlignment="center"></Label>
+                    <Slider col="1" minValue="1" maxValue="50" [(ngModel)]="recipe.servings" verticalAlignment="center"></Slider>
+                    <Label col="2" text="&#xf0f5;" textWrap="true" fontSize="20" class="fa text-right footnote" verticalAlignment="center"></Label>
+                </GridLayout>
+            </GridLayout>
+            <StackLayout class="hr-light"></StackLayout>
+            <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
+                <Label row="0" col="0" text="&#xf24e;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
+                <Label row="0" col="1" text="Quantity" class="text-16" textWrap="true" verticalAlignment="center"></Label>
+                <Label row="0" col="2" text="{{recipe.quantity}}g" class="footnote" textWrap="true" verticalAlignment="center"></Label>
             </GridLayout>
         </FlexboxLayout>
     </ScrollView>

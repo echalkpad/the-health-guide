@@ -44,7 +44,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
 
   public loadMoreFoods(args: ListViewEventData): void {
     this._foodLimit += 10;
-    this.refreshFoods(null, true);
+    this.refreshFoods();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;

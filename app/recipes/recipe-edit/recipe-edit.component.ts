@@ -1,18 +1,17 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
-import { ModalDialogOptions } from 'nativescript-angular/modal-dialog';
+import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 import * as dialogs from 'ui/dialogs';
-import { ListPicker } from 'ui/list-picker';
 import { setTimeout } from 'timer';
 
 // THG
 import { HelperService } from '../../shared';
 import { Ingredient, Recipe } from '../shared/recipe.model';
+import { MealSearchComponent } from '../../meal-search';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
 
@@ -38,7 +37,6 @@ export class RecipeEditComponent implements OnInit {
     public instructions: string[] = [];
     public minerals: string[] = [];
     public recipe: Recipe;
-    public recipeForm: FormGroup;
     public selectedCategory: number;
     public selectedCookMethod: number = 0;
     public selectedDifficulty: number;
@@ -46,12 +44,13 @@ export class RecipeEditComponent implements OnInit {
     public vitamins: string[] = [];
     constructor(
         private _changeDetectionRef: ChangeDetectorRef,
-        private _fb: FormBuilder,
         private _helperSvc: HelperService,
+        private _modalSvc: ModalDialogService,
         private _recipeSvc: RecipeService,
         private _recipeDataSvc: RecipeDataService,
         private _route: ActivatedRoute,
-        private _router: RouterExtensions
+        private _router: RouterExtensions,
+        private _viewRef: ViewContainerRef
     ) {
         this.basicNutrition = [
             'Energy',
@@ -110,13 +109,29 @@ export class RecipeEditComponent implements OnInit {
         ];
     }
 
+    public addIngredients(): void {
+        let options: ModalDialogOptions = {
+            viewContainerRef: this._viewRef,
+            context: {
+                meals: this.recipe.ingredients
+            },
+            fullscreen: true
+        };
+
+        this._modalSvc.showModal(MealSearchComponent, options)
+            .then((ingredients: Ingredient[]) => {
+                this.recipe.ingredients = [...ingredients];
+                this._isDirty = true;
+            });
+    }
+
     public addInstruction(): void {
         this.recipe.instructions.push('');
         this._isDirty = true;
     }
 
     public canDeactivate(): Promise<boolean> | boolean {
-        if (this._isDirty === false || (!this.recipeForm.dirty && this.recipe.ingredients.length === 0 && this.recipe.instructions.length === 0 && this.recipe.image === '')) {
+        if (!this._isDirty && !!this.recipe.ingredients.length && !!this.recipe.instructions.length && !!this.recipe.image) {
             return true;
         }
         return new Promise(resolve => {
@@ -137,28 +152,34 @@ export class RecipeEditComponent implements OnInit {
             case 'name':
                 options = {
                     title: 'Recipe name',
-                    defaultText: this.recipe.name.toString(),
+                    defaultText: this.recipe.name,
                     inputType: dialogs.inputType.text,
                     okButtonText: 'Ok',
                     cancelButtonText: 'Cancel'
                 };
                 dialogs.prompt(options).then((result: dialogs.PromptResult) => {
-                    if (result.text !== 'Cancel') {
+                    if (result.result) {
                         this.recipe.name = result.text;
+                        this._changeDetectionRef.detectChanges();
+                        this._changeDetectionRef.markForCheck();
+                        this._isDirty = true;
                     }
                 });
                 break;
             case 'description':
                 options = {
                     title: 'Recipe description',
-                    defaultText: this.recipe.description.toString(),
+                    defaultText: this.recipe.description,
                     inputType: dialogs.inputType.text,
                     okButtonText: 'Ok',
                     cancelButtonText: 'Cancel'
                 };
                 dialogs.prompt(options).then((result: dialogs.PromptResult) => {
-                    if (result.text !== 'Cancel') {
+                    if (result.result) {
                         this.recipe.description = result.text;
+                        this._changeDetectionRef.detectChanges();
+                        this._changeDetectionRef.markForCheck();
+                        this._isDirty = true;
                     }
                 });
                 break;
@@ -172,6 +193,9 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.difficulty = result;
+                        this._changeDetectionRef.detectChanges();
+                        this._changeDetectionRef.markForCheck();
+                        this._isDirty = true;
                     }
                 });
                 break;
@@ -185,6 +209,9 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.cookMethod = result;
+                        this._changeDetectionRef.detectChanges();
+                        this._changeDetectionRef.markForCheck();
+                        this._isDirty = true;
                     }
                 });
                 break;
@@ -198,6 +225,9 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.category = result;
+                        this._changeDetectionRef.detectChanges();
+                        this._changeDetectionRef.markForCheck();
+                        this._isDirty = true;
                     }
                 });
                 break;
@@ -205,7 +235,6 @@ export class RecipeEditComponent implements OnInit {
             default:
                 break;
         }
-        this._changeDetectionRef.markForCheck();
     }
 
     public goBack(): void {
@@ -234,18 +263,6 @@ export class RecipeEditComponent implements OnInit {
             this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
             this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-            /**
-             * this.recipeForm = this._fb.group({
-                name: [this.recipe.name, [Validators.required, Validators.maxLength(20)]],
-                description: [this.recipe.description, [Validators.required, Validators.maxLength(100)]],
-                cookTemperature: [this.recipe.cookTemperature, [Validators.required]],
-                duration: [this.recipe.duration, [Validators.required, Validators.maxLength(3)]],
-                servings: [this.recipe.servings, [Validators.required, Validators.maxLength(3)]],
-                difficulty: [this.recipe.difficulty, [Validators.required]],
-                cookMethod: [this.recipe.cookMethod, [Validators.required]],
-                category: [this.recipe.category, [Validators.required]]
-            });
-             */
             this._changeDetectionRef.detectChanges();
         });
 

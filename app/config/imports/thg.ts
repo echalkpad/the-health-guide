@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 // Nativescript
 import { NativeScriptModule } from 'nativescript-angular/platform';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
+import { ModalDialogService } from 'nativescript-angular/modal-dialog';
 
 // THG
 import { AppRoutingModule } from '../../app-routing.module';
@@ -57,6 +58,7 @@ export const thgProviders = [
     AuthService,
     FoodService,
     MealSearchService,
+    ModalDialogService,
     NutrientService,
     RecipeDataService,
     RecipeService

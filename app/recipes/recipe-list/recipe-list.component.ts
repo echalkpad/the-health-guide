@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Firebase
@@ -9,6 +9,7 @@ import * as firebase from 'nativescript-plugin-firebase';
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import * as application from 'application';
+import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 import { ListViewEventData, RadListView } from 'nativescript-telerik-ui/listview';
 import { setTimeout } from 'timer';
 
@@ -51,9 +52,11 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     private _changeDetectionRef: ChangeDetectorRef,
     private _helperSvc: HelperService,
     private _mealSearchSvc: MealSearchService,
+    private _modalSvc: ModalDialogService,
     private _recipeDataSvc: RecipeDataService,
     private _recipeSvc: RecipeService,
     private _router: RouterExtensions,
+    private _viewRef: ViewContainerRef,
     public drawerSvc: DrawerService
   ) { }
 
@@ -82,7 +85,18 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
-          this._router.navigate(['/meal-search']);
+          let options: ModalDialogOptions = {
+            viewContainerRef: this._viewRef,
+            context: {
+                meals: this.queryIngredients
+            },
+            fullscreen: true
+        };
+
+        this._modalSvc.showModal(MealSearchComponent, options)
+            .then((ingredients: Ingredient[]) => {
+                this.queryIngredients = [...ingredients];
+            });
           break;
 
         default:
@@ -117,7 +131,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public loadMorePrivate(args: ListViewEventData): void {
     this._sharedLimit += 5;
     //this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
-    this.refreshPrivate(null, true);
+    this.refreshPrivate();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
@@ -131,7 +145,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public loadMoreShared(args: ListViewEventData): void {
     this._sharedLimit += 10;
     //this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
-    this.refreshShared(null, true);
+    this.refreshShared();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
@@ -152,7 +166,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
     this._privateRecipes = [];
-    this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.query, this.searchInputPrivate, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._privateRecipes.push(data));
+    this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, this.query, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._privateRecipes.push(data));
     setTimeout(() => {
       this.filteredPrivate = [...this._privateRecipes.slice(0, this._privateLimit)];
       if (args) {
@@ -166,7 +180,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public refreshShared(args?: ListViewEventData, withFetch?: boolean): void {
     this._sharedRecipes = [];
-    this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.query, this.searchInputShared, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._sharedRecipes.push(data));
+    this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, this.query, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._sharedRecipes.push(data));
     setTimeout(() => {
       this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
       if (args) {
