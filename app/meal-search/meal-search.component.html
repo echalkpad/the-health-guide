@@ -1,10 +1,18 @@
 <StackLayout class="modal-container">
-    <GridLayout rows="auto" columns="50, *, 50" class="action-bar p-10">
+    <ActionBar class="action-bar" title="Search meals">
+        <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="cancel()"></NavigationButton>
+        <ActionItem (tap)="done()">
+            <Button text="Done" class="action-item"></Button>
+        </ActionItem>
+    </ActionBar>
+    <!--
+    <GridLayout rows="auto" columns="auto, *, auto" class="action-bar">
         <Button col="0" text="Cancel" (tap)="cancel()" class="action-item"></Button>
-        <Label col="1" text="" textWrap="true" class="action-bar-title text-center"></Label>
+        <Label col="1" text="Search meals" textWrap="true" class="action-bar-title text-center" verticalAlignment="center"></Label>
         <Button col="2" text="Done" (tap)="done()" class="action-item"></Button>
     </GridLayout>
-    <TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+    -->
+    <TabView #tabView (selectedIndexChanged)="tabIdxChange(tabView.selectedIndex)" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
         <StackLayout *tabItem="{title: 'Selections'}">
             <ListView [items]="selections" class="list-group" (itemTap)="removeSelection($event)" separatorColor="cyan">
                 <template let-selection="item">
@@ -15,15 +23,29 @@
                 </template>
             </ListView>
         </StackLayout>
-        <StackLayout *tabItem="{title: 'All meals'}">
-            <SearchBar *ngIf="!isLoading" #searchTerm hint="Search meals" (clear)="clearSearch()" [text]="searchInput" (submit)="searchMeals(searchTerm.text)"></SearchBar>
+        <StackLayout *tabItem="{title: 'Foods'}">
+            <SearchBar *ngIf="!isLoadingFoods" #searchTerm hint="Search food" (clear)="clearSearchFoods()" [text]="searchInputFood" (submit)="searchFoods(searchTerm.text)"></SearchBar>
             <GridLayout rows="*">
-                <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'" [busy]="isLoading"></ActivityIndicator>
-                <RadListView row="1" class="list-group" [items]="filteredMeals" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreMeals($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshMeals($event)" selectionBehavior="Press" (itemSelected)="toggleSelection($event)">
-                    <template tkListItemTemplate let-meal="item">
+                <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoadingFoods ? 'visible' : 'collapse'" [busy]="isLoadingFoods"></ActivityIndicator>
+                <RadListView row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press" (itemSelected)="toggleSelection($event)">
+                    <template tkListItemTemplate let-food="item">
                         <GridLayout class="list-group-item" rows="*" columns="30, *" borderBottomWidth="1" borderBottomColor="Cyan" verticalAlignment="center">
-                            <Label row="0" col="0" class="fa" text="{{ meal.isSelected ? '&#xf046;' : '&#xf096;' }}"></Label>
-                            <Label row="0" col="1" class="list-group-item-heading" textWrap="true" [text]="meal.name"></Label>
+                            <!--<Label row="0" col="0" class="fa" text="{{ food.isSelected ? '&#xf046;' : '&#xf096;' }}"></Label>-->
+                            <Label row="0" col="1" class="list-group-item-heading" textWrap="true" [text]="food.name"></Label>
+                        </GridLayout>
+                    </template>
+                </RadListView>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Recipes'}">
+            <SearchBar *ngIf="!isLoadingRecipes" #searchTerm hint="Search recipes" (clear)="clearSearchRecipes()" [text]="searchInputRecipe" (submit)="searchRecipes(searchTerm.text)"></SearchBar>
+            <GridLayout rows="*">
+                <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoadingRecipes ? 'visible' : 'collapse'" [busy]="isLoadingRecipes"></ActivityIndicator>
+                <RadListView row="1" class="list-group" [items]="filteredRecipes" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreRecipes($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshRecipes($event)" selectionBehavior="Press" (itemSelected)="toggleSelection($event)">
+                    <template tkListItemTemplate let-recipe="item">
+                        <GridLayout class="list-group-item" rows="*" columns="30, *" borderBottomWidth="1" borderBottomColor="Cyan" verticalAlignment="center">
+                            <!--<Label row="0" col="0" class="fa" text="{{ recipe.isSelected ? '&#xf046;' : '&#xf096;' }}"></Label>-->
+                            <Label row="0" col="1" class="list-group-item-heading" textWrap="true" [text]="recipe.name"></Label>
                         </GridLayout>
                     </template>
                 </RadListView>

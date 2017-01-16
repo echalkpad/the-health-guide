@@ -37,7 +37,7 @@ export class RecipeDataService {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(limit: number, searchTerm: string, query: string = 'name', ingredients?: Ingredient[], withFetch?: boolean): Observable<Recipe> {
+  public getPrivateRecipes(limit: number, searchTerm: string, withFetch?: boolean, query: string = 'name', ingredients?: Ingredient[]): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 
@@ -82,7 +82,7 @@ export class RecipeDataService {
     });
   }
 
-  public getSharedRecipes(limit: number, searchTerm: string, query: string = 'name', ingredients?: Ingredient[], withFetch?: boolean): Observable<Recipe> {
+  public getSharedRecipes(limit: number, searchTerm: string, withFetch?: boolean, query: string = 'name', ingredients?: Ingredient[]): Observable<Recipe> {
     let connectionType = connectivity.getConnectionType();
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 

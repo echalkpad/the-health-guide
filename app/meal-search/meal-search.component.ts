@@ -1,5 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
 
 // RxJs
 import { Observable } from 'rxjs/Observable';
@@ -27,12 +28,17 @@ import { RecipeDataService } from '../recipes';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MealSearchComponent implements OnInit {
-    private _mealsLimit: number = 20;
-    public filteredMeals: Meal[];
-    public isLoading: boolean = true;
+    private _foods: Meal[];
+    private _foodsLimit: number = 10;
+    private _recipes: Meal[];
+    private _recipesLimit: number = 10;
+    public filteredFoods: Meal[];
+    public filteredRecipes: Meal[];
+    public isLoadingFoods: boolean = true;
+    public isLoadingRecipes: boolean = true;
     public selections: Meal[];
-    public meals: Meal[];
-    public searchInput: string = '';
+    public searchInputFoods: string = '';
+    public searchInputRecipes: string = '';
     constructor(
         private _changeDetectionRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
@@ -40,57 +46,102 @@ export class MealSearchComponent implements OnInit {
         private _mealSearchSvc: MealSearchService,
         private _params: ModalDialogParams,
         private _recipeDataSvc: RecipeDataService,
+        private _route: ActivatedRoute,
         private _router: RouterExtensions
     ) { }
 
     public cancel(): void {
+        //this._params.closeCallback([]);
         this._mealSearchSvc.clearSelections();
-        this._params.closeCallback([]);
+        this._router.back();
     }
 
-    public clearSearch(): void {
-        this.searchInput = '';
-        this.refreshMeals(null, true);
+    public clearSearchFoods(): void {
+        this.searchInputFoods = '';
+        this.refreshFoods(null, true);
+    }
+
+    public clearSearchRecipes(): void {
+        this.searchInputRecipes = '';
+        this.refreshRecipes(null, true);
     }
 
     public done(): void {
-        this._params.closeCallback(this.selections);
+        //this._params.closeCallback(this.selections);
+        this._mealSearchSvc.saveSelections(this.selections);
+        this._router.back();
     }
 
-    public loadMoreMeals(args: ListViewEventData): void {
-        this._mealsLimit += 20;
-        this.refreshMeals(null, true);
+    public loadMoreFoods(args: ListViewEventData): void {
+        this._foodsLimit += 10;
+        this.refreshFoods(null, true);
         setTimeout(() => {
             args.object.notifyLoadOnDemandFinished();
             args.returnValue = true;
-            if (this.filteredMeals.length > 10) {
-                setTimeout(() => args.object.scrollToIndex(this.filteredMeals.length - 10), 1000);
+            if (this.filteredFoods.length > 10) {
+                setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
             }
         }, 5000);
     }
 
-    public refreshMeals(args?: ListViewEventData, withFetch?: boolean): void {
-        Observable.forkJoin([
-            this._foodSvc.getFoods(this._mealsLimit / 2, this.searchInput, withFetch),
-            this._recipeDataSvc.getSharedRecipes(this._mealsLimit / 2, this.searchInput, null, null, withFetch)
-        ]).subscribe((data: Array<Meal[]>) => {
-            this.meals = this._helperSvc.sortByName([...data[0], data[1]]);
-            this.filteredMeals = [...this.meals];
+    public loadMoreRecipes(args: ListViewEventData): void {
+        this._recipesLimit += 10;
+        this.refreshRecipes(null, true);
+        setTimeout(() => {
+            args.object.notifyLoadOnDemandFinished();
+            args.returnValue = true;
+            if (this.filteredRecipes.length > 10) {
+                setTimeout(() => args.object.scrollToIndex(this.filteredRecipes.length - 10), 1000);
+            }
+        }, 5000);
+    }
+
+    public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
+        this._foods = [];
+        this._foodSvc.getFoods(this._foodsLimit, this.searchInputFoods, withFetch).subscribe((data: Meal) => this._foods.push(data));
+        setTimeout(() => {
+            this.filteredFoods = [...this._foods.slice(0, this._foodsLimit)];
             if (args) {
                 args.object.notifyPullToRefreshFinished();
             }
+            this.isLoadingFoods = false;
             this._changeDetectionRef.detectChanges();
             this._changeDetectionRef.markForCheck();
-        });
+        }, 3000);
+    }
+
+    public refreshRecipes(args?: ListViewEventData, withFetch?: boolean): void {
+        this._recipes = [];
+        this._recipeDataSvc.getSharedRecipes(this._recipesLimit, this.searchInputRecipes, withFetch).subscribe((data: Meal) => this._recipes.push(data));
+        setTimeout(() => {
+            this.filteredRecipes = [...this._recipes.slice(0, this._recipesLimit)];
+            if (args) {
+                args.object.notifyPullToRefreshFinished();
+            }
+            this.isLoadingRecipes = false;
+            this._changeDetectionRef.detectChanges();
+            this._changeDetectionRef.markForCheck();
+        }, 3000);
     }
 
     public removeSelection(selection: SetupItemViewArgs): void {
         this.selections.splice(selection.index, 1);
     }
 
-    public searchMeals(searchTerm: string): void {
-        this.searchInput = searchTerm;
-        this.refreshMeals(null, true);
+    public searchFoods(searchTerm: string): void {
+        this.searchInputFoods = searchTerm;
+        this.refreshFoods(null, true);
+    }
+
+    public searchRecipes(searchTerm: string): void {
+        this.searchInputRecipes = searchTerm;
+        this.refreshRecipes(null, true);
+    }
+
+    public tabIdxChange(tabIdx: number): void {
+        if (tabIdx === 2 && this.isLoadingRecipes) {
+            this.refreshRecipes()
+        }
     }
 
     public toggleSelection(args: ListViewEventData): void {
@@ -105,7 +156,20 @@ export class MealSearchComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.selections = [...this._mealSearchSvc.getSelections()];
+        /*
+        if (!!this._params.context.meals) {
+            this.selections = [...this._params.context.meals];
+        }
+        */
+        this._route.queryParams.subscribe((params: Params) => {
+            this.selections = JSON.parse(params['meals']);
+        });
+        this.refreshFoods();
+    }
 
+    ngOnDestroy(): void {
+        this._changeDetectionRef.detach();
+        this._foodSvc.unsubscribeFoods();
+        this._recipeDataSvc.unsubscribeRecipes();
     }
 }

@@ -16,8 +16,7 @@ import { setTimeout } from 'timer';
 // THG
 import { AuthService } from '../../auth';
 import { DrawerService, HelperService } from '../../shared';
-import { MealSearchComponent } from '../../meal-search';
-import { MealSearchService } from '../../meal-search/meal-search.service'
+import { MealSearchComponent, MealSearchService } from '../../meal-search';
 import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -46,7 +45,6 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public queryIngredients: Ingredient[] = [];
   public searchInputPrivate: string = '';
   public searchInputShared: string = '';
-  public tabIdx: number = 0;
   constructor(
     private _authSvc: AuthService,
     private _changeDetectionRef: ChangeDetectorRef,
@@ -85,6 +83,12 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
+          this._mealSearchSvc.saveSelections(this.queryIngredients);
+          let navExtras: NavigationExtras = {
+            queryParams: { meals: JSON.stringify(this.queryIngredients) }
+          };
+          this._router.navigate(['/meal-search'], navExtras);
+          /*
           let options: ModalDialogOptions = {
             viewContainerRef: this._viewRef,
             context: {
@@ -94,9 +98,8 @@ export class RecipeListComponent implements OnDestroy, OnInit {
         };
 
         this._modalSvc.showModal(MealSearchComponent, options)
-            .then((ingredients: Ingredient[]) => {
-                this.queryIngredients = [...ingredients];
-            });
+            .then((ingredients: Ingredient[]) => this.queryIngredients = [...ingredients]);
+            */
           break;
 
         default:
@@ -166,7 +169,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
     this._privateRecipes = [];
-    this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, this.query, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._privateRecipes.push(data));
+    this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._privateRecipes.push(data));
     setTimeout(() => {
       this.filteredPrivate = [...this._privateRecipes.slice(0, this._privateLimit)];
       if (args) {
@@ -180,7 +183,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public refreshShared(args?: ListViewEventData, withFetch?: boolean): void {
     this._sharedRecipes = [];
-    this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, this.query, this.queryIngredients, withFetch).subscribe((data: Recipe) => this._sharedRecipes.push(data));
+    this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._sharedRecipes.push(data));
     setTimeout(() => {
       this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
       if (args) {
@@ -237,6 +240,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
+    this.queryIngredients = this._mealSearchSvc.getSelections();
     setTimeout(() => this.refreshPrivate(), 3000);
   }
 
