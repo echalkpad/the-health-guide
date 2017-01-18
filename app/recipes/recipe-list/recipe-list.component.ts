@@ -135,7 +135,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
-    this._sharedLimit += 5;
+    this._privateLimit += 5;
     //this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
     this.refreshPrivate();
     setTimeout(() => {
@@ -149,14 +149,14 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   public loadMoreShared(args: ListViewEventData): void {
-    this._sharedLimit += 10;
+    this._sharedLimit += 5;
     //this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
     this.refreshShared();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
-      if (this.filteredShared.length > 10) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 10), 1000);
+      if (this.filteredShared.length > 5) {
+        setTimeout(() => args.object.scrollToIndex(this.filteredShared.length - 5), 1000);
       }
     }, 5000);
   }
