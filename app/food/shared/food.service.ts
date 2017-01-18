@@ -22,7 +22,6 @@ export class FoodService {
     constructor() { }
 
     public filterFoodByName(food: Food, searchTerm: string): boolean {
-        console.log(food.name);
         return food.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1;
     }
 

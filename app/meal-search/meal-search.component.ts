@@ -13,7 +13,7 @@ import { setTimeout } from 'timer';
 import { FoodService } from '../food';
 import { HelperService } from '../shared';
 import { Meal } from './meal.model';
-//import { MealSearchService } from './meal-search.service';
+import { MealSearchService } from './meal-search.service';
 import { RecipeDataService } from '../recipes';
 
 @Component({
@@ -24,22 +24,17 @@ import { RecipeDataService } from '../recipes';
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MealSearchComponent implements OnInit {
-    private _foods: Meal[];
-    private _foodsLimit: number = 10;
-    private _recipes: Meal[];
-    private _recipesLimit: number = 10;
-    public filteredFoods: Meal[];
-    public filteredRecipes: Meal[];
-    public isLoadingFoods: boolean = true;
-    public isLoadingRecipes: boolean = true;
+    private _meals: Meal[];
+    private _mealsLimit: number = 10;
+    public filteredMeals: Meal[];
+    public isLoadingMeals: boolean = true;
     public selections: Meal[];
-    public searchInputFoods: string = '';
-    public searchInputRecipes: string = '';
+    public searchInput: string = '';
     constructor(
         private _changeDetectionRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
         private _helperSvc: HelperService,
-        //private _mealSearchSvc: MealSearchService,
+        private _mealSearchSvc: MealSearchService,
         private _params: ModalDialogParams,
         private _recipeDataSvc: RecipeDataService,
         //private _route: ActivatedRoute,
@@ -54,14 +49,9 @@ export class MealSearchComponent implements OnInit {
         */
     }
 
-    public clearSearchFoods(): void {
-        this.searchInputFoods = '';
-        this.refreshFoods(null, true);
-    }
-
-    public clearSearchRecipes(): void {
-        this.searchInputRecipes = '';
-        this.refreshRecipes(null, true);
+    public clearSearch(): void {
+        this.searchInput = '';
+        this.refreshMeals();
     }
 
     public done(): void {
@@ -72,53 +62,27 @@ export class MealSearchComponent implements OnInit {
         */
     }
 
-    public loadMoreFoods(args: ListViewEventData): void {
-        this._foodsLimit += 10;
-        this.refreshFoods(null, true);
+    public loadMoreMeals(args: ListViewEventData): void {
+        this._mealsLimit += 10;
+        this.refreshMeals();
         setTimeout(() => {
             args.object.notifyLoadOnDemandFinished();
             args.returnValue = true;
-            if (this.filteredFoods.length > 10) {
-                setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
+            if (this.filteredMeals.length > 10) {
+                setTimeout(() => args.object.scrollToIndex(this.filteredMeals.length - 10), 1000);
             }
         }, 5000);
     }
 
-    public loadMoreRecipes(args: ListViewEventData): void {
-        this._recipesLimit += 10;
-        this.refreshRecipes(null, true);
+    public refreshMeals(args?: ListViewEventData, withFetch?: boolean): void {
+        this._meals = [];
+        this._mealSearchSvc.getMeals().subscribe((meal: Meal) => this._meals.push(meal));
         setTimeout(() => {
-            args.object.notifyLoadOnDemandFinished();
-            args.returnValue = true;
-            if (this.filteredRecipes.length > 10) {
-                setTimeout(() => args.object.scrollToIndex(this.filteredRecipes.length - 10), 1000);
-            }
-        }, 5000);
-    }
-
-    public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
-        this._foods = [];
-        this._foodSvc.getFoods(this._foodsLimit, this.searchInputFoods, withFetch).subscribe((data: Meal) => this._foods.push(data));
-        setTimeout(() => {
-            this.filteredFoods = [...this._foods.slice(0, this._foodsLimit)];
+            this.filteredMeals = [...this._meals.slice(0, this._mealsLimit)];
             if (args) {
                 args.object.notifyPullToRefreshFinished();
             }
-            this.isLoadingFoods = false;
-            this._changeDetectionRef.detectChanges();
-            this._changeDetectionRef.markForCheck();
-        }, 3000);
-    }
-
-    public refreshRecipes(args?: ListViewEventData, withFetch?: boolean): void {
-        this._recipes = [];
-        this._recipeDataSvc.getPrivateRecipes(this._recipesLimit, this.searchInputRecipes, withFetch).subscribe((data: Meal) => this._recipes.push(data));
-        setTimeout(() => {
-            this.filteredRecipes = [...this._recipes.slice(0, this._recipesLimit)];
-            if (args) {
-                args.object.notifyPullToRefreshFinished();
-            }
-            this.isLoadingRecipes = false;
+            this.isLoadingMeals = false;
             this._changeDetectionRef.detectChanges();
             this._changeDetectionRef.markForCheck();
         }, 3000);
@@ -128,20 +92,8 @@ export class MealSearchComponent implements OnInit {
         this.selections.splice(selection.index, 1);
     }
 
-    public searchFoods(searchTerm: string): void {
-        this.searchInputFoods = searchTerm;
-        this.refreshFoods(null, true);
-    }
-
-    public searchRecipes(searchTerm: string): void {
-        this.searchInputRecipes = searchTerm;
-        this.refreshRecipes(null, true);
-    }
-
-    public tabIdxChange(tabIdx: number): void {
-        if (tabIdx === 2 && this.isLoadingRecipes) {
-            this.refreshRecipes();
-        }
+    public searchMeals(searchTerm: string): void {
+        this.filteredMeals = [...this._helperSvc.filterItems(this._meals, searchTerm).slice(0, this._mealsLimit)];
     }
 
     public toggleSelection(args: ListViewEventData): void {
@@ -164,12 +116,11 @@ export class MealSearchComponent implements OnInit {
             this.selections = JSON.parse(params['meals']);
         });
         */
-        this.refreshFoods();
+        setTimeout(() => this.refreshMeals(), 5000);
     }
 
     ngOnDestroy(): void {
         this._changeDetectionRef.detach();
-        this._foodSvc.unsubscribeFoods();
-        this._recipeDataSvc.unsubscribeRecipes();
+        this._mealSearchSvc.unsubscribeMeals();
     }
 }

@@ -6,6 +6,10 @@ export const MAX_SAFE_INTEGER: number = 900719925474099;
 export class HelperService {
   constructor() { }
 
+  public filterItem(item: any, searchTerm: string = ''): boolean {
+    return item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1;
+  }
+
   public filterItems(items: any[], searchTerm: string = ''): any[] {
     return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1);
   }
