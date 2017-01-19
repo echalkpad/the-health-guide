@@ -2,22 +2,18 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
-// Firebase
-import * as firebase from 'nativescript-plugin-firebase';
-
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
-import * as application from 'application';
 import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 import { ListViewEventData, RadListView } from 'nativescript-telerik-ui/listview';
 import { setTimeout } from 'timer';
+import { ObservableArray } from 'data/observable-array';
 
 // THG
 import { AuthService } from '../../auth';
-import { DrawerService, HelperService } from '../../shared';
+import { DrawerService } from '../../shared';
 import { MealSearchComponent } from '../../meal-search';
-//import { MealSearchService } from '../../meal-search/meal-search.service';
 import { Ingredient, Recipe } from '../shared/recipe.model';
 import { RecipeDataService } from '../shared/recipe-data.service';
 import { RecipeService } from '../shared/recipe.service';
@@ -34,8 +30,8 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   private _privateRecipes: Recipe[];
   private _sharedLimit: number = 10;
   private _sharedRecipes: Recipe[];
-  public filteredPrivate: Recipe[];
-  public filteredShared: Recipe[];
+  public filteredPrivate: ObservableArray<Recipe>;
+  public filteredShared: ObservableArray<Recipe>;
   public gridView: boolean = false;
   public ingredients: string[];
   public isLoadingPrivate: boolean = true;
@@ -49,8 +45,6 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   constructor(
     private _authSvc: AuthService,
     private _changeDetectionRef: ChangeDetectorRef,
-    private _helperSvc: HelperService,
-    //private _mealSearchSvc: MealSearchService,
     private _modalSvc: ModalDialogService,
     private _recipeDataSvc: RecipeDataService,
     private _recipeSvc: RecipeService,
@@ -65,7 +59,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
       navExtras: NavigationExtras = {
         queryParams: { recipe: JSON.stringify(recipe) }
       }
-    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key], navExtras), 1000);
+    setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key], navExtras), 100);
   }
 
   public changeQuery(): void {
@@ -84,13 +78,6 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
-          /*
-          this._mealSearchSvc.saveSelections(this.queryIngredients);
-          let navExtras: NavigationExtras = {
-            queryParams: { meals: JSON.stringify(this.queryIngredients) }
-          };
-          this._router.navigate(['/meal-search'], navExtras);
-          */
           
           let options: ModalDialogOptions = {
             viewContainerRef: this._viewRef,
@@ -124,19 +111,18 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public clearSearchPrivate(): void {
     this.searchInputPrivate = '';
-    //this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
+    this.isLoadingPrivate = true;
     this.refreshPrivate(null, true);
   }
 
   public clearSearchShared(): void {
     this.searchInputShared = '';
-    //this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
+    this.isLoadingShared = true;
     this.refreshShared(null, true);
   }
 
   public loadMorePrivate(args: ListViewEventData): void {
     this._privateLimit += 5;
-    //this.filteredPrivate = [...this._sharedRecipes.slice(0, this._sharedLimit)];
     this.refreshPrivate();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
@@ -150,7 +136,6 @@ export class RecipeListComponent implements OnDestroy, OnInit {
 
   public loadMoreShared(args: ListViewEventData): void {
     this._sharedLimit += 5;
-    //this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
     this.refreshShared();
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
@@ -167,19 +152,18 @@ export class RecipeListComponent implements OnDestroy, OnInit {
       navExtras: NavigationExtras = {
         queryParams: { recipe: JSON.stringify(recipe) }
       };
-    setTimeout(() => this._router.navigate(['/recipes', recipe.$key], navExtras), 1000);
+    setTimeout(() => this._router.navigate(['/recipes', recipe.$key], navExtras), 100);
   }
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
     this._privateRecipes = [];
     this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._privateRecipes.push(data));
     setTimeout(() => {
-      this.filteredPrivate = [...this._privateRecipes.slice(0, this._privateLimit)];
+      this.filteredPrivate = new ObservableArray<Recipe>(this._privateRecipes);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingPrivate = false;
-      this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     }, 3000);
   }
@@ -188,25 +172,24 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     this._sharedRecipes = [];
     this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._sharedRecipes.push(data));
     setTimeout(() => {
-      this.filteredShared = [...this._sharedRecipes.slice(0, this._sharedLimit)];
+      this.filteredShared = new ObservableArray<Recipe>(this._sharedRecipes);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingShared = false;
-      this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     }, 3000);
   }
 
   public searchPrivate(searchTerm: string): void {
-    //this.filteredPrivate = [...this._recipeSvc.filterRecipes(this._privateRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._privateLimit)];
     this.searchInputPrivate = searchTerm;
+    this.isLoadingPrivate = true;
     this.refreshPrivate(null, true);
   }
 
   public searchShared(searchTerm: string): void {
-    //this.filteredShared = [...this._recipeSvc.filterRecipes(this._sharedRecipes, this.query, searchTerm, this.queryIngredients).slice(0, this._sharedLimit)];
     this.searchInputShared = searchTerm;
+    this.isLoadingShared = true;
     this.refreshShared(null, true);
   }
 
@@ -243,8 +226,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    //this.queryIngredients = this._mealSearchSvc.getSelections();
-    setTimeout(() => this.refreshPrivate(), 3000);
+    this.refreshPrivate();
   }
 
   ngOnDestroy(): void {

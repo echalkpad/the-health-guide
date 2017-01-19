@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 // Nativescript
@@ -23,7 +23,7 @@ const EMAIL_REGEX: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)
     styleUrls: ['auth.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
     public loginForm: FormGroup;
     public email: string = '';
     public password: string = '';
@@ -35,7 +35,13 @@ export class AuthComponent implements OnInit {
         private _fb: FormBuilder,
         private _page: Page,
         private _router: RouterExtensions
-    ) { }
+    ) {
+        _page.actionBarHidden = true;
+        this.loginForm = this._fb.group({
+            email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
+            password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
+        });
+    }
 
     private showAlert(title: string, msg: Error | string): void {
         let options = {
@@ -59,14 +65,6 @@ export class AuthComponent implements OnInit {
         }).catch((err: Error) => {
             this.showAlert('An error has occured', err);
             this.isLoading = false;
-        });
-    }
-
-    ngOnInit(): void {
-        this._page.actionBarHidden = true;
-        this.loginForm = this._fb.group({
-            email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
-            password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],
         });
     }
 }

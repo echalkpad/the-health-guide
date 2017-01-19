@@ -2,7 +2,7 @@
 import { Injectable } from '@angular/core';
 
 // Nativescript
-import * as appSettings from "application-settings";
+import * as appSettings from 'application-settings';
 
 // THG
 import { Auth, User } from '../auth';
@@ -16,9 +16,6 @@ export class DataService {
   constructor() { }
 
   public getAuth(): Auth {
-    if (!appSettings.getString('auth')) {
-      return null;
-    }
     return JSON.parse(appSettings.getString('auth'));
   }
 
@@ -31,9 +28,6 @@ export class DataService {
   }
 
   public getUser(): User {
-    if (!appSettings.getString('user')) {
-      return null;
-    }
     return JSON.parse(appSettings.getString('user'));
   }
 

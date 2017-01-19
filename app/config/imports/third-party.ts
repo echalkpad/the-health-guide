@@ -11,7 +11,6 @@ import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 import * as firebase from 'nativescript-plugin-firebase';
 
 firebase.init({
-    persist: true,
     storageBucket: 'gs://the-health-guide.appspot.com/'
 }).then(
     (instance) => {
@@ -20,7 +19,7 @@ firebase.init({
     (error) => {
         console.log('firebase.init error: ' + error);
     }
-    );
+);
 
 if (applicationModule.android) {
     applicationModule.on('launch', () => {

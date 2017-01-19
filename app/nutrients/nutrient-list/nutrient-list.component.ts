@@ -7,9 +7,10 @@ import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 import { setTimeout } from 'timer';
+import { ObservableArray } from 'data/observable-array';
 
 // THG
-import { DrawerService, HelperService } from '../../shared';
+import { DrawerService } from '../../shared';
 import { Nutrient } from '../shared/nutrient.model';
 import { NutrientService } from '../shared/nutrient.service';
 
@@ -23,8 +24,8 @@ import { NutrientService } from '../shared/nutrient.service';
 export class NutrientListComponent implements OnDestroy, OnInit {
   private _macronutrients: Nutrient[];
   private _micronutrients: Nutrient[];
-  public filteredMacronutrients: Nutrient[];
-  public filteredMicronutrients: Nutrient[];
+  public filteredMacronutrients: ObservableArray<Nutrient>;
+  public filteredMicronutrients: ObservableArray<Nutrient>;
   public isLoadingMacros: boolean = true;
   public isLoadingMicros: boolean = true;
   public isSearching: boolean = false;
@@ -33,7 +34,6 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public searchInputMicros: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
-    private _helperSvc: HelperService,
     private _nutrientSvc: NutrientService,
     private _router: RouterExtensions,
     public drawerSvc: DrawerService
@@ -72,13 +72,13 @@ export class NutrientListComponent implements OnDestroy, OnInit {
 
   public clearSearchMacros(): void {
     this.searchInputMacros = '';
-    //this.filteredMacronutrients = [...this._macronutrients];
+    this.isLoadingMacros = true;
     this.refreshMacros(null, true);
   }
 
   public clearSearchMicros(): void {
     this.searchInputMicros = '';
-    //this.filteredMicronutrients = [...this._micronutrients];
+    this.isLoadingMicros = true;
     this.refreshMacros(null, true);
   }
 
@@ -87,19 +87,19 @@ export class NutrientListComponent implements OnDestroy, OnInit {
       navExtras: NavigationExtras = {
         queryParams: { nutrient: JSON.stringify(selected) }
       }
-    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key], navExtras), 1000);
+    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key], navExtras), 100);
   }
 
   public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
     this._macronutrients = [];
     this._nutrientSvc.getMacronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
     setTimeout(() => {
-      this.filteredMacronutrients = [...this._helperSvc.sortByName(this._macronutrients)];
+      this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingMacros = false;
-      this._changeDetectionRef.detectChanges();
+      
       this._changeDetectionRef.markForCheck();
     }, 3000);
   }
@@ -108,25 +108,24 @@ export class NutrientListComponent implements OnDestroy, OnInit {
     this._micronutrients = [];
     this._nutrientSvc.getMicronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
     setTimeout(() => {
-      this.filteredMicronutrients = [...this._helperSvc.sortByName(this._micronutrients)];
+      this.filteredMicronutrients = new ObservableArray<Nutrient>(this._micronutrients);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingMicros = false;
-      this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     }, 3000);
   }
 
   public searchMacros(searchTerm: string): void {
-    //this.filteredMacronutrients = this._nutrientSvc.filterNutrient(this._macronutrients, this.query, searchTerm);
     this.searchInputMacros = searchTerm;
+    this.isLoadingMacros = true;
     this.refreshMacros(null, true);
   }
 
   public searchMicros(searchTerm: string): void {
-    //this.filteredMicronutrients = this._nutrientSvc.filterNutrient(this._micronutrients, this.query, searchTerm);
     this.searchInputMicros = searchTerm;
+    this.isLoadingMicros = true;
     this.refreshMicros(null, true);
   }
 
@@ -141,7 +140,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => this.refreshMacros(), 3000);
+    this.refreshMacros();
   }
 
   ngOnDestroy(): void {

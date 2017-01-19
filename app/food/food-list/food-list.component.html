@@ -4,13 +4,11 @@
         <Button text="&#xf002;" class="fa action-item"></Button>
     </ActionItem>
 </ActionBar>
-<SearchBar *ngIf="!isLoading && isSearching" #searchTerm hint="Search food" (clear)="clearSearch()" [text]="searchInput"
-    (submit)="searchFood(searchTerm.text)"></SearchBar>
+<SearchBar *ngIf="!isLoading && isSearching" #searchTerm hint="Search food" (clear)="clearSearch()" [text]="searchInput" (submit)="searchFood(searchTerm.text)"></SearchBar>
 <GridLayout rows="*">
-    <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'"
-        [busy]="isLoading"></ActivityIndicator>
-    <RadListView row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)"
-        pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event, true)" selectionBehavior="Press" (itemSelected)="openDetails($event)">
+    <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'" [busy]="isLoading"></ActivityIndicator>
+    <RadListView *ngIf="!isLoading" row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event, true)" selectionBehavior="Press"
+        (itemSelected)="openDetails($event)">
         <template tkListItemTemplate let-food="item">
             <GridLayout class="list-group-item" rows="*" columns="auto, *" borderBottomWidth="1" borderBottomColor="Cyan">
                 <StackLayout col="0" verticalAlignment="center">

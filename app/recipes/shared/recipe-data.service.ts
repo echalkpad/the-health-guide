@@ -44,15 +44,18 @@ export class RecipeDataService {
     return new Observable((observer: Subscriber<Recipe>) => {
       this._privateObserver = observer;
       if (!!this._privateRecipes && !withFetch) {
-        this._privateRecipes.forEach((item: Recipe) => this._privateObserver.next(item));
+        this._privateRecipes.forEach((item: Recipe, idx: number) => {
+          if (idx < limit) {
+            this._privateObserver.next(item);
+          }
+        });
       } else {
-        this.keepOnSyncPrivate();
         this._privateRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._privateObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded' && this._privateRecipes.length < limit && this._recipeSvc.filterRecipe(res.value, query, searchTerm, ingredients)) {
+            } else if (res.type === 'ChildAdded' && this._privateRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
               this._privateRecipes.push(res.value);
               this._privateObserver.next(res.value);
             } else if (this._privateRecipes.length === limit) {
@@ -83,15 +86,18 @@ export class RecipeDataService {
     return new Observable((observer: Subscriber<Recipe>) => {
       this._sharedObserver = observer;
       if (!!this._sharedRecipes && !withFetch) {
-        this._sharedRecipes.forEach((item: Recipe) => this._sharedObserver.next(item));
+        this._sharedRecipes.forEach((item: Recipe, idx: number) => {
+          if (idx < limit) {
+            this._sharedObserver.next(item);
+          }
+        });
       } else {
-        this.keepOnSyncShared();
         this._sharedRecipes = [];
         firebase.query(
           (res: firebase.FBData) => {
             if (res.hasOwnProperty('error')) {
               this._sharedObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.filterRecipe(res.value, query, searchTerm, ingredients)) {
+            } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
               this._sharedRecipes.push(res.value);
               this._sharedObserver.next(res.value);
             } else if (this._sharedRecipes.length === limit) {
@@ -142,10 +148,10 @@ export class RecipeDataService {
   }
 
   public unsubscribeRecipes(): void {
-    if (!!this._privateObserver && this._privateObserver.closed) {
+    if (!!this._privateObserver && !this._privateObserver.closed) {
       this._privateObserver.unsubscribe();
     }
-    if (!!this._sharedObserver && this._sharedObserver.closed) {
+    if (!!this._sharedObserver && !this._sharedObserver.closed) {
       this._sharedObserver.unsubscribe();
     }
   }

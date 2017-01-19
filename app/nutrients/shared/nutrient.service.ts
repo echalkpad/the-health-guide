@@ -58,9 +58,12 @@ export class NutrientService {
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._macroObserver = observer;
       if (!!this._macronutrients && !withFetch) {
-        this._macronutrients.forEach((item: Nutrient) => this._macroObserver.next(item));
+        this._macronutrients.forEach((item: Nutrient, idx: number) => {
+          if (idx < limit) {
+            this._macroObserver.next(item)
+          }
+        });
       } else {
-        this.keepOnSyncMicronutrients();
         this._macronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
@@ -97,9 +100,12 @@ export class NutrientService {
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._microObserver = observer;
       if (!!this._micronutrients && !withFetch) {
-        this._micronutrients.forEach((item: Nutrient) => this._microObserver.next(item));
+        this._micronutrients.forEach((item: Nutrient, idx: number) => {
+          if (idx < limit) {
+            this._microObserver.next(item)
+          }
+        });
       } else {
-        this.keepOnSyncMicronutrients();
         this._micronutrients = [];
         firebase.query(
           (res: firebase.FBData) => {
@@ -132,10 +138,10 @@ export class NutrientService {
   public keepOnSyncMacronutrients(): void {
     firebase.keepInSync('/macronutrients', true).then(
       function () {
-        console.log("firebase.keepInSync is ON for macronutrients");
+        console.log('firebase.keepInSync is ON for macronutrients');
       },
       function (error) {
-        console.log("firebase.keepInSync error: " + error);
+        console.log('firebase.keepInSync error: ' + error);
       }
     );
   }
@@ -143,10 +149,10 @@ export class NutrientService {
   public keepOnSyncMicronutrients(): void {
     firebase.keepInSync('/micronutrients', true).then(
       function () {
-        console.log("firebase.keepInSync is ON for micronutrients");
+        console.log('firebase.keepInSync is ON for micronutrients');
       },
       function (error) {
-        console.log("firebase.keepInSync error: " + error);
+        console.log('firebase.keepInSync error: ' + error);
       }
     );
   }

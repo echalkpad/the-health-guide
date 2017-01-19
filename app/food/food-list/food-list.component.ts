@@ -5,12 +5,13 @@ import { NavigationExtras } from '@angular/router';
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
 import { setTimeout } from 'timer';
+import { ObservableArray } from 'data/observable-array';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 
 //THG
-import { DrawerService, HelperService } from '../../shared';
+import { DrawerService } from '../../shared';
 import { Food } from '../shared/food.model';
 import { FoodService } from '../shared/food.service';
 
@@ -22,23 +23,22 @@ import { FoodService } from '../shared/food.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnDestroy, OnInit {
-  private _foods: Food[] = [];
+  private _foods: Food[];
   private _foodLimit: number = 10;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
-  public filteredFoods: Food[];
+  public filteredFoods: ObservableArray<Food>;
   public searchInput: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
-    private _helperSvc: HelperService,
     private _router: RouterExtensions,
     public drawerSvc: DrawerService,
   ) { }
 
   public clearSearch(): void {
     this.searchInput = '';
-    //this.filteredFoods = [...this._foods.slice(0, this._foodLimit)];
+    this.isLoading = true;
     this.refreshFoods(null, true);
   }
 
@@ -59,26 +59,25 @@ export class FoodListComponent implements OnDestroy, OnInit {
       navExtras: NavigationExtras = {
         queryParams: { food: JSON.stringify(selected) }
       };
-    setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 1000);
+    setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 100);
   }
 
   public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
     this._foods = [];
     this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this._foods.push(data));
     setTimeout(() => {
-      this.filteredFoods = [...this._helperSvc.sortByName(this._foods).slice(0, this._foodLimit)];
+      this.filteredFoods = new ObservableArray<Food>(this._foods);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoading = false;
-      this._changeDetectionRef.detectChanges();
       this._changeDetectionRef.markForCheck();
     }, 5000);
   }
 
   public searchFood(searchTerm: string): void {
-    //this.filteredFoods = [...this._helperSvc.filterItems(this._foods, searchTerm).slice(0, this._foodLimit)];
     this.searchInput = searchTerm;
+    this.isLoading = true;
     this.refreshFoods(null, true);
   }
 
@@ -87,7 +86,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    setTimeout(() => this.refreshFoods(), 3000);
+    this.refreshFoods();
   }
 
   ngOnDestroy(): void {

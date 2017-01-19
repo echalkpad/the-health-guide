@@ -54,7 +54,6 @@ export class FoodDetailComponent implements OnInit {
       this.aminoacids = Object.keys(this.food['amino acids']);
       this.vitamins = Object.keys(this.food['vitamins']);
       this.minerals = Object.keys(this.food['minerals']);
-      this._changeDetectionRef.detectChanges();
     });
   }
 }

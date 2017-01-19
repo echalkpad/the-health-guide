@@ -6,12 +6,12 @@ export const MAX_SAFE_INTEGER: number = 900719925474099;
 export class HelperService {
   constructor() { }
 
-  public filterItem(item: any, searchTerm: string = ''): boolean {
-    return item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1;
+  public filterItems(items: any[], searchTerm: string = ''): any[] {
+    return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1);
   }
 
-  public filterItems(items: any[], searchTerm: string = ''): any[] {
-    return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) > -1);
+  public isMatch(item: any, query: string, searchTerm: string = ''): boolean {
+    return item[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
   }
 
   public log10(data: number): number {
@@ -33,13 +33,6 @@ export class HelperService {
       if (item.hasOwnProperty('$exists')) {
         delete item['$exists'];
       }
-    });
-  }
-
-  public sortByName(arr: any[]): any[] {
-    return arr.sort((a, b) => {
-      let x = a.name.toLowerCase(), y = b.name.toLowerCase();
-      return x < y ? -1 : x > y ? 1 : 0;
     });
   }
 

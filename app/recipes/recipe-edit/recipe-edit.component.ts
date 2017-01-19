@@ -263,7 +263,6 @@ export class RecipeEditComponent implements OnInit {
             this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
             this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
             this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-            this._changeDetectionRef.detectChanges();
         });
 
     }

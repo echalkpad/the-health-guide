@@ -65,10 +65,8 @@ export class AuthService {
                 if (!!authData) {
                     console.log(JSON.stringify(authData));
                     this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
-                    this.keepOnSyncUser();
                     this.getUserData().then((data: User) => {
                         this._dataSvc.saveUser(data);
-                        console.log(JSON.stringify(this._dataSvc.getUser()));
                         resolve(true);
                     });
                 }
@@ -108,10 +106,7 @@ export class AuthService {
     public saveUserData(authId: string, user: User): void {
         delete user['$key'];
         delete user['$exists'];
-        firebase.update(
-            `/users/${authId}`,
-            user
-        );
+        firebase.update(`/users/${authId}`, user);
     }
 
     public uploadAvatar(img: File): any {

@@ -244,29 +244,6 @@ export class RecipeService {
     );
   }
 
-  public filterRecipe(recipe: Recipe, query: string = 'name', searchTerm: string = '', ingredients: Ingredient[] = []): boolean {
-    let match: boolean = false,
-      matchedIngredients: number = 0,
-      recipeQuery: string = (query === 'ingredients') ? recipe.name :
-        (query === 'chef') ? recipe.chef.name : recipe[query];
-    if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
-      match = true;
-      if (!!ingredients && !!ingredients.length) {
-        ingredients.forEach((item: Ingredient) => {
-          recipe.ingredients.forEach((ingredient: Ingredient) => {
-            if (ingredient.name === item.name) {
-              matchedIngredients++;
-            }
-          });
-        });
-        if (matchedIngredients !== ingredients.length) {
-          match = false;
-        }
-      }
-    }
-    return match;
-  }
-
   public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: Ingredient[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
@@ -306,6 +283,29 @@ export class RecipeService {
         );
     }
     return imgPath;
+  }
+
+  public isMatch(recipe: Recipe, query: string = 'name', searchTerm: string = '', ingredients: Ingredient[] = []): boolean {
+    let match: boolean = false,
+      matchedIngredients: number = 0,
+      recipeQuery: string = (query === 'ingredients') ? recipe.name :
+        (query === 'chef') ? recipe.chef.name : recipe[query];
+    if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+      match = true;
+      if (!!ingredients && !!ingredients.length) {
+        ingredients.forEach((item: Ingredient) => {
+          recipe.ingredients.forEach((ingredient: Ingredient) => {
+            if (ingredient.name === item.name) {
+              matchedIngredients++;
+            }
+          });
+        });
+        if (matchedIngredients !== ingredients.length) {
+          match = false;
+        }
+      }
+    }
+    return match;
   }
 
   public setRecipeNutrition(recipe: Recipe): void {

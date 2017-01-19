@@ -23,7 +23,7 @@ export class DashboardComponent implements OnInit {
         private _changeDetectionRef: ChangeDetectorRef,
         private _dataSvc: DataService,
         public drawerSvc: DrawerService
-    ) {}
+    ) {  }
 
     public logout(): void {
         this._authSvc.logout();
@@ -31,9 +31,6 @@ export class DashboardComponent implements OnInit {
 
     ngOnInit(): void {
         this.drawerSvc.drawer = this.drawerComponent.sideDrawer;
-        if (this._dataSvc.getAuth()) {
-            this.auth = this._dataSvc.getAuth();
-        }
-        this._changeDetectionRef.detectChanges();
+        this.auth = this._dataSvc.getAuth();
     }
 }
