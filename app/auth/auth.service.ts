@@ -66,8 +66,8 @@ export class AuthService {
                     password: credentials.password
                 }).then((authData: firebase.User) => {
                     if (!!authData) {
-                        //console.log(JSON.stringify(authData));
-                        //this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
+                        console.log(JSON.stringify(authData));
+                        this._dataSvc.saveAuth(new Auth(authData.uid, authData.profileImageURL, authData.name, authData.email));
                         this.getUserData().then((data: User) => {
                             this._dataSvc.saveUser(data);
                             resolve(true);
@@ -98,7 +98,7 @@ export class AuthService {
                             `/users/${authData.key}`,
                             credentials
                         )
-                        //this._dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
+                        this._dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
                         this._dataSvc.saveUser(credentials);
                         resolve(true);
                     }

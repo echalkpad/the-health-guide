@@ -273,7 +273,7 @@ export class RecipeEditComponent implements OnInit {
                 queryParams: { refresh: true }
             };
             this._isDirty = false;
-            this._router.navigate(['/recipe'], navExtras);
+            this._router.navigate(['/recipes'], navExtras);
         }).catch((err: Error) => this._showAlert('Something went wrong', err));
     }
 
@@ -283,7 +283,7 @@ export class RecipeEditComponent implements OnInit {
                 queryParams: { refresh: true }
             };
             this._isDirty = false;
-            this._router.navigate(['/recipe'], navExtras);
+            this._router.navigate(['/recipes'], navExtras);
         }).catch((err: Error) => this._showAlert('Something went wrong', err));
     }
 

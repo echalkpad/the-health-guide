@@ -7,6 +7,21 @@ import * as frescoModule from 'nativescript-fresco';
 import * as applicationModule from 'application';
 import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
+// Firebase
+import * as firebase from 'nativescript-plugin-firebase';
+
+firebase.init({
+    persist: false,
+    storageBucket: 'gs://the-health-guide.appspot.com/'
+}).then(
+    (instance) => {
+        console.log('firebase.init', instance);
+    },
+    (error) => {
+        console.log('firebase.init error: ' + error);
+    }
+);
+
 if (applicationModule.android) {
     applicationModule.on('launch', () => {
         frescoModule.initialize();
