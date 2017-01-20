@@ -1,6 +1,6 @@
 // Angular
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit, ViewContainerRef } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -107,6 +107,16 @@ export class RecipeEditComponent implements OnInit {
             'Advanced',
             'Master chef'
         ];
+    }
+
+    private _showAlert(title: string, msg: string | Error): void {
+        let options: dialogs.AlertOptions = {
+            title: title,
+            message: msg.toString(),
+            okButtonText: 'Ok'
+        };
+
+        dialogs.alert(options).then(() => console.log('Dialog closed'));
     }
 
     public addIngredients(): void {
@@ -255,6 +265,26 @@ export class RecipeEditComponent implements OnInit {
 
     public syncNutrition(): void {
         this._recipeSvc.setRecipeNutrition(this.recipe);
+    }
+
+    public removeRecipe(): void {
+        this._recipeDataSvc.removeRecipe(this.recipe).then(() => {
+            let navExtras: NavigationExtras = {
+                queryParams: { refresh: true }
+            };
+            this._isDirty = false;
+            this._router.navigate(['/recipe'], navExtras);
+        }).catch((err: Error) => this._showAlert('Something went wrong', err));
+    }
+
+    public updateRecipe(): void {
+        this._recipeDataSvc.updateRecipe(this.recipe).then(() => {
+            let navExtras: NavigationExtras = {
+                queryParams: { refresh: true }
+            };
+            this._isDirty = false;
+            this._router.navigate(['/recipe'], navExtras);
+        }).catch((err: Error) => this._showAlert('Something went wrong', err));
     }
 
     ngOnInit(): void {

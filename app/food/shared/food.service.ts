@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscriber } from 'rxjs/Subscriber';
 
+// Lodash
+import * as _ from 'lodash';
+
 // Nativescript
 import * as connectivity from 'connectivity';
 
@@ -41,8 +44,9 @@ export class FoodService {
                         if (res.hasOwnProperty('error')) {
                             this._foodObserver.error(res['error']);
                         } else if (res.type === 'ChildAdded' && this._foods.length < limit && this._helpSvc.isMatch(res.value, 'name', searchTerm)) {
-                            this._foods.push(res.value);
-                            this._foodObserver.next(res.value);
+                            let newFood: Food = _.assign({$key: res.key}, res.value);
+                            this._foods.push(newFood);
+                            this._foodObserver.next(newFood);
                         } else if (this._foods.length === limit) {
                             this._foodObserver.complete();
                         }

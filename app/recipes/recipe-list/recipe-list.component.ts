@@ -1,6 +1,6 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
-import { NavigationExtras } from '@angular/router';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, ElementRef, NgZone, OnDestroy, OnInit, ViewContainerRef } from '@angular/core';
+import { ActivatedRoute, NavigationExtras, Params } from '@angular/router';
 
 // Nativescript
 import { RouterExtensions } from 'nativescript-angular/router';
@@ -48,8 +48,10 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     private _modalSvc: ModalDialogService,
     private _recipeDataSvc: RecipeDataService,
     private _recipeSvc: RecipeService,
+    private _route: ActivatedRoute,
     private _router: RouterExtensions,
     private _viewRef: ViewContainerRef,
+    private _zone: NgZone,
     public drawerSvc: DrawerService
   ) { }
 
@@ -58,7 +60,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
       recipe: Recipe = listview.getSelectedItems()[0],
       navExtras: NavigationExtras = {
         queryParams: { recipe: JSON.stringify(recipe) }
-      }
+      };
     setTimeout(() => this._router.navigate(['/recipes', this._authSvc.getAuth().id, recipe.$key], navExtras), 100);
   }
 
@@ -78,18 +80,18 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
         case 'Ingredients':
           this.query = 'ingredients';
-          
+
           let options: ModalDialogOptions = {
             viewContainerRef: this._viewRef,
             context: {
-                meals: this.queryIngredients
+              meals: this.queryIngredients
             },
             fullscreen: true
-        };
+          };
 
-        this._modalSvc.showModal(MealSearchComponent, options)
+          this._modalSvc.showModal(MealSearchComponent, options)
             .then((ingredients: Ingredient[]) => this.queryIngredients = [...ingredients]);
-            
+
           break;
 
         default:
@@ -159,26 +161,30 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     this._privateRecipes = [];
     this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._privateRecipes.push(data));
     setTimeout(() => {
-      this.filteredPrivate = new ObservableArray<Recipe>(this._privateRecipes);
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.isLoadingPrivate = false;
-      this._changeDetectionRef.markForCheck();
-    }, 3000);
+      this._zone.run(() => {
+        this.filteredPrivate = new ObservableArray<Recipe>(this._privateRecipes);
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        this.isLoadingPrivate = false;
+        this._changeDetectionRef.markForCheck();
+      });
+    }, 5000);
   }
 
   public refreshShared(args?: ListViewEventData, withFetch?: boolean): void {
     this._sharedRecipes = [];
     this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._sharedRecipes.push(data));
     setTimeout(() => {
-      this.filteredShared = new ObservableArray<Recipe>(this._sharedRecipes);
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.isLoadingShared = false;
-      this._changeDetectionRef.markForCheck();
-    }, 3000);
+      this._zone.run(() => {
+        this.filteredShared = new ObservableArray<Recipe>(this._sharedRecipes);
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        this.isLoadingShared = false;
+        this._changeDetectionRef.markForCheck();
+      });
+    }, 5000);
   }
 
   public searchPrivate(searchTerm: string): void {
@@ -226,7 +232,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnInit(): void {
-    this.refreshPrivate();
+    this._route.queryParams.subscribe((params: Params) => this.refreshPrivate(null, params['refresh']));
   }
 
   ngOnDestroy(): void {

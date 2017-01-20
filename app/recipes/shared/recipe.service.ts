@@ -1,5 +1,5 @@
 // Angular
-import { Injectable } from '@angular/core';
+import { Injectable, NgZone } from '@angular/core';
 
 // Nativescript
 import * as fs from 'file-system';
@@ -14,7 +14,7 @@ import { Nutrition } from '../../shared/nutrition.model';
 @Injectable()
 export class RecipeService {
   private _tags: any;
-  constructor() { }
+  constructor(private _zone: NgZone) { }
 
   private _checkCarbPoints(recipe: Recipe): void {
     let energy: number = recipe.nutrition.Energy,
@@ -213,7 +213,7 @@ export class RecipeService {
         }
       }
     }
-    recipe.quantity = Math.floor(recipe.quantity / +recipe.servings);
+    recipe.quantity = Math.floor(+recipe.quantity / +recipe.servings);
   }
 
   private _setRemainingNutrition(recipe: Recipe, requiredNutrition: Nutrition): void {
@@ -309,58 +309,60 @@ export class RecipeService {
   }
 
   public setRecipeNutrition(recipe: Recipe): void {
-    recipe.nutrition = new Nutrition();
-    recipe.quantity = 0;
-    this._tags = {
-      dairyFree: true,
-      glutenFree: true,
-      soyFree: true,
-      vegan: true
-    }
-    // Set total recipe nutrition and quantity in grams
-    recipe.ingredients.forEach(ingredient => {
-      if (ingredient.category === 'Grains') {
-        this._tags.glutenFree = false;
-      } else if (ingredient.category === 'Meat') {
-        this._tags.vegan = false;
-      } else if (ingredient.category === 'Dairy') {
-        this._tags.dairyFree = false;
-        this._tags.vegan = false;
+    this._zone.runOutsideAngular(() => {
+      recipe.nutrition = new Nutrition();
+      recipe.quantity = 0;
+      this._tags = {
+        dairyFree: true,
+        glutenFree: true,
+        soyFree: true,
+        vegan: true
       }
-      if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
-        this._tags.soyFree = false;
-      }
-      recipe.quantity += ingredient.quantity;
-      if (ingredient.hasOwnProperty('nutrition')) {
-        // The ingredient is a recipe
-        for (let nutrientCategory in ingredient.nutrition) {
-          let nutrients = ingredient.nutrition[nutrientCategory];
-          if (typeof nutrients === 'number') {
-            recipe.nutrition[nutrientCategory] += nutrients * ingredient.quantity;
-          } else if (typeof nutrients === 'object') {
-            for (let nutrient in nutrients) {
-              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.quantity;
+      // Set total recipe nutrition and quantity in grams
+      recipe.ingredients.forEach(ingredient => {
+        if (ingredient.category === 'Grains') {
+          this._tags.glutenFree = false;
+        } else if (ingredient.category === 'Meat') {
+          this._tags.vegan = false;
+        } else if (ingredient.category === 'Dairy') {
+          this._tags.dairyFree = false;
+          this._tags.vegan = false;
+        }
+        if (ingredient.name.toLowerCase().indexOf('soy') !== -1) {
+          this._tags.soyFree = false;
+        }
+        recipe.quantity += +ingredient.quantity;
+        if (ingredient.hasOwnProperty('nutrition')) {
+          // The ingredient is a recipe
+          for (let nutrientCategory in ingredient.nutrition) {
+            let nutrients = ingredient.nutrition[nutrientCategory];
+            if (typeof nutrients === 'number') {
+              recipe.nutrition[nutrientCategory] += nutrients * ingredient.quantity;
+            } else if (typeof nutrients === 'object') {
+              for (let nutrient in nutrients) {
+                recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * ingredient.quantity;
+              }
+            }
+          }
+        } else {
+          // The ingredient is a basic food
+          for (let nutrientCategory in ingredient) {
+            let nutrients = ingredient[nutrientCategory];
+            if (typeof nutrients === 'number' && nutrientCategory !== 'quantity') {
+              recipe.nutrition[nutrientCategory] += nutrients * (ingredient.quantity / 100);
+            } else if (typeof nutrients === 'object') {
+              for (let nutrient in nutrients) {
+                recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * (ingredient.quantity / 100);
+              }
             }
           }
         }
-      } else {
-        // The ingredient is a basic food
-        for (let nutrientCategory in ingredient) {
-          let nutrients = ingredient[nutrientCategory];
-          if (typeof nutrients === 'number' && nutrientCategory !== 'quantity') {
-            recipe.nutrition[nutrientCategory] += nutrients * (ingredient.quantity / 100);
-          } else if (typeof nutrients === 'object') {
-            for (let nutrient in nutrients) {
-              recipe.nutrition[nutrientCategory][nutrient] += nutrients[nutrient] * (ingredient.quantity / 100);
-            }
-          }
-        }
-      }
-    });
+      });
 
-    this._checkNutrientLoss(recipe);
-    this._portionRecipe(recipe);
-    this._checkHealthTags(recipe);
+      this._checkNutrientLoss(recipe);
+      this._portionRecipe(recipe);
+      this._checkHealthTags(recipe);
+    });
   }
 
 }

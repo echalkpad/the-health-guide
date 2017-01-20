@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Subscriber } from 'rxjs/Subscriber';
 
+// Lodash
+import * as _ from 'lodash';
+
 // Nativescript
 import * as connectivity from 'connectivity';
 
@@ -70,8 +73,9 @@ export class NutrientService {
             if (res.hasOwnProperty('error')) {
               this._macroObserver.error(res['error']);
             } else if (res.type === 'ChildAdded' && this._macronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
-              this._macronutrients.push(res.value);
-              this._macroObserver.next(res.value);
+              let newNutrient: Nutrient = _.assign({id: res.key}, res.value);
+              this._macronutrients.push(newNutrient);
+              this._macroObserver.next(newNutrient);
             } else if (this._macronutrients.length === limit) {
               this._macroObserver.complete();
             }
@@ -112,8 +116,9 @@ export class NutrientService {
             if (res.hasOwnProperty('error')) {
               this._microObserver.error(res['error']);
             } else if (res.type === 'ChildAdded' && this._micronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
-              this._micronutrients.push(res.value);
-              this._microObserver.next(res.value);
+              let newNutrient: Nutrient = _.assign({id: res.key}, res.value);
+              this._micronutrients.push(newNutrient);
+              this._microObserver.next(newNutrient);
             } else if (this._micronutrients.length === limit) {
               this._microObserver.complete();
             }

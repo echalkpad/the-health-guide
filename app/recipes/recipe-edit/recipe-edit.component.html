@@ -6,6 +6,15 @@
     <ActionItem *ngIf="tabIdx === 2" (tap)="addInstruction()">
         <Button text="&#xf067;" class="fa action-item"></Button>
     </ActionItem>
+    <ActionItem *ngIf="tabIdx > 2" (tap)="syncNutrition()">
+        <Button text="&#xf021;" class="fa action-item"></Button>
+    </ActionItem>
+    <ActionItem android.position="popup" (tap)="updateRecipe()">
+        <Button text="Cook it" class="action-item"></Button>
+    </ActionItem>
+    <ActionItem android.position="popup" (tap)="deleteRecipe()">
+        <Button text="Remove it" class="action-item"></Button>
+    </ActionItem>
 </ActionBar>
 <TabView [(ngModel)]="tabIdx" androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
     <ScrollView #tabViewItem *tabItem="{title: 'Details'}">
@@ -151,59 +160,3 @@
         </ListView>
     </StackLayout>
 </TabView>
-
-
-
-<!--
-    <FlexboxLayout flexDirection="column" class="form" [formGroup]="recipeForm">
-            <StackLayout class="input-field">
-                <Label *ngIf="recipe.name.length" text="&#xf2bc; Name" class="label fa" textWrap="true"></Label>
-                <TextField hint="&#xf2bc; Name" name="name" [(ngModel)]="recipe.name" id="name" formControlName="name" keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done" class="input">
-                </TextField>
-                <Label *ngIf="recipeForm.controls['name'].hasError('required') && !recipeForm.pristine" color="red" text="Name is required" textWrap="true"></Label>
-            </StackLayout>
-            <StackLayout class="input-field">
-                <Label *ngIf="recipe.description.length" text="&#xf2bc; Description" class="label fa" textWrap="true"></Label>
-                <TextView hint="&#xf2bc; Description" name="description" [(ngModel)]="recipe.description" id="description" formControlName="description" keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done" class="input">
-                </TextView>
-                <Label *ngIf="recipeForm.controls['description'].hasError('required') && !recipeForm.pristine" color="red" text="Description is required" textWrap="true"></Label>
-            </StackLayout>
-            <StackLayout class="input-field">
-                <Label *ngIf="recipe.duration" text="&#xf2bc; Duration" class="label fa" textWrap="true"></Label>
-                <TextField hint="&#xf2bc; Duration" name="duration" [(ngModel)]="recipe.duration" id="duration" formControlName="duration" keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
-                </TextField>
-                <Label *ngIf="recipeForm.controls['duration'].hasError('required') && !recipeForm.pristine" color="red" text="Duration is required" textWrap="true"></Label>
-            </StackLayout>
-            <GridLayout rows="*" columns="*, *, *">
-
-                <StackLayout col="1" class="input-field">
-                    <Label *ngIf="recipe.cookTemperature" text="&#xf2bc; Temperature" class="label fa" textWrap="true"></Label>
-                    <TextField hint="&#xf2bc; Temperature" name="cookTemperature" [(ngModel)]="recipe.cookTemperature" id="cookTemperature" formControlName="cookTemperature" keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
-                    </TextField>
-                    <Label *ngIf="recipeForm.controls['cookTemperature'].hasError('required') && !recipeForm.pristine" color="red" text="Temperature is required" textWrap="true"></Label>
-                </StackLayout>
-                <StackLayout col="2" class="input-field">
-                    <Label *ngIf="recipe.servings" text="&#xf2bc; Servings" class="label fa" textWrap="true"></Label>
-                    <TextField hint="&#xf2bc; Servings" name="servings" [(ngModel)]="recipe.servings" id="servings" formControlName="servings" keyboardType="number" autocorrect="false" autocapitalizationType="none" class="fa" returnKeyType="done">
-                    </TextField>
-                    <Label *ngIf="recipeForm.controls['servings'].hasError('required') && !recipeForm.pristine" color="red" text="Servings is required" textWrap="true"></Label>
-                </StackLayout>
-            </GridLayout>
-            <GridLayout rows="auto" columns="auto, auto">
-                <Label col="0" text="&#xf2bc; Category" class="fa" textWrap="true"></Label>
-                <ListPicker class="picker" col="1" #categoryPicker [items]="categories" [selectedIndex]="selectedCategory" (selectedIndexChange)="changeCategory(categoryPicker)">
-                </ListPicker>
-            </GridLayout>
-            <GridLayout rows="auto" columns="auto, auto">
-                <Label col="0" text="&#xf2bc; Cook method" class="fa" textWrap="true"></Label>
-                <ListPicker class="picker" col="1" #cookMethodPicker [items]="cookMethods" [selectedIndex]="selectedCookMethod" (selectedIndexChange)="changeCookMethod(cookMethodPicker)">
-                </ListPicker>
-            </GridLayout>
-            <GridLayout rows="auto" columns="auto, auto">
-                <Label col="0" text="&#xf2bc; Difficulty" class="fa" textWrap="true"></Label>
-                <ListPicker class="picker" col="1" #difficultyPicker [items]="difficulties" [selectedIndex]="selectedDifficulty" (selectedIndexChange)="changeDifficulty(difficultyPicker)">
-                </ListPicker>
-            </GridLayout>
-        </FlexboxLayout>
-
-        -->
