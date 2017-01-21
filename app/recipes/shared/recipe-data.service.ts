@@ -137,10 +137,10 @@ export class RecipeDataService {
   public keepOnSyncPrivate(): void {
     firebase.keepInSync(`/recipes${this._auth}`, true).then(
       function () {
-        console.log("firebase.keepInSync is ON for private recipes");
+        console.log('firebase.keepInSync is ON for private recipes');
       },
       function (error) {
-        console.log("firebase.keepInSync error: " + error);
+        console.log('firebase.keepInSync error: ' + error);
       }
     );
   }
@@ -148,10 +148,10 @@ export class RecipeDataService {
   public keepOnSyncShared(): void {
     firebase.keepInSync('/recipes/shared', true).then(
       function () {
-        console.log("firebase.keepInSync is ON for shared recipes");
+        console.log('firebase.keepInSync is ON for shared recipes');
       },
       function (error) {
-        console.log("firebase.keepInSync error: " + error);
+        console.log('firebase.keepInSync error: ' + error);
       }
     );
   }
