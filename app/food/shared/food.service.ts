@@ -37,14 +37,13 @@ export class FoodService {
                     }
                 });
             } else {
-                //this.keepOnSyncFoods();
                 this._foods = [];
                 firebase.query(
                     (res: firebase.FBData) => {
                         if (res.hasOwnProperty('error')) {
                             this._foodObserver.error(res['error']);
                         } else if (res.type === 'ChildAdded' && this._foods.length < limit && this._helpSvc.isMatch(res.value, 'name', searchTerm)) {
-                            let newFood: Food = _.assign({$key: res.key}, res.value);
+                            let newFood: Food = _.assign({ $key: res.key }, res.value);
                             this._foods.push(newFood);
                             this._foodObserver.next(newFood);
                         } else if (this._foods.length === limit) {

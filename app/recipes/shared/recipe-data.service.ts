@@ -1,5 +1,5 @@
 // Angular
-import { Injectable, NgZone } from '@angular/core';
+import { Injectable } from '@angular/core';
 
 // RxJS
 import { Observable } from 'rxjs/Observable';
@@ -35,8 +35,7 @@ export class RecipeDataService {
   constructor(
     private _dataSvc: DataService,
     private _helperSvc: HelperService,
-    private _recipeSvc: RecipeService,
-    private _zone: NgZone
+    private _recipeSvc: RecipeService
   ) {
     this._auth = _dataSvc.getAuth().id;
   }
@@ -54,7 +53,6 @@ export class RecipeDataService {
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
-      this._zone.runOutsideAngular(() => {
         this._privateObserver = observer;
         if (!!this._privateRecipes.length && !withFetch) {
           this._privateRecipes.forEach((item: Recipe, idx: number) => {
@@ -90,7 +88,6 @@ export class RecipeDataService {
             }
           );
         }
-      });
     });
   }
 
@@ -99,41 +96,41 @@ export class RecipeDataService {
     limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
-      this._sharedObserver = observer;
-      if (!!this._sharedRecipes.length && !withFetch) {
-        this._sharedRecipes.forEach((item: Recipe, idx: number) => {
-          if (idx < limit) {
-            this._sharedObserver.next(item);
-          }
-        });
-      } else {
-        this._sharedRecipes = [];
-        firebase.query(
-          (res: firebase.FBData) => {
-            if (res.hasOwnProperty('error')) {
-              this._sharedObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
-              let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
-              this._sharedRecipes.push(newRecipe);
-              this._sharedObserver.next(newRecipe);
-            } else if (this._sharedRecipes.length === limit) {
-              this._sharedObserver.complete();
+        this._sharedObserver = observer;
+        if (!!this._sharedRecipes.length && !withFetch) {
+          this._sharedRecipes.forEach((item: Recipe, idx: number) => {
+            if (idx < limit) {
+              this._sharedObserver.next(item);
             }
-          },
-          `recipes/${this._auth}`,
-          {
-            singleEvent: false,
-            orderBy: {
-              type: firebase.QueryOrderByType.CHILD,
-              value: 'name'
+          });
+        } else {
+          this._sharedRecipes = [];
+          firebase.query(
+            (res: firebase.FBData) => {
+              if (res.hasOwnProperty('error')) {
+                this._sharedObserver.error(res['error']);
+              } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
+                let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
+                this._sharedRecipes.push(newRecipe);
+                this._sharedObserver.next(newRecipe);
+              } else if (this._sharedRecipes.length === limit) {
+                this._sharedObserver.complete();
+              }
             },
-            limit: {
-              type: firebase.QueryLimitType.FIRST,
-              value: limit
+            `recipes/${this._auth}`,
+            {
+              singleEvent: false,
+              orderBy: {
+                type: firebase.QueryOrderByType.CHILD,
+                value: 'name'
+              },
+              limit: {
+                type: firebase.QueryLimitType.FIRST,
+                value: limit
+              }
             }
-          }
-        );
-      }
+          );
+        }
     });
   }
 

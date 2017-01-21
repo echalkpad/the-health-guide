@@ -1,9 +1,7 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-//import { ActivatedRoute, Params } from '@angular/router';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, NgZone, OnInit } from '@angular/core';
 
 // Nativescript
-//import { RouterExtensions } from 'nativescript-angular/router';
 import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
 import { SetupItemViewArgs } from 'nativescript-angular/directives';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -37,16 +35,11 @@ export class MealSearchComponent implements OnInit {
         private _mealSearchSvc: MealSearchService,
         private _params: ModalDialogParams,
         private _recipeDataSvc: RecipeDataService,
-        //private _route: ActivatedRoute,
-        //private _router: RouterExtensions
+        private _zone: NgZone
     ) { }
 
     public cancel(): void {
         this._params.closeCallback([]);
-        /*
-        this._mealSearchSvc.clearSelections();
-        this._router.back();
-        */
     }
 
     public clearSearch(): void {
@@ -56,10 +49,6 @@ export class MealSearchComponent implements OnInit {
 
     public done(): void {
         this._params.closeCallback(this.selections);
-        /*
-        this._mealSearchSvc.saveSelections(this.selections);
-        this._router.back();
-        */
     }
 
     public loadMoreMeals(args: ListViewEventData): void {
@@ -75,8 +64,10 @@ export class MealSearchComponent implements OnInit {
     }
 
     public refreshMeals(args?: ListViewEventData, withFetch?: boolean): void {
-        this._meals = [];
-        this._mealSearchSvc.getMeals().subscribe((meal: Meal) => this._meals.push(meal));
+        this._zone.runOutsideAngular(() => {
+            this._meals = [];
+            this._mealSearchSvc.getMeals().subscribe((meal: Meal) => this._meals.push(meal));
+        });
         setTimeout(() => {
             this.filteredMeals = [...this._meals.slice(0, this._mealsLimit)];
             if (args) {
@@ -111,11 +102,6 @@ export class MealSearchComponent implements OnInit {
         if (!!this._params.context.meals) {
             this.selections = [...this._params.context.meals];
         }
-        /*
-        this._route.queryParams.subscribe((params: Params) => {
-            this.selections = JSON.parse(params['meals']);
-        });
-        */
         setTimeout(() => this.refreshMeals(), 5000);
     }
 

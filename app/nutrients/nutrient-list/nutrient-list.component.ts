@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Nativescript
@@ -36,6 +36,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
     private _changeDetectionRef: ChangeDetectorRef,
     private _nutrientSvc: NutrientService,
     private _router: RouterExtensions,
+    private _zone: NgZone,
     public drawerSvc: DrawerService
   ) { }
 
@@ -91,22 +92,26 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   }
 
   public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
-    this._macronutrients = [];
-    this._nutrientSvc.getMacronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
+    this._zone.runOutsideAngular(() => {
+      this._macronutrients = [];
+      this._nutrientSvc.getMacronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
+    });
     setTimeout(() => {
       this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
       if (args) {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingMacros = false;
-      
+
       this._changeDetectionRef.markForCheck();
     }, 3000);
   }
 
   public refreshMicros(args?: ListViewEventData, withFetch?: boolean): void {
-    this._micronutrients = [];
-    this._nutrientSvc.getMicronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
+    this._zone.runOutsideAngular(() => {
+      this._micronutrients = [];
+      this._nutrientSvc.getMicronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
+    });
     setTimeout(() => {
       this.filteredMicronutrients = new ObservableArray<Nutrient>(this._micronutrients);
       if (args) {

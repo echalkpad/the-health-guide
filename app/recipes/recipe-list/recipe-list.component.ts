@@ -158,32 +158,32 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   public refreshPrivate(args?: ListViewEventData, withFetch?: boolean): void {
-    this._privateRecipes = [];
-    this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._privateRecipes.push(data));
+    this._zone.runOutsideAngular(() => {
+      this._privateRecipes = [];
+      this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchInputPrivate, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._privateRecipes.push(data));
+    });
     setTimeout(() => {
-      this._zone.run(() => {
-        this.filteredPrivate = new ObservableArray<Recipe>(this._privateRecipes);
-        if (args) {
-          args.object.notifyPullToRefreshFinished();
-        }
-        this.isLoadingPrivate = false;
-        this._changeDetectionRef.markForCheck();
-      });
+      this.filteredPrivate = new ObservableArray<Recipe>(this._privateRecipes);
+      if (args) {
+        args.object.notifyPullToRefreshFinished();
+      }
+      this.isLoadingPrivate = false;
+      this._changeDetectionRef.markForCheck();
     }, 5000);
   }
 
   public refreshShared(args?: ListViewEventData, withFetch?: boolean): void {
-    this._sharedRecipes = [];
-    this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._sharedRecipes.push(data));
+    this._zone.runOutsideAngular(() => {
+      this._sharedRecipes = [];
+      this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchInputShared, withFetch, this.query, this.queryIngredients).subscribe((data: Recipe) => this._sharedRecipes.push(data));
+    });
     setTimeout(() => {
-      this._zone.run(() => {
-        this.filteredShared = new ObservableArray<Recipe>(this._sharedRecipes);
-        if (args) {
-          args.object.notifyPullToRefreshFinished();
-        }
-        this.isLoadingShared = false;
-        this._changeDetectionRef.markForCheck();
-      });
+      this.filteredShared = new ObservableArray<Recipe>(this._sharedRecipes);
+      if (args) {
+        args.object.notifyPullToRefreshFinished();
+      }
+      this.isLoadingShared = false;
+      this._changeDetectionRef.markForCheck();
     }, 5000);
   }
 

@@ -59,41 +59,41 @@ export class NutrientService {
       limit: number = 50;
 
     return new Observable((observer: Subscriber<Nutrient>) => {
-      this._macroObserver = observer;
-      if (!!this._macronutrients && !withFetch) {
-        this._macronutrients.forEach((item: Nutrient, idx: number) => {
-          if (idx < limit) {
-            this._macroObserver.next(item)
-          }
-        });
-      } else {
-        this._macronutrients = [];
-        firebase.query(
-          (res: firebase.FBData) => {
-            if (res.hasOwnProperty('error')) {
-              this._macroObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded' && this._macronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
-              let newNutrient: Nutrient = _.assign({id: res.key}, res.value);
-              this._macronutrients.push(newNutrient);
-              this._macroObserver.next(newNutrient);
-            } else if (this._macronutrients.length === limit) {
-              this._macroObserver.complete();
+        this._macroObserver = observer;
+        if (!!this._macronutrients && !withFetch) {
+          this._macronutrients.forEach((item: Nutrient, idx: number) => {
+            if (idx < limit) {
+              this._macroObserver.next(item)
             }
-          },
-          '/macronutrients',
-          {
-            singleEvent: false,
-            orderBy: {
-              type: firebase.QueryOrderByType.CHILD,
-              value: 'name'
+          });
+        } else {
+          this._macronutrients = [];
+          firebase.query(
+            (res: firebase.FBData) => {
+              if (res.hasOwnProperty('error')) {
+                this._macroObserver.error(res['error']);
+              } else if (res.type === 'ChildAdded' && this._macronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
+                let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
+                this._macronutrients.push(newNutrient);
+                this._macroObserver.next(newNutrient);
+              } else if (this._macronutrients.length === limit) {
+                this._macroObserver.complete();
+              }
             },
-            limit: {
-              type: firebase.QueryLimitType.FIRST,
-              value: limit
+            '/macronutrients',
+            {
+              singleEvent: false,
+              orderBy: {
+                type: firebase.QueryOrderByType.CHILD,
+                value: 'name'
+              },
+              limit: {
+                type: firebase.QueryLimitType.FIRST,
+                value: limit
+              }
             }
-          }
-        );
-      }
+          );
+        }
     });
   }
 
@@ -102,41 +102,41 @@ export class NutrientService {
       limit: number = 50;
 
     return new Observable((observer: Subscriber<Nutrient>) => {
-      this._microObserver = observer;
-      if (!!this._micronutrients && !withFetch) {
-        this._micronutrients.forEach((item: Nutrient, idx: number) => {
-          if (idx < limit) {
-            this._microObserver.next(item)
-          }
-        });
-      } else {
-        this._micronutrients = [];
-        firebase.query(
-          (res: firebase.FBData) => {
-            if (res.hasOwnProperty('error')) {
-              this._microObserver.error(res['error']);
-            } else if (res.type === 'ChildAdded' && this._micronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
-              let newNutrient: Nutrient = _.assign({id: res.key}, res.value);
-              this._micronutrients.push(newNutrient);
-              this._microObserver.next(newNutrient);
-            } else if (this._micronutrients.length === limit) {
-              this._microObserver.complete();
+        this._microObserver = observer;
+        if (!!this._micronutrients && !withFetch) {
+          this._micronutrients.forEach((item: Nutrient, idx: number) => {
+            if (idx < limit) {
+              this._microObserver.next(item)
             }
-          },
-          '/micronutrients',
-          {
-            singleEvent: false,
-            orderBy: {
-              type: firebase.QueryOrderByType.CHILD,
-              value: 'name'
+          });
+        } else {
+          this._micronutrients = [];
+          firebase.query(
+            (res: firebase.FBData) => {
+              if (res.hasOwnProperty('error')) {
+                this._microObserver.error(res['error']);
+              } else if (res.type === 'ChildAdded' && this._micronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
+                let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
+                this._micronutrients.push(newNutrient);
+                this._microObserver.next(newNutrient);
+              } else if (this._micronutrients.length === limit) {
+                this._microObserver.complete();
+              }
             },
-            limit: {
-              type: firebase.QueryLimitType.FIRST,
-              value: limit
+            '/micronutrients',
+            {
+              singleEvent: false,
+              orderBy: {
+                type: firebase.QueryOrderByType.CHILD,
+                value: 'name'
+              },
+              limit: {
+                type: firebase.QueryLimitType.FIRST,
+                value: limit
+              }
             }
-          }
-        );
-      }
+          );
+        }
     });
   }
 

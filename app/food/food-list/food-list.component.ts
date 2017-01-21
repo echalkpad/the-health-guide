@@ -1,5 +1,5 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Nativescript
@@ -33,6 +33,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
     private _changeDetectionRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
     private _router: RouterExtensions,
+    private _zone: NgZone,
     public drawerSvc: DrawerService,
   ) { }
 
@@ -63,15 +64,17 @@ export class FoodListComponent implements OnDestroy, OnInit {
   }
 
   public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
-    this._foods = [];
-    this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this._foods.push(data));
+    this._zone.runOutsideAngular(() => {
+      this._foods = [];
+      this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this._foods.push(data));
+    });
     setTimeout(() => {
-      this.filteredFoods = new ObservableArray<Food>(this._foods);
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.isLoading = false;
-      this._changeDetectionRef.markForCheck();
+        this.filteredFoods = new ObservableArray<Food>(this._foods);
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        this.isLoading = false;
+        this._changeDetectionRef.markForCheck();
     }, 5000);
   }
 
