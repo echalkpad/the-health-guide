@@ -12,7 +12,6 @@ import { User } from './user.model';
 
 @Injectable()
 export class AuthService {
-    public redirectUrl: string;
     constructor(private _dataSvc: DataService, private _zone: NgZone) { }
 
     public getAvatar(imgName: string): any {
