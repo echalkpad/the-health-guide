@@ -45,10 +45,8 @@ export class FoodListComponent implements OnDestroy, OnInit {
     this._foodLimit += 10;
     this.refreshFoods(true);
     setTimeout(() => {
-      this._zone.run(() => {
-        args.object.notifyLoadOnDemandFinished();
-        args.returnValue = true;
-      })
+      args.object.notifyLoadOnDemandFinished();
+      args.returnValue = true;
     }, 5000);
   }
 
@@ -69,10 +67,8 @@ export class FoodListComponent implements OnDestroy, OnInit {
       this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this.foods.push(data));
     });
     setTimeout(() => {
-      this._zone.run(() => {
-        this.isLoading = false;
-        this._changeDetectionRef.markForCheck();
-      });
+      this.isLoading = false;
+      this._changeDetectionRef.markForCheck();
     }, 5000);
   }
 
