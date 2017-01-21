@@ -35,9 +35,7 @@ export class AuthComponent implements OnInit {
         private _fb: FormBuilder,
         private _page: Page,
         private _router: RouterExtensions
-    ) {
-        _page.actionBarHidden = true;
-    }
+    ) {  }
 
     private showAlert(title: string, msg: Error | string): void {
         let options = {
@@ -64,6 +62,7 @@ export class AuthComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this._page.actionBarHidden = true;
         this.loginForm = this._fb.group({
             email: ['', [Validators.required, Validators.pattern(EMAIL_REGEX)]],
             password: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(20)]],

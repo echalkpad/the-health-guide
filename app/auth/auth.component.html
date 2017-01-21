@@ -1,6 +1,6 @@
 <GridLayout rows="*" class="auth">
     <ActivityIndicator class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
-    <GridLayout rows="*">
+    <GridLayout rows="*" *ngIf="!isLoading">
         <StackLayout [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center"
             minHeight="100" minWidth="300">
             <Label text="The Health Guide" class="title" textWrap="true"></Label>

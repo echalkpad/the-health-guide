@@ -2,7 +2,6 @@
 import { SIDEDRAWER_DIRECTIVES } from 'nativescript-telerik-ui/sidedrawer/angular';
 import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui/listview/angular';
 import { NSFRESCO_DIRECTIVES } from 'nativescript-fresco/angular';
-import * as applicationModule from 'application';
 import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
 export const thirdPartyImports = [

@@ -23,11 +23,10 @@ import { FoodService } from '../shared/food.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnDestroy, OnInit {
-  private _foods: Food[];
   private _foodLimit: number = 10;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
-  public filteredFoods: ObservableArray<Food>;
+  public foods: ObservableArray<Food>;
   public searchInput: string = '';
   constructor(
     private _changeDetectionRef: ChangeDetectorRef,
@@ -39,19 +38,17 @@ export class FoodListComponent implements OnDestroy, OnInit {
 
   public clearSearch(): void {
     this.searchInput = '';
-    this.isLoading = true;
-    this.refreshFoods(null, true);
+    this.refreshFoods(true);
   }
 
   public loadMoreFoods(args: ListViewEventData): void {
     this._foodLimit += 10;
-    this.refreshFoods();
+    this.refreshFoods(true);
     setTimeout(() => {
-      args.object.notifyLoadOnDemandFinished();
-      args.returnValue = true;
-      if (this.filteredFoods.length > 10) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
-      }
+      this._zone.run(() => {
+        args.object.notifyLoadOnDemandFinished();
+        args.returnValue = true;
+      })
     }, 5000);
   }
 
@@ -63,25 +60,25 @@ export class FoodListComponent implements OnDestroy, OnInit {
     setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 100);
   }
 
-  public refreshFoods(args?: ListViewEventData, withFetch?: boolean): void {
+  public refreshFoods(withFetch?: boolean): void {
+    if (withFetch) {
+      this.isLoading = true;
+    }
     this._zone.runOutsideAngular(() => {
-      this._foods = [];
-      this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this._foods.push(data));
+      this.foods = new ObservableArray<Food>([]);
+      this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this.foods.push(data));
     });
     setTimeout(() => {
-        this.filteredFoods = new ObservableArray<Food>(this._foods);
-        if (args) {
-          args.object.notifyPullToRefreshFinished();
-        }
+      this._zone.run(() => {
         this.isLoading = false;
         this._changeDetectionRef.markForCheck();
+      });
     }, 5000);
   }
 
   public searchFood(searchTerm: string): void {
     this.searchInput = searchTerm;
-    this.isLoading = true;
-    this.refreshFoods(null, true);
+    this.refreshFoods(true);
   }
 
   public toggleSearching(): void {

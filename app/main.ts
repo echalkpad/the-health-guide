@@ -31,6 +31,6 @@ if (applicationModule.android) {
     });
 }
 
-enableProdMode();
+//enableProdMode();
 
 platformNativeScriptDynamic().bootstrapModule(AppModule);
