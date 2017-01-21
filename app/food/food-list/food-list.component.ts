@@ -43,7 +43,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
 
   public loadMoreFoods(args: ListViewEventData): void {
     this._foodLimit += 10;
-    this.refreshFoods(true);
+    this.refreshFoods(false, true);
     setTimeout(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
@@ -58,13 +58,15 @@ export class FoodListComponent implements OnDestroy, OnInit {
     setTimeout(() => this._router.navigate(['/food', selected.$key], navExtras), 100);
   }
 
-  public refreshFoods(withFetch?: boolean): void {
+  public refreshFoods(withFetch?: boolean, more?: boolean): void {
     if (withFetch) {
       this.isLoading = true;
     }
     this._zone.runOutsideAngular(() => {
-      this.foods = new ObservableArray<Food>([]);
-      this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch).subscribe((data: Food) => this.foods.push(data));
+      if (!more) {
+        this.foods = new ObservableArray<Food>([]);
+      }
+      this._foodSvc.getFoods(this._foodLimit, this.searchInput, withFetch, more).subscribe((data: Food) => this.foods.push(data));
     });
     setTimeout(() => {
       this.isLoading = false;
