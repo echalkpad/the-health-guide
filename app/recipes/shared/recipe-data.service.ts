@@ -54,7 +54,7 @@ export class RecipeDataService {
 
     return new Observable((observer: Subscriber<Recipe>) => {
         this._privateObserver = observer;
-        if (!!this._privateRecipes.length && !withFetch) {
+        if (this._privateRecipes.length >= limit && !withFetch) {
           this._privateRecipes.forEach((item: Recipe, idx: number) => {
             if (idx < limit) {
               this._privateObserver.next(item);
@@ -66,7 +66,7 @@ export class RecipeDataService {
             (res: firebase.FBData) => {
               if (res.hasOwnProperty('error')) {
                 this._privateObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._privateRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
+              } else if (res.type === 'ChildAdded' && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
                 let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
                 this._privateRecipes.push(newRecipe);
                 this._privateObserver.next(newRecipe);
@@ -97,7 +97,7 @@ export class RecipeDataService {
 
     return new Observable((observer: Subscriber<Recipe>) => {
         this._sharedObserver = observer;
-        if (!!this._sharedRecipes.length && !withFetch) {
+        if (this._sharedRecipes.length >= limit && !withFetch) {
           this._sharedRecipes.forEach((item: Recipe, idx: number) => {
             if (idx < limit) {
               this._sharedObserver.next(item);
@@ -109,7 +109,7 @@ export class RecipeDataService {
             (res: firebase.FBData) => {
               if (res.hasOwnProperty('error')) {
                 this._sharedObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._sharedRecipes.length < limit && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
+              } else if (res.type === 'ChildAdded' && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
                 let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
                 this._sharedRecipes.push(newRecipe);
                 this._sharedObserver.next(newRecipe);

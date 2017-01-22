@@ -19,9 +19,9 @@ import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
-  private _macronutrients: Nutrient[];
+  private _macronutrients: Nutrient[] = [];
   private _macroObserver: Subscriber<Nutrient>;
-  private _micronutrients: Nutrient[];
+  private _micronutrients: Nutrient[] = [];
   private _microObserver: Subscriber<Nutrient>;
   constructor() { }
 
@@ -60,7 +60,7 @@ export class NutrientService {
 
     return new Observable((observer: Subscriber<Nutrient>) => {
         this._macroObserver = observer;
-        if (!!this._macronutrients && !withFetch) {
+        if (!!this._macronutrients.length && !withFetch) {
           this._macronutrients.forEach((item: Nutrient, idx: number) => {
             if (idx < limit) {
               this._macroObserver.next(item)
@@ -72,7 +72,7 @@ export class NutrientService {
             (res: firebase.FBData) => {
               if (res.hasOwnProperty('error')) {
                 this._macroObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._macronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
+              } else if (res.type === 'ChildAdded' && this.filterNutrient(res.value, query, searchTerm)) {
                 let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
                 this._macronutrients.push(newNutrient);
                 this._macroObserver.next(newNutrient);
@@ -103,7 +103,7 @@ export class NutrientService {
 
     return new Observable((observer: Subscriber<Nutrient>) => {
         this._microObserver = observer;
-        if (!!this._micronutrients && !withFetch) {
+        if (!!this._micronutrients.length && !withFetch) {
           this._micronutrients.forEach((item: Nutrient, idx: number) => {
             if (idx < limit) {
               this._microObserver.next(item)
@@ -115,7 +115,7 @@ export class NutrientService {
             (res: firebase.FBData) => {
               if (res.hasOwnProperty('error')) {
                 this._microObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._micronutrients.length < limit && this.filterNutrient(res.value, query, searchTerm)) {
+              } else if (res.type === 'ChildAdded' && this.filterNutrient(res.value, query, searchTerm)) {
                 let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
                 this._micronutrients.push(newNutrient);
                 this._microObserver.next(newNutrient);

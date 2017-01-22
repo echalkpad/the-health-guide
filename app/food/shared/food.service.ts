@@ -20,7 +20,7 @@ import { HelperService, MAX_SAFE_INTEGER } from '../../shared'
 
 @Injectable()
 export class FoodService {
-    private _foods: Food[];
+    private _foods: Food[] = [];
     private _foodObserver: Subscriber<Food>;
     constructor(private _helpSvc: HelperService) { }
 
@@ -30,7 +30,7 @@ export class FoodService {
 
         return new Observable((observer: Subscriber<Food>) => {
             this._foodObserver = observer;
-            if (!withFetch && !!this._foods && this._foods.length >= limit) {
+            if (!withFetch && this._foods.length >= limit) {
                 this._foods.forEach((item: Food, idx: number) => {
                     if (idx < limit) {
                         this._foodObserver.next(item);
