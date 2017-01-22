@@ -1,9 +1,8 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone, ViewChild } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone } from '@angular/core';
 import { NavigationExtras } from '@angular/router';
 
 // Nativescript
-import { RadListViewComponent } from 'nativescript-telerik-ui/listview/angular';
 import { RouterExtensions } from 'nativescript-angular/router';
 import { setTimeout } from 'timer';
 import { ObservableArray } from 'data/observable-array';
@@ -24,7 +23,6 @@ import { FoodService } from '../shared/food.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListComponent implements OnDestroy, OnInit {
-  @ViewChild(RadListViewComponent) private _listView: RadListViewComponent;
   private _foods: Food[];
   private _foodLimit: number = 50;
   public filteredFoods: ObservableArray<Food>;
@@ -45,17 +43,13 @@ export class FoodListComponent implements OnDestroy, OnInit {
     this.refreshFoods(null, true);
   }
 
-  public get loadMode(): string {
-    return (this.filteredFoods.length >= this._foodLimit) ? 'Manual' : 'Auto';
-  }
-
   public loadMoreFoods(args: ListViewEventData): void {
-    this._foodLimit += 10;
+    this._foodLimit += 50;
     this.refreshFoods().then(() => {
       args.object.notifyLoadOnDemandFinished();
       args.returnValue = true;
-      if (this.filteredFoods.length > 10) {
-        setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 10), 1000);
+      if (this.filteredFoods.length > 50) {
+        setTimeout(() => args.object.scrollToIndex(this.filteredFoods.length - 50), 1000);
       }
     });
   }
@@ -89,7 +83,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public searchFood(searchTerm: string): void {
     this.searchInput = searchTerm;
     this.isLoading = true;
-    this.refreshFoods(null, true).then(() => this._listView.listView.notifyLoadOnDemandFinished());
+    this.refreshFoods(null, true);
   }
 
   public toggleSearching(): void {
