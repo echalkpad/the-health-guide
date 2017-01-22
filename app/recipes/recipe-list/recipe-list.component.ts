@@ -9,6 +9,8 @@ import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/mod
 import { ListViewEventData, RadListView } from 'nativescript-telerik-ui/listview';
 import { setTimeout } from 'timer';
 import { ObservableArray } from 'data/observable-array';
+import { registerElement } from 'nativescript-angular/element-registry';
+registerElement("Fab", () => require('nativescript-floatingactionbutton').Fab);
 
 // THG
 import { AuthService } from '../../auth';

@@ -36,10 +36,13 @@
     <style name="NativeScriptToolbarStyleBase" parent="Widget.AppCompat.Toolbar">
         <item name="android:background">@color/ns_primary</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
-        <item name="popupTheme">@style/ThemeOverlay.AppCompat</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Dark</item>
 
     </style>
 
     <style name="NativeScriptToolbarStyle" parent="NativeScriptToolbarStyleBase">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 </resources> 
