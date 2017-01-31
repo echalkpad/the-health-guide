@@ -1,42 +1,37 @@
 <RadSideDrawer>
     <StackLayout tkDrawerContent class="sidedrawer-left">
         <StackLayout class="sidedrawer-header">
-            <FrescoDrawee roundAsCircle="true" width="50%" height="50%" verticalAlignment="center" actualImageScaleType="fitCenter" aspectRatio="1"
-                [imageUri]="auth.avatar"></FrescoDrawee>
+            <FrescoDrawee roundAsCircle="true" width="50%" height="50%" verticalAlignment="center" actualImageScaleType="fitCenter" aspectRatio="1" [imageUri]="auth.avatar"></FrescoDrawee>
             <Label [text]="auth.name" textWrap="true" class="text-center p-t-10"></Label>
         </StackLayout>
         <ScrollView class="sidedrawer-content">
             <FlexboxLayout flexDirection="column">
-                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/']" nsRouterLinkActive="active"
-                    [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
-                    <Label text="&#xf015;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
+                    <Label [text]="'mdi-home' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Home"></Label>
                 </GridLayout>
-                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/food']" nsRouterLinkActive="active"
-                    [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
-                    <Label text="&#xf07a;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/food']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
+                    <Label [text]="'mdi-local-grocery-store' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Food"></Label>
                 </GridLayout>
-                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/nutrients']" nsRouterLinkActive="active"
-                    [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
-                    <Label text="&#xf06c;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/nutrients']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
+                    <Label [text]="'mdi-local-florist' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Nutrients"></Label>
                 </GridLayout>
-                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/recipes']" nsRouterLinkActive="active"
-                    [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
-                    <Label text="&#xf1fd;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/recipes']" nsRouterLinkActive="active" [nsRouterLinkActiveOptions]="{exact:true}" pageTransition="slideLeft" (tap)="drawerSvc.toggle(false)">
+                    <Label [text]="'mdi-cake' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Recipes"></Label>
                 </GridLayout>
                 <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
-                    <Label text="&#xf073;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                    <Label [text]="'mdi-fitness-center' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Tracker"></Label>
                 </GridLayout>
                 <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *">
-                    <Label text="&#xf2bd;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                    <Label [text]="'mdi-account-circle' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Account"></Label>
                 </GridLayout>
                 <GridLayout class="sidedrawer-list-item" rows="auto" columns="auto, *" [nsRouterLink]="['/login']" (tap)="logout(); drawerSvc.toggle(false)">
-                    <Label text="&#xf08b;" class="fa sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
+                    <Label [text]="'mdi-exit-to-app' | fonticon" class="mdi sidedrawer-list-item-icon text-muted" row="0" col="0"></Label>
                     <Label class="sidedrawer-list-item-text" row="0" col="1" text="Logout"></Label>
                 </GridLayout>
             </FlexboxLayout>

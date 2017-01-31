@@ -1,27 +1,30 @@
 <ActionBar class="action-bar" [title]="nutrient.name">
-  <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
+    <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
 </ActionBar>
 
+<!--
 <TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
-  <StackLayout *tabItem="{title: 'Summary'}" class="p-20">
-    <HtmlView [html]="nutrient.description"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Classifications'}" class="p-20">
-    <HtmlView [html]="nutrientClassification"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Functions'}" class="p-20">
-    <HtmlView [html]="nutrientFunctions"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Disease preventions'}" class="p-20">
-    <HtmlView [html]="nutrientDiseases"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Relationship with nutrients'}" class="p-20">
-    <HtmlView [html]="nutrient.nutrientRelationship"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Deficiency'}" class="p-20">
-    <HtmlView [html]="nutrient.deficiency"></HtmlView>
-  </StackLayout>
-  <StackLayout *tabItem="{title: 'Toxicity'}" class="p-20">
-    <HtmlView [html]="nutrient.toxicity"></HtmlView>
-  </StackLayout>
+  -->
+<TabView>
+    <StackLayout *tabItem="{title: 'Summary'}" class="p-20">
+        <HtmlView [html]="nutrient.description"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Classifications'}" class="p-20">
+        <HtmlView [html]="nutrientClassification"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Functions'}" class="p-20">
+        <HtmlView [html]="nutrientFunctions"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Disease preventions'}" class="p-20">
+        <HtmlView [html]="nutrientDiseases"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Relationship with nutrients'}" class="p-20">
+        <HtmlView [html]="nutrient.nutrientRelationship"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Deficiency'}" class="p-20">
+        <HtmlView [html]="nutrient.deficiency"></HtmlView>
+    </StackLayout>
+    <StackLayout *tabItem="{title: 'Toxicity'}" class="p-20">
+        <HtmlView [html]="nutrient.toxicity"></HtmlView>
+    </StackLayout>
 </TabView>

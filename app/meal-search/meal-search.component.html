@@ -13,7 +13,10 @@
     </ActionBar>
     
     -->
-    <TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+    <!--
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+  -->
+    <TabView>
         <StackLayout *tabItem="{title: 'Selections'}">
             <ListView [items]="selections" class="list-group" (itemTap)="removeSelection($event)" separatorColor="cyan">
                 <template let-selection="item">

@@ -7,17 +7,22 @@
 @import 'nativescript-theme-core/scss/index';
 // Place any CSS rules you want to apply on both iOS and Android here.
 // This is where the vast majority of your CSS code goes.
-$ocean: #5677FC !default;
-//$ocean: #899BFE !default;
-//$ocean: #30BCFF !default;
+$ocean: #1976d2 !default;
 $primary: $ocean !default;
-$secondary: $grey-dark !default;
 $light-green: #00c853 !default;
 $accent: $light-green !default;
 $light-blue: rgba($ocean, 0.2) !default;
 $dark-indigo: #151F2F;
+
+/*
+ * Dark theme
 .action-bar {
     background-color: $dark-indigo;
+}
+*/
+
+.action-bar {
+    background-color: $ocean;
 }
 
 .btn-primary {
@@ -33,12 +38,24 @@ $dark-indigo: #151F2F;
     font-family: 'FontAwesome';
 }
 
+.fab-button {
+    height: 70;
+    margin: 15;
+    background-color: $light-green;
+    horizontal-align: right;
+    vertical-align: bottom;
+}
+
 .hr-light {
     background-color: $light-blue;
 }
 
 .icon {
     font-family: 'icomoon';
+}
+
+.line-through {
+    text-decoration: line-through;
 }
 
 .mdi {

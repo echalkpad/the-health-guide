@@ -8,14 +8,14 @@ import { LISTVIEW_DIRECTIVES } from 'nativescript-telerik-ui/listview/angular';
 import * as firebase from 'nativescript-plugin-firebase';
 
 // Fresco
-import { NSFRESCO_DIRECTIVES } from 'nativescript-fresco/angular';
+import { TNSFrescoModule } from 'nativescript-fresco/angular';
 import * as frescoModule from 'nativescript-fresco';
 
 // Material icons
 import { TNSFontIconModule } from 'nativescript-ng2-fonticon';
 
 firebase.init({
-    persist: false,
+    persist: true,
     storageBucket: 'gs://the-health-guide.appspot.com/'
 }).then(
     (instance) => {
@@ -34,6 +34,7 @@ if (applicationModule.android) {
 }
 
 export const thirdPartyImports = [
+    TNSFrescoModule,
     TNSFontIconModule.forRoot({
         'mdi': 'material-design-icons.css'
     })
@@ -44,6 +45,5 @@ export const thirdPartyEntries = [
 
 export const thirdPartyDeclarations = [
     SIDEDRAWER_DIRECTIVES,
-    LISTVIEW_DIRECTIVES,
-    NSFRESCO_DIRECTIVES
+    LISTVIEW_DIRECTIVES
 ];

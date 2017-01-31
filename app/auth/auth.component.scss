@@ -1,7 +1,6 @@
 @import 'app-common';
-
 .auth {
-    background-image: url('~/images/gradient3.png');
+    background-image: url('~/images/gradient.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -20,18 +19,18 @@
 
 TextField {
     border-width: 1px;
-    border-color: rgba(255, 255, 255, .5);
+    border-color: rgba(255, 255, 255, .75);
     padding: 10em;
     font-size: 15px;
-    color: rgba(255, 255, 255, .5);
-    placeholder-color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, .75);
+    placeholder-color: rgba(255, 255, 255, .75);
 }
 
 .input-field {
     margin-bottom: 5em;
     margin-left: 20em;
     margin-right: 20em;
-    color: rgba(255, 255, 255, .5);
+    color: rgba(255, 255, 255, .75);
 }
 
 .btn {

@@ -1,32 +1,52 @@
 <GridLayout rows="*" class="auth">
     <ActivityIndicator class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
-    <GridLayout rows="*" *ngIf="!isLoading">
-        <StackLayout [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center"
-            minHeight="100" minWidth="300">
-            <Label text="The Health Guide" class="title" textWrap="true"></Label>
+    <GridLayout rows="*" *ngIf="!isLoading  && logging">
+        <StackLayout [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center" minHeight="100" minWidth="300">
+            <Label text="The Organizer" class="title" textWrap="true"></Label>
             <StackLayout class="input-field">
                 <Label *ngIf="email.length" text="&#xf2bc; Email" class="label fa" textWrap="true"></Label>
-                <TextField hint="&#xf2bc; Email" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email"
-                    autocorrect="false" autocapitalizationType="none" class="fa">
+                <TextField hint="&#xf2bc; Email" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email" autocorrect="false" autocapitalizationType="none" class="fa">
                 </TextField>
-                <Label *ngIf="loginForm.controls['email'].hasError('required') && !loginForm.pristine" color="red" text="Email is required"
-                    textWrap="true"></Label>
-                <Label *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].dirty" color="red" text="Email is invalid"
-                    textWrap="true"></Label>
+                <Label *ngIf="loginForm.controls['email'].hasError('required') && !loginForm.pristine" color="orange" text="Email is required" textWrap="true"></Label>
+                <Label *ngIf="loginForm.controls['email'].hasError('pattern') && loginForm.controls['email'].dirty" color="orange" text="Email is invalid" textWrap="true"></Label>
             </StackLayout>
             <StackLayout class="input-field">
                 <Label *ngIf="password.length" text="&#xf023; Password" class="label fa" textWrap="true"></Label>
-                <TextField hint="&#xf023; Password" name="password" [(ngModel)]="password" id="password" formControlName="password" secure="true"
-                    class="fa"></TextField>
-                <Label *ngIf="loginForm.controls['password'].hasError('required') && !loginForm.pristine" color="red" text="Password is required"
-                    textWrap="true"></Label>
-                <Label *ngIf="loginForm.controls['password'].hasError('minlength') && loginForm.controls['password'].dirty" color="red" text="Password is too short"
-                    textWrap="true"></Label>
-                <Label *ngIf="loginForm.controls['password'].hasError('maxlength') && loginForm.controls['password'].dirty" color="red" text="Password is too long"
-                    textWrap="true"></Label>
+                <TextField hint="&#xf023; Password" name="password" [(ngModel)]="password" id="password" formControlName="password" secure="true" class="fa"></TextField>
+                <Label *ngIf="loginForm.controls['password'].hasError('required') && !loginForm.pristine" color="orange" text="Password is required" textWrap="true"></Label>
+                <Label *ngIf="loginForm.controls['password'].hasError('minlength') && loginForm.controls['password'].dirty" color="orange" text="Password is too short" textWrap="true"></Label>
+                <Label *ngIf="loginForm.controls['password'].hasError('maxlength') && loginForm.controls['password'].dirty" color="orange" text="Password is too long" textWrap="true"></Label>
             </StackLayout>
             <Button [isEnabled]="loginForm.valid" class="btn btn-primary" text="Sign in" (tap)="passLogin()"></Button>
-            <Button class="btn" text="Sign up"></Button>
+            <Button class="btn" text="Sign up" (tap)="toggleLogging()"></Button>
+        </StackLayout>
+    </GridLayout>
+
+    <GridLayout rows="*" *ngIf="!isLoading && !logging">
+        <StackLayout [formGroup]="signUpForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center" minHeight="100" minWidth="300">
+            <Label text="The Organizer" class="title" textWrap="true"></Label>
+            <StackLayout class="input-field">
+                <Label *ngIf="username.length" text="&#xf007; Username" class="label fa" textWrap="true"></Label>
+                <TextField hint="&#xf007; Username" name="username" [(ngModel)]="username" id="username" formControlName="username" keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa">
+                </TextField>
+                <Label *ngIf="signUpForm.controls['username'].hasError('required') && !signUpForm.pristine" color="orange" text="Username is required" textWrap="true"></Label>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label *ngIf="email.length" text="&#xf2bc; Email" class="label fa" textWrap="true"></Label>
+                <TextField hint="&#xf2bc; Email" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email" autocorrect="false" autocapitalizationType="none" class="fa">
+                </TextField>
+                <Label *ngIf="signUpForm.controls['email'].hasError('required') && !signUpForm.pristine" color="orange" text="Email is required" textWrap="true"></Label>
+                <Label *ngIf="signUpForm.controls['email'].hasError('pattern') && signUpForm.controls['email'].dirty" color="orange" text="Email is invalid" textWrap="true"></Label>
+            </StackLayout>
+            <StackLayout class="input-field">
+                <Label *ngIf="password.length" text="&#xf023; Password" class="label fa" textWrap="true"></Label>
+                <TextField hint="&#xf023; Password" name="password" [(ngModel)]="password" id="password" formControlName="password" secure="true" class="fa"></TextField>
+                <Label *ngIf="signUpForm.controls['password'].hasError('required') && !signUpForm.pristine" color="orange" text="Password is required" textWrap="true"></Label>
+                <Label *ngIf="signUpForm.controls['password'].hasError('minlength') && signUpForm.controls['password'].dirty" color="orange" text="Password is too short" textWrap="true"></Label>
+                <Label *ngIf="signUpForm.controls['password'].hasError('maxlength') && signUpForm.controls['password'].dirty" color="orange" text="Password is too long" textWrap="true"></Label>
+            </StackLayout>
+            <Button [isEnabled]="signUpForm.valid" class="btn btn-primary" text="Create account" (tap)="createAccount()"></Button>
+            <Button class="btn" text="Sign in" (tap)="toggleLogging()"></Button>
         </StackLayout>
     </GridLayout>
 </GridLayout>
