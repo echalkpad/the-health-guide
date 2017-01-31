@@ -5,6 +5,9 @@ import { Injectable } from '@angular/core';
 import * as firebase from 'nativescript-plugin-firebase';
 import * as fs from 'file-system';
 
+// MD5
+let md5 = require('blueimp-md5');
+
 // THG
 import { Auth } from './auth.model';
 import { DataService } from '../shared/data.service';
@@ -88,13 +91,21 @@ export class AuthService {
                 password: credentials.password
             }).then((authData: firebase.CreateUserResult) => {
                 if (!!authData) {
-                    firebase.push(
-                        `/users/${authData.key}`,
-                        credentials
-                    )
-                    this._dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
-                    this._dataSvc.saveUser(credentials);
-                    resolve(true);
+                    credentials.avatar = `https://www.gravatar.com/avatar/${md5(credentials.email)}?s=150`;
+                    firebase.updateProfile({
+                        displayName: credentials.name,
+                        photoURL: credentials.avatar
+                    }).then(() => {
+                        firebase.push(
+                            `/users/${authData.key}`,
+                            credentials
+                        )
+                        this._dataSvc.saveAuth(new Auth(authData.key, credentials.avatar, credentials.name, credentials.email));
+                        this._dataSvc.saveUser(credentials);
+                        resolve(true);
+                    }).catch(error => {
+                        reject(error);
+                    });
                 }
             }).catch(error => {
                 reject(error);
