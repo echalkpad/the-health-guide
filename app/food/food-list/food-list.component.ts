@@ -5,7 +5,6 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnIni
 import * as _ from 'lodash';
 
 // Nativescript
-import { RouterExtensions } from 'nativescript-angular/router';
 import { setTimeout } from 'timer';
 import { ObservableArray } from 'data/observable-array';
 import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
@@ -32,7 +31,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public filteredFoods: ObservableArray<Food>;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
-  public searchInput: string = '';
+  public searchQuery: string = '';
   constructor(
     private _detectorRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
@@ -43,7 +42,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   ) { }
 
   public clearSearch(): void {
-    this.searchInput = '';
+    this.searchQuery = '';
     this.isLoading = true;
     this.refreshFoods();
   }
@@ -71,7 +70,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public refreshFoods(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._foods = [];
-      this._foodSvc.getFoods(this._foodLimit, this.searchInput).subscribe((data: Food) => {
+      this._foodSvc.getFoods(this._foodLimit, this.searchQuery).subscribe((data: Food) => {
         let idx: number = _.findIndex(this._foods, (item: Food) => item.$key === data.$key);
         switch (data.$type) {
           case 'ChildAdded':
@@ -111,8 +110,8 @@ export class FoodListComponent implements OnDestroy, OnInit {
     });
   }
 
-  public searchFood(searchTerm: string): void {
-    this.searchInput = searchTerm;
+  public searchFood(searchQuery: string): void {
+    this.searchQuery = searchQuery;
     this.isLoading = true;
     this.refreshFoods();
   }

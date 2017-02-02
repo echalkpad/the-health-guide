@@ -11,6 +11,48 @@ import * as firebase from 'nativescript-plugin-firebase';
 import { Ingredient, Recipe } from './recipe.model';
 import { Nutrition } from '../../shared/nutrition.model';
 
+export const RECIPE_CATEGORIES = [
+  'Appetizers',
+  'Beverages',
+  'Breakfasts',
+  'Casserolles',
+  'Desserts',
+  'Holidays',
+  'Main dishes',
+  'Salads',
+  'Sandwiches',
+  'Sauces',
+  'Side dishes',
+  'Soups'
+];
+
+export const COOKING_METHODS = [
+  'Baking',
+  'Blanching',
+  'Boiling',
+  'Braising',
+  'Freezing',
+  'Frying',
+  'Grilling',
+  'Microwaving',
+  'Pasteurization',
+  'Pickling',
+  'Poaching',
+  'Raw',
+  'Sauteing',
+  'Simmering',
+  'Slow cooking',
+  'Smoking',
+  'Steaming'
+];
+
+export const RECIPE_DIFFICULTIES = [
+  'Easy',
+  'Intermidiate',
+  'Advanced',
+  'Master chef'
+];
+
 @Injectable()
 export class RecipeService {
   private _tags: any;
@@ -244,12 +286,12 @@ export class RecipeService {
     );
   }
 
-  public filterRecipes(recipes: Recipe[], query: string, searchTerm: string, ingredients: Ingredient[]): Recipe[] {
+  public filterRecipes(recipes: Recipe[], query: string, searchQuery: string, ingredients: Ingredient[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
         matchedIngredients: number = 0,
         recipeQuery: string = (query === 'ingredients') ? recipe.name : recipe[query]
-      if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+      if (recipeQuery.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
         match = true;
         if (!!ingredients && !!ingredients.length) {
           ingredients.forEach((item: Ingredient) => {
@@ -285,12 +327,12 @@ export class RecipeService {
     return imgPath;
   }
 
-  public isMatch(recipe: Recipe, query: string = 'name', searchTerm: string = '', ingredients: Ingredient[] = []): boolean {
+  public isMatch(recipe: Recipe, query: string = 'name', searchQuery: string = '', ingredients: Ingredient[] = []): boolean {
     let match: boolean = false,
       matchedIngredients: number = 0,
       recipeQuery: string = (query === 'ingredients') ? recipe.name :
         (query === 'chef') ? recipe.chef.name : recipe[query];
-    if (recipeQuery.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+    if (recipeQuery.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
       match = true;
       if (!!ingredients && !!ingredients.length) {
         ingredients.forEach((item: Ingredient) => {

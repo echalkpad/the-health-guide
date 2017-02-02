@@ -24,7 +24,7 @@ export class Recipe {
         public instructions: string[] = [],
         public quantity: number = 0,
         public amount: number = 1,
-        public shared: boolean = false,
+        public isPublic: boolean = false,
         public $key?: string,
         public $type?: string
     ) {}

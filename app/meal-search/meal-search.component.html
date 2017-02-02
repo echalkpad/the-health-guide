@@ -28,7 +28,7 @@
             </ListView>
         </StackLayout>
         <StackLayout *tabItem="{title: 'Available meals'}">
-            <SearchBar *ngIf="!isLoadingMeals" #searchTerm hint="Search meal" (clear)="clearSearch()" [text]="searchInput" (submit)="searchMeals(searchTerm.text)"></SearchBar>
+            <SearchBar *ngIf="!isLoadingMeals" #searchQuery hint="Search meal" (clear)="clearSearch()" [text]="searchQuery" (submit)="searchMeals(searchQuery.text)"></SearchBar>
             <GridLayout rows="*">
                 <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoadingMeals ? 'visible' : 'collapse'" [busy]="isLoadingMeals"></ActivityIndicator>
                 <RadListView row="1" class="list-group" [items]="filteredMeals" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreMeals($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshMeals($event)" selectionBehavior="Press" (itemSelected)="toggleSelection($event)">

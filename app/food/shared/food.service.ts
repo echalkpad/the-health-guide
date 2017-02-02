@@ -20,8 +20,8 @@ export class FoodService {
     private _foodObserver: Subscriber<Food>;
     constructor(private _helpSvc: HelperService) { }
 
-    public getFoods(limit: number, searchTerm: string, withFetch?: boolean): Observable<Food> {
-        limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+    public getFoods(limit: number, searchQuery: string, withFetch?: boolean): Observable<Food> {
+        limit = searchQuery !== '' ? MAX_SAFE_INTEGER : limit;
 
         return new Observable((observer: Subscriber<Food>) => {
             this._foodObserver = observer;
@@ -29,7 +29,7 @@ export class FoodService {
                 (res: firebase.FBData) => {
                     if (res.hasOwnProperty('error')) {
                         this._foodObserver.error(res['error']);
-                    } else if (this._helpSvc.isMatch(res.value, 'name', searchTerm)) {
+                    } else if (this._helpSvc.isMatch(res.value, 'name', searchQuery)) {
                         let newFood: Food = _.assign({ $key: res.key, $type: res.type }, res.value);
                         this._foodObserver.next(newFood);
                     }

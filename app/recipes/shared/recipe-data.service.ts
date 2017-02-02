@@ -8,9 +8,6 @@ import { Subscriber } from 'rxjs/Subscriber';
 // Lodash
 import * as _ from 'lodash';
 
-// Nativescript
-import * as connectivity from 'connectivity';
-
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -29,9 +26,7 @@ export class RecipeDataService {
   private _auth: string;
   private _ingredients: Ingredient[];
   private _privateObserver: Subscriber<Recipe>;
-  private _privateRecipes: Recipe[] = [];
   private _sharedObserver: Subscriber<Recipe>;
-  private _sharedRecipes: Recipe[] = [];
   constructor(
     private _dataSvc: DataService,
     private _helperSvc: HelperService,
@@ -40,120 +35,80 @@ export class RecipeDataService {
     this._auth = _dataSvc.getAuth().id;
   }
 
-  public addRecipe(recipe: Recipe): Promise<firebase.PushResult> {
-    return firebase.push(`recipes/${this._auth}`, recipe);
+  public addRecipe(recipe: Recipe): Promise<boolean> {
+    return new Promise((resolve, reject) => {
+      firebase.push(`recipes/${this._auth}`, recipe).then((result: firebase.PushResult) => {
+        if (recipe.isPublic) {
+          firebase.setValue(`recipes/shared/${result.key}`, recipe)
+            .then(() => resolve(true))
+            .catch((err: Error) => reject(err));
+        }
+      });
+    });
   }
 
   public getIngredients(): Ingredient[] {
     return this._ingredients;
   }
 
-  public getPrivateRecipes(limit: number, searchTerm: string, withFetch?: boolean, query?: string, ingredients?: Ingredient[]): Observable<Recipe> {
-    let connectionType = connectivity.getConnectionType();
-    limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+  public getPrivateRecipes(limit: number, searchQuery: string, searchBy?: string, ingredientsQuery?: Ingredient[]): Observable<Recipe> {
+    limit = searchQuery !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
-        this._privateObserver = observer;
-        if (this._privateRecipes.length >= limit && !withFetch) {
-          this._privateRecipes.forEach((item: Recipe, idx: number) => {
-            if (idx < limit) {
-              this._privateObserver.next(item);
-            }
-          });
-        } else {
-          this._privateRecipes = [];
-          firebase.query(
-            (res: firebase.FBData) => {
-              if (res.hasOwnProperty('error')) {
-                this._privateObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
-                let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
-                this._privateRecipes.push(newRecipe);
-                this._privateObserver.next(newRecipe);
-              } else if (this._privateRecipes.length === limit) {
-                this._privateObserver.complete();
-              }
-            },
-            `recipes/${this._auth}`,
-            {
-              singleEvent: false,
-              orderBy: {
-                type: firebase.QueryOrderByType.CHILD,
-                value: 'name'
-              },
-              limit: {
-                type: firebase.QueryLimitType.FIRST,
-                value: limit
-              }
-            }
-          );
+      this._privateObserver = observer;
+      firebase.query(
+        (res: firebase.FBData) => {
+          if (res.hasOwnProperty('error')) {
+            this._privateObserver.error(res['error']);
+          } else if (this._recipeSvc.isMatch(res.value, searchBy, searchQuery, ingredientsQuery)) {
+            let newRecipe: Recipe = _.assign({ $key: res.key, $type: res.type }, res.value);
+            this._privateObserver.next(newRecipe);
+          }
+        },
+        `recipes/${this._auth}`,
+        {
+          singleEvent: false,
+          orderBy: {
+            type: firebase.QueryOrderByType.CHILD,
+            value: 'name'
+          },
+          limit: {
+            type: firebase.QueryLimitType.FIRST,
+            value: limit
+          }
         }
+      );
     });
   }
 
-  public getSharedRecipes(limit: number, searchTerm: string, withFetch?: boolean, query?: string, ingredients?: Ingredient[]): Observable<Recipe> {
-    let connectionType = connectivity.getConnectionType();
-    limit = searchTerm !== '' ? MAX_SAFE_INTEGER : limit;
+  public getSharedRecipes(limit: number, searchQuery: string, searchBy?: string, ingredientsQuery?: Ingredient[]): Observable<Recipe> {
+    limit = searchQuery !== '' ? MAX_SAFE_INTEGER : limit;
 
     return new Observable((observer: Subscriber<Recipe>) => {
-        this._sharedObserver = observer;
-        if (this._sharedRecipes.length >= limit && !withFetch) {
-          this._sharedRecipes.forEach((item: Recipe, idx: number) => {
-            if (idx < limit) {
-              this._sharedObserver.next(item);
-            }
-          });
-        } else {
-          this._sharedRecipes = [];
-          firebase.query(
-            (res: firebase.FBData) => {
-              if (res.hasOwnProperty('error')) {
-                this._sharedObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this._recipeSvc.isMatch(res.value, query, searchTerm, ingredients)) {
-                let newRecipe: Recipe = _.assign({ $key: res.key }, res.value);
-                this._sharedRecipes.push(newRecipe);
-                this._sharedObserver.next(newRecipe);
-              } else if (this._sharedRecipes.length === limit) {
-                this._sharedObserver.complete();
-              }
-            },
-            `recipes/${this._auth}`,
-            {
-              singleEvent: false,
-              orderBy: {
-                type: firebase.QueryOrderByType.CHILD,
-                value: 'name'
-              },
-              limit: {
-                type: firebase.QueryLimitType.FIRST,
-                value: limit
-              }
-            }
-          );
+      this._sharedObserver = observer;
+      firebase.query(
+        (res: firebase.FBData) => {
+          if (res.hasOwnProperty('error')) {
+            this._sharedObserver.error(res['error']);
+          } else if (this._recipeSvc.isMatch(res.value, searchBy, searchQuery, ingredientsQuery)) {
+            let newRecipe: Recipe = _.assign({ $key: res.key, $type: res.type }, res.value);
+            this._sharedObserver.next(newRecipe);
+          }
+        },
+        `recipes/${this._auth}`,
+        {
+          singleEvent: false,
+          orderBy: {
+            type: firebase.QueryOrderByType.CHILD,
+            value: 'name'
+          },
+          limit: {
+            type: firebase.QueryLimitType.FIRST,
+            value: limit
+          }
         }
+      );
     });
-  }
-
-  public keepOnSyncPrivate(): void {
-    firebase.keepInSync(`/recipes${this._auth}`, true).then(
-      function () {
-        console.log('firebase.keepInSync is ON for private recipes');
-      },
-      function (error) {
-        console.log('firebase.keepInSync error: ' + error);
-      }
-    );
-  }
-
-  public keepOnSyncShared(): void {
-    firebase.keepInSync('/recipes/shared', true).then(
-      function () {
-        console.log('firebase.keepInSync is ON for shared recipes');
-      },
-      function (error) {
-        console.log('firebase.keepInSync error: ' + error);
-      }
-    );
   }
 
   public removeRecipe(recipe: Recipe): Promise<boolean> {
@@ -176,6 +131,8 @@ export class RecipeDataService {
   public updateRecipe(recipe: Recipe): Promise<boolean> {
     let recipeKey: string = recipe.$key;
     delete recipe.$key;
+    delete recipe.$type;
+
     return firebase.update(`recipes/${this._auth}/${recipeKey}`, recipe);
   }
 

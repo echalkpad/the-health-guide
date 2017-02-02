@@ -47,6 +47,6 @@ export class FoodDetailComponent {
   }
 
   public goBack(): void {
-    this._params.closeCallback('');
+    this._params.closeCallback();
   }
 }

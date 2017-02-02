@@ -6,12 +6,12 @@ export const MAX_SAFE_INTEGER: number = 900719925474099;
 export class HelperService {
   constructor() { }
 
-  public filterItems(items: any[], searchTerm: string = ''): any[] {
-    return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchTerm.toLocaleLowerCase()) !== -1);
+  public filterItems(items: any[], searchQuery: string = ''): any[] {
+    return items.filter((item: any) => item.name.toLocaleLowerCase().indexOf(searchQuery.toLocaleLowerCase()) !== -1);
   }
 
-  public isMatch(item: any, query: string, searchTerm: string = ''): boolean {
-    return item[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+  public isMatch(item: any, query: string, searchQuery: string = ''): boolean {
+    return item[query].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
   }
 
   public log10(data: number): number {

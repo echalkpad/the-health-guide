@@ -8,9 +8,6 @@ import { Subscriber } from 'rxjs/Subscriber';
 // Lodash
 import * as _ from 'lodash';
 
-// Nativescript
-import * as connectivity from 'connectivity';
-
 // Firebase
 import * as firebase from 'nativescript-plugin-firebase';
 
@@ -19,147 +16,85 @@ import { Nutrient } from './nutrient.model';
 
 @Injectable()
 export class NutrientService {
-  private _macronutrients: Nutrient[] = [];
   private _macroObserver: Subscriber<Nutrient>;
-  private _micronutrients: Nutrient[] = [];
   private _microObserver: Subscriber<Nutrient>;
   constructor() { }
 
-  public filterNutrient(nutrient: Nutrient, query: string, searchTerm: string): boolean {
+  public filterNutrient(nutrient: Nutrient, query: string, searchQuery: string): boolean {
     let match: boolean = false;
     if (typeof nutrient[query] === 'object') {
       nutrient[query].forEach((prop: string) => {
-        if (prop.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+        if (prop.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
           match = true;
         }
       });
       return match;
     }
 
-    return nutrient[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+    return nutrient[query].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
   }
 
-  public filterNutrients(nutrients: Nutrient[], query: string, searchTerm: string): Nutrient[] {
+  public filterNutrients(nutrients: Nutrient[], query: string, searchQuery: string): Nutrient[] {
     return nutrients.filter((item: Nutrient) => {
       let match: boolean = false;
       if (typeof item[query] === 'object') {
         item[query].forEach((prop: string) => {
-          if (prop.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1) {
+          if (prop.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
             match = true;
           }
         });
         return match;
       }
-      return item[query].toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1;
+      return item[query].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
     });
   }
 
-  public getMacronutrients(query: string, searchTerm: string, withFetch?: boolean): Observable<Nutrient> {
-    let connectionType = connectivity.getConnectionType(),
-      limit: number = 50;
-
+  public getMicronutrients(searchBy: string, searchQuery: string): Observable<Nutrient> {
     return new Observable((observer: Subscriber<Nutrient>) => {
-        this._macroObserver = observer;
-        if (!!this._macronutrients.length && !withFetch) {
-          this._macronutrients.forEach((item: Nutrient, idx: number) => {
-            if (idx < limit) {
-              this._macroObserver.next(item)
-            }
-          });
-        } else {
-          this._macronutrients = [];
-          firebase.query(
-            (res: firebase.FBData) => {
-              if (res.hasOwnProperty('error')) {
-                this._macroObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this.filterNutrient(res.value, query, searchTerm)) {
-                let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
-                this._macronutrients.push(newNutrient);
-                this._macroObserver.next(newNutrient);
-              } else if (this._macronutrients.length === limit) {
-                this._macroObserver.complete();
-              }
-            },
-            '/macronutrients',
-            {
-              singleEvent: false,
-              orderBy: {
-                type: firebase.QueryOrderByType.CHILD,
-                value: 'name'
-              },
-              limit: {
-                type: firebase.QueryLimitType.FIRST,
-                value: limit
-              }
-            }
-          );
+      this._microObserver = observer;
+      firebase.query(
+        (res: firebase.FBData) => {
+          if (res.hasOwnProperty('error')) {
+            this._microObserver.error(res['error']);
+          } else if (this.filterNutrient(res.value, searchBy, searchQuery)) {
+            let newNutrient: Nutrient = _.assign({ id: res.key, $type: res.type }, res.value);
+            this._microObserver.next(newNutrient);
+          }
+        },
+        '/micronutrients',
+        {
+          singleEvent: false,
+          orderBy: {
+            type: firebase.QueryOrderByType.CHILD,
+            value: 'name'
+          }
         }
+      );
     });
   }
 
-  public getMicronutrients(query: string, searchTerm: string, withFetch?: boolean): Observable<Nutrient> {
-    let connectionType = connectivity.getConnectionType(),
-      limit: number = 50;
-
+  public getMacronutrients(searchBy: string, searchQuery: string): Observable<Nutrient> {
     return new Observable((observer: Subscriber<Nutrient>) => {
-        this._microObserver = observer;
-        if (!!this._micronutrients.length && !withFetch) {
-          this._micronutrients.forEach((item: Nutrient, idx: number) => {
-            if (idx < limit) {
-              this._microObserver.next(item)
-            }
-          });
-        } else {
-          this._micronutrients = [];
-          firebase.query(
-            (res: firebase.FBData) => {
-              if (res.hasOwnProperty('error')) {
-                this._microObserver.error(res['error']);
-              } else if (res.type === 'ChildAdded' && this.filterNutrient(res.value, query, searchTerm)) {
-                let newNutrient: Nutrient = _.assign({ id: res.key }, res.value);
-                this._micronutrients.push(newNutrient);
-                this._microObserver.next(newNutrient);
-              } else if (this._micronutrients.length === limit) {
-                this._microObserver.complete();
-              }
-            },
-            '/micronutrients',
-            {
-              singleEvent: false,
-              orderBy: {
-                type: firebase.QueryOrderByType.CHILD,
-                value: 'name'
-              },
-              limit: {
-                type: firebase.QueryLimitType.FIRST,
-                value: limit
-              }
-            }
-          );
+      this._macroObserver = observer;
+      firebase.query(
+        (res: firebase.FBData) => {
+          if (res.hasOwnProperty('error')) {
+            this._macroObserver.error(res['error']);
+          } else if (this.filterNutrient(res.value, searchBy, searchQuery)) {
+            let newNutrient: Nutrient = _.assign({ id: res.key, $type: res.type }, res.value);
+            this._macroObserver.next(newNutrient);
+          }
+        },
+        '/macronutrients',
+        {
+          singleEvent: false,
+          orderBy: {
+            type: firebase.QueryOrderByType.CHILD,
+            value: 'name'
+          }
         }
+      );
     });
-  }
-
-  public keepOnSyncMacronutrients(): void {
-    firebase.keepInSync('/macronutrients', true).then(
-      function () {
-        console.log('firebase.keepInSync is ON for macronutrients');
-      },
-      function (error) {
-        console.log('firebase.keepInSync error: ' + error);
-      }
-    );
-  }
-
-  public keepOnSyncMicronutrients(): void {
-    firebase.keepInSync('/micronutrients', true).then(
-      function () {
-        console.log('firebase.keepInSync is ON for micronutrients');
-      },
-      function (error) {
-        console.log('firebase.keepInSync error: ' + error);
-      }
-    );
   }
 
   public unsubscribeNutrients(): void {

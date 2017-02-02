@@ -10,7 +10,7 @@ import { FoodDetailComponent, FoodListComponent } from './food';
 import { HomeComponent } from './home/home.component';
 import { MealSearchComponent } from './meal-search';
 import { NutrientDetailComponent, NutrientListComponent } from './nutrients';
-import { RecipeDetailComponent, RecipeEditComponent, RecipeListComponent } from './recipes';
+import { RecipeEditComponent, RecipeListComponent } from './recipes';
 
 const appRoutes: Routes = [
   {
@@ -28,16 +28,7 @@ const appRoutes: Routes = [
       },
       {
         path: 'food',
-        children: [
-          {
-            path: ':key',
-            component: FoodDetailComponent,
-          },
-          {
-            path: '',
-            component: FoodListComponent
-          }
-        ]
+        component: FoodListComponent
       },
       {
         path: 'meal-search',
@@ -45,26 +36,13 @@ const appRoutes: Routes = [
       },
       {
         path: 'nutrients',
-        children: [
-          {
-            path: ':category/:key',
-            component: NutrientDetailComponent
-          },
-          {
-            path: '',
-            component: NutrientListComponent
-          }
-        ]
+        component: NutrientListComponent
       },
       {
         path: 'recipes',
         children: [
           {
             path: ':key',
-            component: RecipeDetailComponent
-          },
-          {
-            path: ':authId/:key',
             component: RecipeEditComponent,
             canDeactivate: [CanDeactivateGuard]
           },

@@ -10,10 +10,8 @@ import { setTimeout } from 'timer';
 
 // THG
 import { HelperService } from '../../shared';
-import { Ingredient, Recipe } from '../shared/recipe.model';
+import { Ingredient, Recipe, RecipeDataService, RecipeService, RECIPE_CATEGORIES, RECIPE_DIFFICULTIES, COOKING_METHODS } from '../shared';
 import { MealSearchComponent } from '../../meal-search';
-import { RecipeDataService } from '../shared/recipe-data.service';
-import { RecipeService } from '../shared/recipe.service';
 
 @Component({
     moduleId: module.id,
@@ -28,9 +26,9 @@ export class RecipeEditComponent implements OnInit {
     private _recipes: Ingredient[] = [];
     public aminoacids: string[] = [];
     public basicNutrition: string[] = [];
-    public categories: string[];
-    public cookMethods: string[];
-    public difficulties: string[];
+    public categories: string[] = [...RECIPE_CATEGORIES];
+    public cookMethods: string[] = [...COOKING_METHODS];
+    public difficulties: string[] = [...RECIPE_DIFFICULTIES];
     public filteredIngredients: Ingredient[] = [];
     public filteredTotal: number = 0;
     public ingredients: Ingredient[] = [];
@@ -64,48 +62,6 @@ export class RecipeEditComponent implements OnInit {
             'Monounsaturated fat',
             'Polyunsaturated fat',
             'Trans fat'
-        ];
-
-        this.categories = [
-            'Appetizers',
-            'Beverages',
-            'Breakfasts',
-            'Casserolles',
-            'Desserts',
-            'Holidays',
-            'Main dishes',
-            'Salads',
-            'Sandwiches',
-            'Sauces',
-            'Side dishes',
-            'Soups'
-        ];
-
-        this.cookMethods = [
-            'Baking',
-            'Blanching',
-            'Boiling',
-            'Braising',
-            'Freezing',
-            'Frying',
-            'Grilling',
-            'Microwaving',
-            'Pasteurization',
-            'Pickling',
-            'Poaching',
-            'Raw',
-            'Sauteing',
-            'Simmering',
-            'Slow cooking',
-            'Smoking',
-            'Steaming'
-        ];
-
-        this.difficulties = [
-            'Easy',
-            'Intermidiate',
-            'Advanced',
-            'Master chef'
         ];
     }
 

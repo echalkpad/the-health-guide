@@ -27,7 +27,7 @@ export class MealSearchComponent implements OnInit {
     public filteredMeals: Meal[];
     public isLoadingMeals: boolean = true;
     public selections: Meal[];
-    public searchInput: string = '';
+    public searchQuery: string = '';
     constructor(
         private _detectorRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
@@ -43,7 +43,7 @@ export class MealSearchComponent implements OnInit {
     }
 
     public clearSearch(): void {
-        this.searchInput = '';
+        this.searchQuery = '';
         this.refreshMeals();
     }
 
@@ -83,8 +83,8 @@ export class MealSearchComponent implements OnInit {
         this.selections.splice(selection.index, 1);
     }
 
-    public searchMeals(searchTerm: string): void {
-        this.filteredMeals = [...this._helperSvc.filterItems(this._meals, searchTerm).slice(0, this._mealsLimit)];
+    public searchMeals(searchQuery: string): void {
+        this.filteredMeals = [...this._helperSvc.filterItems(this._meals, searchQuery).slice(0, this._mealsLimit)];
     }
 
     public toggleSelection(args: ListViewEventData): void {

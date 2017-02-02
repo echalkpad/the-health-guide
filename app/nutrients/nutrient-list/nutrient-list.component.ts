@@ -1,17 +1,20 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone } from '@angular/core';
-import { NavigationExtras } from '@angular/router';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit, NgZone, ViewContainerRef } from '@angular/core';
+
+// Lodash
+import * as _ from 'lodash';
 
 // Nativescript
-import { RouterExtensions } from 'nativescript-angular/router';
 import * as dialogs from 'ui/dialogs';
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
 import { setTimeout } from 'timer';
 import { ObservableArray } from 'data/observable-array';
+import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 
 // THG
 import { DrawerService } from '../../shared';
 import { Nutrient } from '../shared/nutrient.model';
+import { NutrientDetailComponent } from '../nutrient-detail/nutrient-detail.component';
 import { NutrientService } from '../shared/nutrient.service';
 
 @Component({
@@ -29,18 +32,19 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public isLoadingMacros: boolean = true;
   public isLoadingMicros: boolean = true;
   public isSearching: boolean = false;
-  public query: string = 'name';
-  public searchInputMacros: string = '';
-  public searchInputMicros: string = '';
+  public searchBy: string = 'name';
+  public searchQueryMacros: string = '';
+  public searchQueryMicros: string = '';
   constructor(
     private _detectorRef: ChangeDetectorRef,
     private _nutrientSvc: NutrientService,
-    private _router: RouterExtensions,
+    private _modalSvc: ModalDialogService,
+    private _viewRef: ViewContainerRef,
     private _zone: NgZone,
     public drawerSvc: DrawerService
   ) { }
 
-  public changeQuery(): void {
+  public changesearchBy(): void {
     dialogs.action({
       title: 'Filter type',
       message: 'Choose the search filter',
@@ -49,89 +53,145 @@ export class NutrientListComponent implements OnDestroy, OnInit {
     }).then((result: string) => {
       switch (result) {
         case 'Name':
-          this.query = 'name';
+          this.searchBy = 'name';
           break;
         case 'Functions':
-          this.query = 'functions';
+          this.searchBy = 'functions';
           break;
         case 'Disease preventions':
-          this.query = 'diseasePrev';
+          this.searchBy = 'diseasePrev';
           break;
         case 'Deficiency':
-          this.query = 'deficiency';
+          this.searchBy = 'deficiency';
           break;
         case 'Toxicity':
-          this.query = 'toxicity';
+          this.searchBy = 'toxicity';
           break;
 
         default:
-          this.query = 'name';
+          this.searchBy = 'name';
           break;
       }
     });
   }
 
   public clearSearchMacros(): void {
-    this.searchInputMacros = '';
+    this.searchQueryMacros = '';
     this.isLoadingMacros = true;
-    this.refreshMacros(null, true);
+    this.refreshMacros();
   }
 
   public clearSearchMicros(): void {
-    this.searchInputMicros = '';
+    this.searchQueryMicros = '';
     this.isLoadingMicros = true;
-    this.refreshMacros(null, true);
+    this.refreshMacros();
   }
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
-    let selected: Nutrient = args.object.getSelectedItems()[0],
-      navExtras: NavigationExtras = {
-        queryParams: { nutrient: JSON.stringify(selected) }
-      }
-    setTimeout(() => this._router.navigate([`/nutrients/${nutrientGroup}`, selected.$key], navExtras), 100);
+    let selectedNutrient: Nutrient = args.object.getSelectedItems()[0],
+      modalOpts: ModalDialogOptions = {
+        context: selectedNutrient,
+        viewContainerRef: this._viewRef,
+      };
+    this._modalSvc.showModal(NutrientDetailComponent, modalOpts);
   }
 
-  public refreshMacros(args?: ListViewEventData, withFetch?: boolean): void {
+  public refreshMacros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._macronutrients = [];
-      this._nutrientSvc.getMacronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._macronutrients.push(data));
-    });
-    setTimeout(() => {
-      this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.isLoadingMacros = false;
+      this._nutrientSvc.getMacronutrients(this.searchBy, this.searchQueryMacros).subscribe((data: Nutrient) => {
+        let idx: number = _.findIndex(this._macronutrients, (item: Nutrient) => item.$key === data.$key);
+        switch (data.$type) {
+          case 'ChildAdded':
+            if (idx === -1) {
+              this._macronutrients.push(data);
+            } else {
+              this._macronutrients[idx] = _.assign({}, data);
+            }
+            break;
+          case 'ChildChanged':
+            if (idx !== -1) {
+              this._macronutrients[idx] = _.assign({}, data);
+            }
+            break;
 
-      this._detectorRef.markForCheck();
-    }, 3000);
+          case 'ChildRemoved':
+            if (idx !== -1) {
+              this._macronutrients.splice(idx, 1);
+            }
+            break;
+
+          default:
+            break;
+        }
+      });
+    });
+    return new Promise(resolve => {
+      setTimeout(() => {
+        this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        this.isLoadingMacros = false;
+        this._detectorRef.markForCheck();
+        resolve(true);
+      }, 5000);
+    });
   }
 
-  public refreshMicros(args?: ListViewEventData, withFetch?: boolean): void {
+  public refreshMicros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._micronutrients = [];
-      this._nutrientSvc.getMicronutrients(this.query, this.searchInputMicros, withFetch).subscribe((data: Nutrient) => this._micronutrients.push(data));
+      this._nutrientSvc.getMicronutrients(this.searchBy, this.searchQueryMicros).subscribe((data: Nutrient) => {
+        let idx: number = _.findIndex(this._micronutrients, (item: Nutrient) => item.$key === data.$key);
+        switch (data.$type) {
+          case 'ChildAdded':
+            if (idx === -1) {
+              this._micronutrients.push(data);
+            } else {
+              this._micronutrients[idx] = _.assign({}, data);
+            }
+            break;
+          case 'ChildChanged':
+            if (idx !== -1) {
+              this._micronutrients[idx] = _.assign({}, data);
+            }
+            break;
+
+          case 'ChildRemoved':
+            if (idx !== -1) {
+              this._micronutrients.splice(idx, 1);
+            }
+            break;
+
+          default:
+            break;
+        }
+      });
     });
-    setTimeout(() => {
-      this.filteredMicronutrients = new ObservableArray<Nutrient>(this._micronutrients);
-      if (args) {
-        args.object.notifyPullToRefreshFinished();
-      }
-      this.isLoadingMicros = false;
-      this._detectorRef.markForCheck();
-    }, 3000);
+    return new Promise(resolve => {
+      setTimeout(() => {
+        this.filteredMicronutrients = new ObservableArray<Nutrient>(this._micronutrients);
+        if (args) {
+          args.object.notifyPullToRefreshFinished();
+        }
+        this.isLoadingMicros = false;
+        this._detectorRef.markForCheck();
+        resolve(true);
+      }, 5000);
+    });
   }
 
-  public searchMacros(searchTerm: string): void {
-    this.searchInputMacros = searchTerm;
+  public searchMacros(searchQuery: string): void {
+    this.searchQueryMacros = searchQuery;
     this.isLoadingMacros = true;
-    this.refreshMacros(null, true);
+    this.refreshMacros();
   }
 
-  public searchMicros(searchTerm: string): void {
-    this.searchInputMicros = searchTerm;
+  public searchMicros(searchQuery: string): void {
+    this.searchQueryMicros = searchQuery;
     this.isLoadingMicros = true;
-    this.refreshMicros(null, true);
+    this.refreshMicros();
   }
 
   public tabIdxChange(tabIdx): void {

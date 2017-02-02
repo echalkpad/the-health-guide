@@ -1,118 +1,125 @@
-<ActionBar class="action-bar" [title]="recipe.name">
-    <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
-</ActionBar>
-<!--
+<StackLayout class="modal-container">
+    <GridLayout rows="auto" columns="auto, *" class="action-bar p-t-10 p-b-10">
+        <Button col="0" [text]="'mdi-arrow-back' | fonticon" (tap)="goBack()" class="mdi action-item" verticalAlignment="center"></Button>
+        <Label col="1" [text]="recipe.name" textWrap="true" class="action-bar-title" verticalAlignment="center"></Label>
+    </GridLayout>
+
+    <!--
 <TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
   -->
-<TabView>
-    <ScrollView *tabItem="{title: 'Details'}">
-        <FlexboxLayout flexDirection="column">
-            <FrescoDrawee verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
+    <TabView>
+        <ScrollView *tabItem="{title: 'Details'}">
+            <FlexboxLayout flexDirection="column">
+                <FrescoDrawee verticalAlignment="center" aspectRatio="1.75" [imageUri]="recipe.image"></FrescoDrawee>
 
-            <GridLayout borderColor="Cyan" borderWidth="1" horizontalAlignment="center" rows="auto" columns="*, *, *" class="recipe-highlights">
-                <StackLayout row="0" col="0" class="text-center">
-                    <Label [text]="recipe.duration" class="h1" textWrap="true"></Label>
-                    <Label text="&#xf017; Duration" class="fa body" textWrap="true"></Label>
-                </StackLayout>
-                <StackLayout row="0" col="1" class="text-center" borderColor="Cyan" borderLeftWidth="1" borderRightWidth="1">
-                    <Label [text]="recipe.difficulty" class="h1" textWrap="true"></Label>
-                    <Label text="&#xf042; Difficulty" class="fa body" textWrap="true"></Label>
-                </StackLayout>
-                <StackLayout row="0" col="2" class="text-center">
-                    <Label [text]="recipe.servings" class="h1" textWrap="true"></Label>
-                    <Label text="&#xf0f5; Servings" class="fa body" textWrap="true"></Label>
-                </StackLayout>
+                <GridLayout borderColor="Cyan" borderWidth="1" horizontalAlignment="center" rows="auto" columns="*, *, *" class="recipe-highlights">
+                    <StackLayout row="0" col="0" class="text-center">
+                        <Label [text]="recipe.duration" class="h1" textWrap="true"></Label>
+                        <Label text="&#xf017; Duration" class="fa body" textWrap="true"></Label>
+                    </StackLayout>
+                    <StackLayout row="0" col="1" class="text-center" borderColor="Cyan" borderLeftWidth="1" borderRightWidth="1">
+                        <Label [text]="recipe.difficulty" class="h1" textWrap="true"></Label>
+                        <Label text="&#xf042; Difficulty" class="fa body" textWrap="true"></Label>
+                    </StackLayout>
+                    <StackLayout row="0" col="2" class="text-center">
+                        <Label [text]="recipe.servings" class="h1" textWrap="true"></Label>
+                        <Label text="&#xf0f5; Servings" class="fa body" textWrap="true"></Label>
+                    </StackLayout>
 
-            </GridLayout>
+                </GridLayout>
 
-            <Label [text]="recipe.description" class="recipe-description" textWrap="true"></Label>
-            <StackLayout class="hr-light"></StackLayout>
-            <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
-                <Label row="0" col="0" text="&#xf0f5;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="1" text="Category" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="2" [text]="recipe.category" class="footnote" textWrap="true" verticalAlignment="center"></Label>
-            </GridLayout>
-            <StackLayout class="hr-light"></StackLayout>
-            <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
-                <Label row="0" col="0" text="&#xf069;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="1" text="Cook method" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="2" [text]="recipe.cookMethod" class="footnote" textWrap="true" verticalAlignment="center"></Label>
-            </GridLayout>
-            <StackLayout class="hr-light"></StackLayout>
-            <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
-                <Label row="0" col="2" text="{{recipe.cookTemperature}}°C" class="footnote" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="0" text="&#xf2c8;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="1" text="Cook temperature" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-            </GridLayout>
-            <StackLayout class="hr-light"></StackLayout>
-            <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
-                <Label row="0" col="0" text="&#xf24e;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="1" text="Quantity" class="text-16" textWrap="true" verticalAlignment="center"></Label>
-                <Label row="0" col="2" text="{{recipe.quantity}}g" class="footnote" textWrap="true" verticalAlignment="center"></Label>
-            </GridLayout>
-        </FlexboxLayout>
-    </ScrollView>
-    <StackLayout *tabItem="{title: 'Ingredients'}">
-        <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
-            <template let-ingredient="item">
+                <Label [text]="recipe.description" class="recipe-description" textWrap="true"></Label>
+                <StackLayout class="hr-light"></StackLayout>
+                <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
+                    <Label row="0" col="0" text="&#xf0f5;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="1" text="Category" class="text-16" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="2" [text]="recipe.category" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+                </GridLayout>
+                <StackLayout class="hr-light"></StackLayout>
+                <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
+                    <Label row="0" col="0" text="&#xf069;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="1" text="Cook method" class="text-16" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="2" [text]="recipe.cookMethod" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+                </GridLayout>
+                <StackLayout class="hr-light"></StackLayout>
+                <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
+                    <Label row="0" col="2" text="{{recipe.cookTemperature}}°C" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="0" text="&#xf2c8;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="1" text="Cook temperature" class="text-16" textWrap="true" verticalAlignment="center"></Label>
+                </GridLayout>
+                <StackLayout class="hr-light"></StackLayout>
+                <GridLayout rows="*" columns="40, *, auto" class="recipe-details">
+                    <Label row="0" col="0" text="&#xf24e;" class="fa m-r-20 text-center" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="1" text="Quantity" class="text-16" textWrap="true" verticalAlignment="center"></Label>
+                    <Label row="0" col="2" text="{{recipe.quantity}}g" class="footnote" textWrap="true" verticalAlignment="center"></Label>
+                </GridLayout>
+            </FlexboxLayout>
+        </ScrollView>
+        <StackLayout *tabItem="{title: 'Ingredients'}">
+            <ListView class="list-group" [items]="recipe.ingredients" separatorColor="cyan">
+                <template let-ingredient="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="ingredient.name" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{ingredient.quantity}}g" class="text-muted text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Instructions'}">
-        <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
-            <template let-step="item" let-index="index">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Instructions'}">
+            <ListView class="list-group" [items]="recipe.instructions" separatorColor="cyan">
+                <template let-step="item" let-index="index">
         <StackLayout class="list-group-item" isUserInteractionEnabled="false">
           <Label textWrap="true" text="{{index + 1}}. {{step}}" class="list-group-item-heading" verticalAlignment="center"></Label>
         </StackLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Basic nutrition'}">
-        <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
-            <template let-basic="item" let-index="index">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Basic nutrition'}">
+            <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
+                <template let-basic="item" let-index="index">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{recipe.nutrition[basic].toFixed(2)}}{{index === 0 ? 'kcal' : 'g'}}" class="text-muted text-right footnote"
             verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Amino acids'}">
-        <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
-            <template let-aa="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Amino acids'}">
+            <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
+                <template let-aa="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="aa" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{recipe.nutrition['amino acids'][aa].toFixed(3)}}g" class="text-muted text-right footnote"
             verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Minerals'}">
-        <ListView class="list-group" [items]="minerals" separatorColor="cyan">
-            <template let-mineral="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Minerals'}">
+            <ListView class="list-group" [items]="minerals" separatorColor="cyan">
+                <template let-mineral="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="mineral" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{recipe.nutrition.minerals[mineral].toFixed(3)}}mg" class="text-muted text-right footnote"
             verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Vitamins'}">
-        <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
-            <template let-vitamin="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Vitamins'}">
+            <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
+                <template let-vitamin="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="vitamin" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{recipe.nutrition.vitamins[vitamin].toFixed(3)}}mg" class="text-muted text-right footnote"
             verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-</TabView>
+            </ListView>
+        </StackLayout>
+    </TabView>
+</StackLayout>
+<!--
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+  -->

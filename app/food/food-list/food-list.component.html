@@ -4,7 +4,7 @@
         <Button [text]="'mdi-search' | fonticon" class="mdi action-item"></Button>
     </ActionItem>
 </ActionBar>
-<SearchBar *ngIf="!isLoading && isSearching" #searchTerm hint="Search food" (clear)="clearSearch()" [text]="searchInput" (submit)="searchFood(searchTerm.text)"></SearchBar>
+<SearchBar *ngIf="!isLoading && isSearching" #searchQuery hint="Search food" (clear)="clearSearch()" [text]="searchQuery" (submit)="searchFood(searchQuery.text)"></SearchBar>
 <GridLayout rows="*">
     <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'" [busy]="isLoading"></ActivityIndicator>
     <RadListView *ngIf="!isLoading" row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press"

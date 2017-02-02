@@ -1,9 +1,8 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 
 // Nativescript
-import { RouterExtensions } from 'nativescript-angular/router';
+import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
 
 // THG
 import { Recipe } from '../shared/recipe.model';
@@ -16,17 +15,16 @@ import { RecipeDataService } from '../shared/recipe-data.service';
     styleUrls: ['recipe-detail.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class RecipeDetailComponent implements OnInit {
+export class RecipeDetailComponent {
     public recipe: Recipe;
-    public aminoacids: string[] = [];
-    public basicNutrition: string[] = [];
-    public minerals: string[] = [];
-    public vitamins: string[] = [];
+    public aminoacids: string[];
+    public basicNutrition: string[];
+    public minerals: string[];
+    public vitamins: string[];
     constructor(
         private _detectorRef: ChangeDetectorRef,
-        private _recipeDataSvc: RecipeDataService,
-        private _route: ActivatedRoute,
-        private _router: RouterExtensions
+        private _params: ModalDialogParams,
+        private _recipeDataSvc: RecipeDataService
     ) {
         this.basicNutrition = [
             'Energy',
@@ -41,19 +39,14 @@ export class RecipeDetailComponent implements OnInit {
             'Polyunsaturated fat',
             'Trans fat'
         ];
+
+        this.recipe = _params.context;
+        this.aminoacids = Object.keys(this.recipe['amino acids']);
+        this.vitamins = Object.keys(this.recipe['vitamins']);
+        this.minerals = Object.keys(this.recipe['minerals']);
     }
 
     public goBack(): void {
-        this._router.back();
+        this._params.closeCallback();
     }
-
-    ngOnInit(): void {
-        this._route.queryParams.subscribe((params: Params) => {
-            this.recipe = JSON.parse(params['recipe']);
-            this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
-            this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
-            this.minerals = Object.keys(this.recipe.nutrition['minerals']);
-        });
-    }
-
 }
