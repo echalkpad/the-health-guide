@@ -33,7 +33,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public searchInputMacros: string = '';
   public searchInputMicros: string = '';
   constructor(
-    private _changeDetectionRef: ChangeDetectorRef,
+    private _detectorRef: ChangeDetectorRef,
     private _nutrientSvc: NutrientService,
     private _router: RouterExtensions,
     private _zone: NgZone,
@@ -103,7 +103,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
       }
       this.isLoadingMacros = false;
 
-      this._changeDetectionRef.markForCheck();
+      this._detectorRef.markForCheck();
     }, 3000);
   }
 
@@ -118,7 +118,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
         args.object.notifyPullToRefreshFinished();
       }
       this.isLoadingMicros = false;
-      this._changeDetectionRef.markForCheck();
+      this._detectorRef.markForCheck();
     }, 3000);
   }
 
@@ -149,7 +149,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this._changeDetectionRef.detach();
+    this._detectorRef.detach();
     this._nutrientSvc.unsubscribeNutrients();
   }
 }

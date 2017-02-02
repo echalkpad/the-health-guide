@@ -1,9 +1,8 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 
 // Nativescript
-import { RouterExtensions } from 'nativescript-angular/router';
+import { ModalDialogParams } from 'nativescript-angular/modal-dialog';
 
 // THG
 import { Food } from '../shared/food.model';
@@ -16,19 +15,17 @@ import { FoodService } from '../shared/food.service';
   styleUrls: ['food-detail.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FoodDetailComponent implements OnInit {
-  public aminoacids: string[] = [];
-  public basicNutrition: string[] = [];
-  public minerals: string[] = [];
+export class FoodDetailComponent {
+  public aminoacids: string[];
+  public basicNutrition: string[];
+  public minerals: string[];
   public food: Food;
-  public vitamins: string[] = [];
+  public vitamins: string[];
   constructor(
-    private _changeDetectionRef: ChangeDetectorRef,
+    private _detectorRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
-    private _route: ActivatedRoute,
-    private _router: RouterExtensions
+    private _params: ModalDialogParams
   ) {
-
     this.basicNutrition = [
       'Energy',
       'Water',
@@ -42,18 +39,14 @@ export class FoodDetailComponent implements OnInit {
       'Polyunsaturated fat',
       'Trans fat'
     ];
+
+    this.food = _params.context;
+    this.aminoacids = Object.keys(this.food['amino acids']);
+    this.vitamins = Object.keys(this.food['vitamins']);
+    this.minerals = Object.keys(this.food['minerals']);
   }
 
   public goBack(): void {
-    this._router.back();
-  }
-
-  ngOnInit(): void {
-    this._route.queryParams.subscribe((params: Params) => {
-      this.food = JSON.parse(params['food']);
-      this.aminoacids = Object.keys(this.food['amino acids']);
-      this.vitamins = Object.keys(this.food['vitamins']);
-      this.minerals = Object.keys(this.food['minerals']);
-    });
+    this._params.closeCallback('');
   }
 }

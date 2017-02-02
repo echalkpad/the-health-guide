@@ -44,7 +44,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public searchInputShared: string = '';
   constructor(
     private _authSvc: AuthService,
-    private _changeDetectionRef: ChangeDetectorRef,
+    private _detectorRef: ChangeDetectorRef,
     private _modalSvc: ModalDialogService,
     private _recipeDataSvc: RecipeDataService,
     private _recipeSvc: RecipeService,
@@ -167,7 +167,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           args.object.notifyPullToRefreshFinished();
         }
         this.isLoadingPrivate = false;
-        this._changeDetectionRef.markForCheck();
+        this._detectorRef.markForCheck();
       }, 5000);
     });
   }
@@ -184,7 +184,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           args.object.notifyPullToRefreshFinished();
         }
         this.isLoadingShared = false;
-        this._changeDetectionRef.markForCheck();
+        this._detectorRef.markForCheck();
       }, 5000);
     });
   }
@@ -238,7 +238,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-    this._changeDetectionRef.detach();
+    this._detectorRef.detach();
     this._recipeDataSvc.unsubscribeRecipes();
   }
 }

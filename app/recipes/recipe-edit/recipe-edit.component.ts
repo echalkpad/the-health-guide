@@ -43,7 +43,7 @@ export class RecipeEditComponent implements OnInit {
     public tabIdx: number = 0;
     public vitamins: string[] = [];
     constructor(
-        private _changeDetectionRef: ChangeDetectorRef,
+        private _detectorRef: ChangeDetectorRef,
         private _helperSvc: HelperService,
         private _modalSvc: ModalDialogService,
         private _recipeSvc: RecipeService,
@@ -170,8 +170,8 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.prompt(options).then((result: dialogs.PromptResult) => {
                     if (result.result) {
                         this.recipe.name = result.text;
-                        this._changeDetectionRef.detectChanges();
-                        this._changeDetectionRef.markForCheck();
+                        this._detectorRef.detectChanges();
+                        this._detectorRef.markForCheck();
                         this._isDirty = true;
                     }
                 });
@@ -187,8 +187,8 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.prompt(options).then((result: dialogs.PromptResult) => {
                     if (result.result) {
                         this.recipe.description = result.text;
-                        this._changeDetectionRef.detectChanges();
-                        this._changeDetectionRef.markForCheck();
+                        this._detectorRef.detectChanges();
+                        this._detectorRef.markForCheck();
                         this._isDirty = true;
                     }
                 });
@@ -203,8 +203,8 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.difficulty = result;
-                        this._changeDetectionRef.detectChanges();
-                        this._changeDetectionRef.markForCheck();
+                        this._detectorRef.detectChanges();
+                        this._detectorRef.markForCheck();
                         this._isDirty = true;
                     }
                 });
@@ -219,8 +219,8 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.cookMethod = result;
-                        this._changeDetectionRef.detectChanges();
-                        this._changeDetectionRef.markForCheck();
+                        this._detectorRef.detectChanges();
+                        this._detectorRef.markForCheck();
                         this._isDirty = true;
                     }
                 });
@@ -235,8 +235,8 @@ export class RecipeEditComponent implements OnInit {
                 dialogs.action(options).then((result: string) => {
                     if (result !== 'Cancel') {
                         this.recipe.category = result;
-                        this._changeDetectionRef.detectChanges();
-                        this._changeDetectionRef.markForCheck();
+                        this._detectorRef.detectChanges();
+                        this._detectorRef.markForCheck();
                         this._isDirty = true;
                     }
                 });

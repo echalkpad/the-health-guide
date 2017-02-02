@@ -29,7 +29,7 @@ export class MealSearchComponent implements OnInit {
     public selections: Meal[];
     public searchInput: string = '';
     constructor(
-        private _changeDetectionRef: ChangeDetectorRef,
+        private _detectorRef: ChangeDetectorRef,
         private _foodSvc: FoodService,
         private _helperSvc: HelperService,
         private _mealSearchSvc: MealSearchService,
@@ -74,8 +74,8 @@ export class MealSearchComponent implements OnInit {
                 args.object.notifyPullToRefreshFinished();
             }
             this.isLoadingMeals = false;
-            this._changeDetectionRef.detectChanges();
-            this._changeDetectionRef.markForCheck();
+            this._detectorRef.detectChanges();
+            this._detectorRef.markForCheck();
         }, 3000);
     }
 
@@ -106,7 +106,7 @@ export class MealSearchComponent implements OnInit {
     }
 
     ngOnDestroy(): void {
-        this._changeDetectionRef.detach();
+        this._detectorRef.detach();
         this._mealSearchSvc.unsubscribeMeals();
     }
 }

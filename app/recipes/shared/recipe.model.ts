@@ -6,7 +6,6 @@ export interface Ingredient extends Food, Recipe { }
 
 export class Recipe {
     constructor (
-        public $key: string = '',
         public chef: Chef = new Chef(),
         public name: string = '',
         public description: string = '',
@@ -25,6 +24,8 @@ export class Recipe {
         public instructions: string[] = [],
         public quantity: number = 0,
         public amount: number = 1,
-        public shared: boolean = false
+        public shared: boolean = false,
+        public $key?: string,
+        public $type?: string
     ) {}
 }

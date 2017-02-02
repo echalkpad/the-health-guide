@@ -23,7 +23,7 @@ export class RecipeDetailComponent implements OnInit {
     public minerals: string[] = [];
     public vitamins: string[] = [];
     constructor(
-        private _changeDetectionRef: ChangeDetectorRef,
+        private _detectorRef: ChangeDetectorRef,
         private _recipeDataSvc: RecipeDataService,
         private _route: ActivatedRoute,
         private _router: RouterExtensions

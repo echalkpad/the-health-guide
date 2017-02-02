@@ -1,10 +1,10 @@
 <ActionBar class="action-bar" title="Nutrients">
     <NavigationButton icon="res://ic_menu_white_24dp" (tap)="drawerSvc.toggle()"></NavigationButton>
     <ActionItem (tap)="toggleSearching()">
-        <Button text="&#xf002;" class="fa action-item"></Button>
+        <Button [text]="'mdi-search' | fonticon" class="mdi action-item"></Button>
     </ActionItem>
     <ActionItem (tap)="changeQuery()">
-        <Button text="&#xf0b0;" class="fa action-item"></Button>
+        <Button [text]="'mdi-filter-list' | fonticon" class="mdi action-item"></Button>
     </ActionItem>
 </ActionBar>
 <!--

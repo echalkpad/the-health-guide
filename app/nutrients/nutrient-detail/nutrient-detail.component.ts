@@ -22,7 +22,7 @@ export class NutrientDetailComponent implements OnInit {
   public nutrientDiseases: string = '';
   public nutrientFunctions: string = '';
   constructor(
-    private _changeDetectionRef: ChangeDetectorRef,
+    private _detectorRef: ChangeDetectorRef,
     private _nutrientSvc: NutrientService,
     private _route: ActivatedRoute,
     private _router: RouterExtensions

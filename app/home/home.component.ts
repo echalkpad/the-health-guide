@@ -13,5 +13,5 @@ import { DrawerService } from '../shared';
 })
 export class HomeComponent {
 
-    constructor(private _changeDetectionRef: ChangeDetectorRef, public drawerSvc: DrawerService) { }
+    constructor(private _detectorRef: ChangeDetectorRef, public drawerSvc: DrawerService) { }
 }

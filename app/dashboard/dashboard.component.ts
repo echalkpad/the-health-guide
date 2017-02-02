@@ -20,7 +20,7 @@ export class DashboardComponent implements OnInit {
     public auth: Auth = new Auth();
     constructor(
         private _authSvc: AuthService,
-        private _changeDetectionRef: ChangeDetectorRef,
+        private _detectorRef: ChangeDetectorRef,
         private _dataSvc: DataService,
         public drawerSvc: DrawerService
     ) {  }

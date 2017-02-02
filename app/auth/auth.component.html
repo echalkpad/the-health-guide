@@ -2,7 +2,7 @@
     <ActivityIndicator class="activity-indicator" width="75" height="75" *ngIf="isLoading" [busy]="isLoading"></ActivityIndicator>
     <GridLayout rows="*" *ngIf="!isLoading  && logging">
         <StackLayout [formGroup]="loginForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center" minHeight="100" minWidth="300">
-            <Label text="The Organizer" class="title" textWrap="true"></Label>
+            <Label text="The Health Guide" class="title" textWrap="true"></Label>
             <StackLayout class="input-field">
                 <Label *ngIf="email.length" text="&#xf2bc; Email" class="label fa" textWrap="true"></Label>
                 <TextField hint="&#xf2bc; Email" name="email" [(ngModel)]="email" id="email" formControlName="email" keyboardType="email" autocorrect="false" autocapitalizationType="none" class="fa">
@@ -24,7 +24,7 @@
 
     <GridLayout rows="*" *ngIf="!isLoading && !logging">
         <StackLayout [formGroup]="signUpForm" orientation="vertical" horizontalAlignment="center" verticalAlignment="center" minHeight="100" minWidth="300">
-            <Label text="The Organizer" class="title" textWrap="true"></Label>
+            <Label text="The Health Guide" class="title" textWrap="true"></Label>
             <StackLayout class="input-field">
                 <Label *ngIf="username.length" text="&#xf007; Username" class="label fa" textWrap="true"></Label>
                 <TextField hint="&#xf007; Username" name="username" [(ngModel)]="username" id="username" formControlName="username" keyboardType="text" autocorrect="false" autocapitalizationType="none" class="fa">

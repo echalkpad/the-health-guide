@@ -1,48 +1,51 @@
-<ActionBar class="action-bar" [title]="food.name">
-    <NavigationButton text="Back" icon="res://ic_chevron_left_white_24dp" (tap)="goBack()"></NavigationButton>
-</ActionBar>
-<!--
-<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
-  -->
-<TabView>
-    <StackLayout *tabItem="{title: 'Basic'}">
-        <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
-            <template let-basic="item" let-index="index">
+<StackLayout class="modal-container">
+    <GridLayout rows="auto" columns="auto, *" class="action-bar p-t-10 p-b-10">
+        <Button col="0" [text]="'mdi-arrow-back' | fonticon" (tap)="goBack()" class="mdi action-item" verticalAlignment="center"></Button>
+        <Label col="1" [text]="food.name" textWrap="true" class="action-bar-title" verticalAlignment="center"></Label>
+    </GridLayout>
+    <TabView>
+        <StackLayout *tabItem="{title: 'Basic'}">
+            <ListView class="list-group" [items]="basicNutrition" separatorColor="cyan">
+                <template let-basic="item" let-index="index">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="basic" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{food[basic]}}{{index === 0 ? 'kcal' : 'g'}}" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Amino acids'}">
-        <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
-            <template let-aa="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Amino acids'}">
+            <ListView class="list-group" [items]="aminoacids" separatorColor="cyan">
+                <template let-aa="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="aa" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{food['amino acids'][aa]}}g" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Minerals'}">
-        <ListView class="list-group" [items]="minerals" separatorColor="cyan">
-            <template let-mineral="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Minerals'}">
+            <ListView class="list-group" [items]="minerals" separatorColor="cyan">
+                <template let-mineral="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="mineral" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{food.minerals[mineral]}}mg" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-    <StackLayout *tabItem="{title: 'Vitamins'}">
-        <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
-            <template let-vitamin="item">
+            </ListView>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'Vitamins'}">
+            <ListView class="list-group" [items]="vitamins" separatorColor="cyan">
+                <template let-vitamin="item">
         <GridLayout class="list-group-item" rows="*" columns="auto, *" isUserInteractionEnabled="false">
           <Label col="0" textWrap="true" [text]="vitamin" class="list-group-item-heading" verticalAlignment="center"></Label>
           <Label col="1" textWrap="true" text="{{food.vitamins[vitamin]}}mg" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
         </GridLayout>
       </template>
-        </ListView>
-    </StackLayout>
-</TabView>
+            </ListView>
+        </StackLayout>
+    </TabView>
+</StackLayout>
+<!--
+<TabView androidSelectedTabHighlightColor="#00c853" selectedTabTextColor="#00c853" tabTextColor="rgba(255,255,255,.5)" tabBackgroundColor="#151F2F">
+  -->
