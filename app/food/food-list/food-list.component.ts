@@ -63,6 +63,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
       modalOpts: ModalDialogOptions = {
         context: selectedFood,
         viewContainerRef: this._viewRef,
+        fullscreen: true
       };
     this._modalSvc.showModal(FoodDetailComponent, modalOpts);
   }

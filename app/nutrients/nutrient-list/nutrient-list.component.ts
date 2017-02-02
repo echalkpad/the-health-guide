@@ -92,6 +92,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
       modalOpts: ModalDialogOptions = {
         context: selectedNutrient,
         viewContainerRef: this._viewRef,
+        fullscreen: true
       };
     this._modalSvc.showModal(NutrientDetailComponent, modalOpts);
   }

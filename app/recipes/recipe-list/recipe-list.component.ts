@@ -280,6 +280,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           let modalOpts: ModalDialogOptions = {
             context: selectedRecipe,
             viewContainerRef: this._viewRef,
+            fullscreen: true
           };
           this._modalSvc.showModal(RecipeDetailComponent, modalOpts);
           break;
