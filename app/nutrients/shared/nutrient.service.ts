@@ -20,10 +20,10 @@ export class NutrientService {
   private _microObserver: Subscriber<Nutrient>;
   constructor() { }
 
-  public filterNutrient(nutrient: Nutrient, query: string, searchQuery: string): boolean {
+  public filterNutrient(nutrient: Nutrient, searchBy: string, searchQuery: string): boolean {
     let match: boolean = false;
-    if (typeof nutrient[query] === 'object') {
-      nutrient[query].forEach((prop: string) => {
+    if (typeof nutrient[searchBy] === 'object') {
+      nutrient[searchBy].forEach((prop: string) => {
         if (prop.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
           match = true;
         }
@@ -31,21 +31,21 @@ export class NutrientService {
       return match;
     }
 
-    return nutrient[query].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
+    return nutrient[searchBy].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
   }
 
-  public filterNutrients(nutrients: Nutrient[], query: string, searchQuery: string): Nutrient[] {
+  public filterNutrients(nutrients: Nutrient[], searchBy: string, searchQuery: string): Nutrient[] {
     return nutrients.filter((item: Nutrient) => {
       let match: boolean = false;
-      if (typeof item[query] === 'object') {
-        item[query].forEach((prop: string) => {
+      if (typeof item[searchBy] === 'object') {
+        item[searchBy].forEach((prop: string) => {
           if (prop.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
             match = true;
           }
         });
         return match;
       }
-      return item[query].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
+      return item[searchBy].toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1;
     });
   }
 

@@ -286,22 +286,22 @@ export class RecipeService {
     );
   }
 
-  public filterRecipes(recipes: Recipe[], query: string, searchQuery: string, ingredients: Ingredient[]): Recipe[] {
+  public filterRecipes(recipes: Recipe[], searchBy: string, searchQuery: string, ingredientsQuery: Ingredient[]): Recipe[] {
     return recipes.filter((recipe: Recipe) => {
       let match: boolean = false,
         matchedIngredients: number = 0,
-        recipeQuery: string = (query === 'ingredients') ? recipe.name : recipe[query]
+        recipeQuery: string = (searchBy === 'ingredients') ? recipe.name : recipe[searchBy]
       if (recipeQuery.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
         match = true;
-        if (!!ingredients && !!ingredients.length) {
-          ingredients.forEach((item: Ingredient) => {
+        if (!!ingredientsQuery && !!ingredientsQuery.length) {
+          ingredientsQuery.forEach((item: Ingredient) => {
             recipe.ingredients.forEach((ingredient: Ingredient) => {
               if (ingredient.name === item.name) {
                 matchedIngredients++;
               }
             });
           });
-          if (matchedIngredients !== ingredients.length) {
+          if (matchedIngredients !== ingredientsQuery.length) {
             match = false;
           }
         }
@@ -327,22 +327,22 @@ export class RecipeService {
     return imgPath;
   }
 
-  public isMatch(recipe: Recipe, query: string = 'name', searchQuery: string = '', ingredients: Ingredient[] = []): boolean {
+  public isMatch(recipe: Recipe, searchBy: string = 'name', searchQuery: string = '', ingredientsQuery: Ingredient[] = []): boolean {
     let match: boolean = false,
       matchedIngredients: number = 0,
-      recipeQuery: string = (query === 'ingredients') ? recipe.name :
-        (query === 'chef') ? recipe.chef.name : recipe[query];
+      recipeQuery: string = (searchBy === 'ingredients') ? recipe.name :
+        (searchBy === 'chef') ? recipe.chef.name : recipe[searchBy];
     if (recipeQuery.toLowerCase().indexOf(searchQuery.toLowerCase()) !== -1) {
       match = true;
-      if (!!ingredients && !!ingredients.length) {
-        ingredients.forEach((item: Ingredient) => {
+      if (!!ingredientsQuery && !!ingredientsQuery.length) {
+        ingredientsQuery.forEach((item: Ingredient) => {
           recipe.ingredients.forEach((ingredient: Ingredient) => {
             if (ingredient.name === item.name) {
               matchedIngredients++;
             }
           });
         });
-        if (matchedIngredients !== ingredients.length) {
+        if (matchedIngredients !== ingredientsQuery.length) {
           match = false;
         }
       }

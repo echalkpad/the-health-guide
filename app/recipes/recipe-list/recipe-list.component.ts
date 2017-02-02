@@ -42,10 +42,10 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public isLoadingShared: boolean = true;
   public isSearching: boolean = false;
   public listView: boolean = true;
-  public query: string = 'name';
   public ingredientsQuery: Ingredient[] = [];
-  public searchByPrivate: string = '';
-  public searchByShared: string = '';
+  public searchBy: string = 'name';
+  public searchQueryPrivate: string = '';
+  public searchQueryShared: string = '';
   constructor(
     private _authSvc: AuthService,
     private _detectorRef: ChangeDetectorRef,
@@ -86,13 +86,13 @@ export class RecipeListComponent implements OnDestroy, OnInit {
     }).then((result: string) => {
       switch (result) {
         case 'Recipe name':
-          this.query = 'name';
+          this.searchBy = 'name';
           break;
         case 'Chef':
-          this.query = 'chef';
+          this.searchBy = 'chef';
           break;
         case 'Ingredients':
-          this.query = 'ingredients';
+          this.searchBy = 'ingredients';
 
           let options: ModalDialogOptions = {
             viewContainerRef: this._viewRef,
@@ -108,7 +108,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
           break;
 
         default:
-          this.query = 'name';
+          this.searchBy = 'name';
           break;
       }
     });
@@ -125,13 +125,13 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   public clearSearchPrivate(): void {
-    this.searchByPrivate = '';
+    this.searchQueryPrivate = '';
     this.isLoadingPrivate = true;
     this.refreshPrivate();
   }
 
   public clearSearchShared(): void {
-    this.searchByShared = '';
+    this.searchQueryShared = '';
     this.isLoadingShared = true;
     this.refreshShared();
   }
@@ -171,7 +171,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public refreshPrivate(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._privateRecipes = [];
-      this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchByPrivate, this.searchByPrivate, this.ingredientsQuery).subscribe((data: Recipe) => {
+      this._recipeDataSvc.getPrivateRecipes(this._privateLimit, this.searchQueryPrivate, this.searchBy, this.ingredientsQuery).subscribe((data: Recipe) => {
         let idx: number = _.findIndex(this._privateRecipes, (item: Recipe) => item.$key === data.$key);
         switch (data.$type) {
           case 'ChildAdded':
@@ -214,7 +214,7 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   public refreshShared(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._sharedRecipes = [];
-      this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchByShared, this.searchByShared, this.ingredientsQuery).subscribe((data: Recipe) => {
+      this._recipeDataSvc.getSharedRecipes(this._sharedLimit, this.searchQueryShared, this.searchBy, this.ingredientsQuery).subscribe((data: Recipe) => {
         let idx: number = _.findIndex(this._sharedRecipes, (item: Recipe) => item.$key === data.$key);
         switch (data.$type) {
           case 'ChildAdded':
@@ -255,13 +255,13 @@ export class RecipeListComponent implements OnDestroy, OnInit {
   }
 
   public searchPrivate(searchQuery: string): void {
-    this.searchByPrivate = searchQuery;
+    this.searchQueryPrivate = searchQuery;
     this.isLoadingPrivate = true;
     this.refreshPrivate();
   }
 
   public searchShared(searchQuery: string): void {
-    this.searchByShared = searchQuery;
+    this.searchQueryShared = searchQuery;
     this.isLoadingShared = true;
     this.refreshShared();
   }
