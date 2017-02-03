@@ -100,33 +100,9 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public refreshMacros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._macronutrients = [];
-      this._nutrientSvc.getMacronutrients(this.searchBy, this.searchQueryMacros).subscribe((data: Nutrient) => {
-        let idx: number = _.findIndex(this._macronutrients, (item: Nutrient) => item.$key === data.$key);
-        switch (data.$type) {
-          case 'ChildAdded':
-            if (idx === -1) {
-              this._macronutrients.push(data);
-            } else {
-              this._macronutrients[idx] = _.assign({}, data);
-            }
-            break;
-          case 'ChildChanged':
-            if (idx !== -1) {
-              this._macronutrients[idx] = _.assign({}, data);
-            }
-            break;
-
-          case 'ChildRemoved':
-            if (idx !== -1) {
-              this._macronutrients.splice(idx, 1);
-            }
-            break;
-
-          default:
-            break;
-        }
-      });
+      this._nutrientSvc.getMacronutrients(this.searchBy, this.searchQueryMacros).subscribe((data: Nutrient) => this._macronutrients.push(data));
     });
+    
     return new Promise(resolve => {
       setTimeout(() => {
         this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
@@ -143,32 +119,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public refreshMicros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._micronutrients = [];
-      this._nutrientSvc.getMicronutrients(this.searchBy, this.searchQueryMicros).subscribe((data: Nutrient) => {
-        let idx: number = _.findIndex(this._micronutrients, (item: Nutrient) => item.$key === data.$key);
-        switch (data.$type) {
-          case 'ChildAdded':
-            if (idx === -1) {
-              this._micronutrients.push(data);
-            } else {
-              this._micronutrients[idx] = _.assign({}, data);
-            }
-            break;
-          case 'ChildChanged':
-            if (idx !== -1) {
-              this._micronutrients[idx] = _.assign({}, data);
-            }
-            break;
-
-          case 'ChildRemoved':
-            if (idx !== -1) {
-              this._micronutrients.splice(idx, 1);
-            }
-            break;
-
-          default:
-            break;
-        }
-      });
+      this._nutrientSvc.getMicronutrients(this.searchBy, this.searchQueryMicros).subscribe((data: Nutrient) => this._micronutrients.push(data));
     });
     return new Promise(resolve => {
       setTimeout(() => {

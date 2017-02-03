@@ -71,32 +71,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public refreshFoods(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._foods = [];
-      this._foodSvc.getFoods(this._foodLimit, this.searchQuery).subscribe((data: Food) => {
-        let idx: number = _.findIndex(this._foods, (item: Food) => item.$key === data.$key);
-        switch (data.$type) {
-          case 'ChildAdded':
-            if (idx === -1) {
-              this._foods.push(data);
-            } else {
-              this._foods[idx] = _.assign({}, data);
-            }
-            break;
-          case 'ChildChanged':
-            if (idx !== -1) {
-              this._foods[idx] = _.assign({}, data);
-            }
-            break;
-
-          case 'ChildRemoved':
-            if (idx !== -1) {
-              this._foods.splice(idx, 1);
-            }
-            break;
-
-          default:
-            break;
-        }
-      });
+      this._foodSvc.getFoods(this._foodLimit, this.searchQuery).subscribe((data: Food) => this._foods.push(data));
     });
     return new Promise(resolve => {
       setTimeout(() => {
