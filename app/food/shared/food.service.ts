@@ -50,6 +50,10 @@ export class FoodService {
         });
     }
 
+    public getNDBFoods(): any {
+        // TODO: XHTTP Request from NDB Food Database API
+    }
+
     public unsubscribeFoods(): void {
         if (!!this._foodObserver && !this._foodObserver.closed) {
             this._foodObserver.unsubscribe();

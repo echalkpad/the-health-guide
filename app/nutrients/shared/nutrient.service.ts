@@ -49,16 +49,15 @@ export class NutrientService {
     });
   }
 
-  public getMicronutrients(searchBy: string, searchQuery: string): Observable<Nutrient> {
+  public getMicronutrients(): Observable<Nutrient> {
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._microObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
             this._microObserver.error(res['error']);
-          } else if (this.filterNutrient(res.value, searchBy, searchQuery)) {
-            let newNutrient: Nutrient = _.assign({ id: res.key, $type: res.type }, res.value);
-            this._microObserver.next(newNutrient);
+          } else {
+            this._microObserver.next(res.value);
           }
         },
         '/micronutrients',
@@ -73,16 +72,15 @@ export class NutrientService {
     });
   }
 
-  public getMacronutrients(searchBy: string, searchQuery: string): Observable<Nutrient> {
+  public getMacronutrients(): Observable<Nutrient> {
     return new Observable((observer: Subscriber<Nutrient>) => {
       this._macroObserver = observer;
       firebase.query(
         (res: firebase.FBData) => {
           if (res.hasOwnProperty('error')) {
             this._macroObserver.error(res['error']);
-          } else if (this.filterNutrient(res.value, searchBy, searchQuery)) {
-            let newNutrient: Nutrient = _.assign({ id: res.key, $type: res.type }, res.value);
-            this._macroObserver.next(newNutrient);
+          } else {
+            this._macroObserver.next(res.value);
           }
         },
         '/macronutrients',

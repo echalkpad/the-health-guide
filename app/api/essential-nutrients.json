@@ -1,0 +1,195 @@
+[{
+    "name": "Amino acids",
+    "nutrients": [{
+        "name": "Isoleucine",
+        "id": "503"
+    }, {
+        "name": "Leucine",
+        "id": "504"
+    }, {
+        "name": "Lysine",
+        "id": "505"
+    }, {
+        "name": "Methionine",
+        "id": "506"
+    }, {
+        "name": "Phenylalanine",
+        "id": "507"
+    }, {
+        "name": "Threonine",
+        "id": "508"
+    }, {
+        "name": "Tryptophan",
+        "id": "501"
+    }, {
+        "name": "Tyrosine",
+        "id": "509"
+    }, {
+        "name": "Valine",
+        "id": "510"
+    }]
+}, {
+    "name": "Fatty Acids",
+    "nutrients": [{
+        "name": "alpha-Linolenic acid (Omega-3 - 18:3 undifferentiated)",
+        "id": "619"
+    }, {
+        "name": "Linoleic acid (Omega-6 - 18:2 undifferentiated)",
+        "id": "618"
+    }]
+}, {
+    "name": "Vitamins",
+    "nutrients": [{
+            "id": "320",
+            "name": "Vitamin A, RAE"
+        },
+        {
+            "id": "418",
+            "name": "Cobalamine (Vitamin B12)"
+        },
+        {
+            "id": "404",
+            "name": "Thiamin (Vitamin B1)"
+        },
+        {
+            "id": "405",
+            "name": "Riboflavin (Vitamin B2)"
+        },
+        {
+            "id": "406",
+            "name": "Niacin (Vitamin B3)"
+        },
+        {
+            "id": "410",
+            "name": "Pantothenic acid (Vitamin B5)"
+        },
+        {
+            "id": "415",
+            "name": "Pyridoxine (Vitamin B6)"
+        },
+        {
+            "id": "",
+            "name": "Biotin (Vitamin B7)"
+        },
+        {
+            "id": "431",
+            "name": "Folic acid (Vitamin B9)"
+        },
+        {
+            "id": "401",
+            "name": "Vitamin C, total ascorbic acid"
+        },
+        {
+            "id": "324",
+            "name": "Vitamin D"
+        },
+        {
+            "id": "328",
+            "name": "Vitamin D (D2 + D3)"
+        },
+        {
+            "id": "326",
+            "name": "Vitamin D3 (cholecalciferol)"
+        },
+        {
+            "id": "323",
+            "name": "Vitamin E (alpha-tocopherol)"
+        },
+        {
+            "id": "430",
+            "name": "Vitamin K (phylloquinone)"
+        }
+    ]
+}, {
+    "name": "Mineral elements",
+    "nutrients": [{
+            "id": "301",
+            "name": "Calcium, Ca"
+        }, {
+            "id": "",
+            "name": "Chloride, Cl"
+        },
+        {
+            "id": "304",
+            "name": "Magnesium, Mg"
+        },
+        {
+            "id": "305",
+            "name": "Phosphorus, P"
+        },
+        {
+            "id": "306",
+            "name": "Potassium, K"
+        },
+        {
+            "id": "307",
+            "name": "Sodium, Na"
+        },
+        {
+            "id": "",
+            "name": "Sulfur, S"
+        }
+    ]
+}, {
+    "name": "Trace elements",
+    "nutrients": [{
+        "id": "",
+        "name": "Chromium, Cr"
+    }, {
+        "id": "",
+        "name": "Cobalt, Co"
+    }, {
+        "id": "312",
+        "name": "Copper, Cu"
+    }, {
+        "id": "313",
+        "name": "Fluoride, F"
+    }, {
+        "id": "",
+        "name": "Iodine, I"
+    }, {
+        "id": "303",
+        "name": "Iron, Fe"
+    }, {
+        "id": "315",
+        "name": "Manganese, Mn"
+    }, {
+        "id": "",
+        "name": "Molybdenum, Mo"
+    }, {
+        "id": "317",
+        "name": "Selenium, Se"
+    }, {
+        "id": "",
+        "name": "Silicon, Si"
+    }, {
+        "id": "",
+        "name": "Tin, Sn"
+    }, {
+        "id": "",
+        "name": "Vanadium, V"
+    }, {
+        "offset": 189,
+        "id": "309",
+        "name": "Zinc, Zn"
+    }]
+}, {
+    "name": "Other",
+    "nutrients": [{
+            "id": "",
+            "name": "Carnitine"
+        },
+        {
+            "id": "421",
+            "name": "Choline, total"
+        },
+        {
+            "id": "",
+            "name": "Inositol"
+        },
+        {
+            "id": "255",
+            "name": "Water"
+        }
+    ]
+}]

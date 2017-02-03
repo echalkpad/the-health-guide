@@ -77,14 +77,12 @@ export class NutrientListComponent implements OnDestroy, OnInit {
 
   public clearSearchMacros(): void {
     this.searchQueryMacros = '';
-    this.isLoadingMacros = true;
-    this.refreshMacros();
+    this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
   }
 
   public clearSearchMicros(): void {
     this.searchQueryMicros = '';
-    this.isLoadingMicros = true;
-    this.refreshMacros();
+    this.filteredMicronutrients = new ObservableArray<Nutrient>(this._micronutrients);
   }
 
   public openDetails(args: ListViewEventData, nutrientGroup: string): void {
@@ -100,9 +98,9 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public refreshMacros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._macronutrients = [];
-      this._nutrientSvc.getMacronutrients(this.searchBy, this.searchQueryMacros).subscribe((data: Nutrient) => this._macronutrients.push(data));
+      this._nutrientSvc.getMacronutrients().subscribe((data: Nutrient) => this._macronutrients.push(data));
     });
-    
+
     return new Promise(resolve => {
       setTimeout(() => {
         this.filteredMacronutrients = new ObservableArray<Nutrient>(this._macronutrients);
@@ -119,7 +117,7 @@ export class NutrientListComponent implements OnDestroy, OnInit {
   public refreshMicros(args?: ListViewEventData): Promise<boolean> {
     this._zone.runOutsideAngular(() => {
       this._micronutrients = [];
-      this._nutrientSvc.getMicronutrients(this.searchBy, this.searchQueryMicros).subscribe((data: Nutrient) => this._micronutrients.push(data));
+      this._nutrientSvc.getMicronutrients().subscribe((data: Nutrient) => this._micronutrients.push(data));
     });
     return new Promise(resolve => {
       setTimeout(() => {
@@ -136,14 +134,12 @@ export class NutrientListComponent implements OnDestroy, OnInit {
 
   public searchMacros(searchQuery: string): void {
     this.searchQueryMacros = searchQuery;
-    this.isLoadingMacros = true;
-    this.refreshMacros();
+    this.filteredMacronutrients = new ObservableArray<Nutrient>(this._nutrientSvc.filterNutrients(this._macronutrients, this.searchBy, this.searchQueryMacros));
   }
 
   public searchMicros(searchQuery: string): void {
     this.searchQueryMicros = searchQuery;
-    this.isLoadingMicros = true;
-    this.refreshMicros();
+    this.filteredMicronutrients = new ObservableArray<Nutrient>(this._nutrientSvc.filterNutrients(this._micronutrients, this.searchBy, this.searchQueryMicros));
   }
 
   public tabIdxChange(tabIdx): void {

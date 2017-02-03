@@ -41,9 +41,9 @@ export class RecipeDetailComponent {
         ];
 
         this.recipe = _params.context;
-        this.aminoacids = Object.keys(this.recipe['amino acids']);
-        this.vitamins = Object.keys(this.recipe['vitamins']);
-        this.minerals = Object.keys(this.recipe['minerals']);
+        this.aminoacids = Object.keys(this.recipe.nutrition['amino acids']);
+        this.vitamins = Object.keys(this.recipe.nutrition['vitamins']);
+        this.minerals = Object.keys(this.recipe.nutrition['minerals']);
     }
 
     public goBack(): void {
