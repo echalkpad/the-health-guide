@@ -6,7 +6,7 @@
       </template>
     </md-nav-list>
     <md-nav-list td-navigation-drawer-menu>
-      <a md-list-item (click)="logout()"><md-icon>exit_to_app</md-icon>Sign out</a>
+      <a md-list-item (click)="logout(); layout.close()"><md-icon>exit_to_app</md-icon>Sign out</a>
     </md-nav-list>
   </td-navigation-drawer>
   <router-outlet></router-outlet>

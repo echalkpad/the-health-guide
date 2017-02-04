@@ -5,9 +5,10 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnIni
 import { Auth } from '../auth';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  moduleId: module.id,
+  selector: 'thg-home',
+  templateUrl: 'home.component.html',
+  styleUrls: ['home.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomeComponent  implements OnDestroy, OnInit {

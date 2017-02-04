@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // THG
+import { Auth, AuthComponent, AuthGuardService } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { HomeComponent } from '../../home/home.component';
 
@@ -13,8 +14,13 @@ const appRoutes: Routes = [
     component: DashboardComponent,
     children: [
       {
+        path: 'home',
+        component: HomeComponent,
+        canActivate: [AuthGuardService]
+      },
+      {
         path: '',
-        component: HomeComponent
+        component: AuthComponent
       }
     ]
   }

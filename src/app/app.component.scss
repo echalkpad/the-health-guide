@@ -1,0 +1,68 @@
+/* :host /deep/ lets shadowdom style child elements */
+
+:host /deep/ {
+    /**
+    * CSS Overrides for bug fixes
+    */
+    // md-divider has a bug in angular-material that doesn't apply color
+    md-divider {
+        border-top-color: rgba(black, 0.12);
+    }
+    // sidenav content doesn't fill the horizontal space
+    .md-sidenav-content {
+        flex-grow: 1;
+    }
+    // td-step has a bug with the vertical line when closing the step (0.8.1)
+    div.td-line-wrapper {
+        min-height: 1px;
+    }
+    /**
+    * END CSS Overrides for bug fixes
+    */
+    /* Manage list custom styles */
+    .md-sort-item {
+        /deep/ {
+            .md-list-item {
+                padding: 0;
+            }
+        }
+    }
+    .md-input-search {
+        /deep/ {
+            .md-input-prefix {
+                width: 45px;
+                text-align: center;
+            }
+        }
+        md-icon.clear-search {
+            top: 15px;
+            position: relative;
+        }
+    }
+    .md-sort-icon {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+    .md-sort-header {
+        padding: 10px;
+        &:hover {
+            background-color: #EEEEEE;
+            cursor: pointer;
+        }
+    }
+
+    [md-raised-button].md-accent, [md-fab].md-accent, [md-mini-fab].md-accent {
+        color: white;
+    }
+
+    td-file-upload md-raised-button {
+        color: white!important;
+    }
+
+    md-slide-toggle {
+        md-icon {
+            margin-right: 5px;
+        }
+        padding: auto;
+    }
+}

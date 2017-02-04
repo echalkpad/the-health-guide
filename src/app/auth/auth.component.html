@@ -1,3 +1,36 @@
-<p>
-  auth works!
-</p>
+<td-layout-nav toolbarTitle="The Health Guide" *tdLoading="'auth.load'; mode:'indeterminate'; type:'circle'; strategy:'overlay'; color:'primary'">
+  <td-layout-card-over *ngIf="!registering" cardTitle="Login" cardWidth="50">
+    <md-card-content layout-pading>
+      <form #loginForm="ngForm" layout="column">
+        <md-input class="push-xs" #emailInput #emailControl="ngModel" flex placeholder="Email" type="text" maxlength="30" name="user.email"
+          [(ngModel)]="user.email" required>
+          <span md-prefix><md-icon>contact_mail</md-icon></span>
+          <md-hint align="start" [hidden]="emailControl.pristine" class="tc-red-600">
+            <span [hidden]="!emailControl.errors?.required">Required</span>
+          </md-hint>
+          <md-hint align="end">{{emailInput.characterCount}} / 30</md-hint>
+          </md-input>
+          <md-input (keyup.enter)="passLogin()" class="push-xs" #passControl="ngModel" flex placeholder="Password" type="password"
+            name="user.password" [(ngModel)]="user.password" required>
+            <span md-prefix><md-icon>lock</md-icon></span>
+            <md-hint align="start" [hidden]="passControl.pristine" class="tc-red-600">
+              <span [hidden]="!passControl.errors?.required">Required</span>
+            </md-hint>
+            <md-hint align="end">Something hard to guess</md-hint>
+            </md-input>
+      </form>
+    </md-card-content>
+    <md-divider></md-divider>
+    <md-card-actions layout="column" layout-align="center center">
+      <button md-raised-button flex color="accent" [disabled]="!loginForm.form.valid" (click)="passLogin()">
+          Sign In
+        </button>
+      <button md-raised-button flex color="accent" (click)="register()">
+          Register
+        </button>
+    </md-card-actions>
+  </td-layout-card-over>
+  <td-layout-footer>
+    Home
+  </td-layout-footer>
+</td-layout-nav>

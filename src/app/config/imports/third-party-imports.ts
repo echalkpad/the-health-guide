@@ -22,6 +22,8 @@ export const FIREBASE_CONFIG = {
   messagingSenderId: "283336744173"
 };
 
+firebase.initializeApp(FIREBASE_CONFIG);
+
 export const thirdPartyImports = [
     AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG, 'the-health-guide'),
     CovalentCoreModule.forRoot()
