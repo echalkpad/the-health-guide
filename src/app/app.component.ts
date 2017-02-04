@@ -1,54 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { NavigationExtras, Router } from '@angular/router';
-
-import { Auth } from './auth/auth.model';
-import { AuthService } from './auth/auth.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  private _handle: number;
-  public auth: Auth = new Auth("", "", "");
-  public routeLinks: Object[];
-
-  constructor(private _authSvc: AuthService, private _router: Router) {
-    this.routeLinks = [
-      {
-        title: "Home", route: "/home", icon: "home"
-      },
-      {
-        title: "Nutrition", route: "/nutrition", icon: "spa"
-      },
-      {
-        title: "Fitness", route: "/fitness", icon: "fitness_center"
-      },
-      {
-        title: "Account", route: "/account", icon: "account_circle"
-      },
-    ];
-  }
-
-  private _checkAuth(): void {
-    if (this._authSvc.getAuth()) {
-      this.auth = Object.assign({}, this._authSvc.getAuth());
-      clearInterval(this._handle);
-    }
-  }
-
-  public logout(): void {
-    this._authSvc.logout();
-    this._router.navigate(['/']);
-  }
-
-  ngOnInit(): void {
-    if (!this._authSvc.getAuth()) {
-      this._handle = setInterval(() => this._checkAuth(), 5000);
-    } else {
-      this.auth = Object.assign({}, this._authSvc.getAuth());
-    }
-  }
-
+export class AppComponent {
+  title = 'app works!';
 }

@@ -1,59 +1,6 @@
 {
   "rules": {
-    "activity-tracks": {
-      ".read": true,
-      "$userId": {
-        ".read": "$userId === auth.uid",
-        ".write": "$userId === auth.uid"
-      }
-    },
-    "activities": {
-      ".read": true,
-      ".write": false
-    },
-    "fitness": {
-      ".read": true,
-      "$userId": {
-        ".read": "$userId === auth.uid",
-        ".write": "$userId === auth.uid"
-      }
-    },
-    "foods": {
-      ".read": true,
-      ".write": false
-    },
-    "macronutrients": {
-      ".read": true,
-      ".write": false
-    },
-    "meal-tracks": {
-      ".read": true,
-      "$userId": {
-        ".read": "$userId === auth.uid",
-        ".write": "$userId === auth.uid"
-      }
-    },
-    "micronutrients": {
-      ".read": true,
-      ".write": false
-    },
-    "recipes": {
-      ".read": true,
-      "$userId": {
-        ".read": "$userId === auth.uid",
-        ".write": "$userId === auth.uid"
-      },
-      "shared": {
-        ".read": true,
-        ".write": "auth != null"
-      }
-    },
-    "users": {
-      ".read": true,
-      "$userId": {
-        ".read": "$userId === auth.uid",
-        ".write": "$userId === auth.uid"
-      }
-    }
+    ".read": true,
+    ".write": "auth.uid !== null"
   }
 }

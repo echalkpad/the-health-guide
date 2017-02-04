@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-beta.19-3",
-    "name": "the-health-guide-web"
+    "version": "1.0.0-beta.26",
+    "name": "the-health-guide"
   },
   "apps": [
     {
@@ -18,15 +18,11 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.scss",
+        "../node_modules/@covalent/core/common/platform.scss",
         "theme.scss",
-        "../node_modules/@covalent/core/styles/platform.css"
+        "styles.scss"
       ],
-      "scripts": [
-        "../node_modules/firebase/firebase.js",
-        "../node_modules/hammerjs/hammer.min.js",
-        "../node_modules/showdown/dist/showdown.js"
-      ],
+      "scripts": [],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",
@@ -34,8 +30,6 @@
       }
     }
   ],
-  "addons": [],
-  "packages": [],
   "e2e": {
     "protractor": {
       "config": "./protractor.conf.js"

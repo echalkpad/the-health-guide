@@ -1,10 +1,10 @@
-import { TheHealthGuideWebPage } from './app.po';
+import { TheHealthGuidePage } from './app.po';
 
-describe('the-health-guide-web App', function() {
-  let page: TheHealthGuideWebPage;
+describe('the-health-guide App', function() {
+  let page: TheHealthGuidePage;
 
   beforeEach(() => {
-    page = new TheHealthGuideWebPage();
+    page = new TheHealthGuidePage();
   });
 
   it('should display message saying app works', () => {

@@ -1,22 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 
-import { thirdPartyImports } from './config/imports/third-party'
 import { AppComponent } from './app.component';
-import { thgDeclarations, thgImports, thgProviders } from './config/imports/thg';
-
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ...thgDeclarations
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    ...thirdPartyImports,
-    ...thgImports
+    FormsModule,
+    HttpModule
   ],
-  providers: [...thgProviders],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
