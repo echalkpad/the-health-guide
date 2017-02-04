@@ -1,2 +1,2 @@
-export * from './thg-imports';
-export * from './third-party-imports';
+export * from './imports';
+export * from './routing';

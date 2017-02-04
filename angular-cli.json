@@ -18,11 +18,14 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "../node_modules/@covalent/core/common/platform.scss",
+        "../node_modules/@covalent/core/common/platform.css",
         "theme.scss",
         "styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/hammerjs/hammer.min.js",
+        "../node_modules/showdown/dist/showdown.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

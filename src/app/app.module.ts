@@ -3,18 +3,30 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {
+  thirdPartyImports,
+  thgDeclarations,
+  thgImports,
+  thgProviders
+} from './config'
+
 import { AppComponent } from './app.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ...thgDeclarations,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    ...thirdPartyImports,
+    ...thgImports
   ],
-  providers: [],
+  providers: [...thgProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
