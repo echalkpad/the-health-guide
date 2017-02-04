@@ -1,7 +1,15 @@
-<td-layout-nav toolbarTitle="Home">
-  <div td-toolbar-content></div>
-  I am home
+<td-layout-nav toolbarTitle="The Health Guide">
+  <td-layout-card-over cardTitle="Welcome my dear child" cardSubtitle="Let's get healthy, shall we?" cardWidth="75">
+    <md-card-content layout="column" layout-align="center center">
+      <div class="profile">
+        <img [src]="auth.avatar" alt="User profile image">
+      </div>
+      <h3 class="md-display-1">Hello {{ auth.username }}!</h3>
+    </md-card-content>
+    <div td-after-card>
+    </div>
+  </td-layout-card-over>
   <td-layout-footer>
-    Footer
+    Home
   </td-layout-footer>
 </td-layout-nav>

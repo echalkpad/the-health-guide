@@ -26,7 +26,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
   }
 
   ngOnDestroy(): void {
-
+    this._detectorRef.detach();
   }
 
 }
