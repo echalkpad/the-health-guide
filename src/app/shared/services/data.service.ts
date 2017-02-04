@@ -1,5 +1,7 @@
+// Angular
 import { Injectable } from '@angular/core';
 
+// THG
 import { Auth, User } from '../../auth';
 
 @Injectable()
