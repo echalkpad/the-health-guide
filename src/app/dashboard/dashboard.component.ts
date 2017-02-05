@@ -14,7 +14,7 @@ import { AuthService } from '../auth';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DashboardComponent implements OnDestroy, OnInit {
-  public routeLinks: IRouteLink[];
+  public routeLinks: Array<IRouteLink>;
   constructor(
     private _authSvc: AuthService,
     private _detectorRef: ChangeDetectorRef,

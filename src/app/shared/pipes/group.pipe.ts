@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class GroupPipe implements PipeTransform {
 
-  transform(value: any[], columns: number, colNr: number): any {
+  transform(value: Array<any>, columns: number, colNr: number): any {
     if (value) {
       return value.filter((item, index) => {
         if (index % columns === colNr - 1) {
