@@ -3,6 +3,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // Nativescript
 import { NativeScriptModule } from 'nativescript-angular/platform';
+import { NativeScriptHttpModule } from 'nativescript-angular/http';
 import { NativeScriptFormsModule } from 'nativescript-angular/forms';
 import { ModalDialogService } from 'nativescript-angular/modal-dialog';
 
@@ -46,8 +47,9 @@ export const thgEntries = [
 ];
 
 export const thgImports = [
-    NativeScriptFormsModule,
     NativeScriptModule,
+    NativeScriptHttpModule,
+    NativeScriptFormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
     SharedModule.forRoot()

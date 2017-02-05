@@ -22,6 +22,8 @@ export class MealSearchService {
         private _recipeDataSvc: RecipeDataService
     ) { }
 
+    /*
+
     public getMeals(): Observable<Meal> {
         return new Observable(observer => {
             if (!!this._meals.length) {
@@ -43,4 +45,6 @@ export class MealSearchService {
         this._foodSvc.unsubscribeFoods();
         this._recipeDataSvc.unsubscribeRecipes();
     }
+
+    */
 }

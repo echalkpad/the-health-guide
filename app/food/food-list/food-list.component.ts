@@ -4,10 +4,11 @@ import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnIni
 // Lodash
 import * as _ from 'lodash';
 
+// Rxjs
+import { Observable } from 'rxjs/Observable';
+
 // Nativescript
 import { setTimeout } from 'timer';
-import { ObservableArray } from 'data/observable-array';
-import { ModalDialogService, ModalDialogOptions } from 'nativescript-angular/modal-dialog';
 
 // Telerik
 import { ListViewEventData } from 'nativescript-telerik-ui/listview';
@@ -25,23 +26,30 @@ import { FoodService } from '../shared/food.service';
   styleUrls: ['food-list.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class FoodListComponent implements OnDestroy, OnInit {
+export class FoodListComponent implements OnInit {
   private _foods: Food[];
   private _foodLimit: number = 25;
-  public filteredFoods: ObservableArray<Food>;
+  public filteredFoods: Observable<Food[]>;
   public isLoading: boolean = true;
   public isSearching: boolean = false;
   public searchQuery: string = '';
   constructor(
     private _detectorRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
-    private _modalSvc: ModalDialogService,
     private _viewRef: ViewContainerRef,
     private _zone: NgZone,
     public drawerSvc: DrawerService,
   ) { }
 
-  public clearSearch(): void {
+
+
+  ngOnInit(): void {
+    this.filteredFoods = this._foodSvc.getUSDAFoods(this.searchQuery, 0, this._foodLimit);
+  }
+}
+
+/**
+ *   public clearSearch(): void {
     this.searchQuery = '';
     this.isLoading = true;
     this.refreshFoods();
@@ -96,12 +104,8 @@ export class FoodListComponent implements OnDestroy, OnInit {
     this.isSearching = !this.isSearching;
   }
 
-  ngOnInit(): void {
-    this.refreshFoods();
-  }
-
   ngOnDestroy(): void {
     this._detectorRef.detach();
     this._foodSvc.unsubscribeFoods();
   }
-}
+ */

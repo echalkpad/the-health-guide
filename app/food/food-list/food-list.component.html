@@ -7,13 +7,12 @@
 <SearchBar *ngIf="!isLoading && isSearching" #searchQuery hint="Search food" (clear)="clearSearch()" [text]="searchQuery" (submit)="searchFood(searchQuery.text)"></SearchBar>
 <GridLayout rows="*">
     <ActivityIndicator row="1" class="activity-indicator" width="75" height="75" [visibility]="isLoading ? 'visible' : 'collapse'" [busy]="isLoading"></ActivityIndicator>
-    <RadListView *ngIf="!isLoading" row="1" class="list-group" [items]="filteredFoods" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press"
+    <RadListView *ngIf="!isLoading" row="1" class="list-group" [items]="filteredFoods | async" loadOnDemandMode="Manual" (loadMoreDataRequested)="loadMoreFoods($event)" pullToRefresh="true" (pullToRefreshInitiated)="refreshFoods($event)" selectionBehavior="Press"
         (itemSelected)="openDetails($event)">
         <template tkListItemTemplate let-food="item">
             <GridLayout class="list-group-item" rows="*" columns="auto, *" borderBottomWidth="1" borderBottomColor="Cyan">
                 <StackLayout col="0" verticalAlignment="center">
                     <Label class="list-group-item-heading" textWrap="true" [text]="food.name"></Label>
-                    <Label class="list-group-item-text" textWrap="true" [text]="food.category"></Label>
                 </StackLayout>
                 <Label col="1" text="100g" class="list-group-item-text text-right footnote" verticalAlignment="center"></Label>
             </GridLayout>

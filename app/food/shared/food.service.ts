@@ -2,61 +2,50 @@
 import { Injectable } from '@angular/core';
 
 // RxJS
+import { Http, URLSearchParams, Response, RequestOptions, Headers } from '@angular/http';
+import { NSHttp } from 'nativescript-angular/http';
 import { Observable } from 'rxjs/Observable';
-import { Subscriber } from 'rxjs/Subscriber';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
 
 // Lodash
 import * as _ from 'lodash';
 
-// Firebase
-import * as firebase from 'nativescript-plugin-firebase';
-
 // THG
 import { Food } from './food.model';
-import { HelperService, MAX_SAFE_INTEGER } from '../../shared'
 
 @Injectable()
 export class FoodService {
-    private _foodObserver: Subscriber<Food>;
-    constructor(private _helpSvc: HelperService) { }
+    private _usdaApiKey: string = '5nW8It7ORsxY212bV5wpleHkblTLbvpFTKVa010U';
+    private _foodSearchUrl: string = 'https://api.nal.usda.gov/ndb/search';
+    private _foodReportUrl: string = 'http://api.nal.usda.gov/ndb/reports';
+    constructor(private _http: NSHttp) { }
 
-    public getFoods(limit: number, searchQuery: string, withFetch?: boolean): Observable<Food> {
-        limit = searchQuery !== '' ? MAX_SAFE_INTEGER : limit;
+    public getUSDAFoods(searhQuery: string = '', chunckStart: number = 45, chunkLimit: number = 50): Observable<Food[]> {
+        let headers: Headers = new Headers({ 'Content-Type': 'application/json' }),
+            options: RequestOptions = new RequestOptions(),
+            params: URLSearchParams = new URLSearchParams();
+        params.set('lt', 'f');
+        params.set('q', searhQuery);
+        params.set('sort', 'n');
+        params.set('api_key', this._usdaApiKey);
+        params.set('offset', `${chunckStart}`);
+        params.set('max', `${chunkLimit}`);
+        options.headers = headers;
+        options.search = params;
 
-        return new Observable((observer: Subscriber<Food>) => {
-            this._foodObserver = observer;
-            firebase.query(
-                (res: firebase.FBData) => {
-                    if (res.hasOwnProperty('error')) {
-                        this._foodObserver.error(res['error']);
-                    } else if (this._helpSvc.isMatch(res.value, 'name', searchQuery)) {
-                        let newFood: Food = _.assign({ $key: res.key, $type: res.type }, res.value);
-                        this._foodObserver.next(newFood);
-                    }
-                },
-                '/foods',
-                {
-                    singleEvent: false,
-                    orderBy: {
-                        type: firebase.QueryOrderByType.CHILD,
-                        value: 'name'
-                    },
-                    limit: {
-                        type: firebase.QueryLimitType.FIRST,
-                        value: limit
-                    }
+        return this._http.get(this._foodSearchUrl, options)
+            .map((res: Response) => {
+                let body = res.json();
+                console.log(body);
+                if (body.hasOwnProperty('errors')) {
+                    console.log(body.errors);
+                    return [];
                 }
-            );
-        });
-    }
-
-    public getNDBFoods(): any {
-        // TODO: XHTTP Request from NDB Food Database API
-    }
-
-    public unsubscribeFoods(): void {
-        if (!!this._foodObserver && !this._foodObserver.closed) {
-            this._foodObserver.unsubscribe();
-        }
+                return body['list']['item'];
+            }).catch((err: Error) => {
+                console.error(err);
+                return Observable.throw(err)
+            });
     }
 }

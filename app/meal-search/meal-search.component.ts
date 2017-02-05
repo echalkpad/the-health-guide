@@ -21,7 +21,7 @@ import { RecipeDataService } from '../recipes';
     styleUrls: ['meal-search.component.css'],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class MealSearchComponent implements OnInit {
+export class MealSearchComponent {
     private _meals: Meal[];
     private _mealsLimit: number = 10;
     public filteredMeals: Meal[];
@@ -37,7 +37,7 @@ export class MealSearchComponent implements OnInit {
         private _recipeDataSvc: RecipeDataService,
         private _zone: NgZone
     ) { }
-
+/*
     public cancel(): void {
         this._params.closeCallback([]);
     }
@@ -109,4 +109,6 @@ export class MealSearchComponent implements OnInit {
         this._detectorRef.detach();
         this._mealSearchSvc.unsubscribeMeals();
     }
+
+    */
 }
