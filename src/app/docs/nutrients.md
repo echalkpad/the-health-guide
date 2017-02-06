@@ -5,7 +5,7 @@ Nutrients are components that are required by living organisms in order to survi
 Some nutrients may by synthesized by the body (`non-essential`), the rest must be obtained from external sources (`essential`).
 According to these requirements, nutrients are also classified in `macronutrients` (required in large amounts) and `micronutrients` (required in small amounts).
 
-Macronutrients are required in large amounts, because they provide the energy (_fuel_) to sustain the metabolic processes. The main macronutrients are: `carbohydrates`, `fats`, and `protein (amino acids)`.
+Macronutrients are required in large amounts, because they provide the energy (_fuel_) to sustain the metabolic processes. The main macronutrients are: [Carbohydrates](macronutrients/carbohydrates), `fats`, and `protein (amino acids)`.
 Micronutrients are the _workers_ in the metabolic processes; they build and repair tissues, and also regulate body processes. The main micronutrients are `vitamins` and `minerals`.
 
 Briefly, the major nutrients are: __carbohydrates__, __fats__, __protein (amino acids)__, __vitamins__, __minerals__, __water__, and __oxygen__.
