@@ -34,3 +34,8 @@ Note: Although water and oxygen are required in large amounts and contirbute to 
 - __Trans fat__
 
 These nutrients cause serious health problems when taken in excess. Limit them as much as you can.
+
+## Refferences
+- Wikipedia, [Nutrient](https://en.wikipedia.org/wiki/Nutrient)
+- Wikipedia, [Essential nutrient](https://en.wikipedia.org/wiki/Essential_nutrient)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition)
