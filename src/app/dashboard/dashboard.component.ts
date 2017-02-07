@@ -23,12 +23,15 @@ export class DashboardComponent implements OnDestroy, OnInit {
     this.routeLinks = [
       {
         title: 'Home', route: '/', icon: 'home'
+      },
+      {
+        title: 'USDA Foods', route: 'foods', icon: 'local-grocery-store'
       }
     ];
   }
 
   public logout(): void {
-    this._authSvc.logout().then(() => this._router.navigate(['/']));
+    this._authSvc.logout().then(() => this._router.navigate(['/login']));
   }
 
   ngOnInit(): void {

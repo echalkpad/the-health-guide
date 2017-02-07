@@ -73,7 +73,7 @@ export class AuthComponent implements OnInit {
   ngOnInit(): void {
     this._authSvc.getAuth().then((auth: Auth) => {
       if (!!auth) {
-        setTimeout(() => this._router.navigate(['home']));
+        setTimeout(() => this._router.navigate(['/']));
       }
     });
     this._titleSvc.setTitle('Authentication');

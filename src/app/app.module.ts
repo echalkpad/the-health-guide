@@ -9,11 +9,13 @@ import {
 } from './config'
 
 import { AppComponent } from './app.component';
+import { FoodComponent } from './food/food.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ...thgDeclarations,
+    FoodComponent,
   ],
   imports: [
     BrowserModule,
