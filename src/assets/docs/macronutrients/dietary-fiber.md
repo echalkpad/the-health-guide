@@ -1,0 +1,70 @@
+# Dietary fiber
+
+Dietary fiber is a complex carbohydrate that cannot be absorbed by the human body, but it contributes to the absorption of other nutrients and improves the overall health of the digestive system.
+
+## Digestion and absorption
+Fiber 
+
+### Functions and benefits
+- energy supply;
+- intestinal pH balance;
+- satiety increase;
+- reduce insulin and glucose levels;
+- lower LDL ("bad" cholesterol);
+- facilitate regular defecation
+
+### Disease preventions
+- constipation;
+- irritable bowel syndrome;
+- colon cancer;
+- breast cancer;
+- peptic ulcer;
+- heart disease;
+- type 2 diabetes;
+- inflammatory bowel disease;
+- hypertension;
+- insulin resistance;
+- metabolic syndrome.
+
+### Excess
+- bloating;
+- abdominal pain;
+- nausea;
+- vomiting;
+- dry mouth;
+- dizziness;
+- diarheea;
+- difficulty swallowing.
+
+## Food sources
+- _whole grains_, _fruits_, _vegetables_, and _legumes_.
+
+### Food combining
+Do:
+- vegetables - protein;
+- vegetables - fats;
+- vegetables - starch;
+- melons - nothing;
+- acid fruits - nuts and seeds;
+- sweet fruits - nuts and seeds;
+- sweet fruits - whole grains;
+- whole grains (cooked) - yogurt.
+
+Do not:
+- starch - animal protein;
+- acid fruits - other carbohydrates;
+- acid fruits - animal protein;
+- starch - starch.
+
+### Average recomended intake
+30 grams per day.
+
+## Refferences
+- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Carbohydrates)
+- Wikipedia, [Carbohydrate](https://en.wikipedia.org/wiki/Carbohydrate)
+- Elizabeth Rocchino, ["Food Combinations: The Secret To Healthy Eating"](http://www.mindbodygreen.com/0-7896/food-combinations-the-secret-to-healthy-eating.html)
+- Wikipedia, [Dietary fiber](https://en.wikipedia.org/wiki/Dietary_fiber)
+- The world's healthiest foods, [Fiber](https://en.wikipedia.org/wiki/Dietary_fiber)
+- PUB, Tandurust, ["Fiber Deficiency: Symptoms And Diseases Due To Fiber Deficiencies"](http://www.tandurust.com/health-faq-5/fiber-deficiency.html)
+- Dr. Tina M. ST. JOHN, Livestrong, ["Symptoms of an Overdose of Fiber Supplements "](http://www.livestrong.com/article/439742-symptoms-of-an-overdose-of-fiber-supplements)
