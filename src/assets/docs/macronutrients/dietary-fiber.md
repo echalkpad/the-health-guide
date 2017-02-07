@@ -39,13 +39,16 @@ Fiber is not absorped, but contributes the absorption of other nutrients, like m
 - difficulty swallowing.
 
 ## Food sources
-- _whole grains_, _fruits_, _vegetables_, and _legumes_.
+- whole grains;
+- fruits;
+- vegetables;
+- legumes.
 
 ### Food combining
 Fiber can be combined with anything as it helps nutrient absorption and improves digestion.
 
 ### Average recomended intake
-30 grams per day.
+- 10% of your daily energy intakes (50g for 2000kcal/day).
 
 ## Refferences
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
@@ -53,6 +56,6 @@ Fiber can be combined with anything as it helps nutrient absorption and improves
 - Wikipedia, [Carbohydrate](https://en.wikipedia.org/wiki/Carbohydrate)
 - Elizabeth Rocchino, ["Food Combinations: The Secret To Healthy Eating"](http://www.mindbodygreen.com/0-7896/food-combinations-the-secret-to-healthy-eating.html)
 - Wikipedia, [Dietary fiber](https://en.wikipedia.org/wiki/Dietary_fiber)
-- The world's healthiest foods, [Fiber](https://en.wikipedia.org/wiki/Dietary_fiber)
+- The world's healthiest foods, [Fiber](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=59)
 - PUB, Tandurust, ["Fiber Deficiency: Symptoms And Diseases Due To Fiber Deficiencies"](http://www.tandurust.com/health-faq-5/fiber-deficiency.html)
 - Dr. Tina M. ST. JOHN, Livestrong, ["Symptoms of an Overdose of Fiber Supplements "](http://www.livestrong.com/article/439742-symptoms-of-an-overdose-of-fiber-supplements)

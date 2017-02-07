@@ -47,7 +47,14 @@ nutrients that require or generate an acid medium, like animal protein, fat, and
 - difficulty swallowing.
 
 ## Food sources
-- _whole grains_, _potatoes_, _legumes_, _winter squashes_, _pumpkin_, _tofu_, _fruits_, and _vegetables_.
+- whole grains;
+- potatoes;
+- legumes;
+- winter squashes;
+- pumpkin;
+- tofu;
+- fruits;
+- vegetables.
 
 ### Food combining
 Do:
@@ -67,7 +74,7 @@ Do not:
 - starch - starch.
 
 ### Average recomended intake
-130 grams per day.
+- 40% of your daily energy intakes (200g for 2000kcal/day).
 
 ## Refferences
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
