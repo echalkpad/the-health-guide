@@ -1,9 +1,10 @@
 # Dietary fiber
 
-Dietary fiber is a complex carbohydrate that cannot be absorbed by the human body, but it contributes to the absorption of other nutrients and improves the overall health of the digestive system.
+Dietary fiber is a complex carbohydrate that cannot be absorbed by the human body, but it contributes to the absorption of other nutrients and improves the overall health of the digestive system. 
+Thus, fiber is not considered essential nutrient.
 
 ## Digestion and absorption
-Fiber 
+Fiber is not absorped, but contributes the absorption of other nutrients, like magnesium and calcium.
 
 ### Functions and benefits
 - energy supply;
@@ -24,6 +25,7 @@ Fiber
 - inflammatory bowel disease;
 - hypertension;
 - insulin resistance;
+- piles;
 - metabolic syndrome.
 
 ### Excess
@@ -40,21 +42,7 @@ Fiber
 - _whole grains_, _fruits_, _vegetables_, and _legumes_.
 
 ### Food combining
-Do:
-- vegetables - protein;
-- vegetables - fats;
-- vegetables - starch;
-- melons - nothing;
-- acid fruits - nuts and seeds;
-- sweet fruits - nuts and seeds;
-- sweet fruits - whole grains;
-- whole grains (cooked) - yogurt.
-
-Do not:
-- starch - animal protein;
-- acid fruits - other carbohydrates;
-- acid fruits - animal protein;
-- starch - starch.
+Fiber can be combined with anything as it helps nutrient absorption and improves digestion.
 
 ### Average recomended intake
 30 grams per day.

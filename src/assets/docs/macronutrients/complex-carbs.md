@@ -7,7 +7,8 @@ Polysaccharides are the most predominant type of carbohydrates in the body, henc
 benefits to the human body. _Starches_, _glycogen_, and _dietary fiber_ are the most important polysaccharides.
 
 Starch is the most predominant type of complex carbohydrate found in foods, glycogen is used as energy storage in the liver and muscles, whereas fiber improves the 
-overal health of the digestive system.
+overal health of the digestive system. Though, complex carbohydrates are considered essential nutrient, because the body cand provide its necesarry energy supplies 
+from protein and fats.
 
 ## Digestion and absorption
 Raw starch is very hard to digest and happens only in the colon, whereas cooked starch is much more easier to digest and to absorb.
