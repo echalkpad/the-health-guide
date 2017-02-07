@@ -10,12 +10,14 @@ import {
 
 import { AppComponent } from './app.component';
 import { FoodComponent } from './food/food.component';
+import { FoodDetailsComponent } from './foods/food-details/food-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ...thgDeclarations,
     FoodComponent,
+    FoodDetailsComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,2 @@
-export { Nutrition } from './nutrition';
+export { DietaryNutrient } from './dietary-nutrient';
+export { Nutrient, Nutrition } from './nutrition';

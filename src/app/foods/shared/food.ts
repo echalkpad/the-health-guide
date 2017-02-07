@@ -1,4 +1,4 @@
-import { Nutrition } from '../shared';
+import { Nutrition } from '../../shared';
 
 export class Food {
     constructor(

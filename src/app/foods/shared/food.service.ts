@@ -30,7 +30,17 @@ export class FoodService {
     newFood.nutrition.setFiberValue(usdaFood['nutrients'][7]);
     newFood.nutrition.setSugarsValue(usdaFood['nutrients'][8]);
     newFood.nutrition.setCalciumValue(usdaFood['nutrients'][15]);
-
+    newFood.nutrition.setIronValue(usdaFood['nutrients'][16]);
+    newFood.nutrition.setMagnesiumValue(usdaFood['nutrients'][17]);
+    newFood.nutrition.setPhosphorusValue(usdaFood['nutrients'][18]);
+    newFood.nutrition.setPotassiumValue(usdaFood['nutrients'][19]);
+    newFood.nutrition.setSodiumValue(usdaFood['nutrients'][20]);
+    newFood.nutrition.setZincValue(usdaFood['nutrients'][21]);
+    newFood.nutrition.setCopperValue(usdaFood['nutrients'][22]);
+    newFood.nutrition.setManganeseValue(usdaFood['nutrients'][23]);
+    newFood.nutrition.setSeleniumValue(usdaFood['nutrients'][24]);
+    newFood.nutrition.setVitaminCValue(usdaFood['nutrients'][26]);
+    newFood.nutrition.setVitaminB1Value(usdaFood['nutrients'][27]);
     return newFood;
   }
 
