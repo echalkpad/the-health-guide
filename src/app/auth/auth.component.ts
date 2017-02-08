@@ -32,11 +32,11 @@ export class AuthComponent implements OnInit {
     private _toast: MdSnackBar
   ) { }
 
-  public passLogin(): void {
+  public passwordLogin(): void {
     this._loadingSvc.register('auth.load');
     this._authSvc.login(this.user).then(success => {
       this._loadingSvc.resolve('auth.load');
-      let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/home';
+      let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/';
       this._router.navigate([redirect]);
     }).catch(err => {
       this._helpSvc.$showAlert('Something went wrong', err).subscribe(() => this._loadingSvc.resolve('auth.load'));
@@ -55,7 +55,7 @@ export class AuthComponent implements OnInit {
     this._loadingSvc.register('auth.load');
     this._authSvc.signUp(this.user).then(() => {
       this._loadingSvc.resolve('auth.load');
-      let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/home';
+      let redirect = !!this._authSvc.redirectUrl ? this._authSvc.redirectUrl : '/';
       this._helpSvc.$showAlert('Success', 'Account created successfully')
         .subscribe(() => this._router.navigate([redirect]));
       this._router.navigate([redirect])
@@ -71,11 +71,9 @@ export class AuthComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this._authSvc.getAuth().then((auth: Auth) => {
-      if (!!auth) {
-        setTimeout(() => this._router.navigate(['/']));
-      }
-    });
+    if (this._authSvc.isLoggedIn()) {
+      setTimeout(() => this._router.navigate(['/']));
+    }
     this._titleSvc.setTitle('Authentication');
   }
 

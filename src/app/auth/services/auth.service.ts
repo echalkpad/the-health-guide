@@ -1,6 +1,9 @@
 // Angular
 import { Injectable } from '@angular/core';
 
+// RxJS
+import { BehaviorSubject, Observable } from 'rxjs';
+
 // Firebase
 import { AngularFire, FirebaseAuthState, FirebaseObjectObservable } from 'angularfire2';
 
@@ -16,7 +19,7 @@ export class AuthService {
     this._avatars = firebase.storage().ref().child('/avatars');
   }
 
-  public $getUser(id: string): FirebaseObjectObservable<User> {
+  public getUser$(id: string): FirebaseObjectObservable<User> {
     return this._af.database.object(`/users/${id}`);
   }
 
@@ -24,18 +27,18 @@ export class AuthService {
     return this._avatars.child(`${imgName}`).getDownloadURL();
   }
 
-  public getAuth(): Promise<firebase.User | Auth> {
-    return new Promise(resolve => {
-      if (!this._dataSvc.getAuth()) {
-        this._af.auth.subscribe((authData: FirebaseAuthState) => {
-          if (!!authData) {
-            resolve(authData.auth);
-          }
-        });
+  public getAuth(): Promise<Auth> {
+    return new Promise((resolve, reject) => {
+      if (this.isLoggedIn) {
+        resolve(this._dataSvc.getAuth())
       } else {
-        resolve(this._dataSvc.getAuth());
+        reject(null);
       }
     });
+  }
+
+  public isLoggedIn(): boolean {
+    return !!this._dataSvc.getAuth();
   }
 
   public login(credentials: User): Promise<boolean> {
@@ -45,7 +48,7 @@ export class AuthService {
         password: credentials.password
       }).then((authData: FirebaseAuthState) => {
         if (!!authData) {
-          this.$getUser(authData.uid).subscribe((data: User) => {
+          this.getUser$(authData.uid).subscribe((data: User) => {
             this._dataSvc.saveAuth(new Auth(authData.uid, data.avatar, data.username));
             this._dataSvc.saveUser(data);
             resolve(true);
@@ -72,7 +75,7 @@ export class AuthService {
         if (!!authData) {
           this.getAvatar(credentials.avatar).then((url: string) => {
             credentials.avatar = url;
-            this.$getUser(authData.uid).set(credentials);
+            this.getUser$(authData.uid).set(credentials);
             this._dataSvc.saveAuth(new Auth(authData.uid, credentials.avatar, credentials.username));
             this._dataSvc.saveUser(credentials);
             resolve(true);
@@ -87,7 +90,7 @@ export class AuthService {
   public saveUser(id: string, user: User): void {
     delete user['$key'];
     delete user['$exists'];
-    this.$getUser(id).update(user);
+    this.getUser$(id).update(user);
   }
 
   public uploadAvatar(img: File): firebase.storage.UploadTask {

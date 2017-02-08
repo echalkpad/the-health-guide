@@ -10,7 +10,7 @@ export class AuthGuardService implements CanActivate, CanActivateChild {
   constructor(private _authSvc: AuthService, private _router: Router) { }
 
   private _checkLogin(url: string): boolean {
-    if (this._authSvc.getAuth()) {
+    if (this._authSvc.isLoggedIn()) {
       return true;
     }
     this._authSvc.redirectUrl = url;

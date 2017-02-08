@@ -1,5 +1,12 @@
 import { Nutrition } from '../../shared';
 
+export class FoodGroup {
+    constructor(
+        public id: string,
+        public name: string
+    ) {}
+}
+
 export class Food {
     constructor(
         public name: string,

@@ -1,2 +1,2 @@
-export { Food } from './food';
-export { FoodService } from './food.service';
+export { Food, FoodGroup } from './food';
+export { FOOD_GROUPS, FoodService } from './food.service';
