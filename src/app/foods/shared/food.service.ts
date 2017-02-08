@@ -41,6 +41,34 @@ export class FoodService {
     newFood.nutrition.setSeleniumValue(usdaFood['nutrients'][24]);
     newFood.nutrition.setVitaminCValue(usdaFood['nutrients'][26]);
     newFood.nutrition.setVitaminB1Value(usdaFood['nutrients'][27]);
+    newFood.nutrition.setVitaminB2Value(usdaFood['nutrients'][28]);
+    newFood.nutrition.setVitaminB3Value(usdaFood['nutrients'][29]);
+    newFood.nutrition.setVitaminB5Value(usdaFood['nutrients'][30]);
+    newFood.nutrition.setVitaminB6Value(usdaFood['nutrients'][31]);
+    newFood.nutrition.setVitaminB9Value(usdaFood['nutrients'][33]);
+    newFood.nutrition.setCholineValue(usdaFood['nutrients'][36]);
+    newFood.nutrition.setVitaminB12Value(usdaFood['nutrients'][38]);
+    newFood.nutrition.setVitaminAValue(usdaFood['nutrients'][40]);
+    newFood.nutrition.setVitaminEValue(usdaFood['nutrients'][48]);
+    newFood.nutrition.setVitaminDValue(usdaFood['nutrients'][53]);
+    newFood.nutrition.setVitaminKValue(usdaFood['nutrients'][56]);
+    newFood.nutrition.setSatFatValue(usdaFood['nutrients'][57]);
+    newFood.nutrition.setOmega6Value(usdaFood['nutrients'][84]);
+    newFood.nutrition.setOmega3Value(usdaFood['nutrients'][85]);
+    newFood.nutrition.setTransFatValue(usdaFood['nutrients'][94]);
+    newFood.nutrition.setCholesterolValue(usdaFood['nutrients'][96]);
+    newFood.nutrition.setTryptophanValue(usdaFood['nutrients'][97]);
+    newFood.nutrition.setThreonineValue(usdaFood['nutrients'][98]);
+    newFood.nutrition.setIsoleucineValue(usdaFood['nutrients'][99]);
+    newFood.nutrition.setLeucineValue(usdaFood['nutrients'][100]);
+    newFood.nutrition.setLysineValue(usdaFood['nutrients'][101]);
+    newFood.nutrition.setMethionineValue(usdaFood['nutrients'][102]);
+    newFood.nutrition.setPhenylalanineValue(usdaFood['nutrients'][104]);
+    newFood.nutrition.setValineValue(usdaFood['nutrients'][106]);
+    newFood.nutrition.setHistidineValue(usdaFood['nutrients'][108]);
+    newFood.nutrition.setAlcoholValue(usdaFood['nutrients'][115]);
+    newFood.nutrition.setCaffeineValue(usdaFood['nutrients'][116]);
+
     return newFood;
   }
 
