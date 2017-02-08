@@ -35,6 +35,13 @@ Note: Although water and oxygen are required in large amounts and contirbute to 
 
 These nutrients cause serious health problems when taken in excess. Limit them as much as you can.
 
+We need to develop the mindset that food is building block for our body. What we eat is what we are and what we are 
+is what we need to eat. We need to offer the body exactly what it needs and how much it needs. Any abuse, of any sort 
+is unhealthy. The body has advanced mechanisms of managing excess nutrients by either storing them in form of 
+fat and glycogen, either eliminating them through urine, perspiration, and breathing. 
+
+Thus, essential nutrient must be provided from natural organic food sources and not from synthetic suplements.
+
 ## Refferences
 - Wikipedia, [Nutrient](https://en.wikipedia.org/wiki/Nutrient)
 - Wikipedia, [Essential nutrient](https://en.wikipedia.org/wiki/Essential_nutrient)
