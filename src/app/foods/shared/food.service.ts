@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 // RxJS
 import { Http, URLSearchParams, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
@@ -47,6 +48,7 @@ export class FoodService {
   private _usdaApiKey: string = '5nW8It7ORsxY212bV5wpleHkblTLbvpFTKVa010U';
   private _foodListUrl: string = 'https://api.nal.usda.gov/ndb/search';
   private _foodNutritionUrl: string = 'http://api.nal.usda.gov/ndb/reports';
+  public totalFoodSubect: Subject<number> = new Subject();
   constructor(private _http: Http) { }
 
   private _serializeFood(usdaFood: any): Food {
@@ -150,6 +152,7 @@ export class FoodService {
           console.log(body.errors);
           return [];
         }
+        this.totalFoodSubect.next(body['list']['total']);
         return body['list']['item'];
       }).catch((err: Error) => {
         console.error(err);

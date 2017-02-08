@@ -21,7 +21,7 @@
                 <md-divider *ngIf="!last"></md-divider>
             </template>
         </md-nav-list>
-        <td-paging-bar [firstLast]="true" [pageSizeAll]="true" [pageSizes]="[100, 200, 300, 500, 750, 1000]" [pageSize]="100" [total]="(foods | async)?.length" (change)="changeList($event)">
+        <td-paging-bar [firstLast]="true" [pageSizeAll]="true" [pageSizes]="[100, 200, 300, 500, 750, 1000]" [pageSize]="100" [total]="(total | async)" (change)="changeList($event)">
         </td-paging-bar>
         <td-layout-footer-inner>
             ... sub footer content

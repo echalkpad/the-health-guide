@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 
 // RxJS
 import { Observable } from 'rxjs/Observable';
+import { Subject } from 'rxjs/Subject';
 
 // Covalent
 import { IPageChangeEvent } from '@covalent/core';
@@ -25,6 +26,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public searchQuery: string = '';
   public selectedGroup: string = this.groups[0].name;
   public start: number = 0;
+  public total: Subject<number>;
   constructor(private _detectorRef: ChangeDetectorRef, private _foodSvc: FoodService) { }
 
   public changeList(event: IPageChangeEvent): void {
@@ -33,6 +35,7 @@ export class FoodListComponent implements OnDestroy, OnInit {
 
   ngOnInit(): void {
     this.foods = this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup);
+    this.total = this._foodSvc.totalFoodSubect;
   }
 
   ngOnDestroy(): void {
