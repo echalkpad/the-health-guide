@@ -1,5 +1,11 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit  } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 
 // THG
 import { Auth } from '../auth';

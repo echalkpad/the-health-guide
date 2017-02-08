@@ -1,5 +1,11 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit  } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 // RxJS
@@ -24,18 +30,29 @@ export class FoodListComponent implements OnDestroy, OnInit {
   public groups: Array<FoodGroup> = [...FOOD_GROUPS];
   public limit: number = 100;
   public searchQuery: string = '';
-  public selectedGroup: string = this.groups[0].name;
+  public selectedGroup: FoodGroup = this.groups[0];
   public start: number = 0;
   public total: Subject<number>;
   constructor(private _detectorRef: ChangeDetectorRef, private _foodSvc: FoodService) { }
 
   public changeList(event: IPageChangeEvent): void {
+    this.start = event.fromRow;
+    this.limit = event.pageSize;
+    this._refreshFoods();
+  }
 
+  public changeGroup(group: FoodGroup): void {
+    this.selectedGroup = group;
+    this._refreshFoods();
+  }
+
+  private _refreshFoods(): void {
+    this.foods = this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id);
   }
 
   ngOnInit(): void {
-    this.foods = this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup);
-    this.total = this._foodSvc.totalFoodSubect;
+    this._refreshFoods();
+    this.total = this._foodSvc.totalFoodSubject;
   }
 
   ngOnDestroy(): void {

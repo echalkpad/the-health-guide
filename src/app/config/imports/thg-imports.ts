@@ -1,13 +1,19 @@
 import { AppRoutingModule } from '../routing';
-import { AuthComponent, AuthGuardService, AuthService } from '../../auth';
+import { AuthComponent, AuthGuard, AuthService } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { FoodListComponent, FoodService } from '../../foods';
+import { 
+    FoodDetailsComponent,
+    FoodDetailsResolver,
+    FoodListComponent,
+    FoodService
+} from '../../foods';
 import { HomeComponent } from '../../home/home.component';
 import { SharedModule } from '../../shared';
 
 export const thgDeclarations = [
     AuthComponent,
     DashboardComponent,
+    FoodDetailsComponent,
     FoodListComponent,
     HomeComponent
 ];
@@ -18,7 +24,8 @@ export const thgImports = [
 ];
 
 export const thgProviders = [
-    AuthGuardService,
+    AuthGuard,
     AuthService,
+    FoodDetailsResolver,
     FoodService
 ];

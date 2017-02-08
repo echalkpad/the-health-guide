@@ -6,7 +6,7 @@ import { ActivatedRouteSnapshot, CanActivate, CanActivateChild, Router, RouterSt
 import { AuthService } from './auth.service';
 
 @Injectable()
-export class AuthGuardService implements CanActivate, CanActivateChild {
+export class AuthGuard implements CanActivate, CanActivateChild {
   constructor(private _authSvc: AuthService, private _router: Router) { }
 
   private _checkLogin(url: string): boolean {

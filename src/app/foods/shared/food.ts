@@ -9,6 +9,7 @@ export class FoodGroup {
 
 export class Food {
     constructor(
+        public ndbno: string,
         public name: string,
         public group: string,
         public nutrition: Nutrition = new Nutrition(),

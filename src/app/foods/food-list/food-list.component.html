@@ -2,32 +2,26 @@
     <div td-toolbar-content>
         USDA Food Database
     </div>
-    <td-layout-manage-list opened="true" mode="side" sidenavWidth="257px">
+    <td-layout-manage-list opened="true" mode="side">
         <md-toolbar td-sidenav-content>
             Food groups
         </md-toolbar>
         <md-nav-list td-sidenav-content>
             <template let-group let-last="last" ngFor [ngForOf]="groups">
-                <a md-list-item><md-icon>folder</md-icon>{{ group.name }}</a>
+                <a md-list-item (click)="changeGroup(group)"><md-icon>local_grocery_store</md-icon>{{ group.name }}</a>
                 <md-divider *ngIf="!last"></md-divider>
             </template>
         </md-nav-list>
         <div td-toolbar-content>
-            {{ selectedGroup }}
+            {{ selectedGroup.name }}
         </div>
         <md-nav-list>
             <template let-item let-last="last" ngFor [ngForOf]="(foods | async)">
-                <a md-list-item [routerLink]="">{{item.name}}</a>
+                <a md-list-item [routerLink]="[item.ndbno]">{{item.name}}</a>
                 <md-divider *ngIf="!last"></md-divider>
             </template>
         </md-nav-list>
         <td-paging-bar [firstLast]="true" [pageSizeAll]="true" [pageSizes]="[100, 200, 300, 500, 750, 1000]" [pageSize]="100" [total]="(total | async)" (change)="changeList($event)">
         </td-paging-bar>
-        <td-layout-footer-inner>
-            ... sub footer content
-        </td-layout-footer-inner>
     </td-layout-manage-list>
-    <td-layout-footer>
-        ... main footer content
-    </td-layout-footer>
 </td-layout-nav>

@@ -1,5 +1,11 @@
 // Angular
-import { ChangeDetectorRef, ChangeDetectionStrategy, Component, OnDestroy, OnInit  } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  ChangeDetectionStrategy,
+  Component,
+  OnDestroy,
+  OnInit
+} from '@angular/core';
 import { Router } from '@angular/router';
 
 // THG
@@ -25,7 +31,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
         title: 'Home', route: '/', icon: 'home'
       },
       {
-        title: 'USDA Foods', route: 'foods', icon: 'local-grocery-store'
+        title: 'USDA Foods', route: 'foods', icon: 'local_grocery_store'
       }
     ];
   }

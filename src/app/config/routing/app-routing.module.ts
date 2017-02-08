@@ -3,9 +3,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 // THG
-import { Auth, AuthComponent, AuthGuardService } from '../../auth';
+import { Auth, AuthComponent, AuthGuard } from '../../auth';
 import { DashboardComponent } from '../../dashboard/dashboard.component';
-import { FoodListComponent } from '../../foods';
+import { 
+  FoodDetailsComponent,
+  FoodDetailsResolver,
+  FoodListComponent
+} from '../../foods';
 import { HomeComponent } from '../../home/home.component';
 
 const appRoutes: Routes = [
@@ -16,11 +20,23 @@ const appRoutes: Routes = [
   {
     path: '',
     component: DashboardComponent,
-    canActivateChild: [AuthGuardService],
+    canActivateChild: [AuthGuard],
     children: [
       {
         path: 'foods',
-        component: FoodListComponent
+        children: [
+          {
+            path: ':id',
+            component: FoodDetailsComponent,
+            resolve: {
+              food: FoodDetailsResolver
+            }
+          },
+          {
+            path: '',
+            component: FoodListComponent
+          }
+        ]
       },
       {
         path: '',

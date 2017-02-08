@@ -47,12 +47,12 @@ export const FOOD_GROUPS: Array<FoodGroup> = [
 export class FoodService {
   private _usdaApiKey: string = '5nW8It7ORsxY212bV5wpleHkblTLbvpFTKVa010U';
   private _foodListUrl: string = 'https://api.nal.usda.gov/ndb/search';
-  private _foodNutritionUrl: string = 'http://api.nal.usda.gov/ndb/reports';
-  public totalFoodSubect: Subject<number> = new Subject();
+  private _foodNutritionUrl: string = 'https://api.nal.usda.gov/ndb/reports';
+  public totalFoodSubject: Subject<number> = new Subject();
   constructor(private _http: Http) { }
 
   private _serializeFood(usdaFood: any): Food {
-    let newFood: Food = new Food(usdaFood['name'], usdaFood['fg']);
+    let newFood: Food = new Food(usdaFood['ndbno'], usdaFood['name'], usdaFood['fg']);
     newFood.nutrition.setWaterValue(usdaFood['nutrients'][0]);
     newFood.nutrition.setEnergyValue(usdaFood['nutrients'][1]);
     newFood.nutrition.setProteinValue(usdaFood['nutrients'][3]);
@@ -99,45 +99,50 @@ export class FoodService {
     newFood.nutrition.setHistidineValue(usdaFood['nutrients'][108]);
     newFood.nutrition.setAlcoholValue(usdaFood['nutrients'][115]);
     newFood.nutrition.setCaffeineValue(usdaFood['nutrients'][116]);
-
+    console.log(newFood);
     return newFood;
   }
 
-  public getFoodReports$(foodId: string = ''): Observable<Food> {
+  public getFoodReports$(foodId: string = ''): Promise<Food> {
     let headers: Headers = new Headers({ 'Content-Type': 'application/json' }),
       options: RequestOptions = new RequestOptions(),
       params: URLSearchParams = new URLSearchParams();
 
     params.set('api_key', this._usdaApiKey);
-    params.set('nbno', foodId);
+    params.set('ndbno', foodId);
     params.set('type', 'f');
     options.headers = headers;
     options.search = params;
 
-    return this._http.get(this._foodListUrl, options)
-      .map((res: Response) => {
-        let body = res.json();
-        console.log(body);
-        if (body.hasOwnProperty('errors')) {
-          console.log(body.errors);
-          return null;
-        }
+    return new Promise((resolve, reject) => {
+      this._http.get(this._foodNutritionUrl, options)
+        .map((res: Response) => {
+          let body = res.json();
+          console.log(body);
+          if (body.hasOwnProperty('errors')) {
+            console.log(body.errors);
+            return null;
+          }
 
-        return this._serializeFood(body['report']['food']);
-      }).catch((err: Error) => {
-        console.error(err);
-        return Observable.throw(err)
-      });
+          return this._serializeFood(body['report']['food']);
+        }).subscribe((data: Food) => {
+          if (!!data) {
+            resolve(data);
+          } else {
+            reject(data);
+          }
+        });
+    });
   }
 
-  public getFoods$(searhQuery: string = '', start: number = 45, limit: number = 100, foodGroup: string = ''): Observable<Array<Food>> {
+  public getFoods$(searhQuery: string = '', start: number = 45, limit: number = 100, foodGroupId: string = ''): Observable<Array<Food>> {
     let headers: Headers = new Headers({ 'Content-Type': 'application/json' }),
       options: RequestOptions = new RequestOptions(),
       params: URLSearchParams = new URLSearchParams();
 
     params.set('api_key', this._usdaApiKey);
     params.set('q', searhQuery);
-    params.set('fg', searhQuery);
+    params.set('fg', foodGroupId);
     params.set('sort', 'n');
     params.set('max', `${limit}`);
     params.set('offset', `${start}`);
@@ -152,11 +157,8 @@ export class FoodService {
           console.log(body.errors);
           return [];
         }
-        this.totalFoodSubect.next(body['list']['total']);
+        this.totalFoodSubject.next(body['list']['total']);
         return body['list']['item'];
-      }).catch((err: Error) => {
-        console.error(err);
-        return Observable.throw(err)
       });
   }
 }

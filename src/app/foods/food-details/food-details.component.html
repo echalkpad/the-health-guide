@@ -1,3 +1,7 @@
-<p>
-  food-details works!
-</p>
+<td-layout-nav>
+    <div td-toolbar-content>
+        {{ food.name }}
+    </div>
+    <td-json-formatter [data]="food" [levelsOpen]="1">
+    </td-json-formatter>
+</td-layout-nav>
