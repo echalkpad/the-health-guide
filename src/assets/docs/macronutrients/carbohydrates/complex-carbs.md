@@ -1,20 +1,23 @@
 # Complex carbohydrates
 
-Complex carbohydrate are carbohydrates whith complex sugar unit branches. The two groups of complex carbohydrates are `oligosaccharides` (more than three units) and 
-`polysaccharides` (more than ten units).
+Complex carbohydrates are carbohydrates whith complex sugar unit branches. Polysaccharides (read next) are the most predominant type of carbohydrates in the body, 
+hence, they are the only group of carbohydrates that bring benefits.
+Although complex carbohydrates are not considered essential nutrients, because the body cand provide its necesarry energy supplies from protein and fats, they provide 
+additional benefits to the human body.
 
-Polysaccharides are the most predominant type of carbohydrates in the body, hence, they are twh only types of carbohydrates that provide 
-benefits to the human body. _Starches_, _glycogen_, and _dietary fiber_ are the most important polysaccharides.
-
-Starch is the most predominant type of complex carbohydrate found in foods, glycogen is used as energy storage in the liver and muscles, whereas fiber improves the 
-overal health of the digestive system. Though, complex carbohydrates are considered essential nutrient, because the body cand provide its necesarry energy supplies 
-from protein and fats.
+## Classification
+### Starch
+- most common complex carbohydrate found in foods.
+### Glycogen
+- used as energy storage in the liver and muscles.
+### Fiber
+- improves the overal health of the digestive system, but is not absorbed.
 
 ## Digestion and absorption
 Raw starch is very hard to digest and happens only in the colon, whereas cooked starch is much more easier to digest and to absorb.
-Complex carbohydrate dygestion begins in the mouth and continues in the intestine, and requires the alkaline medium, hence, it is not recommended to combine them with other 
-nutrients that require or generate an acid medium, like animal protein, fat, and acid fruits. The enzyme ptyalin, that creates the alkaline medium, is neutralized in acid medium.
-"Added sugars" also create an acid medium by generating a large amount of saliva secretion in the mouth.
+Complex carbohydrate dygestion begins in the mouth and continues in the intestine, and requires the alkaline medium, hence, it is not recommended to combine them 
+with other nutrients that require or generate an acid medium, like animal protein, fat, and acid fruits. The enzyme ptyalin, that creates the alkaline medium, 
+is neutralized in acid medium. Sugars also create an acid medium by generating a large amount of saliva secretion in the mouth.
 
 ### Functions and benefits
 - energy supply;

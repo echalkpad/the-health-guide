@@ -1,6 +1,7 @@
 # Dietary fiber
 
-Dietary fiber is a complex carbohydrate that cannot be absorbed by the human body, but it contributes to the absorption of other nutrients and improves the overall health of the digestive system. 
+Dietary fiber is a complex carbohydrate that cannot be absorbed by the human body, but it contributes to the 
+absorption of other nutrients and improves the overall health of the digestive system. 
 Thus, fiber is not considered essential nutrient.
 
 ## Digestion and absorption

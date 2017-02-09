@@ -1,21 +1,26 @@
-### Simple carbohydrates
+# Sugars
 
-Simple carbohydrates are carbohydrate with only one sugar unit, `monoscacharides` (_glucose_, _fructose_, and _galactose_), and with two sugar units, `disaccharides` 
-(_sucrose_, _lactose_, and _maltose_). They are reffered to as sugars. As a rule of a thumb, every compound that ends with "-oze" is a sugar.
+Sugars are simples carbohydrates with no more than two sugar units. As a rule of a thumb, every nutrient that ends with "-oze" is a sugar.
+The majority of sugars found in food are not natural (e.g. fructose, lactose, and maltose), but are synthetic ("added sugars" or sweeteners). They are most commonly found in processed food, for food preservation.
+Because the body is able to synthesize glucose from protein and fats, sugars are essential nutrients for the human organism.
 
-The only natural sugars fructose, maltose, and lactose, whereas the rest of them are "added sugars" or sweeteners. Although they are chemically identical, "added sugars" have no nutritional 
-values and are used in the majority of processed foods for preservation.
-
-Because the body is able to synthesize glucose from protein and fats, sugars are non-essential nutrients.
+## Classification
+### Monoscacharides
+- glucose;
+- fructose;
+- galactose.
+### Discacharides
+- sucrose;
+- lactose;
+- maltose.
 
 ## Digestion and absorption
 Sugar digestion begins in the mouth in the presence of saliva and ends in the intestine, where they are absorbed immediately. They balso create an acid medium, hence, it is recommended to not be 
 combined with any other nutrient.
-Because of their simple form, they are very rapidly absorbed, which causes fast increase of glucose levels (high glicemic index) in the blood and, as a result, high insulin levels, the hormone 
-that regulates glucose in the blood.
 
-Thus, excess glucose at once (high glycemic index), leads to high amounts of insuline release, fat storage, and weight gain. Also, long term insulin spikes damage the pancreas, the organ 
-responsable for insulin secretion, and increases the risk of type II diabetes, along with other health problems.
+The biggest problem with sugarsis they are absorbed very fast, because of their simple structure, which causes a high glucose levels (glicemic index) at once.
+Glucose is regulated by insulin, which acts like a "gate-keeper" for cells to absorb the necesarry fuel from the blood. It also opens the "gates" 
+for glucose to be absrobed by adypocites (fat cells) when present in large amounts in the blood. Thus, excess glucose at once, leads to high amounts of insulin release, which leads to fat storage, weight gain, and long term-health problems: type II diabetes, cardiovascular disease, pancreas damage, and more.
 
 ### Functions and benefits
 - energy supply.
