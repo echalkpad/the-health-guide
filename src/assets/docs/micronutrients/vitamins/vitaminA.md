@@ -8,11 +8,14 @@ Vitamin A is a fat-soluble vitamin. It's main function is in vision and cell dev
 ## Absorption
 Vitamin A is absorbed in the small intestine from 70% to 90%. Carotenoids absorption ranges from 9% to 22% and decreases as the amount increases.
 90% of the absorbed vitamin A is allocated to the liver.
-Vitamin A absorption requires: fat, Zinc, and Iron.
-Vitamin A absorption is impaired by: alcohol.
+Vitamin A absorption requires: fat, Zinc.
+Vitamin A absorption is impaired by: alcohol, antibiotics, laxatives, tabacco, excess iron, and cholesterol lowering drugs.
 Excess vitamin A is eliminated through urine.
 
 ## Excess
+- bone pain;
+- joint pain;
+- anorexia;
 - headache;
 - dizziness;
 - nausea;
@@ -26,8 +29,12 @@ Excess vitamin A is eliminated through urine.
 ## Functions
 - growth and development;
 - immune system;
-- vision;
+- eye health;
 - skin health;
+- teeth health;
+- hair health;
+- bone health;
+- liver health;
 - antioxidant;
 - blood cell formation;
 - gene expression;
@@ -36,6 +43,10 @@ Excess vitamin A is eliminated through urine.
 ## Deficiency
 - night blindness;
 - impaired growth;
+- defective teeth and gums;
+- dry inflamed eyes;
+- diarrhea;
+- respiratory infection;
 - weak immune system.
 
 ## Disease preventions

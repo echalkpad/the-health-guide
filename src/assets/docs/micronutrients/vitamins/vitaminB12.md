@@ -1,32 +1,62 @@
 # Vitamin B12
 Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as coenzyme in metabolism.
+the cell's form energy. It's main function is to make re blood cells.
 
 ## Absorption
+Vitamin B12 is absorbed in the stomach and small intestine. 50% of vitamin B12 goes to the liver.
+Vitamin B12 absorption requires: vitamin B-complex.
+Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, laxatives, caffeine, tobacco and alcohol.
+
+## Excess
+- rash;
 
 ## Functions
+- coenzyme in amino acid metabolism;
+- coenzyme in fat metabolism;
+- coenzyme in carbohydrate metabolism;
+- nervous system function;
+- vitamin B-complex absorption;
+- iron absorption;
+- red blood cells formation.
 
 ## Deficiency
+- anemia;
+- lethargy;
+- fatigue;
+- weakness;
+- muscle soreness;
+- mental disorders;
+- nervous disorders;
+- digestive disorders;
+- poor reflexes;
+- speaking difficulty;
+- nerve degeneration;
+- mood swings;
+- loss of appetite;
+- depression;
+- enlarged liver. 
+- impaired vitamin B-complex absorption.
 
 ## Disease preventions
-- Pernicious anemia
 - Alzheimer's disease
 - Asthma
 - Atrophic gastritis
-- Neuropathy
-- Fatigue
 - Depression
+- Fatigue
 - Kidney disease
-- Memory loss
-- Tinnitus
-- Migraine
 - Macular degeneration
-
-- Shingles
+- Memory loss
+- Migraine
 - Multiple sclerosis
-
+- Neuropathy
+- Pernicious anemia
+- Shingles
+- Tinnitus
 
 ## Food sources
+- meat;
+- dairy;
+- eggs.
 
 ## Average recomended intake
 - 2.4ug

@@ -6,7 +6,7 @@ the cell's form energy. It's main function is as coenzyme in metabolism.
 Vitamin B6 is absorbed in the small intestine. Most of the absorbed vitamin B6 goes to the liver.
 Most of the free vitamin B6 is found in the muscles.
 Vitamin B6 absorption requires: vitamin B-complex, Magnesium.
-Vitamin B6 absorption is impaired by: alcohol, high protein intake.
+Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-rays, caffeine, tobacco, and birth control pills.
 
 ## Excess
 - neuropathy;
@@ -16,20 +16,32 @@ Vitamin B6 absorption is impaired by: alcohol, high protein intake.
 
 ## Functions
 - coenzyme in amino acid metabolism;
-- coenzyme in glycogen metabolism;
-- coenzyme in glucose metabolism;
+- coenzyme in carbohydrate metabolism;
 - coenzyme in fat metabolism;
+- vitamin B-complex absorption;
+- tryptophan to serotonin synthesis;
 - hemoglobin synthesis and function;
 - nervous system health;
 - liver detoxification;
+- hormone balance;
+- sodium balance;
+- immune function;
+- potassium balance;
 - gene expression.
 
 ## Deficiency
 - depression;
-- confusion;
+- nervousness;
+- insomnia;
+- mental confusion;
+- muscle spasms;
 - convulsions;
 - vomiting;
 - seborrhea;
+- water retention;
+- irritability;
+- low blood sugar;
+- hair loss;
 - muscular weakness;
 - impaired vitamin B-complex absorption.
 

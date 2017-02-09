@@ -6,6 +6,15 @@ There are two main types of vitamins: water-soluble and fat-soluble.
 
 ## Classification
 ### Water soluble
+- [Vitamin B1](vitaminB1.md);
+- [Vitamin B2](vitaminB2.md);
+- [Vitamin B3](vitaminB3.md);
+- [Vitamin B4](vitaminB5.md);
+- [Vitamin B6](vitaminB6.md);
+- [Vitamin B7](vitaminB7.md);
+- [Vitamin B9](vitaminB9.md);
+- [Vitamin B12](vitaminB12.md);
+- [Vitamin C](vitaminC.md);
 ### Fat soluble
 - [Vitamin A](vitaminA.md);
 - [Vitamin D](vitaminD.md);
