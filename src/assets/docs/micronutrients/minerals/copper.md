@@ -1,9 +1,9 @@
-# [Name]
+# Copper
 - summary
 
 ## Absorption
-[Name] absorption requires:.
-[Name] absorption is impaired by:
+Copper absorption requires:.
+Copper absorption is impaired by: vitamin C.
 
 ## Functions
 

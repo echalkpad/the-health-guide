@@ -4,26 +4,72 @@ Vitamin C or Ascorbic acid is a water-soluble vitamin. It's main function is as 
 ## Absorption
 Vitamin C is absorbed in the small intestine. As intake increases, absorption decreases. Vitamin C is found in high levels 
 in the pituitary gland, adrenal glands, leukocytes, eye tissues, and the brain.
+Vitamin C absorption is impaired by: mercury, stress, high fever, cortisone, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
 
 ## Functions
 - antioxidant;
 - cofactor in enzymatic processes;
 - cofactor in hormonal processes;
-- carnitine biosynthesis;
-- neurotransmitter biosynthesis;
-- collagen biosynthesis;
+- carbohydrate metabolism;
+- fat synthesis;
+- protein synthesis;
+- carnitine synthesis;
+- neurotransmitter synthesis;;
+- collagen synthesis;
+- conective tissue formation;
+- teetch health;
+- bone health;
+- blood vessels health;
 - iron absorption;
+- nicotine detoxification;
+- growth;
 - reducing agent.
 
 ## Deficiency
+- infections;
+- fatigue;
+- joint pain;
+- bleeding gums;
+- scurvy;
+- hemorrhages;
+- anemia;
+- colds;
+- allergies;
+- shortness of breath;
+- impaired wound healing;
+- bruising;
+- gout.
 
 ## Excess
+- diarrhea;
+- kidney stones;
+- impaired copper absorption;
+- impaired vitamin B12 absorption;
+- gout;
+- gastrointestinal disorders.
 
 ## Disease preventions
+- Alzheimer's disease
+- Asthma
+- Cancer 
+- Capillary fragility
+- Cardiovascular disease
+- Cataract
+- Common cold
+- Gingivitis
+- Gout
+- High blood pressure
+- Musculoskeletal injury
+- Rheumatoid arthritis
+- Scurvy
+- Seasonal allergies
 
 ## Food sources
+- fruits;
+- vegetables.
 
 ## Average recomended intake
+- 90mg.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)

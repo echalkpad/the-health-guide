@@ -1,15 +1,16 @@
-# [Name]
+# Iron
 - summary
 
 ## Absorption
-[Name] absorption requires:.
-[Name] absorption is impaired by:
+Iron absorption requires: vitamin B12
+[Name] absorption is impaired by: high vitamin C
 
 ## Functions
 
 ## Deficiency
 
 ## Excess
+- impaired vitamin A absorption;
 
 ## Disease preventions
 

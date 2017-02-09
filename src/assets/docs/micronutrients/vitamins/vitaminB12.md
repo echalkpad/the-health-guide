@@ -5,7 +5,7 @@ the cell's form energy. It's main function is to make re blood cells.
 ## Absorption
 Vitamin B12 is absorbed in the stomach and small intestine. 50% of vitamin B12 goes to the liver.
 Vitamin B12 absorption requires: vitamin B-complex.
-Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, laxatives, caffeine, tobacco and alcohol.
+Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, high Vitamin C, laxatives, caffeine, tobacco and alcohol.
 
 ## Functions
 - coenzyme in amino acid metabolism;
