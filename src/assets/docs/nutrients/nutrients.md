@@ -19,7 +19,8 @@ The major nutrient groups are: _carbohydrates_, _fats_, _protein (amino acids)_,
 ### Macronutrients
 - [Carbohydrates](macronutrients/carbohydrates/carbohydrates.md)
 - [Fats](macronutrients/fats/fats.md)
-- [Protein (Amino acids)](macronutrients/protein/protein.md).
+- [Protein (Amino acids)](macronutrients/protein/protein.md)
+
 ### Micronutrients
 - [Vitamins](micronutrients/vitamins/vitamins.md)
 - [Minerals](micronutrients/minerals/minerals.md)
