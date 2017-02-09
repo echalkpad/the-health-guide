@@ -13,6 +13,7 @@ Protein quality varies according to its essential amino acid content. Proteins t
 - [Threonine](threonine.md)
 - [Tryptophan](tryptophan.md)
 - [Valine](valine.md).
+
 ### Non-essential amino acids
 - Alanine
 - Arginine

@@ -8,8 +8,10 @@ additional benefits to the human body.
 ## Classification
 ### Starch
 - most common complex carbohydrate found in foods.
+
 ### Glycogen
 - used as energy storage in the liver and muscles.
+
 ### Fiber
 - improves the overal health of the digestive system, but is not absorbed.
 

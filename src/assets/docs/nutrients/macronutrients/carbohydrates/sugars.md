@@ -9,6 +9,7 @@ Because the body is able to synthesize glucose from protein and fats, sugars are
 - glucose;
 - fructose;
 - galactose.
+
 ### Discacharides
 - sucrose;
 - lactose;

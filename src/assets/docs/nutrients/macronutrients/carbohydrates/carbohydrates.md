@@ -7,11 +7,12 @@ From the chemical point of view, carbohydrates are organic compounds made made o
 
 ## Classification
 ### Simple carbohydrates (sugars)
-- Monosaccharides (one sugar unit) - _glucose_, _fructose_, and _galactose_
-- Disaccharides (two sugar units) - _sucrose_, _lactose_, and _maltose_;
+- Monosaccharides (one sugar unit) - _glucose_, _fructose_, and _galactose_;
+- Disaccharides (two sugar units) - _sucrose_, _lactose_, and _maltose_.
+
 ### Complex carbohydrates:
-- Oligosaccharides (three to ten sugar units)
-- Polysaccharides (mored than ten sugar units) - _starch_, _glycogen_, and _fiber_
+- Oligosaccharides (three to ten sugar units);
+- Polysaccharides (mored than ten sugar units) - _starch_, _glycogen_, and _fiber_.
 
 ### Absorption
 Carbohydrate digestion begins in the mouth in the presents of silava and then continues in the intestine. The digestion rate depends upon the sugar branches: 
