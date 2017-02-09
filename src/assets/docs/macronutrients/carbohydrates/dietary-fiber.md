@@ -7,7 +7,7 @@ Thus, fiber is not considered essential nutrient.
 ## Digestion and absorption
 Fiber is not absorped, but contributes the absorption of other nutrients, like magnesium and calcium.
 
-### Functions and benefits
+### Functions
 - energy supply;
 - intestinal pH balance;
 - satiety increase;
@@ -15,7 +15,7 @@ Fiber is not absorped, but contributes the absorption of other nutrients, like m
 - lower LDL ("bad" cholesterol);
 - facilitate regular defecation
 
-### Disease preventions
+### Deficiency
 - constipation;
 - irritable bowel syndrome;
 - colon cancer;

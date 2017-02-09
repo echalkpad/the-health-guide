@@ -30,12 +30,12 @@ Protein quality varies according to its essential amino acid content. Proteins t
 Proteins are denaturated by stomach acid and afterwards are hydrolyzed by enzymes in the intestine. Amino acids require Vitamin B6 and Vitamin C 
 for metabolism. Also, amino acid are required by all metabolic processes in the human body.
 
-## Functions and benefits
+## Functions
 - cellular structure and integrity;
 - cellular regeneration and protection;
 - body composition;
 - blood sugar regulation;
-- immune system support;
+- immune system;
 - digestive enzyme production;
 - connective tissue;
 - muscle contraction;
@@ -47,7 +47,7 @@ for metabolism. Also, amino acid are required by all metabolic processes in the 
 - detoxification;
 - energy production.
 
-## Disease preventions
+## Deficiency
 - anxiety;
 - depression;
 - liver disease;

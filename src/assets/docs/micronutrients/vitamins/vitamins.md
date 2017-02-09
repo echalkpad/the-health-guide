@@ -2,7 +2,7 @@
 
 Vitamins are organic compounds essential for the the human body to survive and evolve. It can not synthesize them on its own, hence, they must 
 be obtained from nutrition. They commonly function as enzymatic cofactors, metabolic regulators or antioxidants.
-There are two main types of vitamins: water soluble and fat soluble.
+There are two main types of vitamins: water-soluble and fat-soluble.
 
 ## Classification
 ### Water soluble

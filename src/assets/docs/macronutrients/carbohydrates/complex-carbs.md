@@ -19,7 +19,7 @@ Complex carbohydrate dygestion begins in the mouth and continues in the intestin
 with other nutrients that require or generate an acid medium, like animal protein, fat, and acid fruits. The enzyme ptyalin, that creates the alkaline medium, 
 is neutralized in acid medium. Sugars also create an acid medium by generating a large amount of saliva secretion in the mouth.
 
-### Functions and benefits
+### Functions
 - energy supply;
 - intestinal pH balance;
 - satiety increase;
@@ -27,7 +27,7 @@ is neutralized in acid medium. Sugars also create an acid medium by generating a
 - lower LDL ("bad" cholesterol);
 - facilitate regular defecation
 
-### Disease preventions
+### Deficiency
 - constipation;
 - irritable bowel syndrome;
 - inflammatory bowel disease;

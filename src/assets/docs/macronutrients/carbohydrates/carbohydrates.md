@@ -25,11 +25,11 @@ Another important fact is the faster glucose enters the bloodstream, the higher 
 Glucose in the blood is regulated by insulin, which acts like a "gate-keeper" for cells to absorb the necesarry fuel from the blood. It also opens the "gates" 
 for glucose to be absrobed by adypocites (fat cells) when present in large amounts in the blood. Thus, excess glucose at once, leads to high amounts of insulin release, which leads to fat storage, weight gain, and long term-health problems: type II diabetes, cardiovascular disease, pancreas damage, and more.
 
-### Functions and benefits
+### Functions
 - energy supply;
-- cell structure.
+- cellular structure and integrity.
 
-### Disease preventions
+### Deficiency
 - irritable bowel syndrome;
 - inflammatory bowel disease;
 - ulcerative colitis;
