@@ -1,6 +1,5 @@
 # Vitamin A
-
-Vitamin A is a fat-soluble vitamin.
+Vitamin A is a fat-soluble vitamin. It's main function is in vision and cell development.
 
 ## Classification
 - Retinoids - animal based
@@ -14,8 +13,6 @@ Vitamin A absorption is impaired by: alcohol.
 Excess vitamin A is eliminated through urine.
 
 ## Excess
-
-Supplements: 
 - headache;
 - dizziness;
 - nausea;
@@ -34,7 +31,7 @@ Supplements:
 - antioxidant;
 - blood cell formation;
 - gene expression;
-- reproduction
+- reproduction.
 
 ## Deficiency
 - night blindness;
