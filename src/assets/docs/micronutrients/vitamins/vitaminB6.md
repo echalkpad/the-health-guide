@@ -8,12 +8,6 @@ Most of the free vitamin B6 is found in the muscles.
 Vitamin B6 absorption requires: vitamin B-complex, Magnesium.
 Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-rays, caffeine, tobacco, and birth control pills.
 
-## Excess
-- neuropathy;
-- pain;
-- insomnia
-- numbness.
-
 ## Functions
 - coenzyme in amino acid metabolism;
 - coenzyme in carbohydrate metabolism;
@@ -44,6 +38,12 @@ Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-r
 - hair loss;
 - muscular weakness;
 - impaired vitamin B-complex absorption.
+
+## Excess
+- neuropathy;
+- pain;
+- insomnia
+- numbness.
 
 ## Disease preventions
 - ADHD

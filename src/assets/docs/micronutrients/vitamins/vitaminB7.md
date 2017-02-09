@@ -7,9 +7,6 @@ Vitamin B7 is absorbed in the small intestine.
 Vitamin B7 absorption requires: vitamin B-complex.
 Vitamin B7 absorption is impaired by: vitamin B-complex deficiency, alcohol, raw egg white, caffeine, and antibiotics.
 
-## Excess
-No adverse effects known.
-
 ## Functions
 - coenzyme in amino acid metabolism;
 - coenzyme in fat metabolism;
@@ -38,6 +35,9 @@ No adverse effects known.
 - dry gray skin;
 - conjunctivitis;
 - impaired vitamin B-complex absorption.
+
+## Excess
+No adverse effects known.
 
 ## Disease preventions
 - Brittle nails;

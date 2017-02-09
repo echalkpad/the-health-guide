@@ -7,9 +7,6 @@ Vitamin B12 is absorbed in the stomach and small intestine. 50% of vitamin B12 g
 Vitamin B12 absorption requires: vitamin B-complex.
 Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, laxatives, caffeine, tobacco and alcohol.
 
-## Excess
-- rash;
-
 ## Functions
 - coenzyme in amino acid metabolism;
 - coenzyme in fat metabolism;
@@ -38,20 +35,23 @@ Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, laxatives, 
 - impaired vitamin B-complex absorption.
 
 ## Disease preventions
-- Alzheimer's disease
-- Asthma
-- Atrophic gastritis
-- Depression
-- Fatigue
-- Kidney disease
-- Macular degeneration
-- Memory loss
-- Migraine
-- Multiple sclerosis
-- Neuropathy
-- Pernicious anemia
-- Shingles
-- Tinnitus
+- Alzheimer's disease;
+- Asthma;
+- Atrophic gastritis;
+- Depression;
+- Fatigue;
+- Kidney disease;
+- Macular degeneration;
+- Memory loss;
+- Migraine;
+- Multiple sclerosis;
+- Neuropathy;
+- Pernicious anemia;
+- Shingles;
+- Tinnitus.
+
+## Excess
+- rash.
 
 ## Food sources
 - meat;
