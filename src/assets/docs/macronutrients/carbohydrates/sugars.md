@@ -14,7 +14,7 @@ Because the body is able to synthesize glucose from protein and fats, sugars are
 - lactose;
 - maltose.
 
-## Digestion and absorption
+## Absorption
 Sugar digestion begins in the mouth in the presence of saliva and ends in the intestine, where they are absorbed immediately. They balso create an acid medium, hence, it is recommended to not be 
 combined with any other nutrient.
 

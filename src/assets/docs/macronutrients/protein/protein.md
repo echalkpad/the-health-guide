@@ -26,7 +26,7 @@ Protein quality varies according to its essential amino acid content. Proteins t
 - Serine
 - Tyrosin
 
-## Digestion and absorption
+## Absorption
 Proteins are denaturated by stomach acid and afterwards are hydrolyzed by enzymes in the intestine. Amino acids require Vitamin B6 and Vitamin C 
 for metabolism. Also, amino acid are required by all metabolic processes in the human body.
 

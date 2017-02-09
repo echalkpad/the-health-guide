@@ -4,7 +4,7 @@ Dietary fiber is a complex carbohydrate that cannot be absorbed by the human bod
 absorption of other nutrients and improves the overall health of the digestive system. 
 Thus, fiber is not considered essential nutrient.
 
-## Digestion and absorption
+## Absorption
 Fiber is not absorped, but contributes the absorption of other nutrients, like magnesium and calcium.
 
 ### Functions

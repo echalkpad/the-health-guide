@@ -13,7 +13,7 @@ From the chemical point of view, carbohydrates are organic compounds made made o
 - Oligosaccharides (three to ten sugar units)
 - Polysaccharides (mored than ten sugar units) - _starch_, _glycogen_, and _fiber_
 
-### Digestion and absorption
+### Absorption
 Carbohydrate digestion begins in the mouth in the presents of silava and then continues in the intestine. The digestion rate depends upon the sugar branches: 
 the more complex the carbs, the more it takes to break down the sugar units, to be converted into glucose, and be absrobed.
 
