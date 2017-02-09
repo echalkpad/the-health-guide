@@ -8,10 +8,13 @@ Vitamin A is a fat-soluble vitamin.
 
 ## Absorption
 Vitamin A is absorbed in the small intestine from 70% to 90%. Carotenoids absorption ranges from 9% to 22% and decreases as the amount increases.
-90% of the absorbed vitamin A is allocated to the liver. Vitamin A absorption requires protein, Zinc, and Iron.
+90% of the absorbed vitamin A is allocated to the liver.
+Vitamin A absorption requires: fat, Zinc, and Iron.
+Vitamin A absorption is impaired by: alcohol.
+Excess vitamin A is eliminated through urine.
 
 ## Excess
-Excess vitamin A is eliminated through urine.
+
 Supplements: 
 - headache;
 - dizziness;

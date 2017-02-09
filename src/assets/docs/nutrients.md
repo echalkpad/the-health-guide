@@ -41,7 +41,8 @@ is what we need to eat. We need to offer the body exactly what it needs and how 
 is unhealthy. The body has advanced mechanisms of managing excess nutrients by either storing them in form of 
 fat and glycogen, either eliminating them through urine, perspiration, and breathing. 
 
-Thus, essential nutrient must be provided from natural organic food sources and not from synthetic suplements.
+Thus, essential nutrient must be provided from natural organic food sources and not from synthetic suplements. 
+The symptoms of excess intakes from all nutrients can occur only by taking supplements, never ever from natural sources.
 
 ## Refferences
 - Wikipedia, [Nutrient](https://en.wikipedia.org/wiki/Nutrient)

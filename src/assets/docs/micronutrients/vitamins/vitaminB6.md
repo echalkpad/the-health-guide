@@ -4,57 +4,54 @@ Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. V
 the cell's form energy.
 
 ## Absorption
-Vitamin A is absorbed in the small intestine from 70% to 90%. Carotenoids absorption ranges from 9% to 22% and decreases as the amount increases.
-90% of the absorbed vitamin A is allocated to the liver.
-Vitamin A absorption requires: fat, Zinc, and Iron.
-Vitamin A absorption is impaired by: alcohol.
+Vitamin B6 is absorbed in the small intestine. Most of the absorbed vitamin B6 goes to the liver.
+Most of the free vitamin B6 is found in the muscles.
+Vitamin B6 absorption requires: vitamin B-complex, Magnesium.
+Vitamin B6 absorption is impaired by: alcohol, high protein intake.
 
 ## Excess
-Excess vitamin A is eliminated through urine.
-Supplements: 
-- headache;
-- dizziness;
-- nausea;
-- hair loss;
-- dry skin;
-- insomnia;
-- blurred vision
-- muscular incoordination;
-- abnormal development of fetus;
-- impaired vitamin D absorption.
+- neuropathy;
+- pain;
+- insomnia
+- numbness.
 
 ## Functions
-- growth and development;
-- immune system;
-- vision;
-- skin health;
-- antioxidant;
-- blood cell formation;
-- gene expression;
-- reproduction
+- coenzyme in amino acid metabolism;
+- coenzyme in glycogen metabolism;
+- coenzyme in glucose metabolism;
+- coenzyme in fat metabolism;
+- hemoglobin synthesis and function;
+- nervous system health;
+- liver detoxification;
+- gene expression.
 
 ## Deficiency
-- night blindness;
-- impaired growth;
-- impaired iron absorption.
-- weak immune system.
+- convulsions;
+- vomiting;
+- seborrhea;
+- muscular weakness;
+- impaired vitamin B-complex absorption.
+
+## Disease preventions
+- ADHD
+- Anemia
+- Asthma
+- Carpal tunnel syndrome
+- Depression
+- Epilepsy
+- Fibrocystic breast disease
+- High homocysteine
+- Morning sickness
+- Premenstrual syndrome
+- Seborrheic dermatitis
 
 ## Food sources
-- liver;
-- orange;
-- ripe yellow fruits;
-- leafy vegetables;
-- carrots;
-- pumpkin;
-- squash;
-- spinach;
-- fish;
-- soy;
-- milk;
-- eggs.
+- meat;
+- greens;
+- bananas.
 
 ## Average recomended intake
-- 1 mg.
+- 1.3mg
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
