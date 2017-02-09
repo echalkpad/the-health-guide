@@ -1,6 +1,6 @@
-# Vitamin B1
+# Vitamin B6
 
-Vitamin B1 or Thiamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
+Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
 the cell's form energy.
 
 ## Absorption
@@ -58,7 +58,8 @@ Supplements:
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin A](https://en.wikipedia.org/wiki/Vitamin_A)
-- The world's healthiest foods, [Vitamin A](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)
+- Wikipedia, [Vitamin B6](https://en.wikipedia.org/wiki/Vitamin_B6)
+- The world's healthiest foods, [Vitamin B6](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=108)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
-- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin A
+- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
+[_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B6
