@@ -1,18 +1,36 @@
 # Protein
 Protein is the major structural component in every single cell in the body: blood cells, skin cells, enzymes, membranes, transport carries, muscle fibers, everything is made of protein and every process 
 in the body requires protein. Amino acids are the building blocks of protein and act as precursors for nucleic acids, chemical messengers, hormones, neurotransmitters, and other important molecules.
+Protein quality varies according to its essential amino acid content. Proteins that contain all 9 essential amino acids are called complete proteins.
+## Classification
+### Essential amino acids
+- [Histidine](histidine.md)
+- [Isoleucine](isoleucine.md)
+- [Leucine](leucine.md)
+- [Lysine](lysine.md)
+- [Methionine](methionine.md)
+- [Phenylalanine](phenilalanine.md)
+- [Threonine](threonine.md)
+- [Tryptophan](tryptophan.md)
+- [Valine](valine.md).
+### Non-essential amino acids
+- Alanine
+- Arginine
+- Asparagine
+- Aspartic acid
+- Cysteine
+- Glutamic acid
+- Glutamine
+- Glycine
+- Proline
+- Serine
+- Tyrosin
 
-There are 20 amino acids, from which only 9 are essential for the human body: Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, and Valine.
-The other 11, Alanine, Arginine, Aspartic acid, Cysteine, Cystine, Glutamic acid, Glutamine, Glycine, Proline, Serine, Tyrosine, are non-essential, because the human body can synthesize them on its 
-own.
-
-According to the essential amino acid contents, protein quality varies according to the 9 essential amino acids contents. Proteins that contain all 9 essential amino acids are called complete proteins.
-
-### Digestion and absorption
+## Digestion and absorption
 Proteins are denaturated by stomach acid and afterwards are hydrolyzed by enzymes in the intestine. Amino acids require Vitamin B6 and Vitamin C 
 for metabolism. Also, amino acid are required by all metabolic processes in the human body.
 
-### Functions and benefits
+## Functions and benefits
 - cellular structure and integrity;
 - cellular regeneration and protection;
 - body composition;
@@ -29,7 +47,7 @@ for metabolism. Also, amino acid are required by all metabolic processes in the 
 - detoxification;
 - energy production.
 
-### Disease preventions
+## Disease preventions
 - anxiety;
 - depression;
 - liver disease;
@@ -44,18 +62,18 @@ for metabolism. Also, amino acid are required by all metabolic processes in the 
 - nervous system degradation;
 - poor growth.
 
-### Excess
+## Excess
 - weight gain;
 - dehydration;
 - kidney stress.
 
-### Food sources
-- meat;
-- dairy;
+## Food sources
 - eggs;
-- nuts;
 - seeds;
+- meat;
+- nuts;
 - legumes;
+- dairy;
 - whole grains.
 
 ### Food combining
@@ -67,10 +85,12 @@ Do not:
 - animal protein - fruits;
 - animal protein - protein.
 
-### Average recomended intake
+## Average recomended intake
 - 20% of your daily energy intakes (125g for 2000kcal/day).
+- lysine: 2.1g (0.3g/kg);
+- 
 
-### Refferences
+## Refferences
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Protein and Amino Acids [1]
 - WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Proteins)
 - The world's healthiest foods, [Amino acids](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129)
