@@ -88,8 +88,6 @@ Do not:
 
 ## Average recomended intake
 - 20% of your daily energy intakes (125g for 2000kcal/day).
-- lysine: 2.1g (0.3g/kg);
-- 
 
 ## Refferences
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Protein and Amino Acids [1]
