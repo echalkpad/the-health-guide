@@ -16,7 +16,8 @@ anticonvulsant drugs, methotrexate, etc.)
 - blood cell formation;
 - DNA synthesis;
 - cell development;
-- pregnancy support
+- pregnancy support;
+- fertility.
 
 ## Deficiency
 - Weakness;

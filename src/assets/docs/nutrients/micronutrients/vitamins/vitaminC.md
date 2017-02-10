@@ -4,7 +4,7 @@ Vitamin C or Ascorbic acid is a water-soluble vitamin. It's main function is as 
 ## Absorption
 Vitamin C is absorbed in the small intestine. As intake increases, absorption decreases. Vitamin C is found in high levels 
 in the pituitary gland, adrenal glands, leukocytes, eye tissues, and the brain.
-Vitamin C absorption is impaired by: mercury, stress, high fever, cortisone, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
+Vitamin C absorption is impaired by: mercury, stress, high fever, cortisone, alcohol, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
 
 ## Functions
 - antioxidant;

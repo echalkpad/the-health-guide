@@ -6,6 +6,7 @@ Its main function is to aid in the intestinal absorption of calcium and phosphor
 Vitamin D is either synthesized in the skin through exposure to ultraviolet B rays in sunlight or ingested as dietary vitamin D, absorbed 
 in the small intestine, and accumulated in the liver.
 Vitamin D absorption requires: Magnesium.
+Vitamin D absorption is impaired by: alcohol, tobacco.
 
 ## Functions
 - calcium absorption;

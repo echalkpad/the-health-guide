@@ -5,7 +5,7 @@ the cell's form energy. It's main function is in cell growth.
 ## Absorption
 Vitamin B7 is absorbed in the small intestine.
 Vitamin B7 absorption requires: vitamin B-complex.
-Vitamin B7 absorption is impaired by: vitamin B-complex deficiency, alcohol, raw egg white, caffeine, and antibiotics.
+Vitamin B7 absorption is impaired by: vitamin B-complex deficiency, alcohol, tabacco, raw egg white, caffeine, and antibiotics.
 
 ## Functions
 - coenzyme in amino acid metabolism;
