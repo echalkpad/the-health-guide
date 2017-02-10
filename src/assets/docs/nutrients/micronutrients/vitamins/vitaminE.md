@@ -1,6 +1,5 @@
 # Vitamin E
-Vitamin E or alpha-Tocopherol is a fat-soluble vitamin, the only essential form of vitamin E. Its main function is as chain-breaking 
-antioxidant.
+Vitamin E or alpha-Tocopherol is a fat-soluble vitamin, the only essential form of vitamin E. Its main function is antioxidant protection.
 
 ## Absorption
 Vitamin E is absorbed in the small intestine and it accumulates in the liver, which also differentiates tocopherols.
@@ -45,24 +44,29 @@ Vitamin E absorption is impaired by: rancid fat, mineral oil, chlorine, birth co
 
 ## Excess
 - altered thyroid hormones metabolism;
-- altered pituitary hormones metabolism;
+- altered pituitary hormones metabolism
+- diarrhea;
+- nausea;
+- headaches;
+- fatigue;
+- muscle weakness.
 
 ## Disease preventions
 - Alzheimer's disease;
-- Cancer;
-- Cataract;
-- Cold sores;
-- Diabetes;
-- Epilepsy;
-- Fibrocystic breast disease;
-- Heart attack;
-- Immune health;
-- Intermittent claudication;
-- Premenstrual syndrome;
-- Stroke;
-- PMS;
+- cancer;
+- cataract;
+- cold sores;
+- diabetes;
+- epilepsy;
+- fibrocystic breast disease;
+- heart attack;
+- immune health;
+- intermittent claudication;
+- macular degeneration;
 - Parkinson's disease;
-- Macular degeneration.
+- PMS;
+- premenstrual syndrome;
+- stroke.
 
 ## Food sources
 - vegetable oils;

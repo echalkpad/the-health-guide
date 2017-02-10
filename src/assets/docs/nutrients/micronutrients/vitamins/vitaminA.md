@@ -12,20 +12,6 @@ Vitamin A absorption requires: fat, Zinc.
 Vitamin A absorption is impaired by: alcohol, antibiotics, laxatives, tabacco, excess iron, and cholesterol lowering drugs.
 Excess vitamin A is eliminated through urine.
 
-## Excess
-- bone pain;
-- joint pain;
-- anorexia;
-- headache;
-- dizziness;
-- nausea;
-- hair loss;
-- dry skin;
-- insomnia;
-- abnormal development of fetus;
-- impaired vitamin D absorption;
-- impaired Iron absorption.
-
 ## Functions
 - growth and development;
 - immunity;
@@ -48,6 +34,20 @@ Excess vitamin A is eliminated through urine.
 - diarrhea;
 - respiratory infection;
 - weak immune system.
+
+## Excess
+- bone pain;
+- joint pain;
+- anorexia;
+- headache;
+- dizziness;
+- nausea;
+- hair loss;
+- dry skin;
+- insomnia;
+- abnormal development of fetus;
+- impaired vitamin D absorption;
+- impaired Iron absorption.
 
 ## Disease preventions
 - Acne
