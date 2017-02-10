@@ -14,7 +14,7 @@ Fiber is not absorped, but contributes the absorption of other nutrients, like m
 - intestinal pH balance;
 - satiety increase;
 - reduce insulin and glucose levels;
-- lower LDL ("bad" cholesterol);
+- lowers LDL ("bad" cholesterol);
 - facilitate regular defecation.
 
 ### Deficiency

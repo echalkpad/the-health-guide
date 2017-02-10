@@ -18,7 +18,7 @@ Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-r
 - nervous system health;
 - liver detoxification;
 - hormone balance;
-- immune function;
+- immunity;
 - potassium balance;
 - sodium balance;
 - gene expression.

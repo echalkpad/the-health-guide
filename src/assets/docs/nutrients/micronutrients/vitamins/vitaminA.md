@@ -28,7 +28,7 @@ Excess vitamin A is eliminated through urine.
 
 ## Functions
 - growth and development;
-- immune system;
+- immunity;
 - eye health;
 - skin health;
 - teeth health;

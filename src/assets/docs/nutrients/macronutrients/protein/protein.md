@@ -36,7 +36,7 @@ for metabolism. Also, amino acid are required by all metabolic processes in the 
 - cellular regeneration and protection;
 - body composition;
 - blood sugar regulation;
-- immune system;
+- immunity;
 - digestive enzyme production;
 - connective tissue;
 - muscle contraction;
