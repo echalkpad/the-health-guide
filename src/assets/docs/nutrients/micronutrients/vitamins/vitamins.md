@@ -14,7 +14,8 @@ There are two main types of vitamins: water-soluble and fat-soluble.
 - [Vitamin B7](vitaminB7.md);
 - [Vitamin B9](vitaminB9.md);
 - [Vitamin B12](vitaminB12.md);
-- [Vitamin C](vitaminC.md).
+- [Vitamin C](vitaminC.md);
+- [Choline](choline.md).
 
 ### Fat soluble
 - [Vitamin A](vitaminA.md);

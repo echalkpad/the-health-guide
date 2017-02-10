@@ -64,7 +64,7 @@ Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-r
 - bananas.
 
 ## Average recomended intake
-- 1.3mg
+- 1.3mg/day.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)

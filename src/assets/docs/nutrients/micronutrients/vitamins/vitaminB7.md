@@ -53,7 +53,7 @@ No adverse effects known.
  - leafy green vegetables.
 
 ## Average recomended intake
-- 30ug
+- 0.03mg/day.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)

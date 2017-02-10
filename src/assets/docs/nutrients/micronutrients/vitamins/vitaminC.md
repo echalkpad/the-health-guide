@@ -69,7 +69,7 @@ Vitamin C absorption is impaired by: mercury, stress, high fever, cortisone, tob
 - vegetables.
 
 ## Average recomended intake
-- 90mg.
+- 90mg/day.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)

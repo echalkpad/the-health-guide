@@ -108,7 +108,7 @@ Excess vitamin A is eliminated through urine.
 - eggs.
 
 ## Average recomended intake
-- 1mg.
+- 1mg/day.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)

@@ -59,7 +59,7 @@ Vitamin B12 absorption is impaired by: vitamin B-complex deficiency, high Vitami
 - eggs.
 
 ## Average recomended intake
-- 2.4ug
+- 0.0024mg/day.
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
