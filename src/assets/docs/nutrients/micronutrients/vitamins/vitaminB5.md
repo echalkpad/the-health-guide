@@ -60,5 +60,5 @@ Excess vitamin B5 is eliminated through urine.
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Pantothenic acid](https://en.wikipedia.org/wiki/Pantothenic_acid)
 - The world's healthiest foods, [Pantothenic acid](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Pantothenic acid

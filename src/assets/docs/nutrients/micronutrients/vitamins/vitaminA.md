@@ -114,5 +114,5 @@ Excess vitamin A is eliminated through urine.
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin A](https://en.wikipedia.org/wiki/Vitamin_A)
 - The world's healthiest foods, [Vitamin A](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin A

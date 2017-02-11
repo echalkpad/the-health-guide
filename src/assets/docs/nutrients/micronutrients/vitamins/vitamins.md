@@ -26,4 +26,4 @@ There are two main types of vitamins: water-soluble and fat-soluble.
 ## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Essential nutrient](https://en.wikipedia.org/wiki/Essential_nutrient)
-- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins_and_Minerals)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins_and_Minerals)
