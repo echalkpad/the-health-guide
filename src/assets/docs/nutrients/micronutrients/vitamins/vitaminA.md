@@ -110,7 +110,7 @@ Excess vitamin A is eliminated through urine.
 ## Average recomended intake
 - 1mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin A](https://en.wikipedia.org/wiki/Vitamin_A)
 - The world's healthiest foods, [Vitamin A](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)

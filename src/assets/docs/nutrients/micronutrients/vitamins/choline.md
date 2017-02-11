@@ -48,7 +48,7 @@ Excess choline is eliminated through urine.
 ## Average recomended intake
 - 500mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Choline](https://en.wikipedia.org/wiki/Choline)
 - The world's healthiest foods, [Choline](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Choline

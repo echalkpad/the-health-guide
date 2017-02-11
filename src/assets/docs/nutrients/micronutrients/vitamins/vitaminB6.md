@@ -67,7 +67,7 @@ Excess vitamin B6 is eliminated through urine.
 ## Average recomended intake
 - 1.3mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin B6](https://en.wikipedia.org/wiki/Vitamin_B6)
 - The world's healthiest foods, [Vitamin B6](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=108)

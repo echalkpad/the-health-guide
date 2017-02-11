@@ -68,7 +68,7 @@ Hypertension
 ## Average recomended intake
 - 1.3 mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Niacin](https://en.wikipedia.org/wiki/Niacin)
 - The world's healthiest foods, [Vitamin B2 - Niacin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)

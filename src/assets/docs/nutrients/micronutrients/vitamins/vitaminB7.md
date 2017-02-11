@@ -56,7 +56,7 @@ No adverse effects known.
 ## Average recomended intake
 - 0.03mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Biotin](https://en.wikipedia.org/wiki/Biotin)
 - The world's healthiest foods, [Biotin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=42)

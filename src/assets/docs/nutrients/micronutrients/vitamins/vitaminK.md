@@ -38,7 +38,7 @@ Vitamin K absorption is impaired by: vitamin A, Vitamin E, alcohol, tabacco, caf
 ## Average recomended intake
 0.12 mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin K](https://en.wikipedia.org/wiki/Vitamin_K)
 - The world's healthiest foods, [Vitamin K](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=112)

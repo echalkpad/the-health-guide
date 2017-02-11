@@ -70,7 +70,7 @@ Vitamin D absorption is impaired by: alcohol, tobacco.
 ## Average recomended intake
 - 0.15mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin D](https://en.wikipedia.org/wiki/Vitamin_D)
 - The world's healthiest foods, [Vitamin D](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=110)

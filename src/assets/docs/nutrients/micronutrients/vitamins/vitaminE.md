@@ -75,7 +75,7 @@ Vitamin E absorption is impaired by: alcohol, tobacco, rancid fat, mineral oil, 
 ## Average recomended intake
 - 0.015mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin E](https://en.wikipedia.org/wiki/Vitamin_E)
 - The world's healthiest foods, [Vitamin E](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=111)

@@ -62,7 +62,7 @@ Excess vitamin B12 is eliminated through urine.
 ## Average recomended intake
 - 0.0024mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Vitamin B12](https://en.wikipedia.org/wiki/Vitamin_B12)
 - The world's healthiest foods, [Vitamin B12](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=107)

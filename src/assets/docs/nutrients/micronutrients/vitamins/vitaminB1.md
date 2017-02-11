@@ -65,7 +65,7 @@ Excess vitamin B1 is eliminated through urine.
 ## Average recomended intake
 - 1.2mg/day;
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Thiamine](https://en.wikipedia.org/wiki/Thiamine)
 - The world's healthiest foods, [Vitamin B1 - Thiamin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)

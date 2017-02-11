@@ -56,7 +56,7 @@ Excess vitamin B5 is eliminated through urine.
 ## Average recomended intake
 - 5mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Pantothenic acid](https://en.wikipedia.org/wiki/Pantothenic_acid)
 - The world's healthiest foods, [Pantothenic acid](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87)

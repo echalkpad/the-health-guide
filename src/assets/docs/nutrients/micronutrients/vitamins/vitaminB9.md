@@ -59,7 +59,7 @@ Excess vitamin B9 is eliminated through urine.
 ## Average recomended intake
 - 0.4mg/day;
 
-## Refferences
+## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
 - Wikipedia, [Folic acid](https://en.wikipedia.org/wiki/Folic_acid)
 - The world's healthiest foods, [Folate](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=63)

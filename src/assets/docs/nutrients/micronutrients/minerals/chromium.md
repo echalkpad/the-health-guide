@@ -35,7 +35,7 @@ Excess chromium is excreted through the urine.
 - whole grains.
 
 ## Average recomended intake
-- 0.035mg/day.
+- 0.12mg/day.
 
 ## Refferences
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
