@@ -5,7 +5,7 @@ be obtained from nutrition. There are two main types of minerals: major elements
 
 ## Classification
 ### Major elements
-- [Calcium]();
+- [Calcium](calcium.md);
 - [Chlorine]();
 - [Magnesium]();
 - [Phophorus]();
@@ -13,7 +13,7 @@ be obtained from nutrition. There are two main types of minerals: major elements
 - [Sodium]().
 
 ### Trace elements
-- [Chromium]();
+- [Chromium](chromium.md);
 - [Cobalt]();
 - [Copper]();
 - [Iodine]();
