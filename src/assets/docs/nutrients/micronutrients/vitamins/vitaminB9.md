@@ -1,17 +1,18 @@
 # Vitamin B9
 Vitamin B9, Folate, or Folic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as coenzyme in blood cell formation and DNA synthesis.
+the cell's form energy. It's main function is as blood cell formation and DNA synthesis.
 
 ## Absorption
 Vitamin B9 is absorbed in the stomach and small intestine. It accumulates in the liver.
 Vitamin B9 absorption requires: vitamin B-complex.
 Vitamin B9 absorption is impaired by: vitamin B-complex deficiency, alcohol, tabacco, drugs (nonsteroidal anti-inflammatory drugs, 
 anticonvulsant drugs, methotrexate, etc.)
+Excess vitamin B9 is eliminated through urine.
 
 ## Functions
-- coenzyme in amino acid metabolism;
-- coenzyme in fat metabolism;
-- coenzyme in carbohydrate metabolism;
+- amino acid metabolism;
+- fat metabolism;
+- carbohydrate metabolism;
 - vitamin B-complex absorption;
 - blood cell formation;
 - DNA synthesis;

@@ -1,17 +1,18 @@
 # Vitamin B6
 Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as coenzyme in metabolism.
+the cell's form energy. It's main function is as metabolism.
 
 ## Absorption
 Vitamin B6 is absorbed in the small intestine. Most of the absorbed vitamin B6 goes to the liver.
 Most of the free vitamin B6 is found in the muscles.
 Vitamin B6 absorption requires: vitamin B-complex, Magnesium.
 Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-rays, caffeine, tobacco, and birth control pills.
+Excess vitamin B6 is eliminated through urine.
 
 ## Functions
-- coenzyme in amino acid metabolism;
-- coenzyme in carbohydrate metabolism;
-- coenzyme in fat metabolism;
+- amino acid metabolism;
+- carbohydrate metabolism;
+- fat metabolism;
 - vitamin B-complex absorption;
 - tryptophan to serotonin synthesis;
 - hemoglobin synthesis and function;

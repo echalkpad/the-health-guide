@@ -4,10 +4,11 @@ Choline is a water-soluble vitamin. Its maine function is to maintain structural
 ## Absorption
 Choline is absorbed in the small intestine. All tissues accumulate choline.
 Choline absorption requires: methionine and vitain B9.
+Excess choline is eliminated through urine.
 
 ## Functions
 - structural integrity of cellular membranes;
-- coenzyme in lipid metabolism;
+- lipid metabolism;
 - cholesterol metabolism and tranport;
 - methyl metabolism;
 - nervous system activity;

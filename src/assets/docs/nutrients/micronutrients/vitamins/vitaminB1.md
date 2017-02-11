@@ -1,25 +1,73 @@
 # Vitamin B1
 
-Vitamin B1 or Thiamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy.
+Vitamin B1 or Thiamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), the cell's form energy. It's main function is in protein, carbohydrate, and fat metabolism
 
 ## Absorption
+Vitamin B1 is absorbed in the small intestine.
+Vitamin B2 absorption requires: vitamin B-complex.
+Vitamin B2 absorption is impaired by: vitamin B-complex deficiency, stress, tobacco, fever, caffeine, alcohol, antibiotics, and surgery.
+Excess vitamin B1 is eliminated through urine.
 
 ## Functions
+- amino acid metabolism;
+- carbohydrate metabolism;
+- fat metabolism;
+- cell growth;
+- circulatory system health;
+- nervous system health;
+- muscle tone;
+- digestion health;
+- stabilizes appetite;
+- stabilizes heart beats.
 
 ## Deficiency
-
-## Excess
+- edema;
+- enlarged liver;
+- muscular atrophy;
+- heart enlargement;
+- Beriberi;
+- disorder of the peripheral nervous system;
+- loss of appetite;
+- gastric distress;
+- insomnia;
+- mental confusion;
+- depression;
+- fatigue;
+- nausea;
+- numbness of limbs;
+- irritability;
+- stress on nervous system.
 
 ## Disease preventions
+- hypertyroidism;
+- beriberi;
+- cataracts;
+- wernicke's encephalopathy;
+- congestive heart failure;
+- diabetes;
+- Alzheimer's disease;
+- pulmonary hypertension;
+- liver failure;
+- alcoholism;
+- cancer;
+- HIV / AIDS;
+
+## Excess
+- headache;
+- weakness;
+- drowsiness.
 
 ## Food sources
+- pork;
+- whole-grains;
+- vegetables.
 
 ## Average recomended intake
+- 1.2mg/day;
 
 ## Refferences
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin B1](https://en.wikipedia.org/wiki/Vitamin_B1)
-- The world's healthiest foods, [Vitamin B1](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)
+- Wikipedia, [Thiamine](https://en.wikipedia.org/wiki/Thiamine)
+- The world's healthiest foods, [Vitamin B1 - Thiamin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
-- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B1
+- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Thiamine

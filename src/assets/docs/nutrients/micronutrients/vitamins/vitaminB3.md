@@ -5,12 +5,13 @@ the cell's form energy. It's main function is in cell respiration.
 ## Absorption
 Vitamin B3 is absorbed in the small intestine.
 Vitamin B3 absorption requires: vitamin B-complex.
-Vitamin B3 absorption is impaired by: vitamin B-complex deficiency, alcohol, tabacco..
+Vitamin B3 absorption is impaired by: vitamin B-complex deficiency, stress, infection, antibiotics, sugar, caffeine, alcohol, and excess water. 
+Excess vitamin B3 is eliminated through urine.
 
 ## Functions
-- coenzyme in amino acid metabolism;
-- coenzyme in carbohydrate metabolism;
-- coenzyme in fat metabolism;
+- amino acid metabolism;
+- carbohydrate metabolism;
+- fat metabolism;
 - vitamin B-complex absorption;
 - circulation;
 - skin health;

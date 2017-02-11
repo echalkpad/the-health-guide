@@ -1,16 +1,17 @@
 # Vitamin B7
-Vitamin B7 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
+Vitamin B7 or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
 the cell's form energy. It's main function is in cell growth.
 
 ## Absorption
 Vitamin B7 is absorbed in the small intestine.
 Vitamin B7 absorption requires: vitamin B-complex.
 Vitamin B7 absorption is impaired by: vitamin B-complex deficiency, alcohol, tabacco, raw egg white, caffeine, and antibiotics.
+Excess vitamin B7 is eliminated through urine.
 
 ## Functions
-- coenzyme in amino acid metabolism;
-- coenzyme in fat metabolism;
-- coenzyme in carbohydrate metabolism;
+- amino acid metabolism;
+- fat metabolism;
+- carbohydrate metabolism;
 - vitamin B-complex absorption;
 - mental health;
 - cell growth;
