@@ -1,9 +1,10 @@
-# [Name]
-- summary
+# Magnesium
+Magnesium is an essential mineral element. Its main function is as coenzyme and bone development.
 
 ## Absorption
-[Name] absorption requires: .
-[Name] absorption is impaired by: high intake of calcium, phosphorus.
+Only 50% of the magnesium intake is absorbed.
+Magnesium absorption requires: vitamin D.
+Magnesium absorption is impaired by: excess calcium, high protein, phytic acid, fiber, phosphorus, alcohol, diuretic, high cholesterol, and corticosteroid drugs.
 
 ## Functions
 coenzyme found in several enzymes
@@ -13,13 +14,13 @@ coenzyme found in several enzymes
 	• Enhances Control of Inflammation
 Enhances Control of Blood Sugar
 processing ATP and for bones
+Activates enzymes responsible for catalytic reactions between phosphate ions and adenosine triphosphate. Controls body temperature, prevents calcification of soft tissue, and synthesizes proteins. Assists in calcium and potassium uptake. Activates enzymes necessary for the metabolism of carbohydrates and amino acids, helps to regulate acid/alkaline balance in the body, bone growth, teeth enamel, used for proper function of nerves, memory, muscles, liver and glands.
 
 ## Deficiency
-hypomagnesemia,
-magnesium deficiency
+ cardiovascular problems, confusion, insomnia, irritability, rapid heartbeat, seizures or tetany, depression, tremors, muscle twitch, convulsions, kidney stones, tooth decay, exhaustion and soft bones.
 
 ## Excess
-hypermagnesemia
+•Diarrhea (primary symptom) •Nausea •Abdominal cramps •Metabolic alkalosis •Hypokalemia •Paralytic ileus
 
 ## Disease preventions
 	• Coronary artery disease

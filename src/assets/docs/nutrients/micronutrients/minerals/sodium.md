@@ -1,26 +1,28 @@
 # Sodium
-Sodium (Cu) is an essential trace element. Its main function is pH balance.
+Sodium (N) is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
 
 ## Absorption
-Only 
+95% is accumulated in extracellular fluid.
+98% of sodium is absorbed.
 Sodium absorption requires: chlorine.
-Sodium absorption is impaired by: potassium.
+Sodium absorption is impaired by: potassium, excessive perspiration.
 
 ## Functions
 unctioning of muscles and nerves.
 	• Nutrient absorption and transport
 	• Maintenance of membrane potential
 Maintenance of blood volume and blood pressure
+water balance, osmotic pressure, blood and lymph health, nerves, muscle contractions, and acid/alkaline balance.
 
 ## Deficiency
-hyponatremia
+weight loss, alkalosis, nausea, muscle cramps, excess thirst, edema high blood pressure insomnia and irritability. 
 
 ## Excess
 hypernatremia
 	• Gastric cancer
 	• Osteoporosis
 	• Kidney stones
-	• Hypertension
+	• high blood presure (Hypertension)
 Cardiovascular disease
 
 ## Disease preventions

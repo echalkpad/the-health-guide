@@ -10,8 +10,7 @@ be obtained from nutrition. There are two main types of minerals: major elements
 - [Magnesium](magnesium.md);
 - [Phophorus](phosphorus.md);
 - [Potassium](potassium.md);
-- [Sodium](sodium.md);
-- [Sulfur](sulfur.md).
+- [Sodium](sodium.md).
 
 ### Trace elements
 - [Chromium](chromium.md);

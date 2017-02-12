@@ -2,9 +2,9 @@
 Copper (Cu) is an essential trace element. Its main function is as component of redox enzymes (oxidases in the reduction of molecular oxygen).
 
 ## Absorption
-Only 
+Around 50% of copper intake is absrbed. The absorption decreases proportionally to the intake increase. After absorption, 66% is accumulated in the skeleton and muscles. The liver is the one that maintains normal plasma copper levels.
 Copper absorption requires:.
-Copper absorption is impaired by: vitamin C, zinc, excess molybdenum.
+Copper absorption is impaired by: vitamin C, zinc, iron, molybdenum.
 
 ## Functions
 	• Antioxidant Protection
@@ -18,7 +18,8 @@ synthesis of hemoglobin and red blood cells. Needed for integrity of joints and 
 general weakness, impaired respiration, lower collagen and lower white blood cell formation, retarded growth, skin ores, pernicious anemia, and respiratory problems.
 
 ## Excess
-Alzheimer's disease
+ abdominal pain, cramps, nausea, diarrhea, and vomiting.
+
 
 ## Disease preventions
 	• Anemia
@@ -31,10 +32,10 @@ Alzheimer's disease
 Arthritis
 
 ## Food sources
-seafood, nuts, and legumes
+organ meatsseafood, nuts, whole-grains, and legumes
 
 ## Average recomended intake
-- 0.9mg/day;
+- 3mg/day;
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))

@@ -1,21 +1,25 @@
 # Iron
-- summary
+Iron (Fe) is an essential trace element. Its main function is as component of several proteins, including enzymes, cytochromes, myoglobin, and hemoglobin
 
 ## Absorption
-Iron absorption requires: vitamin B12, vitamin A, copper
-[Name] absorption is impaired by: high vitamin C, calcium, phytic acid, phosphorus.
+66% of the absorbed iron is accumulated in hemoglobin on blood cells.
+Iron absorption requires: vitamin B12, vitamin A, copper, vitamin C, animal protein, 
+Iron absorption is impaired by: calcium, zinc, phytic acid, Polyphenols, vegetable protein, phosphorus, alcohol, coffee, tea, bleeding, diarrhea, stress, lack of hydrochloric acid, antacids, and aspirins.
 
 ## Functions
 composition of hemoglobin, myoglobin, and certain enzymes.
 	• Enhances Oxygen Transport
 Supports Energy Production
+hemoglobin, myoglobin formation, aids in tissue respiration as well as cellular oxygenation. Aids nutrition of epithelial tissues. Needed for proper assimilation of B Vitamins, increases resistance to stress and disease.
 
 ## Deficiency
-iron deficiency
+fatigue, pale skin, irritability, general malaise, difficulty swallowing, weakness, brittle nails, general lethargy, constipation iron-deficiency, and breathing difficulty
 
 ## Excess
 - impaired vitamin A absorption;
-iron overload disorder
+bloody diarrhea, heart irregularities, weakness, and shortness of breath
+constipation, nausea, vomiting, and diarrhea
+cardiovascular, central nervous system, kidney, liver, and hematological effects
 
 ## Disease preventions
 	• Anemia
@@ -29,7 +33,7 @@ green leafy vegetables, whole grains foods, legumes, meats, and eggs.
 Meat, seafood, nuts, beans, dark chocolate[
 
 ## Average recomended intake
-- 11mg/day;
+- 18mg/day;
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))

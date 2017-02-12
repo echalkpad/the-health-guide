@@ -1,28 +1,30 @@
 # Iodine
-Iodine (I) is an essential trace element. Its main function is Thyroid Hormone Production
+Iodine (I) is an essential trace element. Its main function is in thyroid hormone production.
 
 ## Absorption
-Only 
-Iodine absorption requires: selenium.
-Iodine absorption is impaired by: iron.
+Iodine absorption requires: selenium, vitamin A, iron.
+Iodine absorption is impaired by: raw nuts, cruciferous vegetables, soy flour.
 
 ## Functions
 Thyroid Hormone Production
+metabolism of fats
+growth and development of hair, skin, nails, teeth, speech, mentality and the oxidation of fat protein, and encourages the rate of metabolism.
 
 ## Deficiency
-iodine deficiency
+mental retardation, apathy, deafness, dry hair, delayed growth, obesity, slowed mental reaction, sluggish metabolism, irritability, cold extremities, sexual development in children and Goiters
 
 ## Excess
-iodism Hyperthyroidism[
+Thyroiditis •Goiter •Hypothyroidism (elevated thyroid stimulating hormone [TSH]) •Hyperthyroidism •Sensitivity reactions •Thyroid papillary cancer •Acute effects of iodine poisoning, such as burning of the mouth, throat, and stomach; abdominal pain; fever; nausea; vomiting; diarrhea; weak pulse; cardiac irritability; coma; and cyanosis 
 
 ## Disease preventions
+angina pectoris, arteriosclerosis
 	• Goiter
 	• Hypothyroidism
 	• Skin infection
 Fibrocystic breast disease
 
 ## Food sources
-Seaweed (kelp or kombu)*, grains, eggs, iodized salt[
+seafood, whole-grains, eggs, iodized salt
 
 ## Average recomended intake
 - 0.15mg/day;

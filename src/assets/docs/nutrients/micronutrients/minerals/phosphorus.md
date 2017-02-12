@@ -1,10 +1,11 @@
 # Phosphorus
-Phosphorus (Cu) is an essential trace element. Its main function is
+Phosphorus (P) is an essential mimeral element. Its main function is to maintain normal pH levels and as component in bones.
 
 ## Absorption
-Only 
-Phosphorus absorption requires:.
-Phosphorus absorption is impaired by: magnesium, calcium.
+70% of phosphorus is absorbed.
+85% of phosporus is accumulated in the skeleton.
+Phosphorus absorption requires: yeasts.
+Phosphorus absorption is impaired by: calcium, magnesium, aluminium, antacids, alcohol, aspirin, corticosteroid drugs and diuretics
 
 ## Functions
 components of bones, teeth, phospholipids, ATP, and nucleic acids.
@@ -12,12 +13,17 @@ components of bones, teeth, phospholipids, ATP, and nucleic acids.
 	• Energy Production
 	• Macronutrient metabolism
 Regulation of acid-base homeostasis
+ building of bones and teeth, repair of cells, growth maintenance, teeth and bones, skeletal growth, carbohydrates, kidney functioning, fat, protein metabolism, muscle contractions and nerve activity.
 
 ## Deficiency
-hypophosphatemia
+Anorexia •Anemia •Muscle weakness •Bone pain •Rickets (in children) and osteomalacia (in adults) •General debility
+Increased susceptibility to infection •Paresthesias •Ataxia • Confusion •Possible death
+- bone diseases and weakness, gum and tooth diseases, nervous disorders, under or overweight, stunted growth, and irregular bleeding. 
 
 ## Excess
 hyperphosphatemia
+- impaired absorption of calcium.
+- kidney stones;
 
 ## Disease preventions
 	• Kidney disease
@@ -25,8 +31,10 @@ hyperphosphatemia
 Osteoporosis risk
 
 ## Food sources
-meat, poultry, and whole grain foods.
-Red meat, dairy foods, fish, poultry, bread, rice, oats.[15][16] In biological contexts, usually seen as phosphate[
+- human milk;
+- dairy;
+- meat;
+- whole-grains.
 
 ## Average recomended intake
 - 700mg/day.

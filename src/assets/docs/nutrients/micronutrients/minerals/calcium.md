@@ -4,7 +4,7 @@ Calcium is an essential mineral element. Its primary function is to form the str
 ## Absorption
 Calcium is absorbed in the small intestine. 99% of calcium accumulates in the skeleton, the rest remaining in the blood, extracellular fluid, muscle, and other tissues. Calcium absorption decreases proportional to intake increase.
 Calcium absorption requires: vitamin D, protein, magnesium, potassium.
-Calcium absorption is impaired by: alcohol, tabacco, caffeine, aspirin, corticosteroid, drugs, sodium, phosphorus, phytic acid, oxalic acid.
+Calcium absorption is impaired by: alcohol, tabacco, caffeine, aspirin, corticosteroid, drugs, sodium, excess phosphorus, phytic acid, oxalic acid.
 Excess calcium is excreted through the urine or stored in bones and other organs, like kidneys and liver.
 
 ## Functions

@@ -1,10 +1,10 @@
 # Potassium
-Potassium (Cu) is an essential trace element. Its main function is
+Potassium (K) is an essential mineral element. Its main function is as intracellular cation.
 
 ## Absorption
-Only 
+Only 85% of potassium is absorbed.
 Potassium absorption requires:.
-Potassium absorption is impaired by: sodium.
+Potassium absorption is impaired by: sodium, diuretics, caffeine, stress, diarrhea, alcohol, high cholesterol, aspirin, sugar, and corticosteroid drugs.
 
 ## Functions
 muscle and nerve function, and also is a major component of intracellular fluid.
@@ -17,12 +17,13 @@ muscle and nerve function, and also is a major component of intracellular fluid.
 	• Mineralocorticoid action
 	• Kidney Health
 Fluid and electrolyte balance
+electrolyte responsible for aced/base balance. Promotes regular heartbeat, normal muscle contraction, regulates water balance, essential for proper muscle function, helps regulate water/fluid balance, stimulates kidney to remove body waste, cell metabolism, heart rhythm, growth, protein and glucose absorption.
 
 ## Deficiency
-hypokalemia
+hypokalemia, vomiting, perspiration, severe cardiac problems, nervous disorders, insomnia, and general weakness.
 
 ## Excess
-hyperkalemia
+irregular heartbeat, partial paralysis, coma and convulsions. Gastrointestinal discomfort 
 
 ## Disease preventions
 	• High blood pressure
@@ -35,8 +36,9 @@ hyperkalemia
 Endurance exercise
 
 ## Food sources
-meats and grains.
-Sweet potato, tomato, potato, beans, lentils, dairy products, seafood, banana, prune, carrot, orange
+- leafy greens;
+- vine fruits;
+- root vegetables.
 
 ## Average recomended intake
 4700mg/day.

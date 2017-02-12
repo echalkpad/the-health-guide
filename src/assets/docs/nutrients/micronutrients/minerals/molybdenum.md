@@ -1,21 +1,21 @@
 # Molybdenum
-Molybdenum (Cu) is an essential trace element. Its main function is component is redox.
+Molybdenum (Mo) is an essential trace element. Its main function is conezyme in sulfur amino acid catabolism.
 ## Absorption
 Only 
 Molybdenum absorption requires: iron.
-Molybdenum absorption is impaired by: tungsten.
+Molybdenum absorption is impaired by: tungsten, processed food, soy.
 
 ## Functions
 	• Promotion of Optimal Sulfur Balance
 	• Antioxidant Protection
 Nervous system metabolism
+ Aids in eliminating aldehydes. Promotes normal cell growth. Generates energy, assists with production of hemoglobin. Aids in mobilization of iron from the liver. Vital for oxidation of fats.
 
 ## Deficiency
-	molybdenum deficiency
+- sulfur imbalance.
 
 ## Excess
 impaired absorption of copper.
-molybdenum toxicity[2
 
 ## Disease preventions
 	• Sulfite sensitivity

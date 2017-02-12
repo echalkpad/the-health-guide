@@ -1,10 +1,11 @@
 # Chlorine
-Chlorine (Cu) is an essential trace element. Its main function is as component of redox enzymes (oxidases in the reduction of molecular oxygen).
+Chlorine (Cl) or Chloride is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
 
 ## Absorption
-Only 
-Chlorine absorption requires:.
-Chlorine absorption is impaired by: vitamin C.
+95% is accumulated in extracellular fluid.
+98% of chlorine is absorbed.
+Chlorine absorption requires: sodium.
+Chlorine absorption is impaired by: potassium, excessive perspiration, vitamin C.
 
 ## Functions
 acid-base balance, stomach acid formation, and body water balance.
@@ -17,6 +18,8 @@ hair and tooth loss, poor muscle contractions and impaired digestion
 
 ## Excess
 destroys Vitamin E and Intestinal flora
+	• high blood presure (Hypertension)
+Cardiovascular disease
 
 ## Disease preventions
 Liver disease, tardive dyskinesia
@@ -25,7 +28,7 @@ Liver disease, tardive dyskinesia
 table salt.
 
 ## Average recomended intake
-- 0.9mg/day;
+- 3400mg/day;
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))

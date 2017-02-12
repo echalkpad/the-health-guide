@@ -1,22 +1,28 @@
 # Zinc
-Zinc is an essential trace element.
+Zinc (Zn) is an essential trace element. Its main function is in growth and development.
 
 ## Absorption
-Zinc absorption requires:.
-Zinc absorption is impaired by: calcium, phosphorus, phytate.
+Zinc absorption is impaired by: calcium, phosphorus, phytate, fiber, iron, alcohol, soy, processed food, vegetable protein, corticosteroid drugs, oral contraceptives, and diuretics.
 
 ## Functions
-component of many enzymes
+85% is accumulated in skeleton and muscles
+protein structure
 	• Immune Function
 	• Skin Health
 	• Sensory Organs
 Male Reproductive Health
+gene expression
+Antioxidant
+normal fetal growth and development, helps synthesize DNA and RNA, promotes normal cellular functioning, strengthens immune system, aids in regulating blood sugar. 
+carbohydrates, digestive and phosphorous metabolism, needed to break down alcohol, phosphorous and protein metabolism
+wound and burn healing
 
 ## Deficiency
-zinc deficiency
+loss of taste and smell, alopecia, glossitis, stomachitis, paronychia, sterility, enlarged liver or spleen, decreased size of testicles, dwarfism, baldness, stretch marks in the skin, retarded growth, prolonged healing of wounds, sterility, prostate problems. 
 
 ## Excess
-zinc toxicity
+acute gastrointestinal effects and headaches, impaired immune function, changes in lipoprotein and cholesterol levels, reduced copper status, and zinc–iron interactions.
+
 
 ## Disease preventions
 	• Common cold
@@ -30,13 +36,13 @@ zinc toxicity
 	• Macular degeneration
 	• Infertility (male)
 HIV/AIDS
+prostate
 
 ## Food sources
-whole grain foods, meats, and seafood.
-Grains, legumes, seeds, nuts, leafy vegetables, tea, coffe
+whole-grains foods, meats, and seafood.
 
 ## Average recomended intake
-1.1mg/day.
+11mg/day.
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))

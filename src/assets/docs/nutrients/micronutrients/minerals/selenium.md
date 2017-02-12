@@ -1,31 +1,34 @@
 # Selenium
-Selenium (Cu) is an essential trace element. Its main function is as component of redox enzymes (oxidases in the reduction of molecular oxygen).
+Selenium (Se) is an essential trace element. Its main function is as antioxidant and thyroid hormone regulation. 
 
 ## Absorption
-Only 
+Selenium is absorbed completely in normal conditions.
 Selenium absorption requires:.
-Selenium absorption is impaired by:
+Selenium absorption is impaired by: mercury poisoning.
 
 ## Functions
 	• Antioxidant Protection
 Support Normal Thyroid Function
+Strengthens immune system, promotes normal growth and development.
+blood pressure, fertility, and metabolism
 
 ## Deficiency
-elenium deficiency
+cardiomyopathy, myocardial death, premature aging, infertility, insomnia, arteriosclerosis.
 
 ## Excess
-selenosis
+nausea, vomiting and hair loss, nail brittleness, •Skin rash •Garlic breath odor •Fatigue •Irritability •Nervous system abnormalities
 
 ## Disease preventions
 	• Immune function
 	• Depression
 	• Cardiovascular disease
-	• Cancer prevention (only if deficient)
+	• Cancer
 	• Hypothyroidism
 Infertility (male)
+Keshan disease
 
 ## Food sources
-Brazil nuts, seafoods, organ meats, meats, grains, dairy products, eggs
+- meat, seafood, whole-grains, dairy, fruits, and vegetables.
 
 ## Average recomended intake
 0.055mg/day.

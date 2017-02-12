@@ -1,22 +1,25 @@
 # Manganese
-Manganese (Cu) is an essential trace element. Its main function is
+Manganese (Mn) is an essential trace element. Its main function is as coenzyme and bone development.
 
 ## Absorption
-Only 
-Manganese absorption requires:.
-Manganese absorption is impaired by: iron, magnesium, calcium.
+Only a small percentage of manganese are absorbed and accumulated in the liver.
+Manganese absorption is impaired by: phytate, iron, magnesium, calcium, phosphorous, antibiotics.
 
 ## Functions
 	• Bone Production
 	• Skin integrity
 	• Blood Sugar Control
 Protection Against Free Radical Damage
+abnormal rate of development and growth, high blood sugar, ataxia, glandular disorders, muscular in coordination, poor growth, convulsion, loss of hearing, dizziness and paralysis.
+Antioxidant, assists with managing blood glucose levels, helps to lower triglycerides, strengthens arterial tissues, and stabilizes LDL’s.
+maintain sex hormone, protein, fat and carbohydrate productions. Formation of blood cells, activates numerous enzymes, bones and tissue growth, synthesis of fatty acids and cholesterol.
 
 ## Deficiency
-manganese deficiency
+impotence, anemia, digestive disorders and tooth decay
 
 ## Excess
-manganism
+poor iron absorption
+nervous system decline
 
 ## Disease preventions
 	• Osteoporosis
@@ -26,6 +29,7 @@ manganism
 	• Dermatitis
 	• Epilepsy
 Asthma
+arthritis
 
 ## Food sources
  leafy green vegetables, fruits, nuts, cinnamon and whole grains
