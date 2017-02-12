@@ -3,7 +3,7 @@ Vitamin E or alpha-Tocopherol is a fat-soluble vitamin, the only essential form 
 
 ## Absorption
 Vitamin E is absorbed in the small intestine and it accumulates in the liver, which also differentiates tocopherols.
-Vitamin E absorption requires: vitamin C, Vitamin K, polyunsaturated fat.
+Vitamin E absorption requires: vitamin C, Vitamin K, polyunsaturated fat, selenium.
 Vitamin E absorption is impaired by: alcohol, tobacco, rancid fat, mineral oil, chlorine, birth control pills, and air pollution;
 
 ## Functions

@@ -17,7 +17,7 @@
 
 ## Average recomended intake
 
-## Refferences
+## References
 - Wikipedia, []()
 - The world's healthiest foods, []()
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition)

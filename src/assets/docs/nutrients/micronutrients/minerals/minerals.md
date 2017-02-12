@@ -6,22 +6,22 @@ be obtained from nutrition. There are two main types of minerals: major elements
 ## Classification
 ### Major elements
 - [Calcium](calcium.md);
-- [Chlorine]();
-- [Magnesium]();
-- [Phophorus]();
-- [Potassium]();
-- [Sodium]().
+- [Chlorine](chlorine.md);
+- [Magnesium](magnesium.md);
+- [Phophorus](phosphorus.md);
+- [Potassium](potassium.md);
+- [Sodium](sodium.md);
+- [Sulfur](sulfur.md).
 
 ### Trace elements
 - [Chromium](chromium.md);
-- [Cobalt]();
-- [Copper]();
-- [Iodine]();
-- [Iron]();
-- [Manganese]();
-- [Molybdenum]();
-- [Selenium]();
-- [Zinc]().
+- [Copper](copper.md);
+- [Iodine](iodine.md);
+- [Iron](iron.md);
+- [Manganese](manganese.md);
+- [Molybdenum](molybdenum.md);
+- [Selenium](selenium.md);
+- [Zinc](zinc.md).
 
 ## Refferences
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))

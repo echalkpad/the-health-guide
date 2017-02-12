@@ -2,9 +2,9 @@
 Calcium is an essential mineral element. Its primary function is to form the structure of bones and teeth.
 
 ## Absorption
-Calcium is absorbed in the small intestine. 99% of calcium accumulates in the skeleton, the rest remaining in the blood, extracellular fluid, muscle, and other tissues.
-Calcium absorption requires: vitamin D, protein, magnesium.
-Calcium absorption is impaired by: alcohol, tabacco, caffeine, high calcium intake, high sodium intake, phosphorus, phytic acid, oxalic acid.
+Calcium is absorbed in the small intestine. 99% of calcium accumulates in the skeleton, the rest remaining in the blood, extracellular fluid, muscle, and other tissues. Calcium absorption decreases proportional to intake increase.
+Calcium absorption requires: vitamin D, protein, magnesium, potassium.
+Calcium absorption is impaired by: alcohol, tabacco, caffeine, aspirin, corticosteroid, drugs, sodium, phosphorus, phytic acid, oxalic acid.
 Excess calcium is excreted through the urine or stored in bones and other organs, like kidneys and liver.
 
 ## Functions
@@ -13,25 +13,15 @@ Excess calcium is excreted through the urine or stored in bones and other organs
 - heart health;
 - nervous system health;
 - digestive system health;
-- synthesis of blood cells.
+- synthesis of blood cells;
+- blood coagulation;
+- acid balance;
+- permeability of membranes;
+- metabolism of Vitamin D;
+- metabolism of Iron.
 
 ## Deficiency
-- osteoporosis;
-- loss of height;
-- back pain;
-- neck pain;
-- fractures;
-- abnormal curving of the spine;
-- humpback;
-- hypocalcaemia;
-- convulsions;
-- cardiac arrhythmias;
-- tetany;
-- numbness;
-- muscle cramps;
-- bleeding under the skin;
-- poor appetite;
-- purpura.
+osteomalacia, joint pains, rickets, insomnia, hypertension, osteoporosis, bone diseases, tetany, heart problems, excessive bleeding, poor development and brittleness of teeth and bones, muscle and menstrual cramps.
 
 ## Excess
 - hypercalcaemia;
@@ -76,7 +66,7 @@ Excess calcium is excreted through the urine or stored in bones and other organs
 ## Average recomended intake
 - 1000mg/day.
 
-## Refferences
+## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
 - Wikipedia, [Calcium](https://en.wikipedia.org/wiki/Calcium)
 - Wikipedia, [Hypercalcaemia](https://en.wikipedia.org/wiki/Hypercalcaemia)
