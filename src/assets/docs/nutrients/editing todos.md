@@ -1,14 +1,8 @@
 ### KIM
-- [action] of [something] (e.g metabolism of ..., synthesis of ..., inflammation of ..., regulation of ..., loss of ...);
 - add percentage of absorbed nutrient;
 - ignore absorbed in the intestine;
 - use metabolism of instead of absorption of;
 - ignore desieses in deficiency, only symptoms;
 - don't use medical names to cause confusions;
 - add supplementation at absorption impairments of other nutrients;
-- check bioavailability;
-- write nutrients with uppercase;
-- "nail brittleness" not "brittle nails";
 - check sodium chloride hormones;
-- add alcohol, caffeine, and tabacco impairments in absorption;
-- change absorption requires to requires or enhances.

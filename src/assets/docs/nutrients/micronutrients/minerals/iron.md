@@ -3,7 +3,10 @@ Iron (Fe) is an essential trace element. Its main function is as component of se
 
 ## Absorption
 66% of the absorbed iron is accumulated in hemoglobin on blood cells.
-Iron absorption requires: vitamin B12, vitamin A, copper, vitamin C, animal protein, 
+
+Iron absorption requires:
+- vitamin A;
+- vitamin B12, copper, vitamin C, animal protein, 
 Iron absorption is impaired by: calcium, zinc, phytic acid, Polyphenols, vegetable protein, phosphorus, alcohol, coffee, tea, bleeding, diarrhea, stress, lack of hydrochloric acid, antacids, and aspirins.
 
 ## Functions

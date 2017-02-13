@@ -1,53 +1,71 @@
 # Vitamin A
-Vitamin A is a fat-soluble vitamin. It's main function is in vision and cell development.
+Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell development.
 
 ## Classification
-- Retinoids - animal based
-- Carotenoids - plant based
+- Retinoids - animal source
+- Carotenoids - plant source
 
-## Absorption
-Vitamin A is absorbed in the small intestine from 70% to 90%. Carotenoids absorption ranges from 9% to 22% and decreases as the amount increases.
-90% of the absorbed vitamin A is allocated to the liver.
-Vitamin A absorption requires: fat, Zinc.
-Vitamin A absorption is impaired by: alcohol, antibiotics, laxatives, tabacco, excess iron, and cholesterol lowering drugs.
-Excess vitamin A is eliminated through urine.
+## Metabolism
+70%-90% vitamin A from dietary intake is absorbed.
+9%-22% carotenoids from dietary intake are absorbed.
+
+Vitamin A absorption is enhanced by:
+- cooking;
+- fats.
+
+Vitamin A absorption requires:
+- Iron;
+- Zinc.
+
+Vitamin A absorption is impaired by:
+- alcohol;
+- antibiotics;
+- cholesterol lowering drugs;
+- laxatives;
+- tabacco.
 
 ## Functions
-- growth and development;
-- immunity;
-- eye health;
-- skin health;
-- teeth health;
-- hair health;
-- bone health;
-- liver health;
 - antioxidant;
 - blood cell formation;
+- bone health;
+- eye health;
 - gene expression;
-- reproduction.
+- growth;
+- hair health;
+- immunity;
+- liver health;
+- reproduction;
+- skin health;
+- tooth health.
 
 ## Deficiency
-- night blindness;
-- impaired growth;
-- defective teeth and gums;
-- dry inflamed eyes;
 - diarrhea;
+- eye inflammation;
+- eye dryness;
+- growth impairment;
+- gum defects;
+- low immunity;
+- night blindness;
 - respiratory infection;
-- weak immune system.
+- tooth defects.
 
 ## Excess
+- Anorexia;
+- blurred vision;
 - bone pain;
-- joint pain;
-- anorexia;
-- headache;
+- cerebrospinal fluid pressure increase;
 - dizziness;
-- nausea;
+- fetus development disorders;
 - hair loss;
-- dry skin;
-- insomnia;
-- abnormal development of fetus;
-- impaired vitamin D absorption;
-- impaired Iron absorption.
+- headache;
+- Insomnia;
+- Iron metabolism impairment;
+- joint pain;
+- muscular incoordination;
+- nausea;
+- skin dryness;
+- Vitamin D metabolism impairment;
+- vomiting.
 
 ## Disease preventions
 - Acne
@@ -95,20 +113,12 @@ Excess vitamin A is eliminated through urine.
 
 ## Food sources
 - liver;
-- orange;
-- ripe yellow fruits;
-- leafy vegetables;
-- carrots;
-- pumpkin;
-- squash;
-- spinach;
-- fish;
-- soy;
-- milk;
-- eggs.
+- chives;
+- pepper;
+- carrots.
 
 ## Average recomended intake
-- 1mg/day.
+- 0.9mg/day.
 
 ## References
 - Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
@@ -116,3 +126,4 @@ Excess vitamin A is eliminated through urine.
 - The world's healthiest foods, [Vitamin A](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)
 - Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin A
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=100&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

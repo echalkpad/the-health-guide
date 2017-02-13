@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Vertigo",
+        "nickname": "Dizziness",
+        "symptoms": [
+            "balance loss",
+            "dizziness",
+            "feeling of spinning",
+            "nausea",
+            "sweating",
+            "vomiting",
+            "walking difficulties"
+        ]
+    }
+]
