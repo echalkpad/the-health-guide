@@ -6,67 +6,67 @@ Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision 
 - Carotenoids - plant source
 
 ## Metabolism
-70%-90% vitamin A from dietary intake is absorbed.
-9%-22% carotenoids from dietary intake are absorbed.
+- 70%-90% of vitamin A is absorbed;
+- 9%-22% of carotenoids are absorbed.
 
 Vitamin A absorption is enhanced by:
-- cooking;
-- fats.
+- Cooking;
+- Fats.
 
 Vitamin A absorption requires:
 - Iron;
 - Zinc.
 
 Vitamin A absorption is impaired by:
-- alcohol;
-- antibiotics;
-- cholesterol lowering drugs;
-- laxatives;
-- tobacco.
+- Alcohol;
+- Antibiotics;
+- Cholesterol lowering drugs;
+- Laxatives;
+- Tobacco.
 
 ## Functions
-- antioxidant activity;
-- bone health;
-- embryonic development;
-- gene expression;
-- growth;
-- hair health;
-- immune function;
-- liver health;
-- mucous membrane health;
-- reproduction;
-- skin health;
-- tooth health;
-- vision.
+- Antioxidant activity;
+- Bone health;
+- Embryonic development;
+- Eye health;
+- Gene expression;
+- Growth;
+- Hair health;
+- Immune function;
+- Liver health;
+- Mucous membrane health;
+- Reproduction;
+- Skin health;
+- Tooth health.
 
 ## Deficiency
-- diarrhea;
-- eye inflammation;
-- eye dryness;
-- growth impairment;
-- gum defects;
-- low immune function;
-- night blindness;
-- respiratory infection;
-- tooth defects.
+- Diarrhea;
+- Eye inflammation;
+- Eye dryness;
+- Growth impairment;
+- Gum defects;
+- Low immune function;
+- Night blindness;
+- Respiratory infection;
+- Tooth defects.
 
 ## Excess
 - Anorexia;
-- blurred vision;
-- bone pain;
-- cerebrospinal fluid pressure increase;
-- dizziness;
-- fetus development disorders;
-- hair loss;
-- headache;
+- Blurred vision;
+- Bone pain;
+- Cerebrospinal fluid pressure increase;
+- Dizziness;
+- Fetus development disorders;
+- Hair loss;
+- Headache;
 - Insomnia;
 - Iron metabolism impairment;
-- joint pain;
-- muscular incoordination;
-- nausea;
-- skin dryness;
+- Joint pain;
+- Muscular incoordination;
+- Nausea;
+- Skin dryness;
 - Vitamin D metabolism impairment;
-- vomiting.
+- Vomiting.
 
 ## Disease preventions
 - Acne;
@@ -113,13 +113,13 @@ Vitamin A absorption is impaired by:
 - Viral infections.
 
 ## Food sources
-- liver;
-- chives;
-- pepper;
-- carrots;
-- spinach;
-- kale;
-- broccoli.
+- Liver;
+- Chives;
+- Pepper;
+- Carrots;
+- Spinach;
+- Kale;
+- Broccoli.
 
 ## Average recommended intake
 - 0.9mg/day.

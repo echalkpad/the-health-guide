@@ -9,63 +9,63 @@
         }
     ],
     "deficiency": [
-        "diarrhea",
-        "eye inflammation",
-        "eye dryness",
-        "growth impairment",
-        "gum defects",
-        "low immune function",
-        "night blindness",
-        "respiratory infection",
-        "tooth defects"
+        "Diarrhea",
+        "Eye inflammation",
+        "Eye dryness",
+        "Growth impairment",
+        "Gum defects",
+        "Low immune function",
+        "Night blindness",
+        "Respiratory infection",
+        "Tooth defects"
     ],
     "description": "Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell development.",
     "excess": [
         "Anorexia",
-        "blurred vision",
-        "bone pain",
-        "cerebrospinal fluid pressure increase",
-        "dizziness",
-        "fetus development disorders",
-        "hair loss",
-        "headache",
+        "Blurred vision",
+        "Bone pain",
+        "Cerebrospinal fluid pressure increase",
+        "Dizziness",
+        "Fetus development disorders",
+        "Hair loss",
+        "Headache",
         "Insomnia",
         "Iron metabolism impairment",
-        "joint pain",
-        "muscular incoordination",
-        "nausea",
-        "skin dryness",
+        "Joint pain",
+        "Muscular incoordination",
+        "Nausea",
+        "Skin dryness",
         "Vitamin D metabolism impairment",
-        "vomiting"
+        "Vomiting"
     ],
     "functions": [
-        "antioxidant activity",
-        "bone health",
-        "embryonic development",
-        "gene expression",
-        "growth",
-        "hair health",
-        "immune function",
-        "liver health",
-        "mucous membrane health",
-        "reproduction",
-        "skin health",
-        "tooth health",
-        "vision"
+        "Antioxidant activity",
+        "Bone health",
+        "Embryonic development",
+        "Eye health",
+        "Gene expression",
+        "Growth",
+        "Hair health",
+        "Immune function",
+        "Liver health",
+        "Mucous membrane health",
+        "Reproduction",
+        "Skin health",
+        "Tooth health"
     ],
     "intake": "0.9",
     "metabolism": {
         "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
         "enhancements": [
-            "cooking",
-            "fats"
+            "Cooking",
+            "Fats"
         ],
         "impairments": [
-            "alcohol",
-            "antibiotics",
-            "cholesterol lowering drugs",
-            "laxatives",
-            "tobacco"
+            "Alcohol",
+            "Antibiotics",
+            "Cholesterol lowering drugs",
+            "Laxatives",
+            "Tobacco"
         ],
         "requirements": [
             "Iron",
@@ -130,13 +130,13 @@
         "Viral infections"
     ],
     "sources": [
-        "liver",
-        "chives",
-        "pepper",
-        "carrots",
-        "spinach",
-        "kale",
-        "broccoli"
+        "Liver",
+        "Chives",
+        "Pepper",
+        "Carrots",
+        "Spinach",
+        "Kale",
+        "Broccoli"
     ],
     "unit": "mg/day"
 }, {
