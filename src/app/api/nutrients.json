@@ -1,14 +1,151 @@
-[
-    {
-        "name": "Vitamin A"
-    }, {
-        "name": "Iodine",
-        "organs": [
-            "brain",
-            "muscles",
-            "heart",
-            "pituitary gland",
-            "kidneys"
+[{
+    "classification": [{
+            "name": "Carotenoids",
+            "summary": "plant source"
+        },
+        {
+            "name": "Retinoids",
+            "summary": "animal source"
+        }
+    ],
+    "deficiency": [
+        "diarrhea",
+        "eye inflammation",
+        "eye dryness",
+        "growth impairment",
+        "gum defects",
+        "low immune function",
+        "night blindness",
+        "respiratory infection",
+        "tooth defects"
+    ],
+    "description": "Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell development.",
+    "excess": [
+        "Anorexia",
+        "blurred vision",
+        "bone pain",
+        "cerebrospinal fluid pressure increase",
+        "dizziness",
+        "fetus development disorders",
+        "hair loss",
+        "headache",
+        "Insomnia",
+        "Iron metabolism impairment",
+        "joint pain",
+        "muscular incoordination",
+        "nausea",
+        "skin dryness",
+        "Vitamin D metabolism impairment",
+        "vomiting"
+    ],
+    "functions": [
+        "antioxidant activity",
+        "bone health",
+        "embryonic development",
+        "gene expression",
+        "growth",
+        "hair health",
+        "immune function",
+        "liver health",
+        "mucous membrane health",
+        "reproduction",
+        "skin health",
+        "tooth health",
+        "vision"
+    ],
+    "intake": "0.9",
+    "metabolism": {
+        "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
+        "enhancements": [
+            "cooking",
+            "fats"
+        ],
+        "impairments": [
+            "alcohol",
+            "antibiotics",
+            "cholesterol lowering drugs",
+            "laxatives",
+            "tabacco"
+        ],
+        "requirements": [
+            "Iron",
+            "Zinc"
         ]
-    }
-]
+    },
+    "name": "Vitamin A",
+    "organs": [
+        "bones",
+        "eyes",
+        "hair",
+        "heart",
+        "immune system",
+        "kidney",
+        "liver",
+        "lungs",
+        "skin",
+        "teeth"
+    ],
+    "preventions": [
+        "Acne",
+        "Acquired Immunodeficiency Syndrome (AIDS)",
+        "Age-related macular degeneration",
+        "AIDS",
+        "Alcoholism",
+        "Angina pectoris",
+        "Asthma",
+        "Atopic dermatitis",
+        "Cataracts",
+        "Cervical cancer",
+        "Cervical dysplasia",
+        "Chlamydial infection",
+        "Cystic Fibrosis",
+        "Diabetes",
+        "Dry Eyes",
+        "Fibrocystic breast disease",
+        "Heart disease",
+        "Hyperkeratosis",
+        "Impotence (Lack of sperm production)",
+        "Inflammatory bowel disease",
+        "Kaposi's sarcoma",
+        "Laryngeal cancer (cancer of the larynx)",
+        "Leukoplakia",
+        "Lung cancer",
+        "Male and female infertility",
+        "Measles",
+        "Osteoarthritis",
+        "Otitis media (ear infection)",
+        "Photosensitivity",
+        "Pneumonia",
+        "Poor vision",
+        "Premature Delivery",
+        "Prostate cancer",
+        "Psoriasis",
+        "Rheumatoid arthritis",
+        "Skin cancer",
+        "Thyroid disorders",
+        "Ulcers",
+        "Vaginal candidiasis",
+        "Vaginitis",
+        "Varicose veins",
+        "Viral infections"
+    ],
+    "sources": [
+        "liver",
+        "chives",
+        "pepper",
+        "carrots",
+        "spinach",
+        "kale",
+        "broccoli"
+    ],
+    "unit": "mg/day"
+}, {
+    "name": "Iodine",
+    "organs": [
+        "brain",
+        "muscles",
+        "heart",
+        "pituitary gland",
+        "kidneys"
+    ]
+}]

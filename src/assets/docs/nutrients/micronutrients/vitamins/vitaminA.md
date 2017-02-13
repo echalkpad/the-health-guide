@@ -25,18 +25,19 @@ Vitamin A absorption is impaired by:
 - tabacco.
 
 ## Functions
-- antioxidant;
-- blood cell formation;
+- antioxidant activity;
 - bone health;
-- eye health;
+- embryonic development;
 - gene expression;
 - growth;
 - hair health;
-- immunity;
+- immune function;
 - liver health;
+- mucous membrane health;
 - reproduction;
 - skin health;
-- tooth health.
+- tooth health;
+- vision.
 
 ## Deficiency
 - diarrhea;
@@ -44,7 +45,7 @@ Vitamin A absorption is impaired by:
 - eye dryness;
 - growth impairment;
 - gum defects;
-- low immunity;
+- low immune function;
 - night blindness;
 - respiratory infection;
 - tooth defects.
@@ -68,54 +69,57 @@ Vitamin A absorption is impaired by:
 - vomiting.
 
 ## Disease preventions
-- Acne
-- Acquired Immunodeficiency Syndrome (AIDS)
-- Age-related macular degeneration
-- AIDS
-- Alcoholism
-- Angina pectoris
-- Asthma
-- Atopic dermatitis
-- Cataracts
-- Cervical cancer
-- Cervical dysplasia
-- Chlamydial infection
-- Cystic Fibrosis
-- Diabetes
-- Dry Eyes
-- Fibrocystic breast disease
-- Heart disease
-- Hyperkeratosis
-- Impotence (Lack of sperm production)
-- Inflammatory bowel disease
-- Kaposi's sarcoma
-- Laryngeal cancer (cancer of the larynx)
-- Leukoplakia
-- Lung cancer
-- Male and female infertility
-- Measles
-- Osteoarthritis
-- Otitis media (ear infection)
-- Photosensitivity
-- Pneumonia
-- Poor vision
-- Premature Delivery
-- Prostate cancer
-- Psoriasis
-- Rheumatoid arthritis
-- Skin cancer
-- Thyroid disorders
-- Ulcers
-- Vaginal candidiasis
-- Vaginitis
-- Varicose veins
-- Viral infections
+- Acne;
+- Acquired Immunodeficiency Syndrome (AIDS);
+- Age-related macular degeneration;
+- AIDS;
+- Alcoholism;
+- Angina pectoris;
+- Asthma;
+- Atopic dermatitis;
+- Cataracts;
+- Cervical cancer;
+- Cervical dysplasia;
+- Chlamydial infection;
+- Cystic Fibrosis;
+- Diabetes;
+- Dry Eyes;
+- Fibrocystic breast disease;
+- Heart disease;
+- Hyperkeratosis;
+- Impotence (Lack of sperm production);
+- Inflammatory bowel disease;
+- Kaposi's sarcoma;
+- Laryngeal cancer (cancer of the larynx);
+- Leukoplakia;
+- Lung cancer;
+- Male and female infertility;
+- Measles;
+- Osteoarthritis;
+- Otitis media (ear infection);
+- Photosensitivity;
+- Pneumonia;
+- Poor vision;
+- Premature Delivery;
+- Prostate cancer;
+- Psoriasis;
+- Rheumatoid arthritis;
+- Skin cancer;
+- Thyroid disorders;
+- Ulcers;
+- Vaginal candidiasis;
+- Vaginitis;
+- Varicose veins;
+- Viral infections.
 
 ## Food sources
 - liver;
 - chives;
 - pepper;
-- carrots.
+- carrots;
+- spinach;
+- kale;
+- broccoli.
 
 ## Average recomended intake
 - 0.9mg/day.
