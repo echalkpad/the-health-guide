@@ -62,7 +62,7 @@ Excess vitamin B1 is eliminated through urine.
 - whole-grains;
 - vegetables.
 
-## Average recomended intake
+## Average recommended intake
 - 1.2mg/day;
 
 ## References

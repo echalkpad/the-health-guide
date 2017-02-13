@@ -22,7 +22,7 @@ Vitamin A absorption is impaired by:
 - antibiotics;
 - cholesterol lowering drugs;
 - laxatives;
-- tabacco.
+- tobacco.
 
 ## Functions
 - antioxidant activity;
@@ -121,7 +121,7 @@ Vitamin A absorption is impaired by:
 - kale;
 - broccoli.
 
-## Average recomended intake
+## Average recommended intake
 - 0.9mg/day.
 
 ## References

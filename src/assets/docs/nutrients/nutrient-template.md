@@ -15,7 +15,7 @@
 
 ## Food sources
 
-## Average recomended intake
+## Average recommended intake
 
 ## References
 - Wikipedia, []()

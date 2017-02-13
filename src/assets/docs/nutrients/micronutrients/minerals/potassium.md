@@ -40,7 +40,7 @@ Endurance exercise
 - vine fruits;
 - root vegetables.
 
-## Average recomended intake
+## Average recommended intake
 4700mg/day.
 
 ## References

@@ -72,7 +72,7 @@ Do not:
 - acid fruits - animal protein;
 - starch - starch.
 
-### Average recomended intake
+### Average recommended intake
 - 45% of your daily energy intakes (225g/day for 2000kcal/day).
 
 ## Refferences

@@ -31,7 +31,7 @@ hyponatremia 
 ## Food sources
 table salt.
 
-## Average recomended intake
+## Average recommended intake
 1500mg/day.
 
 ## References

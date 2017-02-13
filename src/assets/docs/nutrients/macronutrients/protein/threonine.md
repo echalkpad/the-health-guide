@@ -2,7 +2,7 @@
 
 Threonine is an essential amino acid the human body cannot produce on its own, hence, it is required to be ingested through nutrition for optimal health.
 
-## Average recomended intake
+## Average recommended intake
 - 1.05g/day (0.15g/kg)
 
 ## Food sources

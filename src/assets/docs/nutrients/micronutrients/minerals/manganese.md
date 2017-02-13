@@ -35,7 +35,7 @@ arthritis
  leafy green vegetables, fruits, nuts, cinnamon and whole grains
  	Grains, legumes, seeds, nuts, leafy vegetables, tea, coffee
 
-## Average recomended intake
+## Average recommended intake
 - 2mg/day;
 
 ## References

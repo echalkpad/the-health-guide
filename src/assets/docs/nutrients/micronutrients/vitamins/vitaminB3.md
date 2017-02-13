@@ -67,7 +67,7 @@ Excess vitamin B3 is eliminated through urine.
 - mushrooms;
 - nuts.
 
-## Average recomended intake
+## Average recommended intake
 - 16 mg/day.
 
 ## References

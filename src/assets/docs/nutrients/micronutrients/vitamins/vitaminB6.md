@@ -64,7 +64,7 @@ Excess vitamin B6 is eliminated through urine.
 - greens;
 - bananas.
 
-## Average recomended intake
+## Average recommended intake
 - 1.3mg/day.
 
 ## References

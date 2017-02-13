@@ -86,7 +86,7 @@ Do not:
 - animal protein - fruits;
 - animal protein - protein.
 
-## Average recomended intake
+## Average recommended intake
 - 20% of your daily energy intakes (125g/day for 2000kcal/day).
 
 ## Refferences

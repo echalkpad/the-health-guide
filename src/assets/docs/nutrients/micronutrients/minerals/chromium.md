@@ -4,7 +4,7 @@ Chromium is an essential trace element. Its primary function is glucose metaboli
 ## Absorption
 Chromium is absorbed in the small intestine. Only 0.4%-2.5% of chromium is absorbed and it is stored in the liver, spleen, soft tissue, and bone
 Chromium absorption requires: vitamin C, exercise.
-Chromium absorption is impaired by: alcohol, tabacco, caffeine, sugars, phytate, drug medications, air pollution.
+Chromium absorption is impaired by: alcohol, tobacco, caffeine, sugars, phytate, drug medications, air pollution.
 Excess chromium is excreted through the urine.
 
 ## Functions
@@ -38,7 +38,7 @@ anxiety, glucose intolerance, and chance of arteriosclerosis, poor metabolism of
 - meat;
 - whole grains.
 
-## Average recomended intake
+## Average recommended intake
 - 0.12mg/day.
 
 ## Refferences

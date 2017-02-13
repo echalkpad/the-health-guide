@@ -27,7 +27,7 @@ Liver disease, tardive dyskinesia
 ## Food sources
 table salt.
 
-## Average recomended intake
+## Average recommended intake
 - 3400mg/day;
 
 ## References

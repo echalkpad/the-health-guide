@@ -35,7 +35,7 @@ Attention deficit hyperactivity disorder
 green leafy vegetables, whole grains foods, legumes, meats, and eggs.
 Meat, seafood, nuts, beans, dark chocolate[
 
-## Average recomended intake
+## Average recommended intake
 - 18mg/day;
 
 ## References

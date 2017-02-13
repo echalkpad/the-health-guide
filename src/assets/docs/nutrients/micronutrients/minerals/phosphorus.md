@@ -36,7 +36,7 @@ Osteoporosis risk
 - meat;
 - whole-grains.
 
-## Average recomended intake
+## Average recommended intake
 - 700mg/day.
 
 ## References

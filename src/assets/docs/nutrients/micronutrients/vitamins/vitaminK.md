@@ -4,7 +4,7 @@ Vitmin K is a fat-soluble vitamin. Its main function is as coenzyme for biologic
 ## Absorption
 Vitamin K is absorbed in the small intestine and is accumulated by the liver and other tissues.
 Vitamin K absorption requires: dietary fat, calcium, vitamin D, Magnesium
-Vitamin K absorption is impaired by: vitamin A, Vitamin E, alcohol, tabacco, caffeine.
+Vitamin K absorption is impaired by: vitamin A, Vitamin E, alcohol, tobacco, caffeine.
 
 ## Functions
 - protein metabolism;
@@ -35,7 +35,7 @@ Vitamin K absorption is impaired by: vitamin A, Vitamin E, alcohol, tabacco, caf
 - egg yolks;
 - liver.
 
-## Average recomended intake
+## Average recommended intake
 0.12 mg/day.
 
 ## References

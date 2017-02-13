@@ -9,7 +9,6 @@ they must be obtained through nutrition - _essential_. These are:
 - [Vitamins](micronutrients/vitamins/vitamins.md)
 - [Minerals](micronutrients/minerals/minerals.md)
 
-
 According to the required amounts, nutrients are classified in: macronutrients, required in large amounts, because they provide the energy - "fuel" - to sustain the metabolic processes, and micronutrients, 
 the "factory workers" in the metabolic and body processes. They also build and repair tissues.
 

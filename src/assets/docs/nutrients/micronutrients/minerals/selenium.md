@@ -30,7 +30,7 @@ Keshan disease
 ## Food sources
 - meat, seafood, whole-grains, dairy, fruits, and vegetables.
 
-## Average recomended intake
+## Average recommended intake
 0.055mg/day.
 
 ## References

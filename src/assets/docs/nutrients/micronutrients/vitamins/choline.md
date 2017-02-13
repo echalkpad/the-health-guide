@@ -45,7 +45,7 @@ Excess choline is eliminated through urine.
 - eggs;
 - peanuts.
 
-## Average recomended intake
+## Average recommended intake
 - 500mg/day.
 
 ## References

@@ -65,7 +65,7 @@ Hypertension
 - green beans;
 - asparagus.
 
-## Average recomended intake
+## Average recommended intake
 - 1.3 mg/day.
 
 ## References

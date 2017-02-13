@@ -67,7 +67,7 @@ Vitamin D absorption is impaired by: alcohol, tobacco.
 - liver;
 - mushrooms.
 
-## Average recomended intake
+## Average recommended intake
 - 0.15mg/day.
 
 ## References

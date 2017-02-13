@@ -5,7 +5,7 @@ the cell's form energy. It's main function is as blood cell formation and DNA sy
 ## Absorption
 Vitamin B9 is absorbed in the stomach and small intestine. It accumulates in the liver.
 Vitamin B9 absorption requires: vitamin B-complex, Zinc.
-Vitamin B9 absorption is impaired by: vitamin B-complex deficiency, alcohol, tabacco, drugs (nonsteroidal anti-inflammatory drugs, 
+Vitamin B9 absorption is impaired by: vitamin B-complex deficiency, alcohol, tobacco, drugs (nonsteroidal anti-inflammatory drugs, 
 anticonvulsant drugs, methotrexate, etc.)
 Excess vitamin B9 is eliminated through urine.
 
@@ -56,7 +56,7 @@ Excess vitamin B9 is eliminated through urine.
 - beans;
 - legumes.
 
-## Average recomended intake
+## Average recommended intake
 - 0.4mg/day;
 
 ## References

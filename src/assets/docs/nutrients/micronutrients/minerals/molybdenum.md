@@ -27,7 +27,7 @@ Metabolic syndrome
 ## Food sources
 Legumes, whole grains, nuts[
 
-## Average recomended intake
+## Average recommended intake
 - 0.045mg/day.
 
 ## References

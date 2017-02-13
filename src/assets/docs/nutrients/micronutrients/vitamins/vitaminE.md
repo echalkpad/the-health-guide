@@ -72,7 +72,7 @@ Vitamin E absorption is impaired by: alcohol, tobacco, rancid fat, mineral oil, 
 - vegetable oils;
 - whole-grains, nuts, fruits, vegetables, and meats
 
-## Average recomended intake
+## Average recommended intake
 - 0.015mg/day.
 
 ## References

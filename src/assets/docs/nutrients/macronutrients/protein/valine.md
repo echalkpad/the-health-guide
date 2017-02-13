@@ -2,7 +2,7 @@
 
 Valine is an essential amino acid the human body cannot produce on its own, hence, it is required to be ingested through nutrition for optimal health.
 
-## Average recomended intake
+## Average recommended intake
 - 1.82g/day (0.26g/kg)
 
 ## Food sources

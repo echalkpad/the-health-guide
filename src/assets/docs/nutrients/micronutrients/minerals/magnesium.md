@@ -41,7 +41,7 @@ Fatty liver disease (NASH)
 ## Food sources
 nuts, seeds, fatty fish, cacao, whole grains foods, and in green leafy vegetables.
 
-## Average recomended intake
+## Average recommended intake
 - 320mg/day.
 
 ## References

@@ -53,7 +53,7 @@ Excess vitamin B5 is eliminated through urine.
 - whole-grains;
 - avocado.
 
-## Average recomended intake
+## Average recommended intake
 - 5mg/day.
 
 ## References

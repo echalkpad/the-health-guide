@@ -26,7 +26,7 @@ Fibrocystic breast disease
 ## Food sources
 seafood, whole-grains, eggs, iodized salt
 
-## Average recomended intake
+## Average recommended intake
 - 0.15mg/day;
 
 ## References

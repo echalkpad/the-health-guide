@@ -47,7 +47,7 @@ Sugars don't have deficienc effects.
 ### Food combining
 Sugars shouldn't be combined with any food.
 
-### Average recomended intake
+### Average recommended intake
 - 5% of your daily energy intakes (25g/day for 2000kcal/day).
 
 ## Refferences

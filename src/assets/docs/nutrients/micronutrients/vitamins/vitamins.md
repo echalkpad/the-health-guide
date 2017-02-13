@@ -1,11 +1,10 @@
 # Vitamins
-
 Vitamins are organic compounds essential for the the human body to survive and evolve. It can not synthesize them on its own, hence, they must 
-be obtained from nutrition. They commonly function as enzymatic cofactors, metabolic regulators or antioxidants.
+be obtained from dietary sources. They commonly function as enzymatic cofactors, metabolic regulators and antioxidants.
 There are two main types of vitamins: water-soluble and fat-soluble.
 
 ## Classification
-### Water soluble
+### Water-soluble
 - [Vitamin B1](vitaminB1.md);
 - [Vitamin B2](vitaminB2.md);
 - [Vitamin B3](vitaminB3.md);
@@ -17,7 +16,7 @@ There are two main types of vitamins: water-soluble and fat-soluble.
 - [Vitamin C](vitaminC.md);
 - [Choline](choline.md).
 
-### Fat soluble
+### Fat-soluble
 - [Vitamin A](vitaminA.md);
 - [Vitamin D](vitaminD.md);
 - [Vitamin E](vitaminE.md);

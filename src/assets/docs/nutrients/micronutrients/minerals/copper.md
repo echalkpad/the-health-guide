@@ -34,7 +34,7 @@ Arthritis
 ## Food sources
 organ meatsseafood, nuts, whole-grains, and legumes
 
-## Average recomended intake
+## Average recommended intake
 - 3mg/day;
 
 ## References

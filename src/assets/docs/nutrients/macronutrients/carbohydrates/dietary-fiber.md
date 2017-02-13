@@ -64,7 +64,7 @@ Fiber is not absorped, but contributes the absorption of other nutrients, like m
 ### Food combining
 Fiber can be combined with anything as it helps nutrient absorption and improves digestion.
 
-### Average recomended intake
+### Average recommended intake
 - 10% of your daily energy intakes (50g/day for 2000kcal/day).
 
 ## Refferences

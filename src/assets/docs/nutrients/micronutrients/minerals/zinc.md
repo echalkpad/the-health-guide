@@ -41,7 +41,7 @@ prostate
 ## Food sources
 whole-grains foods, meats, and seafood.
 
-## Average recomended intake
+## Average recommended intake
 11mg/day.
 
 ## References

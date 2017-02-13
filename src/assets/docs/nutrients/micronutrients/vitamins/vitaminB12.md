@@ -59,7 +59,7 @@ Excess vitamin B12 is eliminated through urine.
 - dairy;
 - eggs.
 
-## Average recomended intake
+## Average recommended intake
 - 0.0024mg/day.
 
 ## References
