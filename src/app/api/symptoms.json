@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Irritability",
+        "nicknames": [
+            "Anger",
+            "Frustration"
+        ],
+        "description": "Negative behavioral response to physiological, environmental, situational, sociological, and emotional stimuli."
+    },
+    {
+        "name": "Muscle cramps",
+        "nickname": [
+            "Muscle spasms"
+        ],
+        "description": "Sudden, involuntary contractions that occur in various muscles."
+    },
+    {
+        "name": "Convulsion",
+        "nickname": [
+            "Seizures"
+        ],
+        "description": "Body muscles contract and relax rapidly and repeatedly, resulting in an uncontrolled shaking of the body."
+    }
+]

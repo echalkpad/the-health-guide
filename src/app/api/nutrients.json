@@ -1,152 +1,274 @@
-[{
-    "category": "Essential vitamin",
-    "classification": [{
-            "name": "Carotenoids",
-            "summary": "plant source"
+[
+    {
+        "category": "Essential vitamin",
+        "classification": [
+            {
+                "name": "Carotenoids",
+                "summary": "plant source"
+            },
+            {
+                "name": "Retinoids",
+                "summary": "animal source"
+            }
+        ],
+        "deficiency": [
+            "Diarrhea",
+            "Eye inflammation",
+            "Eye dryness",
+            "Growth impairment",
+            "Gum defects",
+            "Low immune function",
+            "Night blindness",
+            "Respiratory infection",
+            "Tooth defects"
+        ],
+        "description": "Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell development.",
+        "excess": [
+            "Anorexia",
+            "Blurred vision",
+            "Bone pain",
+            "Cerebrospinal fluid pressure increase",
+            "Dizziness",
+            "Fetus development disorders",
+            "Hair loss",
+            "Headache",
+            "Insomnia",
+            "Iron metabolism impairment",
+            "Joint pain",
+            "Muscular incoordination",
+            "Nausea",
+            "Skin dryness",
+            "Vitamin D metabolism impairment",
+            "Vomiting"
+        ],
+        "functions": [
+            "Antioxidant activity",
+            "Bone health",
+            "Embryonic development",
+            "Eye health",
+            "Gene expression",
+            "Growth",
+            "Hair health",
+            "Immune function",
+            "Liver health",
+            "Mucous membrane health",
+            "Reproduction",
+            "Skin health",
+            "Tooth health"
+        ],
+        "intake": "0.9",
+        "metabolism": {
+            "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
+            "enhancements": [
+                "Cooking",
+                "Fats"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Cholesterol lowering drugs",
+                "Laxatives",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Iron",
+                "Zinc"
+            ]
         },
-        {
-            "name": "Retinoids",
-            "summary": "animal source"
-        }
-    ],
-    "deficiency": [
-        "Diarrhea",
-        "Eye inflammation",
-        "Eye dryness",
-        "Growth impairment",
-        "Gum defects",
-        "Low immune function",
-        "Night blindness",
-        "Respiratory infection",
-        "Tooth defects"
-    ],
-    "description": "Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell development.",
-    "excess": [
-        "Anorexia",
-        "Blurred vision",
-        "Bone pain",
-        "Cerebrospinal fluid pressure increase",
-        "Dizziness",
-        "Fetus development disorders",
-        "Hair loss",
-        "Headache",
-        "Insomnia",
-        "Iron metabolism impairment",
-        "Joint pain",
-        "Muscular incoordination",
-        "Nausea",
-        "Skin dryness",
-        "Vitamin D metabolism impairment",
-        "Vomiting"
-    ],
-    "functions": [
-        "Antioxidant activity",
-        "Bone health",
-        "Embryonic development",
-        "Eye health",
-        "Gene expression",
-        "Growth",
-        "Hair health",
-        "Immune function",
-        "Liver health",
-        "Mucous membrane health",
-        "Reproduction",
-        "Skin health",
-        "Tooth health"
-    ],
-    "intake": "0.9",
-    "metabolism": {
-        "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
-        "enhancements": [
-            "Cooking",
-            "Fats"
+        "name": "Vitamin A",
+        "organs": [
+            "bones",
+            "eyes",
+            "hair",
+            "heart",
+            "immune system",
+            "kidney",
+            "liver",
+            "lungs",
+            "skin",
+            "teeth"
         ],
-        "impairments": [
-            "Alcohol",
-            "Antibiotics",
-            "Cholesterol lowering drugs",
-            "Laxatives",
-            "Tobacco"
+        "preventions": [
+            "Acne",
+            "Acquired Immunodeficiency Syndrome (AIDS)",
+            "Age-related macular degeneration",
+            "AIDS",
+            "Alcoholism",
+            "Angina pectoris",
+            "Asthma",
+            "Atopic dermatitis",
+            "Cataracts",
+            "Cervical cancer",
+            "Cervical dysplasia",
+            "Chlamydial infection",
+            "Cystic Fibrosis",
+            "Diabetes",
+            "Dry Eyes",
+            "Fibrocystic breast disease",
+            "Heart disease",
+            "Hyperkeratosis",
+            "Impotence (Lack of sperm production)",
+            "Inflammatory bowel disease",
+            "Kaposi's sarcoma",
+            "Laryngeal cancer (cancer of the larynx)",
+            "Leukoplakia",
+            "Lung cancer",
+            "Male and female infertility",
+            "Measles",
+            "Osteoarthritis",
+            "Otitis media (ear infection)",
+            "Photosensitivity",
+            "Pneumonia",
+            "Poor vision",
+            "Premature Delivery",
+            "Prostate cancer",
+            "Psoriasis",
+            "Rheumatoid arthritis",
+            "Skin cancer",
+            "Thyroid disorders",
+            "Ulcers",
+            "Vaginal candidiasis",
+            "Vaginitis",
+            "Varicose veins",
+            "Viral infections"
         ],
-        "requirements": [
-            "Iron",
-            "Zinc"
+        "sources": [
+            "Liver",
+            "Chives",
+            "Pepper",
+            "Carrots",
+            "Spinach",
+            "Kale",
+            "Broccoli"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Convulsions",
+            "Depression",
+            "Hair loss",
+            "Irritability",
+            "Low blood sugar (low glycemic index)",
+            "Mental confusion",
+            "Muscle cramps",
+            "Muscular weakness",
+            "Nervousness",
+            "Seborrhea",
+            "Vitamin B-complex metabolism impairment",
+            "Vomiting",
+            "Water retention"
+        ],
+        "description": "Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenine triphosphate (ATP), the energy form used by all cells inthe body. The main function of Vitamin B6 is in metabolism.",
+        "excess": [
+            "Insomnia",
+            "Neuropathy",
+            "Numbness",
+            "Pain"
+        ],
+        "functions": [
+            "Amino acid metabolism",
+            "Carbohydrate metabolism",
+            "Fat metabolism",
+            "Gene expression",
+            "Hemoglobin formation",
+            "Hormone balance",
+            "Immune function",
+            "Liver detoxification",
+            "Nervous system health",
+            "Potassium balance",
+            "Serotonin formation",
+            "Sodium balance",
+            "Vitamin B-complex metabolism"
+        ],
+        "intake": "1.3",
+        "metabolism": {
+            "absorption": "100% vitamin B6 from dietary intake is absorbed",
+            "enhancements": [],
+            "impairments": [
+                "Alcohol",
+                "Birth control pills",
+                "Caffeine",
+                "Tobacco",
+                "X-rays"
+            ],
+            "requirements": [
+                "Vitamin B-complex",
+                "Magnesium"
+            ]
+        },
+        "name": "Vitamin B6",
+        "organs": [
+            "immune system",
+            "liver",
+            "muscles",
+            "nervous system"
+        ],
+        "preventions": [
+            " ADHD",
+            " Anemia",
+            " Asthma",
+            " Carpal tunnel syndrome",
+            " Depression",
+            " Epilepsy",
+            " Fibrocystic breast disease",
+            " High homocysteine",
+            " Morning sickness",
+            " Premenstrual syndrome",
+            " Seborrheic dermatitis"
+        ],
+        "sources": [
+            "Whole-grains",
+            "Pepper",
+            "Chives",
+            "Bay leaf",
+            "Rosemary",
+            "Dill",
+            "Parsley",
+            "Sunflower seeds",
+            "Basil",
+            "Garlic"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "name": "Iodine",
+        "organs": [
+            "brain",
+            "muscles",
+            "heart",
+            "pituitary gland",
+            "kidneys"
         ]
     },
-    "name": "Vitamin A",
-    "organs": [
-        "bones",
-        "eyes",
-        "hair",
-        "heart",
-        "immune system",
-        "kidney",
-        "liver",
-        "lungs",
-        "skin",
-        "teeth"
-    ],
-    "preventions": [
-        "Acne",
-        "Acquired Immunodeficiency Syndrome (AIDS)",
-        "Age-related macular degeneration",
-        "AIDS",
-        "Alcoholism",
-        "Angina pectoris",
-        "Asthma",
-        "Atopic dermatitis",
-        "Cataracts",
-        "Cervical cancer",
-        "Cervical dysplasia",
-        "Chlamydial infection",
-        "Cystic Fibrosis",
-        "Diabetes",
-        "Dry Eyes",
-        "Fibrocystic breast disease",
-        "Heart disease",
-        "Hyperkeratosis",
-        "Impotence (Lack of sperm production)",
-        "Inflammatory bowel disease",
-        "Kaposi's sarcoma",
-        "Laryngeal cancer (cancer of the larynx)",
-        "Leukoplakia",
-        "Lung cancer",
-        "Male and female infertility",
-        "Measles",
-        "Osteoarthritis",
-        "Otitis media (ear infection)",
-        "Photosensitivity",
-        "Pneumonia",
-        "Poor vision",
-        "Premature Delivery",
-        "Prostate cancer",
-        "Psoriasis",
-        "Rheumatoid arthritis",
-        "Skin cancer",
-        "Thyroid disorders",
-        "Ulcers",
-        "Vaginal candidiasis",
-        "Vaginitis",
-        "Varicose veins",
-        "Viral infections"
-    ],
-    "sources": [
-        "Liver",
-        "Chives",
-        "Pepper",
-        "Carrots",
-        "Spinach",
-        "Kale",
-        "Broccoli"
-    ],
-    "unit": "mg/day"
-}, {
-    "name": "Iodine",
-    "organs": [
-        "brain",
-        "muscles",
-        "heart",
-        "pituitary gland",
-        "kidneys"
-    ]
-}]
+    {
+        "category": "Essential vitamin/mineral/amino acid",
+        "classification": [
+            {
+                "name": "",
+                "summary": ""
+            }
+        ],
+        "deficiency": [],
+        "description": "",
+        "excess": [],
+        "functions": [],
+        "intake": "",
+        "metabolism": {
+            "absorption": "",
+            "enhancements": [],
+            "impairments": [
+                "Alcohol",
+                "Tobacco"
+            ],
+            "requirements": []
+        },
+        "name": "",
+        "organs": [],
+        "preventions": [],
+        "sources": [],
+        "unit": ""
+    }
+]

@@ -1,70 +1,85 @@
 # Vitamin B6
-Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as metabolism.
+Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenine triphosphate (ATP), the energy form used by all cells inthe body. The main function of Vitamin B6 is in metabolism.
 
-## Absorption
-Vitamin B6 is absorbed in the small intestine. Most of the absorbed vitamin B6 goes to the liver.
-Most of the free vitamin B6 is found in the muscles.
-Vitamin B6 absorption requires: vitamin B-complex, Magnesium.
-Vitamin B6 absorption is impaired by: alcohol, vitamin B-complex deficiency, x-rays, caffeine, tobacco, and birth control pills.
-Excess vitamin B6 is eliminated through urine.
+## Metabolism
+- 100% vitamin B6 from dietary intake is absorbed.
+
+Vitamin B6 absorption is enhanced by:
+- Digestive health;
+
+Vitamin B6 absorption requires:
+- Vitamin B-complex;
+- Magnesium.
+
+Vitamin B6 absorption is impaired by:
+- Alcohol;
+- Birth control pills;
+- Caffeine;
+- Tobacco;
+- X-rays.
 
 ## Functions
-- amino acid metabolism;
-- carbohydrate metabolism;
-- fat metabolism;
-- vitamin B-complex absorption;
-- tryptophan to serotonin synthesis;
-- hemoglobin synthesis and function;
-- nervous system health;
-- liver detoxification;
-- hormone balance;
-- immunity;
-- potassium balance;
-- sodium balance;
-- gene expression.
+- Amino acid metabolism;
+- Carbohydrate metabolism;
+- Fat metabolism;
+- Gene expression;
+- Hemoglobin formation;
+- Hormone balance;
+- Immune function;
+- Liver detoxification;
+- Nervous system health;
+- Potassium balance;
+- Serotonin formation;
+- Sodium balance;
+- Vitamin B-complex metabolism.
 
 ## Deficiency
-- depression;
-- nervousness;
-- insomnia;
-- mental confusion;
-- muscle spasms;
-- convulsions;
-- vomiting;
-- seborrhea;
-- water retention;
-- irritability;
-- low blood sugar;
-- hair loss;
-- muscular weakness;
-- impaired vitamin B-complex absorption.
+- Convulsions;
+- Depression;
+- Hair loss;
+- Irritability;
+- Low blood sugar (low glycemic index);
+- Mental confusion;
+- Muscle cramps;
+- Muscular weakness;
+- Nervousness;
+- Seborrhea;
+- Vitamin B-complex metabolism impairment;
+- Vomiting;
+- Water retention.
 
 ## Excess
-- neuropathy;
-- pain;
-- insomnia
-- numbness.
+- Insomnia;
+- Neuropathy;
+- Numbness;
+- Pain.
 
 ## Disease preventions
-- ADHD
-- Anemia
-- Asthma
-- Carpal tunnel syndrome
-- Depression
-- Epilepsy
-- Fibrocystic breast disease
-- High homocysteine
-- Morning sickness
-- Premenstrual syndrome
-- Seborrheic dermatitis
+- ADHD;
+- Anemia;
+- Asthma;
+- Carpal tunnel syndrome;
+- Depression;
+- Epilepsy;
+- Fibrocystic breast disease;
+- High homocysteine;
+- Morning sickness;
+- Premenstrual syndrome;
+- Seborrheic dermatitis.
 
 ## Food sources
-- meat;
-- greens;
-- bananas.
+- Whole-grains;
+- Pepper;
+- Chives;
+- Bay leaf;
+- Rosemary;
+- Dill;
+- Parsley;
+- Sunflower seeds;
+- Basil;
+- Garlic.
 
-## Average recommended intake
+## Average recomended intake
 - 1.3mg/day.
 
 ## References
@@ -74,3 +89,4 @@ Excess vitamin B6 is eliminated through urine.
 - Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B6
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report?nutrient1=415&nutrient2=&nutrient3=&&max=1000&subset=0&offset=0&sort=c&totCount=7669&measureby=g)
