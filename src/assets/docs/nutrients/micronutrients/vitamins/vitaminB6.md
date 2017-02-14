@@ -1,5 +1,5 @@
 # Vitamin B6
-Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B6 is in metabolism.
+Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B6 is in metabolism.
 
 ## Metabolism
 - 100% vitamin B6 from dietary intake is absorbed.
