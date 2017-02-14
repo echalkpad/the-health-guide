@@ -5,16 +5,33 @@ Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. V
 - 100% vitamin B6 from dietary intake is absorbed.
 
 Vitamin B6 absorption is enhanced by:
-- Digestive health;
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
 
 Vitamin B6 absorption requires:
-- Vitamin B-complex;
-- Magnesium.
+- Healthy gut flora;
+- Magnesium;
+- Vitamin B-complex.
 
 Vitamin B6 absorption is impaired by:
 - Alcohol;
+- Antibiotics;
 - Birth control pills;
 - Caffeine;
+- High sugar intake;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Unhealthy gut flora;
 - Tobacco;
 - X-rays.
 
@@ -58,6 +75,7 @@ Vitamin B6 absorption is impaired by:
 - ADHD;
 - Anemia;
 - Asthma;
+- Cardiovascular disease;
 - Carpal tunnel syndrome;
 - Depression;
 - Epilepsy;
@@ -83,10 +101,14 @@ Vitamin B6 absorption is impaired by:
 - 1.3mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin B6](https://en.wikipedia.org/wiki/Vitamin_B6)
-- The world's healthiest foods, [Vitamin B6](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=108)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Vitamin B6_](https://en.wikipedia.org/wiki/Vitamin_B6)
+- The world's healthiest foods, [_Vitamin B6_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=108)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B6
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report?nutrient1=415&nutrient2=&nutrient3=&&max=1000&subset=0&offset=0&sort=c&totCount=7669&measureby=g)
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)

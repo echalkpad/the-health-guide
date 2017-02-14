@@ -1,8 +1,6 @@
-[
-    {
+[{
         "category": "Essential vitamin",
-        "classification": [
-            {
+        "classification": [{
                 "name": "Carotenoids",
                 "summary": "plant source"
             },
@@ -61,16 +59,33 @@
             "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
             "enhancements": [
                 "Cooking",
-                "Fats"
+                "Fats",
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
             ],
             "impairments": [
                 "Alcohol",
                 "Antibiotics",
                 "Cholesterol lowering drugs",
+                "High sugar intake",
                 "Laxatives",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Unhealthy gut flora",
                 "Tobacco"
             ],
             "requirements": [
+                "Healthy gut flora",
                 "Iron",
                 "Zinc"
             ]
@@ -186,38 +201,59 @@
         "intake": "1.3",
         "metabolism": {
             "absorption": "100% vitamin B6 from dietary intake is absorbed",
-            "enhancements": [],
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
             "impairments": [
                 "Alcohol",
+                "Antibiotics",
                 "Birth control pills",
                 "Caffeine",
+                "High sugar intake",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Unhealthy gut flora",
                 "Tobacco",
                 "X-rays"
             ],
             "requirements": [
-                "Vitamin B-complex",
-                "Magnesium"
+                "Healthy gut flora",
+                "Magnesium",
+                "Vitamin B-complex"
             ]
         },
         "name": "Vitamin B6",
         "organs": [
+            "heart",
             "immune system",
             "liver",
             "muscles",
             "nervous system"
         ],
         "preventions": [
-            " ADHD",
-            " Anemia",
-            " Asthma",
-            " Carpal tunnel syndrome",
-            " Depression",
-            " Epilepsy",
-            " Fibrocystic breast disease",
-            " High homocysteine",
-            " Morning sickness",
-            " Premenstrual syndrome",
-            " Seborrheic dermatitis"
+            "ADHD",
+            "Anemia",
+            "Asthma",
+            "Cardiovascular Disease",
+            "Carpal tunnel syndrome",
+            "Depression",
+            "Epilepsy",
+            "Fibrocystic breast disease",
+            "High homocysteine",
+            "Morning sickness",
+            "Premenstrual syndrome",
+            "Seborrheic dermatitis"
         ],
         "sources": [
             "Whole-grains",
@@ -245,12 +281,10 @@
     },
     {
         "category": "Essential vitamin/mineral/amino acid",
-        "classification": [
-            {
-                "name": "",
-                "summary": ""
-            }
-        ],
+        "classification": [{
+            "name": "",
+            "summary": ""
+        }],
         "deficiency": [],
         "description": "",
         "excess": [],
@@ -258,12 +292,30 @@
         "intake": "",
         "metabolism": {
             "absorption": "",
-            "enhancements": [],
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
             "impairments": [
                 "Alcohol",
+                "Antibiotics",
+                "High sugar intake",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Unhealthy gut flora",
                 "Tobacco"
             ],
-            "requirements": []
+            "requirements": ["Healthy gut flora"]
         },
         "name": "",
         "organs": [],

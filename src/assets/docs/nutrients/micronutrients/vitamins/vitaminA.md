@@ -11,9 +11,20 @@ Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision 
 
 Vitamin A absorption is enhanced by:
 - Cooking;
-- Fats.
+- Fats;
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
 
 Vitamin A absorption requires:
+- Healthy gut flora;
 - Iron;
 - Zinc.
 
@@ -21,7 +32,13 @@ Vitamin A absorption is impaired by:
 - Alcohol;
 - Antibiotics;
 - Cholesterol lowering drugs;
+- High sugar intake;
 - Laxatives;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Unhealthy gut flora;
 - Tobacco.
 
 ## Functions
@@ -125,9 +142,13 @@ Vitamin A absorption is impaired by:
 - 0.9mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin A](https://en.wikipedia.org/wiki/Vitamin_A)
-- The world's healthiest foods, [Vitamin A](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Vitamin A_](https://en.wikipedia.org/wiki/Vitamin_A)
+- The world's healthiest foods, [_Vitamin A_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin A
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
