@@ -21,6 +21,30 @@ Excess vitamin B1 is eliminated through urine.
 - stabilizes heart beats.
 
 ## Deficiency
+- Back pain (radiating to the feet, toes, or other parts of the body);
+- Coordination decrease;
+- Depression;
+- Double vision;
+- Emotion suppression;
+- Energy loss;
+- Fatigue;
+- Headache;
+- Indifference;
+- Irritability;
+- Memory loss;
+- Mental ability impairment;
+- Mood swings;
+- Motivation loss;
+- Muscle rigidity;
+- Seizures;
+- Speaking difficulties;
+- Tingling;
+- Tiredness;
+- Tremors;
+- Vision loss;
+- Weakness;
+- Weariness;
+- Vitamin B-complex metabolism impairment.
 - edema;
 - enlarged liver;
 - muscular atrophy;
@@ -39,6 +63,8 @@ Excess vitamin B1 is eliminated through urine.
 - stress on nervous system.
 
 ## Disease preventions
+- Lethargy;
+- Nervous system disorders;
 - hypertyroidism;
 - beriberi;
 - cataracts;
@@ -71,3 +97,8 @@ Excess vitamin B1 is eliminated through urine.
 - The world's healthiest foods, [Vitamin B1 - Thiamin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)
 - Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Thiamine
+- Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
+- Wikipedia, [Nervous system disease](https://en.wikipedia.org/wiki/Nervous system disease)
+- Wikipedia, [Central nervous system disease](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
+- Wikipedia, [Peripheral neuropathy](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
+- Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)

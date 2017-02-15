@@ -1,5 +1,4 @@
-[
-    {
+[{
         "name": "Vertigo",
         "nickname": "Dizziness",
         "symptoms": [
@@ -16,23 +15,25 @@
         "name": "Nervous system disorders",
         "nickname": "",
         "symptoms": [
-            "back pain (radiating to the feet, toes, or other parts of the body)",
-            "coordination decrease",
-            "double vision",
-            "feeling decrease",
-            "headache",
-            "memory loss",
-            "mental ability impairment",
-            "mood swings",
-            "muscle rigidity",
-            "seizures",
-            "speaking difficulties",
-            "tingling",
-            "tremors",
-            "vision loss",
-            "weakness"
-        ]
-        // Reference: - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
+                "back pain (radiating to the feet, toes, or other parts of the body)",
+                "coordination decrease",
+                "double vision",
+                "emotion suppression",
+                "headache",
+                "indifference",
+                "irritability",
+                "memory loss",
+                "mental ability impairment",
+                "mood swings",
+                "muscle rigidity",
+                "seizures",
+                "speaking difficulties",
+                "tingling",
+                "tremors",
+                "vision loss",
+                "weakness"
+            ]
+            // Reference: - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
     },
     {
         "causes": [
@@ -48,14 +49,37 @@
         "name": "Lethargy",
         "nickname": "Lack of energy",
         "symptoms": [
-            "apathy",
-            "depression",
-            "energy loss",
-            "fatigue",
-            "motivation decrease",
-            "tiredness",
-            "weariness"
-        ]
-        // Reference: - Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
+                "apathy",
+                "depression",
+                "energy loss",
+                "fatigue",
+                "motivation loss",
+                "tiredness",
+                "weariness"
+            ]
+            // Reference: - Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
+    },
+    {
+        "causes": [
+            "boredom",
+            "disorder",
+            "inadequate sleep",
+            "lack of exercise",
+            "nutrient deficiency",
+            "overexertion",
+            "overworking",
+            "stress"
+        ],
+        "name": "Apathy",
+        "nickname": "Indifference",
+        "symptoms": [
+                "concern loss",
+                "emotion suppression",
+                "excitement loss",
+                "motivation loss",
+                "passion loss",
+                "sense of purpose loss"
+            ]
+            // Reference: - Wikipedia, [Apathy](https://en.wikipedia.org/wiki/Apathy)
     }
 ]

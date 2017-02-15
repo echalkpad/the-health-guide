@@ -1,7 +1,5 @@
-ADD LETHARGY AND NERVOUS SYSTEM DISORDERS TO ALL B-COMPLEX
-
 # Vitamin B12
-Vitamin B12 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is to make red blood cells and nervous system health.
+Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is to make red blood cells and nervous system health.
 
 ## Metabolism
 - 50% vitamin B12 from dietary intake is absorbed.
@@ -48,21 +46,22 @@ Vitamin B12 absorption is impaired by:
 
 ## Deficiency
 - Anemia;
-- Apathy;
 - Appetite loss;
 - Back pain (radiating to the feet, toes, or other parts of the body);
 - Coordination decrease;
 - Depression;
 - Double vision;
-- Fatigue;
-- Feeling decrease;
+- Emotion suppression;
 - Energy loss;
+- Fatigue;
 - Headache;
+- Indifference;
+- Irritability;
 - Liver enlargement; 
 - Memory loss;
 - Mental ability impairment;
 - Mood swings;
-- Motivation decrease;
+- Motivation loss;
 - Muscle rigidity;
 - Seizures;
 - Speaking difficulties;
@@ -75,17 +74,11 @@ Vitamin B12 absorption is impaired by:
 - Vitamin B-complex metabolism impairment.
 
 ## Disease preventions
-- Alzheimer's disease;
 - Asthma;
 - Atrophic gastritis;
-- Depression;
 - Kidney disease;
 - Lethargy;
-- Macular degeneration;
-- Migraine;
-- Multiple sclerosis;
 - Nervous system disorders;
-- Neuropathy;
 - Pernicious anemia;
 - Shingles;
 - Tinnitus.
@@ -120,4 +113,7 @@ Vitamin B12 absorption is impaired by:
 - Barbara Bolen, PhD, "Very well; [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
 - Barbara Bolen, PhD, "Very well; [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
 - Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
+- Wikipedia, [Nervous system disease](https://en.wikipedia.org/wiki/Nervous system disease)
+- Wikipedia, [Central nervous system disease](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
+- Wikipedia, [Peripheral neuropathy](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
 - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)

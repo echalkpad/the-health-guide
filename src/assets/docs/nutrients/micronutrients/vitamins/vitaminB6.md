@@ -50,19 +50,36 @@ Vitamin B6 absorption is impaired by:
 - Vitamin B-complex metabolism.
 
 ## Deficiency
-- Convulsions;
+- Back pain (radiating to the feet, toes, or other parts of the body);
+- Coordination decrease;
 - Depression;
+- Double vision;
+- Emotion suppression;
+- Energy loss;
+- Fatigue;
 - Hair loss;
+- Headache;
+- Indifference;
 - Irritability;
 - Low blood sugar (low glycemic index);
-- Mental confusion;
-- Muscle cramps;
-- Muscular weakness;
-- Nervousness;
+- Memory loss;
+- Mental ability impairment;
+- Mood swings;
+- Motivation loss;
+- Muscle rigidity;
 - Seborrhea;
+- Seizures;
+- Speaking difficulties;
+- Tingling;
+- Tiredness;
+- Tremors;
+- Vision loss;
+- Weakness;
+- Weariness;
 - Vitamin B-complex metabolism impairment;
 - Vomiting;
 - Water retention.
+
 
 ## Excess
 - Insomnia;
@@ -71,16 +88,15 @@ Vitamin B6 absorption is impaired by:
 - Pain.
 
 ## Disease preventions
-- ADHD;
 - Anemia;
 - Asthma;
 - Cardiovascular disease;
 - Carpal tunnel syndrome;
-- Depression;
-- Epilepsy;
 - Fibrocystic breast disease;
 - High homocysteine;
+- Lethargy;
 - Morning sickness;
+- Nervous system disorders;
 - Premenstrual syndrome;
 - Seborrheic dermatitis.
 
@@ -111,3 +127,8 @@ Vitamin B6 absorption is impaired by:
 - Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
 - Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
+- Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
+- Wikipedia, [Nervous system disease](https://en.wikipedia.org/wiki/Nervous system disease)
+- Wikipedia, [Central nervous system disease](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
+- Wikipedia, [Peripheral neuropathy](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
+- Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
