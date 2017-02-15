@@ -56,7 +56,7 @@
         ],
         "intake": "0.9",
         "metabolism": {
-            "absorption": "70%-90% vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
+            "absorption": "70%-90% Vitamin A from dietary intake is absorbed. 9%-22% carotenoids from dietary intake are absorbed.",
             "enhancements": [
                 "Cooking",
                 "Fats",
@@ -96,7 +96,7 @@
             "hair",
             "heart",
             "immune system",
-            "kidney",
+            "kidneys",
             "liver",
             "lungs",
             "skin",
@@ -161,7 +161,7 @@
         "category": "Essential vitamin",
         "classification": [],
         "deficiency": [
-            "Back pain (radiating to the feet, toes, or other parts of the body)",
+            "Back pain",
             "Coordination decrease",
             "Depression",
             "Double vision",
@@ -178,7 +178,7 @@
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
-            "Seborrhea",
+            "Numbness",
             "Seizures",
             "Speaking difficulties",
             "Tingling",
@@ -215,7 +215,7 @@
         ],
         "intake": "1.3",
         "metabolism": {
-            "absorption": "100% vitamin B6 from dietary intake is absorbed",
+            "absorption": "100% Vitamin B6 from dietary intake is absorbed",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -289,7 +289,7 @@
         "deficiency": [
             "Anemia",
             "Appetite loss",
-            "Back pain (radiating to the feet, toes, or other parts of the body)",
+            "Back pain",
             "Coordination decrease",
             "Depression",
             "Double vision",
@@ -305,6 +305,7 @@
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
+            "Numbness",
             "Seizures",
             "Speaking difficulties",
             "Tingling",
@@ -331,7 +332,7 @@
         ],
         "intake": "0.0024",
         "metabolism": {
-            "absorption": "50% vitamin B12 from dietary intake is absorbed",
+            "absorption": "50% Vitamin B12 from dietary intake is absorbed",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -391,6 +392,116 @@
             "Tuna",
             "Trout",
             "Eggs"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Appetite loss",
+            "Back pain",
+            "Conjunctivitis",
+            "Coordination decrease",
+            "Depression",
+            "Dermatitis",
+            "Double vision",
+            "Emotion suppression",
+            "Energy loss",
+            "Fatigue",
+            "Gray skin dryness",
+            "Hair loss",
+            "Hallucinations",
+            "Headache",
+            "Indifference",
+            "Inflammation",
+            "Irritability",
+            "Memory loss",
+            "Mental ability impairment",
+            "Mild skin disorders",
+            "Mood swings",
+            "Motivation loss",
+            "Muscle pain",
+            "Muscle rigidity",
+            "Numbness",
+            "Seizures",
+            "Speaking difficulties",
+            "Tingling",
+            "Tiredness",
+            "Tremors",
+            "Vision loss",
+            "Weakness",
+            "Weariness",
+            "Vitamin B-complex metabolism impairment"
+        ],
+        "description": "Vitamin B7 , Vitamin H, or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B7 is cell growth and fatty-acids formation.",
+        "excess": ["No adverse effects known"],
+        "functions": [
+            "Amino acid metabolism",
+            "Blood sugar balance",
+            "Carbohydrate metabolism",
+            "Cell growth",
+            "Fat metabolism",
+            "Fatty-acids formation",
+            "Nervous system health",
+            "Skin health",
+            "Vitamin B-complex metabolism"
+        ],
+        "intake": "0.03",
+        "metabolism": {
+            "absorption": "no information about Vitamin B7 absorption was found",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Caffeine",
+                "High sugar intake",
+                "Low fiber",
+                "Processed food",
+                "Raw egg white",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Protease",
+                "Vitamin B-complex"
+            ]
+        },
+        "name": "Vitamin B7 (Biotin)",
+        "organs": [
+            "brain",
+            "kidneys",
+            "muscles",
+            "skin",
+            "spinal chord"
+        ],
+        "preventions": [
+            "Brittle nails",
+            "Diabetes",
+            "Hair loss",
+            "Lethargy",
+            "Nervous system disorders",
+            "Rash"
+        ],
+        "sources": [
+            "Yeast",
+            "Soybeeans",
+            "Green vegetables",
+            "Nuts",
+            "Egg yolks"
         ],
         "unit": "mg/day"
     },

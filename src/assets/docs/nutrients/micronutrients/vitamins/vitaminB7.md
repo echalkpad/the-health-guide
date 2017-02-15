@@ -1,39 +1,75 @@
 # Vitamin B7
-Vitamin B7 or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is in cell growth.
+Vitamin B7 , Vitamin H, or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B7 is cell growth and fatty-acids formation.
 
-## Absorption
-Vitamin B7 is absorbed in the small intestine.
-Vitamin B7 absorption requires: vitamin B-complex.
-Vitamin B7 absorption is impaired by: vitamin B-complex deficiency, alcohol, tobacco, raw egg white, caffeine, and antibiotics.
-Excess vitamin B7 is eliminated through urine.
+## Metabolism
+- no information about how much Vitamin B7 from dietary intake is absorbed by the human body was found.
+
+Vitamin B7 absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin B7 absorption requires:
+- Healthy gut;
+- Protease;
+- Vitamin B-complex.
+
+Vitamin B7 absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Caffeine;
+- High sugar intake;
+- Low fiber;
+- Processed food;
+- Raw egg white;
+- Synthetic supplements;
+- Stress;
+- Tobacco.
 
 ## Functions
 - Amino acid metabolism;
+- Blood sugar balance;
 - Carbohydrate metabolism;
+- Cell growth;
 - Fat metabolism;
-- vitamin B-complex absorption;
-- mental health;
-- cell growth;
-- blood sugar balance;
-- skin health.
+- Fatty-acids formation;
+- Nervous system health;
+- Skin health;
+- Vitamin B-complex metabolism.
 
 ## Deficiency
-- Back pain (radiating to the feet, toes, or other parts of the body);
+- Appetite loss;
+- Back pain;
+- Conjunctivitis;
 - Coordination decrease;
 - Depression;
+- Dermatitis;
 - Double vision;
 - Emotion suppression;
 - Energy loss;
 - Fatigue;
+- Gray skin dryness;
+- Hair loss;
+- Hallucinations;
 - Headache;
 - Indifference;
+- Inflammation;
 - Irritability;
 - Memory loss;
 - Mental ability impairment;
+- Mild skin disorders;
 - Mood swings;
 - Motivation loss;
+- Muscle pain;
 - Muscle rigidity;
+- Numbness;
 - Seizures;
 - Speaking difficulties;
 - Tingling;
@@ -43,50 +79,33 @@ Excess vitamin B7 is eliminated through urine.
 - Weakness;
 - Weariness;
 - Vitamin B-complex metabolism impairment.
-- dermatitis;
-- lethargy;
-- hallucination;
-- numbness;
-- tingling at extremities;
-- fatigue;
-- depression;
-- inflammation
-- hair loss;
-- muscle pain;
-- mild skin disorders;
-- lack of energy;
-- poor appetite;
-- extreme exhaustion;
-- dry gray skin;
-- conjunctivitis;
-- impaired vitamin B-complex absorption.
 
 ## Excess
-No adverse effects known.
+- no adverse effects known.
 
 ## Disease preventions
-- Lethargy;
-- Nervous system disorders;
 - Brittle nails;
 - Diabetes;
 - Hair loss;
-- Seizures;
-- Skin rash.
+- Lethargy;
+- Nervous system disorders;
+- Rash.
 
 ## Food sources
- - egg yolk;
- - liver;
- - peanuts;
- - leafy green vegetables.
+- Yeast;
+- Soybeeans;
+- Green vegetables;
+- Nuts;
+- Egg yolks.
 
 ## Average recommended intake
 - 0.03mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Biotin](https://en.wikipedia.org/wiki/Biotin)
-- The world's healthiest foods, [Biotin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=42)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Biotin_](https://en.wikipedia.org/wiki/Biotin)
+- The world's healthiest foods, [_Biotin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=42)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B7
 - Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)

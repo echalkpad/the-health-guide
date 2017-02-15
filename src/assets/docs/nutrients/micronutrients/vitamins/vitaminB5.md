@@ -21,7 +21,7 @@ Excess vitamin B5 is eliminated through urine.
 - healthy digestive tract.
 
 ## Deficiency
-- Back pain (radiating to the feet, toes, or other parts of the body);
+- Back pain;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -36,6 +36,7 @@ Excess vitamin B5 is eliminated through urine.
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;
+- Numbness;
 - Seizures;
 - Speaking difficulties;
 - Tingling;

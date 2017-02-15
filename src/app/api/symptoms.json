@@ -19,5 +19,11 @@
             "Seizures"
         ],
         "description": "Body muscles contract and relax rapidly and repeatedly, resulting in an uncontrolled shaking of the body."
+    }, {
+        "name": "Numbness"
+    }, {
+        "name": "Paresthesia"
+    }, {
+        "name": "Rash"
     }
 ]

@@ -2,7 +2,7 @@
 Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is to make red blood cells and nervous system health.
 
 ## Metabolism
-- 50% vitamin B12 from dietary intake is absorbed.
+- 50% Vitamin B12 from dietary intake is absorbed.
 
 Vitamin B12 absorption is enhanced by:
 - Fiber;
@@ -47,7 +47,7 @@ Vitamin B12 absorption is impaired by:
 ## Deficiency
 - Anemia;
 - Appetite loss;
-- Back pain (radiating to the feet, toes, or other parts of the body);
+- Back pain;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -63,6 +63,7 @@ Vitamin B12 absorption is impaired by:
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;
+- Numbness;
 - Seizures;
 - Speaking difficulties;
 - Tingling;

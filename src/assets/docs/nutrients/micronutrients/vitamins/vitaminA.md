@@ -6,7 +6,7 @@ Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision 
 - Carotenoids - plant source
 
 ## Metabolism
-- 70%-90% of vitamin A is absorbed;
+- 70%-90% of Vitamin A is absorbed;
 - 9%-22% of carotenoids are absorbed.
 
 Vitamin A absorption is enhanced by:

@@ -25,7 +25,7 @@ Excess vitamin B2 is eliminated through urine.
 - body tissue development.
 
 ## Deficiency
-- Back pain (radiating to the feet, toes, or other parts of the body);
+- Back pain;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -40,6 +40,7 @@ Excess vitamin B2 is eliminated through urine.
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;
+- Numbness;
 - Seizures;
 - Speaking difficulties;
 - Tingling;
