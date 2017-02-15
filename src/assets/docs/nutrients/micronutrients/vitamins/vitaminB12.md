@@ -1,3 +1,5 @@
+ADD LETHARGY AND NERVOUS SYSTEM DISORDERS TO ALL B-COMPLEX
+
 # Vitamin B12
 Vitamin B12 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is to make red blood cells and nervous system health.
 
