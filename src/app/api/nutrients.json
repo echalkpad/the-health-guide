@@ -81,11 +81,10 @@
                 "Processed food",
                 "Synthetic supplements",
                 "Stress",
-                "Unhealthy gut flora",
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut flora",
+                "Healthy gut",
                 "Iron",
                 "Zinc"
             ]
@@ -223,12 +222,11 @@
                 "Processed food",
                 "Synthetic supplements",
                 "Stress",
-                "Unhealthy gut flora",
                 "Tobacco",
                 "X-rays"
             ],
             "requirements": [
-                "Healthy gut flora",
+                "Healthy gut",
                 "Magnesium",
                 "Vitamin B-complex"
             ]
@@ -312,10 +310,10 @@
                 "Processed food",
                 "Synthetic supplements",
                 "Stress",
-                "Unhealthy gut flora",
+                "Unhealthy gut",
                 "Tobacco"
             ],
-            "requirements": ["Healthy gut flora"]
+            "requirements": ["Healthy gut"]
         },
         "name": "",
         "organs": [],

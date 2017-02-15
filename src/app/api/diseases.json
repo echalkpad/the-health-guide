@@ -11,5 +11,51 @@
             "vomiting",
             "walking difficulties"
         ]
+    },
+    {
+        "name": "Nervous system disorders",
+        "nickname": "",
+        "symptoms": [
+            "back pain (radiating to the feet, toes, or other parts of the body)",
+            "coordination decrease",
+            "double vision",
+            "feeling decrease",
+            "headache",
+            "memory loss",
+            "mental ability impairment",
+            "mood swings",
+            "muscle rigidity",
+            "seizures",
+            "speaking difficulties",
+            "tingling",
+            "tremors",
+            "vision loss",
+            "weakness"
+        ]
+        // Reference: - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
+    },
+    {
+        "causes": [
+            "boredom",
+            "disorder",
+            "inadequate sleep",
+            "lack of exercise",
+            "nutrient deficiency",
+            "overexertion",
+            "overworking",
+            "stress"
+        ],
+        "name": "Lethargy",
+        "nickname": "Lack of energy",
+        "symptoms": [
+            "apathy",
+            "depression",
+            "energy loss",
+            "fatigue",
+            "motivation decrease",
+            "tiredness",
+            "weariness"
+        ]
+        // Reference: - Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
     }
 ]

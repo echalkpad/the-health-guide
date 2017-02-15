@@ -10,9 +10,9 @@ anticonvulsant drugs, methotrexate, etc.)
 Excess vitamin B9 is eliminated through urine.
 
 ## Functions
-- amino acid metabolism;
-- fat metabolism;
-- carbohydrate metabolism;
+- Amino acid metabolism;
+- Carbohydrate metabolism;
+- Fat metabolism;
 - vitamin B-complex absorption;
 - blood cell formation;
 - DNA synthesis;

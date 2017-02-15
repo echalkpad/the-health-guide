@@ -9,9 +9,9 @@ Vitamin B2 absorption is impaired by: vitamin B-complex deficiency, alcohol, tob
 Excess vitamin B2 is eliminated through urine.
 
 ## Functions
-- amino acid metabolism;
-- carbohydrate metabolism;
-- fat metabolism;
+- Amino acid metabolism;
+- Carbohydrate metabolism;
+- Fat metabolism;
 - vitamin B-complex absorption;
 - iron absorption;
 - red blood cell formation;

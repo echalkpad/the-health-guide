@@ -24,7 +24,7 @@ Vitamin A absorption is enhanced by:
 - Stress management.
 
 Vitamin A absorption requires:
-- Healthy gut flora;
+- Healthy gut;
 - Iron;
 - Zinc.
 
@@ -38,7 +38,6 @@ Vitamin A absorption is impaired by:
 - Processed food;
 - Synthetic supplements;
 - Stress;
-- Unhealthy gut flora;
 - Tobacco.
 
 ## Functions

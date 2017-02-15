@@ -17,7 +17,7 @@
 - Stress management.
 
 [Name] absorption requires:
-- Healthy gut flora
+- Healthy gut
 
 [Name] absorption is impaired by:
 - Alcohol;
@@ -27,7 +27,6 @@
 - Processed food;
 - Synthetic supplements;
 - Stress;
-- Unhealthy gut flora;
 - Tobacco.
 
 ## Functions

@@ -9,9 +9,9 @@ Vitamin B2 absorption is impaired by: vitamin B-complex deficiency, stress, toba
 Excess vitamin B1 is eliminated through urine.
 
 ## Functions
-- amino acid metabolism;
-- carbohydrate metabolism;
-- fat metabolism;
+- Amino acid metabolism;
+- Carbohydrate metabolism;
+- Fat metabolism;
 - cell growth;
 - circulatory system health;
 - nervous system health;

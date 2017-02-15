@@ -17,7 +17,7 @@ Vitamin B6 absorption is enhanced by:
 - Stress management.
 
 Vitamin B6 absorption requires:
-- Healthy gut flora;
+- Healthy gut;
 - Magnesium;
 - Vitamin B-complex.
 
@@ -31,7 +31,6 @@ Vitamin B6 absorption is impaired by:
 - Processed food;
 - Synthetic supplements;
 - Stress;
-- Unhealthy gut flora;
 - Tobacco;
 - X-rays.
 

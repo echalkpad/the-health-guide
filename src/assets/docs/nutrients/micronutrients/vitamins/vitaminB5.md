@@ -9,9 +9,9 @@ Vitamin B3 absorption is impaired by: vitamin B-complex deficiency, high vitamin
 Excess vitamin B5 is eliminated through urine.
 
 ## Functions
-- amino acid metabolism;
-- carbohydrate metabolism;
-- fat metabolism;
+- Amino acid metabolism;
+- Carbohydrate metabolism;
+- Fat metabolism;
 - synthesis of cholesterol;
 - synthesis of fatty acids;
 - synthesis of steroids;
