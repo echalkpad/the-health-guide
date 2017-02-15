@@ -100,8 +100,9 @@ Hypertension
 - The world's healthiest foods, [Vitamin B2 - Niacin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)
 - Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Niacin
-- Wikipedia, [Lethargy](https://en.wikipedia.org/wiki/Lethargy)
-- Wikipedia, [Nervous system disease](https://en.wikipedia.org/wiki/Nervous system disease)
-- Wikipedia, [Central nervous system disease](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
-- Wikipedia, [Peripheral neuropathy](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
+- Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)
+- Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
+- Wikipedia, [_Nervous system disease_](https://en.wikipedia.org/wiki/Nervous system disease)
+- Wikipedia, [_Central nervous system disease_](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
+- Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
 - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
