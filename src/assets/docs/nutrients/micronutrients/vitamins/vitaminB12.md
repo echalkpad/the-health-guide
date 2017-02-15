@@ -97,7 +97,9 @@ Vitamin B12 absorption is impaired by:
 - Mackerel;
 - Hering;
 - Sardines;
-- Tuna.
+- Tuna;
+- Trout;
+- Eggs.
 
 ## Average recommended intake
 - 0.0024mg/day.
