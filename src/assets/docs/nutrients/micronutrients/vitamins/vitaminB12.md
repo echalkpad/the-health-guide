@@ -14,7 +14,8 @@ Vitamin B12 absorption is enhanced by:
 - Reduced antibiotics;
 - Reduced synthetic supplements;
 - Reduced sugars;
-- Stress management.
+- Stress management;
+- Vitamin B9 (Folate).
 
 Vitamin B12 absorption requires:
 - Healthy gut;
