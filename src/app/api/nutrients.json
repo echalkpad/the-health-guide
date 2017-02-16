@@ -56,7 +56,7 @@
         ],
         "intake": "0.9",
         "metabolism": {
-            "absorption": "70%-90% Vitamin A from dietary intake is absorbed if the gut is healthy. 9%-22% carotenoids from dietary intake are absorbed if the gut is healthy.",
+            "absorption": "70%-90% Vitamin A is absorbed if the gut is healthy. 9%-22% carotenoids from dietary intake are absorbed if the gut is healthy.",
             "enhancements": [
                 "Cooking",
                 "Fats",
@@ -171,7 +171,7 @@
             "Headache",
             "Indifference",
             "Irritability",
-            "Low blood sugar (low glycemic index)",
+            "Low blood sugar",
             "Memory loss",
             "Mental ability impairment",
             "Mood swings",
@@ -214,7 +214,7 @@
         ],
         "intake": "1.3",
         "metabolism": {
-            "absorption": "100% Vitamin B6 from dietary intake is absorbed if the gut is healthy",
+            "absorption": "100% Vitamin B6 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -253,6 +253,7 @@
             "immune system",
             "liver",
             "muscles",
+            "pancreas",
             "spinal chord"
         ],
         "preventions": [
@@ -332,7 +333,7 @@
         ],
         "intake": "0.0024",
         "metabolism": {
-            "absorption": "50% Vitamin B12 from dietary intake is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B12 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -451,7 +452,7 @@
         ],
         "intake": "0.03",
         "metabolism": {
-            "absorption": "100% Vitamin B7 from dietary intake is absorbed if the gut is healthy",
+            "absorption": "100% Vitamin B7 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -560,7 +561,7 @@
         ],
         "intake": "0.4",
         "metabolism": {
-            "absorption": "50% Vitamin B9 from dietary intake is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B9 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -756,30 +757,60 @@
             "Mushrooms"
         ],
         "unit": "mg/day"
-    },
-    {
-        "name": "Iodine",
-        "organs": [
-            "brain",
-            "muscles",
-            "heart",
-            "pituitary gland",
-            "kidneys"
-        ]
-    },
-    {
-        "category": "Essential vitamin/mineral/amino acid",
-        "classification": [{
-            "name": "",
-            "summary": ""
-        }],
-        "deficiency": [],
-        "description": "",
-        "excess": [],
-        "functions": [],
-        "intake": "",
+    }, {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Abdominal pain",
+            "Arthritis",
+            "Back pain",
+            "Coordination decrease",
+            "Depression",
+            "Dermatitis",
+            "Double vision",
+            "Emotion suppression",
+            "Energy loss",
+            "Fatigue",
+            "Headache",
+            "Indifference",
+            "Infections",
+            "Irritability",
+            "Kidney disorders",
+            "Low blood sugar",
+            "Memory loss",
+            "Mental ability impairment",
+            "Mood swings",
+            "Motivation loss",
+            "Muscle rigidity",
+            "Numbness",
+            "Seizures",
+            "Sleep disorders",
+            "Speaking difficulties",
+            "Tingling",
+            "Tiredness",
+            "Tremors",
+            "Vision loss",
+            "Vitamin B-complex metabolism impairment",
+            "Weakness",
+            "Weariness"
+        ],
+        "description": "Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B5 is coenzyme A (CoA) formation.",
+        "excess": ["no adverse effects known"],
+        "functions": [
+            "Amino acid metabolism",
+            "Carbohydrate metabolism",
+            "Fat metabolism",
+            "synthesis of cholesterol",
+            "synthesis of fatty acids",
+            "synthesis of steroids",
+            "growth",
+            "healthy skin",
+            "healthy nerves",
+            "healthy digestive tract"
+        ],
+        "intake": "5",
         "metabolism": {
-            "absorption": "from dietary intake is absorbed if the gut is healthy",
+            "absorption": "50% of Vitamin B5 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -800,7 +831,85 @@
                 "Processed food",
                 "Synthetic supplements",
                 "Stress",
-                "Unhealthy gut",
+                "Tobacco",
+                "Vitamin B7 supplements"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Vitamin B-complex"
+            ]
+        },
+        "name": "Vitamin B5 (Pantothenic acid)",
+        "organs": [
+            "brain",
+            "heart",
+            "kidneys",
+            "liver",
+            "muscles",
+            "pancreas",
+            "spinal chord",
+            "skin"
+        ],
+        "preventions": [
+            "Acne vulgaris",
+            "Chronic fatigue",
+            "High blood cholesterol",
+            "Lethargy",
+            "Nervous system disorders",
+            "Premature aging",
+            "Wrinckles"
+        ],
+        "sources": [
+            "Mushrooms",
+            "Egg yolk",
+            "Sunflower seeds",
+            "Sesame seeds",
+            "Liver",
+            "Yeast",
+            "Kidneys"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "name": "Iodine",
+        "organs": [
+            "brain",
+            "muscles",
+            "heart",
+            "pituitary gland",
+            "kidneys"
+        ]
+    },
+    {
+        "category": "Essential vitamin/amino acid/mineral",
+        "classification": [],
+        "deficiency": [],
+        "description": "",
+        "excess": [""],
+        "functions": [],
+        "intake": "",
+        "metabolism": {
+            "absorption": "is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Excess sugars",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
                 "Tobacco"
             ],
             "requirements": [

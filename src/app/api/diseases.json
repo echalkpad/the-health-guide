@@ -83,5 +83,20 @@
                 "sense of purpose loss"
             ]
             // Reference: - Wikipedia, [Apathy](https://en.wikipedia.org/wiki/Apathy)
+    },
+    {
+        "causes": [],
+        "name": "Dermatitis",
+        "nickname": "Eczema",
+        "symptoms": [
+                "bumps",
+                "blisters",
+                "rash",
+                "skin redness",
+                "skin swelling",
+                "skin itching",
+                "skin lesions"
+            ]
+            // Reference: - Wikipedia, [Dermatitis](https://en.wikipedia.org/wiki/Dermatitis)
     }
 ]

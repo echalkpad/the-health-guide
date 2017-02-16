@@ -1,12 +1,35 @@
-# Vitamin B5
-Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is in coenzyme A (CoA) synthesis.
+# Vitamin B5 (Pantothenic acid)
+Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B5 is coenzyme A (CoA) formation.
 
-## Absorption
-Vitamin B3 is absorbed in the small intestine. Absorption is less efficient at higher concentrations of intake.
-Vitamin B3 absorption requires: vitamin B-complex.
-Vitamin B3 absorption is impaired by: vitamin B-complex deficiency, high vitamin B7 intake, caffeine, alcohol, stress, antibiotics, and insecticide.
-Excess vitamin B5 is eliminated through urine.
+## Metabolism
+- 50% of Vitamin B5 is absorbed if the gut is healthy.
+
+Vitamin B5 absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin B5 absorption requires:
+- Healthy gut;
+- Vitamin B-complex.
+
+Vitamin B5 absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Excess sugars;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Tobacco;
+- Vitamin B7 supplements.
 
 ## Functions
 - Amino acid metabolism;
@@ -21,16 +44,22 @@ Excess vitamin B5 is eliminated through urine.
 - healthy digestive tract.
 
 ## Deficiency
+- Abdominal pain;
+- Arthritis;
 - Back pain;
 - Coordination decrease;
 - Depression;
+- Dermatitis;
 - Double vision;
 - Emotion suppression;
 - Energy loss;
 - Fatigue;
 - Headache;
 - Indifference;
+- Infections;
 - Irritability;
+- Kidney disorders;
+- Low blood sugar;
 - Memory loss;
 - Mental ability impairment;
 - Mood swings;
@@ -38,57 +67,47 @@ Excess vitamin B5 is eliminated through urine.
 - Muscle rigidity;
 - Numbness;
 - Seizures;
+- Sleep disorders;
 - Speaking difficulties;
 - Tingling;
 - Tiredness;
 - Tremors;
 - Vision loss;
+- Vitamin B-complex metabolism impairment;
 - Weakness;
-- Weariness;
-- Vitamin B-complex metabolism impairment.
-- parasthesia;
-- muscle cramps;
-- dermatitis;
-- abdominal pain;
-- insomnia;
-- fatigue;
-- stress;
-- hypoglycemia;
-- arthritis;
-- eczema;
-- kidney troubles;
-- premature aging;
-- infections.
-
-## Excess
-- diarrhea;
-- nausea;
-- heartburn.
+- Weariness.
 
 ## Disease preventions
+- Acne vulgaris;
+- Chronic fatigue;
+- High blood cholesterol;
 - Lethargy;
 - Nervous system disorders;
-- premature aging;
-- high cholesterol;
-- chronic fatigue;
-- wrinckles;
-- acne vulgaris.
+- Premature aging;
+- Wrinckles.
+
+## Excess
+- no adverse effects known.
 
 ## Food sources
-- meat;
-- broccoli;
-- whole-grains;
-- avocado.
+- Mushrooms;
+- Egg yolk;
+- Sunflower seeds;
+- Sesame seeds;
+- Liver;
+- Yeast;
+- Kidneys.
 
 ## Average recommended intake
 - 5mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Pantothenic acid](https://en.wikipedia.org/wiki/Pantothenic_acid)
-- The world's healthiest foods, [Pantothenic acid](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Pantothenic acid_](https://en.wikipedia.org/wiki/Pantothenic_acid)
+- The world's healthiest foods, [_Pantothenic acid_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Pantothenic acid
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=410&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 - Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
 - Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
