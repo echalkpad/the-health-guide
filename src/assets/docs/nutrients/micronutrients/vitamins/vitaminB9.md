@@ -1,26 +1,54 @@
-# Vitamin B9
-Vitamin B9, Folate, or Folic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as blood cell formation and DNA synthesis.
+# Vitamin B9 (Folate)
+Vitamin B9, Folate, or Folic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B9 is red blood cells formation and gene expression.
 
-## Absorption
-Vitamin B9 is absorbed in the stomach and small intestine. It accumulates in the liver.
-Vitamin B9 absorption requires: vitamin B-complex, Zinc.
-Vitamin B9 absorption is impaired by: vitamin B-complex deficiency, alcohol, tobacco, drugs (nonsteroidal anti-inflammatory drugs, 
-anticonvulsant drugs, methotrexate, etc.)
-Excess vitamin B9 is eliminated through urine.
+## Metabolism
+- 50% Vitamin B9 from dietary intake is absorbed if the gut is healthy.
+
+Vitamin B9 absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin B9 absorption requires:
+- Healthy gut;
+- Vitamin B-complex;
+- Zinc.
+
+Vitamin B9 absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Anticonvulsant drugs
+- Caffeine;
+- High sugar intake;
+- Low fiber;
+- Methotrexate;
+- Nonsteroidal anti-inflammatory drugs
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Tobacco.
 
 ## Functions
 - Amino acid metabolism;
 - Carbohydrate metabolism;
 - Fat metabolism;
-- vitamin B-complex absorption;
-- blood cell formation;
-- DNA synthesis;
-- cell development;
-- pregnancy support;
-- fertility.
+- Fertility;
+- Gene expression;
+- Nervous system health;
+- Pregnancy support;
+- Red blood cells formation;
+- Vitamin B-complex metabolism.
 
 ## Deficiency
+- Anemia;
+- Appetite loss;
 - Back pain;
 - Coordination decrease;
 - Depression;
@@ -29,6 +57,7 @@ Excess vitamin B9 is eliminated through urine.
 - Energy loss;
 - Fatigue;
 - Headache;
+- Heart palpitations;
 - Indifference;
 - Irritability;
 - Memory loss;
@@ -38,44 +67,36 @@ Excess vitamin B9 is eliminated through urine.
 - Muscle rigidity;
 - Numbness;
 - Seizures;
+- Shortness of breath;
 - Speaking difficulties;
 - Tingling;
 - Tiredness;
+- Tongue swelling;
 - Tremors;
 - Vision loss;
 - Weakness;
 - Weariness;
 - Vitamin B-complex metabolism impairment.
-- Weakness;
-- Fatigue;
-- Difficulty in concentrating;
-- Irritability;
-- Headache;
-- Palpitations;
-- Shortness of breath;
-- Atrophic glossitis.
-
 
 ## Disease preventions
-- Lethargy;
-- Nervous system disorders;
-- Heart disease;
-- Stroke;
-- Depression;
+- Atrophic gastritis;
 - Birth defects;
-- Depression;
-- High blood pressure;
 - Cancer;
-- Cognitive decline;
-- Anemia;
 - Gingivitis;
-- Osteoporosis;
+- Heart disease;
+- High blood pressure;
+- Infertility;
+- Lethargy;
 - Malaria;
-- Ulcerative colitis;
-- Psoriasis.
+- Nervous system disorders;
+- Osteoporosis;
+- Pernicious anemia;
+- Psoriasis;
+- Ulcerative colitis.
 
 ## Excess
-- pernicious anaemia
+- Iron deficiency;
+- Vitamin B12 deficiency.
 
 ## Food sources
 - whole-grains;

@@ -2,7 +2,7 @@
 Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B6 is in metabolism.
 
 ## Metabolism
-- 100% Vitamin B6 from dietary intake is absorbed.
+- 100% Vitamin B6 from dietary intake is absorbed if the gut is healthy.
 
 Vitamin B6 absorption is enhanced by:
 - Fiber;
@@ -80,13 +80,6 @@ Vitamin B6 absorption is impaired by:
 - Vomiting;
 - Water retention.
 
-
-## Excess
-- Insomnia;
-- Neuropathy;
-- Numbness;
-- Pain.
-
 ## Disease preventions
 - Anemia;
 - Asthma;
@@ -99,6 +92,12 @@ Vitamin B6 absorption is impaired by:
 - Nervous system disorders;
 - Premenstrual syndrome;
 - Seborrheic dermatitis.
+
+## Excess
+- Insomnia;
+- Neuropathy;
+- Numbness;
+- Pain.
 
 ## Food sources
 - Whole-grains;

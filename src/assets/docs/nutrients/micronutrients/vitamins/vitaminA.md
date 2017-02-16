@@ -6,8 +6,8 @@ Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision 
 - Carotenoids - plant source
 
 ## Metabolism
-- 70%-90% of Vitamin A is absorbed;
-- 9%-22% of carotenoids are absorbed.
+- 70%-90% of Vitamin A is absorbed if the gut is healthy;
+- 9%-22% of carotenoids are absorbed if the gut is healthy.
 
 Vitamin A absorption is enhanced by:
 - Cooking;
@@ -66,24 +66,6 @@ Vitamin A absorption is impaired by:
 - Respiratory infection;
 - Tooth defects.
 
-## Excess
-- Anorexia;
-- Blurred vision;
-- Bone pain;
-- Cerebrospinal fluid pressure increase;
-- Dizziness;
-- Fetus development disorders;
-- Hair loss;
-- Headache;
-- Insomnia;
-- Iron metabolism impairment;
-- Joint pain;
-- Muscular incoordination;
-- Nausea;
-- Skin dryness;
-- Vitamin D metabolism impairment;
-- Vomiting.
-
 ## Disease preventions
 - Acne;
 - Acquired Immunodeficiency Syndrome (AIDS);
@@ -103,16 +85,15 @@ Vitamin A absorption is impaired by:
 - Fibrocystic breast disease;
 - Heart disease;
 - Hyperkeratosis;
-- Impotence (Lack of sperm production);
+- Infertility;
 - Inflammatory bowel disease;
 - Kaposi's sarcoma;
-- Laryngeal cancer (cancer of the larynx);
+- Laryngeal cancer;
 - Leukoplakia;
 - Lung cancer;
-- Male and female infertility;
 - Measles;
 - Osteoarthritis;
-- Otitis media (ear infection);
+- Otitis media;
 - Photosensitivity;
 - Pneumonia;
 - Poor vision;
@@ -127,6 +108,24 @@ Vitamin A absorption is impaired by:
 - Vaginitis;
 - Varicose veins;
 - Viral infections.
+
+## Excess
+- Anorexia;
+- Blurred vision;
+- Bone pain;
+- Cerebrospinal fluid pressure increase;
+- Dizziness;
+- Fetus development disorders;
+- Hair loss;
+- Headache;
+- Insomnia;
+- Iron metabolism impairment;
+- Joint pain;
+- Muscular incoordination;
+- Nausea;
+- Skin dryness;
+- Vitamin D metabolism impairment;
+- Vomiting.
 
 ## Food sources
 - Liver;

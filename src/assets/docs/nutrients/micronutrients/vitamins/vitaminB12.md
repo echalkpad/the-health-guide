@@ -1,8 +1,8 @@
 # Vitamin B12 (Cobalamin)
-Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is to make red blood cells and nervous system health.
+Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is red blood cells formation and nervous system health.
 
 ## Metabolism
-- 50% Vitamin B12 from dietary intake is absorbed.
+- 50% Vitamin B12 from dietary intake is absorbed if the gut is healthy.
 
 Vitamin B12 absorption is enhanced by:
 - Fiber;
