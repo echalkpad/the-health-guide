@@ -90,7 +90,7 @@ Vitamin B7 absorption is impaired by:
 - Rash.
 
 ## Excess
-- no adverse effects known.
+- Allergy.
 
 ## Food sources
 - Yeast;

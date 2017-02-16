@@ -87,7 +87,7 @@ Vitamin B5 absorption is impaired by:
 - Wrinckles.
 
 ## Excess
-- no adverse effects known.
+- Allergy.
 
 ## Food sources
 - Mushrooms;

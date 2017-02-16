@@ -96,7 +96,7 @@ Vitamin B2 absorption is impaired by:
 - Nervous system disorders.
 
 ## Excess
-- no adverse effects known.
+- Allergy.
 
 ## Food sources
 - Yeast;

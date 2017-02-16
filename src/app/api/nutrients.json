@@ -690,7 +690,7 @@
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
-            "Circulation health",
+            "Circulatory system health",
             "Digestive juice secretion",
             "Fat metabolism",
             "Fatty acid formation",
@@ -802,7 +802,7 @@
             "Weariness"
         ],
         "description": "Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B5 is coenzyme A (CoA) formation.",
-        "excess": ["no adverse effects known"],
+        "excess": ["Allergy"],
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
@@ -917,7 +917,7 @@
             "Weariness"
         ],
         "description": "Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B2 is in cellular respiration.",
-        "excess": ["no adverse effects known"],
+        "excess": ["Allergy"],
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
@@ -988,6 +988,122 @@
             "Mushrooms",
             "Almonds",
             "Goat cheese"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Appetite loss",
+            "Back pain",
+            "Coordination decrease",
+            "Depression",
+            "Digestive disorders",
+            "Double vision",
+            "Emotion suppression",
+            "Energy loss",
+            "Fatigue",
+            "Headache",
+            "Indifference",
+            "Inflammation",
+            "Irritability",
+            "Memory loss",
+            "Mental ability impairment",
+            "Mood swings",
+            "Motivation loss",
+            "Muscle rigidity",
+            "Nausea",
+            "Numbness",
+            "Seizures",
+            "Speaking difficulties",
+            "Tingling",
+            "Tiredness",
+            "Tremors",
+            "Vision loss",
+            "Vitamin B-complex metabolism impairment",
+            "Weakness",
+            "Weariness"
+        ],
+        "description": "Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B1 is in amino acid, carbohydrate, and fat metabolism.",
+        "excess": [
+            "Allergy"
+        ],
+        "functions": [
+            "Amino acid metabolism",
+            "Appetite stabilization",
+            "Carbohydrate metabolism",
+            "Cell growth",
+            "Circulatory system health",
+            "Digestion health",
+            "Fat metabolism",
+            "Heart beat stabilization",
+            "Muscle health",
+            "Nervous system health"
+        ],
+        "intake": "1.2",
+        "metabolism": {
+            "absorption": "100% of Vitamin B1 is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Excess sugars",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Vitamin B-complex"
+            ]
+        },
+        "name": "Vitamin B1 (Thiamin)",
+        "organs": [
+            "brain",
+            "gastrointestinal tract",
+            "heart",
+            "liver",
+            "lungs",
+            "muscles",
+            "spinal chord"
+        ],
+        "preventions": [
+            "Acquired Immunodeficiency Syndrome (AIDS)",
+            "Alcoholism",
+            "Beriberi",
+            "Cancer",
+            "Cataract",
+            "Chronic fatigue",
+            "Congestive heart failure",
+            "Diabetes",
+            "Hypertyroidism",
+            "Lethargy",
+            "Liver failure",
+            "Nervous system disorders",
+            "Pulmonary hypertension",
+            "Wernicke's encephalopathy"
+        ],
+        "sources": [
+            "Yeast",
+            "Seeds",
+            "Whole-grains",
+            "Meat",
+            "Nuts",
+            "Legumes"
         ],
         "unit": "mg/day"
     },

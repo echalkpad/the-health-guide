@@ -36,7 +36,7 @@ Vitamin B3 absorption is impaired by:
 ## Functions
 - Amino acid metabolism;
 - Carbohydrate metabolism;
-- Circulation health;
+- Circulatory system health;
 - Digestive juice secretion;
 - Fat metabolism;
 - Fatty acid formation;
