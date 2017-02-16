@@ -36,7 +36,7 @@ Vitamin B1 absorption is impaired by:
 - Carbohydrate metabolism;
 - Cell growth;
 - Circulatory system health;
-- Digestion health;
+- Digestive health;
 - Fat metabolism;
 - Heart beat stabilization;
 - Muscle health;
