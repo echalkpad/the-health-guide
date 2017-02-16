@@ -64,6 +64,7 @@ Excess vitamin B1 is eliminated through urine.
 - stress on nervous system.
 
 ## Disease preventions
+- Chronic fatigue;
 - Lethargy;
 - Nervous system disorders;
 - hypertyroidism;

@@ -82,6 +82,7 @@ Vitamin B9 absorption is impaired by:
 - Atrophic gastritis;
 - Birth defects;
 - Cancer;
+- Chronic fatigue;
 - Gingivitis;
 - Heart disease;
 - High blood pressure;

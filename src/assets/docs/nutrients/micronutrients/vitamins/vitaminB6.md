@@ -50,6 +50,7 @@ Vitamin B6 absorption is impaired by:
 - Vitamin B-complex metabolism.
 
 ## Deficiency
+- Anemia;
 - Back pain;
 - Coordination decrease;
 - Depression;
@@ -85,6 +86,7 @@ Vitamin B6 absorption is impaired by:
 - Asthma;
 - Cardiovascular disease;
 - Carpal tunnel syndrome;
+- Chronic fatigue;
 - Fibrocystic breast disease;
 - High homocysteine;
 - Lethargy;

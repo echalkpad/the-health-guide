@@ -1,24 +1,26 @@
 [{
+        "description": "Negative behavioral response to physiological, environmental, situational, sociological, and emotional stimuli.",
         "name": "Irritability",
         "nicknames": [
             "Anger",
             "Frustration"
-        ],
-        "description": "Negative behavioral response to physiological, environmental, situational, sociological, and emotional stimuli."
+        ]
     },
     {
+        "description": "Sudden, involuntary contractions that occur in various muscles.",
         "name": "Muscle cramps",
         "nickname": [
             "Muscle spasms"
-        ],
-        "description": "Sudden, involuntary contractions that occur in various muscles."
+        ]
+
     },
     {
+        "description": "Body muscles contract and relax rapidly and repeatedly, resulting in an uncontrolled shaking of the body.",
         "name": "Convulsion",
         "nickname": [
             "Seizures"
-        ],
-        "description": "Body muscles contract and relax rapidly and repeatedly, resulting in an uncontrolled shaking of the body."
+        ]
+
     }, {
         "name": "Numbness"
     }, {
@@ -28,8 +30,12 @@
     }, {
         "name": "Flushing"
     }, {
+        "description": "an uncomfortable, irritating sensation that makes you want to scratch. ou may have Skin itching over certain small areas, such as on an arm or leg, or over your whole body. Skin itching can occur without any other noticeable changes on the skin: redness, bumps, blisters, spots, skin dryness, skin lesions",
         "name": "Pruritus",
-        "nickname": ["Skin itching"],
-        "description": "an uncomfortable, irritating sensation that makes you want to scratch. ou may have Skin itching over certain small areas, such as on an arm or leg, or over your whole body. Skin itching can occur without any other noticeable changes on the skin: redness, bumps, blisters, spots, skin dryness, skin lesions"
+        "nickname": ["Skin itching"]
+
+    }, {
+        "name": "Edema",
+        "nickname": "Swelling"
     }
 ]

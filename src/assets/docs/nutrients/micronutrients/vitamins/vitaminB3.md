@@ -80,6 +80,7 @@ Vitamin B3 absorption is impaired by:
 ## Disease preventions
 - Acne vulgaris;
 - Cardiovascular disease;
+- Chronic fatigue;
 - High blood cholesterol;
 - Lethargy;
 - Nervous system disorders;

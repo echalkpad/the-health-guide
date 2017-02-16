@@ -95,6 +95,7 @@
                 "skin redness",
                 "skin swelling",
                 "skin itching",
+                "skin scaling",
                 "skin lesions"
             ]
             // Reference: - Wikipedia, [Dermatitis](https://en.wikipedia.org/wiki/Dermatitis)

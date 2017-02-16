@@ -75,8 +75,10 @@ Vitamin B12 absorption is impaired by:
 - Weariness.
 
 ## Disease preventions
+- Anemia;
 - Asthma;
 - Atrophic gastritis;
+- Chronic fatigue;
 - Kidney disease;
 - Lethargy;
 - Nervous system disorders;

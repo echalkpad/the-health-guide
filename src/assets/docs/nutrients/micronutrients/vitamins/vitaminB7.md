@@ -82,6 +82,7 @@ Vitamin B7 absorption is impaired by:
 
 ## Disease preventions
 - Brittle nails;
+- Chronic fatigue;
 - Diabetes;
 - Hair loss;
 - Lethargy;

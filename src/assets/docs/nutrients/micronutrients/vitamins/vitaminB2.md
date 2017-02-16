@@ -1,106 +1,124 @@
 # Vitamin B2 (Riboflavin)
-Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B2 is as coenzyme in oxidation–reduction reactions.
+Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B2 is in cellular respiration.
 
-## Absorption
-Vitamin B2 is absorbed in the small intestine. After absorption, it accumulates mostly in the small intesine, liver, heart, and kidneys.
-Vitamin B2 absorption requires: vitamin B-complex, bile salts.
-Vitamin B2 absorption is impaired by: vitamin B-complex deficiency, alcohol, tobacco, sugar, caffeine, and copper toxicity.
-Excess vitamin B2 is eliminated through urine.
+## Metabolism
+- 30% of Vitamin B2 is absorbed if the gut is healthy.
+
+Vitamin B2 absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin B2 absorption requires:
+- Bile salts;
+- Healthy gut;
+- Vitamin B-complex.
+
+Vitamin B2 absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Copper supplements;
+- Excess sugars;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Tobacco.
 
 ## Functions
 - Amino acid metabolism;
 - Carbohydrate metabolism;
+- Cellular respiration;
 - Fat metabolism;
-- vitamin B-complex absorption;
-- iron absorption;
-- red blood cell formation;
-- integrity of mucous membranes;
-- antibody production;
-- cellular respiration;
-- skin health;
-- hair health;
-- vision health;
-- nails health;
-- body tissue development.
+- Growth;
+- Hair health;
+- Immune function;
+- Iron metabolism;
+- Mucous membranes integrity;
+- Nails health;
+- Red blood cells formation;
+- Skin health;
+- Vision health;
+- Vitamin B-complex metabolism.
 
 ## Deficiency
+- Anemia;
 - Back pain;
 - Coordination decrease;
 - Depression;
+- Digestive disorders;
 - Double vision;
 - Emotion suppression;
 - Energy loss;
+- Eye burning;
 - Fatigue;
+- Growth impairment;
 - Headache;
 - Indifference;
+- Insomnia;
 - Irritability;
 - Memory loss;
 - Mental ability impairment;
 - Mood swings;
 - Motivation loss;
+- Mouth disorders;
 - Muscle rigidity;
 - Numbness;
+- Pharyngeal mucous membranes hyperemia and edema;
 - Seizures;
+- Skin scaling;
 - Speaking difficulties;
+- Throat soreness;
 - Tingling;
 - Tiredness;
 - Tremors;
 - Vision loss;
+- Vitamin B-complex metabolism impairment;
 - Weakness;
-- Weariness;
-- Vitamin B-complex metabolism impairment.
-- mouth disorders;
-- ariboflavinosis;
-- insomnia;
-- itching;
-- scaling of skin;
-- slow mental responses;
-- retarded growth;
-- weakness;
-- dizziness;
-- sore tongue;
-- digestive disturbances;
-- dermatitis;
-- nervous instability;
-- burning eyes;
-- sore throat;
-- Hyperemia and edema of the pharyngeal and oral mucous membranes;
-- cheilosis;
-- angular stomatitis;
-- glossitis;
-- normocytic anemia associated with pure erythrocyte cytoplasia of the bone marrow.
-
-## Excess
-There are no side effects.
+- Weariness.
 
 ## Disease preventions
+- Anemia;
+- Cataract;
+- Chronic fatigue;
+- Congestive heart failure;
+- High blood pressure;
+- High homocysteine;
 - Lethargy;
-- Nervous system disorders;
-	• Iron deficiency anemia
-	• Migraine headache
-	• Congestive heart failure
-	• High homocysteine
-	• Cataract
-	• Parkinson's disease
-Hypertension
+- Migraine;
+- Nervous system disorders.
+
+## Excess
+- no adverse effects known.
 
 ## Food sources
-- dairy;
-- bananas;
-- popcorn;
-- green beans;
-- asparagus.
+- Yeast;
+- Liver;
+- Egg white;
+- Kidneys;
+- Herbs and spices;
+- Mushrooms;
+- Almonds;
+- Goat cheese.
 
 ## Average recommended intake
-- 1.3 mg/day.
+- 1.3mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Niacin](https://en.wikipedia.org/wiki/Niacin)
-- The world's healthiest foods, [Vitamin B2 - Niacin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Riboflavin_](https://en.wikipedia.org/wiki/Riboflavin)
+- The world's healthiest foods, [_Vitamin B2 - Riboflavin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=93)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Niacin
 - Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=405&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 - Barbara Bolen, PhD, "Very well; [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, "Very well; [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
 - Barbara Bolen, PhD, "Very well; [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
