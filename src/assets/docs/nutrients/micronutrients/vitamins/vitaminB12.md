@@ -26,7 +26,7 @@ Vitamin B12 absorption is impaired by:
 - Alcohol;
 - Antibiotics;
 - Caffeine;
-- High sugar intake;
+- Excess sugars;
 - Low fiber;
 - Processed food;
 - Synthetic supplements;
@@ -70,9 +70,9 @@ Vitamin B12 absorption is impaired by:
 - Tiredness;
 - Tremors;
 - Vision loss;
+- Vitamin B-complex metabolism impairment;
 - Weakness;
-- Weariness;
-- Vitamin B-complex metabolism impairment.
+- Weariness.
 
 ## Disease preventions
 - Asthma;
@@ -102,10 +102,10 @@ Vitamin B12 absorption is impaired by:
 - 0.0024mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin B12](https://en.wikipedia.org/wiki/Vitamin_B12)
-- The world's healthiest foods, [Vitamin B12](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=107)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Vitamin B12_](https://en.wikipedia.org/wiki/Vitamin_B12)
+- The world's healthiest foods, [_Vitamin B12_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=107)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B12
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report?nutrient1=415&nutrient2=&nutrient3=&&max=1000&subset=0&offset=0&sort=c&totCount=7669&measureby=g)

@@ -26,7 +26,7 @@ Vitamin B6 absorption is impaired by:
 - Antibiotics;
 - Birth control pills;
 - Caffeine;
-- High sugar intake;
+- Excess sugars;
 - Low fiber;
 - Processed food;
 - Synthetic supplements;
@@ -74,11 +74,11 @@ Vitamin B6 absorption is impaired by:
 - Tiredness;
 - Tremors;
 - Vision loss;
-- Weakness;
-- Weariness;
 - Vitamin B-complex metabolism impairment;
 - Vomiting;
-- Water retention.
+- Water retention;
+- Weakness;
+- Weariness.
 
 ## Disease preventions
 - Anemia;

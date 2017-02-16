@@ -23,7 +23,7 @@ general weakness, impaired respiration, lower collagen and lower white blood cel
 
 ## Disease preventions
 	• Anemia
-	• High cholesterol
+	• High blood cholesterol
 	• Fatigue
 	• Low immune function
 	• Osteoporosis

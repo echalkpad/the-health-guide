@@ -1,29 +1,57 @@
-# Vitamin B3
-Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is in cell respiration.
+# Vitamin B3 (Niacin)
+Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B3 is in intracellular respiration and fatty acid formation.
 
-## Absorption
-Vitamin B3 is absorbed in the small intestine.
-Vitamin B3 absorption requires: vitamin B-complex.
-Vitamin B3 absorption is impaired by: vitamin B-complex deficiency, stress, infection, antibiotics, sugar, caffeine, alcohol, and excess water. 
-Excess vitamin B3 is eliminated through urine.
+## Metabolism
+- 100% of Vitamin B3 is absorbed if the gut is healthy.
+
+Vitamin B3 absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin B3 absorption requires:
+- Healthy gut;
+- Iron;
+- Vitamin B-complex.
+
+Vitamin B3 absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Caffeine;
+- Excess sugars;
+- Excess water;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Tobacco.
 
 ## Functions
 - Amino acid metabolism;
 - Carbohydrate metabolism;
+- Circulation health;
+- Digestive juice secretion;
 - Fat metabolism;
-- vitamin B-complex absorption;
-- circulation;
-- skin health;
-- nervous system health;
-- bile secretion;
-- normal stomach fluids;
-- sex hormones synthesis.
+- Fatty acid formation;
+- Nervous system health;
+- Sex hormones formation;
+- Skin health;
+- Vitamin B-complex metabolism.
 
 ## Deficiency
 - Back pain;
+- Bright red tongue;
+- Constipation;
 - Coordination decrease;
 - Depression;
+- Diarrhea;
 - Double vision;
 - Emotion suppression;
 - Energy loss;
@@ -37,72 +65,65 @@ Excess vitamin B3 is eliminated through urine.
 - Motivation loss;
 - Muscle rigidity;
 - Numbness;
+- Pigmented rash;
 - Seizures;
 - Speaking difficulties;
 - Tingling;
 - Tiredness;
 - Tremors;
 - Vision loss;
-- Weakness;
-- Weariness;
-- Vitamin B-complex metabolism impairment.
-- Pigmented rash;
+- Vitamin B-complex metabolism impairment;
 - Vomiting;
-- constipation;
-- diarrhea;
-- bright red tongue;
-- depression;
-- irritability;
-- anger;
-- apathy;
-- headache;
-- fatigue;
-- memory loss.
-
-## Excess
-- flushing;
-- headache;
-- pain;
-- abdominal pain;
-- diarrhea;
-- indigestion;
-- liver toxicity;
-- blurred vision;
-- impaired glucose tolerance;
-- nausea;
-- vomiting;
-- rhinitis;
-- pruritus;
-- rash.
+- Weakness;
+- Weariness.
 
 ## Disease preventions
+- Acne vulgaris;
+- Cardiovascular disease;
+- High blood cholesterol;
 - Lethargy;
 - Nervous system disorders;
-- Pellagra;
-- High cholesterol;
-- Acne vulgaris;
 - Osteoarthritis;
+- Pellagra;
 - Reynaud's disease;
 - Schizophrenia;
 - Type 1 diabetes.
 
+## Excess
+- Abdominal pain;
+- Blurred vision;
+- Diarrhea;
+- Flushing;
+- Glucose tolerance impairment;
+- Headache;
+- Indigestion;
+- Liver toxicity;
+- Nausea;
+- Pain;
+- Rash;
+- Rhinitis;
+- Skin itching;
+- Vomiting.
+
 ## Food sources
-- meat;
-- fish;
-- eggs;
-- vegetables;
-- mushrooms;
-- nuts.
+- Yeast;
+- Meat;
+- Herbs and spices;
+- Mushrooms.
 
 ## Average recommended intake
-- 16 mg/day.
+- 16mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Niacin](https://en.wikipedia.org/wiki/Niacin)
-- The world's healthiest foods, [Vitamin B3 - Niacin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Niacin_](https://en.wikipedia.org/wiki/Niacin)
+- The world's healthiest foods, [_Vitamin B3 - Niacin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Niacin
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well; [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well; [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well; [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
 - Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)
 - Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
 - Wikipedia, [_Nervous system disease_](https://en.wikipedia.org/wiki/Nervous system disease)

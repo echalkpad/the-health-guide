@@ -2,7 +2,7 @@
 - summary
 
 ## Metabolism
-- % of [Name] is absorbed.
+- % of [Name] is absorbed if the gut is healthy.
 
 [Name] absorption is enhanced by:
 - Fiber;
@@ -22,7 +22,7 @@
 [Name] absorption is impaired by:
 - Alcohol;
 - Antibiotics;
-- High sugar intake;
+- Excess sugars;
 - Low fiber;
 - Processed food;
 - Synthetic supplements;

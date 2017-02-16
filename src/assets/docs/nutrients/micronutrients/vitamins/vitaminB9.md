@@ -24,12 +24,12 @@ Vitamin B9 absorption requires:
 Vitamin B9 absorption is impaired by:
 - Alcohol;
 - Antibiotics;
-- Anticonvulsant drugs
+- Anticonvulsant drugs;
 - Caffeine;
-- High sugar intake;
+- Excess sugars;
 - Low fiber;
 - Methotrexate;
-- Nonsteroidal anti-inflammatory drugs
+- Nonsteroidal anti-inflammatory drugs;
 - Processed food;
 - Synthetic supplements;
 - Stress;
@@ -74,9 +74,9 @@ Vitamin B9 absorption is impaired by:
 - Tongue swelling;
 - Tremors;
 - Vision loss;
+- Vitamin B-complex metabolism impairment;
 - Weakness;
 - Weariness;
-- Vitamin B-complex metabolism impairment.
 
 ## Disease preventions
 - Atrophic gastritis;
@@ -99,21 +99,27 @@ Vitamin B9 absorption is impaired by:
 - Vitamin B12 deficiency.
 
 ## Food sources
-- whole-grains;
-- dark green vegetables;
-- beans;
-- legumes.
+- Yeast;
+- Liver;
+- Legumes;
+- Root vegetables;
+- Herbs and spices;
+- Seeds.
 
 ## Average recommended intake
 - 0.4mg/day;
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Folic acid](https://en.wikipedia.org/wiki/Folic_acid)
-- The world's healthiest foods, [Folate](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=63)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Folic acid_](https://en.wikipedia.org/wiki/Folic_acid)
+- The world's healthiest foods, [_Folate_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=63)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Folate
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
 - Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)
 - Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
 - Wikipedia, [_Nervous system disease_](https://en.wikipedia.org/wiki/Nervous system disease)

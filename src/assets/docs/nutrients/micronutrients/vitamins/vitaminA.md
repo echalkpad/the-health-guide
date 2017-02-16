@@ -32,7 +32,7 @@ Vitamin A absorption is impaired by:
 - Alcohol;
 - Antibiotics;
 - Cholesterol lowering drugs;
-- High sugar intake;
+- Excess sugars;
 - Laxatives;
 - Low fiber;
 - Processed food;

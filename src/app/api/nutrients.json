@@ -1,8 +1,6 @@
-[
-    {
+[{
         "category": "Essential vitamin",
-        "classification": [
-            {
+        "classification": [{
                 "name": "Carotenoids",
                 "summary": "plant source"
             },
@@ -77,7 +75,7 @@
                 "Alcohol",
                 "Antibiotics",
                 "Cholesterol lowering drugs",
-                "High sugar intake",
+                "Excess sugars",
                 "Laxatives",
                 "Low fiber",
                 "Processed food",
@@ -186,11 +184,11 @@
             "Tiredness",
             "Tremors",
             "Vision loss",
-            "Weakness",
-            "Weariness",
             "Vitamin B-complex metabolism impairment",
             "Vomiting",
-            "Water retention"
+            "Water retention",
+            "Weakness",
+            "Weariness"
         ],
         "description": "Vitamin B6 or Pyridoxine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenine triphosphate (ATP), the energy form used by all cells inthe body. The main function of Vitamin B6 is in metabolism.",
         "excess": [
@@ -234,7 +232,7 @@
                 "Antibiotics",
                 "Birth control pills",
                 "Caffeine",
-                "High sugar intake",
+                "Excess sugars",
                 "Low fiber",
                 "Processed food",
                 "Synthetic supplements",
@@ -313,9 +311,10 @@
             "Tiredness",
             "Tremors",
             "Vision loss",
+            "Vitamin B-complex metabolism impairment",
             "Weakness",
-            "Weariness",
-            "Vitamin B-complex metabolism impairment"
+            "Weariness"
+
         ],
         "description": "Vitamin B12 or Cobalamin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B12 is red blood cells formation and nervous system health.",
         "excess": [
@@ -351,7 +350,7 @@
                 "Alcohol",
                 "Antibiotics",
                 "Caffeine",
-                "High sugar intake",
+                "Excess sugars",
                 "Low fiber",
                 "Processed food",
                 "Synthetic supplements",
@@ -431,11 +430,11 @@
             "Tiredness",
             "Tremors",
             "Vision loss",
+            "Vitamin B-complex metabolism impairment",
             "Weakness",
-            "Weariness",
-            "Vitamin B-complex metabolism impairment"
+            "Weariness"
         ],
-        "description": "Vitamin B7 , Vitamin H, or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B7 is cell growth and fatty-acids formation.",
+        "description": "Vitamin B7 , Vitamin H, or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B7 is cell growth and fatty acid formation.",
         "excess": [
             "No adverse effects known"
         ],
@@ -445,7 +444,7 @@
             "Carbohydrate metabolism",
             "Cell growth",
             "Fat metabolism",
-            "Fatty-acids formation",
+            "Fatty acid formation",
             "Nervous system health",
             "Skin health",
             "Vitamin B-complex metabolism"
@@ -469,7 +468,7 @@
                 "Alcohol",
                 "Antibiotics",
                 "Caffeine",
-                "High sugar intake",
+                "Excess sugars",
                 "Low fiber",
                 "Processed food",
                 "Raw egg white",
@@ -507,6 +506,256 @@
             "Egg yolks"
         ],
         "unit": "mg/day"
+    }, {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Anemia",
+            "Appetite loss",
+            "Back pain",
+            "Coordination decrease",
+            "Depression",
+            "Double vision",
+            "Emotion suppression",
+            "Energy loss",
+            "Fatigue",
+            "Headache",
+            "Heart palpitations",
+            "Indifference",
+            "Irritability",
+            "Memory loss",
+            "Mental ability impairment",
+            "Mood swings",
+            "Motivation loss",
+            "Muscle rigidity",
+            "Numbness",
+            "Seizures",
+            "Shortness of breath",
+            "Speaking difficulties",
+            "Tingling",
+            "Tiredness",
+            "Tongue swelling",
+            "Tremors",
+            "Vision loss",
+            "Vitamin B-complex metabolism impairment",
+            "Weakness",
+            "Weariness"
+
+        ],
+        "description": "Vitamin B9, Folate, or Folic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B9 is red blood cells formation and gene expression.",
+        "excess": [
+            "Iron deficiency",
+            "Vitamin B12 deficiency"
+        ],
+        "functions": [
+            "Amino acid metabolism",
+            "Carbohydrate metabolism",
+            "Fat metabolism",
+            "Fertility",
+            "Gene expression",
+            "Nervous system health",
+            "Pregnancy support",
+            "Red blood cells formation",
+            "Vitamin B-complex metabolism"
+        ],
+        "intake": "0.4",
+        "metabolism": {
+            "absorption": "50% Vitamin B9 from dietary intake is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Anticonvulsant drugs",
+                "Caffeine",
+                "Excess sugars",
+                "Low fiber",
+                "Methotrexate",
+                "Nonsteroidal anti-inflammatory drugs",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Vitamin B-complex",
+                "Zinc"
+            ]
+        },
+        "name": "Vitamin B9 (Folate)",
+        "organs": [
+            "brain",
+            "heart",
+            "kidneys",
+            "muscles",
+            "skin",
+            "spinal chord"
+        ],
+        "preventions": [
+            "Atrophic gastritis",
+            "Birth defects",
+            "Cancer",
+            "Gingivitis",
+            "Heart disease",
+            "High blood pressure",
+            "Infertility",
+            "Lethargy",
+            "Malaria",
+            "Nervous system disorders",
+            "Osteoporosis",
+            "Pernicious anemia",
+            "Psoriasis",
+            "Ulcerative colitis"
+        ],
+        "sources": [
+            "Yeast",
+            "Liver",
+            "Legumes",
+            "Root vegetables",
+            "Herbs and spices",
+            "Seeds"
+        ],
+        "unit": "mg/day"
+    },
+    {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Back pain",
+            "Bright red tongue",
+            "Constipation",
+            "Coordination decrease",
+            "Depression",
+            "Diarrhea",
+            "Double vision",
+            "Emotion suppression",
+            "Energy loss",
+            "Fatigue",
+            "Headache",
+            "Indifference",
+            "Irritability",
+            "Memory loss",
+            "Mental ability impairment",
+            "Mood swings",
+            "Motivation loss",
+            "Muscle rigidity",
+            "Numbness",
+            "Pigmented rash",
+            "Seizures",
+            "Speaking difficulties",
+            "Tingling",
+            "Tiredness",
+            "Tremors",
+            "Vision loss",
+            "Vitamin B-complex metabolism impairment",
+            "Vomiting",
+            "Weakness",
+            "Weariness"
+        ],
+        "description": "Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B3 is in intracellular respiration and fatty acid formation.",
+        "excess": [
+            "Abdominal pain",
+            "Blurred vision",
+            "Diarrhea",
+            "Flushing",
+            "Glucose tolerance impairment",
+            "Headache",
+            "Indigestion",
+            "Liver toxicity",
+            "Nausea",
+            "Pain",
+            "Rash",
+            "Rhinitis",
+            "Skin itching",
+            "Vomiting"
+        ],
+        "functions": [
+            "Amino acid metabolism",
+            "Carbohydrate metabolism",
+            "Circulation health",
+            "Digestive juice secretion",
+            "Fat metabolism",
+            "Fatty acid formation",
+            "Nervous system health",
+            "Sex hormones formation",
+            "Skin health",
+            "Vitamin B-complex metabolism"
+        ],
+        "intake": "16",
+        "metabolism": {
+            "absorption": "100% of Vitamin B3 is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Caffeine",
+                "Excess sugars",
+                "Excess water",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Iron",
+                "Vitamin B-complex"
+            ]
+        },
+        "name": "Vitamin B3 (Niacin)",
+        "organs": [
+            "brain",
+            "heart",
+            "muscles",
+            "liver",
+            "muscles",
+            "pancreas",
+            "spinal chord",
+            "skin",
+            "stomach"
+        ],
+        "preventions": [
+            "Acne vulgaris",
+            "Cardiovascular disease",
+            "High blood cholesterol",
+            "Lethargy",
+            "Nervous system disorders",
+            "Osteoarthritis",
+            "Pellagra",
+            "Reynaud's disease",
+            "Schizophrenia",
+            "Type 1 diabetes"
+        ],
+        "sources": [
+            "Yeast",
+            "Meat",
+            "Herbs and spices",
+            "Mushrooms"
+        ],
+        "unit": "mg/day"
     },
     {
         "name": "Iodine",
@@ -520,12 +769,10 @@
     },
     {
         "category": "Essential vitamin/mineral/amino acid",
-        "classification": [
-            {
-                "name": "",
-                "summary": ""
-            }
-        ],
+        "classification": [{
+            "name": "",
+            "summary": ""
+        }],
         "deficiency": [],
         "description": "",
         "excess": [],
@@ -548,7 +795,7 @@
             "impairments": [
                 "Alcohol",
                 "Antibiotics",
-                "High sugar intake",
+                "Excess sugars",
                 "Low fiber",
                 "Processed food",
                 "Synthetic supplements",

@@ -34,7 +34,7 @@ Excess choline is eliminated through urine.
 - Cognitive decline;
 - Depression;
 - Gallstones;
-- High cholesterol;
+- High blood cholesterol;
 - High homocysteine;
 - Inflammation;
 - Memory loss.

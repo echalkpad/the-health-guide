@@ -1,6 +1,5 @@
-# Vitamin B2
-Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex is required to make adenine triphosphate (ATP), 
-the cell's form energy. It's main function is as a coenzyme for numerous oxidation–reduction reactions.
+# Vitamin B2 (Riboflavin)
+Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B2 is as coenzyme in oxidation–reduction reactions.
 
 ## Absorption
 Vitamin B2 is absorbed in the small intestine. After absorption, it accumulates mostly in the small intesine, liver, heart, and kidneys.
@@ -101,6 +100,10 @@ Hypertension
 - The world's healthiest foods, [Vitamin B2 - Niacin](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83)
 - Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Niacin
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well; [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well; [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well; [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
 - Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)
 - Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
 - Wikipedia, [_Nervous system disease_](https://en.wikipedia.org/wiki/Nervous system disease)
