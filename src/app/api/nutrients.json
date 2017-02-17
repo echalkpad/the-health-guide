@@ -54,7 +54,8 @@
             "Skin health",
             "Tooth health"
         ],
-        "intake": "0.9",
+        "id": 320,
+        "intake": 0.9,
         "metabolism": {
             "absorption": "70%-90% Vitamin A is absorbed if the gut is healthy. 9%-22% carotenoids from dietary intake are absorbed if the gut is healthy.",
             "enhancements": [
@@ -93,7 +94,6 @@
         "organs": [
             "bones",
             "eyes",
-            "hair",
             "heart",
             "immune system",
             "kidneys",
@@ -213,7 +213,8 @@
             "Sodium balance",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "1.3",
+        "intake": 1.3,
+        "id": 415,
         "metabolism": {
             "absorption": "100% Vitamin B6 is absorbed if the gut is healthy",
             "enhancements": [
@@ -333,7 +334,8 @@
             "Red blood cells formation",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "0.0024",
+        "id": 418,
+        "intake": 0.0024,
         "metabolism": {
             "absorption": "50% Vitamin B12 is absorbed if the gut is healthy",
             "enhancements": [
@@ -454,7 +456,8 @@
             "Skin health",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "0.03",
+        "id": 0,
+        "intake": 0.03,
         "metabolism": {
             "absorption": "100% Vitamin B7 is absorbed if the gut is healthy",
             "enhancements": [
@@ -564,7 +567,8 @@
             "Red blood cells formation",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "0.4",
+        "id": 431,
+        "intake": 0.4,
         "metabolism": {
             "absorption": "50% Vitamin B9 is absorbed if the gut is healthy",
             "enhancements": [
@@ -699,7 +703,8 @@
             "Skin health",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "16",
+        "id": 406,
+        "intake": 16,
         "metabolism": {
             "absorption": "100% of Vitamin B3 is absorbed if the gut is healthy",
             "enhancements": [
@@ -815,7 +820,8 @@
             "healthy nerves",
             "healthy digestive tract"
         ],
-        "intake": "5",
+        "id": 410,
+        "intake": 5,
         "metabolism": {
             "absorption": "50% of Vitamin B5 is absorbed if the gut is healthy",
             "enhancements": [
@@ -934,7 +940,8 @@
             "Vision health",
             "Vitamin B-complex metabolism"
         ],
-        "intake": "1.3",
+        "id": 405,
+        "intake": 1.3,
         "metabolism": {
             "absorption": "30% of Vitamin B2 is absorbed if the gut is healthy",
             "enhancements": [
@@ -966,8 +973,18 @@
                 "Vitamin B-complex"
             ]
         },
-        "name": "",
-        "organs": [],
+        "name": "Vitamin B2 (Riboflavin)",
+        "organs": [
+            "bones",
+            "brain",
+            "eyes",
+            "heart",
+            "immune system",
+            "mouth",
+            "pharynx",
+            "skin",
+            "spinal chord"
+        ],
         "preventions": [
             "Anemia",
             "Cataract",
@@ -1041,7 +1058,8 @@
             "Muscle health",
             "Nervous system health"
         ],
-        "intake": "1.2",
+        "id": 404,
+        "intake": 1.2,
         "metabolism": {
             "absorption": "100% of Vitamin B1 is absorbed if the gut is healthy",
             "enhancements": [
@@ -1131,7 +1149,8 @@
             "Structural integrity of cellular membranes",
             "Transmembrane signaling"
         ],
-        "intake": "500",
+        "id": 421,
+        "intake": 500,
         "metabolism": {
             "absorption": "100% of Choline is absorbed if the gut is healthy.",
             "enhancements": [
@@ -1213,7 +1232,7 @@
         "description": "",
         "excess": [""],
         "functions": [],
-        "intake": "",
+        "intake": 0,
         "metabolism": {
             "absorption": "is absorbed if the gut is healthy",
             "enhancements": [
