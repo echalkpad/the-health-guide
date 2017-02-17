@@ -9,6 +9,7 @@ Vitamin D or Calciferol is an essential fat-soluble vitamin. It is generally pro
 - 80% of Vitamin D is absorbed if the gut is healthy.
 
 Vitamin D absorption is enhanced by:
+- Fats;
 - Fiber;
 - No smoking;
 - Organic food;

@@ -215,7 +215,7 @@
         "intake": 1.3,
         "id": 415,
         "metabolism": {
-            "absorption": "100% Vitamin B6 is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B6 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -701,7 +701,7 @@
         "id": 406,
         "intake": 16,
         "metabolism": {
-            "absorption": "100% of Vitamin B3 is absorbed if the gut is healthy",
+            "absorption": "50% of Vitamin B3 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -936,7 +936,7 @@
         "id": 405,
         "intake": 1.3,
         "metabolism": {
-            "absorption": "30% of Vitamin B2 is absorbed if the gut is healthy",
+            "absorption": "60% of Vitamin B2 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1053,7 +1053,7 @@
         "id": 404,
         "intake": 1.2,
         "metabolism": {
-            "absorption": "100% of Vitamin B1 is absorbed if the gut is healthy",
+            "absorption": "30% of Vitamin B1 is absorbed if the gut is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1261,6 +1261,7 @@
         "metabolism": {
             "absorption": "80% of Vitamin D is absorbed if the gut is healthy",
             "enhancements": [
+                "Fats",
                 "Fiber",
                 "No smoking",
                 "Organic food",
@@ -1319,6 +1320,88 @@
             "Fish",
             "Eggs"
         ],
+        "unit": "mg/day"
+    },
+    {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Back pain",
+            "Cognitive impairment",
+            "Coordination decrease",
+            "Digestive disorders",
+            "Double vision",
+            "Emotion suppression",
+            "Hallucinations",
+            "Headache",
+            "High blood cholesterol",
+            "High blood pressure",
+            "Indifference",
+            "Infertility",
+            "Irritability",
+            "Kidney disorders",
+            "Liver disorders",
+            "Mood swings",
+            "Muscle rigidity",
+            "Numbness",
+            "Seizures",
+            "Speaking difficulties",
+            "Tingling",
+            "Tremors",
+            "Vision loss",
+            "Weakness"
+        ],
+        "description": "Vitamin E or alpha-Tocopherol is an essential fat-soluble vitamin. Vitamin E is actually a group of organic compounds, tocopherols and tocotrienols, but alpha-Tocopherol is the only one used by the human body. Its main function is antioxidant activity and cellular membrane protection.",
+        "excess": ["Allergy"],
+        "functions": [
+            "Antioxidant",
+            "Cellular membrane protection",
+            "Cellular respiration",
+            "Enzymatic activity regulator",
+            "Eye health",
+            "Gene expression",
+            "HDL ('good' cholesterol) increase",
+            "Immune function",
+            "LDL ('bad' cholesterol) decrease",
+            "Lipid protection",
+            "Nervous system health",
+            "Red blood cell formation",
+            "Red blood cell protection"
+        ],
+        "id": 323,
+        "intake": 0.015,
+        "metabolism": {
+            "absorption": "is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Excess sugars",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut"
+            ]
+        },
+        "name": "Vitamin E (alpha-Tocopherol)",
+        "organs": [],
+        "preventions": [],
+        "sources": [],
         "unit": "mg/day"
     },
     // -------------------------------------------------------------------

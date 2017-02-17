@@ -120,3 +120,5 @@ Vitamin B12 absorption is impaired by:
 - Wikipedia, [_Central nervous system disease_](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
 - Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
 - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
+- Vitamin Workshop 101, [_Vitamin Absorption Percentages_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/7/vitamin-absorption-percentages.html)
+- Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)

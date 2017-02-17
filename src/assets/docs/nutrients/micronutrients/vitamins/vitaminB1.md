@@ -2,7 +2,7 @@
 Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B1 is in amino acid, carbohydrate, and fat metabolism.
 
 ## Metabolism
-- 100% of Vitamin B1 is absorbed if the gut is healthy.
+- 30% of Vitamin B1 is absorbed if the gut is healthy.
 
 Vitamin B1 absorption is enhanced by:
 - Fiber;
@@ -119,3 +119,5 @@ Vitamin B1 absorption is impaired by:
 - Wikipedia, [_Central nervous system disease_](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
 - Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
 - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
+- Vitamin Workshop 101, [_Vitamin Absorption Percentages_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/7/vitamin-absorption-percentages.html)
+- Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)

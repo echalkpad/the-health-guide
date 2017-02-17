@@ -2,7 +2,7 @@
 Vitamin B7 , Vitamin H, or Biotin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B7 is cell growth and fatty acid formation.
 
 ## Metabolism
-- 100% Vitamin B7 is absorbed if the gut is healthy.
+- 5%-100% Vitamin B7 is absorbed if the gut is healthy.
 
 Vitamin B7 absorption is enhanced by:
 - Fiber;
@@ -118,3 +118,5 @@ Vitamin B7 absorption is impaired by:
 - Wikipedia, [_Central nervous system disease_](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
 - Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
 - Johns Hopkins Medicine, [_Overview of Nervous System Disorders_](http://www.hopkinsmedicine.org/healthlibrary/conditions/nervous_system_disorders/overview_of_nervous_system_disorders_85,P00799/)
+- Vitamin Workshop 101, [_Vitamin Absorption Percentages_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/7/vitamin-absorption-percentages.html)
+- Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)
