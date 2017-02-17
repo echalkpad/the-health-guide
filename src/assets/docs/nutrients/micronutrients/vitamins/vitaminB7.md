@@ -93,7 +93,7 @@ Vitamin B7 absorption is impaired by:
 - Allergy.
 
 ## Food sources
-- Yeast;
+- Brewer's yeast;
 - Soybeeans;
 - Green vegetables;
 - Nuts;

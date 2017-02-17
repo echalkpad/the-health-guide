@@ -95,7 +95,7 @@ Vitamin B5 absorption is impaired by:
 - Sunflower seeds;
 - Sesame seeds;
 - Liver;
-- Yeast;
+- Brewer's yeast;
 - Kidneys.
 
 ## Average recommended intake

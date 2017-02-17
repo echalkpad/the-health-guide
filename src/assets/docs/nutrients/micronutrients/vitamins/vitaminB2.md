@@ -99,7 +99,7 @@ Vitamin B2 absorption is impaired by:
 - Allergy.
 
 ## Food sources
-- Yeast;
+- Brewer's yeast;
 - Liver;
 - Egg white;
 - Kidneys;

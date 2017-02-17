@@ -100,7 +100,7 @@ Vitamin B9 absorption is impaired by:
 - Vitamin B12 deficiency.
 
 ## Food sources
-- Yeast;
+- Brewer's yeast;
 - Liver;
 - Legumes;
 - Root vegetables;

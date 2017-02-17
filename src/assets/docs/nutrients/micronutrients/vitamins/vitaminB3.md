@@ -107,7 +107,7 @@ Vitamin B3 absorption is impaired by:
 - Vomiting.
 
 ## Food sources
-- Yeast;
+- Brewer's yeast;
 - Meat;
 - Herbs and spices;
 - Mushrooms.

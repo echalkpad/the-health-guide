@@ -93,7 +93,7 @@ Vitamin B1 absorption is impaired by:
 - Allergy.
 
 ## Food sources
-- Yeast;
+- Brewer's yeast;
 - Seeds;
 - Whole-grains;
 - Meat;
