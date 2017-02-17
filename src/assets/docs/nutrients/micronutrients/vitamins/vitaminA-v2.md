@@ -116,5 +116,5 @@ Vitamin A absorption is impaired by:
 - Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
 - Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
-- UCSF MEdical Center, [_Digestive disorders_](https://www.ucsfhealth.org/conditions/digestive_disorders/)
+- WebMd, [_Digestive disorders_](http://www.webmd.com/digestive-disorders/default.htm)
 - WebMD, [Vitamin A](http://www.webmd.com/vitamins-supplements/ingredientmono-964-VITAMIN+A.aspx?activeIngredientId=964&activeIngredientName=VITAMIN+A&source=2)
