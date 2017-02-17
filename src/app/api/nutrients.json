@@ -1108,6 +1108,95 @@
         "unit": "mg/day"
     },
     {
+        "category": "Essential vitamin",
+        "classification": [],
+        "deficiency": [
+            "Fatty liver",
+            "Kidney necrosis"
+        ],
+        "description": "Choline is an essential water-soluble vitamin. Its main functions are to maintain structural integrity of membranes and transmembrane signaling.",
+        "excess": [
+            "Excesive salivation",
+            "Excesive sweating",
+            "Fishy odor syndrome",
+            "Hepatotoxicity",
+            "Low blood pressure"
+        ],
+        "functions": [
+            "Cholesterol metabolism and transport",
+            "Cholinergic neurotransmission",
+            "Fat metabolism and transport",
+            "Methyl metabolism",
+            "Pregnancy support",
+            "Structural integrity of cellular membranes",
+            "Transmembrane signaling"
+        ],
+        "intake": "500",
+        "metabolism": {
+            "absorption": "100% of Choline is absorbed if the gut is healthy.",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Excess sugars",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut",
+                "Methionine",
+                "Vitamin B9"
+            ]
+        },
+        "name": "Choline",
+        "organs": [
+            "brain",
+            "kidneys",
+            "liver",
+            "muscles",
+            "spinal chord"
+        ],
+        "preventions": [
+            "Atherosclerosis",
+            "Bipolar disorder",
+            "Gallstones",
+            "High blood cholesterol",
+            "High homocysteine",
+            "Inflammation",
+            "Liver disorders",
+            "Nervous system disorders"
+        ],
+        "sources": [
+            "Eggs",
+            "Liver",
+            "Caviar",
+            "Cod",
+            "Salmon",
+            "Soy",
+            "Beef",
+            "Mackerel",
+            "Hering",
+            "Coriander",
+            "Parsley",
+            "Lentils"
+        ],
+        "unit": "mg/day"
+    },
+    {
         "name": "Iodine",
         "organs": [
             "brain",
