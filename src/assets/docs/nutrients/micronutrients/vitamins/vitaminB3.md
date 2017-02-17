@@ -48,6 +48,7 @@ Vitamin B3 absorption is impaired by:
 ## Deficiency
 - Back pain;
 - Bright red tongue;
+- Cognitive impairment;
 - Constipation;
 - Coordination decrease;
 - Depression;
@@ -59,8 +60,6 @@ Vitamin B3 absorption is impaired by:
 - Headache;
 - Indifference;
 - Irritability;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;

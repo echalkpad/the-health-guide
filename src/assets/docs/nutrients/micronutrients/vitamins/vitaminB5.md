@@ -47,6 +47,7 @@ Vitamin B5 absorption is impaired by:
 - Abdominal pain;
 - Arthritis;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Dermatitis;
@@ -60,8 +61,6 @@ Vitamin B5 absorption is impaired by:
 - Irritability;
 - Kidney disorders;
 - Low blood sugar;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;

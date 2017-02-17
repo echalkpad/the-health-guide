@@ -50,6 +50,7 @@ Vitamin B9 absorption is impaired by:
 - Anemia;
 - Appetite loss;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -60,8 +61,6 @@ Vitamin B9 absorption is impaired by:
 - Heart palpitations;
 - Indifference;
 - Irritability;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;

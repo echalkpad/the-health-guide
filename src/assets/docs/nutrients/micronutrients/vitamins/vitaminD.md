@@ -1,78 +1,110 @@
-# Vitamin D
-Vitamin D or Calciferol is a fat-soluble vitamin. It is generally produced by the human body during exposure to the ultraviolet rays of the sun. 
-Its main function is to aid in the intestinal absorption of calcium and phosphorus.
+# Vitamin D (Calciferol)
+Vitamin D or Calciferol is an essential fat-soluble vitamin. It is generally produced in the skin through exposure to sunlight. Its main functions are bone health and Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism.
 
-## Absorption
-Vitamin D is either synthesized in the skin through exposure to ultraviolet B rays in sunlight or ingested as dietary vitamin D, absorbed 
-in the small intestine, and accumulated in the liver.
-Vitamin D absorption requires: Magnesium.
-Vitamin D absorption is impaired by: alcohol, tobacco.
+## Classification
+- Vitamin D2 (Ergocalciferol) - mushrooms, dairy, eggs
+- Vitamin D3 (Cholecalciferol) - sunlight, fish
+
+## Metabolism
+- 80% of Vitamin D is absorbed if the gut is healthy.
+
+Vitamin D absorption is enhanced by:
+- Fiber;
+- No smoking;
+- Organic food;
+- Prebiotics food;
+- Probiotics food;
+- Reduced alcohol;
+- Reduced antibiotics;
+- Reduced synthetic supplements;
+- Reduced sugars;
+- Stress management.
+
+Vitamin D absorption requires:
+- Healthy gut.
+
+Vitamin D absorption is impaired by:
+- Alcohol;
+- Antibiotics;
+- Excess sugars;
+- Low fiber;
+- Processed food;
+- Synthetic supplements;
+- Stress;
+- Tobacco.
 
 ## Functions
-- calcium absorption;
-- phosphorus absorption;
-- iron absorption;
-- magnesium absorption;
-- zinc absorption;
-- antioxidant;
-- bone health;
-- immunity;
-- prevents blood clotting;
-- thyroid function;
-- cell differentiation;
-- cell regeneration.
+- Antioxidant;
+- Bone health;
+- Calcium metabolism;
+- Cellular differentiation;
+- Cellular regeneration;
+- Immune function;
+- Iron metabolism;
+- Magnesium metabolism;
+- Phosphorus metabolism;
+- Thyroid health;
+- Zinc metabolism.
 
 ## Deficiency
-- bone diseases;
-- rickets;
-- osteomalacia;
-- softening of bones;
-- poor growth;
-- osteoporosis;
-- brittle bones;
-- dental problems;
-- lack of resilience in skin and tissue;
-- colds.
-
-## Excess
-- Polyuria;
-- Polydipsia;
-- Hypercalciuria;
-- Calcification of soft tissues (including the kidneys, blood vessels, heart, and lungs);
-- Anorexia;
-- Nausea;
-- Vomiting;
-- Reduced renal function.
+- Blood clots;
+- Cognitive impairment;
+- Common cold;
+- Dental disorders;
+- Growth impairment;
+- Osteomalacia;
+- Rickets.
 
 ## Disease preventions
-- arthritis;
-- asthma;
-- cancer;
-- cardiovascular disease;
-- cystic fibrosis;
-- depression;
-- diabetes;
-- epilepsy;
-- herpes simplex;
-- herpes zoster;
-- insomnia;
-- osteomalacia;
-- osteoporosis;
-- rheumatoid arthritis;
-- rickets;
+- Arthritis;
+- Asthma;
+- Autoimmune disease;
+- Cancer;
+- Cardiovascular disease;
+- Cystic fibrosis;
+- Diabetes;
+- Herpes simplex;
+- Herpes zoster;
+- Infectious disease;
+- Mortality;
+- Nervous system disorders;
+- Obesity;
+- Osteoporosis;
+- Rheumatoid arthritis.
+
+## Excess
+- Anorexia;
+- Blood vessel calcification;
+- Heart calcification;
+- Hypercalciuria;
+- Insomnia;
+- Kidney disorders;
+- Lung calcification;
+- Nausea;
+- Nervousness;
+- Polyuria;
+- Polydipsia;
+- Pruritus;
+- Vomiting.
 
 ## Food sources
-- fatty fish;
-- eggs;
-- liver;
-- mushrooms.
+- Cod liver;
+- Mushrooms;
+- Fish;
+- Eggs.
 
 ## Average recommended intake
 - 0.15mg/day.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin D](https://en.wikipedia.org/wiki/Vitamin_D)
-- The world's healthiest foods, [Vitamin D](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=110)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin](https://en.wikipedia.org/wiki/Vitamin)
+- Wikipedia, [_Vitamin D_](https://en.wikipedia.org/wiki/Vitamin_D)
+- The world's healthiest foods, [_Vitamin D_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=110)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin D
+- [USDA Branded Food Products Database - Vitamin D2](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=325&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- [USDA Branded Food Products Database - Vitamin D3](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=326&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
+- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)

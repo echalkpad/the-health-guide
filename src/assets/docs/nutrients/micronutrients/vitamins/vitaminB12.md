@@ -48,6 +48,7 @@ Vitamin B12 absorption is impaired by:
 - Anemia;
 - Appetite loss;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -58,8 +59,6 @@ Vitamin B12 absorption is impaired by:
 - Indifference;
 - Irritability;
 - Liver enlargement; 
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;

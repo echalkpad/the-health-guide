@@ -51,6 +51,7 @@ Vitamin B2 absorption is impaired by:
 ## Deficiency
 - Anemia;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Digestive disorders;
@@ -64,8 +65,6 @@ Vitamin B2 absorption is impaired by:
 - Indifference;
 - Insomnia;
 - Irritability;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Mouth disorders;

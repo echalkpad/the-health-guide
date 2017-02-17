@@ -162,6 +162,7 @@
         "deficiency": [
             "Anemia",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Double vision",
@@ -173,8 +174,6 @@
             "Indifference",
             "Irritability",
             "Low blood sugar",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -293,6 +292,7 @@
             "Anemia",
             "Appetite loss",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Double vision",
@@ -303,8 +303,6 @@
             "Indifference",
             "Irritability",
             "Liver enlargement",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -408,6 +406,7 @@
         "deficiency": [
             "Appetite loss",
             "Back pain",
+            "Cognitive impairment",
             "Conjunctivitis",
             "Coordination decrease",
             "Depression",
@@ -423,8 +422,6 @@
             "Indifference",
             "Inflammation",
             "Irritability",
-            "Memory loss",
-            "Mental ability impairment",
             "Mild skin disorders",
             "Mood swings",
             "Motivation loss",
@@ -522,6 +519,7 @@
             "Anemia",
             "Appetite loss",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Double vision",
@@ -532,8 +530,6 @@
             "Heart palpitations",
             "Indifference",
             "Irritability",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -645,6 +641,7 @@
         "deficiency": [
             "Back pain",
             "Bright red tongue",
+            "Cognitive impairment",
             "Constipation",
             "Coordination decrease",
             "Depression",
@@ -656,8 +653,6 @@
             "Headache",
             "Indifference",
             "Irritability",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -776,6 +771,7 @@
             "Abdominal pain",
             "Arthritis",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Dermatitis",
@@ -789,8 +785,6 @@
             "Irritability",
             "Kidney disorders",
             "Low blood sugar",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -889,6 +883,7 @@
         "deficiency": [
             "Anemia",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Digestive disorders",
@@ -902,8 +897,6 @@
             "Indifference",
             "Insomnia",
             "Irritability",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Mouth disorders",
@@ -1014,6 +1007,7 @@
         "deficiency": [
             "Appetite loss",
             "Back pain",
+            "Cognitive impairment",
             "Coordination decrease",
             "Depression",
             "Digestive disorders",
@@ -1025,8 +1019,6 @@
             "Indifference",
             "Inflammation",
             "Irritability",
-            "Memory loss",
-            "Mental ability impairment",
             "Mood swings",
             "Motivation loss",
             "Muscle rigidity",
@@ -1216,6 +1208,121 @@
         "unit": "mg/day"
     },
     {
+        "category": "Essential vitamin",
+        "classification": [{
+                "name": "Vitamin D2 (Ergocalciferol)",
+                "summary": "mushrooms, dairy, eggs"
+            },
+            {
+                "name": "Vitamin D3 (Cholecalciferol)",
+                "summary": "sunlight, fish"
+            }
+        ],
+        "deficiency": [
+            "Blood clots",
+            "Cognitive impairment",
+            "Common cold",
+            "Dental disorders",
+            "Growth impairment",
+            "Osteomalacia",
+            "Rickets"
+        ],
+        "description": "Vitamin D or Calciferol is an essential fat-soluble vitamin. It is generally produced in the skin through exposure to sunlight. Its main functions are bone health and Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism.",
+        "excess": [
+            "Anorexia",
+            "Blood vessel calcification",
+            "Heart calcification",
+            "Hypercalciuria",
+            "Insomnia",
+            "Kidney disorders",
+            "Lung calcification",
+            "Nausea",
+            "Nervousness",
+            "Polyuria",
+            "Polydipsia",
+            "Pruritus",
+            "Vomiting"
+        ],
+        "functions": [
+            "Antioxidant",
+            "Bone health",
+            "Calcium metabolism",
+            "Cellular differentiation",
+            "Cellular regeneration",
+            "Immune function",
+            "Iron metabolism",
+            "Magnesium metabolism",
+            "Phosphorus metabolism",
+            "Thyroid health",
+            "Zinc metabolism"
+        ],
+        "id": 328,
+        "intake": 0.15,
+        "metabolism": {
+            "absorption": "80% of Vitamin D is absorbed if the gut is healthy",
+            "enhancements": [
+                "Fiber",
+                "No smoking",
+                "Organic food",
+                "Prebiotics food",
+                "Probiotics food",
+                "Reduced alcohol",
+                "Reduced antibiotics",
+                "Reduced synthetic supplements",
+                "Reduced sugars",
+                "Stress management"
+            ],
+            "impairments": [
+                "Alcohol",
+                "Antibiotics",
+                "Excess sugars",
+                "Low fiber",
+                "Processed food",
+                "Synthetic supplements",
+                "Stress",
+                "Tobacco"
+            ],
+            "requirements": [
+                "Healthy gut"
+            ]
+        },
+        "name": "Vitamin D (Calciferol)",
+        "organs": [
+            "bones",
+            "brain",
+            "heart",
+            "immune system",
+            "lungs",
+            "skin",
+            "teeth"
+        ],
+        "preventions": [
+            "Arthritis",
+            "Asthma",
+            "Autoimmune disease",
+            "Cancer",
+            "Cardiovascular disease",
+            "Cystic fibrosis",
+            "Diabetes",
+            "Herpes simplex",
+            "Herpes zoster",
+            "Infectious disease",
+            "Mortality",
+            "Nervous system disorders",
+            "Obesity",
+            "Osteoporosis",
+            "Rheumatoid arthritis"
+        ],
+        "sources": [
+            "Cod liver",
+            "Mushrooms",
+            "Fish",
+            "Eggs"
+        ],
+        "unit": "mg/day"
+    },
+    // -------------------------------------------------------------------
+    {
         "name": "Iodine",
         "organs": [
             "brain",
@@ -1225,6 +1332,7 @@
             "kidneys"
         ]
     },
+    // -------------------------------------------------------------------
     {
         "category": "Essential vitamin/amino acid/mineral",
         "classification": [],
@@ -1232,6 +1340,7 @@
         "description": "",
         "excess": [""],
         "functions": [],
+        "id": 0,
         "intake": 0,
         "metabolism": {
             "absorption": "is absorbed if the gut is healthy",
@@ -1265,6 +1374,6 @@
         "organs": [],
         "preventions": [],
         "sources": [],
-        "unit": ""
+        "unit": "g/day"
     }
 ]

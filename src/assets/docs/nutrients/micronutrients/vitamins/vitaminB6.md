@@ -52,6 +52,7 @@ Vitamin B6 absorption is impaired by:
 ## Deficiency
 - Anemia;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Double vision;
@@ -63,8 +64,6 @@ Vitamin B6 absorption is impaired by:
 - Indifference;
 - Irritability;
 - Low blood sugar;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;

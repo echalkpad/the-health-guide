@@ -45,6 +45,7 @@ Vitamin B1 absorption is impaired by:
 ## Deficiency
 - Appetite loss;
 - Back pain;
+- Cognitive impairment;
 - Coordination decrease;
 - Depression;
 - Digestive disorders;
@@ -56,8 +57,6 @@ Vitamin B1 absorption is impaired by:
 - Indifference;
 - Inflammation;
 - Irritability;
-- Memory loss;
-- Mental ability impairment;
 - Mood swings;
 - Motivation loss;
 - Muscle rigidity;
