@@ -2,7 +2,7 @@
 Vitamin E or alpha-Tocopherol is an essential fat-soluble vitamin. Vitamin E is actually a group of organic compounds, tocopherols and tocotrienols, but alpha-Tocopherol is the only one used by the human body. Its main function is antioxidant activity and cellular membrane protection.
 
 ## Absorption
-- 30% of Vitamin E is absorbed if the gut is healthy.
+- 30% of Vitamin E is absorbed if the digestive system is healthy.
 
 Vitamin E absorption is enhanced by:
 - Fats;
@@ -18,7 +18,7 @@ Vitamin E absorption is enhanced by:
 - Stress management.
 
 Vitamin E absorption requires:
-- Healthy gut.
+- Healthy digestive system.
 
 Vitamin E absorption is impaired by:
 - Alcohol;
@@ -106,7 +106,7 @@ Vitamin E absorption is impaired by:
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin E
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=323&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
-- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-gut/)
+- Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-digestive system/)
 - Barbara Bolen, PhD, "Very well", [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
-- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-gut-bacteria-1945326)
-- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-gut-flora-1944914)
+- Barbara Bolen, PhD, "Very well", [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-digestive system-bacteria-1945326)
+- Barbara Bolen, PhD, "Very well", [_Your Gut Flora and Your Health_](https://www.verywell.com/what-are-your-digestive system-flora-1944914)

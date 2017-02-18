@@ -57,7 +57,7 @@
         "id": 320,
         "intake": 0.9,
         "metabolism": {
-            "absorption": "70%-90% Vitamin A is absorbed if the gut is healthy. 9%-22% carotenoids from dietary intake are absorbed if the gut is healthy.",
+            "absorption": "70%-90% Vitamin A is absorbed if the digestive system is healthy. 9%-22% carotenoids from dietary intake are absorbed if the digestive system is healthy.",
             "enhancements": [
                 "Cooking",
                 "Fats",
@@ -85,7 +85,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Iron",
                 "Zinc"
             ]
@@ -215,7 +215,7 @@
         "intake": 1.3,
         "id": 415,
         "metabolism": {
-            "absorption": "50% Vitamin B6 is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B6 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -242,7 +242,7 @@
                 "X-rays"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Magnesium",
                 "Vitamin B-complex"
             ]
@@ -335,7 +335,7 @@
         "id": 418,
         "intake": 0.0024,
         "metabolism": {
-            "absorption": "50% Vitamin B12 is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B12 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -362,7 +362,7 @@
                 "Vitamin C supplements"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Intrinsic factor",
                 "Vitamin B-complex"
             ]
@@ -456,7 +456,7 @@
         "id": 0,
         "intake": 0.03,
         "metabolism": {
-            "absorption": "100% Vitamin B7 is absorbed if the gut is healthy",
+            "absorption": "100% Vitamin B7 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -482,7 +482,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Protease",
                 "Vitamin B-complex"
             ]
@@ -566,7 +566,7 @@
         "id": 431,
         "intake": 0.4,
         "metabolism": {
-            "absorption": "50% Vitamin B9 is absorbed if the gut is healthy",
+            "absorption": "50% Vitamin B9 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -594,7 +594,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Vitamin B-complex",
                 "Zinc"
             ]
@@ -701,7 +701,7 @@
         "id": 406,
         "intake": 16,
         "metabolism": {
-            "absorption": "50% of Vitamin B3 is absorbed if the gut is healthy",
+            "absorption": "50% of Vitamin B3 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -727,7 +727,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Iron",
                 "Vitamin B-complex"
             ]
@@ -817,7 +817,7 @@
         "id": 410,
         "intake": 5,
         "metabolism": {
-            "absorption": "50% of Vitamin B5 is absorbed if the gut is healthy",
+            "absorption": "50% of Vitamin B5 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -842,7 +842,7 @@
                 "Vitamin B7 supplements"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Vitamin B-complex"
             ]
         },
@@ -936,7 +936,7 @@
         "id": 405,
         "intake": 1.3,
         "metabolism": {
-            "absorption": "60% of Vitamin B2 is absorbed if the gut is healthy",
+            "absorption": "60% of Vitamin B2 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -962,7 +962,7 @@
             ],
             "requirements": [
                 "Bile salts",
-                "Healthy gut",
+                "Healthy digestive system",
                 "Vitamin B-complex"
             ]
         },
@@ -1053,7 +1053,7 @@
         "id": 404,
         "intake": 1.2,
         "metabolism": {
-            "absorption": "30% of Vitamin B1 is absorbed if the gut is healthy",
+            "absorption": "30% of Vitamin B1 is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1077,7 +1077,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Vitamin B-complex"
             ]
         },
@@ -1144,7 +1144,7 @@
         "id": 421,
         "intake": 500,
         "metabolism": {
-            "absorption": "100% of Choline is absorbed if the gut is healthy.",
+            "absorption": "100% of Choline is absorbed if the digestive system is healthy.",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1168,7 +1168,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut",
+                "Healthy digestive system",
                 "Methionine",
                 "Vitamin B9"
             ]
@@ -1259,7 +1259,7 @@
         "id": 328,
         "intake": 0.15,
         "metabolism": {
-            "absorption": "80% of Vitamin D is absorbed if the gut is healthy",
+            "absorption": "80% of Vitamin D is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fats",
                 "Fiber",
@@ -1284,7 +1284,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut"
+                "Healthy digestive system"
             ]
         },
         "name": "Vitamin D (Calciferol)",
@@ -1371,7 +1371,7 @@
         "id": 323,
         "intake": 0.015,
         "metabolism": {
-            "absorption": "is absorbed if the gut is healthy",
+            "absorption": "is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1395,7 +1395,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut"
+                "Healthy digestive system"
             ]
         },
         "name": "Vitamin E (alpha-Tocopherol)",
@@ -1426,7 +1426,7 @@
         "id": 0,
         "intake": 0,
         "metabolism": {
-            "absorption": "is absorbed if the gut is healthy",
+            "absorption": "is absorbed if the digestive system is healthy",
             "enhancements": [
                 "Fiber",
                 "No smoking",
@@ -1450,7 +1450,7 @@
                 "Tobacco"
             ],
             "requirements": [
-                "Healthy gut"
+                "Healthy digestive system"
             ]
         },
         "name": "",

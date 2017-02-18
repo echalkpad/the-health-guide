@@ -2,7 +2,7 @@
 - summary
 
 ## Metabolism
-- % of [Name] is absorbed if the gut is healthy.
+- % of [Name] is absorbed if the digestive system is healthy.
 
 [Name] absorption is enhanced by:
 - Fiber;
@@ -17,7 +17,7 @@
 - Stress management.
 
 [Name] absorption requires:
-- Healthy gut
+- Healthy digestive system
 
 [Name] absorption is impaired by:
 - Alcohol;
