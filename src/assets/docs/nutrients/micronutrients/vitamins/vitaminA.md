@@ -63,7 +63,7 @@ Vitamin A metabolism is impaired by:
 
 ## Short-term deficiency
 __Bones__:
-- Child growth impairments;
+- Child growth problems;
 - Fractures.
 
 __Eyes__: 
@@ -94,7 +94,7 @@ __Skin__:
 ## Overdose
 - Abdominal pain;
 - Anorexia;
-- Appetite decrease;
+- Appetite loss;
 - Blurred vision;
 - Bone problems;
 - Carotenodermia;

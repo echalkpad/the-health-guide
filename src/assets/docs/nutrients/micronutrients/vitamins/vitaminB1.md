@@ -62,7 +62,7 @@ __Muscles__:
 
 ## Long-term deficiency
 - Cardiovascular problems (Heart disease);
-- Metabolic problems (Amino acid, Carbohydrate, and Lipid metabolism impairment);
+- Metabolic problems (Amino acid, Carbohydrate, and Lipid metabolism problems);
 - Nervous system problems (Beriberi and Wernicke-Korsakoff syndrome).
 
 ## Overdose
