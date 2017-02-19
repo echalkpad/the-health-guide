@@ -23,9 +23,10 @@
 - Speaking difficulties;
 - Understanding difficulties.
 
-# References
+## References
 - Wikipedia, [_Cognition_](https://en.wikipedia.org/wiki/Cognition)
 - Wikipedia, [_Perception_](https://en.wikipedia.org/wiki/Perception)
 - Cancer.Net, [_Attention, Thinking, or Memory Problems_](http://www.cancer.net/navigating-cancer-care/side-effects/attention-thinking-or-memory-problems)
 - Wikipedia, [_Irritability_](https://en.wikipedia.org/wiki/Irritability)
 - Wikipedia, [_Attention deficit hyperactivity disorder_](https://en.wikipedia.org/wiki/Attention_deficit_hyperactivity_disorder)
+- Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
