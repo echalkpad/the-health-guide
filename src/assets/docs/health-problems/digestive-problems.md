@@ -17,15 +17,15 @@
 
 ## Diseases
 
-### Esophagus disease
+### Esophagus
 - Achalasia;
 - Esophagus narrowing.
 
-### Gallbladder disease
+### Gallbladder
 - Cholecystitis;
 - Gallstones.
 
-### Intestinal disease
+### Intestinal
 - Celiac disease;
 - Crohn's disease;
 - Diverticulitis;
@@ -36,29 +36,29 @@
 - Short bowel syndrome;
 - Ulcerative colitis.
 
-### Liver disease
+### Liver
 - Cholangitis;
 - Cirrhosis;
 - Hepatitis.
 
-### Pancreas disease
+### Pancreas
 - Cancer;
 - Pancreatitis;
 - Pancreatic pseudocyst.
 
-### Rectal disease
+### Rectum
 - Anal fissure;
 - Hemorrhoids;
 - Proctitis;
 - Rectal prolapse.
 
-### Stomach disease
+### Stomach
 - Gastritis;
 - Gastroparesis;
 - Crohn's disease;
 - Ulcers.
 
-References:
+## References:
 - Kristeen Cherney, Healthline, [_Understanding Digestion Problems_](http://www.healthline.com/health/digestion-problems)
 - MedlinePlus, [_Digestive diseases_](https://medlineplus.gov/ency/article/007447.htm)
 - [_Digestive Disorders A-Z_](http://www.emedicinehealth.com/script/main/alphaidx.asp?p=a_139)
