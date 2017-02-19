@@ -1,5 +1,5 @@
 # Vitamin A
-Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cellular development.
+Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and blood cells formation.
 
 ## Classification
 - Retinoids (animal source)
@@ -36,10 +36,23 @@ Vitamin A absorption is impaired by:
 - Stress;
 - Zinc deficiency.
 
+## Benefits
+- Beautiful skin;
+- Beautiful hair;
+- Beautiful nails;
+- Clear and improved vision;
+- Growth;
+- Healthy new born baby;
+- Keeps aging away;
+- Keeps bacteria and viruses away;
+- Sexual health;
+- Strong bones;
+- Strong teeth.
+
 ## Functions
 - Antioxidant activity;
+- Blood cells formation;
 - Bone health;
-- Cellular development;
 - Embryonic development;
 - Eye health;
 - Gene expression;
