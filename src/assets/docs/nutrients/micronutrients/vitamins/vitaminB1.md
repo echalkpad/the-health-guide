@@ -95,6 +95,8 @@ __Muscles__:
 - MedlinePlus, [_Thiamine (Vitamin B1)_](https://medlineplus.gov/druginfo/natural/965.html)
 - National Institute of Health, [_Thiamin_](https://ods.od.nih.gov/factsheets/Thiamin-HealthProfessional/)
 - Peter R. Martin, M.D., Charles K. Singleton, Ph.D., and Susanne Hiller–Sturmhöfel, Ph.D., National Institute on Alcohol Abuse and Alcoholism, [_The Role of Thiamine Deficiency in Alcoholic Brain Disease_](https://pubs.niaaa.nih.gov/publications/arh27-2/134-142.htm)
+- Wikipedia, [_Beriberi_](https://en.wikipedia.org/wiki/Beriberi)
+- Wikipedia, [_Wernicke–Korsakoff syndrome_](https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome)
 - Wikipedia, [_Fatigue (medical)_](https://en.wikipedia.org/wiki/Fatigue_(medical)#Mental_fatigue)
 - Vitamin Workshop 101, [_Vitamin Absorption Percentages_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/7/vitamin-absorption-percentages.html)
 - Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)
