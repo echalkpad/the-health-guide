@@ -5,14 +5,12 @@
 - % of [Name] is absorbed if the digestive system is healthy.
 
 [Name] absorption is enhanced by:
-- Fiber;
 - No smoking;
 - Organic food;
-- Prebiotics food;
-- Probiotics food;
+- Prebiotics;
+- Probiotics;
 - Reduced alcohol;
-- Reduced antibiotics;
-- Reduced synthetic supplements;
+- Reduced pharmaceutical drugs;
 - Reduced sugars;
 - Stress management.
 
@@ -21,13 +19,13 @@
 
 [Name] absorption is impaired by:
 - Alcohol;
-- Antibiotics;
+- Digestive disorders;
 - Excess sugars;
 - Low fiber;
+- Pharmaceutical drugs;
 - Processed food;
-- Synthetic supplements;
-- Stress;
-- Tobacco.
+- Smoking;
+- Stress.
 
 ## Functions
 

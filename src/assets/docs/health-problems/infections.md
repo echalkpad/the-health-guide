@@ -1,6 +1,5 @@
 # Infections
-
-Infections are external organism infiltrations into the body that cause tissue damage and ilness. Infections occur because of weak immune functions (immunodeficiency).
+Infections are caused by weak immune system (immunodeficiency).
 
 - Intra-amniotic infection;
 - Odontogenic infection;

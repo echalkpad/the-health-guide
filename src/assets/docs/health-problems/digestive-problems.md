@@ -1,6 +1,4 @@
-# Digestive disorders
-
-Digestive disorders are problems that occur in the digestive system. These include both symptoms and diseases.
+# Digestive problems
 
 ## Symptoms
 - Abdominal pain;
