@@ -47,10 +47,11 @@ __Cardiovascular system__:
 - Breathing difficulties;
 - Irregular heart rate.
 
-__Cognition__:
+__Nervous system__:
 - Confusion;
+- Fatigue;
 - Indifference;
-- Mental fatigue.
+- Intelectual performance decrease.
 
 __Muscles__:
 - Coordination difficulties;
@@ -76,14 +77,14 @@ __Muscles__:
 - Nuts;
 - Legumes.
 
-## Average recommended intake
-- 1.2mg/day;
-
 ## Recommended dietary allowances
 - Men: 1.2mg/day;
 - Women: 1.1mg/day;
 - Pregnancy: 1.4mg/day;
 - Lactation: 1.4mg/day.
+
+## Daily value
+- 1.5mg/day;
 
 ## References
 - Wikipedia, [_Vitamin_](https://en.wikipedia.org/wiki/Vitamin)
@@ -98,7 +99,6 @@ __Muscles__:
 - Wikipedia, [_Beriberi_](https://en.wikipedia.org/wiki/Beriberi)
 - Wikipedia, [_Wernicke–Korsakoff syndrome_](https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome)
 - Wikipedia, [_Fatigue (medical)_](https://en.wikipedia.org/wiki/Fatigue_(medical)#Mental_fatigue)
-- Vitamin Workshop 101, [_Vitamin Absorption Percentages_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/7/vitamin-absorption-percentages.html)
 - Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 - Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-digestive-system)

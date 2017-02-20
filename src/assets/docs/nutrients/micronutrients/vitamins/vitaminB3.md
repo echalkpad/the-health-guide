@@ -40,7 +40,7 @@ Vitamin B3 absorption is impaired by:
 - Digestive juice secretion;
 - Fat metabolism;
 - Fatty acid formation;
-- Mucous membrane health;
+- Mucous membranes health;
 - Nervous system health;
 - Sex hormones formation;
 - Skin health;

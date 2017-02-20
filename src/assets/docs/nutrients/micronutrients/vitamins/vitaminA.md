@@ -1,5 +1,5 @@
 # Vitamin A
-Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cellular development.
+Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and cell growth.
 
 ## Classification
 - Retinoids (animal source)
@@ -51,7 +51,7 @@ Vitamin A metabolism is impaired by:
 ## Functions
 - Antioxidant activity;
 - Bone health;
-- Cellular development;
+- Cell growth;
 - Embryonic development;
 - Eye health;
 - Gene expression;
@@ -63,16 +63,18 @@ Vitamin A metabolism is impaired by:
 
 ## Short-term deficiency
 __Bones__:
-- Child growth problems;
 - Fractures.
+
+__Digestive system__:
+- Diarrhea.
 
 __Eyes__: 
 - Dryness;
 - Inflammation;
 - Vision problems.
 
-__Digestive system__:
-- Diarrhea.
+__Growth__
+- Child (Embryo) growth problems.
 
 __Immune system__:
 - Respiratory infections;
@@ -132,7 +134,7 @@ __Skin__:
 - Pregnancy: 1.3mg/day;
 - Lactation: 1.3mg/day.
 
-## Adequate intake
+## Daily value
 - 0.9mg/day.
 
 ## References
@@ -147,6 +149,7 @@ __Skin__:
 - Right diagnosis, [_Symptoms of Vitamin A deficiency_](http://www.rightdiagnosis.com/v/vitamin_a_deficiency/symptoms.htm)
 - Wikipedia, [Dietary reference intake](https://en.wikipedia.org/wiki/Dietary_Reference_Intake#Vitamins_and_minerals)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)
 - Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-digestive-system/)
 - Barbara Bolen, PhD, Verywell, [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, Verywell, [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-digestivesystem-bacteria-1945326)
