@@ -73,9 +73,6 @@ __Eyes__:
 - Inflammation;
 - Vision problems.
 
-__Growth__
-- Child (Embryo) growth problems.
-
 __Immune system__:
 - Respiratory infections;
 - Urinary infections.
@@ -87,6 +84,7 @@ __Skin__:
 
 ## Long-term deficiency
 - Bone problems;
+- Child (Embryo) growth problems.
 - Eye problems;
 - Immune system problems;
 - Reproductive problems;
@@ -145,7 +143,9 @@ __Skin__:
 - Wikibooks, _Human physiology_, Nutrition, [Vitamins](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin A
 - Holisticonline, [_Vitamin A Knowledgebase_](http://1stholistic.com/Nutrition/vkb/kb_vit_a.htm)
-- WebMD, Vitamins & Supplements, [_Vitamin A_](http://www.webmd.com/vitamins-supplements/ingredientmono-964-VITAMIN+A.aspx?activeIngredientId=964&activeIngredientName=VITAMIN+A&source=2)
+- WebMD, Vitamins & Supplements, [_VITAMIN A_](http://www.webmd.com/vitamins-supplements/ingredientmono-964-VITAMIN+A.aspx?activeIngredientId=964&activeIngredientName=VITAMIN+A&source=2)
+- Vitamin-Mineral Info, [_Vitamin A (Retinol) Benefits and Signs of Deficiency)_](http://www.vitamin-mineral-info.com/vitamin-a-retinol-benefits-signs-of-deficiency.php)
+- Vitamins & health supplements guide, [_Vitamin A_](http://www.vitamins-supplements.org/vitamin-A.php)
 - Right diagnosis, [_Symptoms of Vitamin A deficiency_](http://www.rightdiagnosis.com/v/vitamin_a_deficiency/symptoms.htm)
 - Wikipedia, [Dietary reference intake](https://en.wikipedia.org/wiki/Dietary_Reference_Intake#Vitamins_and_minerals)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

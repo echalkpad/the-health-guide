@@ -4,6 +4,7 @@
 
 ## References
 - Wikipedia, [_Lethargy_](https://en.wikipedia.org/wiki/Lethargy)
+- Wikipedia, [_Apathy_](https://en.wikipedia.org/wiki/Apathy)
 - Wikipedia, [_Nervous system disease_](https://en.wikipedia.org/wiki/Nervous system disease)
 - Wikipedia, [_Central nervous system disease_](https://en.wikipedia.org/wiki/Central_nervous_system_disease)
 - Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy)
