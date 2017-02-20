@@ -63,7 +63,6 @@ __Mouth__:
 
 __Nervous system__:
 - Fatigue;
-- Indifference;
 - Intelectual performance decrease.
 
 __Skin__:
