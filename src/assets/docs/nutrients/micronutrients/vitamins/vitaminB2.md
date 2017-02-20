@@ -31,6 +31,17 @@ Vitamin B2 metabolism is impaired by:
 - Vitamin B-complex deficiency.
 
 ## Benefits
+- Beautiful skin;
+- Beautiful hair;
+- Beautiful nails;
+- Energy boost;
+- Healthy child growth;
+- Intelectual performance (Learning and Memory);
+- Motivation increase;
+- Physical performance;
+- Positive mindset;
+- Stress management;
+- Youth.
 
 ## Functions
 - Amino acid, Carbohydrate, and Lipid metabolism;
@@ -124,6 +135,7 @@ __Throat__:
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Riboflavin
 
+- National Institute of Health, [_Riboflavin_](https://ods.od.nih.gov/factsheets/Riboflavin-HealthProfessional/#en1)
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B2 -- Riboflavin_](http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927)
 - MedlinePlus, [_Riboflavin_](https://medlineplus.gov/druginfo/natural/957.html)
 - Vitamin-Mineral Info, [_Vitamin B2 (Riboflavin) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-b2-riboflavin-benefits-signs-of-deficiency.php)
