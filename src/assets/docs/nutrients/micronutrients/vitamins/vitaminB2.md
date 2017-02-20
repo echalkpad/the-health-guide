@@ -1,5 +1,6 @@
 # Vitamin B2 (Riboflavin)
-Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main functions of Vitamin B2 are Amino acid, Carbohydrate, and Lipid metabolism, cellular respiration, and growth.
+Vitamin B2 or Riboflavin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is Amino acid, Carbohydrate, and Lipid metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. 
+The main functions of Vitamin B2 are cell growth, cellular respiration, antioxidant activities, and Iron metabolism (red blood cell formation).
 
 ## Metabolism
 Vitamin B2 metabolism is enhanced by:
@@ -45,8 +46,8 @@ Vitamin B2 metabolism is impaired by:
 
 ## Functions
 - Amino acid, Carbohydrate, and Lipid metabolism;
+- Antioxidant activity;
 - Cell growth;
-- Cellular respiration;
 - Embryonic development;
 - Eye health;
 - Iron metabolism;
@@ -69,6 +70,9 @@ __Mouth__:
 - Lip swelling;
 - Tongue pain;
 - Tongue redness;
+
+__Muscles__:
+- Weakness.
 
 __Nervous system__:
 - Dizziness;
@@ -110,7 +114,7 @@ __Throat__:
 - Allergic reactions.
 
 ## Food sources
-- Brewer's yeast;
+- Yeast;
 - Liver;
 - Egg white;
 - Kidneys;

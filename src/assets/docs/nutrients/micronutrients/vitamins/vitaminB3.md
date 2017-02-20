@@ -1,119 +1,125 @@
 # Vitamin B3 (Niacin)
-Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B3 is in intracellular respiration and fatty acid formation.
+Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is Amino acid, Carbohydrate, and Lipid metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. 
+The main functions of Vitamin B3 are in cellular respiration, antioxidant activities, digestive fluids secretion, and hormone formation.
 
 ## Metabolism
-- 50% of Vitamin B3 is absorbed if the digestive system is healthy.
-
-Vitamin B3 absorption is enhanced by:
-- Fiber;
+Vitamin B3 metabolism is enhanced by:
+- Chromium
 - No smoking;
 - Organic food;
-- Prebiotics food;
-- Probiotics food;
+- Prebiotics;
+- Probiotics;
 - Reduced alcohol;
-- Reduced antibiotics;
-- Reduced synthetic supplements;
+- Reduced pharmaceutical drugs;
 - Reduced sugars;
 - Stress management.
+- Selenium
+- Stress management,
+- Tryptophan;
+- Vitamin A;
+- Vitamin C;
+- Vitamin E;
+- Zinc.
 
-Vitamin B3 absorption requires:
+Vitamin B3 metabolism requires:
 - Healthy digestive system;
-- Iron;
 - Vitamin B-complex.
 
-Vitamin B3 absorption is impaired by:
+Vitamin B3 metabolism is impaired by:
 - Alcohol;
-- Antibiotics;
-- Caffeine;
+- Coffee;
+- Digestive disorders;
 - Excess sugars;
-- Excess water;
 - Low fiber;
+- Pharmaceutical drugs;
 - Processed food;
-- Synthetic supplements;
+- Smoking;
 - Stress;
-- Tobacco.
+- Vitamin B-complex deficiency.
 
 ## Functions
-- Amino acid metabolism;
-- Carbohydrate metabolism;
-- Circulatory system health;
-- Digestive juice secretion;
-- Fat metabolism;
-- Fatty acid formation;
+- Adrenal and sex hormones formation;
+- Amino acid, Carbohydrate, and Lipid metabolism;
+- Antioxidant activity;
+- Cardiovascular health (HDL - "good cholesterol" - increase);
+- Cellular respiration;
+- Digestive fluids secretion;
 - Mucous membranes health;
 - Nervous system health;
-- Sex hormones formation;
 - Skin health;
 - Vitamin B-complex metabolism.
 
-## Deficiency
-- Back pain;
-- Bright red tongue;
-- Cognitive impairment;
-- Constipation;
-- Coordination decrease;
-- Depression;
+## Short-term deficiency
+__Digestive system__:
+- Appetite loss;
 - Diarrhea;
-- Double vision;
-- Emotion suppression;
-- Energy loss;
-- Fatigue;
-- Headache;
-- Indifference;
-- Irritability;
-- Mood swings;
-- Motivation loss;
-- Muscle rigidity;
-- Numbness;
-- Pigmented rash;
-- Seizures;
-- Speaking difficulties;
-- Tingling;
-- Tiredness;
-- Tremors;
-- Vision loss;
-- Vitamin B-complex metabolism impairment;
-- Vomiting;
-- Weakness;
-- Weariness.
+- Indigestion;
+- Nausea;
+- Vomiting.
 
-## Disease preventions
-- Acne vulgaris;
-- Cardiovascular disease;
-- Chronic fatigue;
-- High blood cholesterol;
-- Lethargy;
-- Nervous system disorders;
-- Osteoarthritis;
-- Pellagra;
-- Reynaud's disease;
-- Schizophrenia;
-- Type 1 diabetes.
+__Mouth__
+- Canker sores;
+- Irritation;
+- Tongue inflammation.
+
+__Muscles__:
+- Coordination difficulties;
+- Numbness in the arms or legs;
+- Walking difficulties;
+- Weakness.
+
+__Nervous system__
+- Anxiety;
+- Cognitive problems;
+- Depression;
+- Headache;
+- Insomnia;
+- Sensitivity to light.
+
+__Skin__
+- Hair loss;
+- Itchiness;
+- Inflammation;
+- Lesions;
+- Redness;
+- Rash;
+
+## Long-term deficiency
+- Cardiovascular problems;
+- Digestive problems;
+- Nervous system problems;
+- Skin problems.
 
 ## Excess
 - Abdominal pain;
-- Blurred vision;
 - Diarrhea;
-- Flushing;
-- Glucose tolerance impairment;
-- Headache;
+- High blood glucose levels;
 - Indigestion;
-- Liver toxicity;
+- Liver problems;
 - Nausea;
-- Pain;
-- Rash;
-- Rhinitis;
 - Skin itching;
+- Skin rash;
+- Skin warmth;
 - Vomiting.
 
 ## Food sources
-- Brewer's yeast;
-- Meat;
+- Yeast;
+- Tuna;
+- Liver;
+- Seeds;
+- Peanuts;
 - Herbs and spices;
-- Mushrooms.
+- Mushrooms;
+- Dried fruits.
 
-## Average recommended intake
-- 16mg/day.
+## Recommended dietary allowances
+- Men: 16mg/day;
+- Women: 14mg/day;
+- Pregnancy: 18mg/day;
+- Lactation: 17mg/day.
+
+## Daily value
+- 20mg/day.
 
 ## References
 - Wikipedia, [_Vitamin](https://en.wikipedia.org/wiki/Vitamin)
@@ -123,13 +129,25 @@ Vitamin B3 absorption is impaired by:
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Niacin
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=406&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 
+- Healthy.net, [_Vitamins: Vitamin B3 -- Niacin_](http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/4)
+- Vitamin-Mineral Info, [_Vitamin B3 (Niacin) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-b3-niacin-benefits-signs-of-deficiency.php)
+
+http://1stholistic.com/Nutrition/vkb/KB_Vit_B3.htm
+
+http://www.vitamins-supplements.org/vitamin-B3-niacin.php
+
+https://medlineplus.gov/ency/article/002409.htm
+
+http://www.webmd.com/vitamins-supplements/ingredientmono-924-Niacin+NIACIN+AND+NIACINAMIDE+VITAMIN+B3.aspx?activeIngredientId=924&activeIngredientName=Niacin+(NIACIN+AND+NIACINAMIDE+(VITAMIN+B3))&source=2
+
+
 - Vitamins & health supplements guide, [_Vitamin B complex_](http://www.vitamins-supplements.org/vitamin-B.php)
 - Vitamins & health supplements guide, [_Vitamin B deficiencies_](http://www.vitamins-supplements.org/vitamin-B-deficiency.php)
 - Cathy Wong, ND, Verywell, [_The Benefits of B Complex Vitamins_](https://www.verywell.com/b-complex-vitamins-89411)
 - Nicole McDermott, Daily burn, [_The Benefits of Vitamin B Complex_](http://dailyburn.com/life/health/benefits-vitamin-b-complex/)
 - Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)
 - Wikipedia, [_Fatigue (medical)_](https://en.wikipedia.org/wiki/Fatigue_(medical)#Mental_fatigue)
-- Vitamin Workshop 101, [_Vitamin Absorption_](http://www.vitaminworkshop.com/vitamin-absorption/2010/5/9/vitamin-absorption.html)
+- Vitamin Workshop 101, [_Vitamin metabolism_](http://www.vitaminworkshop.com/vitamin-metabolism/2010/5/9/vitamin-metabolism.html)
 - Chris Kresser, [_9 Steps to Perfect Health – #5: Heal Your Gut_](https://chriskresser.com/9-steps-to-perfect-health-5-heal-your-digestive-system)
 - Barbara Bolen, PhD, Verywell, [_Prebiotics and IBS_](https://www.verywell.com/prebiotics-and-ibs-1944748)
 - Barbara Bolen, PhD, Verywell, [_How to Have Healthy Gut Bacteria_](https://www.verywell.com/how-to-have-healthy-digestive-system-bacteria-1945326)

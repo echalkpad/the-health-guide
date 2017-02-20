@@ -1,5 +1,6 @@
 # Vitamin B1 (Thiamin)
-Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B1 is in Amino acid, Carbohydrate, and Lipid metabolism.
+Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is Amino acid, Carbohydrate, and Lipid metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. 
+The main function of Vitamin B1 is nervous system health support.
 
 ## Metabolism
 Vitamin B1 metabolism is enhanced by:
@@ -24,6 +25,7 @@ Vitamin B1 metabolism is impaired by:
 - Low fiber;
 - Pharmaceutical drugs;
 - Processed food;
+- Raw seafood;
 - Smoking;
 - Stress;
 - Tannins (e.g. Coffee and Tea);
@@ -47,9 +49,14 @@ __Cardiovascular system__:
 - Breathing difficulties;
 - Irregular heart rate.
 
+__Digestive system__:
+- Appetite loss;
+- Nausea.
+
 __Nervous system__:
 - Confusion;
 - Fatigue;
+- Headache;
 - Indifference;
 - Intelectual performance decrease.
 
@@ -70,7 +77,7 @@ __Muscles__:
 - Allergic reactions (Anaphylaxis);
 
 ## Food sources
-- Brewer's yeast;
+- Yeast;
 - Seeds;
 - Whole-grains;
 - Meat;
