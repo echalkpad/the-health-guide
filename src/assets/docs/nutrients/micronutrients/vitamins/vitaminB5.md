@@ -1,5 +1,6 @@
 # Vitamin B5 (Pantothenic acid)
-Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B5 is coenzyme A (CoA) formation.
+Vitamin B5 or Pantothenic acid is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is Amino acid, Carbohydrate, and Lipid metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. 
+The main function of Vitamin B5 is coenzyme A (CoA) formation, sex hormone secretion, .
 
 ## Metabolism
 - 50% of Vitamin B5 is absorbed if the digestive system is healthy.
@@ -44,6 +45,9 @@ Vitamin B5 absorption is impaired by:
 - healthy digestive tract.
 
 ## Deficiency
+depression, personality changes, heart problems, increased risk of infections, fatigue, abdominal pains, sleep disturbances, numbness and altered sensation in the arms and legs, muscle weakness, cramps, increased sensitivity to insulin.
+
+
 - Abdominal pain;
 - Arthritis;
 - Back pain;

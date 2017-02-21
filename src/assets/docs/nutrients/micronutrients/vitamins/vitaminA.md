@@ -1,5 +1,5 @@
 # Vitamin A
-Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision, cell growth, and antioxidant activities.
+Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and antioxidant activities.
 
 ## Classification
 - Retinoids (animal source)
@@ -49,7 +49,7 @@ Vitamin A metabolism is impaired by:
 - Youth.
 
 ## Functions
-- Antioxidant activity;
+- Antioxidant activities;
 - Bone health;
 - Cell growth;
 - Embryonic development;

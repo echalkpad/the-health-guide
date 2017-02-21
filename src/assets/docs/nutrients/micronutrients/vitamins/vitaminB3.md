@@ -1,6 +1,6 @@
 # Vitamin B3 (Niacin)
 Vitamin B3 or Niacin is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is Amino acid, Carbohydrate, and Lipid metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. 
-The main functions of Vitamin B3 are in cellular respiration, antioxidant activities, digestive fluids secretion, and hormone formation.
+The main functions of Vitamin B3 are in cellular respiration and antioxidant activities.
 
 ## Metabolism
 Vitamin B3 metabolism is enhanced by:
@@ -41,11 +41,10 @@ Vitamin B3 metabolism is impaired by:
 - Beautiful skin;
 - Beautiful hair;
 - Beautiful nails;
+- Blood cholesterol decrease;
 - Detoxification;
 - Energy boost;
 - Good digestion;
-- Good sleep;
-- Healthy heart;
 - Intelectual performance (Learning and Memory);
 - Motivation increase;
 - Physical performance;
@@ -54,12 +53,11 @@ Vitamin B3 metabolism is impaired by:
 - Youth.
 
 ## Functions
-- Adrenal and sex hormones formation;
-- Amino acid, Carbohydrate, and Lipid metabolism;
-- Antioxidant activity;
-- Cardiovascular health (lowers "bad cholesterol" or LDL and increases "good cholesterol" or HDL);
-- Cellular respiration;
+- Amino acid, Carbohydrate, and Lipid metabolism (Energy production - NADH formation);
+- Cardiovascular health (lowers "bad blood cholesterol" or LDL and increases "good blood cholesterol" or HDL);
+- Cellular respiration (NADH formation);
 - Digestive fluids secretion;
+- Hormone formation;
 - Mucous membranes health;
 - Nervous system health;
 - Skin health;
@@ -150,6 +148,7 @@ __Skin__
 - Vitamins & health supplements guide, [_Vitamin B3 (niacin, nicotinic acid, nicotinamide, niacinamide)_](http://www.vitamins-supplements.org/vitamin-B3-niacin.php)
 - MedlinePlus, [_Niacin_](https://medlineplus.gov/ency/article/002409.htm)
 - MedlinePlus, [_Niacin and niacinamide (Vitamin B3)_](https://medlineplus.gov/druginfo/natural/924.html)
+- Duane Graveline MD MPH, Spacedoc, [_Aging and Vitamins B2 ( Riboflavin ) and B3 ( Niacin )_](https://www.spacedoc.com/articles/vitamins-b2-b3-and-aging)
 - Wikipedia, [_Pellagra_](https://en.wikipedia.org/wiki/Pellagra)
 - Vitamins & health supplements guide, [_Vitamin B complex_](http://www.vitamins-supplements.org/vitamin-B.php)
 - Vitamins & health supplements guide, [_Vitamin B deficiencies_](http://www.vitamins-supplements.org/vitamin-B-deficiency.php)
