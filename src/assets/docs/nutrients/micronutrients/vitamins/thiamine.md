@@ -1,9 +1,6 @@
 # Vitamin B1 (Thiamine)
 Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
-## Health support
-- __Nervous system__: Body movement, Mental processes, and Senses.
-
 ## Important relationships
 - B vitamins.
 
@@ -12,21 +9,6 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Women: 1.1mg/day;
 - Pregnancy: 1.4mg/day;
 - Lactation: 1.4mg/day.
-
-## Deficiency signs
-- Appetite loss;
-- Breathing difficulties;
-- Confusion;
-- Irregular heart rate;
-- Fatigue;
-- Headache;
-- Indifference;
-- Intellectual performance decrease;
-- Nausea;
-- Numbness or tingling in the arms or legs;
-- Sensation loss;
-- Walking difficulties;
-- Weakness.
 
 ## Food sources
 - Yeast;
@@ -57,9 +39,3 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Wikipedia, [_Beriberi_](https://en.wikipedia.org/wiki/Beriberi)
 - Wikipedia, [_Wernicke–Korsakoff syndrome_](https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
-- Wikipedia, [_Fatigue (medical)_](https://en.wikipedia.org/wiki/Fatigue_(medical)#Mental_fatigue)
-- Vitamins & health supplements guide, [_Vitamin B complex_](http://www.vitamins-supplements.org/vitamin-B.php)
-- Vitamins & health supplements guide, [_Vitamin B deficiencies_](http://www.vitamins-supplements.org/vitamin-B-deficiency.php)
-- Cathy Wong, ND, Verywell, [_The Benefits of B Complex Vitamins_](https://www.verywell.com/b-complex-vitamins-89411)
-- Nicole McDermott, Daily burn, [_The Benefits of Vitamin B Complex_](http://dailyburn.com/life/health/benefits-vitamin-b-complex/)
-- Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)

@@ -14,12 +14,11 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 ## Health support
 - __Behaviour and emotion control__;
 - __Body movement (Muscles)__;
-- __Cell growth__;
-- __Circulation__;
+- __Cell growth (Growth)__;
 - __Digestion__;
 - __Energy production__;
 - __Eyes__;
-- __Hormone formation__;
+- __Fatty acids formation (DNA, Membranes, Hormones, and Neurotransmitters)__;
 - __Immunity__;
 - __Mental procesess (Cognition)__
 - __Pregnancy__;
@@ -34,9 +33,11 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Breathing difficulties;
 - Colds;
 - Depression;
+- Diarrhea;
 - Dizziness;
 - Eye problems;
 - Fatigue;
+- Growth impairment in children and fetus;
 - Hair loss;
 - Headache;
 - High blood pressure;
@@ -45,14 +46,17 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Intellectual performance decrease;
 - Irregular heart beat;
 - Irritability;
+- Mood swings;
+- Mouth problems;
 - Nail brittleness;
 - Nausea;
 - Numbness;
 - Skin problems;
 - Sleep problems;
-- Waekness.
+- Sleepiness;
+- Weakness.
 
-## Watch out
+## Watch out's
 `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
 
 ## References

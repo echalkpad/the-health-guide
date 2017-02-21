@@ -1,45 +1,16 @@
 # Vitamin B3 (Niacin)
 Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
-## Health support
-- __Circulation__;
-- __Digestion__;
-- __Hormone formation__;
-- __Respiration__.
-
 ## Important relationships
 - B vitamins;
-- Chromium - Lowers blood sugar levels (Glycemic index).
+- Chromium - Lowers blood sugar levels (Glycemic index);
+- Vitamin A - Mucous membranes (Organ protection and mucus secretion).
 
 ## Daily requirements
 - Men: 16mg/day;
 - Women: 14mg/day;
 - Pregnancy: 18mg/day;
 - Lactation: 17mg/day.
-
-## Deficiency signs
-- Appetite loss;
-- Anxiety;
-- Depression;
-- Diarrhea;
-- Headache;
-- Indigestion;
-- Insomnia;
-- Intellectual performance decrease;
-- Mouth cracks or sores;
-- Mouth irritation;
-- Nausea;
-- Numbness in the arms or legs;
-- Sensitivity to light;
-- Skin itchiness;
-- Skin inflammation;
-- Skin lesions;
-- Skin rash;
-- Skin redness;
-- Tongue inflammation;
-- Vomiting;
-- Walking difficulties;
-- Weakness.
 
 ## Food sources
 - Yeast;
@@ -67,10 +38,5 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - MedlinePlus, [_Niacin_](https://medlineplus.gov/ency/article/002409.htm)
 - MedlinePlus, [_Niacin and niacinamide (Vitamin B3)_](https://medlineplus.gov/druginfo/natural/924.html)
 - Duane Graveline MD MPH, Spacedoc, [_Aging and Vitamins B2 ( Riboflavin ) and B3 ( Niacin )_](https://www.spacedoc.com/articles/vitamins-b2-b3-and-aging)
+- Wikipedia, [_Mucous membranes_](https://en.wikipedia.org/wiki/Mucous_membrane)
 - Wikipedia, [_Pellagra_](https://en.wikipedia.org/wiki/Pellagra)
-- Wikipedia, [_Fatigue (medical)_](https://en.wikipedia.org/wiki/Fatigue_(medical)#Mental_fatigue)
-- Vitamins & health supplements guide, [_Vitamin B complex_](http://www.vitamins-supplements.org/vitamin-B.php)
-- Vitamins & health supplements guide, [_Vitamin B deficiencies_](http://www.vitamins-supplements.org/vitamin-B-deficiency.php)
-- Cathy Wong, ND, Verywell, [_The Benefits of B Complex Vitamins_](https://www.verywell.com/b-complex-vitamins-89411)
-- Nicole McDermott, Daily burn, [_The Benefits of Vitamin B Complex_](http://dailyburn.com/life/health/benefits-vitamin-b-complex/)
-- Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)
