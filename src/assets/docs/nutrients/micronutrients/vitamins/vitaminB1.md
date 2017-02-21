@@ -40,7 +40,7 @@ Vitamin B1 metabolism is impaired by:
 - Stress management.
 
 ## Functions
-- Amino acid, Carbohydrate, and Lipid metabolism;
+- Amino acid, Carbohydrate, and Lipid metabolism (Energy production);
 - Cardiovascular system health;
 - Nervous system health.
 
