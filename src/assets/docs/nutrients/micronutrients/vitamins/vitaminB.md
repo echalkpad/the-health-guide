@@ -26,6 +26,17 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - __Senses__;
 - __Skin__.
 
+## Food sources
+- Yeast;
+- Organ meats;
+- Fish;
+- Seeds;
+- Nuts;
+- Egg yolk;
+- Herbs and spices;
+- Whole grains;
+- Green vegetables.
+
 ## Deficiency signs
 - Anxiety;
 - Appetite loss;
@@ -60,8 +71,15 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
 
 ## References
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals
 - Vitamins & health supplements guide, [_Vitamin B complex_](http://www.vitamins-supplements.org/vitamin-B.php)
 - Vitamins & health supplements guide, [_Vitamin B deficiencies_](http://www.vitamins-supplements.org/vitamin-B-deficiency.php)
 - Cathy Wong, ND, Verywell, [_The Benefits of B Complex Vitamins_](https://www.verywell.com/b-complex-vitamins-89411)
 - Nicole McDermott, Daily burn, [_The Benefits of Vitamin B Complex_](http://dailyburn.com/life/health/benefits-vitamin-b-complex/)
 - Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)
+- National Institute of Health, [_DIETARY SUPPLEMENT FACT SHEETS_](https://ods.od.nih.gov/factsheets/list-all/)
+- Vitamin-Mineral Info, [_Vitamin and Mineral Reference Guide_](http://www.vitamin-mineral-info.com/)
+- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B1 -- Thiamine_](http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/2)
+- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B2 -- Riboflavin_](http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927)
+- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B3 -- Niacin_](http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/4)
