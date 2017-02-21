@@ -1,9 +1,6 @@
 # Vitamin A
 Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and antioxidant activities.
 
-## Classification
-- Retinoids (animal source)
-- Carotenoids (plant source)
 
 ## Metabolism
 Vitamin A metabolism is enhanced by:
