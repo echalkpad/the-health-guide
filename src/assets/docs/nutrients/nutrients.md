@@ -28,7 +28,9 @@ The summation of all body processes, also known as `Chemical transformations`, t
 
 Nutrients should be provided from `Whole foods` and not from supplements, for three reasons:
 1. __Supplements are synthetic__: Our digestive system is not genetically designed to digest synthetic compounds. More, synthetic compounds destroy the `Gut flora` that is responsible for correct nutrient absorption. Thus, nutrients from supplements are not absorbed and are eliminated from the body.
+
 2. __Nutrients are a team__: Supplements come with only one or two nutrients and it is not enough (This is why all doctors tell you to take them after meals). Nutrients help each other in their functions, hence, they are involved in all body processes. _If only one of the essential nutrients is missing, a chain reaction happens, and all body processes are interrupted. It's all or nothing_. If you try to provide all essential nutrients from supplements, you destroy your digestive system and put your health at risk.
+
 3. __Supplements cause side effect__: As I said, uur digestive system is not genetically designed to digest synthetic compounds, hence, their are seen as `intruders` in our body and may interfere with the metabolism.
 
 The _key to a healthy body (good metabolism)_ is to ensure provide all the essential nutrients and to ensure they are absorbed as completely as possible by keeping your digestive system, especially your gut flora, healthy. Neither of the essential nutrients is completely absorbed.
