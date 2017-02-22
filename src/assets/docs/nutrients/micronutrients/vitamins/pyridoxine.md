@@ -2,8 +2,8 @@
 Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Behaviour and emotion control__;
-- __Circulation__: Homocysteine stabilistation (Heart) and Nutrient transportation;
+- __Behaviour and emotion control__: Attitude, Mood, and Stress management;
+- __Circulation__: Red blood cells formation, Homocysteine stabilistation (Heart) and Nutrient transportation;
 - __Immunity__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding.
 

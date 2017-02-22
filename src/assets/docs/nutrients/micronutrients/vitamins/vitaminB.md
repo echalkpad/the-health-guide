@@ -12,7 +12,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - __Cobalamin (B12)__.
 
 ## Health support
-- __Behaviour and emotion control__;
+- __Behaviour and emotion control__: Attitude, Mood, and Stress management;
 - __Body movement__: Muscle tone;
 - __Circulation__: Blood cells formation and Heart;
 - __Energy production__: Carbohydrate, Lipid, and Protein metabolism;
