@@ -1,5 +1,5 @@
 # Vitamin B-complex
-Vitamin B-complex is a family of eight essential water-soluble vitamins. They are all involved in the metabolism of Amino acids, Carbohydrates, and Fats to produce the energy and provide fuel to all body procesess. Without B vitamins, there is no energy in the body and no process can be maintained.
+Vitamin B-complex is a family of eight essential water-soluble vitamins. They are all involved in the metabolism of Amino acids, Carbohydrates, and Fats, to provide the necessary energy for all body functions to be maintained, and in the majority of body functions. Hence, Vitamin B-complex are critical for health.
 
 ## B vitamins
 - __Thiamine (B1)__;
@@ -13,9 +13,9 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 
 ## Health support
 - __Behaviour and emotion control__: Attitude and Mood;
-- __Body movement__: Muscle tone;
+- __Body movements__: Muscle tone and Reflexes;
 - __Cell growth__: Child and fetuce growth, Tissue growth and regeneration (Hair, Nails, and Skin health);
-- __Circulation__: Blood cells formation and Heart health;
+- __Circulation__: Blood cells formation and Cardiovascular health;
 - __Digestion__;
 - __Energy production__: Carbohydrate, Lipid, and Protein metabolism;
 - __Eyes__;

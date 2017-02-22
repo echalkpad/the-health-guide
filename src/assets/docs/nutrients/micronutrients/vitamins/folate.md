@@ -4,7 +4,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 ## Primay goals
 - __Behaviour and emotion control__: Attitude and Mood;
 - __Cell growth__: Child and fetuce growth, Tissue formation and regeneration (Hair, Nails, and Skin health);
-- __Circulation__: Blood cells formation and Heart health (Homocysteine stabilisation);
+- __Circulation__: Blood cells formation and Cardiovascular health (Homocysteine levels stabilisation);
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
 - __Senses__.
 
