@@ -41,12 +41,11 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 - Bone weakness;
 - Birth problems;
 - Colds;
-- Diarrhea;
-- Eye inflammation;
+- Eye problems (Inflammation, Redness, Sensitivity, Vision problems);
 - Growth impairment in children;
 - Infections;
-- Skin problems (Acne, Dryness, Riddles);
-- Vision problems.
+- Skin problems (Acne, Inflammation, Dryness, Riddles);
+- Teeth problems.
 
 ## Watch out's
 - Destroyed by cooking;
