@@ -2,8 +2,18 @@
 Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body tissues for later use.
 
 ## Health support
+- __Antioxidant protection__;
+- __Growth__;
+- __Eye health__;
+- __Fetal development__;
+- __Gene expresion__;
+- __Immunity__;
+- __Protection__: Organ protection and skin.
+- __Reproduction__.
 
 ## Important relationships
+- Iron
+- Zinc
 
 ## Daily requirements
 
@@ -12,52 +22,11 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 ## Deficiency signs
 
 ## Watch out's
-
-## Metabolism
-Vitamin A metabolism is enhanced by:
-- Cooking;
-- Fats;
-- No smoking;
-- Organic food;
-- Prebiotics;
-- Probiotics;
-- Reduced alcohol;
-- Reduced pharmaceutical drugs;
-- Reduced sugars;
-- Stress management.
-
-Vitamin A metabolism requires:
-- Healthy digestive system;
-- Iron;
-- Zinc.
-
-Vitamin A metabolism is impaired by:
-- Alcohol;
-- Digestive problems;
-- Excess sugars;
-- Iron deficiency;
-- Low fiber;
-- Low fat;
-- Pharmaceutical drugs;
-- Processed food;
-- Smoking;
-- Stress;
-- Zinc deficiency.
-
-## Benefits
-- Beautiful skin;
-- Beautiful hair;
-- Beautiful nails;
-- Clear and improved vision;
-- Healthy child growth;
-- Resistence to infections (bacteria and viruses);
-- Sexual health;
-- Strong bones (Resistence to fractures);
-- Strong teeth (Resistence to );
-- Youth.
+- Destroyed by cooking;
+- Absorption is impaired by low-fat diets.
 
 ## Functions
-- Antioxidant activities;
+- Antioxidant protection;
 - Bone health;
 - Cell growth;
 - Embryonic development;

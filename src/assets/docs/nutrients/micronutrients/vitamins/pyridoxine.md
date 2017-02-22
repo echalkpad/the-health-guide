@@ -2,16 +2,22 @@
 Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Behaviour and emotion control__: Attitude and Mood;
-- __Circulation__: Blood cells formation and Cardiovascular health (Homocysteine levels stabilisation);
-- __Digestion__: Nutrient absorption increase;
+- __Amino acid metabolism__;
+- __Blood cholesterol levels stabilisation__;
+- __Blood homocysteine levels stabilisation__;
+- __Detoxification__;
+- __Energy production__;
 - __Immunity__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding.
+- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- __Nutrient absorption and transportation__;
+- __Positive attitude__;
+- __Red blood cells formation__;
+- __Senses__.
 
 ## Important relationships
 - B vitamins;
 - Copper, Iron, and Vitamin C - Red blood cell formation;
-- Magnesium - Blood cholesterol stabilisation (Cardiovascular health).
+- Magnesium - Blood cholesterol stabilisation.
 
 ## Daily requirements
 - Men: 1.7mg/day;

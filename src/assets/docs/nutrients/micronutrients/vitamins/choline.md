@@ -2,9 +2,13 @@
 Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body. It is related to the B Vitamins, but not considered yet one of them.
 
 ## Health support
-- __Cell growth__: Brain and Fetus development;
+- __Behaviour and emotions__;
+- __Body movements__: Muscles;
+- __Brain development__;
+- __Fetal development__;
 - __Lipid metabolism__: Cardiovascular health (Blood cholesterol and homocysteine levels stabilisation);
-- __Nervous system health (Acetylcholine formation)__: - _Behaviour and emotions_ (Attitude and Mood), _Body movements_ (Muscle tone, Reflexes), _Mental functions_ (Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding), and _Senses_.
+- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- __Senses__;
 
 ## Important relationships
 - Vitamin B3 (Niacin), B6 (Pyridoxine), B9 (Folate), and B12 (Cobalamin) - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).

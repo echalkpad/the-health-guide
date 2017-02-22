@@ -2,11 +2,16 @@
 Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Behaviour and emotion control__: Attitude and Mood;
-- __Body movements__: Muscle tone and Reflexes;
-- __Cell growth__: Child and fetuce growth, Tissue formation and regeneration (Hair, Nails, and Skin health);
-- __Circulation__: Blood cells formation and Cardiovascular health (Homocysteine levels stabilisation);
+- __Amino acid metabolism__;
+- __Blood homocysteine levels stabilisation__;
+- __Energy production__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- __Muscle movements and strength__;
+- __Positive attitude__;
+- __Pregnancy support__;
+- __Red blood cells formation__;
+- __Skin health__;
+- __Senses__.
 
 ## Important relationships
 - B vitamins;

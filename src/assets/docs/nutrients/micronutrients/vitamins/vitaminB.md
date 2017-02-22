@@ -12,17 +12,23 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - __Cobalamin (B12)__.
 
 ## Health support
-- __Behaviour and emotion control__: Attitude and Mood;
-- __Body movements__: Muscle tone and Reflexes;
-- __Cell growth__: Child and fetuce growth, Tissue growth and regeneration (Hair, Nails, and Skin health);
-- __Circulation__: Blood cells formation and Cardiovascular health;
+- __Antioxidant protection__;
+- __Blood cholesterol levels stabilisation__;
+- __Blood homocysteine levels stabilisation__;
+- __Blood sugar levels stabilisation__;
+- __Detoxification__;
 - __Digestion__;
-- __Energy production__: Carbohydrate, Lipid, and Protein metabolism;
-- __Eyes__;
-- __Fatty acids formation__: DNA, RNA, Membrane, and Hormone formation;
-- __Immunity__;
+- __Energy production__;
+- __Hormone formation__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Respiration__: Antioxidant, Detoxification, and Nutrient transportation;
+- __Metabolism__;
+- __Muscle movements and strength__;
+- __Nutrient absorption and transportation__;
+- __Positive attitude__;
+- __Pregnancy support__;
+- __Red blood cells formation__;
+- __Respiration__;
+- __Skin health__;
 - __Senses__;
 - __Sleep__.
 

@@ -2,8 +2,11 @@
 Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Cell growth__: Child and fetuce growth, Tissue formation and regeneration (Hair, Nails, and Skin health);
-- __Fatty acids formation__: DNA, RNA, Membrane, and Hormone formation.
+- __Amino acids and fat metabolism__;
+- __Blood sugar levels stabilisation__;
+- __Energy production__;
+- __Hormone formation__;
+- __Skin health__;
 
 ## Important relationships
 - B vitamins.
@@ -21,6 +24,9 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Green vegetables;
 - Nuts;
 - Eggs.
+
+## Watch out's
+- Absorption impaired by raw egg whites.
 
 ## References
 - Wikipedia, [_Biotin_](https://en.wikipedia.org/wiki/Biotin)
