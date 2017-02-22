@@ -12,6 +12,7 @@ Iron (Fe) is an essential trace element. Its main function is as component of se
 ## Deficiency signs
 
 ## Watch out's
+- Absorption is impaired by Vitamin A deficiency, Vitamin B2 (Riboflavin) deficiency, Vitamin B6 (Pyridoxine) deficiency, Vitamin B9 (Folate) deficiency, Vitamin B12 (Cobalamin) deficiency, and Vitamin C deficiency.
 
 ## Absorption
 66% of the absorbed iron is accumulated in hemoglobin on blood cells.

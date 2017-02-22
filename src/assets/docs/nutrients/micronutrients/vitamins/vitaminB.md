@@ -47,32 +47,34 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 ## Deficiency signs
 - Anxiety;
 - Appetite loss;
+- Birth problems;
 - Bloating;
 - Breathing difficulties;
 - Colds;
+- Confusion;
+- Coordination difficulties;
 - Depression;
 - Diarrhea;
 - Dizziness;
 - Eye problems (Dryness, Itching);
 - Fatigue;
-- Growth impairment in children and fetus;
 - Hair loss;
 - Headache;
 - High blood pressure;
 - Indifference;
-- Infections;
 - Intellectual performance decrease;
 - Irregular heart beat;
 - Irritability;
 - Mood swings;
-- Mouth and throat problems (Cracks, Inflammation, Redness, Soreness);
+- Mouth and throat problems (Inflammation, Redness, Soreness);
 - Nail brittleness;
 - Nausea;
 - Numbness;
-- Skin problems (Acne, Itching, Inflammation, Oiliness, Rash, Redness);
+- Skin problems (Acne, Itching, Inflammation, Oiliness, Rash, Redness, Riddles);
 - Sleep problems;
 - Sleepiness;
-- Weakness.
+- Weakness;
+- Walking difficulties.
 
 ## Watch out's
 - `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
