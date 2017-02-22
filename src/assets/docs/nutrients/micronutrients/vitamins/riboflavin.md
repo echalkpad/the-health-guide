@@ -7,7 +7,7 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 
 ## Important relationships
 - B vitamins;
-- Iron - Red blood cell formation.
+- Copper, Iron, and Vitamin C - Red blood cell formation;
 
 ## Daily requirements
 - Men: 1.3mg/day;

@@ -10,6 +10,7 @@ Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and
 
 ## Important relationships
 - B vitamins;
+- Copper, Iron, and Vitamin C - Red blood cell formation;
 - Magnesium - Blood cholesterol levels stabilisation (Circulation).
 
 ## Daily requirements

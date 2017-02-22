@@ -1,4 +1,4 @@
-# Vitamin B79 (Folate)
+# Vitamin B9 (Folate)
 Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
@@ -10,7 +10,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 
 ## Important relationships
 - B vitamins;
-- Iron - Red blood cell formation;
+- Copper, Iron, and Vitamin C - Red blood cell formation;
 - Zinc - Male fertility (Sex hormones and Sperm cell formation).
 
 ## Daily requirements

@@ -2,7 +2,7 @@
 Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primary goals
-- __Circulation__: Blood cells formation and Heart health;
+- __Circulation__: Blood cells formation and Heart health (Cholesterol stabilisation);
 - __Digestion__;
 - __Immunity__;
 - __Respiration__: Antioxidant, Detoxification, and Nutrient transportation;
