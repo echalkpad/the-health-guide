@@ -1,12 +1,15 @@
-# Vitamin B5 (Pantothenic acid)
-Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+# Vitamin B6 (Pyridoxine)
+Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Fatty acids formation (e.g. DNA, RNA, Membranes, and Hormones)__;
-- __Mental functions__;
+- __Behaviour and emotion control__;
+- __Circulation__;
+- __Immunity__;
+- __Mental functions__.
 
 ## Important relationships
-- B vitamins.
+- B vitamins;
+- Magnesium - Circulation.
 
 ## Daily requirements
 - Men: 5mg/day;
