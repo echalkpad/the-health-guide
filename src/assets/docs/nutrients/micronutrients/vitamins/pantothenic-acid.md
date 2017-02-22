@@ -2,7 +2,7 @@
 Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primay goals
-- __Behaviour and emotion control__: Attitude, Mood, and Stress management;
+- __Behaviour and emotion control__: Attitude and Mood;
 - __Fatty acids formation__: DNA, RNA, Membrane, and Hormone formation;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
 - __Sleep__.
