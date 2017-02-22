@@ -29,9 +29,6 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 - Whole-grains;
 - Fish.
 
-## Watch out's
-- No special considerations.
-
 ## References
 - Wikipedia, [_Pantothenic acid_](https://en.wikipedia.org/wiki/Pantothenic_acid)
 - The world's healthiest foods, [_Pantothenic acid_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87)

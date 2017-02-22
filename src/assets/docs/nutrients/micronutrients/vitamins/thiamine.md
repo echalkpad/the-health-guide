@@ -23,10 +23,6 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Nuts;
 - Legumes.
 
-## Watch out's
-- Destroyed by cooking;
-- Absorption is impaired by raw seafood, tea, and coffee.
-
 ## References
 - Wikipedia, [_Thiamine_](https://en.wikipedia.org/wiki/Thiamine)
 - The world's healthiest foods, [_Vitamin B1 - Thiamin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)

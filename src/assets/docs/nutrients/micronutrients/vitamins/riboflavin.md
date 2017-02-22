@@ -25,10 +25,6 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 - Almonds;
 - Goat cheese.
 
-## Watch out's
-- Destroyed by cooking;
-- Absorption is impaired by Copper supplementation.
-
 ## References
 - Wikipedia, [_Riboflavin_](https://en.wikipedia.org/wiki/Riboflavin)
 - The world's healthiest foods, [_Vitamin B2 - Riboflavin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=93)

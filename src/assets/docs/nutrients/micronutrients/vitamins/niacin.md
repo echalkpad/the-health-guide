@@ -2,14 +2,14 @@
 Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primary goals
-- __Circulation__: Red blood cells formation and Cholesterol stabilisation (Heart);
+- __Circulation__: Blood cells formation and Heart health;
 - __Digestion__;
 - __Immunity__;
-- __Respiration__: Antioxidant and Detoxification;
+- __Respiration__: Antioxidant, Detoxification, and Nutrient transportation;
 
 ## Important relationships
 - B vitamins;
-- Chromium - Blood sugar (Glycemic index) stabilisation (Heart);
+- Chromium - Blood sugar levels (Glycemic index) stabilisation (Circulation);
 - Vitamin A - Mucous membranes (Organ protection and mucus secretion).
 
 ## Daily requirements
@@ -27,9 +27,6 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Herbs and spices;
 - Mushrooms;
 - Dried fruits.
-
-## Watch out's
-- Absorption is impaired by coffee.
 
 ## References
 - Wikipedia, [_Niacin_](https://en.wikipedia.org/wiki/Niacin)

@@ -14,17 +14,16 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 ## Health support
 - __Behaviour and emotion control__: Attitude and Mood;
 - __Body movement__: Muscle tone;
-- __Circulation__: Blood cells formation and Heart;
+- __Cell growth__: Child and fetuce growth, Tissue growth and regeneration (Hair, Nails, and Skin health);
+- __Circulation__: Blood cells formation and Heart health;
+- __Digestion__;
 - __Energy production__: Carbohydrate, Lipid, and Protein metabolism;
 - __Eyes__;
 - __Fatty acids formation__: DNA, RNA, Membrane, and Hormone formation;
-- __Growth__: Cell growth;
-- __Digestion__;
 - __Immunity__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
 - __Respiration__: Antioxidant, Detoxification, and Nutrient transportation;
 - __Senses__;
-- __Skin__;
 - __Sleep__.
 
 ## Food sources
@@ -47,7 +46,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Depression;
 - Diarrhea;
 - Dizziness;
-- Eye problems;
+- Eye problems (Dryness, Itching);
 - Fatigue;
 - Growth impairment in children and fetus;
 - Hair loss;
@@ -59,17 +58,19 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Irregular heart beat;
 - Irritability;
 - Mood swings;
-- Mouth problems;
+- Mouth and throat problems (Cracks, Inflammation, Redness, Soreness);
 - Nail brittleness;
 - Nausea;
 - Numbness;
-- Skin problems;
+- Skin problems (Acne, Itching, Inflammation, Oiliness, Rash, Redness);
 - Sleep problems;
 - Sleepiness;
 - Weakness.
 
 ## Watch out's
-`B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
+- `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures;
+- B vitamins require a healthy gut flora, which is damagaed by alcohol, caffeine, pharmaceutical drugs, smoking, and sugars.
 
 ## References
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
