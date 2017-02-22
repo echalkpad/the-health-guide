@@ -1,6 +1,18 @@
 # Magnesium
 Magnesium is an essential mineral element. Its main function is as coenzyme and bone development.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Only 50% of the magnesium intake is absorbed.
 Magnesium absorption requires: vitamin D.

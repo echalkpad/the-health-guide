@@ -1,6 +1,18 @@
 # Chromium
 Chromium is an essential trace element. Its primary function is glucose metabolism.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Chromium is absorbed in the small intestine. Only 0.4%-2.5% of chromium is absorbed and it is stored in the liver, spleen, soft tissue, and bone
 Chromium absorption requires: vitamin C, exercise.

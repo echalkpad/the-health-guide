@@ -1,6 +1,18 @@
 # Calcium
 Calcium is an essential mineral element. Its primary function is to form the structure of bones and teeth.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Calcium is absorbed in the small intestine. 99% of calcium accumulates in the skeleton, the rest remaining in the blood, extracellular fluid, muscle, and other tissues. Calcium absorption decreases proportional to intake increase.
 Calcium absorption requires: vitamin D, protein, magnesium, potassium.

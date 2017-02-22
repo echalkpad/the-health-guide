@@ -1,6 +1,18 @@
 # Potassium
 Potassium (K) is an essential mineral element. Its main function is as intracellular cation.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Only 85% of potassium is absorbed.
 Potassium absorption requires:.

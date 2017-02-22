@@ -1,6 +1,18 @@
 # Phosphorus
 Phosphorus (P) is an essential mimeral element. Its main function is to maintain normal pH levels and as component in bones.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 70% of phosphorus is absorbed.
 85% of phosporus is accumulated in the skeleton.

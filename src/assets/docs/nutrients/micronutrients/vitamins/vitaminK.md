@@ -1,6 +1,18 @@
 #  Vitamin K
 Vitmin K is a fat-soluble vitamin. Its main function is as coenzyme for biological reactions involved in blood coagulation and bone metabolism.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Vitamin K is absorbed in the small intestine and is accumulated by the liver and other tissues.
 Vitamin K absorption requires: dietary fat, calcium, vitamin D, Magnesium, Vitamin B2

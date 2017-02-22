@@ -1,6 +1,18 @@
 # Iodine
 Iodine (I) is an essential trace element. Its main function is in thyroid hormone production.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Iodine absorption requires: selenium, vitamin A, iron.
 Iodine absorption is impaired by: raw nuts, cruciferous vegetables, soy flour.

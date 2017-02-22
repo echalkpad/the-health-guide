@@ -1,6 +1,18 @@
 # Copper
 Copper (Cu) is an essential trace element. Its main function is as component of redox enzymes (oxidases in the reduction of molecular oxygen).
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Around 50% of copper intake is absrbed. The absorption decreases proportionally to the intake increase. After absorption, 66% is accumulated in the skeleton and muscles. The liver is the one that maintains normal plasma copper levels.
 Copper absorption requires:.

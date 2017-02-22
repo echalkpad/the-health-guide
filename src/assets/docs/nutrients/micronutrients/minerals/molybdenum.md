@@ -1,5 +1,18 @@
 # Molybdenum
 Molybdenum (Mo) is an essential trace element. Its main function is conezyme in sulfur amino acid catabolism.
+
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Only 
 Molybdenum absorption requires: iron.

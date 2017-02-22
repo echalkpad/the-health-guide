@@ -1,6 +1,18 @@
 # Chlorine
 Chlorine (Cl) or Chloride is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 95% is accumulated in extracellular fluid.
 98% of chlorine is absorbed.

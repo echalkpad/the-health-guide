@@ -1,6 +1,18 @@
 # Iron
 Iron (Fe) is an essential trace element. Its main function is as component of several proteins, including enzymes, cytochromes, myoglobin, and hemoglobin
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 66% of the absorbed iron is accumulated in hemoglobin on blood cells.
 

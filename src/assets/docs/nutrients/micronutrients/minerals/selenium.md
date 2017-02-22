@@ -1,6 +1,18 @@
 # Selenium
 Selenium (Se) is an essential trace element. Its main function is as antioxidant and thyroid hormone regulation. 
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Selenium is absorbed completely in normal conditions.
 Selenium absorption requires:.

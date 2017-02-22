@@ -1,6 +1,18 @@
 # Zinc
 Zinc (Zn) is an essential trace element. Its main function is in growth and development.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Zinc absorption is impaired by: calcium, phosphorus, phytate, fiber, iron, alcohol, soy, processed food, vegetable protein, corticosteroid drugs, oral contraceptives, and diuretics.
 

@@ -1,6 +1,17 @@
 # Vitamin A
-Vitamin A is an essential fat-soluble vitamin. Its main functions are in vision and antioxidant activities.
+Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body tissues for later use.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
 
 ## Metabolism
 Vitamin A metabolism is enhanced by:

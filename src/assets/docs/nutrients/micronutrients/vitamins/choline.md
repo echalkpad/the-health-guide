@@ -1,5 +1,5 @@
 # Choline
-Choline is is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body. It is related to the B Vitamins, but not considered yet one of them.
+Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body. It is related to the B Vitamins, but not considered yet one of them.
 
 ## Health support
 - __Cell growth__: Brain and Fetus development;
@@ -7,7 +7,8 @@ Choline is is an essential water-soluble nutrient, hence, it cannot be stored an
 - __Nervous system health (Acetylcholine formation)__: - _Behaviour and emotions_ (Attitude and Mood), _Body movements_ (Muscle tone, Reflexes), _Mental functions_ (Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding), and _Senses_.
 
 ## Important relationships
-- B vitamins - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).
+- Vitamin B3 (Niacin), B6 (Pyridoxine), B9 (Folate), and B12 (Cobalamin) - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).
+- Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
 
 ## Daily requirements
 - Men: 550mg/day;

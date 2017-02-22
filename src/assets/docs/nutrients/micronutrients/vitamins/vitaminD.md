@@ -1,6 +1,18 @@
 # Vitamin D (Calciferol)
 Vitamin D or Calciferol is an essential fat-soluble vitamin. It is generally produced in the skin through exposure to sunlight. Its main functions are bone health and Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Classification
 - Vitamin D2 (Ergocalciferol) - mushrooms, dairy, eggs
 - Vitamin D3 (Cholecalciferol) - sunlight, fish

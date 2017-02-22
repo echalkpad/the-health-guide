@@ -1,6 +1,18 @@
 # Vitamin E (alpha-Tocopherol)
 Vitamin E or alpha-Tocopherol is an essential fat-soluble vitamin. Vitamin E is actually a group of organic compounds, tocopherols and tocotrienols, but alpha-Tocopherol is the only one used by the human body. Its main function is antioxidant activity and cellular membrane protection.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 - 30% of Vitamin E is absorbed if the digestive system is healthy.
 

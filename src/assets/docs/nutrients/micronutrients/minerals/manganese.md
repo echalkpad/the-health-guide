@@ -1,6 +1,18 @@
 # Manganese
 Manganese (Mn) is an essential trace element. Its main function is as coenzyme and bone development.
 
+## Health support
+
+## Important relationships
+
+## Daily requirements
+
+## Food sources
+
+## Deficiency signs
+
+## Watch out's
+
 ## Absorption
 Only a small percentage of manganese are absorbed and accumulated in the liver.
 Manganese absorption is impaired by: phytate, iron, magnesium, calcium, phosphorous, antibiotics.
