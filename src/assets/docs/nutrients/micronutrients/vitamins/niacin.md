@@ -2,14 +2,14 @@
 Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
 
 ## Primary goals
-- __Circulation__;
+- __Circulation__: Red blood cells formation and Cholesterol stabilisation (Heart);
 - __Digestion__;
 - __Immunity__;
-- __Respiration__.
+- __Respiration__: Antioxidant and Detoxification;
 
 ## Important relationships
 - B vitamins;
-- Chromium - Lowers blood sugar levels (Glycemic index);
+- Chromium - Blood sugar (Glycemic index) stabilisation (Heart);
 - Vitamin A - Mucous membranes (Organ protection and mucus secretion).
 
 ## Daily requirements
