@@ -18,6 +18,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - __Blood sugar levels stabilisation__;
 - __Detoxification__;
 - __Digestion__;
+- __DNA formation__;
 - __Energy production__;
 - __Hormone formation__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
@@ -88,6 +89,3 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)
 - National Institute of Health, [_DIETARY SUPPLEMENT FACT SHEETS_](https://ods.od.nih.gov/factsheets/list-all/)
 - Vitamin-Mineral Info, [_Vitamin and Mineral Reference Guide_](http://www.vitamin-mineral-info.com/)
-- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B1 -- Thiamine_](http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/2)
-- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B2 -- Riboflavin_](http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927)
-- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B3 -- Niacin_](http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/4)
