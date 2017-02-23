@@ -23,7 +23,7 @@ Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Liver.
 
 ## Deficiency signs
-- Abdomiinal pain;
+- Abdominal pain;
 - Wound healing problems (Bleeding).
 
 ## Watch out's
