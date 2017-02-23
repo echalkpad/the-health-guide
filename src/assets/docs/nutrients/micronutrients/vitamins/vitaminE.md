@@ -13,6 +13,9 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it requires
 - Vitamin K - Blood clotting;
 - Vitamin A, Vitamin C, and Zinc - Antioxidant protection.
 
+## Mechanism of action
+> TO DO
+
 ## Daily requirements
 - Men: 15mg/day;
 - Women: 15mg/day;

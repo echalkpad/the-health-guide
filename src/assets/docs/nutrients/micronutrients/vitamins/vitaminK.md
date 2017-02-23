@@ -8,6 +8,9 @@ Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be abs
 ## Important relationships
 - Vitamin E - Blood clotting.
 
+## Mechanism of action
+> TO DO
+
 ## Daily requirements
 - Men: 0.12mg/day;
 - Women: 0.09mg/day;
@@ -20,6 +23,7 @@ Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Liver.
 
 ## Deficiency signs
+- Abdomiinal pain;
 - Wound healing problems (Bleeding).
 
 ## Watch out's
