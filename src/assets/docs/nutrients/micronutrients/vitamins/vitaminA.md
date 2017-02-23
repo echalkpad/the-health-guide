@@ -22,9 +22,9 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 > TO DO
 
 ## Daily requirements
-- Men: 1mg/day;
-- Women: 0.8mg/day;
-- Pregnancy: 1.3mg/day;
+- Men: 0.9mg/day;
+- Women: 0.7mg/day;
+- Pregnancy: 0.77mg/day;
 - Lactation: 1.3mg/day.
 
 ## Food sources
