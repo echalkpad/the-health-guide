@@ -1,7 +1,7 @@
 # Vitamin B9 (Folate)
-Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
-## Primay goals
+## Primary goals
 - __Amino acid metabolism__;
 - __Blood homocysteine levels stabilisation__;
 - __DNA formation__;

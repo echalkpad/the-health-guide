@@ -1,5 +1,5 @@
 # Vitamin C (Ascorbic acid)
-Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Health support
 - __Antioxidant protection__;

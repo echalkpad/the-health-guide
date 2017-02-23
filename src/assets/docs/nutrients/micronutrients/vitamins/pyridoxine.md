@@ -1,7 +1,7 @@
 # Vitamin B6 (Pyridoxine)
-Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
-## Primay goals
+## Primary goals
 - __Amino acid metabolism__;
 - __Blood cholesterol levels stabilisation__;
 - __Blood homocysteine levels stabilisation__;

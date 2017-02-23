@@ -2,8 +2,8 @@
 Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.
 
 ## Health support
-- Blood clotting;
-- Bone metabolism.
+- __Blood clotting__;
+- __Bone metabolism__.
 
 ## Important relationships
 - Vitamin E - Blood clotting.

@@ -1,5 +1,5 @@
 # Vitamin B3 (Niacin)
-Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - __Antioxidant protection__;

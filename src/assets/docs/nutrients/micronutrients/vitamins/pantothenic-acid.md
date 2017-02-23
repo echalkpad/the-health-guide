@@ -1,7 +1,7 @@
 # Vitamin B5 (Pantothenic acid)
-Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
-## Primay goals
+## Primary goals
 - __Energy production__;
 - __Fat metabolism__;
 - __Hormone formation__;

@@ -1,7 +1,7 @@
 # Vitamin B7 (Biotin)
-Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
+Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
-## Primay goals
+## Primary goals
 - __Amino acids and fat metabolism__;
 - __Blood sugar levels stabilisation__;
 - __Energy production__;
