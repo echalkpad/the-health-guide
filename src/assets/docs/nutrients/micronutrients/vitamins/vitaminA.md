@@ -6,7 +6,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - __Detoxification__;
 - __Eye health__;
 - __Fertility__;
-- __Growth (Bone development)__;
+- __Growth__;
 - __Immunity__;
 - __Organ protection (Membrane and mucus formation)__;
 - __Pregnancy support__;
@@ -15,7 +15,6 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 
 ## Important relationships
 - Vitamin B3 (Niacin) - Organ protection (Membrane and mucus formation).
-- Calcium and Vitamin D - Bone development;
 - Zinc - Antioxidant protection.
 
 ## Mechanism of action
@@ -40,14 +39,13 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Pumpkin.
 
 ## Deficiency signs
-- Bone weakness;
 - Birth problems;
 - Colds;
+- Dental problems;
 - Eye problems (Inflammation, Redness, Sensitivity, Vision problems);
 - Growth impairment in children;
 - Infections;
-- Skin problems (Acne, Inflammation, Dryness, Riddles);
-- Tooth problems.
+- Skin problems (Acne, Inflammation, Dryness, Riddles).
 
 ## Watch out's
 - Absorption is impaired by alcohol, smoking, Essential fat deficiency, Choline deficiency, Vitamin E deficiency, Vitamin B deficiency, Iron deficiency, Zinc deficiency.
