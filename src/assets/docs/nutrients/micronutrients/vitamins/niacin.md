@@ -46,4 +46,5 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B3 -- Niacin_](http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/1)
 - Vitamin-Mineral Info, [_Vitamin B3 (Niacin) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-b3-niacin-benefits-signs-of-deficiency.php)
 - Vitamins & health supplements guide, [_Vitamin B3 (niacin, nicotinic acid, nicotinamide, niacinamide)_](http://www.vitamins-supplements.org/vitamin-B3-niacin.php)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin B3 (Niacin)_](http://umm.edu/health/medical/altmed/supplement/vitamin-b3-niacin)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=406&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

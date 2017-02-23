@@ -43,4 +43,5 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B2 -- Riboflavin_](http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927)
 - Vitamin-Mineral Info, [_Vitamin B2 (Riboflavin) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-b2-riboflavin-benefits-signs-of-deficiency.php)
 - Vitamins & health supplements guide, [_Riboflavin (vitamin B2) deficiency_](http://www.vitamins-supplements.org/riboflavin-deficiency.php)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin B2 (Riboflavin)_](http://umm.edu/health/medical/altmed/supplement/vitamin-b2-riboflavin)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=405&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

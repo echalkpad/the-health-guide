@@ -39,6 +39,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires
 - Weakness.
 
 ## Watch out's
+- Absorption is impaired by alcohol, smoking, Essential fat deficiency, Magnesium deficiency.
 
 ## References
 - Wikipedia, [_Vitamin D_](https://en.wikipedia.org/wiki/Vitamin_D)
@@ -50,6 +51,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires
 - Vitamins & health supplements guide, [_Vitamin D (calciferol)_](http://www.vitamins-supplements.org/vitamin-D.php)
 - Vitamin-Mineral Info, [_Vitamin D (Calciferol) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-d-calciferol-benefits-signs-of-deficiency.php)
 - National Institute of Health, [_Vitamin D_](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin D_](http://umm.edu/health/medical/altmed/supplement/vitamin-d)
 - Wikipedia, [_Scurvy_](https://en.wikipedia.org/wiki/Scurvy#Signs_and_symptoms)
 - Wikipedia, [_Rickets_](https://en.wikipedia.org/wiki/Rickets#Signs_and_symptoms)
 - Wikipedia, [_Osteomalacia_](https://en.wikipedia.org/wiki/Osteomalacia#Signs_and_symptoms)

@@ -35,6 +35,6 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Wikipedia, [_Biotin_](https://en.wikipedia.org/wiki/Biotin)
 - The world's healthiest foods, [_Biotin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=42)
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
-- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
-[_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B7
+- Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B7
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Biotin_](http://www.healthy.net/Health/Article/Biotin/2130)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin H (Biotin)_](http://umm.edu/health/medical/altmed/supplement/vitamin-h-biotin)

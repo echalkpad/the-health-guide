@@ -47,10 +47,10 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 ## Deficiency signs
 - Anxiety;
 - Appetite loss;
+- Balance loss;
 - Birth problems;
 - Breathing difficulties;
 - Confusion;
-- Coordination difficulties;
 - Depression;
 - Dizziness;
 - Fatigue;

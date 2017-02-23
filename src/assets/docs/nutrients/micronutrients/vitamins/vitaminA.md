@@ -61,5 +61,6 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Vitamin-Mineral Info, [_Vitamin A (Retinol) Benefits and Signs of Deficiency)_](http://www.vitamin-mineral-info.com/vitamin-a-retinol-benefits-signs-of-deficiency.php)
 - Vitamins & health supplements guide, [_Vitamin A_](http://www.vitamins-supplements.org/vitamin-A.php)
 - National Institute of Health, [_Vitamin A_](https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin A (Retinol)_](http://umm.edu/health/medical/altmed/supplement/vitamin-a-retinol)
 - Right diagnosis, [_Symptoms of Vitamin A deficiency_](http://www.rightdiagnosis.com/v/vitamin_a_deficiency/symptoms.htm)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

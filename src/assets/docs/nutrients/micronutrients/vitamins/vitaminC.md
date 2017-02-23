@@ -15,6 +15,7 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - __Tooth health__.
 
 ## Important relationships
+- Vitamin E - Antioxidant protection;
 - Iron - Red blood cells formation.
 
 ## Mechanism of action
@@ -71,5 +72,6 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - Holisticonline, [_Vitamin C Knowledgebase_](http://1stholistic.com/Nutrition/vkb/kb_vit_c.htm)
 - Vitamins & health supplements guide, [_Vitamin C (ascorbic acid)_](http://www.vitamins-supplements.org/vitamin-C.php)
 - National Institute of Health, [_Vitamin C_](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin C (Ascorbic acid)_](http://umm.edu/health/medical/altmed/supplement/vitamin-c-ascorbic-acid)
 - Wikipedia, [_Scurvy_](https://en.wikipedia.org/wiki/Scurvy#Signs_and_symptoms)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=401&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

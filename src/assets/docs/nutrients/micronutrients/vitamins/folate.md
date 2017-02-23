@@ -51,4 +51,5 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Folate
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Folic acid_](http://www.healthy.net/Health/Article/Folic_Acid/2133/1)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin B9 (Folic acid)_](http://umm.edu/health/medical/altmed/supplement/vitamin-b9-folic-acid)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=417&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

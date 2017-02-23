@@ -1,58 +1,38 @@
 #  Vitamin K
-Vitmin K is a fat-soluble vitamin. Its main function is as coenzyme for biological reactions involved in blood coagulation and bone metabolism.
+Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.
 
 ## Health support
+- Blood clotting;
+- Bone metabolism.
 
 ## Important relationships
+- Vitamin E - Blood clotting.
 
 ## Daily requirements
+- Men: 0.12mg/day;
+- Women: 0.09mg/day;
+- Pregnancy: 0.09mg/day;
+- Lactation: 0.09mg/day.
 
 ## Food sources
+- Green vegetables;
+- Egg yolks;
+- Liver.
 
 ## Deficiency signs
+- Wound healing problems (Bleeding).
 
 ## Watch out's
-
-## Absorption
-Vitamin K is absorbed in the small intestine and is accumulated by the liver and other tissues.
-Vitamin K absorption requires: dietary fat, calcium, vitamin D, Magnesium, Vitamin B2
-Vitamin K absorption is impaired by: vitamin A, Vitamin E, alcohol, tobacco, caffeine.
-
-## Functions
-- protein metabolism;
-- blood coagulation;
-- bone metabolism;
-- calcium transportation.
-
-## Deficiency
-- bruising;
-- bleeding.
-
-## Excess
-- allergic reaction.
-
-## Disease preventions
-- Blood clotting disorders;
-- Osteoporosis;
-- Coronary artery disease;
-- Cancer;
-- Liver disease;
-- Celiac disease;
-- Crohn's disease;
-- Ulcerative colitis;
-- Cystic fibrosis.
-
-## Food sources
-- leafy green vegetables;
-- egg yolks;
-- liver.
-
-## Average recommended intake
-0.12 mg/day.
+- Absorption is impaired by alcohol, smoking, Essential fat deficiency, Vitamin E deficiency.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin K](https://en.wikipedia.org/wiki/Vitamin_K)
-- The world's healthiest foods, [Vitamin K](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=112)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin K_](https://en.wikipedia.org/wiki/Vitamin_K)
+- The world's healthiest foods, [_Vitamin K_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=112)
+- Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin K
+- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin K_](http://www.healthy.net/Health/Article/Vitamin_K/2140/1)
+- Holisticonline, [_Vitamin K Knowledgebase_](http://1stholistic.com/Nutrition/vkb/kb_vit_k.htm)
+- Vitamins & health supplements guide, [_Vitamin K_](http://www.vitamins-supplements.org/vitamin-K.php)
+- Vitamin-Mineral Info, [_Vitamin K Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-k-benefits-signs-of-deficiency.php)
+- National Institute of Health, [_Vitamin K_](https://ods.od.nih.gov/factsheets/VitaminK-HealthProfessional/)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin K_](http://umm.edu/health/medical/altmed/supplement/vitamin-k)

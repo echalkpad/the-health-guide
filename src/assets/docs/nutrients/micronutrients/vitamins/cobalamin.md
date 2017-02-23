@@ -42,4 +42,5 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 
 [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin B12
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B12 -- Cobalamin_](http://www.healthy.net/Health/Article/Vitamin_B12_Cobalamin/1924/2)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin B12 (Cobalamin)_](http://umm.edu/health/medical/altmed/supplement/vitamin-b12-cobalamin)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=418&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

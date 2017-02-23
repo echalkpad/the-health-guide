@@ -38,4 +38,5 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin B1 -- Thiamine_](http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/1)
 - Vitamin-Mineral Info, [_Vitamin B1 (Thiamin) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-b1-thiamin-benefits-signs-of-deficiency.php)
 - Vitamins & health supplements guide, [_Vitamin B1 (thiamine, thiamin)_](http://www.vitamins-supplements.org/vitamin-B1-thiamine.php)
+- University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin B1 (Thiamine)_](http://umm.edu/health/medical/altmed/supplement/vitamin-b1-thiamine)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
