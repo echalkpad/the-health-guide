@@ -5,9 +5,7 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - __Carbohydrate and alcohol metabolism__;
 - __Energy production__;
 - __Muscle movements and strength__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Positive attitude__;
-- __Senses__.
+- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding.
 
 ## Important relationships
 - B vitamins.

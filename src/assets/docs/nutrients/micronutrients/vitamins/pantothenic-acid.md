@@ -7,9 +7,7 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 - __Hormone formation__;
 - __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
 - __Muscle movements and strength__;
-- __Positive attitude__;
-- __Senses__;
-- __Sleep__.
+- __Senses__.
 
 ## Important relationships
 - B vitamins.

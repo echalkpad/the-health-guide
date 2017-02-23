@@ -6,7 +6,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 - __Detoxification__;
 - __Eye health__;
 - __Fertility__;
-- __Growth (Bone development)__;
+- __Growth (Bone and Epithelial tissues development)__;
 - __Immunity__;
 - __Organ protection (Membrane and mucus formation)__;
 - __Pregnancy support__;
@@ -15,9 +15,9 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 
 ## Important relationships
 - Vitamin B3 (Niacin) - Organ protection (Membrane and mucus formation).
-- Vitamin D - Bone development;
-- Iron
-- Zinc
+- Calcium and Vitamin D - Bone development;
+- Iron - Red blood cell formation;
+- Zinc - Antioxidant protection.
 
 ## Daily requirements
 - Men: 1mg/day;
@@ -45,11 +45,11 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 - Growth impairment in children;
 - Infections;
 - Skin problems (Acne, Inflammation, Dryness, Riddles);
-- Teeth problems.
+- Tooth problems.
 
 ## Watch out's
 - Destroyed by cooking;
-- Absorption is impaired by alcohol, low-fat diets, Iron deficiency, Zinc deficiency.
+- Absorption is impaired by alcohol, Essential fat deficiency, Choline deficiency, Vitamin E deficiency, Vitamin B deficiency, Iron deficiency, Zinc deficiency.
 
 ## References
 - Wikipedia, [_Vitamin A_](https://en.wikipedia.org/wiki/Vitamin_A)
@@ -59,6 +59,6 @@ Vitamin A is an essential fat-soluble nutrient, hence, it can be stored in body 
 - Holisticonline, [_Vitamin A Knowledgebase_](http://1stholistic.com/Nutrition/vkb/kb_vit_a.htm)
 - Vitamin-Mineral Info, [_Vitamin A (Retinol) Benefits and Signs of Deficiency)_](http://www.vitamin-mineral-info.com/vitamin-a-retinol-benefits-signs-of-deficiency.php)
 - Vitamins & health supplements guide, [_Vitamin A_](http://www.vitamins-supplements.org/vitamin-A.php)
+- National Institute of Health, [_Vitamin A_](https://ods.od.nih.gov/factsheets/VitaminA-HealthProfessional/)
 - Right diagnosis, [_Symptoms of Vitamin A deficiency_](http://www.rightdiagnosis.com/v/vitamin_a_deficiency/symptoms.htm)
-- Wikipedia, [Dietary reference intake](https://en.wikipedia.org/wiki/Dietary_Reference_Intake#Vitamins_and_minerals)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

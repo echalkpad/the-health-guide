@@ -2,6 +2,13 @@
 Vitamin C or Ascorbic acid is a water-soluble vitamin. It's main function is as antioxidant.
 
 ## Health support
+- Antioxidant;
+- Blood cholesterol levels stabilisation;
+- Detoxification;
+- Collagen production (Hair, Joints, Nails, Skin)
+- Iron absorption;
+- Bones;
+- Teeth;
 
 ## Important relationships
 
@@ -12,12 +19,14 @@ Vitamin C or Ascorbic acid is a water-soluble vitamin. It's main function is as 
 ## Deficiency signs
 
 ## Watch out's
+- copper
+- boiling
 
 ## Absorption
 Vitamin C is absorbed in the small intestine. As intake increases, absorption decreases. Vitamin C is found in high levels 
 in the pituitary gland, adrenal glands, leukocytes, eye tissues, and the brain.
 Vitamin C absorption requires: selenium.
-Vitamin C absorption is impaired by: mercury, stress, high fever, cortisone, alcohol, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
+Vitamin C absorption is impaired by: mercury, high fever, cortisone, alcohol, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
 
 ## Functions
 - antioxidant;

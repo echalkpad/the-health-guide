@@ -2,6 +2,7 @@
 Zinc (Zn) is an essential trace element. Its main function is in growth and development.
 
 ## Health support
+- Sleep
 
 ## Important relationships
 

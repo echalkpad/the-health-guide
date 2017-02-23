@@ -12,7 +12,8 @@ Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and
 - __Nutrient absorption and transportation__;
 - __Positive attitude__;
 - __Red blood cells formation__;
-- __Senses__.
+- __Senses__;
+- __Sleep__.
 
 ## Important relationships
 - B vitamins;

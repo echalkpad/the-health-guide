@@ -12,7 +12,8 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 - __Pregnancy support__;
 - __Red blood cells formation__;
 - __Skin health__;
-- __Senses__.
+- __Senses__;
+- __Sleep__.
 
 ## Important relationships
 - B vitamins;
