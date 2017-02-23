@@ -1,5 +1,5 @@
 # Vitamin B2 (Riboflavin)
-Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - __Antioxidant protection__;
@@ -11,7 +11,10 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 
 ## Important relationships
 - B vitamins;
-- Copper, Iron, and Vitamin C - Red blood cell formation;
+- Copper, Iron, and Vitamin C - Red blood cell formation.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 1.3mg/day;
@@ -28,6 +31,9 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 - Mushrooms;
 - Almonds;
 - Goat cheese.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Riboflavin_](https://en.wikipedia.org/wiki/Riboflavin)

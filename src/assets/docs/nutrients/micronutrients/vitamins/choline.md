@@ -1,5 +1,5 @@
 # Choline
-Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body. It is related to the B Vitamins, but not considered yet one of them.
+Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration. It is related to the B Vitamins, but not considered yet one of them.
 
 ## Health support
 - __Blood cholesterol levels stabilisation__;
@@ -16,6 +16,9 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 ## Important relationships
 - Vitamin B3 (Niacin), B6 (Pyridoxine), B9 (Folate), and B12 (Cobalamin) - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).
 - Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 550mg/day;
@@ -46,6 +49,9 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 - Mood swings;
 - Numbness;
 - Weakness.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Choline_](https://en.wikipedia.org/wiki/Choline)

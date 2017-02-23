@@ -1,101 +1,71 @@
-# Vitamin C
-Vitamin C or Ascorbic acid is a water-soluble vitamin. It's main function is as antioxidant.
+# Vitamin C (Ascorbic acid)
+Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Health support
-- Antioxidant;
-- Blood cholesterol levels stabilisation;
-- Detoxification;
-- Collagen production (Hair, Joints, Nails, Skin)
-- Iron absorption;
-- Bones;
-- Teeth;
+- __Antioxidant protection__;
+- __Blood cholesterol levels stabilisation__;
+- __Bone development__;
+- __Detoxification__;
+- __Eye health__;
+- __Hormone formation__;
+- __Iron metabolism (Red blood cells formation)__;
+- __Positive attitude__;
+- __Skin health__;
+- __Sleep__;
+- __Tooth health__.
 
 ## Important relationships
+- Iron - Red blood cells formation.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 
 ## Food sources
+- Peppers;
+- Acerola;
+- Herbs and spices;
+- Kale;
+- Broccoli;
+- Kiwifruit;
+- Lemons;
+- Oranges;
+- Grapefruit;
+- Pomelo;
+- Papaya;
+- Strawberries;
+- Red cabbage;
+- Clementines;
+- Cauliflower.
 
 ## Deficiency signs
+- Bone pain;
+- Breathing difficulties;
+- Colds;
+- Depression;
+- Fatigue;
+- Gum problems (Bleeding and pain);
+- Indifference;
+- Joint pain;
+- Motivation decrease;
+- Skin problems (Bruising, Roughness, Red spots);
+- Tiredness;
+- Wound healing problems (Bleeding).
 
 ## Watch out's
-- copper
-- boiling
-
-## Absorption
-Vitamin C is absorbed in the small intestine. As intake increases, absorption decreases. Vitamin C is found in high levels 
-in the pituitary gland, adrenal glands, leukocytes, eye tissues, and the brain.
-Vitamin C absorption requires: selenium.
-Vitamin C absorption is impaired by: mercury, high fever, cortisone, alcohol, tobacco, aspirin, air pollution, D.D.T, sulfonamides, and excess water.
-
-## Functions
-- antioxidant;
-- cofactor in enzymatic processes;
-- cofactor in hormonal processes;
-- carbohydrate metabolism;
-- fat synthesis;
-- protein synthesis;
-- carnitine synthesis;
-- neurotransmitter synthesis;;
-- collagen synthesis;
-- conective tissue formation;
-- teetch health;
-- bone health;
-- blood vessels health;
-- iron absorption;
-- nicotine detoxification;
-- growth;
-- reducing agent.
-
-## Deficiency
-- infections;
-- fatigue;
-- joint pain;
-- bleeding gums;
-- scurvy;
-- hemorrhages;
-- anemia;
-- colds;
-- allergies;
-- shortness of breath;
-- impaired wound healing;
-- bruising;
-- gout.
-
-## Excess
-- diarrhea;
-- kidney stones;
-- impaired copper absorption;
-- impaired vitamin B12 absorption;
-- gout;
-- gastrointestinal disorders.
-
-## Disease preventions
-- Alzheimer's disease
-- Asthma
-- Cancer 
-- Capillary fragility
-- Cardiovascular disease
-- Cataract
-- Common cold
-- Gingivitis
-- Gout
-- High blood pressure
-- Musculoskeletal injury
-- Rheumatoid arthritis
-- Scurvy
-- Seasonal allergies
-
-## Food sources
-- fruits;
-- vegetables.
-
-## Average recommended intake
-- 90mg/day.
+- Absorption is impaired by alcohol and smoking.
+- Copper and Vitamin B12 (Cobalamin) metabolism are impaired by excess Vitamin C.
+- Destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
-- Wikipedia, [Vitamin](https://en.wikipedia.org/wiki/Vitamin)
-- Wikipedia, [Vitamin C](https://en.wikipedia.org/wiki/Vitamin_C)
-- The world's healthiest foods, [Vitamin C](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=109)
-- Wikibooks, ["Human physiology"](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
+- Wikipedia, [_Vitamin C_](https://en.wikipedia.org/wiki/Vitamin_C)
+- The world's healthiest foods, [_Vitamin C_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=109)
+- Wikibooks, _Human physiology_, Nutrition, [Vitamins](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Vitamin C
+- Elson Haas M. MD, Healthy.net, [_Vitamins: Vitamin C_](https://www.healthy.net/Health/Article/Vitamin_C/2134)
+- Holisticonline, [_Vitamin C Knowledgebase_](http://1stholistic.com/Nutrition/vkb/kb_vit_c.htm)
+- Vitamins & health supplements guide, [_Vitamin C (ascorbic acid)_](http://www.vitamins-supplements.org/vitamin-C.php)
+- National Institute of Health, [_Vitamin C_](https://ods.od.nih.gov/factsheets/VitaminC-HealthProfessional/)
+- Wikipedia, [_Scurvy_](https://en.wikipedia.org/wiki/Scurvy#Signs_and_symptoms)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=401&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

@@ -1,5 +1,5 @@
 # Vitamin B12 (Cobalamin)
-Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primay goals
 - __Amino acid metabolism__;
@@ -17,7 +17,10 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 
 ## Important relationships
 - B vitamins;
-- Copper, Iron, and Vitamin C - Red blood cell formation;
+- Copper, Iron, and Vitamin C - Red blood cell formation.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 0.0024mg/day;
@@ -28,6 +31,9 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 ## Food sources
 - Meat;
 - Eggs.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Vitamin B12_](https://en.wikipedia.org/wiki/Vitamin_B12)

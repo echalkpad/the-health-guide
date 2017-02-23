@@ -1,5 +1,5 @@
 # Vitamin B6 (Pyridoxine)
-Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primay goals
 - __Amino acid metabolism__;
@@ -20,6 +20,9 @@ Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and
 - Copper, Iron, and Vitamin C - Red blood cell formation;
 - Magnesium - Blood cholesterol stabilisation.
 
+## Mechanism of action
+> TO DO
+
 ## Daily requirements
 - Men: 1.7mg/day;
 - Women: 1.5mg/day;
@@ -36,6 +39,9 @@ Pyridoxin is an essential water-soluble nutrient, hence, it cannot be stored and
 - Fish;
 - Egg yolk;
 - Nuts.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Vitamin B6_](https://en.wikipedia.org/wiki/Vitamin_B6)

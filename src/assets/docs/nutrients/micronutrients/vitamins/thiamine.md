@@ -1,5 +1,5 @@
 # Vitamin B1 (Thiamine)
-Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - __Carbohydrate and alcohol metabolism__;
@@ -9,6 +9,9 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 
 ## Important relationships
 - B vitamins.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 1.2mg/day;
@@ -23,6 +26,9 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Meat;
 - Nuts;
 - Legumes.
+
+## Watch out's
+- Absorption is impaired by alcohol, smoking, raw seafood, and tannins.
 
 ## References
 - Wikipedia, [_Thiamine_](https://en.wikipedia.org/wiki/Thiamine)

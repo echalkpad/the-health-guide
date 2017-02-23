@@ -1,5 +1,5 @@
 # Vitamin B3 (Niacin)
-Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - __Antioxidant protection__;
@@ -16,6 +16,9 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Chromium - Blood sugar levels stabilisation;
 - Vitamin A - Organ protection (Membrane and mucus formation).
 
+## Mechanism of action
+> TO DO
+
 ## Daily requirements
 - Men: 16mg/day;
 - Women: 14mg/day;
@@ -31,6 +34,9 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Herbs and spices;
 - Mushrooms;
 - Dried fruits.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Niacin_](https://en.wikipedia.org/wiki/Niacin)

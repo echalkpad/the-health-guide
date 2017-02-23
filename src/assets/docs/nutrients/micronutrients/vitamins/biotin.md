@@ -1,5 +1,5 @@
 # Vitamin B7 (Biotin)
-Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primay goals
 - __Amino acids and fat metabolism__;
@@ -10,6 +10,9 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 
 ## Important relationships
 - B vitamins.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 0.03mg/day;
@@ -26,7 +29,7 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Eggs.
 
 ## Watch out's
-- Absorption impaired by raw egg whites.
+- Absorption is impaired by alcohol, smoking, and raw egg whites.
 
 ## References
 - Wikipedia, [_Biotin_](https://en.wikipedia.org/wiki/Biotin)

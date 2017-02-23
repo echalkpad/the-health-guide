@@ -1,5 +1,5 @@
 # Vitamin B5 (Pantothenic acid)
-Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primay goals
 - __Energy production__;
@@ -11,6 +11,9 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 
 ## Important relationships
 - B vitamins.
+
+## Mechanism of action
+> TO DO
 
 ## Daily requirements
 - Men: 5mg/day;
@@ -30,6 +33,9 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 - Peanuts;
 - Whole-grains;
 - Fish.
+
+## Watch out's
+- Absorption is impaired by alcohol and smoking.
 
 ## References
 - Wikipedia, [_Pantothenic acid_](https://en.wikipedia.org/wiki/Pantothenic_acid)

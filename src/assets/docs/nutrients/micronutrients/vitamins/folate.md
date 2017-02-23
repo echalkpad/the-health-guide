@@ -1,5 +1,5 @@
 # Vitamin B9 (Folate)
-Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body.
+Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easly eliminated from the body through urine or perspiration.
 
 ## Primay goals
 - __Amino acid metabolism__;
@@ -20,6 +20,9 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Copper, Iron, and Vitamin C - Red blood cell formation;
 - Zinc - Male fertility (Sex hormones and Sperm cell formation).
 
+## Mechanism of action
+> TO DO
+
 ## Daily requirements
 - Men: 0.4mg/day;
 - Women: 0.4mg/day;
@@ -38,6 +41,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Green vegetables.
 
 ## Watch out's
+- Absorption is impaired by alcohol and smoking.
 - Hish sensitivity to light and heat.
 
 ## References
