@@ -25,7 +25,7 @@ Calcium is an essential mineral element.
 - Bone problems;
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;
@@ -43,7 +43,7 @@ Calcium is an essential mineral element.
     - Smoking;
     - Stress.
 
-- Absorption requires:
+- Absorption `requires`:
     - Acid medium (Vitamin C);
     - Fat;
     - Magnesium;

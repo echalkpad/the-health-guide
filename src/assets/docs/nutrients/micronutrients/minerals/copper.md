@@ -22,7 +22,7 @@ Iron absorption
 synthesis of hemoglobin and red blood cells. Needed for integrity of joints and nerves. Necessary for formation of elastin. Aids with production of enzymes needed for respiration, protein metabolism, healing process, hair and skin pigment, oxidation of Vitamin C and iron absorption. 
 
 ## Deficiency
-general weakness, impaired respiration, lower collagen and lower white blood cell formation, retarded growth, skin ores, pernicious anemia, and respiratory problems.
+general weakness, `impaired` respiration, lower collagen and lower white blood cell formation, retarded growth, skin ores, pernicious anemia, and respiratory problems.
 
 ## Food sources
 organ meatsseafood, nuts, whole-grains, and legumes

@@ -16,8 +16,8 @@ Chloride (Cl) or Chloride is an essential mineral element. Its main function is 
 ## Absorption
 95% is accumulated in extracellular fluid.
 98% of chlorine is absorbed.
-Chlorine absorption requires: sodium.
-Chlorine absorption is impaired by: potassium, excessive perspiration, vitamin C.
+Chlorine absorption `requires`: sodium.
+Chlorine absorption is `impaired` by: potassium, excessive perspiration, vitamin C.
 
 ## Functions
 acid-base balance, stomach acid formation, and body water balance.
@@ -26,7 +26,7 @@ hormone and lecithin production
 fluid pressure in cell membranes, liver detoxification, joints and tendons in tone..
 
 ## Deficiency
-hair and tooth loss, poor muscle contractions and impaired digestion
+hair and tooth loss, poor muscle contractions and `impaired` digestion
 
 
 ## Food sources

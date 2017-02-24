@@ -1,5 +1,5 @@
 # Vitamin E (Tocopherol)
-Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.
+Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
 - __Antioxidant protection__;
@@ -42,7 +42,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it requires
 - Weakness.
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;
@@ -54,7 +54,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it requires
     - Smoking;
     - Stress.
 
-- Absorption requires:
+- Absorption `requires`:
     - Fat.
 
 ## References

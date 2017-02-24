@@ -1,5 +1,5 @@
 # Vitamin A
-Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.
+Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
 - __Antioxidant protection__;
@@ -48,7 +48,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Skin problems (Acne, Inflammation, Dryness, Riddles).
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;
@@ -59,7 +59,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
     - Smoking;
     - Stress.
 
-- Absorption requires:
+- Absorption `requires`:
     - Choline;
     - Fat;
     - Iron;

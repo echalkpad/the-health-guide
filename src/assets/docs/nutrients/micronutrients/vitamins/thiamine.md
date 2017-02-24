@@ -28,7 +28,7 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Legumes.
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;

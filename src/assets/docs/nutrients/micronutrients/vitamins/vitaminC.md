@@ -59,7 +59,7 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - Wound healing problems (Bleeding).
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;

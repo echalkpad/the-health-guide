@@ -73,7 +73,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Walking difficulties.
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;

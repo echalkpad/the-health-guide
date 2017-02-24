@@ -35,7 +35,7 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 - Fish.
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;

@@ -1,5 +1,5 @@
 # Vitamin D (Calciferol)
-Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.
+Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
 - __Bone health__;
@@ -39,7 +39,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires
 - Weakness.
 
 ## Watch out's
-- Absorption is impaired by:
+- Absorption is `impaired` by:
     - Added sugars;
     - Age;
     - Alcohol;
@@ -50,7 +50,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires
     - Smoking;
     - Stress.
     
-- Absorption requires:
+- Absorption `requires`:
     - Fat;
     - Magnesium.
 

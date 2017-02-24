@@ -24,7 +24,7 @@ Chromium is an essential trace element. Its primary function is glucose metaboli
 anxiety, glucose intolerance, and chance of arteriosclerosis, poor metabolism of amino acids, retarded growth, mental and emotional disorder, hypoglycemia, weakness and fatigue
 - weight loss;
 - peripheral neuropathy;
-- impaired plasma glucose removal;
+- `impaired` plasma glucose removal;
 - increased insulin requirements;
 - elevated plasma free fatty acids;
 - low respiratory quotient.

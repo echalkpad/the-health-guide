@@ -17,7 +17,7 @@ additional benefits to the human body.
 
 ## Absorption
 Raw starch is very hard to digest and happens only in the colon, whereas cooked starch is much more easier to digest and to absorb.
-Complex carbohydrate dygestion begins in the mouth and continues in the intestine, and requires the alkaline medium, hence, it is not recommended to combine them 
+Complex carbohydrate dygestion begins in the mouth and continues in the intestine, and `requires` the alkaline medium, hence, it is not recommended to combine them 
 with other nutrients that require or generate an acid medium, like animal protein, fat, and acid fruits. The enzyme ptyalin, that creates the alkaline medium, 
 is neutralized in acid medium. Sugars also create an acid medium by generating a large amount of saliva secretion in the mouth.
 

@@ -9,7 +9,7 @@ Nutrients are organic compounds required by our body to function properly and ev
 - __Vitamins__: Choline, Vitamin A, Vitamin B-Complex, Vitamin C, Vitamin D, Vitamin E, Vitamin K;
 - __Minerals__: Calcium, Chloride, Chromium, Copper, Iodine, Iron, Magnesium, Manganese, Molybdenum, Phosphorus, Potassium, Selenium, Sodium, and Zinc.
 
-All body processes require energy. _Our body is a factory and the nutrients are the machinery_ and, like any machinery, it requires fuel to work. Fuel comes from three major nutrients that are required in greater amounts, hence, they are called `Macronutrients`.
+All body processes require energy. _Our body is a factory and the nutrients are the machinery_ and, like any machinery, it `requires` fuel to work. Fuel comes from three major nutrients that are required in greater amounts, hence, they are called `Macronutrients`.
 
 ### Macronutrients
 - __Water__;
