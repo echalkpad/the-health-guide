@@ -2,10 +2,15 @@
 Calcium is an essential mineral element.
 
 ## Health support
-- 
+- `Blood pH levels stabilisation`;
+- `Bone health`;
+- `Growth`;
+- `Muscle movements and strength`;
+- `Pregnancy support`;
+- `Teeth health`.
 
 ## Important relationships
-- 
+- Magnesium, Phosphorus, Vitamin D - Bone health.
 
 ## Mechanism of action
 > TO DO
@@ -22,7 +27,17 @@ Calcium is an essential mineral element.
 - Green vegetables.
 
 ## Deficiency signs
-- Bone problems;
+- Bone problems (Deformities, Fractures, Pain, Tenderness);
+- Birth problems;
+- Confusion;
+- Dental problems;
+- Growth impairment in children;
+- Heart palpitations;
+- Insomnia;
+- Irritability;
+- Muscle twitching;
+- Nail brittleness;
+- Numbness and tingling.
 
 ## Watch out's
 - Absorption is `impaired` by:

@@ -64,7 +64,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Mood swings;
 - Motivation decrease;
 - Nail brittleness;
-- Numbness;
+- Numbness and tingling in hands and feet;
 - Skin problems (Acne, Itching, Inflammation, Oiliness, Rash, Redness, Riddles);
 - Sleep problems;
 - Sleepiness;
