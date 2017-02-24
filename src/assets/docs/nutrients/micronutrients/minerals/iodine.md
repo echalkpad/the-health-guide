@@ -1,5 +1,5 @@
-# Iodine
-Iodine (I) is an essential trace element. Its main function is in thyroid hormone production.
+# Iodine (I)
+Iodine (I) is an essential trace element.
 
 ## Health support
 - `Body temperature`;
@@ -32,7 +32,6 @@ Iodine (I) is an essential trace element. Its main function is in thyroid hormon
 - Dry skin;
 - Fatigue;
 - Heart alpitations;
-- Heat intolerance;
 - High blood pressure;
 - Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
 - Nervousness;

@@ -57,6 +57,9 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
 - Absorption `requires`:
     - Fat.
 
+- Excess Vitamin E `impairs`:
+    - Iron absorption.
+
 ## References
 - Wikipedia, [_Vitamin E_](https://en.wikipedia.org/wiki/Vitamin_E)
 - The world's healthiest foods, [_Vitamin E_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=111)

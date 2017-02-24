@@ -42,6 +42,9 @@ Calcium (Ca) is an essential mineral element.
 - Numbness and tingling.
 
 ## Watch out's
+- Calcium `absorption is slow and delicate`:
+	- 50-70% Calcium is absorbed.
+
 - Absorption is `impaired` by:
     - Added sugars;
     - Age;
@@ -61,13 +64,14 @@ Calcium (Ca) is an essential mineral element.
     - Stress.
 
 - Absorption `requires`:
-    - Acid medium (Vitamin C);
+    - Acid medium;
     - Fat;
     - Magnesium;
     - Protein;
+    - Vitamin C;
     - Vitamin D.
 
-- Excess Calcium impairs:
+- Excess Calcium `impairs`:
     - Iron absorption;
     - Magnesium absorption;
     - Phosphorus absorption;

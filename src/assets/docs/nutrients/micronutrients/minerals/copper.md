@@ -33,20 +33,27 @@ Copper (Cu) is an essential trace element.
 
 ## Deficiency signs
 - Appetite loss;
+- Attention difficulties;
 - Bone problems (Deformities, Fractures, Pain, Tenderness);
 - Breathing difficulties;
 - Chest pain;
 - Colds;
-- Diarrhea;
+- Concentration difficulties;
+- Constipation;
+- Depression;
 - Dizziness;
 - Fatigue;
 - Fever;
 - Growth impairment in children;
 - Gum pain;
+- Headache;
 - Hair loss;
 - Heart palpitations;
 - High blood cholesterol levels;
 - Irregular heartbeats;
+- Irritability;
+- Learning difficulties;
+- Motivation decrease;
 - Nausea;
 - Paleness;
 - Skin problems (Eczema, Inflammation, Itching, Rash, Redness, Sores, Swelling, Warmth);
