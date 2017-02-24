@@ -59,8 +59,18 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - Wound healing problems (Bleeding).
 
 ## Watch out's
-- Absorption is impaired by alcohol and smoking.
-- Copper and Vitamin B12 (Cobalamin) metabolism are impaired by excess Vitamin C.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Excess Vitamin C impairs Copper and Vitamin B12 (Cobalamin) absorption.
 - Destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References

@@ -13,12 +13,6 @@ Chromium is an essential trace element. Its primary function is glucose metaboli
 
 ## Watch out's
 
-## Absorption
-Chromium is absorbed in the small intestine. Only 0.4%-2.5% of chromium is absorbed and it is stored in the liver, spleen, soft tissue, and bone
-Chromium absorption requires: vitamin C, exercise.
-Chromium absorption is impaired by: alcohol, tobacco, caffeine, sugars, phytate, drug medications, air pollution.
-Excess chromium is excreted through the urine.
-
 ## Functions
 - metabolism of glucose;
 - regulation of blood sugar;
@@ -35,23 +29,11 @@ anxiety, glucose intolerance, and chance of arteriosclerosis, poor metabolism of
 - elevated plasma free fatty acids;
 - low respiratory quotient.
 
-## Excess
-- chromium toxicity.
-
-## Disease preventions
-- type 2 diabetes (prevention and treatment);
-- metabolic syndrome;
-- high cholesterol;
-- depression.
-
 ## Food sources
 - broccoli;
 - grapes;
 - meat;
 - whole grains.
-
-## Average recommended intake
-- 0.12mg/day.
 
 ## Refferences
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
@@ -59,3 +41,9 @@ anxiety, glucose intolerance, and chance of arteriosclerosis, poor metabolism of
 - The world's healthiest foods, [Chromium](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=51)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Chromium
+
+- Elson Haas M. MD, Healthy.net, [__]()
+
+
+
+- [USDA Branded Food Products Database]()

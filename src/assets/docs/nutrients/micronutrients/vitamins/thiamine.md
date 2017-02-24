@@ -28,7 +28,20 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Legumes.
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, raw seafood, and tannins.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Raw seafood;
+    - Sedentarism;
+    - Smoking;
+    - Stress;
+    - Tannins.
+
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
 - Wikipedia, [_Thiamine_](https://en.wikipedia.org/wiki/Thiamine)

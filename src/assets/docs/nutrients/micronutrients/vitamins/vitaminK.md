@@ -27,7 +27,20 @@ Vitamin K is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Wound healing problems (Bleeding).
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, Essential fat deficiency, Vitamin E deficiency.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Absorption requires:
+    - Fat;
+    - Vitamin E.
 
 ## References
 - Wikipedia, [_Vitamin K_](https://en.wikipedia.org/wiki/Vitamin_K)

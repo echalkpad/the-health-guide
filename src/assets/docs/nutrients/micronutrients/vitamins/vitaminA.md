@@ -48,7 +48,25 @@ Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be abs
 - Skin problems (Acne, Inflammation, Dryness, Riddles).
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, Essential fat deficiency, Choline deficiency, Vitamin E deficiency, Vitamin B deficiency, Iron deficiency, Zinc deficiency.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Absorption requires:
+    - Choline;
+    - Fat;
+    - Iron;
+    - Vitamin B;
+    - Vitamin E;
+    - Zinc.
+
 - Destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References

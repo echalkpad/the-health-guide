@@ -29,7 +29,19 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Eggs.
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, and raw egg whites.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Raw egg whites;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
 - Wikipedia, [_Biotin_](https://en.wikipedia.org/wiki/Biotin)

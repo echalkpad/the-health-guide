@@ -73,9 +73,19 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Walking difficulties.
 
 ## Watch out's
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
 - `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
-- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures;
-- B vitamins require a healthy gut flora, which is damagaed by alcohol, caffeine, pharmaceutical drugs, smoking, and sugars.
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)

@@ -39,7 +39,20 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires
 - Weakness.
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, Essential fat deficiency, Magnesium deficiency.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+    
+- Absorption requires:
+    - Fat;
+    - Magnesium.
 
 ## References
 - Wikipedia, [_Vitamin D_](https://en.wikipedia.org/wiki/Vitamin_D)

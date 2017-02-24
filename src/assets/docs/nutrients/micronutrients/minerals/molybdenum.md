@@ -13,11 +13,6 @@ Molybdenum (Mo) is an essential trace element. Its main function is conezyme in 
 
 ## Watch out's
 
-## Absorption
-Only 
-Molybdenum absorption requires: iron.
-Molybdenum absorption is impaired by: tungsten, processed food, soy.
-
 ## Functions
 	• Promotion of Optimal Sulfur Balance
 	• Antioxidant Protection
@@ -27,21 +22,8 @@ Nervous system metabolism
 ## Deficiency
 - sulfur imbalance.
 
-## Excess
-impaired absorption of copper.
-
-## Disease preventions
-	• Sulfite sensitivity
-	• Asthma
-	• Poor detoxification
-	• Cardiovascular risk
-Metabolic syndrome
-
 ## Food sources
-Legumes, whole grains, nuts[
-
-## Average recommended intake
-- 0.045mg/day.
+Legumes, whole grains, nuts
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
@@ -49,3 +31,9 @@ Legumes, whole grains, nuts[
 - The world's healthiest foods, [Molybdenum](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=128)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Molybdenum
+
+- Elson Haas M. MD, Healthy.net, [__]()
+
+
+
+- [USDA Branded Food Products Database]()

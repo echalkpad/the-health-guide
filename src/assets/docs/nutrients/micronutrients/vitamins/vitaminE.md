@@ -42,7 +42,20 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it requires
 - Weakness.
 
 ## Watch out's
-- Absorption is impaired by alcohol, smoking, Essential fat deficiency, excess Iron.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Excess Iron;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Absorption requires:
+    - Fat.
 
 ## References
 - Wikipedia, [_Vitamin E_](https://en.wikipedia.org/wiki/Vitamin_E)

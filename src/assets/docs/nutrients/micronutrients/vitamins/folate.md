@@ -41,8 +41,18 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - Green vegetables.
 
 ## Watch out's
-- Absorption is impaired by alcohol and smoking.
-- Hish sensitivity to light and heat.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
 - Wikipedia, [_Folic acid_](https://en.wikipedia.org/wiki/Folic_acid)

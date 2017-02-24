@@ -33,7 +33,18 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 - Eggs.
 
 ## Watch out's
-- Absorption is impaired by alcohol and smoking.
+- Absorption is impaired by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
 - Wikipedia, [_Vitamin B12_](https://en.wikipedia.org/wiki/Vitamin_B12)

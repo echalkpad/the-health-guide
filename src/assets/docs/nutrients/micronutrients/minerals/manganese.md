@@ -13,10 +13,6 @@ Manganese (Mn) is an essential trace element. Its main function is as coenzyme a
 
 ## Watch out's
 
-## Absorption
-Only a small percentage of manganese are absorbed and accumulated in the liver.
-Manganese absorption is impaired by: phytate, iron, magnesium, calcium, phosphorous, antibiotics.
-
 ## Functions
 	• Bone Production
 	• Skin integrity
@@ -29,26 +25,9 @@ maintain sex hormone, protein, fat and carbohydrate productions. Formation of bl
 ## Deficiency
 impotence, anemia, digestive disorders and tooth decay
 
-## Excess
-poor iron absorption
-nervous system decline
-
-## Disease preventions
-	• Osteoporosis
-	• Tardive dyskinesia
-	• Hypothyroidism
-	• Diabetes
-	• Dermatitis
-	• Epilepsy
-Asthma
-arthritis
-
 ## Food sources
  leafy green vegetables, fruits, nuts, cinnamon and whole grains
  	Grains, legumes, seeds, nuts, leafy vegetables, tea, coffee
-
-## Average recommended intake
-- 2mg/day;
 
 ## References
 - Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
@@ -56,3 +35,9 @@ arthritis
 - The world's healthiest foods, [Manganese](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Manganese
+
+- Elson Haas M. MD, Healthy.net, [__]()
+
+
+
+- [USDA Branded Food Products Database]()

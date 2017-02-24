@@ -1,5 +1,5 @@
-# Chlorine
-Chlorine (Cl) or Chloride is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
+# Chloride
+Chloride (Cl) or Chloride is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
 
 ## Health support
 
@@ -28,13 +28,6 @@ fluid pressure in cell membranes, liver detoxification, joints and tendons in to
 ## Deficiency
 hair and tooth loss, poor muscle contractions and impaired digestion
 
-## Excess
-destroys Vitamin E and Intestinal flora
-	• high blood presure (Hypertension)
-Cardiovascular disease
-
-## Disease preventions
-Liver disease, tardive dyskinesia
 
 ## Food sources
 table salt.
@@ -47,3 +40,9 @@ table salt.
 - Wikipedia, [Chlorine](https://en.wikipedia.org/wiki/Chlorine)
 - WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Chlorine
+
+- Elson Haas M. MD, Healthy.net, [__]()
+
+
+
+- [USDA Branded Food Products Database]()
