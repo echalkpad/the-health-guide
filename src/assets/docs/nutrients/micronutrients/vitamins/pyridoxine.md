@@ -8,7 +8,7 @@ Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored an
 - `Detoxification`;
 - `Energy production`;
 - `Immunity`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Nutrient absorption and transportation`;
 - `Positive attitude`;
 - `Red blood cells formation`;

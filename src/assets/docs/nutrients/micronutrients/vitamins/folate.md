@@ -7,7 +7,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - `DNA formation`;
 - `Energy production`;
 - `Hormone formation`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Positive attitude`;
 - `Pregnancy support`;
 - `Red blood cells formation`;

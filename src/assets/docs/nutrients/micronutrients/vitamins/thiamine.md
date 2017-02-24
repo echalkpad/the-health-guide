@@ -2,10 +2,11 @@
 Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- `Carbohydrate and alcohol metabolism`;
+- `Alcohol metabolism`;
+- `Carbohydrate`;
 - `Energy production`;
 - `Muscle movements and strength`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding.
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding.
 
 ## Important relationships
 - B vitamins.

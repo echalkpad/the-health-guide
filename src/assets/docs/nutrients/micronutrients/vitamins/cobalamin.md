@@ -6,7 +6,7 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 - `Blood homocysteine levels stabilisation`;
 - `DNA formation`;
 - `Energy production`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Muscle movements and strength`;
 - `Positive attitude`;
 - `Pregnancy support`;

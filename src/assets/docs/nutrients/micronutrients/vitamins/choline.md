@@ -7,7 +7,7 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 - `Brain development`;
 - `Detoxification`;
 - `Fat metabolism`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Muscle movements and strength`;
 - `Positive attitude`;
 - `Pregnancy support`;
@@ -42,7 +42,7 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 - High blood pressure;
 - High blood cholesterol;
 - Indifference;
-- Intellectual performance decrease;
+- Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
 - Irritability;
 - Kidney problems;
 - Liver problems;
@@ -71,3 +71,5 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 - Laura Dolson, Verywell, [_Choline: Food for Thought_](https://www.verywell.com/choline-food-for-thought-2242211)
 - Elson Haas M. MD, Healthy.net, [_Vitamins: Choline_](http://www.healthy.net/Health/Article/Choline/2131)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=421&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- Wikipedia, [_Cognition_](https://en.wikipedia.org/wiki/Cognition)
+- Wikipedia, [_Intellectual disability_](https://en.wikipedia.org/wiki/Intellectual_disability#Signs_and_symptoms)

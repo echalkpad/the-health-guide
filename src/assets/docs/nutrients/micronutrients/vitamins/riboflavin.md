@@ -3,9 +3,10 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 
 ## Primary goals
 - `Antioxidant protection`;
-- `Carbohydrate and fat metabolism`;
+- `Carbohydrate metabolism`;
 - `Detoxification`;
 - `Energy production`;
+- `Fat metabolism`;
 - `Respiration`;
 - `Red blood cells formation`.
 

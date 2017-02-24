@@ -6,6 +6,7 @@ Copper (Cu) is an essential trace element.
 - `Blood cholesterol levels stabilisation`;
 - `Bone health`;
 - `Growth`;
+- `Hormone formation`;
 - `Immunity`;
 - `Red blood cells formation`;
 - `Respiration`;

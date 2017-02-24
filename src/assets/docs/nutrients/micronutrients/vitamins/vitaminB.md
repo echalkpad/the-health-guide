@@ -21,7 +21,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - `DNA formation`;
 - `Energy production`;
 - `Hormone formation`;
-- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Metabolism`;
 - `Muscle movements and strength`;
 - `Nutrient absorption and transportation`;
@@ -63,7 +63,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - High blood pressure;
 - High blood sugar levels;
 - Indifference;
-- Intellectual performance decrease;
+- Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
 - Irregular heart beat;
 - Irritability;
 - Mood swings;
@@ -100,5 +100,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Cathy Wong, ND, Verywell, [_The Benefits of B Complex Vitamins_](https://www.verywell.com/b-complex-vitamins-89411)
 - Nicole McDermott, Daily burn, [_The Benefits of Vitamin B Complex_](http://dailyburn.com/life/health/benefits-vitamin-b-complex/)
 - Med-Health.net, [_Vitamin B Complex Benefits_](http://www.med-health.net/B-Complex-Benefits.html)
-- National Institute of Health, [_DIETARY SUPPLEMENT FACT SHEETS_](https://ods.od.nih.gov/factsheets/list-all/)
+- Wikipedia, [_Cognition_](https://en.wikipedia.org/wiki/Cognition)
+- Wikipedia, [_Intellectual disability_](https://en.wikipedia.org/wiki/Intellectual_disability#Signs_and_symptoms)
+- National InstiCtute of Health, [_DIETARY SUPPLEMENT FACT SHEETS_](https://ods.od.nih.gov/factsheets/list-all/)
 - Vitamin-Mineral Info, [_Vitamin and Mineral Reference Guide_](http://www.vitamin-mineral-info.com/)
