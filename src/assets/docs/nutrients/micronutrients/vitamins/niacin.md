@@ -2,14 +2,14 @@
 Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Antioxidant protection__;
-- __Blood cholesterol levels stabilisation__;
-- __Blood sugar levels stabilisation__;
-- __Detoxification__;
-- __Digestion__;
-- __Energy production__;
-- __Immunity__;
-- __Respiration__.
+- `Antioxidant protection`;
+- `Blood cholesterol levels stabilisation`;
+- `Blood sugar levels stabilisation`;
+- `Detoxification`;
+- `Digestion`;
+- `Energy production`;
+- `Immunity`;
+- `Respiration`.
 
 ## Important relationships
 - B vitamins;

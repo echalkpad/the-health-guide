@@ -2,18 +2,18 @@
 Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Amino acid metabolism__;
-- __Blood homocysteine levels stabilisation__;
-- __DNA formation__;
-- __Energy production__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Muscle movements and strength__;
-- __Positive attitude__;
-- __Pregnancy support__;
-- __Red blood cells formation__;
-- __Skin health__;
-- __Senses__;
-- __Sleep__.
+- `Amino acid metabolism`;
+- `Blood homocysteine levels stabilisation`;
+- `DNA formation`;
+- `Energy production`;
+- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Muscle movements and strength`;
+- `Positive attitude`;
+- `Pregnancy support`;
+- `Red blood cells formation`;
+- `Skin health`;
+- `Senses`;
+- `Sleep`.
 
 ## Important relationships
 - B vitamins;

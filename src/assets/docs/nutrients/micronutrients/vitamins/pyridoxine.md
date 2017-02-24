@@ -2,18 +2,18 @@
 Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Amino acid metabolism__;
-- __Blood cholesterol levels stabilisation__;
-- __Blood homocysteine levels stabilisation__;
-- __Detoxification__;
-- __Energy production__;
-- __Immunity__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Nutrient absorption and transportation__;
-- __Positive attitude__;
-- __Red blood cells formation__;
-- __Senses__;
-- __Sleep__.
+- `Amino acid metabolism`;
+- `Blood cholesterol levels stabilisation`;
+- `Blood homocysteine levels stabilisation`;
+- `Detoxification`;
+- `Energy production`;
+- `Immunity`;
+- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Nutrient absorption and transportation`;
+- `Positive attitude`;
+- `Red blood cells formation`;
+- `Senses`;
+- `Sleep`.
 
 ## Important relationships
 - B vitamins;

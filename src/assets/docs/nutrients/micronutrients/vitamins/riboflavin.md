@@ -2,12 +2,12 @@
 Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Antioxidant protection__;
-- __Carbohydrate and fat metabolism__;
-- __Detoxification__;
-- __Energy production__;
-- __Respiration__;
-- __Red blood cells formation__.
+- `Antioxidant protection`;
+- `Carbohydrate and fat metabolism`;
+- `Detoxification`;
+- `Energy production`;
+- `Respiration`;
+- `Red blood cells formation`.
 
 ## Important relationships
 - B vitamins;

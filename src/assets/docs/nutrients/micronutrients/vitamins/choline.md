@@ -2,16 +2,16 @@
 Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is related to the B Vitamins, but not considered yet one of them.
 
 ## Health support
-- __Blood cholesterol levels stabilisation__;
-- __Blood homocysteine levels stabilisation__;
-- __Brain development__;
-- __Detoxification__;
-- __Fat metabolism__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Muscle movements and strength__;
-- __Positive attitude__;
-- __Pregnancy support__;
-- __Senses__;
+- `Blood cholesterol levels stabilisation`;
+- `Blood homocysteine levels stabilisation`;
+- `Brain development`;
+- `Detoxification`;
+- `Fat metabolism`;
+- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Muscle movements and strength`;
+- `Positive attitude`;
+- `Pregnancy support`;
+- `Senses`;
 
 ## Important relationships
 - Vitamin B3 (Niacin), B6 (Pyridoxine), B9 (Folate), and B12 (Cobalamin) - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).

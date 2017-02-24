@@ -2,11 +2,11 @@
 Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Amino acids and fat metabolism__;
-- __Blood sugar levels stabilisation__;
-- __Energy production__;
-- __Hormone formation__;
-- __Skin health__;
+- `Amino acids and fat metabolism`;
+- `Blood sugar levels stabilisation`;
+- `Energy production`;
+- `Hormone formation`;
+- `Skin health`;
 
 ## Important relationships
 - B vitamins.

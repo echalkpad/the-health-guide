@@ -2,12 +2,12 @@
 Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
-- __Antioxidant protection__;
-- __Blood cholesterol levels stabilisation__;
-- __Muscle health__;
-- __Red blood cells formation__;
-- __Vision__;
-- __Vitamin K metabolism__.
+- `Antioxidant protection`;
+- `Blood cholesterol levels stabilisation`;
+- `Muscle health`;
+- `Red blood cells formation`;
+- `Vision`;
+- `Vitamin K metabolism`.
 
 ## Important relationships
 - Vitamin K - Blood clotting;

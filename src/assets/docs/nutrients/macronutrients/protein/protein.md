@@ -5,15 +5,15 @@ Proteins are also groups of amino acids structured together to perform specific 
 There are 20 amino acids, from which only 11 can be formed by the body on its own (Non-essential amino acids); the rest must be provided through nutrition (`Essential amino acids`).
 
 ## Essential amino acids
-- __Histidine__;
-- __Isoleucine__;
-- __Leucine__;
-- __Lysine__;
-- __Methionine__;
-- __Phenylalanine__;
-- __Threonine__;
-- __Tryptophan__;
-- __Valine__.
+- `Histidine`;
+- `Isoleucine`;
+- `Leucine`;
+- `Lysine`;
+- `Methionine`;
+- `Phenylalanine`;
+- `Threonine`;
+- `Tryptophan`;
+- `Valine`.
 
 ### Non-essential amino acids
 - Alanine

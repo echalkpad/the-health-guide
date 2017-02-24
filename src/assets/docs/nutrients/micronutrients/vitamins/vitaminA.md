@@ -2,16 +2,16 @@
 Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
-- __Antioxidant protection__;
-- __Detoxification__;
-- __Eye health__;
-- __Fertility__;
-- __Growth__;
-- __Immunity__;
-- __Organ protection (Membrane and mucus formation)__;
-- __Pregnancy support__;
-- __Skin health__;
-- __Tooth health__.
+- `Antioxidant protection`;
+- `Detoxification`;
+- `Eye health`;
+- `Fertility`;
+- `Growth`;
+- `Immunity`;
+- `Organ protection (Membrane and mucus formation)`;
+- `Pregnancy support`;
+- `Skin health`;
+- `Tooth health`.
 
 ## Important relationships
 - Vitamin B3 (Niacin) - Organ protection (Membrane and mucus formation).

@@ -2,12 +2,12 @@
 Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
-- __Energy production__;
-- __Fat metabolism__;
-- __Hormone formation__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Muscle movements and strength__;
-- __Senses__.
+- `Energy production`;
+- `Fat metabolism`;
+- `Hormone formation`;
+- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Muscle movements and strength`;
+- `Senses`.
 
 ## Important relationships
 - B vitamins.

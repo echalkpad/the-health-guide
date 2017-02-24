@@ -2,17 +2,17 @@
 Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Health support
-- __Antioxidant protection__;
-- __Blood cholesterol levels stabilisation__;
-- __Bone development__;
-- __Detoxification__;
-- __Eye health__;
-- __Hormone formation__;
-- __Iron metabolism (Red blood cells formation)__;
-- __Positive attitude__;
-- __Skin health__;
-- __Sleep__;
-- __Tooth health__.
+- `Antioxidant protection`;
+- `Blood cholesterol levels stabilisation`;
+- `Bone development`;
+- `Detoxification`;
+- `Eye health`;
+- `Hormone formation`;
+- `Iron metabolism (Red blood cells formation)`;
+- `Positive attitude`;
+- `Skin health`;
+- `Sleep`;
+- `Tooth health`.
 
 ## Important relationships
 - Vitamin E - Antioxidant protection;

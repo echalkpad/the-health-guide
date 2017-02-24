@@ -2,12 +2,12 @@
 Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
 ## Health support
-- __Bone health__;
-- __Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism__;
-- __Growth__;
-- __Immunity__;
-- __Pregnancy support__;
-- __Teeth health__.
+- `Bone health`;
+- `Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism`;
+- `Growth`;
+- `Immunity`;
+- `Pregnancy support`;
+- `Teeth health`.
 
 ## Important relationships
 - Calcium and Phosphorus - Bone development.

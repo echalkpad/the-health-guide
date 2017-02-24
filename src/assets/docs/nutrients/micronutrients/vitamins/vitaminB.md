@@ -2,36 +2,36 @@
 Vitamin B-complex is a family of eight essential water-soluble vitamins. They are all involved in the metabolism of Amino acids, Carbohydrates, and Fats, to provide the necessary energy for all body functions to be maintained, and in the majority of body functions. Hence, Vitamin B-complex are critical for health.
 
 ## B vitamins
-- __Thiamine (B1)__;
-- __Riboflavin (B2)__;
-- __Niacin (B3)__;
-- __Pantothenic acid (B5)__;
-- __Pyridoxine (B6)__;
-- __Biotin (B7)__;
-- __Folate (B9)__;
-- __Cobalamin (B12)__.
+- `Thiamine (B1)`;
+- `Riboflavin (B2)`;
+- `Niacin (B3)`;
+- `Pantothenic acid (B5)`;
+- `Pyridoxine (B6)`;
+- `Biotin (B7)`;
+- `Folate (B9)`;
+- `Cobalamin (B12)`.
 
 ## Health support
-- __Antioxidant protection__;
-- __Blood cholesterol levels stabilisation__;
-- __Blood homocysteine levels stabilisation__;
-- __Blood sugar levels stabilisation__;
-- __Detoxification__;
-- __Digestion__;
-- __DNA formation__;
-- __Energy production__;
-- __Hormone formation__;
-- __Mental functions__: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
-- __Metabolism__;
-- __Muscle movements and strength__;
-- __Nutrient absorption and transportation__;
-- __Positive attitude__;
-- __Pregnancy support__;
-- __Red blood cells formation__;
-- __Respiration__;
-- __Skin health__;
-- __Senses__;
-- __Sleep__.
+- `Antioxidant protection`;
+- `Blood cholesterol levels stabilisation`;
+- `Blood homocysteine levels stabilisation`;
+- `Blood sugar levels stabilisation`;
+- `Detoxification`;
+- `Digestion`;
+- `DNA formation`;
+- `Energy production`;
+- `Hormone formation`;
+- `Mental functions`: Attention, Concentration, Decision making, Learning, Memory capacity, Thinking, Understanding;
+- `Metabolism`;
+- `Muscle movements and strength`;
+- `Nutrient absorption and transportation`;
+- `Positive attitude`;
+- `Pregnancy support`;
+- `Red blood cells formation`;
+- `Respiration`;
+- `Skin health`;
+- `Senses`;
+- `Sleep`.
 
 ## Food sources
 - Yeast;
@@ -84,7 +84,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
     - Smoking;
     - Stress.
 
-- `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails__. They are a family and must always stick together.
+- `B vitamins are connected`, each being part of a the energy production process, like a factory chain, and contribute to the majority of metabolic processes along side with the rest of the essential nutrients. __If only one B vitamin is missing, the entire energy production fails`. They are a family and must always stick together.
 - `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References
