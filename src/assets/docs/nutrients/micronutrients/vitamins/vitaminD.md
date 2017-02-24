@@ -34,8 +34,10 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `require
 - Calcium, Iron, Magnesium, Phosphorus, or Zinc deficiency;
 - Dental problems;
 - Growth impairment in children;
+- Heart palpitations;
+- Irregular heartbeats;
 - Joint pain;
-- Muscle pain;
+- Muscle cramps;
 - Weakness.
 
 ## Watch out's
@@ -65,7 +67,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `require
 - Vitamin-Mineral Info, [_Vitamin D (Calciferol) Benefits and Signs of Deficiency_](http://www.vitamin-mineral-info.com/vitamin-d-calciferol-benefits-signs-of-deficiency.php)
 - National Institute of Health, [_Vitamin D_](https://ods.od.nih.gov/factsheets/VitaminD-HealthProfessional/)
 - University of Maryland Medical Center, Complementary and Alternative Medicine Guide, [_Vitamin D_](http://umm.edu/health/medical/altmed/supplement/vitamin-d)
-- Wikipedia, [_Scurvy_](https://en.wikipedia.org/wiki/Scurvy#Signs_and_symptoms)
 - Wikipedia, [_Rickets_](https://en.wikipedia.org/wiki/Rickets#Signs_and_symptoms)
 - Wikipedia, [_Osteomalacia_](https://en.wikipedia.org/wiki/Osteomalacia#Signs_and_symptoms)
+- Wikipedia, [_Hypocalcaemia_](https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=328&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

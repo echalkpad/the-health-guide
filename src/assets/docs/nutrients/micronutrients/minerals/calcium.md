@@ -1,5 +1,5 @@
-# Calcium
-Calcium is an essential mineral element.
+# Calcium (Ca)
+Calcium (Ca) is an essential mineral element.
 
 ## Health support
 - `Blood pH levels stabilisation`;
@@ -33,8 +33,10 @@ Calcium is an essential mineral element.
 - Dental problems;
 - Growth impairment in children;
 - Heart palpitations;
+- Irregular heartbeats;
 - Insomnia;
 - Irritability;
+- Muscle cramps;
 - Muscle twitching;
 - Nail brittleness;
 - Numbness and tingling.
@@ -51,9 +53,9 @@ Calcium is an essential mineral element.
     - Excess Sodium;
     - Gastrointestinal problems;
     - Non-organic milk;
-    - Oxalic acid (Green vegetables)
+    - Oxalic acid (Green vegetables);
     - Pharmaceutical drugs;
-    - Phytic acid (Whole-grains)
+    - Phytic acid (Whole-grains);
     - Sedentarism;
     - Smoking;
     - Stress.
@@ -73,6 +75,7 @@ Calcium is an essential mineral element.
 
 ## References
 - Wikipedia, [_Calcium_](https://en.wikipedia.org/wiki/Calcium)
+- Wikipedia, [_Hypocalcaemia_](https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms)
 - The world's healthiest foods, [_Calcium_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=45)
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Calcium

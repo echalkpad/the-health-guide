@@ -7,16 +7,18 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - `Bone development`;
 - `Detoxification`;
 - `Eye health`;
+- `Immunity`;
 - `Hormone formation`;
-- `Iron metabolism (Red blood cells formation)`;
 - `Positive attitude`;
+- `Red blood cells formation`;
 - `Skin health`;
 - `Sleep`;
 - `Tooth health`.
 
 ## Important relationships
+- Chromium - Absorption;
 - Vitamin E - Antioxidant protection;
-- Iron - Red blood cells formation.
+- Iron - Absorption and Red blood cells formation.
 
 ## Mechanism of action
 > TO DO
@@ -45,16 +47,17 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - Cauliflower.
 
 ## Deficiency signs
+- Bleeding;
 - Bone pain;
 - Breathing difficulties;
 - Colds;
 - Depression;
 - Fatigue;
-- Gum problems (Bleeding and pain);
+- Gum problems;
 - Indifference;
 - Joint pain;
 - Motivation decrease;
-- Skin problems (Bruising, Roughness, Red spots);
+- Skin problems (Bruising, Roughness, Spots);
 - Tiredness;
 - Wound healing problems (Bleeding).
 
@@ -70,7 +73,9 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
     - Smoking;
     - Stress.
 
-- Excess Vitamin C impairs Copper and Vitamin B12 (Cobalamin) absorption.
+- Excess Vitamin C impairs:
+    - Copper absorption;
+    - Vitamin B12 (Cobalamin).
 - Destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References

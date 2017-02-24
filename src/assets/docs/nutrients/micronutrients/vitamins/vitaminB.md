@@ -48,15 +48,20 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Anxiety;
 - Appetite loss;
 - Balance loss;
+- Blood clotting;
 - Birth problems;
 - Breathing difficulties;
+- Chest pain;
 - Confusion;
 - Depression;
 - Dizziness;
 - Fatigue;
 - Hair loss;
 - Headache;
+- Heart palpitaions;
+- High blood cholesterol levels;
 - High blood pressure;
+- High blood sugar levels;
 - Indifference;
 - Intellectual performance decrease;
 - Irregular heart beat;
@@ -64,11 +69,11 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - Mood swings;
 - Motivation decrease;
 - Nail brittleness;
+- Nausea;
 - Numbness and tingling in hands and feet;
 - Skin problems (Acne, Itching, Inflammation, Oiliness, Rash, Redness, Riddles);
 - Sleep problems;
-- Sleepiness;
-- Tiredness;
+- Sleepiness or Tiredness;
 - Weakness;
 - Walking difficulties.
 

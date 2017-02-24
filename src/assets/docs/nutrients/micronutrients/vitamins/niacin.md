@@ -13,7 +13,7 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 
 ## Important relationships
 - B vitamins;
-- Chromium - Blood sugar levels stabilisation;
+- Chromium - Blood cholesterol and sugar levels stabilisation;
 - Vitamin A - Organ protection (Membrane and mucus formation).
 
 ## Mechanism of action
