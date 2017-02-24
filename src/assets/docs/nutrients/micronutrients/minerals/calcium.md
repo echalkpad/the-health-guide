@@ -42,8 +42,7 @@ Calcium (Ca) is an essential mineral element.
 - Numbness and tingling.
 
 ## Watch out's
-- Calcium `absorption is slow and delicate`:
-	- 50-70% Calcium is absorbed.
+- 50-70% Calcium is absorbed.
 
 - Absorption is `impaired` by:
     - Added sugars;

@@ -4,7 +4,7 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 ## Health support
 - `Antioxidant protection`;
 - `Blood cholesterol levels stabilisation`;
-- `Bone development`;
+- `Bone health`;
 - `Detoxification`;
 - `Eye health`;
 - `Immunity`;

@@ -74,6 +74,9 @@ Iron (Fe) is an essential trace element
 	- Vitamin B12 (Cobalamin);
 	- Vitamin C.
 
+- Excess Iron `impairs`:
+	- Zinc absorption.
+
 ## References
 - Wikipedia, [_Iron_](https://en.wikipedia.org/wiki/Iron)
 - The world's healthiest foods, [_Iron_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=70)

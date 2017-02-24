@@ -36,7 +36,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
 - Constipation;
 - Dizziness;
 - High blood pressure;
-- Muscle problems (Cramps, Mass decrease, Numbness, Stiffness, Tingling, Twitching, Weakness)
+- Muscle problems (Cramps, Mass decrease, Numbness, Stiffness, Tingling, Twitching, Weakness);
 - Vision problems;
 - Walking difficulties;
 - Weakness.
