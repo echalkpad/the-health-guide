@@ -67,6 +67,7 @@ Iron (Fe) is an essential trace element
 	- Copper;
 	- 'Heme' foods (Meat);
 	- Manganese;
+	- Molybdenum;
 	- Protein;
 	- Vitamin B2 (Riboflavin);
 	- Vitamin B6 (Pyridoxine);

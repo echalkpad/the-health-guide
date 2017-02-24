@@ -42,6 +42,9 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
     - Stress;
     - Tannins.
 
+- Absorption `requires`:
+    - Manganese.
+
 - `B vitamins are sensitive` and are destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References

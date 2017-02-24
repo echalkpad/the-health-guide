@@ -68,8 +68,10 @@ Copper (Cu) is an essential trace element.
     - Alcohol;
     - Caffeine;
 	- Excess Iron;
+    - Excess Manganese;
 	- Excess Zinc;
     - Gastrointestinal problems;
+    - Molybdenum;
     - Pharmaceutical drugs;
     - Sedentarism;
     - Smoking;

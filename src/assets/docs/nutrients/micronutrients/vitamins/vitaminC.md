@@ -73,9 +73,13 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
     - Smoking;
     - Stress.
 
+- Absorption `requires`:
+    - Manganese.
+
 - Excess Vitamin C impairs:
     - Copper absorption;
     - Vitamin B12 (Cobalamin).
+
 - Destroyed by long cooking (e.g boiling) and at high temperatures.
 
 ## References

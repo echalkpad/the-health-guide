@@ -5,7 +5,6 @@ Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be a
 - `Antioxidant protection`;
 - `Detoxification`;
 - `Eye health`;
-- `Fertility`;
 - `Growth`;
 - `Immunity`;
 - `Organ protection (Membrane and mucus formation)`;
@@ -45,7 +44,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be a
 - Eye problems (Inflammation, Redness, Sensitivity, Vision problems);
 - Growth impairment in children;
 - Infections;
-- Skin problems (Acne, Inflammation, Dryness, Riddles).
+- Skin problems (Acne, Inflammation, Dryness, Riddles)
 
 ## Watch out's
 - Absorption is `impaired` by:

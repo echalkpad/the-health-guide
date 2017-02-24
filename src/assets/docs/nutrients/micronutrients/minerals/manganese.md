@@ -1,43 +1,72 @@
-# Manganese
-Manganese (Mn) is an essential trace element. Its main function is as coenzyme and bone development.
+# Manganese (Mn)
+Manganese (Mn) is an essential trace element.
 
 ## Health support
+- `Antioxidant protection`;
+- `Blood sugar levels stabilisation`.
+- `Bone health`;
+- `Growth`;
+- `Hormone formation`;
+- `Metabolism`.
 
 ## Important relationships
+- Biotin (Vitamin B7), Thiamine (Vitamin B1), Vitamin C, Choline, Iron - Absorption.
 
 ## Daily requirements
+- Men: 2.3mg/day;
+- Women: 1.8mg/day;
+- Pregnancy: 2mg/day;
+- Lactation: 2.6mg/day.
 
 ## Food sources
+- Whole-grains;
+- Herbs and spices;
+- Nuts;
+- Seeds;
+- Legumes.
 
 ## Deficiency signs
+- Dizziness;
+- Growth impairment in children;
+- Hearing loss;
+- High blood sugar levels;
+- Infertility;
+- Muscle twitching;
+- Nausea;
+- Numbness;
+- Skin rash;
+- Weakness.
 
 ## Watch out's
+- 15-30% Manganese is absorbed.
 
-## Functions
-	• Bone Production
-	• Skin integrity
-	• Blood Sugar Control
-Protection Against Free Radical Damage
-abnormal rate of development and growth, high blood sugar, ataxia, glandular disorders, muscular in coordination, poor growth, convulsion, loss of hearing, dizziness and paralysis.
-Antioxidant, assists with managing blood glucose levels, helps to lower triglycerides, strengthens arterial tissues, and stabilizes LDL’s.
-maintain sex hormone, protein, fat and carbohydrate productions. Formation of blood cells, activates numerous enzymes, bones and tissue growth, synthesis of fatty acids and cholesterol.
+- Absorption is `impaired` by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+	- Calcium;
+	- Cobalt;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+	- Phosphorus;
+    - Sedentarism;
+    - Smoking;
+	- Soy;
+    - Stress;
+	- Zinc.
 
-## Deficiency
-impotence, anemia, digestive disorders and tooth decay
+- Absorption `requires`;	
+	- Protein.
 
-## Food sources
- leafy green vegetables, fruits, nuts, cinnamon and whole grains
- 	Grains, legumes, seeds, nuts, leafy vegetables, tea, coffee
+- Excess Manganese `impairs`:
+    - Copper absorption.
 
 ## References
-- Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
-- Wikipedia, [Manganese](https://en.wikipedia.org/wiki/Manganese)
-- The world's healthiest foods, [Manganese](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
+- Wikipedia, [_Manganese_](https://en.wikipedia.org/wiki/Manganese)
+- Wikipedia [_Manganese deficiency (medicine)_](https://en.wikipedia.org/wiki/Manganese_deficiency_(medicine))
+- The world's healthiest foods, [_Manganese_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Manganese
-
-- Elson Haas M. MD, Healthy.net, [__]()
-
-
-
-- [USDA Branded Food Products Database]()
+- Elson Haas M. MD, Healthy.net, [_Minerals: Manganese_](http://www.healthy.net/Health/Article/Manganese/2072/1)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=315&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
