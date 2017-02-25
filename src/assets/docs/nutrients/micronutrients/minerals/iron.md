@@ -60,7 +60,8 @@ Iron (Fe) is an essential trace element
     - Smoking;
 	- Soy;
     - Stress;
-	- Vitamin E.
+	- Vitamin E;
+	- Zinc.
 
 - Absorption `requires`;
 	- Acid medium;

@@ -49,7 +49,8 @@ Phosphorus (P) is an essential mimeral element
     - Pharmaceutical drugs;
     - Sedentarism;
     - Smoking;
-    - Stress.
+    - Stress;
+    - Zinc.
 
 - Absorption `requires`;
 	- Vitamin D.

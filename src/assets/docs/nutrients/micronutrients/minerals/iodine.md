@@ -34,7 +34,9 @@ Iodine (I) is an essential trace element.
 - Heart alpitations;
 - High blood pressure;
 - Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
+- Limb swelling;
 - Nervousness;
+- Numbness and tingling;
 - Slow heartbeats;
 - Weight gain.
 

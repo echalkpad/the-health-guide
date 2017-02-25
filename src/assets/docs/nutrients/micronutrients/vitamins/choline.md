@@ -15,7 +15,7 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 
 ## Important relationships
 - Vitamin B3 (Niacin), B6 (Pyridoxine), B9 (Folate), and B12 (Cobalamin) - Blood cholesterol and homocysteine levels stabilisation (Cardiovascular health).
-- Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
+- Chloride and Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
 
 ## Mechanism of action
 > TO DO

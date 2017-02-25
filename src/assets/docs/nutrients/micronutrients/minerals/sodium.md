@@ -1,22 +1,43 @@
-# Sodium
-Sodium (N) is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
+# Sodium (N)
+Sodium (N) is an essential mineral element.
 
 ## Health support
+- `Blood pH levels stabilisation`;
+- `Fluid levels stabilisation`;
+- `Mental functions`: Attention, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Speaking, Thinking, Understanding;
+- `Muscle health`.
 
 ## Important relationships
+- Chloride - Mental functions, Muscle health, Blood pH and fluid levels stabilisation.
 
 ## Daily requirements
-- Men: 420mg/day;
-- Women: 320mg/day;
-- Pregnancy: 350mg/day;
-- Lactation: 310mg/day.
+- Men: 1500mg/day;
+- Women: 1500mg/day;
+- Pregnancy: 1500mg/day;
+- Lactation: 1500mg/day.
 
 ## Food sources
+- Tables salt;
+- Seafood;
+- Meat.
 
 ## Deficiency signs
+- Concentration difficulties;
+- Dizziness;
+- Excess thirst;
+- Insomnia;
+- Irritability;
+- Low blood pressure;
+- Memory problems;
+- Muscle cramps;
+- Nausea;
+- Sleepiness;
+- Swelling;
+- Weakness;
+- Weight loss.
 
 ## Watch out's
-- 50% Magnesium is absorbed.
+- 98% Sodium is absorbed.
 
 - Absorption is `impaired` by:
     - Added sugars;
@@ -25,33 +46,22 @@ Sodium (N) is an essential mineral element. Its main function is to maintain ext
     - Caffeine;
     - Gastrointestinal problems;
     - Pharmaceutical drugs;
+    - Potassium;
     - Sedentarism;
     - Smoking;
     - Stress.
 
-- Absorption `requires`;
+- Absorption `requires`:
+    - Chloride.
 
-## Functions
-unctioning of muscles and nerves.
-	• Nutrient absorption and transport
-	• Maintenance of membrane potential
-Maintenance of blood volume and blood pressure
-water balance, osmotic pressure, blood and lymph health, nerves, muscle contractions, and acid/alkaline balance.
-
-## Deficiency
-weight loss, alkalosis, nausea, muscle cramps, excess thirst, edema high blood pressure insomnia and irritability. 
-
-## Food sources
-table salt.
+- Excess Sodium causes:
+    - Blood vessel damage (High blood pressure);
+    - Fluid retention;
+    - Potassium absorption impairment.
 
 ## References
-- Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
-- Wikipedia, [Sodium](https://en.wikipedia.org/wiki/Sodium)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
+- Wikipedia, [_Sodium_](https://en.wikipedia.org/wiki/Sodium)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Sodium
-
-- Elson Haas M. MD, Healthy.net, [__]()
-
-
-
-- [USDA Branded Food Products Database]()
+- Elson Haas M. MD, Healthy.net, [_Minerals: Sodium_](http://www.healthy.net/scr/Article.aspx?Id=2069)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=307&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

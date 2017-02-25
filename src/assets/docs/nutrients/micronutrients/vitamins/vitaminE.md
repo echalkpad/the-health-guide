@@ -47,6 +47,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
     - Age;
     - Alcohol;
     - Caffeine;
+    - Chloride (Table salt);
     - Excess Iron;
     - Gastrointestinal problems;
     - Pharmaceutical drugs;

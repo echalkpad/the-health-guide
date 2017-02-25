@@ -60,7 +60,8 @@ Calcium (Ca) is an essential mineral element.
     - Phytic acid (Whole-grains);
     - Sedentarism;
     - Smoking;
-    - Stress.
+    - Stress;
+    - Zinc.
 
 - Absorption `requires`:
     - Acid medium;

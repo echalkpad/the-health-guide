@@ -75,7 +75,8 @@ Copper (Cu) is an essential trace element.
     - Pharmaceutical drugs;
     - Sedentarism;
     - Smoking;
-    - Stress.
+    - Stress;
+    - Zinc.
 
 ## References
 - Wikipedia, [_Copper_](https://en.wikipedia.org/wiki/Copper)

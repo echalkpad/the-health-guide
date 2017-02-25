@@ -1,22 +1,43 @@
-# Chloride
-Chloride (Cl) or Chloride is an essential mineral element. Its main function is to maintain extracellular fluid volume and plasma osmolality.
+# Chloride (Cl)
+Chloride (Cl) or Chlorine is an essential mineral element.
 
 ## Health support
+- `Blood pH levels stabilisation`;
+- `Digestion`;
+- `Fluid levels stabilisation`;
+- `Hormone formation`;
+- `Mental functions`: Attention, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Speaking, Thinking, Understanding;
+- `Muscle health`.
 
 ## Important relationships
+- Sodium - Mental functions, Muscle health, Blood pH and fluid levels stabilisation;
+- Choline and Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
 
 ## Daily requirements
-- Men: 420mg/day;
-- Women: 320mg/day;
-- Pregnancy: 350mg/day;
-- Lactation: 310mg/day.
+- Men: 2300mg/day;
+- Women: 2300mg/day;
+- Pregnancy: 2300mg/day;
+- Lactation: 2300mg/day.
 
 ## Food sources
+- Table salt.
 
 ## Deficiency signs
+- Appetite loss;
+- Concentration difficulties;
+- Digestion problems (Diarrhea, Nausea, Vomiting);
+- Insomnia;
+- Irritability;
+- Memory problems;
+- Muscle cramps;
+- Potassium loss;
+- Sleepiness;
+- Sweating;
+- Weakness;
+- Weight loss.
 
 ## Watch out's
-- 50% Magnesium is absorbed.
+- 98% Chloride is absorbed.
 
 - Absorption is `impaired` by:
     - Added sugars;
@@ -25,42 +46,20 @@ Chloride (Cl) or Chloride is an essential mineral element. Its main function is 
     - Caffeine;
     - Gastrointestinal problems;
     - Pharmaceutical drugs;
+    - Potassium;
     - Sedentarism;
     - Smoking;
     - Stress.
 
 - Absorption `requires`;
+    - Sodium.
 
-## Absorption
-95% is accumulated in extracellular fluid.
-98% of chlorine is absorbed.
-Chlorine absorption `requires`: sodium.
-Chlorine absorption is `impaired` by: potassium, excessive perspiration, vitamin C.
-
-## Functions
-acid-base balance, stomach acid formation, and body water balance.
-transmission of nerve impulses at synapses and myoneural junctions.
-hormone and lecithin production
-fluid pressure in cell membranes, liver detoxification, joints and tendons in tone..
-
-## Deficiency
-hair and tooth loss, poor muscle contractions and `impaired` digestion
-
-
-## Food sources
-table salt.
-
-## Average recommended intake
-- 3400mg/day;
+- Excess Chloride causes:
+    - Fluid retention;
+    - Vitamin E absorption impairment.
 
 ## References
-- Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
-- Wikipedia, [Chlorine](https://en.wikipedia.org/wiki/Chlorine)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
+- Wikipedia, [_Chlorine_](https://en.wikipedia.org/wiki/Chlorine)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Chlorine
-
-- Elson Haas M. MD, Healthy.net, [__]()
-
-
-
-- [USDA Branded Food Products Database]()
+- Elson Haas M. MD, Healthy.net, [_Minerals: Chloride_](http://www.healthy.net/Health/Article/Chloride/2050)

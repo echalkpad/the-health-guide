@@ -17,7 +17,7 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 
 ## Important relationships
 - Chromium - Absorption;
-- Vitamin E - Antioxidant protection;
+- Vitamin A, Vitamin E, Selenium, and Zinc - Antioxidant protection.
 - Iron - Absorption and Red blood cells formation.
 
 ## Mechanism of action
@@ -47,7 +47,6 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 - Cauliflower.
 
 ## Deficiency signs
-- Bleeding;
 - Bone pain;
 - Breathing difficulties;
 - Colds;

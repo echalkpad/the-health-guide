@@ -14,7 +14,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be a
 
 ## Important relationships
 - Vitamin B3 (Niacin) - Organ protection (Membrane and mucus formation).
-- Vitamin E and Zinc - Antioxidant protection.
+- Vitamin C, Vitamin E, Selenium, and Zinc - Antioxidant protection.
 
 ## Mechanism of action
 > TO DO

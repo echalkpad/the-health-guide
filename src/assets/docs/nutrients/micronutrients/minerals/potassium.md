@@ -55,7 +55,7 @@ Potassium (K) is an essential mineral element.
     - Pharmaceutical drugs;
     - Sedentarism;
     - Smoking;
-	- Sodium;
+	- Sodium (Table salt);
     - Stress.
 
 - Absorption `requires`:

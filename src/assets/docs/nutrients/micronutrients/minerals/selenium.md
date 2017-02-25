@@ -3,14 +3,16 @@ Selenium (Se) is an essential trace element.
 
 ## Health support
 - `Antioxidant protection`;
+- `Fertility`;
 - `Growth`;
 - `Immunity`;
 - `Metabolism`;
+- `Pregnancy support`;
 - `Thyroid hormone formation`.
 
 ## Important relationships
 - Iodine - Thyroid hormone formation.
-- Vitamin E - Antioxidant protection.
+- Vitamin A, Vitamin C, and Zinc - Antioxidant protection.
 
 ## Daily requirements
 - Men: 0.055mg/day;
@@ -19,11 +21,35 @@ Selenium (Se) is an essential trace element.
 - Lactation: 0.07mg/day.
 
 ## Food sources
+- Nuts;
+- Eggs;
+- Kidneys;
+- Liver;
+- Tuna;
+- Whole-wheat;
+- Sunflower seeds.
 
 ## Deficiency signs
+- Appetite loss;
+- Breathing difficulties;
+- Cold hands and feet;
+- Constipation;
+- Dry skin;
+- Fatigue;
+- Growth impairment in children;
+- Heart alpitations;
+- High blood pressure;
+- Infertility;
+- Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
+- Limb swelling;
+- Nervousness;
+- Numbness and tingling;
+- Pregnancy loss;
+- Slow heartbeats;
+- Weight gain.
 
 ## Watch out's
-- % Selenium is absorbed.
+- 60% Selenium is absorbed.
 
 - Absorption is `impaired` by:
     - Added sugars;
@@ -34,13 +60,12 @@ Selenium (Se) is an essential trace element.
     - Pharmaceutical drugs;
     - Sedentarism;
     - Smoking;
-    - Stress.
+    - Stress;
+    - Vitamin C.
 
-- Absorption `requires`;
-
-
-## Deficiency
-cardiomyopathy, myocardial death, premature aging, infertility, insomnia, arteriosclerosis.
+- Absorption `requires`:
+    - Iodine;
+    - Vitamin E.
 
 ## References
 - Wikipedia, [_Selenium_](https://en.wikipedia.org/wiki/Selenium)
