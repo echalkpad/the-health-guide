@@ -6,12 +6,30 @@ Chloride (Cl) or Chloride is an essential mineral element. Its main function is 
 ## Important relationships
 
 ## Daily requirements
+- Men: 420mg/day;
+- Women: 320mg/day;
+- Pregnancy: 350mg/day;
+- Lactation: 310mg/day.
 
 ## Food sources
 
 ## Deficiency signs
 
 ## Watch out's
+- 50% Magnesium is absorbed.
+
+- Absorption is `impaired` by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Absorption `requires`;
 
 ## Absorption
 95% is accumulated in extracellular fluid.

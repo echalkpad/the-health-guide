@@ -7,7 +7,7 @@ Iodine (I) is an essential trace element.
 - `Growth`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Metabolism`;
-- `Thyroid hormone formation`;
+- `Thyroid hormone formation`.
 
 ## Important relationships
 - Selenium - Thyroid hormone formation.

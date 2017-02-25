@@ -1,48 +1,76 @@
-# Potassium
-Potassium (K) is an essential mineral element. Its main function is as intracellular cation.
+# Potassium (K)
+Potassium (K) is an essential mineral element.
 
 ## Health support
+- `Blood pH levels stabilisation`;
+- `Blood sugar levels stabilisation`.
+- `Blood vessel health`;
+- `Digestion`;
+- `Growth`;
+- `Hormone formation`;
+- `Metabolism`;
+- `Muscle health`;
+- `Recovery`.
 
 ## Important relationships
+- Magnesium - Blood pH levels stabilisation, Blood vessel health, Metabolism, Recovery.
 
 ## Daily requirements
+- Men: 4700mg/day;
+- Women: 4700mg/day;
+- Pregnancy: 4700mg/day;
+- Lactation: 5100mg/day.
 
 ## Food sources
+- Herbs and spices;
+- Peppers;
+- Cacao;
+- Beans;
+- Seeds;
+- Nuts;
+- Bananas;
+- Dried fruits.
 
 ## Deficiency signs
+- Bloating;
+- Breathing difficulties;
+- Constipation;
+- Gas;
+- High blood pressure;
+- Insomnia;
+- Irregular heartbeats;
+- Muscle problems (Cramps, Numbness, Tingling, Twitching, Weakness);
+- Nausea;
+- Vomiting.
 
 ## Watch out's
+- 85% Potassium is absorbed.
+- Destroyed by processing;
+- Absorption is `impaired` by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+	- Sodium;
+    - Stress.
 
-## Functions
-muscle and nerve function, and also is a major component of intracellular fluid.
-	• Hormone secretion and action
-	• Vascular tone
-	• Maintaining Normal Blood Pressure
-	• Gastrointestinal motility
-	• Acid–base homeostasis
-	• Glucose and insulin metabolism
-	• Mineralocorticoid action
-	• Kidney Health
-Fluid and electrolyte balance
-electrolyte responsible for aced/base balance. Promotes regular heartbeat, normal muscle contraction, regulates water balance, essential for proper muscle function, helps regulate water/fluid balance, stimulates kidney to remove body waste, cell metabolism, heart rhythm, growth, protein and glucose absorption.
+- Absorption `requires`:
+	- Magnesium.
 
-## Deficiency
-hypokalemia, vomiting, perspiration, severe cardiac problems, nervous disorders, insomnia, and general weakness.
-
-## Food sources
-- leafy greens;
-- vine fruits;
-- root vegetables.
+- Excess Potassium `impairs`:
+	- Chloride absorption;
+	- Sodium absorption.
 
 ## References
-- Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
-- Wikipedia, [Potassium](https://en.wikipedia.org/wiki/Potassium)
-- The world's healthiest foods, [Potassium](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=90)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
+- Wikipedia, [_Potassium_](https://en.wikipedia.org/wiki/Potassium)
+- Wikipedia, [_Ileus_](https://en.wikipedia.org/wiki/Ileus#Signs_and_symptoms)
+- Wikipedia, [_Hypokelamia_](https://en.wikipedia.org/wiki/Hypokalemia#Signs_and_symptoms)
+- The world's healthiest foods, [_Potassium_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=90)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Potassium
-
-- Elson Haas M. MD, Healthy.net, [__]()
-
-
-
-- [USDA Branded Food Products Database]()
+- Elson Haas M. MD, Healthy.net, [_Minerals: Potassium_](http://www.healthy.net/Health/Article/Potassium/2063)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=306&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

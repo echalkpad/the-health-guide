@@ -8,11 +8,10 @@ Magnesium (Mg) is an essential mineral element.
 - `Growth`;
 - `Metabolism`;
 - `Muscle health`;
-- `Positive attitude`;
-- `Relaxation`.
+- `Recovery`.
 
 ## Important relationships
-- Potassium - Blood pH levels stabilisation, Blood vessel health, Metabolism, Relaxation.
+- Potassium - Blood pH levels stabilisation, Blood vessel health, Metabolism, Recovery.
 
 ## Daily requirements
 - Men: 420mg/day;

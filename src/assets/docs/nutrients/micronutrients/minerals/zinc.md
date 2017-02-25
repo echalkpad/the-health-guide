@@ -7,12 +7,30 @@ Zinc (Zn) is an essential trace element. Its main function is in growth and deve
 ## Important relationships
 
 ## Daily requirements
+- Men: 420mg/day;
+- Women: 320mg/day;
+- Pregnancy: 350mg/day;
+- Lactation: 310mg/day.
 
 ## Food sources
 
 ## Deficiency signs
 
 ## Watch out's
+- 50% Magnesium is absorbed.
+
+- Absorption is `impaired` by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+    - Caffeine;
+    - Gastrointestinal problems;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
+
+- Absorption `requires`;
 
 ## Functions
 85% is accumulated in skeleton and muscles

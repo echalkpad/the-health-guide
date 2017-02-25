@@ -1,46 +1,69 @@
-# Phosphorus
-Phosphorus (P) is an essential mimeral element. Its main function is to maintain normal pH levels and as component in bones.
+# Phosphorus (P)
+Phosphorus (P) is an essential mimeral element
 
 ## Health support
+- `Blood pH levels stabilisation`;
+- `Bone health`;
+- `Energy production`;
+- `Growth`;
+- `Metabolism`;
+- `Muscle movements and strength`;
+- `Teeth health`.
 
 ## Important relationships
+- Vitamin B-complex - Energy procution, Growth, and Metabolism;
 
 ## Daily requirements
+- Men: 700mg/day;
+- Women: 700mg/day;
+- Pregnancy: 700mg/day;
+- Lactation: 700mg/day.
 
 ## Food sources
+- Human milk;
+- Dairy;
+- Meat;
+- Whole-grains.
 
 ## Deficiency signs
+- Bone problems (Deformities, Fractures, Pain, Tenderness);
+- Confusion;
+- Dental problems;
+- Growth impairment in children;
+- Muscle problems (Numbness, Tingling, Twitching, Weakness);
+- Weakness.
 
 ## Watch out's
+- 55-70% Phosphorus is absorbed.
 
-## Functions
-components of bones, teeth, phospholipids, ATP, and nucleic acids.
-	• Enable Basic Cell Function
-	• Energy Production
-	• Macronutrient metabolism
-Regulation of acid-base homeostasis
- building of bones and teeth, repair of cells, growth maintenance, teeth and bones, skeletal growth, carbohydrates, kidney functioning, fat, protein metabolism, muscle contractions and nerve activity.
+- Absorption is `impaired` by:
+    - Added sugars;
+    - Age;
+    - Alcohol;
+	- Aluminium;
+    - Caffeine;
+	- Calcium;
+    - Gastrointestinal problems;
+	- Iron;
+	- Magnesium;
+    - Pharmaceutical drugs;
+    - Sedentarism;
+    - Smoking;
+    - Stress.
 
-## Deficiency
-Anorexia •Anemia •Muscle weakness •Bone pain •Rickets (in children) and osteomalacia (in adults) •General debility
-Increased susceptibility to infection •Paresthesias •Ataxia • Confusion •Possible death
-- bone diseases and weakness, gum and tooth diseases, nervous disorders, under or overweight, stunted growth, and irregular bleeding. 
-
-## Food sources
-- human milk;
-- dairy;
-- meat;
-- whole-grains.
+- Absorption `requires`;
+	- Vitamin D.
+	
+- Excess Phosphorus impairs;
+	- Calcium absorption.
 
 ## References
-- Wikipedia, [Mineral (nutrient)](https://en.wikipedia.org/wiki/Mineral_(nutrient))
-- Wikipedia, [Phosphorus](https://en.wikipedia.org/wiki/Phosphorus)
-- The world's healthiest foods, [Phosphorus](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=127)
-- WikiBooks, ["Human physiology"](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
+- Wikipedia, [_Phosphorus_](https://en.wikipedia.org/wiki/Phosphorus)
+- Wikipedia, [_Hypophosphetamia_](https://en.wikipedia.org/wiki/Hypophosphatemia#Signs_and_symptoms)
+- Wikipedia, [_Rickets_](https://en.wikipedia.org/wiki/Rickets#Signs_and_symptoms)
+- Wikipedia, [_Osteomalacia_](https://en.wikipedia.org/wiki/Osteomalacia#Signs_and_symptoms)
+- The world's healthiest foods, [_Phosphorus_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=127)
+- WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Phosphorus
-
-- Elson Haas M. MD, Healthy.net, [__]()
-
-
-
-- [USDA Branded Food Products Database]()
+- Elson Haas M. MD, Healthy.net, [_Minerals: Phosphorus_](http://www.healthy.net/scr/Article.aspx?Id=2061)
+- [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=305&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

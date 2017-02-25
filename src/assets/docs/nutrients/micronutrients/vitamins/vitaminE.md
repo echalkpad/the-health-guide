@@ -11,7 +11,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
 
 ## Important relationships
 - Vitamin K - Blood clotting;
-- Vitamin A, Vitamin C, and Zinc - Antioxidant protection.
+- Vitamin A, Vitamin C, Selenium, and Zinc - Antioxidant protection.
 
 ## Mechanism of action
 > TO DO
