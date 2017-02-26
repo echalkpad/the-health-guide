@@ -1,7 +1,7 @@
 # Simple carbohydrates (Sugars)
 Simple carbohydrates or, simply, Sugars have only one and two sugar units. 
 
-> `Sugars are all the organic compounds with "-ose" at the end`.
+> __Sugars are all the organic compounds with "-ose" at the end__.
 
 ## Monosaccharides
 - `Glucose` - Main cell energy fuel; the absorbed form of carbohydrates in the blood after digestion;

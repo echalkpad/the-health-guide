@@ -26,7 +26,7 @@ As you may guess, the rest of the essential nutrients, Vitamins and Mineral, are
 - `Vitamins`;
 - `Minerals`.
 
-The summation of all body processes, also known as `Chemical transformations`, that help our body function properly and evolve - __Healthy__ - is called `Metabolism`.
+The summation of all body processes - `Chemical transformations` - that help our body function properly and evolve is called `Metabolism`.
 
 Like everything in life, __Moderation is key to perfection__. Thus, although nutrients bring benefits to our body, they can also damage it if they are offered in large amounts. 
 Our body is smart and has its own ways to maintain equilibrium, also known as `Homeostasis`. Yet, when the damage is too much at once or for too long time, the body fails to restore homeostasis. As a result, _Disease_ occurs and, in critical cases, _Death_.
