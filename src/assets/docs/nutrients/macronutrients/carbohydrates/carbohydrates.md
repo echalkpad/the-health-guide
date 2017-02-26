@@ -1,82 +1,41 @@
 # Carbohydrates
 
-Carbohydrates are the primary and most common source of energy in the human body. This is because glucose (read next) is the energy supply of all cells in the body. However, glucose can be be obtained only by carbohydrate break-fdown, but also from 
-protein and fat synthesis. Thus, carbohydratesa are not essential nutrients for the human body. The cells with the most glucose requirements are those in the central nervous system (e.g. _neurons_) and those that require aerobic glycolysis (e.g. _red blood cells_).
+Carbohydrates or, simply, Carbs are the primary energy source for our body, because they provide the fuel - `Glucose` - needed by our cells to accomplish their functions. Yet, our body can obtain glucose by conversion from amino acids and fats, hence, carbohydrates are not essential nutrients. The problem is, if amino acids and fats are used for fuel, then there will be none left for the rest of the important body processes.
 
-From the chemical point of view, carbohydrates are organic compounds made made of sugar units (saccharides). According to these branches, there are two types of carbohydrates, each of wich are classified in two groups: simple carbohydrates (sugars) and complex carbohydrates.
+> `It would be like using the machinery and the workers in a factory as energy supply`; there would be nothing left to accomplish the overall purpose of the factory.
 
-## Classification
-### Simple carbohydrates (sugars)
-- Monosaccharides (one sugar unit) - _glucose_, _fructose_, and _galactose_;
-- Disaccharides (two sugar units) - _sucrose_, _lactose_, and _maltose_.
+Thus, it is better to let our body get its fuel from carbohydrates and let it use amino acids and fat its main processes.
 
-### Complex carbohydrates:
-- Oligosaccharides (three to ten sugar units);
-- Polysaccharides (mored than ten sugar units) - _starch_, _glycogen_, and _fiber_.
+Carbohydrates are chains of sugar units called `Saccharides`, hence, they are classified in two groups based on their structure: 
+- `Simple carbohydrates (Sugars)`: _Monosaccharides_ and _Disaccharides_;
+- `Complex carbohydrates`: _Oligosaccharides_ and _Polysaccharides_.
 
-### Absorption
-Carbohydrate digestion begins in the mouth in the presents of silava and then continues in the intestine. The digestion rate depends upon the sugar branches: 
-the more complex the carbs, the more it takes to break down the sugar units, to be converted into glucose, and be absrobed.
+Glucose in the blood is regulated by insulin, a hormone formed by the pancreas.
 
-Sugars and complex carbohydrates are digested differently, though. Sugars trigger large amounts of saliva, which generates an acid medium. Also, because of 
-their simple structure, they are digested and absorbed much faster. On the other hand, complex carbohydrates are digested slowly and require an alkaline medium 
-and the enzyme ptyalin to be digested, which is neutralized in acid medium. Thus, combining sugars and complex carbs at the same meal is a bad idea.
+> `Insulin "feeds" the cells with the glucose they need and stores the excess in tissues`.
 
-Another important fact is the faster glucose enters the bloodstream, the higher the glycemic index, hence simple carbohydrates have high glycemic  index, whereas, complex carbs have lower glycemic index.
-Glucose in the blood is regulated by insulin, which acts like a "gate-keeper" for cells to absorb the necesarry fuel from the blood. It also opens the "gates" 
-for glucose to be absrobed by adypocites (fat cells) when present in large amounts in the blood. Thus, excess glucose at once, leads to high amounts of insulin release, which leads to fat storage, weight gain, and long term-health problems: type II diabetes, cardiovascular disease, pancreas damage, and more.
+When there is too much glucose in the blood at once, insulin converts it to fat (body fat) and glycogen (energy storage in muscles and liver), process known as `Glycolysis`.
 
-### Functions
-- energy supply;
-- cellular structure and integrity.
+On the other hand, when the cells are "hungry", but there is not enough glucose in the blood, glucose is obtained by conversion from the energy storage (bod fat and glycogen), process known as `Gluconeogenesis`, when insulin is not present.
 
-### Deficiency
-- irritable bowel syndrome;
-- inflammatory bowel disease;
-- ulcerative colitis;
-- crohn's disease;
-- chronic fatigue;
-- depression.
+> `Glucose conversion happens only when there is no glucose and insulin in the blood`.
 
-### Excess
-- obesity;
-- type II diabetes;
-- heart disease;
-- cavities;
-- osteoporosis;
-- weak immune system.
+Glucose levels in the blood is called `Glycemic index`. The more complex the carbohydrates, the slower the digestion and absorption of glucose, hence, the lower the glycemic index. Thus, `Simple carbohydrates have high glycemic index, whereas complex carbohydrates have low glycemic index`.
 
-### Food sources
-- grains;
-- vegetables;
-- fruit;
-- legumes;
-- sweeteners;
-- desserts and candy;
-- processed food.
+> `Long-term high glycemic index damages the pancreas, the blood vessels, and the heart`.
 
-### Food combining
-Do:
-- vegetables - protein;
-- vegetables - fats;
-- vegetables - starch;
-- melons - nothing;
-- acid fruits - nuts and seeds;
-- sweet fruits - nuts and seeds;
-- sweet fruits - whole grains;
-- whole grains (cooked) - yogurt.
+## Watch out's
+Complex carbohydrates are the only type of carbohydrates that bring benefits to our body. 
 
-Do not:
-- starch - animal protein;
-- acid fruits - other carbohydrates;
-- acid fruits - animal protein;
-- starch - starch.
+> `Simple carbohydrates are bad, complex carbohydrates are good.`
 
-### Average recommended intake
-- 45% of your daily energy intakes (225g/day for 2000kcal/day).
-
-## Refferences
+## References
+- Wikipedia, [_Carbohydrate_](https://en.wikipedia.org/wiki/Carbohydrate)
+- Wikipedia, [_Adipose tissue_](https://en.wikipedia.org/wiki/Adipose_tissue)
+- Wikipedia, [_Insulin_](https://en.wikipedia.org/wiki/Insulin)
+- Wikipedia, [_Gluconeogenesis_](https://en.wikipedia.org/wiki/Gluconeogenesis)
+- Wikipedia, [_Glycolysis_](https://en.wikipedia.org/wiki/Glycolysis)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
 - WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Carbohydrates)
-- Wikipedia, [Carbohydrate](https://en.wikipedia.org/wiki/Carbohydrate)
-- Elizabeth Rocchino, ["Food Combinations: The Secret To Healthy Eating"](http://www.mindbodygreen.com/0-7896/food-combinations-the-secret-to-healthy-eating.html)
+- Jessie Szalay, Livescience, [_What Are Carbohydrates?_](http://www.livescience.com/51976-carbohydrates.html)
+- Elson Haas M. MD, Healthy.net, [_Building Blocks Of Nutrition: Carbohydrates_](http://www.healthy.net/Health/Article/Carbohydrates/2100/1)
