@@ -1,5 +1,7 @@
 # Simple carbohydrates (Sugars)
-Simple carbohydrates or, simply, Sugars have only one and two sugar units. `Sugars are all the organic compounds with _"-ose"_ at the end`.
+Simple carbohydrates or, simply, Sugars have only one and two sugar units. 
+
+> `Sugars are all the organic compounds with "-ose" at the end`.
 
 ## Monosaccharides
 - `Glucose` - Main cell energy fuel; the absorbed form of carbohydrates in the blood after digestion;
@@ -13,7 +15,6 @@ Simple carbohydrates or, simply, Sugars have only one and two sugar units. `Suga
 
 ## References
 - Wikipedia, [_Carbohydrate_](https://en.wikipedia.org/wiki/Carbohydrate)
-- Wikipedia, [_Insulin_](https://en.wikipedia.org/wiki/Insulin)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
 - WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Carbohydrates)
 - Jessie Szalay, Livescience, [_What Are Carbohydrates?_](http://www.livescience.com/51976-carbohydrates.html)
