@@ -46,7 +46,7 @@ Although nutrients bring benefits to our body, they can also damage it if they a
 - `Smoking`;
 - `Stress`.
 
- > Nutrients should be provided from whole organic foods and not from supplements:
+> Nutrients should be provided from whole organic foods and not from supplements:
 1. `Supplements are synthetic`: Our digestive system is not genetically designed to digest synthetic compounds. More, synthetic compounds destroy the `Gut flora` that is responsible for correct nutrient absorption. Thus, nutrients from supplements are not absorbed and are eliminated from the body.
 
 2. `Nutrients are a team`: Supplements come with only one or two nutrients and it is not enough (This is why all doctors tell you to take them after meals). Nutrients help each other in their functions, hence, they are involved in all body processes. __If only one of the essential nutrients is missing, a chain reaction happens, and all body processes are interrupted. It's all or nothing__. If you try to provide all essential nutrients from supplements, you destroy your digestive system and put your health at risk.
