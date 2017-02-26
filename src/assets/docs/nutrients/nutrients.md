@@ -4,10 +4,10 @@ Nutrients are organic compounds required by our body to function properly and ev
 ## Essential nutrients
 - `Water`;
 - `Oxygen`;
-- `Fatty acids`: Omega-3 Fatty acid and Omega-6 Fatty Acid;
-- `Amino acids`: Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, and Valine;
-- `Vitamins`: Choline, Vitamin A, Vitamin B-Complex, Vitamin C, Vitamin D, Vitamin E, Vitamin K;
-- `Minerals`: Calcium, Chloride, Chromium, Copper, Iodine, Iron, Magnesium, Manganese, Molybdenum, Phosphorus, Potassium, Selenium, Sodium, and Zinc.
+- `Fatty acids (Vitamin F)`: _Omega-3 Fatty acids (alpha-Linolenic acid)_ and _Omega-6 Fatty acids (Linoleic acid)_;
+- `Amino acids`: _Histidine_, _Isoleucine_, _Leucine_, _Lysine_, _Methionine_, _Phenylalanine_, _Threonine_, _Tryptophan_, and _Valine_;
+- `Vitamins`: _Choline_, _Vitamin A_, _Vitamin B-Complex_, _Vitamin C_, _Vitamin D_, _Vitamin E_, and _Vitamin K_;
+- `Minerals`: _Calcium_, _Chloride_, _Chromium_, _Copper_, _Iodine_, _Iron_, _Magnesium_, _Manganese_, _Molybdenum_, _Phosphorus_, _Potassium_, _Selenium_, _Sodium_, and _Zinc_.
 
 All body processes require energy, which comes from three major nutrients that are required in greater amounts, hence, they are called `Macronutrients`.
 
@@ -17,7 +17,7 @@ All body processes require energy, which comes from three major nutrients that a
 - `Water`;
 - `Oxygen`;
 - `Carbohydrates`;
-- `Fats (Fatty acids)`;
+- `Lipids (Fats)`;
 - `Protein (Amino acids)`;
 
 As you may guess, the rest of the essential nutrients, Vitamins and Mineral, are required in lower amounts, hence, they are called `Micronutrients`.

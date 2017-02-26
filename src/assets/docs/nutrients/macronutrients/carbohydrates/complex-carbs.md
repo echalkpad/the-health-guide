@@ -64,7 +64,6 @@ Fiber is the indigestable form of carbohydrates found in the skin of fruits and 
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Fiber
 - WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Carbohydrates)
-- Jessie Szalay, Livescience, [_What Are Carbohydrates?_](http://www.livescience.com/51976-carbohydrates.html)
 - Elson Haas M. MD, Healthy.net, [_Building Blocks Of Nutrition: Carbohydrates_](http://www.healthy.net/Health/Article/Carbohydrates/2100/1)
 - USDA Branded Food Products Database, [Starch](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=209&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 - USDA Branded Food Products Database, [Fiber](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=291&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)

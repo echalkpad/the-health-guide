@@ -1,6 +1,8 @@
 # Carbohydrates
 
-Carbohydrates or, simply, Carbs are the primary energy source for our body, because they provide the fuel - `Glucose` - needed by our cells to accomplish their functions. Yet, our body can obtain glucose by conversion from amino acids and fats, hence, carbohydrates are not essential nutrients. The problem is, if amino acids and fats are used for fuel, then there will be none left for the rest of the important body processes. _It would be like using the machinery and the workers in a factory as energy supply_; there would be nothing left to accomplish the overall purpose of the factory.
+Carbohydrates or, simply, Carbs are macronutrients that serve as __the primary energy source for our body__. They provide the fuel - `Glucose` - needed by our cells to accomplish their functions. 
+
+Yet, our body can obtain glucose by conversion from amino acids and fats, hence, carbohydrates are not essential nutrients. The problem is, if amino acids and fats are used for fuel, then there will be none left for the rest of the important body processes. _It would be like using the machinery and the workers in a factory as energy supply_; there would be nothing left to accomplish the overall purpose of the factory.
 
 > __It is better to let our body get its fuel from carbohydrates and let it use amino acids and fat for their main purpose.__
 
@@ -51,6 +53,5 @@ Complex carbohydrates are the only type of carbohydrates that bring benefits to 
 - Wikipedia, [_Glucagon_](https://en.wikipedia.org/wiki/Glucagon)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Dietary carbohydrates: Sugars and starches
 - WikiBooks, [_"Human physiology"_](https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Carbohydrates)
-- Jessie Szalay, Livescience, [_What Are Carbohydrates?_](http://www.livescience.com/51976-carbohydrates.html)
 - Elson Haas M. MD, Healthy.net, [_Building Blocks Of Nutrition: Carbohydrates_](http://www.healthy.net/Health/Article/Carbohydrates/2100/1)
 - [USDA Branded Food Products Database](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=205&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
