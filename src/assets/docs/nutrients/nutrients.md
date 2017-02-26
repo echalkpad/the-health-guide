@@ -28,10 +28,11 @@ As you may guess, the rest of the essential nutrients, Vitamins and Mineral, are
 
 The summation of all body processes - `Chemical transformations` - that help our body function properly and evolve is called `Metabolism`.
 
-Like everything in life, __Moderation is key to perfection__. Thus, although nutrients bring benefits to our body, they can also damage it if they are offered in large amounts. 
-Our body is smart and has its own ways to maintain equilibrium, also known as `Homeostasis`. Yet, when the damage is too much at once or for too long time, the body fails to restore homeostasis. As a result, _Disease_ occurs and, in critical cases, _Death_.
+Although nutrients bring benefits to our body, they can also damage it if they are offered in large amounts. Our body is smart though and has its own ways to maintain equilibrium, also known as `Homeostasis`. Yet, when the damage is too much at once or for too long time, the body fails to restore homeostasis. As a result, _Disease_ occurs and, in critical cases, _Death_.
 
-> __The key to a healthy body (good metabolism) is to ensure provide all the essential nutrients.__
+> __The key to a healthy body - good metabolism - is to provide all the essential nutrients in moderation.__
+>
+> __Moderation is key to perfection__.
 
 ## Watch out's
 
