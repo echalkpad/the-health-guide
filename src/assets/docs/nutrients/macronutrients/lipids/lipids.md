@@ -8,6 +8,7 @@ Lipids are macronutrients required for energy storage, cell membrane formation, 
 > __`Alpha-Linolenic acid (Omega-3 fatty acid)` and `Linoleic acid (Omega-6 fatty acid)`, two polyunsaturated fatty acids, are the only essential lipids__. All other lipids are produced by the body on its own, hence, are non-essential.
 
 ## Health support
+- `Blood cholesterol levels stabilisation`;
 - `Body temperature`;
 - `Cellular membrane formation (Cell protection)`;
 - `Cellular signaling (Neurotransmitter release)`;

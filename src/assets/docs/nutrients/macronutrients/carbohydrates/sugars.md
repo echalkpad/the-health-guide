@@ -13,7 +13,22 @@ Simple carbohydrates or, simply, Sugars have only one and two sugar units.
 - `Lactose (Milk sugar)` - Found mostly in milk;
 - `Maltose (Malt sugar)` - Found mostly in grains.
 
-It is their simple form that makes sugars harmful for our body. Sugars are rapidly reduced to glucose, which is further absorbed and causes high amounts of insulin to be secreted by the pancreas to stabilize it. Cells require a limited amount of glucose at once, hence, the excess must be converted and stored. 
+## Food sources
+- Sweeteners (e.g. white sugar, brown sugar, raw sugar, corn syrup, corn-syrup solids, high-fructose corn syrup, malt syrup, maple syrup, pancake syrup, fructose sweetener, liquid fructose, honey, molasses, anhydrous dextrose, and crystal dextrose);
+- Candy;
+- Desserts (e.g. cakes, cookies, pies);
+- Processed food;
+- Dried fruits;
+- Grapes;
+- Bananas;
+- Apples;
+- Plums;
+- Pineapples;
+- Pears.
+
+## Metabolism
+
+Because of their simple form, sugars are rapidly reduced to glucose. Glucose is rapidly absorbed and causes high amounts of insulin to be secreted by the pancreas at once to stabilize it. Cells require a limited amount of glucose at once, hence, the excess must be converted and stored. 
 
 Glucose in the blood is regulated by `Insulin`, a hormone secreted by the pancreas.
 
@@ -28,19 +43,6 @@ Glucose levels in the blood is called `Glycemic index`. The more complex the car
 Also, high amounts of insulin need to be transported - _pumped_ - through the blood vessels. This creates high tension on the blood vessels and a big task for the heart, not to mention the high amounts of energy cause by glucose which also stimulates the blood flow.
 
 > __Long-term insulin and glucose spikes damage the blood vessels, the heart, the pancreas, and leads to weight gain and, probably, obesity.__
-
-## Food sources
-- Sweeteners (e.g. white sugar, brown sugar, raw sugar, corn syrup, corn-syrup solids, high-fructose corn syrup, malt syrup, maple syrup, pancake syrup, fructose sweetener, liquid fructose, honey, molasses, anhydrous dextrose, and crystal dextrose);
-- Candy;
-- Desserts (e.g. cakes, cookies, pies);
-- Processed food;
-- Dried fruits;
-- Grapes;
-- Bananas;
-- Apples;
-- Plums;
-- Pineapples;
-- Pears.
 
 ## Watch out's
 - Sugars found in comercial and processed foods are `Artificial sweeteners ("Added sugars")` and bring greater damage to the body. Chemically, they are similar to natural sugars, but the foods that contain them have no nutritional value, hence the name `Empty calories`.

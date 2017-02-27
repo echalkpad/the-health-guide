@@ -3,10 +3,7 @@
 Tryglicerides, Fatty acids, or, simply, Fats are the major type of lipids found in food and our body (95%). They are made of chains of carbon attached to hydrogen molecules. The less hydrogen molecules, the greater the number of double bonds between carbons, and the lower the saturation. Hence, fats are classified according to their degree of saturation.
 
 ## Cis monounsaturated fatty acids
-Monounsaturated fats have only one hydrogen molecule removed, thus, one double bond between carbon atoms. They can be produced by the body, hence, __they are non-essential__. They consist of:
-
-- `Omega-7 fatty acids`;
-- `Omega-9 fatty acids`.
+Monounsaturated fats have only one hydrogen molecule removed, thus, one double bond between carbon atoms. They can be produced by the body, hence, __they are non-essential__.
 
 ### Food sources
 - Sunflower oil;
@@ -24,12 +21,7 @@ Monounsaturated fats have only one hydrogen molecule removed, thus, one double b
 - Meats.
 
 ## Cis polyunsaturated fatty acids
-Polyunsaturated fats have more than one hydrogen molecule removed, thus, many double bonds between carbon atoms. They contain __the only essential fats__:
-
-- `Omega-3 fatty acids`;
-- `Omega-6 fatty acids`.
-
-> __`Alpha-Linolenic acid` (fatty acid from the Omega-3 group) and `Linoleic acid` (fatty acid from the Omega-6 group) are the only fats the body cannot produce by itself. Thus, they are essential.__
+Polyunsaturated fats have more than one hydrogen molecule removed, thus, many double bonds between carbon atoms. They contain __the only essential fats: `Alpha-Linolenic acid` (Omega-3 fatty acid) and `Linoleic acid` (Omega-6 fatty acid)__.
 
 ### Food sources
 - Safflower oil;
@@ -51,8 +43,6 @@ Polyunsaturated fats have more than one hydrogen molecule removed, thus, many do
 ## Saturated fatty acids
 Saturated fats have all hydrogen molecules attached, thus, no double bonds between carbon atoms. They can be produced by the body, hence, __they are non-essential__.
 
-> Saturated fats raise low-density
-
 ## Food sources
 - Palm oil;
 - Refined coconut oil;
@@ -61,7 +51,7 @@ Saturated fats have all hydrogen molecules attached, thus, no double bonds betwe
 - Dairy.
 
 ## Trans fatty acids
-Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) for greater preservation. They are found in processed and comercial products.
+Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) for stabilisation and better preservation. They are found in processed and comercial products. __They are non-essential and damage the body__.
 
 ### Food sources
 - Industrial oil;
@@ -74,6 +64,8 @@ Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) 
 - Potato chips;
 - Fast foods;
 - Comercial meat.
+
+## Metabolism
 
 Fats are insoluble in water so they require additional help to be taken into the bloodstream and transported throughout the body. Thus, after digestion, all lipids are reorganized and are bound to proteins, forming `Lipoproteins`. They are best known as `Blood (serum) cholesterol.`
 
