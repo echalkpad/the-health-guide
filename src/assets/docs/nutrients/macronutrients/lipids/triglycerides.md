@@ -2,6 +2,8 @@
 
 Tryglicerides, Fatty acids, or, simply, Fats are the major type of lipids found in food and our body (95%). They are made of chains of carbon attached to hydrogen molecules. The less hydrogen molecules, the greater the number of double bonds between carbons, and the lower the saturation. Hence, fats are classified according to their degree of saturation.
 
+> __Saturated fats are solid at room temperature, whereas unsaturated fats are fluid.__
+
 ## Cis monounsaturated fatty acids
 Monounsaturated fats have only one hydrogen molecule removed, thus, one double bond between carbon atoms. They can be produced by the body, hence, __they are non-essential__.
 
@@ -65,8 +67,7 @@ Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) 
 - Fast foods;
 - Comercial meat.
 
-## Metabolism
-
+## Mechanism
 Fats are insoluble in water so they require additional help to be taken into the bloodstream and transported throughout the body. Thus, after digestion, all lipids are reorganized and are bound to proteins, forming `Lipoproteins`. They are best known as `Blood (serum) cholesterol.`
 
 Lipoproteins are classified according to the number of proteins (protein density). The more proteins, the greater the density and, the greater the number of lipids they are able to carry. They are:
@@ -82,10 +83,13 @@ Lipoproteins with higher protein density act as "garbage collectors" and pick up
 
 Saturated fats not only increase LDL levels, but also inhibit their receptors. This makes blood cholesterol remain unused and deposit on the blood vessels.
 
+> To have an idea how lipids look like on blood vessels, imagine how a pan looks like after frying meat or how pipes clogged with greese look like.
+
 ## Watch out's
 > __Dietary cholesterol from animal foods is not the same with blood cholesterol.__
-- Limit saturated fat intake to less than 10% daily energy intake.
-- Eliminate completley trans fat intake.
+- Reduce saturated fats as much as you can for optimal health (10% daily energy intake);
+- Reduce dietary cholesterol as much as you can for optimal health (300mg/day);
+- Reduce trans fats completely for optimal health.
 - Excess Saturated fats cause:
     - Cardiovascular system damage (Blood vessels, Heart);
     - Weight gain.

@@ -58,7 +58,7 @@ Carbohydrates are chains of sugar units called `Saccharides`, hence, they are cl
 
 ## Watch out's
 - Complex carbohydrates are the only type of carbohydrates that bring benefits to our body, hence, you cannot be deficient of sugars.
-- Reduce sugar intake as much as you can for optimal health.
+- Reduce sugar intake as much as you can for optimal health (5% daily energy intake).
 
 > __Simple carbohydrates are BAD, complex carbohydrates are GOOD.__
 

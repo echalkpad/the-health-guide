@@ -1,11 +1,79 @@
-Essential fatty acids are specific fats that are critical to the proper function of your body. Your body is not able to produce these fatty acids on its own, so it is necessary that you eat a diet rich in these crucial building blocks to maintain a healthy body. The two main essential fatty acids that need to be included in your diet are omega-6 and omega-3 fatty acids.
+# Essential fatty acids
+Essential fatty acids are fats that cannot be made by the body on its own and are required for its proper functioning. They are `alpha-Linolenic acid`, an Omega-3 fatty acid, and `Linoleic acid`, an Omega-6 fatty acid. They are all part of the `polyunsaturated fats` group.
 
-How Do Essential Fatty Acids Aid the Body?
+## Health support
+- `Blood cholesterol levels stabilisation`;
+- `Body temperature`;
+- `Cellular membrane health (Cell protection)`;
+- `Cellular signaling (Neurotransmitter release)`;
+- `Growth`;
+- `Energy production`;
+- `Hormone formation`;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
+- `Metabolism`;
+- `Nutrient absorption and transportation`;
+- `Positive attitude`;
+- `Skin health`;
+- `Senses`.
 
-Essential fatty acids have a ton of benefits on your body and its cells. They help with cellular development and the formation of healthy cell membranes, and they have actually been shown to block tumor formation in animals, as well as block the growth of human breast cancer cells.
+## Daily requirements
+- alpha-Linolenic acid
+    - Men: 1.6g/day;
+    - Women: 1.1g/day.
+- Linoleic acid
+    - Men: 17g/day;
+    - Women: 12g/day.
 
-Essential fatty acids assist in the development and function of the brain and nervous system, and they help regulate proper thyroid and adrenal activity. They play a role in thinning your blood, which can prevent blood clots that lead to heart attacks and stroke. They also possess natural anti-inflammatory qualities that can relieve symptoms of both arthritis and other autoimmune system diseases.
+## Food sources
+- alpha-Linolenic acid:
+    - Flaxseed oil;
+    - Flaxseeds;
+    - Chia seeds;
+    - Walnut oil;
+    - Hemp seeds;
+    - Canola oil;
+    - Walnuts;
+    - Wheat germ oil;
+    - Corn oil;
+    - Soybean oil.
+- Linoleic acid:
+    - Safflower oil;
+    - Grapeseed oil;
+    - Sunflower oil;
+    - Poppyseed oil;
+    - Wheat germ oil;
+    - Corn oil;
+    - Soybean oil;
 
-Essential fatty acids regulate blood pressure, immune responses and liver function, as well as help with blood clotting and breaking down cholesterol. They also help you look good, as a diet low in these fatty acids has been shown to create skin problems, including eczema, dandruff, split nails and brittle hair.
+## Deficiency signs
+- Anxiety;
+- Balance loss;
+- Birth problems;
+- Breathing difficulties;
+- Coldness;
+- Confusion;
+- Depression;
+- Fatigue;
+- Growth impairment in children;
+- Hair dryness;
+- Hair loss;
+- High blood pressure;
+- Hunger;
+- Indifference;
+- Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems);
+- Irritability;
+- Mood swings;
+- Motivation decrease;
+- Nail brittleness;
+- Nervousness;
+- Skin problems (Acne, Itching, Inflammation, Lesions, Oiliness, Rash, Redness, Riddles, Wrinkles);
+- Vision problems;
+- Weight loss.
 
-http://www.fitday.com/fitness-articles/fitness/the-playlists-thatll-jump-start-any-workout-routine.html
+## References
+- Wikipedia, [_Essential fatty acid_](https://en.wikipedia.org/wiki/Essential_fatty_acid)
+- Wikipedia, [_Alpha-Linolenic Acid_](https://en.wikipedia.org/wiki/Alpha-Linolenic_acid)
+- Wikipedia, [_Linoleic Acid_](https://en.wikipedia.org/wiki/Linoleic_acid)
+- [alpha-Linolenic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=619&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- [Linoleic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=618&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+https://en.wikipedia.org/wiki/Dietary_Reference_Intake

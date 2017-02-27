@@ -26,7 +26,7 @@ Simple carbohydrates or, simply, Sugars have only one and two sugar units.
 - Pineapples;
 - Pears.
 
-## Metabolism
+## Mechanism
 
 Because of their simple form, sugars are rapidly reduced to glucose. Glucose is rapidly absorbed and causes high amounts of insulin to be secreted by the pancreas at once to stabilize it. Cells require a limited amount of glucose at once, hence, the excess must be converted and stored. 
 
@@ -46,7 +46,7 @@ Also, high amounts of insulin need to be transported - _pumped_ - through the bl
 
 ## Watch out's
 - Sugars found in comercial and processed foods are `Artificial sweeteners ("Added sugars")` and bring greater damage to the body. Chemically, they are similar to natural sugars, but the foods that contain them have no nutritional value, hence the name `Empty calories`.
-- Limit sugar intake to less than 5% daily energy intake.
+- Reduce sugar intake as much as you can for optimal health (5% daily energy intake).
 - Excess Sugars cause:
     - Bone damage;
     - Cardiovascular system damage (Blood vessels, Heart);

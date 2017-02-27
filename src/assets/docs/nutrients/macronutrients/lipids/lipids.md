@@ -10,11 +10,15 @@ Lipids are macronutrients required for energy storage, cell membrane formation, 
 ## Health support
 - `Blood cholesterol levels stabilisation`;
 - `Body temperature`;
-- `Cellular membrane formation (Cell protection)`;
+- `Cellular membrane health (Cell protection)`;
 - `Cellular signaling (Neurotransmitter release)`;
+- `Growth`;
 - `Energy production`;
 - `Hormone formation`;
+- `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
+- `Metabolism`;
 - `Nutrient absorption and transportation`;
+- `Positive attitude`;
 - `Skin health`;
 - `Senses`.
 
@@ -58,7 +62,8 @@ Lipids are macronutrients required for energy storage, cell membrane formation, 
 ## Watch out's
 - 95% of lipids in our body and food are tryglicerides;
 - Unsaturated fats are the only type of fats that bring benefits to our body, hence, you cannot be deficient of saturated fats, nor trans fats;
-- Reduce saturated fats and trans fats as much as you can for optimal health.
+- Reduce saturated fats as much as you can for optimal health (10% daily energy intake);
+- Reduce trans fats completely for optimal health.
 
 > __Saturated and Trans fats are BAD, Unsaturated fats are GOOD.__
 
