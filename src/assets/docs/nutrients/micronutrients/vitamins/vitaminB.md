@@ -16,6 +16,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - `Blood cholesterol levels stabilisation`;
 - `Blood homocysteine levels stabilisation`;
 - `Blood sugar levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Detoxification`;
 - `Digestion`;
 - `DNA formation`;

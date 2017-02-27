@@ -28,6 +28,7 @@ Iodine (I) is an essential trace element.
 - Appetite loss;
 - Breathing difficulties;
 - Cold hands and feet;
+- Coldness;
 - Constipation;
 - Dry skin;
 - Fatigue;

@@ -4,6 +4,7 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 ## Primary goals
 - `Amino acid metabolism`;
 - `Blood homocysteine levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `DNA formation`;
 - `Energy production`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;

@@ -4,6 +4,7 @@ Magnesium (Mg) is an essential mineral element.
 ## Health support
 - `Blood pH levels stabilisation`;
 - `Blood vessel health`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `DNA formation`;
 - `Growth`;
 - `Metabolism`;

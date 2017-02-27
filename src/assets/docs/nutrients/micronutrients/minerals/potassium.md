@@ -5,6 +5,7 @@ Potassium (K) is an essential mineral element.
 - `Blood pH levels stabilisation`;
 - `Blood sugar levels stabilisation`.
 - `Blood vessel health`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Digestion`;
 - `Growth`;
 - `Hormone formation`;

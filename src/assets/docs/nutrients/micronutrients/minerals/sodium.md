@@ -3,6 +3,7 @@ Sodium (N) is an essential mineral element.
 
 ## Health support
 - `Blood pH levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Fluid levels stabilisation`;
 - `Mental functions`: Attention, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Speaking, Thinking, Understanding;
 - `Muscle health`.

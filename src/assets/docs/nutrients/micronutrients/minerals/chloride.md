@@ -3,6 +3,7 @@ Chloride (Cl) or Chlorine is an essential mineral element.
 
 ## Health support
 - `Blood pH levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Digestion`;
 - `Fluid levels stabilisation`;
 - `Hormone formation`;

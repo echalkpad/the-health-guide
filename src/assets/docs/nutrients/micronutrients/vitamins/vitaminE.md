@@ -4,6 +4,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
 ## Health support
 - `Antioxidant protection`;
 - `Blood cholesterol levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Muscle health`;
 - `Red blood cells formation`;
 - `Vision`;

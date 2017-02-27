@@ -4,6 +4,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 ## Primary goals
 - `Amino acid metabolism`;
 - `Blood homocysteine levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `DNA formation`;
 - `Energy production`;
 - `Hormone formation`;

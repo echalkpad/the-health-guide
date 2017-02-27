@@ -5,6 +5,7 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 - `Blood cholesterol levels stabilisation`;
 - `Blood homocysteine levels stabilisation`;
 - `Brain development`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Detoxification`;
 - `Fat metabolism`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;

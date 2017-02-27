@@ -6,6 +6,7 @@ Zinc (Zn) is an essential trace element.
 - `Blood clotting`;
 - `Blood sugar levels stabilisation`;
 - `Bone health`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Detoxification`;
 - `DNA formation`;
 - `Energy production`;

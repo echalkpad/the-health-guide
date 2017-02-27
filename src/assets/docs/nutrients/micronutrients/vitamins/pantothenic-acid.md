@@ -2,6 +2,7 @@
 Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
+- `Cellular signaling (Neurotransmitter release)`;
 - `Energy production`;
 - `Fat metabolism`;
 - `Hormone formation`;

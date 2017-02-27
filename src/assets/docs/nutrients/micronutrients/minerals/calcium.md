@@ -4,6 +4,7 @@ Calcium (Ca) is an essential mineral element.
 ## Health support
 - `Blood pH levels stabilisation`;
 - `Bone health`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Growth`;
 - `Muscle movements and strength`;
 - `Pregnancy support`;

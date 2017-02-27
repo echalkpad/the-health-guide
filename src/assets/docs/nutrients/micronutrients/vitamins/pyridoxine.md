@@ -5,6 +5,7 @@ Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored an
 - `Amino acid metabolism`;
 - `Blood cholesterol levels stabilisation`;
 - `Blood homocysteine levels stabilisation`;
+- `Cellular signaling (Neurotransmitter release)`;
 - `Detoxification`;
 - `Energy production`;
 - `Immunity`;
