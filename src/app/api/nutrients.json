@@ -200,7 +200,7 @@
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Gene expression",
             "Hemoglobin formation",
             "Hormone balance",
@@ -325,7 +325,7 @@
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Gene expression",
             "Iron metabolism",
             "Nervous system health",
@@ -447,7 +447,7 @@
             "Blood sugar balance",
             "Carbohydrate metabolism",
             "Cell growth",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Fatty acid formation",
             "Nervous system health",
             "Skin health",
@@ -555,7 +555,7 @@
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Fertility",
             "Gene expression",
             "Nervous system health",
@@ -691,7 +691,7 @@
             "Carbohydrate metabolism",
             "Circulatory system health",
             "Digestive juice secretion",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Fatty acid formation",
             "Nervous system health",
             "Sex hormones formation",
@@ -805,7 +805,7 @@
         "functions": [
             "Amino acid metabolism",
             "Carbohydrate metabolism",
-            "Fat metabolism",
+            "Lipid metabolism",
             "synthesis of cholesterol",
             "synthesis of fatty acids",
             "synthesis of steroids",
@@ -921,7 +921,7 @@
             "Amino acid metabolism",
             "Carbohydrate metabolism",
             "Cellular respiration",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Growth",
             "Hair health",
             "Immune function",
@@ -1034,7 +1034,7 @@
             "Weakness",
             "Weariness"
         ],
-        "description": "Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B1 is in amino acid, carbohydrate, and fat metabolism.",
+        "description": "Vitamin B1, Thiamin, or Thiamine is a water-soluble vitamin from the B-complex family. Vitamin B-complex's main function is protein, fat, and carbohydrate metabolism and produce adenosine triphosphate (ATP), the energy form used by all cells in the body. The main function of Vitamin B1 is in amino acid, carbohydrate, and Lipid metabolism.",
         "excess": [
             "Allergy"
         ],
@@ -1045,7 +1045,7 @@
             "Cell growth",
             "Circulatory system health",
             "Digestive health",
-            "Fat metabolism",
+            "Lipid metabolism",
             "Heart beat stabilization",
             "Muscle health",
             "Nervous system health"
@@ -1135,7 +1135,7 @@
         "functions": [
             "Cholesterol metabolism and transport",
             "Cholinergic neurotransmission",
-            "Fat metabolism and transport",
+            "Lipid metabolism and transport",
             "Methyl metabolism",
             "Pregnancy support",
             "Structural integrity of cellular membranes",

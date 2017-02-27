@@ -5,7 +5,7 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - `Amino acids metabolism`;
 - `Blood sugar levels stabilisation`;
 - `Energy production`;
-- `Fat metabolism`;
+- `Lipid metabolism`;
 - `Hormone formation`;
 - `Skin health`;
 

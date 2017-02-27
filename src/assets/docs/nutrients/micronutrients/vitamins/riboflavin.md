@@ -6,7 +6,7 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 - `Carbohydrate metabolism`;
 - `Detoxification`;
 - `Energy production`;
-- `Fat metabolism`;
+- `Lipid metabolism`;
 - `Respiration`;
 - `Red blood cells formation`.
 

@@ -4,7 +4,7 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 ## Primary goals
 - `Cellular signaling (Neurotransmitter release)`;
 - `Energy production`;
-- `Fat metabolism`;
+- `Lipid metabolism`;
 - `Hormone formation`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Muscle movements and strength`;

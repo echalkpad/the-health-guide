@@ -57,7 +57,8 @@ Carbohydrates are chains of sugar units called `Saccharides`, hence, they are cl
 - Weight loss.
 
 ## Watch out's
-Complex carbohydrates are the only type of carbohydrates that bring benefits to our body. 
+- Complex carbohydrates are the only type of carbohydrates that bring benefits to our body, hence, you cannot be deficient of sugars.
+- Reduce sugar intake as much as you can for optimal health.
 
 > __Simple carbohydrates are BAD, complex carbohydrates are GOOD.__
 

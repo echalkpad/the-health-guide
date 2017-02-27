@@ -29,9 +29,6 @@ Also, high amounts of insulin need to be transported - _pumped_ - through the bl
 
 > __Long-term insulin and glucose spikes damage the blood vessels, the heart, the pancreas, and leads to weight gain and, probably, obesity.__
 
-## Daily requirements
-- 5% daily energy intake. 
-
 ## Food sources
 - Sweeteners (e.g. white sugar, brown sugar, raw sugar, corn syrup, corn-syrup solids, high-fructose corn syrup, malt syrup, maple syrup, pancake syrup, fructose sweetener, liquid fructose, honey, molasses, anhydrous dextrose, and crystal dextrose);
 - Candy;
@@ -47,11 +44,12 @@ Also, high amounts of insulin need to be transported - _pumped_ - through the bl
 
 ## Watch out's
 - Sugars found in comercial and processed foods are `Artificial sweeteners ("Added sugars")` and bring greater damage to the body. Chemically, they are similar to natural sugars, but the foods that contain them have no nutritional value, hence the name `Empty calories`.
-
-- Excess Sugars `damage`:
-    - Bones;
-    - Cardiovascular system (Blood vessels, Heart);
-    - Digestive system (Intestines, Liver, Pancreas, Stomach, Teeth).
+- Limit sugar intake to less than 5% daily energy intake.
+- Excess Sugars cause:
+    - Bone damage;
+    - Cardiovascular system damage (Blood vessels, Heart);
+    - Digestive system damage (Intestines, Liver, Pancreas, Stomach, Teeth);
+    - Weight gain.
 
 ## References
 - Wikipedia, [_Carbohydrate_](https://en.wikipedia.org/wiki/Carbohydrate)
