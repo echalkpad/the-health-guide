@@ -1,5 +1,5 @@
 # Cholesterol
-Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specific to animals and, thus, to humans, called `Zoosterol`. Sterols in plants are called `Phytosterols`. Phytosterols compete with cholesterol for absorption and also reduce levels of LDL.
+Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specific to animals and, thus, to humans, called `Zoosterol`. Sterols in plants are called `Phytosterols`.
 
 ## Functions and Health support
 - `Bile acid formation`
@@ -23,11 +23,6 @@ Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specifi
 
 # Why are saturated fats bad ?
 
-https://en.wikipedia.org/wiki/Lipoprotein
-https://en.wikipedia.org/wiki/Low-density_lipoprotein
-https://en.wikipedia.org/wiki/Cholesterol#Plasma_transport_and_regulation_of_absorption
-https://en.wikipedia.org/wiki/Blood_lipids
-
 Fats are insoluble in water so they require additional help to be taken into the bloodstream and transported throughout the body. Thus, after digestion, all lipids are reorganized and are bound to proteins, forming `Lipoproteins`. They are best known as `Blood (serum) cholesterol.`
 
 Lipoproteins are classified according to the number of proteins (protein density). The more proteins, the greater the density and, the greater the number of lipids they are able to carry. They are:
@@ -47,6 +42,9 @@ Trans fats also reduce levels of HDL.
 
 > To have an idea how lipids look like on blood vessels, imagine how a pan looks like after frying meat or how pipes clogged with greese look like.
 
+## Watch out's
+Phytosterols compete with cholesterol for absorption and also reduce levels of LDL.
+
 ## References
 - Wikipedia, [_Cholesterol_](https://en.wikipedia.org/wiki/Cholesterol)
 - Wikipedia, [_Sterol_](https://en.wikipedia.org/wiki/Sterol)
@@ -54,4 +52,7 @@ Trans fats also reduce levels of HDL.
 - Wikipedia, [_Steroid hormones_](https://en.wikipedia.org/wiki/Steroid_hormone)
 - Wikipedia, [_Bile acid_](https://en.wikipedia.org/wiki/Bile_acid)
 - Wikipedia, [_Cell signaling_](https://en.wikipedia.org/wiki/Cell_signaling)
-- Wikipedia, [Intracellular transport](https://en.wikipedia.org/wiki/Intracellular_transport)
+- Wikipedia, [_Intracellular transport_](https://en.wikipedia.org/wiki/Intracellular_transport)
+https://en.wikipedia.org/wiki/Lipoprotein
+https://en.wikipedia.org/wiki/Low-density_lipoprotein
+https://en.wikipedia.org/wiki/Blood_lipids
