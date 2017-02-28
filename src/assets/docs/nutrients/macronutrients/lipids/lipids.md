@@ -1,6 +1,7 @@
 # Lipids
 Lipids are macronutrients required for energy storage, cell membrane formation, and cell signaling (communication). They offer the greatest amounts of energy. Lipids are classified in three groups:
 
+## Classification
 - `Triglycerides (Fatty acids or Fats)`: _Monounsaturated fatty acids_, _Polyunsaturated fatty acids_, _Saturated fatty acids_, and _Trans fatty acids_;
 - `Phospholipids` - Cellular membrane formation (Cell protection);
 - `Sterols (Cholesterol)` - Nutrient transportation, Hormone formation, and Neurotransmitter release (Cell signaling).

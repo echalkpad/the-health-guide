@@ -22,6 +22,12 @@ Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specifi
 
 
 # Why are saturated fats bad ?
+
+https://en.wikipedia.org/wiki/Lipoprotein
+https://en.wikipedia.org/wiki/Low-density_lipoprotein
+https://en.wikipedia.org/wiki/Cholesterol#Plasma_transport_and_regulation_of_absorption
+https://en.wikipedia.org/wiki/Blood_lipids
+
 Fats are insoluble in water so they require additional help to be taken into the bloodstream and transported throughout the body. Thus, after digestion, all lipids are reorganized and are bound to proteins, forming `Lipoproteins`. They are best known as `Blood (serum) cholesterol.`
 
 Lipoproteins are classified according to the number of proteins (protein density). The more proteins, the greater the density and, the greater the number of lipids they are able to carry. They are:

@@ -6,14 +6,22 @@ Yet, our body can obtain glucose by conversion from amino acids and fats, hence,
 
 > __It is better to let our body get its fuel from carbohydrates and let it use amino acids and fat for their main purpose.__
 
-Carbohydrates are chains of sugar units called `Saccharides`, hence, they are classified in two groups based on their structure: 
-- `Simple carbohydrates (Sugars)`: _Monosaccharides_ and _Disaccharides_;
-- `Complex carbohydrates (Starch and Fiber)`: _Polysaccharides_.
+The brain and red blood cells are the only ones which require glucose exclusevily for energy, because they are unable to create energy from amino acids or fats.
+
+Carbohydrates are chains of sugar units called `Saccharides` and are classified based on their structure.
+
+## Classification
+- `Simple carbohydrates (Sugars)`
+    - Monosaccharides;
+    - Disaccharides.
+- `Complex carbohydrates`
+    - Glycogen - energy storage in the liver and muscles;
+    - Starch - energy storage in plants. The most common type of carbydrates (e.g. potatoes, grains, legumes, root vegetables);
+    - Fiber - the part from plants that is not digestible (e.g. skin and bran). Improves nutrient digestion (absorption) and elimination of intestinal wastes (detoxification).
 
 ## Functions and Health support
 - `Energy production`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
-- `Metabolism`;
 - `Positive attitude`;
 - `Red blood cells function`.
 
@@ -21,13 +29,15 @@ Carbohydrates are chains of sugar units called `Saccharides`, hence, they are cl
 - 50% daily energy intake.
 
 ## Food sources
-- Sweeteners;
-- Desserts;
-- Candy;
-- Fruits;
-- Grains;
-- Vegetables;
-- Legumes.
+- Simple carbohydrates:
+    - Sweeteners;
+    - Desserts;
+    - Candy;
+    - Fruits.
+- Complex carbohydrates:
+    - Whole-grains;
+    - Vegetables;
+    - Legumes.
 
 ## Deficiency symptoms
 - Anxiety;

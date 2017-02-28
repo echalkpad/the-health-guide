@@ -1,5 +1,9 @@
 # Essential fatty acids
-Essential fatty acids are fats that cannot be made by the body on its own and are required for its proper functioning. They are `alpha-Linolenic acid`, an Omega-3 fatty acid, and `Linoleic acid`, an Omega-6 fatty acid. They are all part of the `polyunsaturated fats` group.
+Essential fatty acids are fats that cannot be made by the body on its own and are required for its proper functioning. They are part of the `Polyunsaturated fats` group.
+
+## Classification
+- `alpha-Linolenic acid` - an Omega-3 fatty acid;
+- `Linoleic acid` - an Omega-6 fatty acid.
 
 ## Functions and Health support
 - `Blood cholesterol levels stabilisation`;
