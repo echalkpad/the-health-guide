@@ -19,11 +19,11 @@ Lipids from the small intestine travel as chylomicrons throughout the body (exog
 
 ## Chylomicrons
 
-Chylomicrons are the ones who carry the lipids from the intestines to the cells and maintain the nexogeneus pathway. After they reach their destination and have no more lipids within them, they become chylomicron remnants and go back to the liver to be reused (recycling).
+Chylomicrons are the ones who carry triglycerides, cholesterol, and cholesteryl esters from the small intestine to the cells. After they have been exhausted of their lipid contents, they become chylomicron remnants (wastes) and go back to the liver to be reused (recycling).
 
 https://en.wikipedia.org/wiki/Chylomicron
 
 > __The liver takes care of all the recycling process required for digestion and nutrient absorption (detoxification)__.
 
 ## VLDL
-During the recycling process, the liver recreates lipoprotein packeges called VLDL, that contain the chylomicron remnants and other lipids as well from storage and from other wastes that have been delivered. VLDL's are then sent again 
+When cells require cholesterol and there is none from dietary intake, the liver produces cholesterol from its resources and packages it into VLDL's along with leftovers from earlier recycling processes and sends it to the cells.
