@@ -10,7 +10,7 @@ Carbohydrates are chains of sugar units called `Saccharides`, hence, they are cl
 - `Simple carbohydrates (Sugars)`: _Monosaccharides_ and _Disaccharides_;
 - `Complex carbohydrates (Starch and Fiber)`: _Polysaccharides_.
 
-## Health support
+## Functions and Health support
 - `Energy production`;
 - `Mental functions`: Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding;
 - `Metabolism`;

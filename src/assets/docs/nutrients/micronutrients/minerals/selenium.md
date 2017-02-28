@@ -1,7 +1,7 @@
 # Selenium (Se)
 Selenium (Se) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Fertility`;
 - `Growth`;

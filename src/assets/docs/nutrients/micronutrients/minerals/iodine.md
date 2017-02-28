@@ -1,7 +1,7 @@
 # Iodine (I)
 Iodine (I) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Body temperature`;
 - `Energy production`;
 - `Growth`;

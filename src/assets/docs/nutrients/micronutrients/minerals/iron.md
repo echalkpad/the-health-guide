@@ -1,7 +1,7 @@
 # Iron (Fe)
 Iron (Fe) is an essential trace element
 
-## Health support
+## Functions and Health support
 - `Energy production`;
 - `Immunity`;
 - `Red blood cells formation`;

@@ -1,7 +1,7 @@
 # Choline
 Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is related to the B Vitamins, but not considered yet one of them.
 
-## Health support
+## Functions and Health support
 - `Blood cholesterol levels stabilisation`;
 - `Blood homocysteine levels stabilisation`;
 - `Brain development`;

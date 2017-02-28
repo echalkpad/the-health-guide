@@ -1,7 +1,7 @@
 # Chloride (Cl)
 Chloride (Cl) or Chlorine is an essential mineral element.
 
-## Health support
+## Functions and Health support
 - `Blood pH levels stabilisation`;
 - `Cellular signaling (Neurotransmitter release)`;
 - `Digestion`;

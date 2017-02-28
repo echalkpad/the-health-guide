@@ -1,7 +1,7 @@
 # Phosphorus (P)
 Phosphorus (P) is an essential mimeral element
 
-## Health support
+## Functions and Health support
 - `Blood pH levels stabilisation`;
 - `Bone health`;
 - `Cellular signaling (Neurotransmitter release)`;

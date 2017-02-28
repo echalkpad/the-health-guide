@@ -1,7 +1,7 @@
 # Vitamin A
 Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Detoxification`;
 - `Eye health`;

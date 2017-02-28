@@ -1,13 +1,24 @@
 # Cholesterol
-Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specific to animals and, thus, to humans, called `Zoosterol`. Sterols in plants are called `Phytosterols`. 
+Cholesterol is a special type of lipid. It is a sterol (steroid alcohol) specific to animals and, thus, to humans, called `Zoosterol`. Sterols in plants are called `Phytosterols`. Phytosterols compete with cholesterol for absorption and also reduce levels of LDL.
 
-## Health support
-- `Bile acid formation`;
-- `Cellular membrane health`;
-- `DNA formation`;
-- `Fat-soluble vitamin metabolism (A, D, E, K)`;
-- `Steroid hormone formation (Cellular signaling)`;
-- `Vitamin D formation`.
+## Functions and Health support
+- `Bile acid formation`
+    - Blood cholesterol elimination;
+    - Fat digestion.
+- `Cellular membrane health`
+    - Cell protection;
+    - Cell shape;
+    - Cell signaling (Communication);
+    - Intracellular transport.
+- `Steroid hormone formation`
+    - Behaviour and emotions;
+    - Immunity;
+    - Inflammation;
+    - Carbohydrate, Lipid, and Protein metabolism;
+    - Salt and water balance;
+    - Sexual characteristics development (Sex hormones).
+- `Vitamin D formation`
+    - Fat-soluble vitamin metabolism (A, D, E, and K).
 
 
 # Why are saturated fats bad ?
@@ -26,9 +37,15 @@ Lipoproteins with higher protein density act as "garbage collectors" and pick up
 
 Saturated fats not only increase LDL levels, but also inhibit their receptors. This makes blood cholesterol remain unused and deposit on the blood vessels.
 
+Trans fats also reduce levels of HDL.
+
 > To have an idea how lipids look like on blood vessels, imagine how a pan looks like after frying meat or how pipes clogged with greese look like.
 
 ## References
 - Wikipedia, [_Cholesterol_](https://en.wikipedia.org/wiki/Cholesterol)
 - Wikipedia, [_Sterol_](https://en.wikipedia.org/wiki/Sterol)
 - Wikipedia, [_Steroid_](https://en.wikipedia.org/wiki/Steroid)
+- Wikipedia, [_Steroid hormones_](https://en.wikipedia.org/wiki/Steroid_hormone)
+- Wikipedia, [_Bile acid_](https://en.wikipedia.org/wiki/Bile_acid)
+- Wikipedia, [_Cell signaling_](https://en.wikipedia.org/wiki/Cell_signaling)
+- Wikipedia, [Intracellular transport](https://en.wikipedia.org/wiki/Intracellular_transport)

@@ -1,7 +1,7 @@
 # Manganese (Mn)
 Manganese (Mn) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Blood sugar levels stabilisation`;
 - `Bone health`;

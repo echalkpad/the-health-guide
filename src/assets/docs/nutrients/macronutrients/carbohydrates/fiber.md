@@ -1,7 +1,7 @@
 ## Fiber
 Fiber is the indigestable form of carbohydrates found in the skin of fruits and vegetables and in the bran (shell) of seeds and grains. The body cannot digest, nor absorb, fiber, hence, it is not required. Yet, fiber improves nutrient digestion, nutrient absorption, and elimination of intestinal wastes (detoxification).
 
-## Health support
+## Functions and Health support
 - `Blood cholesterol levels stabilisation`;
 - `Colon health`;
 - `Detoxification`;

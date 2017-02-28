@@ -1,7 +1,7 @@
 # Chromium
 Chromium (Cr) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Blood cholesterol levels stabilisation`;
 - `Blood sugar levels stabilisation`.
 

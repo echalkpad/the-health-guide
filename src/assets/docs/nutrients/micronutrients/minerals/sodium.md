@@ -1,7 +1,7 @@
 # Sodium (N)
 Sodium (N) is an essential mineral element.
 
-## Health support
+## Functions and Health support
 - `Blood pH levels stabilisation`;
 - `Cellular signaling (Neurotransmitter release)`;
 - `Fluid levels stabilisation`;

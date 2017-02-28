@@ -1,7 +1,7 @@
 # Calcium (Ca)
 Calcium (Ca) is an essential mineral element.
 
-## Health support
+## Functions and Health support
 - `Blood pH levels stabilisation`;
 - `Bone health`;
 - `Cellular signaling (Neurotransmitter release)`;

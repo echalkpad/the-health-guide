@@ -1,7 +1,7 @@
 # Copper
 Copper (Cu) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Blood cholesterol levels stabilisation`;
 - `Bone health`;

@@ -1,7 +1,7 @@
 #  Vitamin K
 Vitamin K is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
-## Health support
+## Functions and Health support
 - `Blood clotting`;
 - `Bone metabolism`.
 

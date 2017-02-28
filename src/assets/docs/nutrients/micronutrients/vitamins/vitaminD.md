@@ -1,7 +1,7 @@
 # Vitamin D (Calciferol)
 Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues.
 
-## Health support
+## Functions and Health support
 - `Bone health`;
 - `Calcium, Iron, Magnesium, Phosphorus, and Zinc metabolism`;
 - `Growth`;

@@ -1,7 +1,7 @@
 # Zinc (Zn)
 Zinc (Zn) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Blood clotting`;
 - `Blood sugar levels stabilisation`;

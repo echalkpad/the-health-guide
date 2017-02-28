@@ -1,7 +1,7 @@
 # Potassium (K)
 Potassium (K) is an essential mineral element.
 
-## Health support
+## Functions and Health support
 - `Blood pH levels stabilisation`;
 - `Blood sugar levels stabilisation`.
 - `Blood vessel health`;

@@ -1,7 +1,7 @@
 # Molybdenum (Mo)
 Molybdenum (Mo) is an essential trace element.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Detoxification`;
 - `Energy production`;

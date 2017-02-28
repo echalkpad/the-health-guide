@@ -11,7 +11,7 @@ Vitamin B-complex is a family of eight essential water-soluble vitamins. They ar
 - `Folate (B9)`;
 - `Cobalamin (B12)`.
 
-## Health support
+## Functions and Health support
 - `Antioxidant protection`;
 - `Blood cholesterol levels stabilisation`;
 - `Blood homocysteine levels stabilisation`;
