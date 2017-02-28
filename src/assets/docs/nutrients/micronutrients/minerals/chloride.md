@@ -14,7 +14,7 @@ Chloride (Cl) or Chlorine is an essential mineral element.
 - Sodium - Mental functions, Muscle health, Blood pH and fluid levels stabilisation;
 - Choline and Vitamin B5 (Pantothenic acid) - Acetylcholine formation.
 
-## Daily requirements
+## Daily recommendations
 - Men: 2300mg/day;
 - Women: 2300mg/day;
 - Pregnancy: 2300mg/day;

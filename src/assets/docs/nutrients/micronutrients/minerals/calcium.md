@@ -16,7 +16,7 @@ Calcium (Ca) is an essential mineral element.
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 1200mg/day;
 - Women: 1200mg/day;
 - Pregnancy: 1300mg/day;

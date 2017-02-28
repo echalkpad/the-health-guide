@@ -12,7 +12,7 @@ Iodine (I) is an essential trace element.
 ## Important relationships
 - Selenium - Thyroid hormone formation.
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.15mg/day;
 - Women: 0.15mg/day;
 - Pregnancy: 0.22mg/day;

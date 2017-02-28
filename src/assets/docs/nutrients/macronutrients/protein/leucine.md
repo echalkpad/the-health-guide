@@ -1,7 +1,7 @@
 # Leucine
 Leucine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 42mg/kg/day;
 - Women: 42mg/kg/day;
 - Pregnancy: 56mg/kg/day;

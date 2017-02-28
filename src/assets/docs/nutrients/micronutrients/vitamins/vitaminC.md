@@ -23,7 +23,7 @@ Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it can
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 90mg/day;
 - Women: 75mg/day;
 - Pregnancy: 85mg/day;

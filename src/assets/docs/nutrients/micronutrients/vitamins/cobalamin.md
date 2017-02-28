@@ -23,7 +23,7 @@ Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.0024mg/day;
 - Women: 0.0024mg/day;
 - Pregnancy: 0.0026mg/day;

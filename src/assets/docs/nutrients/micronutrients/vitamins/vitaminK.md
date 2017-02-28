@@ -11,7 +11,7 @@ Vitamin K is an essential fat-soluble nutrient, hence, it `requires` fat to be a
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.12mg/day;
 - Women: 0.09mg/day;
 - Pregnancy: 0.09mg/day;

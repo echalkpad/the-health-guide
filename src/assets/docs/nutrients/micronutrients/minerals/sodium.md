@@ -11,7 +11,7 @@ Sodium (N) is an essential mineral element.
 ## Important relationships
 - Chloride - Mental functions, Muscle health, Blood pH and fluid levels stabilisation.
 
-## Daily requirements
+## Daily recommendations
 - Men: 1500mg/day;
 - Women: 1500mg/day;
 - Pregnancy: 1500mg/day;

@@ -11,7 +11,7 @@ Molybdenum (Mo) is an essential trace element.
 ## Important relationships
 - Iron - Red blood cell formation.
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.045mg/day;
 - Women: 0.045mg/day;
 - Pregnancy: 0.05mg/day;

@@ -19,7 +19,7 @@ Vitamin A is an essential fat-soluble nutrient, hence, it `requires` fat to be a
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.9mg/day;
 - Women: 0.7mg/day;
 - Pregnancy: 0.77mg/day;

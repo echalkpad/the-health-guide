@@ -24,7 +24,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.4mg/day;
 - Women: 0.4mg/day;
 - Pregnancy: 0.8mg/day;

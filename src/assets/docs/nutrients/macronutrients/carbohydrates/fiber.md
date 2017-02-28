@@ -8,7 +8,7 @@ Fiber is the indigestable form of carbohydrates found in the skin of fruits and 
 - `Digestion`;
 - `Satiety`.
 
-## Daily requirements
+## Daily recommendations
 - 14g/1000kcal/day.
 
 ## Food sources

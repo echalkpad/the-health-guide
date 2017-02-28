@@ -21,7 +21,7 @@ Choline is an essential water-soluble nutrient, hence, it cannot be stored and i
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 550mg/day;
 - Women: 425mg/day;
 - Pregnancy: 450mg/day;

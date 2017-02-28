@@ -1,7 +1,7 @@
 # Phenylalanine
 Phenylalanine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 33mg/kg/day;
 - Women: 33mg/kg/day;
 - Pregnancy: 44mg/kg/day;

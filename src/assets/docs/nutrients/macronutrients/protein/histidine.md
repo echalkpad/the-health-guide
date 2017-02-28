@@ -1,7 +1,7 @@
 # Histidine
 Histidine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 14mg/kg/day;
 - Women: 14mg/kg/day;
 - Pregnancy: 18mg/kg/day;

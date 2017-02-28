@@ -15,7 +15,7 @@ Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it `require
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.015mg/day;
 - Women: 0.015mg/day;
 - Pregnancy: 0.015mg/day;

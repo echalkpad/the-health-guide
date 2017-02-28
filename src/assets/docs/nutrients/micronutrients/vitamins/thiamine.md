@@ -15,7 +15,7 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 1.2mg/day;
 - Women: 1.1mg/day;
 - Pregnancy: 1.4mg/day;

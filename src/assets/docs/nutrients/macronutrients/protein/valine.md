@@ -1,7 +1,7 @@
 # Valine
 Valine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 24mg/kg/day;
 - Women: 24mg/kg/day;
 - Pregnancy: 31mg/kg/day;

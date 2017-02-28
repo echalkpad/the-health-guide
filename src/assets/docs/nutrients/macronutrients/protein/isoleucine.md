@@ -1,7 +1,7 @@
 # Isoleucine
 Isoleucine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 19mg/kg/day;
 - Women: 19mg/kg/day;
 - Pregnancy: 25mg/kg/day;

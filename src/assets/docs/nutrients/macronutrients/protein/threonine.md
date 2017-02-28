@@ -1,7 +1,7 @@
 # Threonine
 Threonine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 20mg/kg/day;
 - Women: 20mg/kg/day;
 - Pregnancy: 26mg/kg/day;

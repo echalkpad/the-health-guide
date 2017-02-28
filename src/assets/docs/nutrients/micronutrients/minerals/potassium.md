@@ -16,7 +16,7 @@ Potassium (K) is an essential mineral element.
 ## Important relationships
 - Magnesium - Blood pH levels stabilisation, Blood vessel health, Metabolism, Recovery.
 
-## Daily requirements
+## Daily recommendations
 - Men: 4700mg/day;
 - Women: 4700mg/day;
 - Pregnancy: 4700mg/day;

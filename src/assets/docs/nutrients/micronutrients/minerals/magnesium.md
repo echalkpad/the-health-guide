@@ -14,7 +14,7 @@ Magnesium (Mg) is an essential mineral element.
 ## Important relationships
 - Potassium - Blood pH levels stabilisation, Blood vessel health, Metabolism, Recovery.
 
-## Daily requirements
+## Daily recommendations
 - Men: 420mg/day;
 - Women: 320mg/day;
 - Pregnancy: 350mg/day;

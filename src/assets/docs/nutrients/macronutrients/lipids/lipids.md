@@ -22,7 +22,7 @@ Lipids are macronutrients required for energy storage, cell membrane formation, 
 - `Skin health`;
 - `Senses`.
 
-## Daily requirements
+## Daily recommendations
 - 30% daily energy intake.
 
 ## Food sources

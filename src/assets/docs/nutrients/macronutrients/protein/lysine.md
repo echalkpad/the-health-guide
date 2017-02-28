@@ -1,7 +1,7 @@
 # Lysine
 Lysine is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 38mg/kg/day;
 - Women: 38mg/kg/day;
 - Pregnancy: 51mg/kg/day;

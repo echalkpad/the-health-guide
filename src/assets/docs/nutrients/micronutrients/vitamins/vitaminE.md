@@ -17,7 +17,7 @@ Vitamin E or Tocopherol is an essential fat-soluble nutrient, hence, it `require
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 15mg/day;
 - Women: 15mg/day;
 - Pregnancy: 15mg/day;

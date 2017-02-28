@@ -16,7 +16,7 @@ Copper (Cu) is an essential trace element.
 - Iron - Absorption;
 - Vitamin C - Skin health.
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.9mg/day;
 - Women: 0.9mg/day;
 - Pregnancy: 1mg/day;

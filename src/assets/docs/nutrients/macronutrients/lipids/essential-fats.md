@@ -16,7 +16,7 @@ Essential fatty acids are fats that cannot be made by the body on its own and ar
 - `Skin health`;
 - `Senses`.
 
-## Daily requirements
+## Daily recommendations
 - alpha-Linolenic acid
     - Men: 1.6g/day;
     - Women: 1.1g/day.
@@ -44,6 +44,16 @@ Essential fatty acids are fats that cannot be made by the body on its own and ar
     - Wheat germ oil;
     - Corn oil;
     - Soybean oil;
+    - Sunflower oil;
+    - Oat oil;
+    - Walnuts;
+    - Butternuts;
+    - Pine nuts;
+    - Safflower seeds;
+    - Sunflower seeds;
+    - Corn oil;
+    - Poppy seeds;
+    - Hemp seeds.
 
 ## Deficiency signs
 - Anxiety;
@@ -74,6 +84,6 @@ Essential fatty acids are fats that cannot be made by the body on its own and ar
 - Wikipedia, [_Essential fatty acid_](https://en.wikipedia.org/wiki/Essential_fatty_acid)
 - Wikipedia, [_Alpha-Linolenic Acid_](https://en.wikipedia.org/wiki/Alpha-Linolenic_acid)
 - Wikipedia, [_Linoleic Acid_](https://en.wikipedia.org/wiki/Linoleic_acid)
-- [alpha-Linolenic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=619&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
-- [Linoleic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=618&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- [USDA Branded Food Products Database - alpha-Linolenic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=619&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
+- [USDA Branded Food Products Database - Linoleic acid](https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=618&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g)
 https://en.wikipedia.org/wiki/Dietary_Reference_Intake

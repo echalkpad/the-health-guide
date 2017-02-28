@@ -7,6 +7,9 @@ Tryglicerides, Fatty acids, or, simply, Fats are the major type of lipids found 
 ## Cis monounsaturated fatty acids
 Monounsaturated fats have only one hydrogen molecule removed, thus, one double bond between carbon atoms. They can be produced by the body, hence, __they are non-essential__.
 
+### Daily recommendations
+- 10% daily energy intake.
+
 ### Food sources
 - Sunflower oil;
 - Hazelnut oil;
@@ -25,6 +28,9 @@ Monounsaturated fats have only one hydrogen molecule removed, thus, one double b
 ## Cis polyunsaturated fatty acids
 Polyunsaturated fats have more than one hydrogen molecule removed, thus, many double bonds between carbon atoms. They contain __the only essential fats: `Alpha-Linolenic acid` (Omega-3 fatty acid) and `Linoleic acid` (Omega-6 fatty acid)__.
 
+### Daily recommendations
+- 15% daily energy intake.
+
 ### Food sources
 - Safflower oil;
 - Grapeseed oil;
@@ -34,16 +40,21 @@ Polyunsaturated fats have more than one hydrogen molecule removed, thus, many do
 - Soybean oil;
 - Hemp oil;
 - Sunflower oil;
+- Oat oil;
 - Fish oil;
 - Flaxseeds;
 - Walnuts;
-- Fish oil;
+- Butternuts;
+- Pine nuts.
 - Hemp seeds;
 - Sunflower seeds;
 - Poppy seeds.
 
 ## Saturated fatty acids
 Saturated fats have all hydrogen molecules attached, thus, no double bonds between carbon atoms. They can be produced by the body, hence, __they are non-essential__.
+
+### Daily recommendations
+- 5% daily energy intake.
 
 ## Food sources
 - Palm oil;
@@ -54,6 +65,9 @@ Saturated fats have all hydrogen molecules attached, thus, no double bonds betwe
 
 ## Trans fatty acids
 Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) for stabilisation and better preservation. They are found in processed and comercial products. __They are non-essential and damage the body__.
+
+### Daily recommendations
+- 0% daily energy intake.
 
 ### Food sources
 - Industrial oil;
@@ -67,29 +81,9 @@ Trans fats are unsaturated fats that have been forcely hidrogenated (saturated) 
 - Fast foods;
 - Comercial meat.
 
-## Mechanism
-Fats are insoluble in water so they require additional help to be taken into the bloodstream and transported throughout the body. Thus, after digestion, all lipids are reorganized and are bound to proteins, forming `Lipoproteins`. They are best known as `Blood (serum) cholesterol.`
-
-Lipoproteins are classified according to the number of proteins (protein density). The more proteins, the greater the density and, the greater the number of lipids they are able to carry. They are:
-- `High-density lipoproteins (HDL)`;
-- `Intermediate-density lipoproteins (IDL)`;
-- `Low-density lipoproteins (LDL)`; 
-- `Very low-density lipoproteins (VLDL)`;
-- `Ultra low-density lipoproteins (ULDL or Chylomicrons)`.
-
-Lipoproteins with higher protein density act as "garbage collectors" and pick up the lipid wastes that remain throughout the blood vessels and take them back to the liver to be reused, whereas those with lower density carry lipids from the intestines and the liver throughout the body, hence, increasing the risk of wastes and deposits on blood vessels. Thus, HDL is usually called `"Good cholesterol"`, and LDL is called `"Bad cholesterol"`.
-
-> __Saturated fats and Trans fats increase LDL levels in the blood, whereas unsaturated fats increase HDL levels in the blood and, thus, decrease LDL levels__.
-
-Saturated fats not only increase LDL levels, but also inhibit their receptors. This makes blood cholesterol remain unused and deposit on the blood vessels.
-
-> To have an idea how lipids look like on blood vessels, imagine how a pan looks like after frying meat or how pipes clogged with greese look like.
-
 ## Watch out's
 > __Dietary cholesterol from animal foods is not the same with blood cholesterol.__
-- Reduce saturated fats as much as you can for optimal health (10% daily energy intake);
-- Reduce dietary cholesterol as much as you can for optimal health (300mg/day);
-- Reduce trans fats completely for optimal health.
+
 - Excess Saturated fats cause:
     - Cardiovascular system damage (Blood vessels, Heart);
     - Weight gain.

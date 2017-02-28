@@ -17,7 +17,7 @@ Carbohydrates are chains of sugar units called `Saccharides`, hence, they are cl
 - `Positive attitude`;
 - `Red blood cells function`.
 
-## Daily requirements
+## Daily recommendations
 - 50% daily energy intake.
 
 ## Food sources

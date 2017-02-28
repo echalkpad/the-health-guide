@@ -12,7 +12,7 @@ Manganese (Mn) is an essential trace element.
 ## Important relationships
 - Biotin (Vitamin B7), Thiamine (Vitamin B1), Vitamin C, Choline, Iron - Absorption.
 
-## Daily requirements
+## Daily recommendations
 - Men: 2.3mg/day;
 - Women: 1.8mg/day;
 - Pregnancy: 2mg/day;

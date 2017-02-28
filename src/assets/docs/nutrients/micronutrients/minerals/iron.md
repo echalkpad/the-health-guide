@@ -9,7 +9,7 @@ Iron (Fe) is an essential trace element
 
 ## Important relationships
 
-## Daily requirements
+## Daily recommendations
 - Men: 8mg/day;
 - Women: 10mg/day;
 - Pregnancy: 27mg/day;

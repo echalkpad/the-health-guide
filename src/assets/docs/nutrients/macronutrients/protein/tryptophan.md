@@ -1,7 +1,7 @@
 # Tryptophan
 Tryptophan is an essential amino acid.
 
-## Daily requirements
+## Daily recommendations
 - Men: 5mg/kg/day;
 - Women: 5mg/kg/day;
 - Pregnancy: 7mg/kg/day;

@@ -19,7 +19,7 @@ Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 16mg/day;
 - Women: 14mg/day;
 - Pregnancy: 18mg/day;

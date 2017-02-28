@@ -16,7 +16,7 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 ## Mechanism of action
 > TO DO
 
-## Daily requirements
+## Daily recommendations
 - Men: 5mg/day;
 - Women: 5mg/day;
 - Pregnancy: 6mg/day;

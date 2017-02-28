@@ -23,7 +23,7 @@ Zinc (Zn) is an essential trace element.
 ## Important relationships
 - Vitamin A, Vitamin C, Vitamin E, and Selenium - Antioxidant protection.
 
-## Daily requirements
+## Daily recommendations
 - Men: 11mg/day;
 - Women: 8mg/day;
 - Pregnancy: 11mg/day;

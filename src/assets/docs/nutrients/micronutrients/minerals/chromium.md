@@ -8,7 +8,7 @@ Chromium (Cr) is an essential trace element.
 ## Important relationships
 - Niacin (Vitamin B3) - Blood cholesterol and sugar levels stabilisation.
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.035mg/day;
 - Women: 0.025mg/day;
 - Pregnancy: 0.03mg/day;

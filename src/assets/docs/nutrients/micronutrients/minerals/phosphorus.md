@@ -14,7 +14,7 @@ Phosphorus (P) is an essential mimeral element
 ## Important relationships
 - Vitamin B-complex - Energy procution, Growth, and Metabolism;
 
-## Daily requirements
+## Daily recommendations
 - Men: 700mg/day;
 - Women: 700mg/day;
 - Pregnancy: 700mg/day;

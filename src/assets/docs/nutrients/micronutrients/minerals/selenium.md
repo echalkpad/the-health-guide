@@ -14,7 +14,7 @@ Selenium (Se) is an essential trace element.
 - Iodine - Thyroid hormone formation.
 - Vitamin A, Vitamin C, and Zinc - Antioxidant protection.
 
-## Daily requirements
+## Daily recommendations
 - Men: 0.055mg/day;
 - Women: 0.055mg/day;
 - Pregnancy: 0.06mg/day;
