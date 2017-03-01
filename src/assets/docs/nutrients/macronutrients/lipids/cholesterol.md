@@ -88,6 +88,13 @@ Thus, high blood cholesterol is an internal liver problem. __Either the HDL prod
 - Wikipedia, [_Bile acid_](https://en.wikipedia.org/wiki/Bile_acid)
 - Wikipedia, [_Cell signaling_](https://en.wikipedia.org/wiki/Cell_signaling)
 - Wikipedia, [_Intracellular transport_](https://en.wikipedia.org/wiki/Intracellular_transport)
-https://en.wikipedia.org/wiki/Lipoprotein
-https://en.wikipedia.org/wiki/Low-density_lipoprotein
-https://en.wikipedia.org/wiki/Blood_lipids
+- Wikipedia, [_Blood lipids_](https://en.wikipedia.org/wiki/Blood_lipids)
+- Wikipedia, [_Lipoprotein_](https://en.wikipedia.org/wiki/Lipoprotein)
+- Wikipedia, [_Chylomicron_](https://en.wikipedia.org/wiki/Chylomicron)
+- Wikipedia, [_Very low-density lipoproteins_](https://en.wikipedia.org/wiki/Very_low-density_lipoprotein)
+- Wikipedia, [_Intermediate-density lipoprotein_](https://en.wikipedia.org/wiki/Intermediate-density_lipoprotein)
+- Wikipedia, [_Low-density lipoprotein_](https://en.wikipedia.org/wiki/Low-density_lipoprotein)
+- Wikipedia, [_High-density lipoprotein_](https://en.wikipedia.org/wiki/High-density_lipoprotein)
+- Wikipedia, [_Apiloprotein E_](https://en.wikipedia.org/wiki/Apolipoprotein_E)
+- Wikipedia, [_Apiloprotein C2_](https://en.wikipedia.org/wiki/Apolipoprotein_C2)
+- Wikipedia, [_Macrophage_](https://en.wikipedia.org/wiki/Macrophage)
