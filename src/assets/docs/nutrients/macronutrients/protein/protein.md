@@ -1,5 +1,5 @@
 # Protein (Amino acids)
-Protein is the backbone of all cells. It is the most important nutrient of all, because it is required in every function in our body.
+Protein is the most important nutrient of all, being the main functional and structural component of all cells. Protein is the backbone of all metabolic functions. 
 
 > __Proteins are chains of amino acids, hence, amino acids are the building blocks of all cells.__ 
 
