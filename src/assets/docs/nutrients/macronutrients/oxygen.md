@@ -16,6 +16,7 @@ Oxygen is the most important nutrient for life on Earth. We can survive without 
 - the body combats excess acidity is by trying to neutralize it with oxygen.
 - exercises increases blood oxygen levels which, in change, produces more energy and accelerates the oxidation of taxic wastes.
 - improper breathing produces diminished mental ability and vice versa.
+- the heart never makes cancer, because it is the orgna with the greatest amount of oxygen from the body (the epicenter of oxygenation)
 
 ## Mechanism
 Oxygen is transported by red blood cells via hemoglobin binding (turning dark red to light red) and given to enzymes. Enzymes uses oxygen to burn - oxidize - catalyze many oxidation reactions in the body (metabolism) realising carbon dioxide (wastes).
