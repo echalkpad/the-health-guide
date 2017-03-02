@@ -1,5 +1,5 @@
 # Water
-Water is an essential nutrient not only for humans, but for entire life on Earth and is the major component of our body.
+Water is the scond most important nutrient, after oxygen. It is essential not only for humans, but for life on Earth. WAter is alos the most abundandt substance in our body.
 
 > __We are 60% water.__
 
