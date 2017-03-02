@@ -11,12 +11,11 @@ Oxygen is the most important nutrient for life on Earth. We can survive without 
     - recharging the body's batteries (the solar plexus).
 
 ## Facts
-- the brain requires 20% of inhaled oxygen;
 - you can reverse arterial disease in monkeys by infusing oxygen into the diseased arteries (Baylor University in the USA);
 - emotional stress produces adrenaline and adrenaline-related hormones, requiring the body to draw on its oxygen reserves for their production and eventual oxidation.
 - the body combats excess acidity is by trying to neutralize it with oxygen.
 - exercises increases blood oxygen levels which, in change, produces more energy and accelerates the oxidation of taxic wastes.
-- improper breathing produces diminished mental ability. The corollary is true also. It is known that mental tensions produce restricted breathing.
+- improper breathing produces diminished mental ability and vice versa.
 
 ## Mechanism
 Oxygen is transported by red blood cells via hemoglobin binding (turning dark red to light red) and given to enzymes. Enzymes uses oxygen to burn - oxidize - catalyze many oxidation reactions in the body (metabolism) realising carbon dioxide (wastes).
