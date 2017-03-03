@@ -1,1 +1,0 @@
-export { NutritionTable } from './nutrition-table/nutrition-table';
