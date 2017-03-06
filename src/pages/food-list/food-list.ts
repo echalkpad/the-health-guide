@@ -1,5 +1,5 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
-import { InfiniteScroll } from 'ionic-angular';
+import { AlertController, InfiniteScroll } from 'ionic-angular';
 
 import { FoodDetailsPage } from '../food-details/food-details';
 import { Food, FoodGroup } from '../../models';
@@ -18,11 +18,19 @@ export class FoodListPage {
   public searchQuery: string = '';
   public selectedGroup: FoodGroup = this.groups[0];
   public start: number;
-  constructor(private _detectorRef: ChangeDetectorRef, private _foodSvc: FoodService) { }
+  constructor(
+    private _alertCtrl: AlertController,
+    private _detectorRef: ChangeDetectorRef,
+    private _foodSvc: FoodService
+  ) { }
 
   public clearSearch(ev): void {
     this.searchQuery = '';
     this.refreshItems();
+  }
+
+  public itemParams(id: string): Object {
+    return { id }
   }
 
   public loadMore(ev: InfiniteScroll) {
@@ -30,20 +38,46 @@ export class FoodListPage {
 
     setTimeout(() => {
       this.start += 50;
-      this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id).subscribe((data: Array<Food>) => {
-        this.foods.push(...data);
-        this._detectorRef.markForCheck();
-      });
+      this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id)
+        .subscribe((data: Array<Food>) => {
+          this.foods.push(...data);
+          this._detectorRef.markForCheck();
+        });
       ev.complete();
     }, 500);
   }
 
   public refreshItems(): void {
     this.start = 0;
-    this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id).subscribe((data: Array<Food>) => {
-      this.foods = [...data];
-      this._detectorRef.markForCheck();
-    });
+    this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id)
+      .subscribe((data: Array<Food>) => {
+        this.foods = [...data];
+        this._detectorRef.markForCheck();
+      });
+  }
+
+  public showFilter(): void {
+    this._alertCtrl.create({
+      title: 'Filter foods',
+      subTitle: 'Pick a food group',
+      inputs: [...this.groups.map((item: FoodGroup) => {
+        return {
+          type: 'radio',
+          label: item.name,
+          value: item.id,
+          checked: this.selectedGroup.name === item.name
+        }
+      })],
+      buttons: [
+        {
+          text: 'Done',
+          handler: (data: string) => {
+            this.selectedGroup = this.groups.filter((item: FoodGroup) => item.id === data)[0];
+            this.refreshItems();
+          }
+        }
+      ]
+    }).present();
   }
 
   ionViewWillEnter() {

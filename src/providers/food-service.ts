@@ -1,16 +1,9 @@
-// Angular
 import { Injectable } from '@angular/core';
-
-// RxJS
 import { Http, URLSearchParams, Response, RequestOptions, Headers } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 
-// Lodash
-import * as _ from 'lodash';
-
-// THG
 import { Food, FoodGroup } from '../models';
 
 export const FOOD_GROUPS: Array<FoodGroup> = [
@@ -51,6 +44,9 @@ export class FoodService {
 
   private _serializeFood(usdaFood: any): Food {
     let newFood: Food = new Food(usdaFood['ndbno'], usdaFood['name'], usdaFood['fg']);
+
+    // TODO Create hashing method
+    // Each mehod should be called by nutrient id and not by nutrient index (it changes)
     newFood.nutrition.setWaterValue(usdaFood['nutrients'][0]);
     newFood.nutrition.setEnergyValue(usdaFood['nutrients'][1]);
     newFood.nutrition.setProteinValue(usdaFood['nutrients'][3]);

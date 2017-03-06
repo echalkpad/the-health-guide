@@ -41,5 +41,8 @@
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],
+  "config": {
+    "ionic_source_map": "source-map"
+  },
   "description": "the-health-guide-hybrid: An Ionic project"
 }

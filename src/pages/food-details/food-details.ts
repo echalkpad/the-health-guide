@@ -1,22 +1,27 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-/*
-  Generated class for the FoodDetails page.
+import { Food } from '../../models';
+import { FoodService } from '../../providers';
 
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-food-details',
   templateUrl: 'food-details.html'
 })
 export class FoodDetailsPage {
+  public food: Food;
+  constructor(
+    private _foodSvc: FoodService,
+    private _navCtrl: NavController,
+    private _navParams: NavParams
+  ) { }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad FoodDetailsPage');
+  ionViewWillEnter() {
+    this._foodSvc.getFoodReports$(this._navParams.get('id')).then((data: Food) => this.food = data)
+      .catch((err: Error) => {
+        console.log(err);
+        this._navCtrl.pop();
+      })
   }
 
 }
