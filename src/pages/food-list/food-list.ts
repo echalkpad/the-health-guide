@@ -1,8 +1,7 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { InfiniteScroll } from 'ionic-angular';
-import { Observable } from 'rxjs/Observable';
-import { Subject } from 'rxjs/Subject';
 
+import { FoodDetailsPage } from '../food-details/food-details';
 import { Food, FoodGroup } from '../../models';
 import { FOOD_GROUPS, FoodService } from '../../providers';
 
@@ -12,20 +11,18 @@ import { FOOD_GROUPS, FoodService } from '../../providers';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodListPage {
+  public detailsPage: any = FoodDetailsPage;
   public foods: Array<Food>;
   public groups: Array<FoodGroup> = [...FOOD_GROUPS];
   public limit: number = 50;
   public searchQuery: string = '';
   public selectedGroup: FoodGroup = this.groups[0];
-  public start: number = 0;
-  public total: Subject<number>;
+  public start: number;
   constructor(private _detectorRef: ChangeDetectorRef, private _foodSvc: FoodService) { }
 
-  private _refreshFoods(): void {
-    this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id).subscribe((data: Array<Food>) => {
-      this.foods = [...data];
-      this._detectorRef.markForCheck();
-    });
+  public clearSearch(ev): void {
+    this.searchQuery = '';
+    this.refreshItems();
   }
 
   public loadMore(ev: InfiniteScroll) {
@@ -34,16 +31,23 @@ export class FoodListPage {
     setTimeout(() => {
       this.start += 50;
       this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id).subscribe((data: Array<Food>) => {
-      this.foods.push(...data);
-      this._detectorRef.markForCheck();
-    });
+        this.foods.push(...data);
+        this._detectorRef.markForCheck();
+      });
       ev.complete();
     }, 500);
   }
 
+  public refreshItems(): void {
+    this.start = 0;
+    this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id).subscribe((data: Array<Food>) => {
+      this.foods = [...data];
+      this._detectorRef.markForCheck();
+    });
+  }
+
   ionViewWillEnter() {
-    this._refreshFoods();
-    this.total = this._foodSvc.totalFoodSubject;
+    this.refreshItems();
     console.log('Entering...');
   }
 
