@@ -1,22 +1,13 @@
-import { NgModule, ErrorHandler } from '@angular/core';
-import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { NgModule } from '@angular/core';
+import { IonicApp } from 'ionic-angular';
 
-import { MyApp } from './app.component';
-import { FoodListPage } from '../pages/food-list/food-list';
+import { thgDeclarations, thgEntries, thgImports, thgProviders } from './imports';
 
 @NgModule({
-  declarations: [
-    MyApp,
-    FoodListPage
-  ],
-  imports: [
-    IonicModule.forRoot(MyApp)
-  ],
+  declarations: [...thgDeclarations],
+  imports: [...thgImports],
   bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    FoodListPage
-  ],
-  providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
+  entryComponents: [...thgEntries],
+  providers: [...thgProviders]
 })
 export class AppModule {}

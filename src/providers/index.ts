@@ -1,0 +1,1 @@
+export { FOOD_GROUPS, FoodService } from './food-service';
