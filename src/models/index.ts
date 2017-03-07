@@ -1,2 +1,2 @@
 export { INdbFood, Food, FoodGroup } from './food';
-export { Nutrition } from './nutrition';
+export { Nutrient, Nutrition } from './nutrition';

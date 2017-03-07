@@ -1,16 +1,29 @@
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>{{ (food)?.name }}</ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>{{ (food)?.name }}</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-    <ion-list>
-      <ion-item>
-        <pre>{{ (food)?.nutrition | json }}</pre>
-      </ion-item>
-    </ion-list>
+    <ion-item-group>
+        <ion-item-divider>Info</ion-item-divider>
+        <ion-item>
+            Group
+            <ion-note item-right>{{ (food)?.group }}</ion-note>
+        </ion-item>
+        <ion-item>
+            Quantity
+            <ion-note item-right>{{ (food)?.quantity }}{{ (food)?.unit }}</ion-note>
+        </ion-item>
+    </ion-item-group>
+    <ion-item-group>
+        <ion-item-divider>Nutrition</ion-item-divider>
+        <ion-item *ngFor="let item of foodNutrition">
+            {{ item.name }}
+            <ion-note item-right>{{ item.value }}{{ item.unit }}</ion-note>
+        </ion-item>
+    </ion-item-group>
 </ion-content>
