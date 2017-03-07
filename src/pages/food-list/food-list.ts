@@ -48,11 +48,20 @@ export class FoodListPage {
   }
 
   public refreshItems(): void {
+    console.log(this.searchQuery);
     this.start = 0;
     this._foodSvc.getFoods$(this.searchQuery, this.start, this.limit, this.selectedGroup.id)
       .subscribe((data: Array<Food>) => {
-        this.foods = [...data];
-        this._detectorRef.markForCheck();
+        setTimeout(() => {
+          this.foods = [...data];
+          this._detectorRef.markForCheck();
+        }, 2000);
+      }, (err: {status: string, message: string}) => {
+        this._alertCtrl.create({
+          title: `Ooops! Error ${err.status}!`,
+          message: err.message,
+          buttons: ['Got it!']
+        }).present();
       });
   }
 

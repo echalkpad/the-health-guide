@@ -1,3 +1,5 @@
+import { INdbFood } from './food';
+
 export class Nutrient {
     constructor(
         public id: number,
@@ -58,187 +60,188 @@ export class Nutrition {
         public caffeine: Nutrient = new Nutrient(262, 'Other', 'Caffeine', 'mg'),
     ) {  }
 
-    public setWaterValue(value: number): void {
-        this.water.value = value;
-    }
+    public setNutrientValue(nutrients: Array<INdbFood>): void {
+        nutrients.forEach((item: INdbFood) => {
+            switch (item.nutrient_id.toString()) {
+                case '255':
+                    this.water.value = +item.value;
+                    break;
 
-    public setEnergyValue(value: number): void {
-        this.energy.value = value;
-    }
+                case '208':
+                    this.energy.value = +item.value;
+                    break;
 
-    public setProteinValue(value: number): void {
-        this.protein.value = value;
-    }
+                case '203':
+                    this.protein.value = +item.value;
+                    break;
 
-    public setFatsValue(value: number): void {
-        this.fats.value = value;
-    }
+                case '204':
+                    this.fats.value = +item.value;
+                    break;
 
-    public setCarbsValue(value: number): void {
-        this.carbs.value = value;
-    }
+                case '205':
+                    this.carbs.value = +item.value;
+                    break;
 
-    public setFiberValue(value: number): void {
-        this.fiber.value = value;
-    }
+                case '291':
+                    this.fiber.value = +item.value;
+                    break;
 
-    public setSugarsValue(value: number): void {
-        this.sugars.value = value;
-    }
+                case '269':
+                    this.sugars.value = +item.value;
+                    break;
 
-    public setCalciumValue(value: number): void {
-        this.sugars.value = value;
-    }
+                case '301':
+                    this.calcium.value = +item.value;
+                    break;
 
-    public setIronValue(value: number): void {
-        this.sugars.value = value;
-    }
+                case '303':
+                    this.iron.value = +item.value;
+                    break;
 
-    public setMagnesiumValue(value: number): void {
-        this.magnesium.value = value;
-    }
+                case '304':
+                    this.magnesium.value = +item.value;
+                    break;
 
-    public setPhosphorusValue(value: number): void {
-        this.phosphorus.value = value;
-    }
+                case '305':
+                    this.phosphorus.value = +item.value;
+                    break;
 
-    public setPotassiumValue(value: number): void {
-        this.potassium.value = value;
-    }
+                case '306':
+                    this.potassium.value = +item.value;
+                    break;
 
-    public setSodiumValue(value: number): void {
-        this.sodium.value = value;
-    }
+                case '307':
+                    this.sodium.value = +item.value;
+                    break;
 
-    public setZincValue(value: number): void {
-        this.zinc.value = value;
-    }
+                case '309':
+                    this.zinc.value = +item.value;
+                    break;
 
-    public setCopperValue(value: number): void {
-        this.copper.value = value;
-    }
+                case '312':
+                    this.copper.value = +item.value;
+                    break;
 
-    public setManganeseValue(value: number): void {
-        this.manganese.value = value;
-    }
+                case '315':
+                    this.manganese.value = +item.value;
+                    break;
 
-    public setSeleniumValue(value: number): void {
-        this.selenium.value = value;
-    }
+                case '317':
+                    this.selenium.value = +item.value;
+                    break;
 
-    public setVitaminCValue(value: number): void {
-        this.vitaminC.value = value;
-    }
+                case '401':
+                    this.vitaminC.value = +item.value;
+                    break;
 
-    public setVitaminB1Value(value: number): void {
-        this.vitaminB1.value = value;
-    }
+                case '404':
+                    this.vitaminB1.value = +item.value;
+                    break;
 
-    public setVitaminB2Value(value: number): void {
-        this.vitaminB2.value = value;
-    }
+                case '405':
+                    this.vitaminB2.value = +item.value;
+                    break;
 
-    public setVitaminB3Value(value: number): void {
-        this.vitaminB3.value = value;
-    }
+                case '406':
+                    this.vitaminB3.value = +item.value;
+                    break;
 
-    public setVitaminB5Value(value: number): void {
-        this.vitaminB5.value = value;
-    }
+                case '410':
+                    this.vitaminB5.value = +item.value;
+                    break;
 
-    public setVitaminB6Value(value: number): void {
-        this.vitaminB6.value = value;
-    }
+                case '415':
+                    this.vitaminB5.value = +item.value;
+                    break;
 
-    public setVitaminB9Value(value: number): void {
-        this.vitaminB9.value = value;
-    }
+                case '417':
+                    this.vitaminB9.value = +item.value;
+                    break;
 
-    public setCholineValue(value: number): void {
-        this.choline.value = value;
-    }
+                case '421':
+                    this.choline.value = +item.value;
+                    break;
+                
+                case '418':
+                    this.vitaminB12.value = +item.value;
+                    break;
 
-    public setVitaminB12Value(value: number): void {
-        this.vitaminB12.value = value;
-    }
+                case '320':
+                    this.vitaminA.value = +item.value;
+                    break;
 
-    public setVitaminAValue(value: number): void {
-        this.vitaminA.value = value;
-    }
+                case '323':
+                    this.vitaminE.value = +item.value;
+                    break;
 
-    public setVitaminEValue(value: number): void {
-        this.vitaminE.value = value;
-    }
+                case '328':
+                    this.vitaminD.value = +item.value;
+                    break;
+            
+                case '430':
+                    this.vitaminK.value = +item.value;
+                    break;
 
-    public setVitaminDValue(value: number): void {
-        this.vitaminD.value = value;
-    }
+                case '606':
+                    this.satFat.value = +item.value;
+                    break;
 
-    public setVitaminKValue(value: number): void {
-        this.vitaminK.value = value;
-    }
+                case '618':
+                    this.omega3.value = +item.value;
+                    break;
 
-    public setSatFatValue(value: number): void {
-        this.satFat.value = value;
-    }
+                case '619':
+                    this.omega6.value = +item.value;
+                    break;
 
-    public setOmega6Value(value: number): void {
-        this.omega6.value = value;
-    }
+                case '605':
+                    this.transFat.value = +item.value;
+                    break;
 
-    public setOmega3Value(value: number): void {
-        this.omega3.value = value;
-    }
+                case '601':
+                    this.cholesterol.value = +item.value;
+                    break;
 
-    public setTransFatValue(value: number): void {
-        this.transFat.value = value;
-    }
+                case '501':
+                    this.tryptophan.value = +item.value;
+                    break;
 
-    public setCholesterolValue(value: number): void {
-        this.cholesterol.value = value;
-    }
+                case '502':
+                    this.threonine.value = +item.value;
+                    break;
 
-    public setTryptophanValue(value: number): void {
-        this.cholesterol.value = value;
-    }
+                case '503':
+                    this.isoleucine.value = +item.value;
+                    break;
 
-    public setThreonineValue(value: number): void {
-        this.threonine.value = value;
-    }
+                case '504':
+                    this.leucine.value = +item.value;
+                    break;
 
-    public setIsoleucineValue(value: number): void {
-        this.isoleucine.value = value;
-    }
+                case '505':
+                    this.lysine.value = +item.value;
+                    break;
 
-    public setLeucineValue(value: number): void {
-        this.leucine.value = value;
-    }
+                case '506':
+                    this.methionine.value = +item.value;
+                    break;
 
-    public setLysineValue(value: number): void {
-        this.lysine.value = value;
-    }
+                case '508':
+                    this.phenylalanine.value = +item.value;
+                    break;
 
-    public setMethionineValue(value: number): void {
-        this.methionine.value = value;
-    }
+                case '510':
+                    this.valine.value = +item.value;
+                    break;
 
-    public setPhenylalanineValue(value: number): void {
-        this.phenylalanine.value = value;
-    }
+                case '512':
+                    this.histidine.value = +item.value;
+                    break;
 
-    public setValineValue(value: number): void {
-        this.valine.value = value;
-    }
-
-    public setHistidineValue(value: number): void {
-        this.histidine.value = value;
-    }
-
-    public setAlcoholValue(value: number): void {
-        this.alcohol.value = value;
-    }
-
-    public setCaffeineValue(value: number): void {
-        this.caffeine.value = value;
+                default:
+                    break;
+            }
+        });
     }
 }

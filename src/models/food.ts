@@ -1,5 +1,13 @@
 import { Nutrition } from './nutrition';
 
+export interface INdbFood {
+    group: string;
+    nutrient_id: string | number;
+    name: string;
+    unit: string;
+    value: string;
+}
+
 export class FoodGroup {
     constructor(
         public id: string,
