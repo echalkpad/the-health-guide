@@ -1,19 +1,19 @@
-import { Component } from '@angular/core';
+import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
-import * as _ from 'lodash';
-
-import { Food, Nutrient } from '../../models';
+import { Food } from '../../models';
 import { FoodService } from '../../providers';
 
 @Component({
   selector: 'page-food-details',
-  templateUrl: 'food-details.html'
+  templateUrl: 'food-details.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FoodDetailsPage {
   public food: Food;
-  public foodNutrition: Array<Nutrient> = [];
+  //public foodNutrition: Array<Nutrient> = [];
   constructor(
+    private _detectorRef: ChangeDetectorRef,
     private _foodSvc: FoodService,
     private _navCtrl: NavController,
     private _navParams: NavParams
@@ -22,11 +22,17 @@ export class FoodDetailsPage {
   ionViewWillEnter() {
     this._foodSvc.getFoodReports$(this._navParams.get('id')).then((data: Food) => {
       this.food = data;
-      this.foodNutrition = <Array<Nutrient>>_.values(this.food.nutrition);
+      this._detectorRef.markForCheck();
+     // this.foodNutrition = <Array<Nutrient>>_.values(this.food.nutrition);
     }).catch((err: Error) => {
         console.log(err);
         this._navCtrl.pop();
       })
+  }
+
+  ionViewWillUnload() {
+    console.log('Destroying...');
+    this._detectorRef.detach();
   }
 
 }

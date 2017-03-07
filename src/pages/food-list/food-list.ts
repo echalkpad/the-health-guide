@@ -94,8 +94,8 @@ export class FoodListPage {
     console.log('Entering...');
   }
 
-  ionViewWillLeave() {
-    console.log('Leaving...');
+  ionViewWillUnload() {
+    console.log('Destroying...');
     this._detectorRef.detach();
   }
 
