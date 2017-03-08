@@ -2,7 +2,10 @@ import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
-import { FoodListPage } from '../pages/food-list/food-list';
+import {
+  FoodListPage,
+  NutrientsPage
+} from '../pages';
 
 export interface IPageLink {
     title: string,
@@ -22,7 +25,8 @@ export class MyApp {
     this._initializeApp();
 
     this.pages = [
-      { title: 'Foods', component: FoodListPage, icon: 'cart'}
+      { title: 'Foods', component: FoodListPage, icon: 'nutrition'},
+      { title: 'Nutrients', component: NutrientsPage, icon: 'leaf'},
     ];
 
   }

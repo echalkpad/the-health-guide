@@ -1,8 +1,14 @@
+// App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AlertController, InfiniteScroll } from 'ionic-angular';
 
-import { FoodDetailsPage } from '../food-details/food-details';
+// Models
 import { Food, FoodGroup } from '../../models';
+
+// Pages
+import { FoodDetailsPage } from '../food-details/food-details';
+
+// Providers
 import { FOOD_GROUPS, FoodService } from '../../providers';
 
 @Component({

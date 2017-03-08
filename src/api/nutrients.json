@@ -1,7 +1,7 @@
 [
     {
         "actions": [
-            "Glucose metabolism via coenzyme thiamine pyrophosphate",
+            "Glucose metabolism via thiamine pyrophosphate coenzyme",
             "Ethanol convertion to water and carbon dioxide",
             "Fatty acid and cholesterol production and convertion of carbohydrates to fat storage",
             "Acetylcholine formation via acetyl CoA production"
@@ -42,6 +42,15 @@
             "credit": "Wikipedia, Thiamine",
             "url": "https://en.wikipedia.org/wiki/Thiamine"
         }, {
+            "credit": "Wikipedia, Peripheral neuropathy",
+            "url": "https://en.wikipedia.org/wiki/Peripheral_neuropathy#Signs_and_symptoms"
+        }, {
+            "credit": "Wikipedia, Beriberi",
+            "url": "https://en.wikipedia.org/wiki/Beriberi#Signs_and_symptoms"
+        }, {
+            "credit": "Wikipedia, Wernicke–Korsakoff syndrome",
+            "url": "https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome#Signs_and_symptoms"
+        }, {
             "credit": "The world's healthiest foods, Vitamin B1 - Thiamin",
             "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100"
         }, {
@@ -60,7 +69,6 @@
             "credit": "USDA Branded Food Products Database",
             "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }],
-        
         "recommendations": {
             "Infants (< 1 years)": "0.3 mg/day",
             "Children (< 14 years)": "0.9 mg/day",
@@ -79,6 +87,7 @@
             "Legumes"
         ],
         "summary": "Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
+        "type": "Essential vitamin",
         "uses": [
             "Attention",
             "Concentration",
@@ -109,13 +118,16 @@
             "Metabolism requires Manganese"
         ]
     }, {
+        "actions": [
+            ""
+        ],
         "deficiencies": [
             ""
         ],
         "functions": [
             ""
         ],
-        "name": "Vitamin B1 (Thiamine)",
+        "name": "Vitamin B2 (Thiamine)",
         "partnership": [
             ""
         ],
@@ -131,6 +143,7 @@
             "Pregnancy": "g/day",
             "Lactation": "g/day"
         },
+        "type": "",
         "sources": [
             ""
         ],

@@ -1,7 +1,11 @@
+// App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
+// Models
 import { Food } from '../../models';
+
+// Providers
 import { FoodService } from '../../providers';
 
 @Component({

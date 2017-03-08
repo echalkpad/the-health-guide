@@ -4,27 +4,27 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 ## Actions
 
 ## Health support
-"Cognition",
-            "Mental attitude",
-            "Metabolism",
-            "Muscle tone",
-            "Nervous system"
+- Cognition;
+- Mental attitude;
+- Metabolism;
+- Muscle tone;
+- Nervous system.
 
 ## Uses
-"Attention",
-            "Concentration",
-            "Beriberi",
-            "Digestion",
-            "Energy",
-            "Heart",
-            "Learning",
-            "Memory",
-            "Motivation",
-            "Muscles",
-            "Optimism",
-            "Nerves",
-            "Reasoning",
-            "Wernicke–Korsakoff syndrome"
+- Attention;
+- Concentration;
+- Beriberi;
+- Digestion;
+- Energy;
+- Heart;
+- Learning;
+- Memory;
+- Motivation;
+- Muscles;
+- Optimism;
+- Nerves;
+- Reasoning;
+- Wernicke–Korsakoff syndrome.
 
 ## Partnership
 - Manganese;
@@ -39,36 +39,36 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Lactation - 1.4 mg/day.
 
 ## Food sources
-"Yeast",
-            "Grain germ and bran",
-            "Seeds",
-            "Whole grains",
-            "Meat",
-            "Nuts",
-            "Legumes"
+- Yeast;
+- Grain germ and bran;
+- Seeds;
+- Whole grains;
+- Meat;
+- Nuts;
+- Legumes.
 
 ## Deficiency signs
-"Anxiety",
-            "Abdominal pain",
-            "Appetite loss",
-            "Burning or tingling",
-            "Concentration difficulties",
-            "Confusion",
-            "Constipation",
-            "Depression",
-            "Digestive problems",
-            "Fatigue",
-            "Growth impairment in children",
-            "Heart enlargement",
-            "Insomnia",
-            "Irritability",
-            "Leg and foot swelling",
-            "Liver enlargement",
-            "Muscle mass loss",
-            "Nausea",
-            "Numbness",
-            "Pulse abnormalities",
-            "Stress"
+- Anxiety;
+- Abdominal pain;
+- Appetite loss;
+- Burning or tingling;
+- Concentration difficulties;
+- Confusion;
+- Constipation;
+- Depression;
+- Digestive problems;
+- Fatigue;
+- Growth impairment in children;
+- Heart enlargement;
+- Insomnia;
+- Irritability;
+- Leg and foot swelling;
+- Liver enlargement;
+- Muscle mass loss;
+- Nausea;
+- Numbness;
+- Pulse abnormalities;
+- Stress.
 
 ## Warnings
 - Absorption is `impaired` by:

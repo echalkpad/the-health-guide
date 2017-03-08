@@ -9,20 +9,32 @@ const cloudSettings: CloudSettings = {
 };
 
 import { MyApp } from './app.component';
-import { FoodDetailsPage } from '../pages/food-details/food-details';
-import { FoodListPage } from '../pages/food-list/food-list';
-import { FoodService } from '../providers';
+
+// Pages
+import {
+    FoodDetailsPage,
+    FoodListPage,
+    NutrientsPage
+} from '../pages';
+
+// Providers
+import {
+    FoodService,
+    NutrientDataService
+} from '../providers';
 
 export const thgDeclarations = [
     MyApp,
     FoodDetailsPage,
-    FoodListPage
+    FoodListPage,
+    NutrientsPage
 ];
 
 export const thgEntries = [
     MyApp,
     FoodDetailsPage,
-    FoodListPage
+    FoodListPage,
+    NutrientsPage
 ];
 
 export const thgImports = [
@@ -32,5 +44,6 @@ export const thgImports = [
 
 export const thgProviders = [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    FoodService
+    FoodService,
+    NutrientDataService
 ];
