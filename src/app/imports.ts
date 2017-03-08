@@ -1,5 +1,12 @@
 import { ErrorHandler } from '@angular/core';
 import { IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+
+const cloudSettings: CloudSettings = {
+  'core': {
+    'app_id': '7020a3ca'
+  }
+};
 
 import { MyApp } from './app.component';
 import { FoodDetailsPage } from '../pages/food-details/food-details';
@@ -19,7 +26,8 @@ export const thgEntries = [
 ];
 
 export const thgImports = [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CloudModule.forRoot(cloudSettings)
 ];
 
 export const thgProviders = [
