@@ -11,7 +11,7 @@ Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored an
 - `Red blood cells formation`.
 
 ## Important relationships
-- B vitamins;
+- Vitamin B-complex;
 - Copper, Iron, and Vitamin C - Red blood cell formation.
 
 ## Mechanism of action

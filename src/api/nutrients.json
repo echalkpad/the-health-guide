@@ -1,15 +1,145 @@
 [
     {
-        "deficiencies": [""],
-        "functions": [""],
-        "name": "",
+        "actions": [
+            "Glucose metabolism via coenzyme thiamine pyrophosphate",
+            "Ethanol convertion to water and carbon dioxide",
+            "Fatty acid and cholesterol production and convertion of carbohydrates to fat storage",
+            "Acetylcholine formation via acetyl CoA production"
+        ],
+        "deficiencies": [
+            "Anxiety",
+            "Abdominal pain",
+            "Appetite loss",
+            "Burning or tingling",
+            "Concentration difficulties",
+            "Confusion",
+            "Constipation",
+            "Depression",
+            "Digestive problems",
+            "Fatigue",
+            "Growth impairment in children",
+            "Heart enlargement",
+            "Insomnia",
+            "Irritability",
+            "Leg and foot swelling",
+            "Liver enlargement",
+            "Muscle mass loss",
+            "Nausea",
+            "Numbness",
+            "Pulse abnormalities",
+            "Stress"
+        ],
+        "functions": [
+            "Cognition",
+            "Mental attitude",
+            "Metabolism",
+            "Muscle tone",
+            "Nervous system"
+        ],
+        "name": "Vitamin B1 (Thiamine)",
+        "partnership": ["Vitamin B-complex"],
+        "references": [{
+            "credit": "Wikipedia, Thiamine",
+            "url": "https://en.wikipedia.org/wiki/Thiamine"
+        }, {
+            "credit": "The world's healthiest foods, Vitamin B1 - Thiamin",
+            "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100"
+        }, {
+            "credit": "Wikibooks, 'Human physiology'",
+            "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+        }, {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Thiamine",
+            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+        }, {
+            "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B1 -- Thiamine",
+            "url": "http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/1"
+        }, {
+            "credit": "MedlinePlus, Thiamine (Vitamin B1)",
+            "url": "https://medlineplus.gov/druginfo/natural/965.html"
+        }, {
+            "credit": "USDA Branded Food Products Database",
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+        }],
+        
+        "recommendations": {
+            "Infants (< 1 years)": "0.3 mg/day",
+            "Children (< 14 years)": "0.9 mg/day",
+            "Men (> 14 years)": "1.2 mg/day",
+            "Women (> 14 years)": "1.1 mg/day",
+            "Pregnancy": "1.4 mg/day",
+            "Lactation": "1.4 mg/day"
+        },
+        "sources": [
+            "Yeast",
+            "Grain germ and bran",
+            "Seeds",
+            "Whole grains",
+            "Meat",
+            "Nuts",
+            "Legumes"
+        ],
+        "summary": "Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
+        "uses": [
+            "Attention",
+            "Concentration",
+            "Beriberi",
+            "Digestion",
+            "Energy",
+            "Heart",
+            "Learning",
+            "Memory",
+            "Motivation",
+            "Muscles",
+            "Optimism",
+            "Nerves",
+            "Reasoning",
+            "Wernicke–Korsakoff syndrome"
+        ],
+        "warnings": [
+            "Degraded by sulfites found in food preservatives",
+            "Degraded by thermolabile thiaminases from raw fish and shellfish",
+            "Degraded by dry heat cooking",
+            "Destroyed by boiling and moist heat cooking",
+            "Absorption impaired by caffeic acid from coffee, agan oil, thyme, sage, spearmint",
+            "Absorption impaired by chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea",
+            "Absorption impaired by tannic acid from commercial beverages",
+            "Absorption impaired by quercitin",
+            "Absorption impaired by rutin",
+            "Absorption impaired by alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery",
+            "Metabolism requires Manganese"
+        ]
+    }, {
+        "deficiencies": [
+            ""
+        ],
+        "functions": [
+            ""
+        ],
+        "name": "Vitamin B1 (Thiamine)",
+        "partnership": [
+            ""
+        ],
         "references": [{
             "credit": "",
             "url": ""
         }],
-        "sources": [""],
+        "recommendations": {
+            "Infants (< 1 years)": "g/day",
+            "Children (< 14 years)": "g/day",
+            "Men (> 14 years)": "g/day",
+            "Women (> 14 years)": "g/day",
+            "Pregnancy": "g/day",
+            "Lactation": "g/day"
+        },
+        "sources": [
+            ""
+        ],
         "summary": "",
-        "uses": [""],
-        "warnings": [""]
+        "uses": [
+            ""
+        ],
+        "warnings": [
+            ""
+        ]
     }
 ]

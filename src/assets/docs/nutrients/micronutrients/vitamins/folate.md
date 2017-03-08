@@ -17,7 +17,7 @@ Folate is an essential water-soluble nutrient, hence, it cannot be stored and is
 - `Sleep`.
 
 ## Important relationships
-- B vitamins;
+- Vitamin B-complex;
 - Copper, Iron, and Vitamin C - Red blood cell formation;
 - Zinc - Male fertility (Sex hormones and Sperm cell formation).
 

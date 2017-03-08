@@ -10,7 +10,7 @@ Manganese (Mn) is an essential trace element.
 - `Metabolism`.
 
 ## Important relationships
-- Biotin (Vitamin B7), Thiamine (Vitamin B1), Vitamin C, Choline, Iron - Absorption.
+- Biotin (Vitamin B7), Thiamine (Vitamin B1), Vitamin C, Choline, Iron - MEtabolism.
 
 ## Daily recommendations
 - Men: 2.3mg/day;

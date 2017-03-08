@@ -10,7 +10,7 @@ Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is
 - `Skin health`;
 
 ## Important relationships
-- B vitamins.
+- Vitamin B-complex.
 
 ## Mechanism of action
 > TO DO

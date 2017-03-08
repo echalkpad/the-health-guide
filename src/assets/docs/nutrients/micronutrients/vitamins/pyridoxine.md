@@ -17,7 +17,7 @@ Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored an
 - `Sleep`.
 
 ## Important relationships
-- B vitamins;
+- Vitamin B-complex;
 - Copper, Iron, and Vitamin C - Red blood cell formation;
 - Magnesium - Blood cholesterol stabilisation.
 

@@ -11,7 +11,7 @@ Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be sto
 - `Senses`.
 
 ## Important relationships
-- B vitamins.
+- Vitamin B-complex.
 
 ## Mechanism of action
 > TO DO
