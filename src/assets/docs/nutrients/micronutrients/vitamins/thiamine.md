@@ -2,6 +2,10 @@
 Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Actions
+- Glucose metabolism via thiamine pyrophosphate coenzyme;
+- Ethanol convertion to water and carbon dioxide;
+- Fatty acid and cholesterol production and convertion of carbohydrates to fat storage;
+- Acetylcholine formation via acetyl CoA production.
 
 ## Health support
 - Cognition;
@@ -71,24 +75,23 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Stress.
 
 ## Warnings
-- Absorption is `impaired` by:
-    - Added sugars;
-    - Age;
-    - Alcohol;
-    - Caffeine;
-    - Gastrointestinal problems;
-    - Pharmaceutical drugs;
-    - Raw seafood;
-    - Sedentarism;
-    - Smoking;
-    - Stress;
-    - Tannins.
-
-- Absorption `requires`:
-    - Manganese.
+- Absorption impaired by caffeic acid from coffee, agan oil, thyme, sage, spearmint;
+- Absorption impaired by chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea;
+- Absorption impaired by tannic acid from commercial beverages;
+- Absorption impaired by quercitin;
+- Absorption impaired by rutin;
+- Absorption impaired by alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery;
+- Degraded by sulfites found in food preservatives;
+- Degraded by thermolabile thiaminases from raw fish and shellfish;
+- Degraded by dry heat cooking;
+- Destroyed by boiling and moist heat cooking;
+- Metabolism requires Manganese.
 
 ## References
 - Wikipedia, [_Thiamine_](https://en.wikipedia.org/wiki/Thiamine)
+- Wikipedia, [_Peripheral neuropathy_](https://en.wikipedia.org/wiki/Peripheral_neuropathy#Signs_and_symptoms)
+- Wikipedia, [_Beriberi_](https://en.wikipedia.org/wiki/Beriberi#Signs_and_symptoms)
+- Wikipedia, [_Wernicke–Korsakoff syndrome_](https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome#Signs_and_symptoms)
 - The world's healthiest foods, [_Vitamin B1 - Thiamin_](http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100)
 - Wikibooks, [_"Human physiology"_](https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins)
 - Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, [_"Dietary Reference Intakes: The Essential Guide to Nutrient Requirements"_](https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420), Vitamins and Minerals, Thiamine
