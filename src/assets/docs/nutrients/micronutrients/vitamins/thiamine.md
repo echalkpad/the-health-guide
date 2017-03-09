@@ -1,11 +1,12 @@
 # Vitamin B1 (Thiamine)
-Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
+Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Actions
-- Glucose metabolism via thiamine pyrophosphate coenzyme;
-- Ethanol convertion to water and carbon dioxide;
-- Fatty acid and cholesterol production and convertion of carbohydrates to fat storage;
-- Acetylcholine formation via acetyl CoA production.
+- Thiamine Pyrophosphate (TPP) coenzyme production;
+- Carbohydrate and amino acid metabolism via TPP;
+- Ethanol convertion to water and carbon dioxide via TPP;
+- Fatty acid and cholesterol production and convertion of carbohydrates to fat storage via TPP;
+- Acetylcholine formation via Acetyl CoA production.
 
 ## Health support
 - Cognition;
@@ -62,7 +63,6 @@ Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and 
 - Depression;
 - Digestive problems;
 - Fatigue;
-- Growth impairment in children;
 - Heart enlargement;
 - Insomnia;
 - Irritability;
