@@ -36,21 +36,22 @@ $colors: (
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
-
+$segment-button-ios-background-color-activated: white;
 
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
 $toolbar-background: color($colors, primary) !default;
+$segment-button-md-text-color-activated: white;
+$toolbar-text-color: white;
 
 
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
 
-
+$segment-button-wp-text-color-activated: white;
 
 
 // App Theme

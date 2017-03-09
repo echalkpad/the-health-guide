@@ -4,7 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import {
   FoodListPage,
-  NutrientsPage
+  NutrientListPage
 } from '../pages';
 
 export interface IPageLink {
@@ -26,7 +26,7 @@ export class MyApp {
 
     this.pages = [
       { title: 'Foods', component: FoodListPage, icon: 'nutrition'},
-      { title: 'Nutrients', component: NutrientsPage, icon: 'leaf'},
+      { title: 'Nutrients', component: NutrientListPage, icon: 'leaf'},
     ];
 
   }

@@ -16,18 +16,28 @@ export class NutrientDataService {
     });
   }
 
+  public getNutrient$(id: string): Observable<any> {
+    return new Observable((observer: Observer<INutrientDetails>) => {
+      this._db.collection('nutrients').find(id).fetch().subscribe((nutrient: INutrientDetails) => {
+          observer.next(nutrient);
+        }, (error: Error) => {
+          console.error(error);
+        });
+    });
+  }
+
   public getNutrients$(reactive: boolean): Observable<any> {
     return new Observable((observer: Observer<Array<INutrientDetails>>) => {
       if (reactive) {
-        this._db.collection('nutrients').watch().subscribe((nutrients: Array<INutrientDetails>) => {
+        this._db.collection('nutrients').order("name", "ascending").watch().subscribe((nutrients: Array<INutrientDetails>) => {
           observer.next(nutrients);
-        }, (error) => {
+        }, (error: Error) => {
           console.error(error);
         });
       } else {
         this._db.collection('nutrients').fetch().subscribe((nutrients: Array<INutrientDetails>) => {
           observer.next(nutrients);
-        }, (error) => {
+        }, (error: Error) => {
           console.error(error);
         });
       }

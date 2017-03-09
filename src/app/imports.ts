@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { ErrorHandler } from '@angular/core';
 import { IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -14,8 +15,12 @@ import { MyApp } from './app.component';
 import {
     FoodDetailsPage,
     FoodListPage,
-    NutrientsPage
+    NutrientDetailsPage,
+    NutrientListPage
 } from '../pages';
+
+// Pipes
+import { CapitalizePipe } from '../pipes'
 
 // Providers
 import {
@@ -25,19 +30,23 @@ import {
 
 export const thgDeclarations = [
     MyApp,
+    CapitalizePipe,
     FoodDetailsPage,
     FoodListPage,
-    NutrientsPage
+    NutrientDetailsPage,
+    NutrientListPage
 ];
 
 export const thgEntries = [
     MyApp,
     FoodDetailsPage,
     FoodListPage,
-    NutrientsPage
+    NutrientDetailsPage,
+    NutrientListPage
 ];
 
 export const thgImports = [
+    CommonModule,
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings)
 ];

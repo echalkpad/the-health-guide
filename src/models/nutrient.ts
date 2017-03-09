@@ -2,6 +2,7 @@ export interface INutrientDetails {
     actions: Array<string>;
     deficiencies: Array<string>;
     functions: Array<string>;
+    id: string;
     name: string;
     partnership: Array<string>;
     references: Array<{ credit: string, url: string }>;

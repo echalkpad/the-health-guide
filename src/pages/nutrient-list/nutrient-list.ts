@@ -6,20 +6,28 @@ import { Observable } from 'rxjs/Observable';
 // Models
 import { INutrientDetails } from '../../models';
 
+// Pages
+import { NutrientDetailsPage } from '../nutrient-details/nutrient-details';
+
 // Providers
 import { NutrientDataService } from '../../providers';
 
 @Component({
-  selector: 'page-nutrients',
-  templateUrl: 'nutrients.html',
+  selector: 'page-nutrient-list',
+  templateUrl: 'nutrient-list.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NutrientsPage {
+export class NutrientListPage {
+  public detailsPage: any = NutrientDetailsPage;
   public nutrients$: Observable<Array<INutrientDetails>>;
   constructor(
     private _detectorRef: ChangeDetectorRef,
     private _nutrientDataSvc: NutrientDataService
-  ) {}
+  ) { }
+
+  public itemParams(id: string): Object {
+    return { id }
+  }
 
   ionViewWillEnter() {
     console.log('Entering...');

@@ -16,7 +16,7 @@
 
 <ion-content padding>
     <ion-list>
-        <ion-item *ngFor="let item of nutrients$ | async">
+        <ion-item *ngFor="let item of nutrients$ | async" [navPush]="detailsPage" [navParams]="itemParams(item.id)">
             {{ item.name }}
         </ion-item>
     </ion-list>
