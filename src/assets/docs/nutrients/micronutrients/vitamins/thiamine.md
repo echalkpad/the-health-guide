@@ -29,6 +29,7 @@ Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot 
 - Optimism;
 - Nerves;
 - Reasoning;
+- Stress;
 - Wernicke–Korsakoff syndrome.
 
 ## Partnership

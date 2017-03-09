@@ -11,6 +11,7 @@
             "Anxiety",
             "Abdominal pain",
             "Appetite loss",
+            "Balance loss",
             "Burning or tingling",
             "Concentration difficulties",
             "Confusion",
@@ -29,7 +30,8 @@
             "Nausea",
             "Numbness",
             "Pulse abnormalities",
-            "Stress"
+            "Stress",
+            "Walking difficulties"
         ],
         "functions": [
             "Cognition",
@@ -104,6 +106,7 @@
             "Optimism",
             "Nerves",
             "Reasoning",
+            "Stress",
             "Wernicke–Korsakoff syndrome"
         ],
         "warnings": [
@@ -152,8 +155,11 @@
             "Memory problems",
             "Mouth mucous membranes inflammation or sensitivity",
             "Mouth corners cracking or soreness",
-            "Skin scaling",
+            "Skin itchiness",
             "Skin oiliness",
+            "Skin rash",
+            "Skin redness",
+            "Skin scaling",
             "Tongue redness",
             "Tongue soreness",
             "Weakness",
@@ -177,6 +183,9 @@
         "references": [{
             "credit": "Wikipedia, Riboflavin",
             "url": "https://en.wikipedia.org/wiki/Riboflavin"
+        }, {
+            "credit": "Wikipedia, Dermatitis",
+            "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
         }, {
             "credit": "The world's healthiest foods, Vitamin B2 - Thiamin",
             "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=93"
@@ -219,6 +228,7 @@
         "uses": [
             "Anemia",
             "Concentration",
+            "Digestion",
             "Energy",
             "Eyes",
             "Growth",
@@ -240,40 +250,113 @@
         ]
     }, {
         "actions": [
-            ""
+            "Nicotinamide Adenine Dinucleotide (NAD) and Nicotinamide Adenine Dinucleotide Phosphate (NADP).",
+            "Protein, carbohydrate, lipid, and alcohol metabolism via NAD",
+            "Cell signaling via NAD",
+            "DNA repair via NAD",
+            "Fatty acid and cholesterol production via NADP",
+            "Red blood cells formation via NAD and NADP",
+            "Steroid hormones formation via NAD and NADP"
         ],
         "deficiencies": [
-            ""
+            "Aggression",
+            "Balance loss",
+            "Confusion",
+            "Depression",
+            "Diarrhea",
+            "Digestive problems",
+            "Fatigue",
+            "Heart enlargement",
+            "Insomnia",
+            "Irritability",
+            "Memory problems",
+            "Numbness",
+            "Skin rash",
+            "Skin redness",
+            "Skin sensitivity to light",
+            "Tongue inflammation",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Cognition",
+            "Metabolism",
+            "Nervous system",
+            "Sex and steroid hormones formation"
         ],
-        "name": "",
+        "name": "Vitamin B3 (Niacin)",
         "partnership": [
-            ""
+            "Chromium",
+            "Vitamin A",
+            "Vitamin B-complex"
         ],
         "references": [{
-            "credit": "",
-            "url": ""
+            "credit": "Wikipedia, Niacin",
+            "url": "https://en.wikipedia.org/wiki/Niacin"
+        }, {
+            "credit": "Wikipedia, Pellagra",
+            "url": "https://en.wikipedia.org/wiki/Pellagra#Signs_and_symptoms"
+        }, {
+            "credit": "Wikipedia, Dermatitis",
+            "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+        }, {
+            "credit": "The world's healthiest foods, Vitamin B3 - Niacin",
+            "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83"
+        }, {
+            "credit": "Wikibooks, 'Human physiology', Vitamins",
+            "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+        }, {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Niacin",
+            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+        }, {
+            "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B3 -- Niacin",
+            "url": "http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/1"
+        }, {
+            "credit": "MedlinePlus, Niacin and niacinamide (Vitamin B3)",
+            "url": "https://medlineplus.gov/druginfo/natural/924.html"
+        }, {
+            "credit": "USDA Branded Food Products Database",
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=406&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "4 mg/day",
+            "Children (< 14 years)": "12 mg/day",
+            "Men (> 14 years)": "16 mg/day",
+            "Women (> 14 years)": "14 mg/day",
+            "Pregnancy": "18 mg/day",
+            "Lactation": "17 mg/day"
         },
-        "type": "",
+        "type": "Essential vitamin",
         "sources": [
-            ""
+            "Yeast",
+            "Tuna",
+            "Liver",
+            "Seeds",
+            "Peanuts",
+            "Herbs and spices",
+            "Mushrooms",
+            "Dried fruits"
         ],
-        "summary": "",
+        "summary": "Vitamin B3 or Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Blood glucose",
+            "Circulation",
+            "Constipation",
+            "Detoxification",
+            "Digestion",
+            "Energy",
+            "Fertility",
+            "Hair",
+            "Heart",
+            "Headaches",
+            "Skin",
+            "Pellagra",
+            "Memory",
+            "Motivation"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
         ]
     }, {
         "actions": [
