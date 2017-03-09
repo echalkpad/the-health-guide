@@ -66,8 +66,10 @@ Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot 
 - Heart enlargement;
 - Insomnia;
 - Irritability;
+- Learning difficulties;
 - Leg and foot swelling;
 - Liver enlargement;
+- Memory problems;
 - Muscle mass loss;
 - Nausea;
 - Numbness;
