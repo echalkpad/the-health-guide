@@ -129,6 +129,7 @@
             "Iron absorption and metabolism"
         ],
         "deficiencies": [
+            "Birth problems",
             "Blurred vision",
             "Cataract",
             "Digestive problems",
@@ -139,7 +140,9 @@
             "Eye redness",
             "Eye sensitivity to light",
             "Fatigue",
+            "Growth impairments in children",
             "Hair loss",
+            "Headache",
             "Insomnia",
             "Itching",
             "Mouth mucous membranes inflammation or sensitivity",
@@ -191,7 +194,15 @@
         ],
         "summary": "Vitamin B2 or Riboflavin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
-            ""
+            "Energy",
+            "Eyes",
+            "Growth",
+            "Hair",
+            "Headaches",
+            "Nails",
+            "Malaria",
+            "Pregnancy",
+            "Skin"
         ],
         "warnings": [
             "Destroyed by sunlight",
