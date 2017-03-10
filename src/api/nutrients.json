@@ -4,12 +4,14 @@
             "Thiamine Pyrophosphate (TPP) coenzyme production",
             "Carbohydrate and amino acid metabolism via TPP",
             "Ethanol convertion to water and carbon dioxide via TPP",
-            "Fatty acid and cholesterol production and convertion of carbohydrates to fat storage via TPP",
+            "Fatty acid and cholesterol formation via TPP",
+            "Carbohydrate to fat (storage) conversion via TPP",
             "Acetylcholine formation via Acetyl CoA production"
         ],
         "deficiencies": [
-            "Anxiety",
             "Abdominal pain",
+            "Anxiety",
+            "Apathy",
             "Appetite loss",
             "Balance loss",
             "Burning or tingling",
@@ -41,38 +43,52 @@
             "Nervous system"
         ],
         "name": "Vitamin B1 (Thiamine)",
-        "partnership": ["Vitamin B-complex"],
-        "references": [{
-            "credit": "Wikipedia, Thiamine",
-            "url": "https://en.wikipedia.org/wiki/Thiamine"
-        }, {
-            "credit": "Wikipedia, Peripheral neuropathy",
-            "url": "https://en.wikipedia.org/wiki/Peripheral_neuropathy#Signs_and_symptoms"
-        }, {
-            "credit": "Wikipedia, Beriberi",
-            "url": "https://en.wikipedia.org/wiki/Beriberi#Signs_and_symptoms"
-        }, {
-            "credit": "Wikipedia, Wernicke–Korsakoff syndrome",
-            "url": "https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome#Signs_and_symptoms"
-        }, {
-            "credit": "The world's healthiest foods, Vitamin B1 - Thiamin",
-            "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100"
-        }, {
-            "credit": "Wikibooks, 'Human physiology', Vitamins",
-            "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
-        }, {
-            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Thiamine",
-            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-        }, {
-            "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B1 -- Thiamine",
-            "url": "http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/1"
-        }, {
-            "credit": "MedlinePlus, Thiamine (Vitamin B1)",
-            "url": "https://medlineplus.gov/druginfo/natural/965.html"
-        }, {
-            "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-        }],
+        "partnership": [
+            "Choline",
+            "Vitamin B-complex"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Thiamine",
+                "url": "https://en.wikipedia.org/wiki/Thiamine"
+            },
+            {
+                "credit": "Wikipedia, Peripheral neuropathy",
+                "url": "https://en.wikipedia.org/wiki/Peripheral_neuropathy#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Beriberi",
+                "url": "https://en.wikipedia.org/wiki/Beriberi#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Wernicke–Korsakoff syndrome",
+                "url": "https://en.wikipedia.org/wiki/Wernicke%E2%80%93Korsakoff_syndrome#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin B1 - Thiamin",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=100"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Thiamine",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B1 -- Thiamine",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_B1_Thiamine/1922/1"
+            },
+            {
+                "credit": "MedlinePlus, Thiamine (Vitamin B1)",
+                "url": "https://medlineplus.gov/druginfo/natural/965.html"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=404&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "0.3 mg/day",
             "Children (< 14 years)": "0.9 mg/day",
@@ -122,7 +138,8 @@
             "Absorption impaired by alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery",
             "Metabolism requires Manganese"
         ]
-    }, {
+    },
+    {
         "actions": [
             "Flavin Adenine Dinucleotide (FAD) and Riboflavin Flavin Mononucleotide (FMN) coenzymes production",
             "Hidrogen transportation via FAD and FMN",
@@ -134,6 +151,7 @@
             "Iron absorption and metabolism"
         ],
         "deficiencies": [
+            "Apathy",
             "Birth problems",
             "Blurred vision",
             "Cataract",
@@ -180,31 +198,40 @@
             "Vitamin B-complex",
             "Vitamin C"
         ],
-        "references": [{
-            "credit": "Wikipedia, Riboflavin",
-            "url": "https://en.wikipedia.org/wiki/Riboflavin"
-        }, {
-            "credit": "Wikipedia, Dermatitis",
-            "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
-        }, {
-            "credit": "The world's healthiest foods, Vitamin B2 - Thiamin",
-            "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=93"
-        }, {
-            "credit": "Wikibooks, 'Human physiology', Vitamins",
-            "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
-        }, {
-            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Riboflavin",
-            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-        }, {
-            "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B2 -- Riboflavin",
-            "url": "http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927"
-        }, {
-            "credit": "MedlinePlus, Riboflavin (Vitamin B2)",
-            "url": "https://medlineplus.gov/druginfo/natural/957.html"
-        }, {
-            "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=405&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-        }],
+        "references": [
+            {
+                "credit": "Wikipedia, Riboflavin",
+                "url": "https://en.wikipedia.org/wiki/Riboflavin"
+            },
+            {
+                "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin B2 - Thiamin",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=93"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Riboflavin",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B2 -- Riboflavin",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_B2_Riboflavin/1927"
+            },
+            {
+                "credit": "MedlinePlus, Riboflavin (Vitamin B2)",
+                "url": "https://medlineplus.gov/druginfo/natural/957.html"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=405&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "0.4 mg/day",
             "Children (< 14 years)": "0.9 mg/day",
@@ -248,18 +275,20 @@
             "Absorption impaired by excess copper",
             "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
-    }, {
+    },
+    {
         "actions": [
             "Nicotinamide Adenine Dinucleotide (NAD) and Nicotinamide Adenine Dinucleotide Phosphate (NADP).",
             "Protein, carbohydrate, lipid, and alcohol metabolism via NAD",
             "Cell signaling via NAD",
             "DNA repair via NAD",
-            "Fatty acid and cholesterol production via NADP",
-            "Red blood cells formation via NAD and NADP",
-            "Steroid hormones formation via NAD and NADP"
+            "Fatty acid and cholesterol formation via NADP",
+            "Red blood cell formation via NAD and NADP",
+            "Steroid formation via NAD and NADP"
         ],
         "deficiencies": [
             "Aggression",
+            "Apathy",
             "Balance loss",
             "Confusion",
             "Depression",
@@ -282,7 +311,7 @@
             "Cognition",
             "Metabolism",
             "Nervous system",
-            "Sex and steroid hormones formation"
+            "Steroid and sex hormones formation"
         ],
         "name": "Vitamin B3 (Niacin)",
         "partnership": [
@@ -290,34 +319,44 @@
             "Vitamin A",
             "Vitamin B-complex"
         ],
-        "references": [{
-            "credit": "Wikipedia, Niacin",
-            "url": "https://en.wikipedia.org/wiki/Niacin"
-        }, {
-            "credit": "Wikipedia, Pellagra",
-            "url": "https://en.wikipedia.org/wiki/Pellagra#Signs_and_symptoms"
-        }, {
-            "credit": "Wikipedia, Dermatitis",
-            "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
-        }, {
-            "credit": "The world's healthiest foods, Vitamin B3 - Niacin",
-            "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83"
-        }, {
-            "credit": "Wikibooks, 'Human physiology', Vitamins",
-            "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
-        }, {
-            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Niacin",
-            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-        }, {
-            "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B3 -- Niacin",
-            "url": "http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/1"
-        }, {
-            "credit": "MedlinePlus, Niacin and niacinamide (Vitamin B3)",
-            "url": "https://medlineplus.gov/druginfo/natural/924.html"
-        }, {
-            "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=406&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-        }],
+        "references": [
+            {
+                "credit": "Wikipedia, Niacin",
+                "url": "https://en.wikipedia.org/wiki/Niacin"
+            },
+            {
+                "credit": "Wikipedia, Pellagra",
+                "url": "https://en.wikipedia.org/wiki/Pellagra#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin B3 - Niacin",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=83"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Niacin",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B3 -- Niacin",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_B3_Niacin/2125/1"
+            },
+            {
+                "credit": "MedlinePlus, Niacin and niacinamide (Vitamin B3)",
+                "url": "https://medlineplus.gov/druginfo/natural/924.html"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=406&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "4 mg/day",
             "Children (< 14 years)": "12 mg/day",
@@ -350,15 +389,132 @@
             "Hair",
             "Heart",
             "Headaches",
-            "Skin",
+            "Immunity",
             "Pellagra",
             "Memory",
-            "Motivation"
+            "Motivation",
+            "Skin"
         ],
         "warnings": [
             "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
         ]
-    }, {
+    },
+    {
+        "actions": [
+            "Coenzyme A (CoA) production",
+            "Protein, carbohydrate, and lipid metabolism via CoA",
+            "Acetylcholine formation via CoA",
+            "Fatty acid, cholesterol, sphingosines, and phospolipid formation via CoA",
+            "Adrenal hormone formation via CoA",
+            "Steroid formation via CoA",
+            "Signal transduction via CoA",
+            "Enzyme activation and deactivation via CoA"
+        ],
+        "deficiencies": [
+            "Abdominal pain",
+            "Apathy",
+            "Fatigue",
+            "Infections",
+            "Insomnia",
+            "Irritability",
+            "Low blood glucose",
+            "Muscle cramps",
+            "Nausea",
+            "Numbness",
+            "Skin itchiness",
+            "Skin rash",
+            "Skin redness",
+            "Stress",
+            "Vomiting"
+        ],
+        "functions": [
+            "Cell growth",
+            "Digestion",
+            "Metabolism",
+            "Nervous system"
+        ],
+        "name": "Vitamin B5 (Pantothenic acid)",
+        "partnership": [
+            "Choline",
+            "Vitamin B-complex"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Pantothenic acid",
+                "url": "https://en.wikipedia.org/wiki/Pantothenic_acid"
+            },
+            {
+                "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Pantothenic acid",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=87"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Pantothenic acid",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B5 -- Pantothenic Acid",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_B5_Pantothenic_Acid/2127"
+            },
+            {
+                "credit": "MedlinePlus, Pantothenic acid (Vitamin B5)",
+                "url": "https://medlineplus.gov/druginfo/natural/853.html"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=410&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "1.8 mg/day",
+            "Children (< 14 years)": "3 mg/day",
+            "Men (> 14 years)": "5 mg/day",
+            "Women (> 14 years)": "5 mg/day",
+            "Pregnancy": "6 mg/day",
+            "Lactation": "7 mg/day"
+        },
+        "type": "Essential vitamin",
+        "sources": [
+            "Mushrooms",
+            "Egg yolks",
+            "Sunflower seeds",
+            "Sesame seeds",
+            "Liver",
+            "Yeast",
+            "Kidneys",
+            "Lentils",
+            "Peanuts",
+            "Whole grains",
+            "Fish"
+        ],
+        "summary": "Vitamin B5 or Pantothenic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
+        "uses": [
+            "Blood glucose",
+            "Digestion",
+            "Energy",
+            "Heart",
+            "Immunity",
+            "Motivation",
+            "Muscles",
+            "Nerves",
+            "Optimism",
+            "Skin",
+            "Stress"
+        ],
+        "warnings": [
+            "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda) and by dry heat cooking",
+            "Degraded 33% by cooking",
+            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+        ]
+    },
+    {
         "actions": [
             ""
         ],
@@ -372,10 +528,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -395,7 +553,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -409,10 +568,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -432,7 +593,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -446,10 +608,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -469,7 +633,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -483,10 +648,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -506,7 +673,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -520,10 +688,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -543,7 +713,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -557,10 +728,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -580,7 +753,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -594,10 +768,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -617,7 +793,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -631,10 +808,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -654,7 +833,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -668,10 +848,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -691,7 +873,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -705,10 +888,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -728,7 +913,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -742,10 +928,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -765,7 +953,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -779,10 +968,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -802,7 +993,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -816,10 +1008,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -839,7 +1033,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -853,10 +1048,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -876,7 +1073,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -890,10 +1088,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -913,7 +1113,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -927,10 +1128,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -950,7 +1153,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -964,10 +1168,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -987,7 +1193,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1001,10 +1208,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1024,7 +1233,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1038,10 +1248,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1061,7 +1273,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1075,10 +1288,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1098,7 +1313,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1112,10 +1328,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1135,7 +1353,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1149,10 +1368,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1172,7 +1393,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1186,10 +1408,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1209,7 +1433,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1223,10 +1448,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1246,7 +1473,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1260,10 +1488,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1283,7 +1513,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1297,10 +1528,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1320,7 +1553,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1334,10 +1568,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1357,7 +1593,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1371,10 +1608,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1394,7 +1633,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1408,10 +1648,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1431,7 +1673,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1445,10 +1688,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1468,7 +1713,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1482,10 +1728,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1505,7 +1753,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1519,10 +1768,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1542,7 +1793,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1556,10 +1808,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1579,7 +1833,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1593,10 +1848,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1616,7 +1873,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1630,10 +1888,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1653,7 +1913,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1667,10 +1928,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1690,7 +1953,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1704,10 +1968,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1727,7 +1993,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1741,10 +2008,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1764,7 +2033,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1778,10 +2048,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
+        ],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
@@ -1801,7 +2073,8 @@
         "warnings": [
             ""
         ]
-    }, {
+    },
+    {
         "actions": [
             ""
         ],
@@ -1815,47 +2088,12 @@
         "partnership": [
             ""
         ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
-        "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
-        },
-        "type": "",
-        "sources": [
-            ""
+        "references": [
+            {
+                "credit": "",
+                "url": ""
+            }
         ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    }, {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [{
-            "credit": "",
-            "url": ""
-        }],
         "recommendations": {
             "Infants (< 1 years)": "g/day",
             "Children (< 14 years)": "g/day",
