@@ -39,4 +39,5 @@
     <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
     <preference name="xwalkMode" value="embedded" />
     <preference name="xwalkMultipleApk" value="true" />
+    <plugin name="ionic-plugin-deploy" spec="~0.6.5" />
 </widget>
