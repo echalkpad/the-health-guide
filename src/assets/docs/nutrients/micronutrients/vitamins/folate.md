@@ -1,5 +1,5 @@
-# Vitamin B9 (Folate)
-Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
+# Vitamin B9 (Folic acid)
+Vitamin B9, Folic acid or Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - `Amino acid metabolism`;
