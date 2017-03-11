@@ -1,5 +1,5 @@
 # Vitamin B12 (Cobalamin)
-Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
+Vitamin B12 or Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.
 
 ## Primary goals
 - `Amino acid metabolism`;
