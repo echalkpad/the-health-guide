@@ -154,7 +154,6 @@
         "deficiencies": [
             "Apathy",
             "Birth problems",
-            "Blurred vision",
             "Cataract",
             "Concentration difficulties",
             "Digestive problems",
@@ -181,6 +180,7 @@
             "Skin scaling",
             "Tongue redness",
             "Tongue soreness",
+            "Vision problems",
             "Weakness",
             "Weight loss"
         ],
@@ -259,6 +259,7 @@
             "Digestion",
             "Energy",
             "Eyes",
+            "Fertility",
             "Growth",
             "Hair",
             "Headaches",
@@ -416,6 +417,7 @@
         "deficiencies": [
             "Abdominal pain",
             "Apathy",
+            "Colds",
             "Fatigue",
             "Infections",
             "Insomnia",
@@ -569,6 +571,7 @@
             "Metabolism",
             "Muscle tone",
             "Nervous system",
+            "Respiration",
             "Sex hormone formation"
         ],
         "name": "Vitamin B6 (Pyridoxine)",
