@@ -122,6 +122,7 @@
             "Optimism",
             "Nerves",
             "Reasoning",
+            "Sleep",
             "Stress",
             "Wernicke–Korsakoff syndrome"
         ],
@@ -268,7 +269,8 @@
             "Malaria",
             "Pregnancy",
             "Reasoning",
-            "Skin"
+            "Skin",
+            "Sleep"
         ],
         "warnings": [
             "Destroyed by sunlight",
@@ -393,7 +395,8 @@
             "Pellagra",
             "Memory",
             "Motivation",
-            "Skin"
+            "Skin",
+            "Sleep"
         ],
         "warnings": [
             "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
@@ -506,6 +509,7 @@
             "Nerves",
             "Optimism",
             "Skin",
+            "Sleep",
             "Stress"
         ],
         "warnings": [
@@ -516,42 +520,146 @@
     },
     {
         "actions": [
-            ""
+            "Pyridoxal-5-phosphate (PLP) coenzyme production",
+            "Protein and lipid metabolism via PLP",
+            "Choline, Methionine, Serine, Cysteine, Tryptophan, and vitamin B3 (Niacin) formation via PLP",
+            "Gamma-Aminobutyric acid (GABA) production via PLP",
+            "Arachidonic acid to Prostaglandin E2 conversion via PLP",
+            "Glycogen to glucose conversion (glycogenolysis) via PLP",
+            "Antibody formation via PLP",
+            "Hemoglobin formation via PLP",
+            "Norepinephrine, Acetylcholine, Gamma-Aminobutyric acid (GABA), Serotonin, and Histamine formation via PLP",
+            "Magnesium, Potassium, and Sodium balance",
+            "Gene expression via PLP"
         ],
         "deficiencies": [
-            ""
+            "Balance loss",
+            "Birth problems",
+            "Concentration difficulties",
+            "Confusion",
+            "Convulsions",
+            "Depression",
+            "Dizziness",
+            "Eye dryness",
+            "Fatigue",
+            "Hair loss",
+            "Headache",
+            "Hyperactivity",
+            "Infertility",
+            "Insomnia",
+            "Irritability",
+            "Low blood glucose",
+            "Muscle cramps",
+            "Nausea",
+            "Nervousness",
+            "Numbness",
+            "Skin itchiness",
+            "Skin oiliness",
+            "Skin rash",
+            "Skin redness",
+            "Skin scaling",
+            "Tongue soreness",
+            "Vision problems",
+            "Vomiting",
+            "Water retention",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Circulatory system",
+            "Metabolism",
+            "Muscle tone",
+            "Nervous system",
+            "Sex hormone formation"
         ],
-        "name": "",
+        "name": "Vitamin B6 (Pyridoxine)",
         "partnership": [
-            ""
+            "Choline",
+            "Copper",
+            "Iron",
+            "Magnesium",
+            "Tryptophan",
+            "Vitamin B-complex",
+            "Vitamin C"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Vitamin B6",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_B6"
+            },
+            {
+                "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin B6",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=108"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin B6",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin B6 -- Pyridoxine",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_B6_Pyridoxine/2128/1"
+            },
+            {
+                "credit": "MedlinePlus, Pyridoxine (Vitamin B6)",
+                "url": "https://medlineplus.gov/druginfo/natural/934.html"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report?nutrient1=415&nutrient2=&nutrient3=&&max=1000&subset=0&offset=0&sort=c&totCount=7669&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.3 mg/day",
+            "Children (< 14 years)": "1 mg/day",
+            "Men (> 14 years)": "1.7 mg/day",
+            "Women (> 14 years)": "1.5 mg/day",
+            "Pregnancy": "1.9 mg/day",
+            "Lactation": "2 mg/day"
         },
-        "type": "",
+        "type": "Essential vitamin",
         "sources": [
-            ""
+            "Herbs and spices",
+            "Whole grains",
+            "Peppers",
+            "Onions",
+            "Garlic",
+            "Mushrooms",
+            "Fish",
+            "Egg yolks",
+            "Nuts"
         ],
-        "summary": "",
+        "summary": "Vitamin B6 or Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
-            ""
+            "Anemia",
+            "Blood cholesterol",
+            "Blood glucose",
+            "Blood homocysteine",
+            "Breasts",
+            "Energy",
+            "Eyes",
+            "Heart",
+            "Immunity",
+            "Menstruation",
+            "Motivation",
+            "Muscles",
+            "Nerves",
+            "Optimism",
+            "Pregnancy",
+            "Skin",
+            "Sleep",
+            "Stress",
+            "Water balance"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Destroyed by sunlight and cooking"
         ]
     },
     {
