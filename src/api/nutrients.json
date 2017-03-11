@@ -57,6 +57,10 @@
                 "url": "https://en.wikipedia.org/wiki/Peripheral_neuropathy#Signs_and_symptoms"
             },
             {
+                "credit": "Wikipedia, Lethargy",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
                 "credit": "Wikipedia, Beriberi",
                 "url": "https://en.wikipedia.org/wiki/Beriberi#Signs_and_symptoms"
             },
@@ -171,13 +175,15 @@
             "Itching",
             "Learning difficulties",
             "Memory problems",
-            "Mouth mucous membranes inflammation or sensitivity",
-            "Mouth corners cracking or soreness",
+            "Mouth inflammation",
+            "Mouth soreness",
+            "Mouth corners and lips cracking",
             "Skin itchiness",
             "Skin oiliness",
             "Skin rash",
             "Skin redness",
             "Skin scaling",
+            "Throat soreness",
             "Tongue redness",
             "Tongue soreness",
             "Vision problems",
@@ -207,6 +213,14 @@
             {
                 "credit": "Wikipedia, Dermatitis",
                 "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Angular cheilitis",
+                "url": "https://en.wikipedia.org/wiki/Angular_cheilitis#Signs_and_symptoms"
             },
             {
                 "credit": "The world's healthiest foods, Vitamin B2 - Thiamin",
@@ -298,14 +312,18 @@
             "Diarrhea",
             "Digestive problems",
             "Fatigue",
+            "Hair loss",
             "Heart enlargement",
             "Insomnia",
             "Irritability",
             "Memory problems",
             "Numbness",
+            "Pain",
             "Skin rash",
             "Skin redness",
             "Skin sensitivity to light",
+            "Swelling",
+            "Tingling",
             "Tongue inflammation",
             "Weakness"
         ],
@@ -333,6 +351,10 @@
             },
             {
                 "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
                 "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
             },
             {
@@ -430,6 +452,7 @@
             "Skin rash",
             "Skin redness",
             "Stress",
+            "Tingling",
             "Vomiting"
         ],
         "functions": [
@@ -450,6 +473,10 @@
             },
             {
                 "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
                 "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
             },
             {
@@ -539,10 +566,13 @@
             "Birth problems",
             "Concentration difficulties",
             "Confusion",
+            "Conjunctivitis",
             "Convulsions",
             "Depression",
             "Dizziness",
+            "Eye burning",
             "Eye dryness",
+            "Eye redness",
             "Fatigue",
             "Hair loss",
             "Headache",
@@ -551,6 +581,9 @@
             "Insomnia",
             "Irritability",
             "Low blood glucose",
+            "Mouth corners and lips cracking",
+            "Mouth inflammation",
+            "Mouth soreness",
             "Muscle cramps",
             "Nausea",
             "Nervousness",
@@ -560,6 +593,7 @@
             "Skin rash",
             "Skin redness",
             "Skin scaling",
+            "Sleepiness",
             "Tongue soreness",
             "Vision problems",
             "Vomiting",
@@ -592,6 +626,14 @@
             {
                 "credit": "Wikipedia, Dermatitis",
                 "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Somnolence",
+                "url": "https://en.wikipedia.org/wiki/Somnolence"
             },
             {
                 "credit": "The world's healthiest foods, Vitamin B6",
@@ -667,42 +709,106 @@
     },
     {
         "actions": [
-            ""
+            "Fatty acids, Isoleucine, and Valine formation",
+            "Glucose formation (gluconeogenesis)",
+            "Gene expression"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Appetite loss",
+            "Birth problems",
+            "Conjunctivitis",
+            "Depression",
+            "Eye burning",
+            "Eye dryness",
+            "Eye redness",
+            "Fatigue",
+            "Hair loss",
+            "Hallucination",
+            "Mucous membranes inflammation",
+            "Muscle pain",
+            "Nail brittleness",
+            "Numbness and tingling",
+            "Skin driness",
+            "Skin rash around eyes, nose, and mouth",
+            "Skin redness",
+            "Skin scaling",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Cognition",
+            "Metabolism",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Vitamin B7 (Biotin)",
         "partnership": [
-            ""
+            "Vitamin B-complex"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Biotin",
+                "url": "https://en.wikipedia.org/wiki/Biotin"
+            },
+            {
+                "credit": "Wikipedia, Dermatitis",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
+                "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Biotin",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=42"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin B7",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamins: Biotin",
+                "url": "http://www.healthy.net/Health/Article/Biotin/2130"
+            },
+            {
+                "credit": "MedlinePlus, Biotin",
+                "url": "https://medlineplus.gov/druginfo/natural/313.html"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.006 mg/day",
+            "Children (< 14 years)": "0.02 mg/day",
+            "Men (> 14 years)": "0.03 mg/day",
+            "Women (> 14 years)": "0.03 mg/day",
+            "Pregnancy": "0.03 mg/day",
+            "Lactation": "0.035 mg/day"
         },
-        "type": "",
+        "type": "Essential vitamin",
         "sources": [
-            ""
+            "Yeast",
+            "Soybeans",
+            "Liver",
+            "Green vegetables",
+            "Nuts",
+            "Eggs"
         ],
-        "summary": "",
+        "summary": "Vitamin B7, Vitamin H, coenzyme R or Biotin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
-            ""
+            "Blood glucose",
+            "Energy",
+            "Growth",
+            "Hair",
+            "Motivation",
+            "Nails",
+            "Pregnancy",
+            "Skin"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites"
         ]
     },
     {
