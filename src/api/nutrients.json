@@ -111,7 +111,7 @@
             "Legumes"
         ],
         "summary": "Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "uses": [
             "Attention",
             "Concentration",
@@ -255,7 +255,7 @@
             "Pregnancy": "1.4 mg/day",
             "Lactation": "1.6 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Yeast",
             "Liver",
@@ -390,7 +390,7 @@
             "Pregnancy": "18 mg/day",
             "Lactation": "17 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Yeast",
             "Tuna",
@@ -512,7 +512,7 @@
             "Pregnancy": "6 mg/day",
             "Lactation": "7 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Mushrooms",
             "Egg yolks",
@@ -668,7 +668,7 @@
             "Pregnancy": "1.9 mg/day",
             "Lactation": "2 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Herbs and spices",
             "Whole grains",
@@ -788,7 +788,7 @@
             "Pregnancy": "0.03 mg/day",
             "Lactation": "0.035 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Yeast",
             "Soybeans",
@@ -919,7 +919,7 @@
             "Pregnancy": "0.8 mg/day",
             "Lactation": "0.6 g/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Leafy green vegetables",
             "Yeast",
@@ -1059,7 +1059,7 @@
             "Pregnancy": "0.0026 mg/day",
             "Lactation": "0.0028 mg/day"
         },
-        "type": "Essential vitamin",
+        "type": "Essential water-soluble vitamin",
         "sources": [
             "Meat",
             "Eggs"
@@ -1084,42 +1084,113 @@
     },
     {
         "actions": [
-            ""
+            "Retinal production",
+            "Retinoic acid production via Retinal",
+            "Rhodopsin (rods) formation via Retinal",
+            "Gene transcription via Retinoic acid",
+            "Cell growth and regeneration via Retinoic acid"
         ],
         "deficiencies": [
-            ""
+            "Birth problems",
+            "Colds",
+            "Diarrhea",
+            "Eye problems",
+            "Growth impairments in children",
+            "Gum problems",
+            "Infections",
+            "Night blindness",
+            "Skin problems",
+            "Tooth problems"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Bones",
+            "Cell growth",
+            "Epithelium",
+            "Vision"
         ],
-        "name": "",
+        "name": "Vitamin A",
         "partnership": [
-            ""
+            "Vitamin B3 (Niacin)",
+            "Vitamin C",
+            "Vitamin E",
+            "Zinc"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Vitamin A",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_A"
+            },
+            {
+                "credit": "Healthline, What's Causing This Eye Condition?",
+                "url": "http://www.healthline.com/health/eye-health"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin A",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=106"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin A",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin A -- Betacarotene",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_A_Betacarotene/1923/1"
+            },
+            {
+                "credit": "MedlinePlus, Vitamin A",
+                "url": "https://ods.od.nih.gov/factsheets/VitaminA-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Vitamin A (Retinol)",
+                "url": "http://umm.edu/health/medical/altmed/supplement/vitamin-a-retinol"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=320&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.5 mg/day",
+            "Children (< 14 years)": "0.6 mg/day",
+            "Men (> 14 years)": "0.9 mg/day",
+            "Women (> 14 years)": "0.7 mg/day",
+            "Pregnancy": "0.77 mg/day",
+            "Lactation": "1.3 mg/day"
         },
-        "type": "",
+        "type": "Essential fat-soluble vitamin",
         "sources": [
-            ""
+            "Liver",
+            "Chives",
+            "Peppers",
+            "Capsicum",
+            "Sweet potato",
+            "Carrots",
+            "Spinach",
+            "Kale",
+            "Broccoli",
+            "Pumpkin"
         ],
-        "summary": "",
+        "summary": "Vitamin A is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.",
         "uses": [
-            ""
+            "Bones",
+            "Eyes",
+            "Growth",
+            "Hair",
+            "Immunity",
+            "Nails",
+            "Pregnancy",
+            "Skin",
+            "Teeth",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess iron, mineral oil",
+            "Metabolism requires fat, Vitamin E, and Zinc"
         ]
     },
     {
