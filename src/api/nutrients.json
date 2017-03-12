@@ -1213,7 +1213,7 @@
             "Norepinephrine (Noradrenaline) and Epinephrine (Adrenaline) stress hormones formation",
             "Thyroxine (T4 thyroid hormone) formation",
             "Antibody formation",
-            "Blood clotting",
+            "Blood coagulation",
             "Reducing agent"
         ],
         "deficiencies": [
@@ -1453,7 +1453,7 @@
     },
     {
         "actions": [
-            "Blood clotting",
+            "Blood coagulation",
             "Red blood cell formation",
             "Blood vessels",
             "HDL formation",
@@ -1476,6 +1476,7 @@
             "Fatigue",
             "Hair driness",
             "Hair dullness",
+            "High blood cholesterol",
             "High blood pressure",
             "Infertility",
             "Kidney problems",
@@ -1556,6 +1557,7 @@
         "summary": "Vitamin E or alpha-Tocopherol is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.",
         "uses": [
             "Blood cholesterol",
+            "Blood vessels",
             "Breasts",
             "Concentration",
             "Energy",
@@ -1577,82 +1579,182 @@
     },
     {
         "actions": [
-            ""
+            "Gamma-carboxyglutamic acid (GLA) production",
+            "Blood coagulation via GLA",
+            "Calcium and Phosphorus absorption and metabolism",
+            "Prothrombin to thrombin convertion via GLA"
         ],
         "deficiencies": [
-            ""
+            "Bleeding",
+            "Bone problems",
         ],
         "functions": [
-            ""
+            "Bones",
+            "Circulatory system"
         ],
-        "name": "",
+        "name": "Vitamin K",
         "partnership": [
-            ""
+            "Calcium",
+            "Vitamin E"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Vitamin K",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_K"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin K",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=112"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin K",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin K",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2140"
+            },
+            {
+                "credit": "MedlinePlus, Vitamin K",
+                "url": "https://ods.od.nih.gov/factsheets/VitaminK-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Vitamin K",
+                "url": "http://umm.edu/health/medical/altmed/supplement/vitamin-k"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.0025 mg/day",
+            "Children (< 14 years)": "0.06 mg/day",
+            "Men (> 14 years)": "0.12 mg/day",
+            "Women (> 14 years)": "0.09 mg/day",
+            "Pregnancy": "0.09 mg/day",
+            "Lactation": "0.09 mg/day"
         },
-        "type": "",
+        "type": "Essential fat-soluble vitamin",
         "sources": [
-            ""
+            "Leafy green vegetables",
+            "Egg yolks",
+            "Liver"
         ],
-        "summary": "",
+        "summary": "Vitamin K is an essential fat-soluble nutrient, hence, it `requires` fat to be absorbed and can be deposited within tissues",
         "uses": [
-            ""
+            "Blood vessels",
+            "Bones",
+            "Menstruation",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda), mineral oil, rancid fat, and freezing",
+            "Metabolism requires fat and Vitamin E"
         ]
     },
     {
         "actions": [
-            ""
+            "Acetylcholine and Phosphatidylcholine production",
+            "Lipid metabolism",
+            "Blood fat metabolism and balance via Phosphatidylcholine",
+            "Lecithin formation via Phosphatidylcholine",
+            "Cell signaling via Acetylcholine",
+            "Myelin formation via Acetylcholine",
+            "Liver and gallbladder function via Acetylcholine"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Balance loss",
+            "Concentration difficulties",
+            "Depression",
+            "Fatigue",
+            "High blood cholesterol",
+            "High blood pressure",
+            "Irritability",
+            "Learning difficulties",
+            "Liver problems",
+            "Memory problems",
+            "Mood swings",
+            "Muscle problems",
+            "Speaking difficulties",
+            "Walking difficulties"
         ],
         "functions": [
-            ""
+            "Brain",
+            "Circulatory system",
+            "Cognition",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Choline",
         "partnership": [
-            ""
+            "Vitamin B-complex"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Choline",
+                "url": "https://en.wikipedia.org/wiki/Choline"
+            },
+            {
+                "credit": "The world's healthiest foods, Choline",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Choline",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Choline",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2131"
+            },
+            {
+                "credit": "Laura Dolson, Verywell, Choline: Food for Thought",
+                "url": "https://www.verywell.com/choline-food-for-thought-2242211"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=421&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "150 mg/day",
+            "Children (< 14 years)": "350 mg/day",
+            "Men (> 14 years)": "550 mg/day",
+            "Women (> 14 years)": "425 mg/day",
+            "Pregnancy": "450 mg/day",
+            "Lactation": "550 mg/day"
         },
-        "type": "",
+        "type": "Essential water-soluble vitamin",
         "sources": [
-            ""
+            "Eggs",
+            "Liver",
+            "Mushrooms",
+            "Soy",
+            "Fish",
+            "Lean meat"
         ],
-        "summary": "",
+        "summary": "Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is related to the B Vitamins, but not considered yet one of them.",
         "uses": [
-            ""
+            "Attention",
+            "Blood cholesterol",
+            "Blood homocysteine",
+            "Concentration",
+            "Constipation",
+            "Detoxification",
+            "Heart",
+            "Learning",
+            "Memory",
+            "Motivation",
         ],
         "warnings": [
-            ""
+            "Metabolism requires Manganese",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Destroyed by cooking"
         ]
     },
     {
