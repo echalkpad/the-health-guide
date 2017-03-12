@@ -135,12 +135,12 @@
             "Degraded by thermolabile thiaminases from raw fish and shellfish",
             "Degraded by dry heat cooking",
             "Destroyed by boiling and moist heat cooking",
-            "Absorption impaired by caffeic acid from coffee, agan oil, thyme, sage, spearmint",
-            "Absorption impaired by chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea",
-            "Absorption impaired by tannic acid from commercial beverages",
-            "Absorption impaired by quercitin",
-            "Absorption impaired by rutin",
-            "Absorption impaired by alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery",
+            "Absorption impaired by sedentarism,  caffeic acid from coffee, agan oil, thyme, sage, spearmint",
+            "Absorption impaired by sedentarism,  chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea",
+            "Absorption impaired by sedentarism,  tannic acid from commercial beverages",
+            "Absorption impaired by sedentarism,  quercitin",
+            "Absorption impaired by sedentarism,  rutin",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery",
             "Metabolism requires Manganese"
         ]
     },
@@ -289,8 +289,8 @@
         ],
         "warnings": [
             "Destroyed by sunlight",
-            "Absorption impaired by excess copper",
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+            "Absorption impaired by sedentarism,  excess copper",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
@@ -422,7 +422,7 @@
             "Sleep"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
         ]
     },
     {
@@ -544,7 +544,7 @@
         "warnings": [
             "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda) and by dry heat cooking",
             "Degraded 33% by cooking",
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
@@ -557,7 +557,7 @@
             "Glycogen to glucose conversion (glycogenolysis) via PLP",
             "Antibody formation via PLP",
             "Hemoglobin formation via PLP",
-            "Norepinephrine, Acetylcholine, Gamma-Aminobutyric acid (GABA), Serotonin, and Histamine formation via PLP",
+            "Norepinephrine (Noradrenaline), Acetylcholine, Gamma-Aminobutyric acid (GABA), Serotonin, and Histamine formation via PLP",
             "Magnesium, Potassium, and Sodium balance",
             "Gene expression via PLP"
         ],
@@ -703,7 +703,7 @@
             "Water balance"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by sunlight and cooking"
         ]
     },
@@ -809,7 +809,7 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites"
         ]
     },
     {
@@ -952,7 +952,7 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by sunlight and cooking",
             "Destroyed by acids"
         ]
@@ -1015,7 +1015,7 @@
         ],
         "references": [
             {
-                "credit": "Vitamin B12",
+                "credit": "Wikipedia, Vitamin B12",
                 "url": "https://en.wikipedia.org/wiki/Vitamin_B12"
             },
             {
@@ -1077,7 +1077,7 @@
             "Optimism"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda) and by dry heat cooking",
             "Degraded by sunlight"
         ]
@@ -1113,12 +1113,13 @@
         "partnership": [
             "Vitamin B3 (Niacin)",
             "Vitamin C",
+            "Vitamin D",
             "Vitamin E",
             "Zinc"
         ],
         "references": [
             {
-                "credit": "Vitamin A",
+                "credit": "Wikipedia, Vitamin A",
                 "url": "https://en.wikipedia.org/wiki/Vitamin_A"
             },
             {
@@ -1189,48 +1190,262 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess iron, mineral oil",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess iron, mineral oil",
             "Metabolism requires fat, Vitamin E, and Zinc"
         ]
     },
     {
         "actions": [
-            ""
+            "Iron absorption and metabolism",
+            "Protein, carbohydrate, and lipid metabolism",
+            "Protein and lipid formation",
+            "Blood vessels",
+            "Interferon formation",
+            "Carnitine formation",
+            "Proline to Hydroxyproline convertion",
+            "Lysine to Hydroxylisine convertion",
+            "Tryptophan to 5-Hydroxytryptophan convertion",
+            "Vitamin B9 (Folic acid) to Tetrahydrofolic acid convertion",
+            "Dopamine and epinephrine release via Tyrosine metabolism",
+            "Serotonin release via Tryptophan metabolism",
+            "Norepinephrine (Noradrenaline) and Epinephrine (Adrenaline) stress hormones formation",
+            "Thyroxine (T4 thyroid hormone) formation",
+            "Antibody formation",
+            "Reducing agent"
         ],
         "deficiencies": [
-            ""
+            "Anemia",
+            "Apathy",
+            "Appetite loss",
+            "Balance loss",
+            "Bleeding",
+            "Colds",
+            "Concentration difficulties",
+            "Depression",
+            "Dizziness",
+            "Fatigue",
+            "Growth impairments in children",
+            "Hair driness",
+            "Infections",
+            "Joint redness",
+            "Joint swelling",
+            "Joint tenderness",
+            "Joint warmth",
+            "Mouth inflammation",
+            "Pain",
+            "Skin rash",
+            "Shortness of breath",
+            "Tooth problems",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Bones",
+            "Circulatory system",
+            "Collagen",
+            "Muscle tone",
+            "Respiration"
         ],
-        "name": "",
+        "name": "Vitamin C (Ascorbic acid)",
         "partnership": [
-            ""
+            "Chromium",
+            "Iron",
+            "Vitamin A",
+            "Vitamin B-complex",
+            "Vitamin E",
+            "Selenium",
+            "Zinc"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Vitamin C",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_C"
+            },
+            {
+                "credit": "Wikipedia, Scurvy",
+                "url": "https://en.wikipedia.org/wiki/Scurvy#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Lethargy",
+                "url": "https://en.wikipedia.org/wiki/Lethargy#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin C",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=109"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin C",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin C",
+                "url": "https://www.healthy.net/Health/Article/Vitamin_C/2134"
+            },
+            {
+                "credit": "MedlinePlus, Vitamin C",
+                "url": "https://ods.od.nih.gov/factsheets/VitaminC-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Vitamin C (Ascorbic acid)",
+                "url": "http://umm.edu/health/medical/altmed/supplement/vitamin-c-ascorbic-acid"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=401&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "50 mg/day",
+            "Children (< 14 years)": "50 mg/day",
+            "Men (> 14 years)": "90 mg/day",
+            "Women (> 14 years)": "75 mg/day",
+            "Pregnancy": "85 mg/day",
+            "Lactation": "120 mg/day"
         },
-        "type": "",
+        "type": "Essential water-soluble vitamin",
         "sources": [
-            ""
+            "Peppers",
+            "Acerola",
+            "Herbs and spices",
+            "Kale",
+            "Broccoli",
+            "Kiwifruit",
+            "Lemons",
+            "Oranges",
+            "Grapefruit",
+            "Pomelo",
+            "Papaya",
+            "Strawberries",
+            "Red cabbage",
+            "Clementines",
+            "Cauliflower"
         ],
-        "summary": "",
+        "summary": "Vitamin C or Ascorbic acid is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Blood glucose",
+            "Blood vessels",
+            "Bones",
+            "Constipation",
+            "Detoxification",
+            "Energy",
+            "Eyes",
+            "Growth",
+            "Heart",
+            "Immunity",
+            "Motivation",
+            "Muscles",
+            "Optimism",
+            "Scurvy",
+            "Skin",
+            "Teeth",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, mercury, fever, excess water",
+            "Destroyed by sunlight, heat, cooking, and alkalines (e.g baking soda)",
+            "Degraded by Copper",
+            "Metabolism requires Manganese"
+        ]
+    },
+    {
+        "actions": [
+            "Calcium and Phosphorus absorption and metabolism via Parathyroid hormone (PTH)"
+        ],
+        "deficiencies": [
+            "Bone problems",
+            "Depression",
+            "Dizziness",
+            "Growth impairments in children",
+            "Muscle problems",
+            "Skin problems",
+            "Tooth problems",
+        ],
+        "functions": [
+            "Antioxidant",
+            "Bones",
+            "Circulatory system",
+            "Collagen",
+            "Muscle tone"
+        ],
+        "name": "Vitamin D (Calciferol)",
+        "partnership": [
+            "Calcium",
+            "Phosphorus",
+            "Vitamin A"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Vitamin D",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_D"
+            },
+            {
+                "credit": "Wikipedia, Vitamin D deficiency",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_D_deficiency#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin D",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=110"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin D",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin D",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_D/2135/1"
+            },
+            {
+                "credit": "MedlinePlus, Vitamin D",
+                "url": "https://ods.od.nih.gov/factsheets/VitaminD-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Vitamin D",
+                "url": "http://umm.edu/health/medical/altmed/supplement/vitamin-d"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=328&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "0.01 mg/day",
+            "Children (< 14 years)": "0.015 mg/day",
+            "Men (> 14 years)": "0.015 mg/day",
+            "Women (> 14 years)": "0.015 mg/day",
+            "Pregnancy": "0.015 mg/day",
+            "Lactation": "0.015 mg/day"
+        },
+        "type": "Essential fat-soluble vitamin",
+        "sources": [
+            "Cod liver",
+            "Mushrooms",
+            "Fish",
+            "Eggs"
+        ],
+        "summary": "Vitamin D or Calciferol is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.",
+        "uses": [
+            "Bones",
+            "Growth",
+            "Heart",
+            "Immunity",
+            "Optimism",
+            "Muscles",
+            "Skin",
+            "Sleep",
+            "Teeth"
+        ],
+        "warnings": [
+            "Absorption impaired by mineral oil",
+            "Metabolism requires fat and Magnesium"
         ]
     },
     {
@@ -1270,47 +1485,7 @@
             ""
         ],
         "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "",
-                "url": ""
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
+            
         ]
     },
     {
