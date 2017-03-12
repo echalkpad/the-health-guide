@@ -1088,7 +1088,8 @@
             "Retinoic acid production via Retinal",
             "Rhodopsin (rods) formation via Retinal",
             "Gene transcription via Retinoic acid",
-            "Cell growth and regeneration via Retinoic acid"
+            "Cell growth and regeneration via Retinoic acid",
+            "Reducing agent"
         ],
         "deficiencies": [
             "Birth problems",
@@ -1115,6 +1116,7 @@
             "Vitamin C",
             "Vitamin D",
             "Vitamin E",
+            "Selenium",
             "Zinc"
         ],
         "references": [
@@ -1211,6 +1213,7 @@
             "Norepinephrine (Noradrenaline) and Epinephrine (Adrenaline) stress hormones formation",
             "Thyroxine (T4 thyroid hormone) formation",
             "Antibody formation",
+            "Blood clotting",
             "Reducing agent"
         ],
         "deficiencies": [
@@ -1363,7 +1366,7 @@
             "Growth impairments in children",
             "Muscle problems",
             "Skin problems",
-            "Tooth problems",
+            "Tooth problems"
         ],
         "functions": [
             "Antioxidant",
@@ -1450,42 +1453,126 @@
     },
     {
         "actions": [
-            ""
+            "Blood clotting",
+            "Red blood cell formation",
+            "Blood vessels",
+            "HDL formation",
+            "LDL metabolism",
+            "Vitamin A and Vitamin K metabolism and protection",
+            "Blood fat metabolism and balance",
+            "Polyunsaturated fat protection",
+            "Reducing agent",
+            "Gene expression"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Balance loss",
+            "Bleeding",
+            "Concentration difficulties",
+            "Depression",
+            "Digestive problems",
+            "Dizziness",
+            "Eye problems",
+            "Fatigue",
+            "Hair driness",
+            "Hair dullness",
+            "High blood pressure",
+            "Infertility",
+            "Kidney problems",
+            "Liver problems",
+            "Muscle problems",
+            "Prostate enlargement",
+            "Red blood cell fragility",
+            "Skin problems",
+            "Speaking difficulties",
+            "Walking difficulties",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Circulatory system",
+            "Muscle tone",
+            "Respiration"
         ],
-        "name": "",
+        "name": "Vitamin E (alpha-Tocopherol)",
         "partnership": [
-            ""
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin K",
+            "Selenium",
+            "Zinc"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Vitamin E",
+                "url": "https://en.wikipedia.org/wiki/Vitamin_E"
+            },
+            {
+                "credit": "The world's healthiest foods, Vitamin E",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=111"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Vitamin E",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Vitamins: Vitamin E",
+                "url": "http://www.healthy.net/Health/Article/Vitamin_E/2136/1"
+            },
+            {
+                "credit": "MedlinePlus, Vitamin E",
+                "url": "https://ods.od.nih.gov/factsheets/VitaminE-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Vitamin E",
+                "url": "http://umm.edu/health/medical/altmed/supplement/vitamin-e"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=323&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "5 mg/day",
+            "Children (< 14 years)": "11 mg/day",
+            "Men (> 14 years)": "15 mg/day",
+            "Women (> 14 years)": "15 mg/day",
+            "Pregnancy": "15 mg/day",
+            "Lactation": "19 mg/day"
         },
-        "type": "",
+        "type": "Essential fat-soluble vitamin",
         "sources": [
-            ""
+            "Vegetable oils",
+            "Seeds",
+            "Nuts",
+            "Spinach",
+            "Broccoli",
+            "Kiwifruit"
         ],
-        "summary": "",
+        "summary": "Vitamin E or alpha-Tocopherol is an essential fat-soluble nutrient, hence, it requires fat to be absorbed and can be deposited within tissues.",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Breasts",
+            "Concentration",
+            "Energy",
+            "Eyes",
+            "Fertility",
+            "Immunity",
+            "Menstruation",
+            "Muscles",
+            "Optimism",
+            "Skin",
+            "Varicose veins",
+            "Wounds"
         ],
         "warnings": [
-            
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, stress, pharmaceutical drugs, mineral oil, rancid fat, chlorine",
+            "Metabolism requires fat",
+            "Degraded by alkalines"
         ]
     },
     {
