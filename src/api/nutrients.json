@@ -1043,7 +1043,7 @@
                 "url": "http://www.healthy.net/Health/Article/Vitamin_B12_Cobalamin/1924/1"
             },
             {
-                "credit": "MedlinePlus, Vitamin B12",
+                "credit": "National Institutes of Health, Vitamin B12",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminB12-Consumer/"
             },
             {
@@ -1145,7 +1145,7 @@
                 "url": "http://www.healthy.net/Health/Article/Vitamin_A_Betacarotene/1923/1"
             },
             {
-                "credit": "MedlinePlus, Vitamin A",
+                "credit": "National Institutes of Health, Vitamin A",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminA-Consumer"
             },
             {
@@ -1171,7 +1171,7 @@
             "Chives",
             "Peppers",
             "Capsicum",
-            "Sweet potato",
+            "Sweet potatoes",
             "Carrots",
             "Spinach",
             "Kale",
@@ -1289,7 +1289,7 @@
                 "url": "https://www.healthy.net/Health/Article/Vitamin_C/2134"
             },
             {
-                "credit": "MedlinePlus, Vitamin C",
+                "credit": "National Institutes of Health, Vitamin C",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminC-Consumer"
             },
             {
@@ -1407,7 +1407,7 @@
                 "url": "http://www.healthy.net/Health/Article/Vitamin_D/2135/1"
             },
             {
-                "credit": "MedlinePlus, Vitamin D",
+                "credit": "National Institutes of Health, Vitamin D",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminD-Consumer"
             },
             {
@@ -1456,8 +1456,8 @@
             "Blood coagulation",
             "Red blood cell formation",
             "Blood vessels",
-            "HDL formation",
-            "LDL metabolism",
+            "High-density lipoprotein (HDL) formation",
+            "Low-density lipoprotein (LDL) metabolism",
             "Vitamin A and Vitamin K metabolism and protection",
             "Blood fat metabolism and balance",
             "Polyunsaturated fat protection",
@@ -1525,7 +1525,7 @@
                 "url": "http://www.healthy.net/Health/Article/Vitamin_E/2136/1"
             },
             {
-                "credit": "MedlinePlus, Vitamin E",
+                "credit": "National Institutes of Health, Vitamin E",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminE-Consumer"
             },
             {
@@ -1619,7 +1619,7 @@
                 "url": "http://www.healthy.net/scr/article.aspx?Id=2140"
             },
             {
-                "credit": "MedlinePlus, Vitamin K",
+                "credit": "National Institutes of Health, Vitamin K",
                 "url": "https://ods.od.nih.gov/factsheets/VitaminK-Consumer"
             },
             {
@@ -1811,8 +1811,8 @@
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
                 "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
@@ -1823,7 +1823,7 @@
                 "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
             },
             {
-                "credit": "MedlinePlus, Calcium",
+                "credit": "National Institutes of Health, Calcium",
                 "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
             },
             {
@@ -1902,9 +1902,21 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
-            }
+                "credit": "Wikipedia, Chlorine",
+                "url": "https://en.wikipedia.org/wiki/Chlorine"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Chlorine",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Chloride",
+                "url": "http://www.healthy.net/Health/Article/Chloride/2050"
+            },
         ],
         "recommendations": {
             "Infants (< 1 years)": "1000 mg/day",
@@ -1937,6 +1949,103 @@
     },
     {
         "actions": [
+            "Glucose Tolerance Factor (GTF) formation",
+            "Carbohydrate metabolism via GTF",
+            "High-density lipoprotein (HDL) formation",
+            "Low-density lipoprotein (LDL) metabolism"
+        ],
+        "deficiencies": [
+            "Anxiety",
+            "Balance loss",
+            "Chest pain",
+            "Dizziness",
+            "Fatigue",
+            "Growth impairments in children",
+            "Headache",
+            "Heart palpitations",
+            "High blood cholesterol",
+            "Irregular hearbeat",
+            "Nausea",
+            "Numbness",
+            "Shortness of breath",
+            "Speaking difficulties",
+            "Vision problems",
+            "Walking difficulties",
+            "Weakness"
+        ],
+        "functions": [
+            "Circulatory system",
+            "Metabolism"
+        ],
+        "name": "Chromium (Cr)",
+        "partnership": [
+            "Vitamin B3 (Niacin)"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Chromium",
+                "url": "https://en.wikipedia.org/wiki/Chromium"
+            },
+            {
+                "credit": "Wikipedia, Atherosclerosis",
+                "url": "https://en.wikipedia.org/wiki/Atherosclerosis#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Chromium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=51"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Chromium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Chromium",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2053"
+            },
+            {
+                "credit": "National Institutes of Health, Chromium",
+                "url": "https://ods.od.nih.gov/factsheets/Chromium-HealthProfessional/"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Chromium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/chromium"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "0.0055 mg/day",
+            "Children (< 14 years)": "0.025 mg/day",
+            "Men (> 14 years)": "0.035 mg/day",
+            "Women (> 14 years)": "0.025 mg/day",
+            "Pregnancy": "0.03 mg/day",
+            "Lactation": "0.04 mg/day"
+        },
+        "type": "Essential trace element",
+        "sources": [
+            "Yeast",
+            "Liver",
+            "Whole wheat",
+            "Peppers",
+            "Potatoes",
+            "Apples",
+            "Bananas",
+            "Spinach"
+        ],
+        "summary": "Chromium (Cr) is an essential trace element",
+        "uses": [
+            "Blood cholesterol",
+            "Blood glucose",
+            "Energy"
+        ],
+        "warnings": [
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Iron, phytic acid (e.g. from whole grains, seeds, nuts, legumes)"
+        ]
+    },
+    {
+        "actions": [
             ""
         ],
         "deficiencies": [
@@ -1951,8 +2060,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
+            {
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -1991,8 +2132,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
+            {
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2031,8 +2204,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
+            {
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2071,8 +2276,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
+            {
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2111,8 +2348,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
+            {
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2151,48 +2420,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
+                "credit": "Wikipedia, Calcium",
+                "url": "https://en.wikipedia.org/wiki/Calcium"
+            },
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Hypocalcaemia",
+                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Calcium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Vitamins",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+            },
+            {
+                "credit": "National Institutes of Health, Calcium",
+                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
