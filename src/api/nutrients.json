@@ -2052,18 +2052,24 @@
             "Hydrogen peroxide (H2O2) catalysation via SOD (antioxidant protection)",
             "Myelin formation",
             "Tyrosine to melanin convertion",
-            "Histamine metabolism via Histaminase"
+            "Histamine metabolism via Histaminase",
+            "Triiodothyronine (T3 thyroid hormone) to Thyroxine (T4 thyroid hormone) convertion",
         ],
         "deficiencies": [
             "Anemia",
             "Bone problems",
+            "Colds",
             "Concentration difficulties",
             "Depression",
+            "Diarrhea",
             "Dizziness",
             "Fever",
             "Growth impairments in children",
             "Gum problems",
+            "Hair loss",
+            "High blood cholesterol",
             "Infections",
+            "Irregular hearbeat",
             "Irritability",
             "Learning difficulties",
             "Low blood pressure",
@@ -2080,7 +2086,8 @@
             "Cell growth",
             "Collagen",
             "Circulatory system",
-            "Respiration"
+            "Respiration",
+            "Thyroid"
         ],
         "name": "Copper (Cu)",
         "partnership": [
@@ -2089,7 +2096,8 @@
             "Vitamin B6 (Pyridoxine)",
             "Vitamin B9 (Folic acid)",
             "Vitamin B12 (Cobalamin)",
-            "Vitamin C"
+            "Vitamin C",
+            "Zinc"
         ],
         "references": [
             {
@@ -2179,11 +2187,13 @@
         "deficiencies": [
             "Apathy",
             "Cold extremities",
+            "Colds",
             "Deafness",
             "Depression",
             "Goiter",
             "Growth impairments in children",
             "Hair driness",
+            "Hair loss",
             "Heart palpitations",
             "High blood pressure",
             "Infections",
@@ -2204,7 +2214,9 @@
         ],
         "name": "Iodine (I)",
         "partnership": [
-            "Selenium"
+            "Copper",
+            "Selenium",
+            "Zinc"
         ],
         "references": [
             {
@@ -2288,7 +2300,7 @@
             "Weight loss"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw foods ()e.g. nuts and cabbage"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw foods (e.g. nuts and cabbage)"
         ]
     },
     {
