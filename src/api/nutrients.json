@@ -1767,8 +1767,10 @@
         ],
         "deficiencies": [
             "Bleeding",
+            "Birth problems",
             "Bone problems",
             "Convulsions",
+            "Growth impairments in children",
             "Heart palpitations",
             "High blood pressure",
             "Insomnia",
@@ -1857,6 +1859,7 @@
             "Heart",
             "Menstruation",
             "Muscles",
+            "Pregnancy",
             "Teeth",
             "Wounds"
         ],
