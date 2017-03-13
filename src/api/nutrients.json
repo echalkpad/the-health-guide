@@ -1759,7 +1759,7 @@
     },
     {
         "actions": [
-            "pH levels",
+            "pH balance",
             "Electrical conduction system of the heart",
             "Blood coagulation",
             "Bone and tooth development",
@@ -1870,17 +1870,35 @@
     },
     {
         "actions": [
-            ""
+            "Acetylcholine formation",
+            "Cell signaling via Acetylcholine",
+            "pH balance",
+            "Hydrochloric acid (HCL) formation",
+            "Fluid balance"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Appetite loss",
+            "Concentration difficulties",
+            "Depression",
+            "Digestive problems",
+            "Fatigue",
+            "Reflex decrease",
+            "Sleepiness",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cognition",
+            "Circulatory system",
+            "Digestion",
+            "Muscle tone",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Chloride (Cl)",
         "partnership": [
-            ""
+            "Choline",
+            "Sodium",
+            "Vitamin B5 (Pantothenic acid)"
         ],
         "references": [
             {
@@ -1889,23 +1907,32 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "1000 mg/day",
+            "Children (< 14 years)": " 1700 mg/day",
+            "Men (> 14 years)": "2300 mg/day",
+            "Women (> 14 years)": "2300 mg/day",
+            "Pregnancy": "2300 mg/day",
+            "Lactation": "2300 mg/day"
         },
-        "type": "",
+        "type": "Essential mineral element",
         "sources": [
-            ""
+            "Table salt"
         ],
-        "summary": "",
+        "summary": "Chloride (Cl) or Chlorine is an essential mineral element",
         "uses": [
-            ""
+            "Attention",
+            "Concentration",
+            "Detoxification",
+            "Digestion",
+            "Energy",
+            "Motivation",
+            "Muscles",
+            "Potassium preservation",
+            "Water balance"
         ],
         "warnings": [
-            ""
+            "Metabolism requires Sodium",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, stress, pharmaceutical drugse"
         ]
     },
     {
