@@ -135,12 +135,7 @@
             "Degraded by thermolabile thiaminases from raw fish and shellfish",
             "Degraded by dry heat cooking",
             "Destroyed by boiling and moist heat cooking",
-            "Absorption impaired by sedentarism,  caffeic acid from coffee, agan oil, thyme, sage, spearmint",
-            "Absorption impaired by sedentarism,  chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea",
-            "Absorption impaired by sedentarism,  tannic acid from commercial beverages",
-            "Absorption impaired by sedentarism,  quercitin",
-            "Absorption impaired by sedentarism,  rutin",
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, stress, fever, pharmaceutical drugs, surgery",
+            "Absorption impaired by sedentarism, caffeic acid from coffee, argan oil, thyme, sage, spearmint, chlorogenic acid from Hibiscus, potatoes, flesh of eggplants, peaches, prunes, green coffee, green tea, tannic acid from commercial beverages, quercitin, rutin, fever, surgery, stress, tobacco, sugar, alcohol",
             "Metabolism requires Manganese"
         ]
     },
@@ -289,8 +284,7 @@
         ],
         "warnings": [
             "Destroyed by sunlight",
-            "Absorption impaired by sedentarism,  excess copper",
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess copper"
         ]
     },
     {
@@ -1749,7 +1743,8 @@
             "Heart",
             "Learning",
             "Memory",
-            "Motivation"
+            "Motivation",
+            "Reasoning"
         ],
         "warnings": [
             "Metabolism requires Manganese",
@@ -1916,7 +1911,7 @@
             {
                 "credit": "Elson Haas M. MD, Healthy.net, Minerals: Chloride",
                 "url": "http://www.healthy.net/Health/Article/Chloride/2050"
-            },
+            }
         ],
         "recommendations": {
             "Infants (< 1 years)": "1000 mg/day",
@@ -1950,7 +1945,7 @@
     {
         "actions": [
             "Glucose Tolerance Factor (GTF) formation",
-            "Carbohydrate metabolism via GTF",
+            "Carbohydrate and lipid metabolism via GTF",
             "High-density lipoprotein (HDL) formation",
             "Low-density lipoprotein (LDL) metabolism"
         ],
@@ -2038,7 +2033,10 @@
         "uses": [
             "Blood cholesterol",
             "Blood glucose",
-            "Energy"
+            "Blood vessels",
+            "Diabetes",
+            "Energy",
+            "Heart"
         ],
         "warnings": [
             "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Iron, phytic acid (e.g. from whole grains, seeds, nuts, legumes)"
@@ -2046,54 +2044,89 @@
     },
     {
         "actions": [
-            ""
+            "Histaminase formation",
+            "Superoxide Dismutase (SOD) formation",
+            "Iron absorption and metabolism",
+            "Red blood cell formation",
+            "Vitamin C metabolism",
+            "Hydrogen peroxide (H2O2) catalysation via SOD (antioxidant protection)",
+            "Myelin formation",
+            "Tyrosine to melanin convertion",
+            "Histamine metabolism via Histaminase"
         ],
         "deficiencies": [
-            ""
+            "Anemia",
+            "Bone problems",
+            "Concentration difficulties",
+            "Depression",
+            "Dizziness",
+            "Fever",
+            "Growth impairments in children",
+            "Gum problems",
+            "Infections",
+            "Irritability",
+            "Learning difficulties",
+            "Low blood pressure",
+            "Nausea",
+            "Nervousness",
+            "Respiratory problems",
+            "Skin problems",
+            "Swallowing difficulties",
+            "Vomiting",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Cell growth",
+            "Collagen",
+            "Circulatory system",
+            "Respiration"
         ],
-        "name": "",
+        "name": "Copper (Cu)",
         "partnership": [
-            ""
+            "Iron",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin B9 (Folic acid)",
+            "Vitamin B12 (Cobalamin)",
+            "Vitamin C"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Copper",
+                "url": "https://en.wikipedia.org/wiki/Copper"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+                "credit": "Wikipedia, Superoxide dismutase",
+                "url": "https://en.wikipedia.org/wiki/Superoxide_dismutase"
             },
             {
-                "credit": "The world's healthiest foods, Calcium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+                "credit": "Wikipedia, Neutropenia",
+                "url": "https://en.wikipedia.org/wiki/Neutropenia#Signs_and_symptoms"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "The world's healthiest foods, Copper",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=53"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Copper",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Copper",
                 "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
             },
             {
-                "credit": "National Institutes of Health, Calcium",
-                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
-            },
-            {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Copper",
+                "url": "http://umm.edu/health/medical/altmed/supplement/copper"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=312&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2104,88 +2137,158 @@
             "Pregnancy": "g/day",
             "Lactation": "g/day"
         },
-        "type": "",
+        "type": "Essential trace element",
         "sources": [
-            ""
+            "Liver",
+            "Cacao",
+            "Nuts",
+            "Seeds",
+            "Shellfish",
+            "Herbs and spices",
+            "Lentils"
         ],
-        "summary": "",
+        "summary": "Copper (Cu) is an essential trace element",
         "uses": [
-            ""
+            "Attention",
+            "Blood vessels",
+            "Bones",
+            "Concentration",
+            "Energy",
+            "Hair",
+            "Immunity",
+            "Learning",
+            "Muscles",
+            "Nerves",
+            "Skin",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Iron, excess Zinc, Molybdenum, Vitamin C, Manganese"
         ]
     },
     {
         "actions": [
-            ""
+            "Triiodothyronine (T3 thyroid hormone) and Thyroxine (T4 thyroid hormone) formation",
+            "Thermoregulation (body temperature) via T4",
+            "Metabolism via T3 and T4",
+            "Cell growth via T3 and T4",
+            "Fatty acid and cholesterol formation via T3 and T4",
+            "Protein formation via T3 and T4",
+            "Carotene to Vitamin A convertion via T3 and T4"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Cold extremities",
+            "Deafness",
+            "Depression",
+            "Goiter",
+            "Growth impairments in children",
+            "Hair driness",
+            "Heart palpitations",
+            "High blood pressure",
+            "Infections",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irregular hearbeat",
+            "Nervousness",
+            "Thyroid enlargement",
+            "Skin rash",
+            "Weight gain"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Cognition",
+            "Mental attitude",
+            "Metabolism",
+            "Nervous system",
+            "Thyroid"
         ],
-        "name": "",
+        "name": "Iodine (I)",
         "partnership": [
-            ""
+            "Selenium"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Iodine",
+                "url": "https://en.wikipedia.org/wiki/Iodine"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+                "credit": "Wikipedia, Hypothyroidism",
+                "url": "https://en.wikipedia.org/wiki/Hypothyroidism#Signs_and_symptoms"
             },
             {
-                "credit": "The world's healthiest foods, Calcium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+                "credit": "Wikipedia, Goiter",
+                "url": "https://en.wikipedia.org/wiki/Goiter#Signs_and_symptoms"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "Wikipedia, Cognition",
+                "url": "https://en.wikipedia.org/wiki/Cognition#Signs_and_symptoms"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "credit": "Wikipedia, Intellectual disability",
+                "url": "https://en.wikipedia.org/wiki/Intellectual_disability#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Iodine",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=69"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Iodine",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
-                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Iodine",
+                "url": "http://www.healthy.net/Health/Article/Iodine/2074/1"
             },
             {
-                "credit": "National Institutes of Health, Calcium",
-                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+                "credit": "MedlinePlus, Iodine",
+                "url": "https://medlineplus.gov/druginfo/natural/35.html"
             },
             {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Iodine",
+                "url": "http://umm.edu/health/medical/altmed/supplement/iodine"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.13 mg/day",
+            "Children (< 14 years)": "0.13 mg/day",
+            "Men (> 14 years)": "0.15 mg/day",
+            "Women (> 14 years)": "0.15 mg/day",
+            "Pregnancy": "0.22 mg/day",
+            "Lactation": "0.29 mg/day"
         },
-        "type": "",
+        "type": "Essential trace element",
         "sources": [
-            ""
+            "Fish",
+            "Shellfish",
+            "Sea vegetables",
+            "Iodized table salt"
         ],
-        "summary": "",
+        "summary": "Iodine (I) is an essential trace element",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Brain",
+            "Breasts",
+            "Goiter",
+            "Energy",
+            "Fertility",
+            "Hair",
+            "Leg ulcers",
+            "Mentality",
+            "Metabolism",
+            "Mood",
+            "Nails",
+            "Nerves",
+            "Skin",
+            "Speech",
+            "Teeth",
+            "Weight loss"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw foods ()e.g. nuts and cabbage"
         ]
     },
     {
