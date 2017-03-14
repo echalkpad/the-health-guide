@@ -148,7 +148,7 @@
             "Vitamin B6 metabolism via FAD and FMN",
             "Retinol (Vitamin A) metabolism via FAD",
             "Tryptophan to vitamin B3 (Niacin) convertion via FAD",
-            "Vitamin B9 (Folate) metabolism via FAD",
+            "Vitamin B9 (Folic acid) metabolism via FAD",
             "Iron absorption and metabolism"
         ],
         "deficiencies": [
@@ -804,7 +804,8 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites",
+            "Metabolism requires Manganese"
         ]
     },
     {
@@ -2188,16 +2189,16 @@
             "Apathy",
             "Cold extremities",
             "Colds",
-            "Deafness",
             "Depression",
             "Goiter",
             "Growth impairments in children",
             "Hair driness",
             "Hair loss",
+            "Hearing loss",
             "Heart palpitations",
             "High blood pressure",
             "Infections",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
             "Irregular hearbeat",
             "Nervousness",
             "Thyroid enlargement",
@@ -2418,13 +2419,13 @@
             "Stress"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, black tea, soy protein, Calcium, excess Phosphorus, low stomach acid, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
-            "Metabolism requires Copper, Manganese, Protein, Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine), Vitamin B9 (Folate), Vitamin B12 (Cobalamin), acid medium (e.g. Vitamin C, Chloride), 'heme' (meat)"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, black tea, soy protein, Calcium, excess Phosphorus, excess Manganese, low stomach acid, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
+            "Metabolism requires Copper, Manganese, Protein, Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine), Vitamin B9 (Folic acid), Vitamin B12 (Cobalamin), acid medium (e.g. Vitamin C, Chloride), 'heme' (meat)"
         ]
     },
     {
         "actions": [
-            "Adenosine Triphosphate (ATP) production"
+            "Adenosine Triphosphate (ATP) production",
             "Thermoregulation (body temperature)",
             "pH balance",
             "Cell signaling",
@@ -2442,22 +2443,22 @@
             "Heart palpitations",
             "High blood pressure",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
-            "Irregular hearbeat"
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irregular hearbeat",
             "Irritability",
             "Low Calcium levels",
             "Muscle cramps",
             "Muscle twitching",
             "Nervousness",
             "Numbness",
-            "Tingling"
+            "Tingling",
             "Tooth problems",
             "Tremors",
             "Weakness"
         ],
         "functions": [
             "Bones",
-            "Cardiovascular system",
+            "Circulatory system",
             "Cognition",
             "Mental attitude",
             "Metabolism",
@@ -2553,74 +2554,126 @@
     },
     {
         "actions": [
-            ""
+            "Mn-containing Superoxide Dismutase (Mn-SOD) formation",
+            "Glucosamine formation",
+            "Blood vessels",
+            "Sex hormone formation",
+            "Fatty acid and cholesterol formation",
+            "L-dopamine formation",
+            "Blood cell formation",
+            "Cell growth",
+            "Bone development",
+            "Protein, carbohydrate, and lipid metabolism",
+            "Vitamin C metabolism",
+            "Vitamin B1 (Thiamine) metabolism",
+            "Vitamin B7 (Biotin) metabolism",
+            "Choline metabolism",
+            "Thyroxine (T4 thyroid hormone) formation",
+            "Hydrogen peroxide (H2O2) catalysation via Mn-SOD (antioxidant protection)"
         ],
         "deficiencies": [
-            ""
+            "Balance loss",
+            "Bone problems",
+            "Birth problems",
+            "Convulsions",
+            "Depression",
+            "Dizziness",
+            "Growth impairments in children",
+            "Hearing loss",
+            "High blood glucose",
+            "Infertility",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irritability",
+            "Kidney problems",
+            "Muscle twitching",
+            "Numbness",
+            "Stress",
+            "Tingling",
+            "Walking difficulties",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Cell growth",
+            "Cognition",
+            "Digestion",
+            "Metabolism",
+            "Nervous system",
+            "Sex hormone formation"
         ],
-        "name": "",
+        "name": "Manganese (Mn)",
         "partnership": [
-            ""
+            "Choline",
+            "Iron",
+            "Vitamin B1 (Thiamine)",
+            "Vitamin B7 (Biotin)",
+            "Vitamin C"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Magnesium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Manganese",
+                "url": "https://en.wikipedia.org/wiki/Manganese"
             },
             {
-                "credit": "Wikipedia, Hypomagnesemia",
-                "url": "https://en.wikipedia.org/wiki/Hypomagnesemia#Signs_and_symptoms"
-            },
-            {
-                "credit": "The world's healthiest foods, Magnesium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=75"
+                "credit": "The world's healthiest foods, Manganese",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77"
             },
             {
                 "credit": "Wikibooks, 'Human physiology', Minerals",
                 "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Magnesium",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Manganese",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Magnesium",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=2060"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Manganese",
+                "url": "http://www.healthy.net/Health/Article/Manganese/2072/1"
             },
             {
-                "credit": "National Institutes of Health, Magnesium",
-                "url": "https://ods.od.nih.gov/factsheets/Magnesium-Consumer"
+                "credit": "MedlinePlus, Manganese",
+                "url": "https://medlineplus.gov/druginfo/natural/182.html"
             },
             {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Magnesium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/Magnesium"
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Manganese",
+                "url": "http://umm.edu/health/medical/altmed/supplement/manganese"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=304&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=315&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.6 mg/day",
+            "Children (< 14 years)": "1.5 mg/day",
+            "Men (> 14 years)": "2.3 mg/day",
+            "Women (> 14 years)": "1.8 mg/day",
+            "Pregnancy": "2 mg/day",
+            "Lactation": "2.6 mg/day"
         },
-        "type": "",
+        "type": "Essential trace element",
         "sources": [
-            ""
+            "Whole grains",
+            "Herbs and spices",
+            "Nuts",
+            "Seeds",
+            "Legumes"
         ],
-        "summary": "",
+        "summary": "Manganese (Mn) is an essential trace element",
         "uses": [
-            ""
+            "Blood glucose",
+            "Bones",
+            "Circulation",
+            "Energy",
+            "Fertility",
+            "Growth",
+            "Mentality",
+            "Mood",
+            "Muscles",
+            "Pregnancy"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess Phosphorus, excess Iron, Zinc, Cobalt, soy protein"
         ]
     },
     {
