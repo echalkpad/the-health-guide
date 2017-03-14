@@ -2424,15 +2424,18 @@
     },
     {
         "actions": [
-            "Catalytic reactions between Phosphate ions and Adenosine Triphosphate (ATP)"
+            "Adenosine Triphosphate (ATP) production"
             "Thermoregulation (body temperature)",
             "pH balance",
             "Cell signaling",
             "Calcium and Potassium absorption and metabolism",
+            "DNA and RNA formation"
         ],
         "deficiencies": [
             "Anxiety",
+            "Bone problems",
             "Confusion",
+            "Constipation",
             "Convulsions",
             "Depression",
             "Fatigue",
@@ -2453,6 +2456,7 @@
             "Weakness"
         ],
         "functions": [
+            "Bones",
             "Cardiovascular system",
             "Cognition",
             "Mental attitude",
@@ -2463,7 +2467,10 @@
         "name": "Magnesium (Mg)",
         "partnership": [
             "Calcium",
-            "Potassium"
+            "Chloride",
+            "Phosphorus",
+            "Potassium",
+            "Sodium"
         ],
         "references": [
             {
@@ -2524,20 +2531,23 @@
         "summary": "Magnesium (Mg) is an essential mineral element",
         "uses": [
             "Blood vessels",
+            "Bones",
             "Energy",
             "Growth",
             "Heart",
             "Kidneys",
             "Liver",
+            "Menstruation",
             "Mentality",
             "Mood",
             "Muscles",
             "Nerves",
+            "Recovery",
             "Sleep",
             "Stress"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess fat, excess protein, Phosphorus, phytic acid (e.g. from whole grains, seeds, nuts, legumes)",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess fat, excess protein, excess Phosphorus, phytic acid (e.g. from whole grains, seeds, nuts, legumes)",
             "Metabolism requires acid medium, protein"
         ]
     },
