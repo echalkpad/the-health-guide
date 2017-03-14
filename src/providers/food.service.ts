@@ -36,6 +36,7 @@ export const FOOD_GROUPS: Array<FoodGroup> = [
 @Injectable()
 export class FoodService {
   private _usdaApiKey: string = '5nW8It7ORsxY212bV5wpleHkblTLbvpFTKVa010U';
+  private _usdaSource: string = 'Standard+Reference';
   private _foodListUrl: string = 'https://api.nal.usda.gov/ndb/search/';
   private _foodNutritionUrl: string = 'https://api.nal.usda.gov/ndb/reports/';
   constructor(private _http: Http) { }
@@ -85,6 +86,7 @@ export class FoodService {
       params: URLSearchParams = new URLSearchParams();
 
     params.set('api_key', this._usdaApiKey);
+    params.set('ds', this._usdaSource);
     params.set('q', searhQuery);
     params.set('fg', foodGroupId);
     params.set('format', 'json');
