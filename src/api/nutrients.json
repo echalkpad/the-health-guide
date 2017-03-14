@@ -2,7 +2,7 @@
     {
         "actions": [
             "Thiamine Pyrophosphate (TPP) coenzyme production",
-            "Carbohydrate and amino acid metabolism via TPP",
+            "Carbohydrate and protein metabolism via TPP",
             "Ethanol convertion to water and carbon dioxide via TPP",
             "Fatty acid and cholesterol formation via TPP",
             "Carbohydrate to fat (storage) conversion via TPP",
@@ -815,7 +815,6 @@
             "DNA and RNA formation via THFA"
         ],
         "deficiencies": [
-            "Anemia",
             "Apathy",
             "Balance loss",
             "Birth problems",
@@ -963,7 +962,6 @@
             "Myelin formation via MUT"
         ],
         "deficiencies": [
-            "Anemia",
             "Apathy",
             "Appetite loss",
             "Balance loss",
@@ -1211,7 +1209,6 @@
             "Reducing agent"
         ],
         "deficiencies": [
-            "Anemia",
             "Apathy",
             "Appetite loss",
             "Balance loss",
@@ -2056,7 +2053,6 @@
             "Triiodothyronine (T3 thyroid hormone) to Thyroxine (T4 thyroid hormone) convertion"
         ],
         "deficiencies": [
-            "Anemia",
             "Bone problems",
             "Colds",
             "Concentration difficulties",
@@ -2305,29 +2301,62 @@
     },
     {
         "actions": [
-            ""
+            "Cytochrome formation",
+            "Hemoglobin and myoglobin formation",
+            "Vitamin B-complex metabolism",
+            "Lipid metabolism",
+            "Carnitine formation",
+            "Amino acid formation",
+            "Reducing agent",
+            "Antibody formation",
+            "Red blood cell formation"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Appetite loss",
+            "Breathing difficulties",
+            "Colds",
+            "Concentration difficulties",
+            "Constipation",
+            "Depression",
+            "Dizziness",
+            "Fatigue",
+            "Hair loss",
+            "Headache",
+            "Infections",
+            "Irritability",
+            "Learning difficulties",
+            "Memory problems",
+            "Nail brittleness",
+            "Pain",
+            "Skin itchiness",
+            "Skin paleness",
+            "Swallowing difficulties",
+            "Weakness",
+            "Weight loss"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Circulatory system",
+            "Respiration"
         ],
-        "name": "",
+        "name": "Iron (Fe)",
         "partnership": [
-            ""
+            "Cobalt",
+            "Copper",
+            "Manganese",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin B9 (Folic acid)",
+            "Vitamin B12 (Cobalamin)"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Iron",
+                "url": "https://en.wikipedia.org/wiki/Iron"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
-            },
-            {
-                "credit": "The world's healthiest foods, Calcium",
+                "credit": "The world's healthiest foods, Iron",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
             },
             {
@@ -2356,23 +2385,37 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "11 mg/day",
+            "Children (< 14 years)": "10 mg/day",
+            "Men (> 14 years)": "8 mg/day",
+            "Women (> 14 years)": "10 mg/day",
+            "Pregnancy": "27 mg/day",
+            "Lactation": "10 mg/day"
         },
-        "type": "",
+        "type": "Essential trace element",
         "sources": [
-            ""
+            "Herbs and spices",
+            "Organ meats",
+            "Green leafy vegetables",
+            "Beans"
         ],
-        "summary": "",
+        "summary": "Iron (Fe) is an essential trace element",
         "uses": [
-            ""
+            "Anemia",
+            "Attention",
+            "Concentration",
+            "Energy",
+            "Immunity",
+            "Learning",
+            "Memory",
+            "Menstruation",
+            "Motivation",
+            "Optimism",
+            "Pregnancy"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, black tea, soy protein, Calcium, excess Phosphorus, low stomach acid, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
+            "Metabolism requires Copper, Manganese, Protein, Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine), Vitamin B9 (Folate), Vitamin B12 (Cobalamin), acid medium (e.g. Vitamin C, Chloride), 'heme' (meat)"
         ]
     },
     {
