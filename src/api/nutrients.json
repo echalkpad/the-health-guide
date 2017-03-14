@@ -120,6 +120,7 @@
             "Energy",
             "Heart",
             "Learning",
+            "Liver",
             "Memory",
             "Motivation",
             "Muscles",
@@ -1063,6 +1064,7 @@
             "Growth",
             "Energy",
             "Learning",
+            "Liver",
             "Memory",
             "Motivation",
             "Nerves",
@@ -1555,6 +1557,7 @@
             "Eyes",
             "Fertility",
             "Immunity",
+            "Liver",
             "Menstruation",
             "Muscles",
             "Optimism",
@@ -1739,6 +1742,7 @@
             "Detoxification",
             "Heart",
             "Learning",
+            "Liver",
             "Memory",
             "Motivation",
             "Reasoning"
@@ -2427,6 +2431,7 @@
             "Calcium and Potassium absorption and metabolism",
         ],
         "deficiencies": [
+            "Anxiety",
             "Confusion",
             "Convulsions",
             "Depression",
@@ -2440,6 +2445,7 @@
             "Low Calcium levels",
             "Muscle cramps",
             "Muscle twitching",
+            "Nervousness",
             "Numbness",
             "Tingling"
             "Tooth problems",
@@ -2447,61 +2453,63 @@
             "Weakness"
         ],
         "functions": [
+            "Cardiovascular system",
             "Cognition",
             "Mental attitude",
             "Metabolism",
             "Muscle tone",
             "Nervous system"
         ],
-        "name": "",
+        "name": "Magnesium (Mg)",
         "partnership": [
-            ""
+            "Calcium",
+            "Potassium"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Magnesium",
+                "url": "https://en.wikipedia.org/wiki/Magnesium"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+                "credit": "Wikipedia, Hypomagnesemia",
+                "url": "https://en.wikipedia.org/wiki/Hypomagnesemia#Signs_and_symptoms"
             },
             {
-                "credit": "The world's healthiest foods, Calcium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+                "credit": "The world's healthiest foods, Magnesium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=75"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Magnesium",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
-                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Magnesium",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2060"
             },
             {
-                "credit": "National Institutes of Health, Calcium",
-                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+                "credit": "National Institutes of Health, Magnesium",
+                "url": "https://ods.od.nih.gov/factsheets/Magnesium-Consumer"
             },
             {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Magnesium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/magnesium"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=304&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "75 mg/day",
+            "Children (< 14 years)": "240 mg/day",
+            "Men (> 14 years)": "420 mg/day",
+            "Women (> 14 years)": "320 mg/day",
+            "Pregnancy": "350 mg/day",
+            "Lactation": "310 mg/day"
         },
         "type": "Essential mineral element",
         "sources": [
@@ -2515,8 +2523,12 @@
         ],
         "summary": "Magnesium (Mg) is an essential mineral element",
         "uses": [
+            "Blood vessels",
             "Energy",
             "Growth",
+            "Heart",
+            "Kidneys",
+            "Liver",
             "Mentality",
             "Mood",
             "Muscles",
