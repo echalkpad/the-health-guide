@@ -2291,7 +2291,6 @@
             "Nails",
             "Nerves",
             "Skin",
-            "Speech",
             "Teeth",
             "Weight loss"
         ],
@@ -2411,7 +2410,8 @@
             "Menstruation",
             "Motivation",
             "Optimism",
-            "Pregnancy"
+            "Pregnancy",
+            "Stress"
         ],
         "warnings": [
             "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, black tea, soy protein, Calcium, excess Phosphorus, low stomach acid, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
@@ -2420,13 +2420,38 @@
     },
     {
         "actions": [
-            ""
+            "Catalytic reactions between Phosphate ions and Adenosine Triphosphate (ATP)"
+            "Thermoregulation (body temperature)",
+            "pH balance",
+            "Cell signaling",
+            "Calcium and Potassium absorption and metabolism",
         ],
         "deficiencies": [
-            ""
+            "Confusion",
+            "Convulsions",
+            "Depression",
+            "Fatigue",
+            "Heart palpitations",
+            "High blood pressure",
+            "Insomnia",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language, skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irregular hearbeat"
+            "Irritability",
+            "Low Calcium levels",
+            "Muscle cramps",
+            "Muscle twitching",
+            "Numbness",
+            "Tingling"
+            "Tooth problems",
+            "Tremors",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cognition",
+            "Mental attitude",
+            "Metabolism",
+            "Muscle tone",
+            "Nervous system"
         ],
         "name": "",
         "partnership": [
@@ -2478,16 +2503,30 @@
             "Pregnancy": "g/day",
             "Lactation": "g/day"
         },
-        "type": "",
+        "type": "Essential mineral element",
         "sources": [
-            ""
+            "Whole grains",
+            "Seeds",
+            "Cocoa",
+            "Herbs and spices",
+            "Nuts",
+            "Beans",
+            "Fish"
         ],
-        "summary": "",
+        "summary": "Magnesium (Mg) is an essential mineral element",
         "uses": [
-            ""
+            "Energy",
+            "Growth",
+            "Mentality",
+            "Mood",
+            "Muscles",
+            "Nerves",
+            "Sleep",
+            "Stress"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess fat, excess protein, Phosphorus, phytic acid (e.g. from whole grains, seeds, nuts, legumes)",
+            "Metabolism requires acid medium, protein"
         ]
     },
     {
@@ -2506,40 +2545,40 @@
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
+                "credit": "Wikipedia, Magnesium",
                 "url": "https://en.wikipedia.org/wiki/Calcium"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+                "credit": "Wikipedia, Hypomagnesemia",
+                "url": "https://en.wikipedia.org/wiki/Hypomagnesemia#Signs_and_symptoms"
             },
             {
-                "credit": "The world's healthiest foods, Calcium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+                "credit": "The world's healthiest foods, Magnesium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=75"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Magnesium",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
-                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Magnesium",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2060"
             },
             {
-                "credit": "National Institutes of Health, Calcium",
-                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
+                "credit": "National Institutes of Health, Magnesium",
+                "url": "https://ods.od.nih.gov/factsheets/Magnesium-Consumer"
             },
             {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Magnesium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/Magnesium"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=304&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
