@@ -1787,6 +1787,7 @@
             "Weakness"
         ],
         "functions": [
+            "Acid/Base balance",
             "Bones",
             "Circulatory system",
             "Muscle tone",
@@ -1893,6 +1894,7 @@
             "Weakness"
         ],
         "functions": [
+            "Acid/Base balance",
             "Cognition",
             "Circulatory system",
             "Digestion",
@@ -2477,6 +2479,7 @@
             "Weakness"
         ],
         "functions": [
+            "Acid/Base balance",
             "Bones",
             "Circulatory system",
             "Cognition",
@@ -2821,6 +2824,7 @@
             "Weight problems"
         ],
         "functions": [
+            "Acid/Base balance",
             "Bones",
             "Cell growth",
             "Circulatory system",
@@ -2900,17 +2904,39 @@
     },
     {
         "actions": [
-            ""
+            "pH balance",
+            "Fluid balance",
+            "Carbohydrate metabolism",
+            "Cellular-membrane potential and the propagation of action potentials in neuronal, muscular, and cardiac tissue",
+            "Hormone formation"
         ],
         "deficiencies": [
-            ""
+            "Acne",
+            "Bone problems",
+            "Breathing difficulties",
+            "Constipation",
+            "Digestive problems",
+            "Fatigue",
+            "Growth impairments in children",
+            "High blood pressure",
+            "Insomnia",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irregular hearbeat",
+            "Muscle problems",
+            "Skin driness"
         ],
         "functions": [
-            ""
+            "Acid/Base balance",
+            "Cell growth",
+            "Circulatory system",
+            "Cognition",
+            "Digestion",
+            "Muscle tone",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Potassium (K)",
         "partnership": [
-            ""
+            "Magnesium"
         ],
         "references": [
             {
@@ -2919,23 +2945,45 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "700 mg/day",
+            "Children (< 14 years)": "3800 mg/day",
+            "Men (> 14 years)": "4700 mg/day",
+            "Women (> 14 years)": "4700 mg/day",
+            "Pregnancy": "4700 mg/day",
+            "Lactation": "5100 mg/day"
         },
-        "type": "",
+        "type": "Essential mineral element",
         "sources": [
-            ""
+            "Herbs and spices",
+            "Peppers",
+            "Cacao",
+            "Beans",
+            "Seeds",
+            "Nuts",
+            "Bananas",
+            "Dried fruits"
         ],
-        "summary": "",
+        "summary": "Potassium (K) is an essential mineral element",
         "uses": [
-            ""
+            "Blood glucose",
+            "Blood vessels",
+            "Bones",
+            "Circulation",
+            "Digestion",
+            "Growth",
+            "Heart",
+            "Kidneys",
+            "Mentality",
+            "Mood",
+            "Muscles",
+            "Nerves",
+            "Recovery",
+            "Sleep",
+            "Stress"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, diarrhea, excess Sodium, excess, Chloride, high cholesterol",
+            "Metabolism requires Magnesium"
         ]
     },
     {
