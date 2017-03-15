@@ -2695,6 +2695,7 @@
             "Energy",
             "Fertility",
             "Growth",
+            "Immunity",
             "Mentality",
             "Mood",
             "Muscles",
@@ -2789,6 +2790,7 @@
             "Detoxification",
             "Energy",
             "Growth",
+            "Immunity",
             "Learning",
             "Motivation",
             "Optimism"
@@ -2908,7 +2910,8 @@
             "Fluid balance",
             "Carbohydrate metabolism",
             "Cellular-membrane potential and the propagation of action potentials in neuronal, muscular, and cardiac tissue",
-            "Hormone formation"
+            "Hormone formation",
+            "Cell signaling"
         ],
         "deficiencies": [
             "Acne",
@@ -2940,8 +2943,32 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Potassium",
+                "url": "https://en.wikipedia.org/wiki/Potassium"
+            },
+            {
+                "credit": "Wikipedia, Hypokelamia",
+                "url": "https://en.wikipedia.org/wiki/Hypokelamia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Potassium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=90"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Potassium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Potassium",
+                "url": "http://www.healthy.net/Health/Article/Potassium/2063"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=306&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -2988,6 +3015,131 @@
     },
     {
         "actions": [
+            "Glutathione peroxidase (GP) formation",
+            "Selenocysteine formation",
+            "Reducing agent",
+            "Cell growth and regeneration",
+            "Thyroxine (T4 thyroid hormone) to Triiodothyronine (T3 thyroid hormone) conversion"
+        ],
+        "deficiencies": [
+            "Appetite loss",
+            "Birth problems",
+            "Cold extremities",
+            "Colds",
+            "Constipation",
+            "Fatigue",
+            "Heart problems",
+            "Infections",
+            "Infertility",
+            "Insomnia",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Shortness of breath",
+            "Skin driness",
+            "Swelling",
+            "Weight gain"
+        ],
+        "functions": [
+            "Antioxidant",
+            "Cell growth",
+            "Circulatory system",
+            "Cognition",
+            "Mental attitude",
+            "Metabolism",
+            "Thyroid"
+        ],
+        "name": "Selenium (Se)",
+        "partnership": [
+            "Iodine",
+            "Vitamin A",
+            "Vitamin C",
+            "Vitamin E",
+            "Zinc"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Selenium",
+                "url": "https://en.wikipedia.org/wiki/Selenium"
+            },
+            {
+                "credit": "Wikipedia, Selenium deficiency",
+                "url": "https://en.wikipedia.org/wiki/Selenium_deficiency#Signs_and_symptoms"
+            },
+            {
+                "credit": "Wikipedia, Hypothyroidism",
+                "url": "https://en.wikipedia.org/wiki/Hypothyroidism#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Selenium",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=95"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Selenium",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Selenium",
+                "url": "http://www.healthy.net/Health/Article/Selenium/2068/1"
+            },
+            {
+                "credit": "National Institutes of Health, Selenium",
+                "url": "https://ods.od.nih.gov/factsheets/Selenium-HealthProfessional/"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Selenium",
+                "url": "http://umm.edu/health/medical/altmed/supplement/selenium"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=317&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "0.02 mg/day",
+            "Children (< 14 years)": "0.03 mg/day",
+            "Men (> 14 years)": "0.055 mg/day",
+            "Women (> 14 years)": "0.055 mg/day",
+            "Pregnancy": "0.06 mg/day",
+            "Lactation": "0.07 mg/day"
+        },
+        "type": "Essential trace element",
+        "sources": [
+            "Nuts",
+            "Eggs",
+            "Kidneys",
+            "Liver",
+            "Tuna",
+            "Whole wheat",
+            "Sunflower seeds"
+        ],
+        "summary": "Selenium (Se) is an essential trace element",
+        "uses": [
+            "Blood vessels",
+            "Bones",
+            "Circulation",
+            "Detoxification",
+            "Fertility",
+            "Growth",
+            "Hair",
+            "Heart",
+            "Immunity",
+            "Kidneys",
+            "Liver",
+            "Mentality",
+            "Mood",
+            "Pregnancy",
+            "Skin"
+        ],
+        "warnings": [
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Vitamin C",
+            "Metabolism requires Iodine, Vitamin E"
+        ]
+    },
+    {
+        "actions": [
             ""
         ],
         "deficiencies": [
@@ -3002,8 +3154,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Manganese",
+                "url": "https://en.wikipedia.org/wiki/Manganese"
+            },
+            {
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Manganese",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Manganese",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Manganese",
+                "url": "http://www.healthy.net/Health/Article/Manganese/2072/1"
+            },
+            {
+                "credit": "MedlinePlus, Manganese",
+                "url": "https://medlineplus.gov/druginfo/natural/182.html"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Manganese",
+                "url": "http://umm.edu/health/medical/altmed/supplement/manganese"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=315&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -3042,48 +3226,40 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
+                "credit": "Wikipedia, Manganese",
+                "url": "https://en.wikipedia.org/wiki/Manganese"
+            },
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Manganese",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Manganese",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Manganese",
+                "url": "http://www.healthy.net/Health/Article/Manganese/2072/1"
+            },
+            {
+                "credit": "MedlinePlus, Manganese",
+                "url": "https://medlineplus.gov/druginfo/natural/182.html"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Manganese",
+                "url": "http://umm.edu/health/medical/altmed/supplement/manganese"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=315&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
