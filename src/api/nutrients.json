@@ -1372,7 +1372,8 @@
             "Bones",
             "Circulatory system",
             "Collagen",
-            "Muscle tone"
+            "Muscle tone",
+            "Teeth"
         ],
         "name": "Vitamin D (Calciferol)",
         "partnership": [
@@ -1789,7 +1790,8 @@
             "Bones",
             "Circulatory system",
             "Muscle tone",
-            "Nervous system"
+            "Nervous system",
+            "Teeth"
         ],
         "name": "Calcium (Ca)",
         "partnership": [
@@ -1858,6 +1860,7 @@
         "uses": [
             "Bones",
             "Growth",
+            "Kidneys",
             "Heart",
             "Menstruation",
             "Muscles",
@@ -1939,6 +1942,7 @@
             "Detoxification",
             "Digestion",
             "Energy",
+            "Kidneys",
             "Motivation",
             "Muscles",
             "Potassium preservation",
@@ -2756,7 +2760,7 @@
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Minerals",
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Molybdenum",
                 "url": "http://www.healthy.net/Health/Article/Molybdenum/2076/1"
             }
         ],
@@ -2792,42 +2796,106 @@
     },
     {
         "actions": [
-            ""
+            "Adenosine Triphosphate (ATP) production",
+            "Lecithin formation",
+            "Sphingolipids formation",
+            "Phosphoproteins formation",
+            "Carbohydrate and lipid metabolism",
+            "Protein formation",
+            "DNA and RNA formation",
+            "Cell membrane integrity via Lecithin",
+            "Vitamin B-complex metabolism",
+            "Nerve conduction via Sphingolipids",
+            "pH balance"
         ],
         "deficiencies": [
-            ""
+            "Anxiety",
+            "Bleeding",
+            "Bone problems",
+            "Growth impairments in children",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Irregular hearbeat",
+            "Muscle problems",
+            "Tooth problems",
+            "Weakness",
+            "Weight problems"
         ],
         "functions": [
-            ""
+            "Bones",
+            "Cell growth",
+            "Circulatory system",
+            "Cognition",
+            "Mental attitude",
+            "Metabolism",
+            "Muscle tone",
+            "Nervous system",
+            "Teeth"
         ],
-        "name": "",
+        "name": "Phosphorus (P)",
         "partnership": [
-            ""
+            "Calcium",
+            "Vitamin D"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Phosphorus",
+                "url": "https://en.wikipedia.org/wiki/Phosphorus"
+            },
+            {
+                "credit": "Wikipedia, Hypophosphatemia",
+                "url": "https://en.wikipedia.org/wiki/Hypophosphatemia#Signs_and_symptoms"
+            },
+            {
+                "credit": "The world's healthiest foods, Phosphorus",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=127"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Phosphorus",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Phosphorus",
+                "url": "http://www.healthy.net/scr/Article.aspx?Id=2061"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=305&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "275 mg/day",
+            "Children (< 14 years)": "500 mg/day",
+            "Men (> 14 years)": "700 mg/day",
+            "Women (> 14 years)": "700 mg/day",
+            "Pregnancy": "700 mg/day",
+            "Lactation": "700 mg/day"
         },
         "type": "",
         "sources": [
-            ""
+            "Human milk",
+            "Dairy",
+            "Meat",
+            "Whole grains"
         ],
-        "summary": "",
+        "summary": "Phosphorus (P) is an essential mimeral element",
         "uses": [
-            ""
+            "Bones",
+            "Circulation",
+            "Energy",
+            "Growth",
+            "Heart",
+            "Kidneys",
+            "Mentality",
+            "Muscles",
+            "Teeth"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Aluminium, Magnesium, Iron",
+            "Metabolism requires Calcium, Vitamin D"
         ]
     },
     {
