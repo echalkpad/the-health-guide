@@ -207,6 +207,10 @@
                 "url": "https://en.wikipedia.org/wiki/Riboflavin"
             },
             {
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            },
+            {
                 "credit": "Wikipedia, Dermatitis",
                 "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
             },
@@ -1060,6 +1064,7 @@
         ],
         "summary": "Vitamin B12 or Cobalamin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration.",
         "uses": [
+            "Anemia",
             "Attention",
             "Concentration",
             "Growth",
@@ -2110,6 +2115,10 @@
                 "url": "https://en.wikipedia.org/wiki/Superoxide_dismutase"
             },
             {
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            },
+            {
                 "credit": "Wikipedia, Neutropenia",
                 "url": "https://en.wikipedia.org/wiki/Neutropenia#Signs_and_symptoms"
             },
@@ -2158,6 +2167,7 @@
         ],
         "summary": "Copper (Cu) is an essential trace element",
         "uses": [
+            "Anemia",
             "Attention",
             "Blood vessels",
             "Bones",
@@ -2172,7 +2182,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Iron, excess Zinc, Molybdenum, Vitamin C, Manganese"
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Iron, excess Zinc, excess Molybdenum, Vitamin C, Manganese"
         ]
     },
     {
@@ -2333,6 +2343,7 @@
             "Memory problems",
             "Nail brittleness",
             "Pain",
+            "Rapid hearbeat",
             "Skin itchiness",
             "Skin paleness",
             "Swallowing difficulties",
@@ -2349,6 +2360,7 @@
             "Cobalt",
             "Copper",
             "Manganese",
+            "Molybdenum",
             "Vitamin B2 (Riboflavin)",
             "Vitamin B6 (Pyridoxine)",
             "Vitamin B9 (Folic acid)",
@@ -2358,6 +2370,10 @@
             {
                 "credit": "Wikipedia, Iron",
                 "url": "https://en.wikipedia.org/wiki/Iron"
+            },
+            {
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
             },
             {
                 "credit": "The world's healthiest foods, Iron",
@@ -2420,7 +2436,7 @@
         ],
         "warnings": [
             "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, black tea, soy protein, Calcium, excess Phosphorus, excess Manganese, low stomach acid, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
-            "Metabolism requires Copper, Manganese, Protein, Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine), Vitamin B9 (Folic acid), Vitamin B12 (Cobalamin), acid medium (e.g. Vitamin C, Chloride), 'heme' (meat)"
+            "Metabolism requires Copper, Manganese, Molybdenum, Protein, Vitamin B2 (Riboflavin), Vitamin B6 (Pyridoxine), Vitamin B9 (Folic acid), Vitamin B12 (Cobalamin), acid medium (e.g. Vitamin C, Chloride), 'heme' (meat)"
         ]
     },
     {
@@ -2615,6 +2631,10 @@
                 "url": "https://en.wikipedia.org/wiki/Manganese"
             },
             {
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            },
+            {
                 "credit": "The world's healthiest foods, Manganese",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77"
             },
@@ -2661,6 +2681,7 @@
         ],
         "summary": "Manganese (Mn) is an essential trace element",
         "uses": [
+            "Anemia",
             "Blood glucose",
             "Bones",
             "Circulation",
@@ -2678,74 +2699,95 @@
     },
     {
         "actions": [
-            ""
+            "Nitrogenase, xanthine oxidase, aldehyde oxidase, and sulfite oxidase formation",
+            "Iron absorption and metabolism via xanthine oxidase",
+            "Uric acid formation via xanthine oxidase",
+            "Carbohydrate and aldehyde metabolism via aldehyde oxidase",
+            "Sulfite detoxification via sulfite oxidase"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Appetite loss",
+            "Breathing difficulties",
+            "Chest pain",
+            "Concentration difficulties",
+            "Depression",
+            "Dizziness",
+            "Fatigue",
+            "Headache",
+            "Heart palpitations",
+            "Irritability",
+            "Learning difficulties",
+            "Rapid heartbeat",
+            "Shortness of breath",
+            "Skin paleness",
+            "Tooth problems",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Antioxidant",
+            "Cell growth",
+            "Respiration"
         ],
-        "name": "",
+        "name": "Molybdenum (Mo)",
         "partnership": [
-            ""
+            "Iron",
+            "Vitamin C"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Calcium",
-                "url": "https://en.wikipedia.org/wiki/Calcium"
+                "credit": "Wikipedia, Molybdenum",
+                "url": "https://en.wikipedia.org/wiki/Molybdenum"
             },
             {
-                "credit": "Wikipedia, Hypocalcaemia",
-                "url": "https://en.wikipedia.org/wiki/Hypocalcaemia#Signs_and_symptoms"
+                "credit": "Wikipedia, Anemia",
+                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
             },
             {
-                "credit": "The world's healthiest foods, Calcium",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=50"
+                "credit": "The world's healthiest foods, Molybdenum",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=128"
             },
             {
-                "credit": "Wikibooks, 'Human physiology', Vitamins",
-                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Vitamins"
+                "credit": "Wikibooks, 'Human physiology', Minerals",
+                "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Calcium",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Molybdenum",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Calcium",
-                "url": "http://www.healthy.net/Health/Article/Calcium/2019/1"
-            },
-            {
-                "credit": "National Institutes of Health, Calcium",
-                "url": "https://ods.od.nih.gov/factsheets/Calcium-Consumer"
-            },
-            {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Calcium",
-                "url": "http://umm.edu/health/medical/altmed/supplement/calcium"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=301&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Minerals",
+                "url": "http://www.healthy.net/Health/Article/Molybdenum/2076/1"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.02 mg/day",
+            "Children (< 14 years)": "0.04 mg/day",
+            "Men (> 14 years)": "0.045 mg/day",
+            "Women (> 14 years)": "0.045 mg/day",
+            "Pregnancy": "0.05 mg/day",
+            "Lactation": "0.05 mg/day"
         },
-        "type": "",
+        "type": "Essential trace element",
         "sources": [
-            ""
+            "Legumes",
+            "Whole grains",
+            "Nuts"
         ],
-        "summary": "",
+        "summary": "Molybdenum (Mo) is an essential trace element",
         "uses": [
-            ""
+            "Anemia",
+            "Attention",
+            "Concentration",
+            "Detoxification",
+            "Energy",
+            "Growth",
+            "Learning",
+            "Motivation",
+            "Optimism"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Copper"
         ]
     },
     {
