@@ -3386,7 +3386,8 @@
             "High-density lipoprotein (HDL) formation via eicosanoids",
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
             "Cell membrane structure via eicosanoids",
-            "Anti-inflammation via eicosanoids"
+            "Anti-inflammation via eicosanoids",
+            "Ketogenesis"
         ],
         "deficiencies": [
             "Birth problems",
@@ -3423,6 +3424,10 @@
             {
                 "credit": "Eicosanoid",
                 "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+            },
+            {
+                "credit": "Ketogenesis",
+                "url": "https://en.wikipedia.org/wiki/Ketogenesis"
             },
             {
                 "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
@@ -3506,7 +3511,8 @@
             "High-density lipoprotein (HDL) formation via eicosanoids",
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
             "Cell membrane structure via eicosanoids",
-            "Anti-inflammation via eicosanoids"
+            "Anti-inflammation via eicosanoids",
+            "Ketogenesis"
         ],
         "deficiencies": [
             "Birth problems",
@@ -3547,6 +3553,10 @@
             {
                 "credit": "Eicosanoid",
                 "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+            },
+            {
+                "credit": "Ketogenesis",
+                "url": "https://en.wikipedia.org/wiki/Ketogenesis"
             },
             {
                 "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
@@ -3754,7 +3764,7 @@
         "functions": [
             ""
         ],
-        "name": "",
+        "name": "Histidine",
         "partnership": [
             ""
         ],
@@ -3765,23 +3775,29 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "36 mg/kg/day",
+            "Children (< 14 years)": "16 mg/kg/day",
+            "Men (> 14 years)": "15 mg/kg/day",
+            "Women (> 14 years)": "14 mg/kg/day",
+            "Pregnancy": "20 mg/kg/day",
+            "Lactation": "20 mg/kg/day"
         },
-        "type": "",
+        "type": "Essential amino acid",
         "sources": [
-            ""
+            "Soy",
+            "Egg whites",
+            "Cheese",
+            "Seeds",
+            "Beef",
+            "Tofu",
+            "Pork"
         ],
-        "summary": "",
+        "summary": "Histidine is an essential amino acid",
         "uses": [
             ""
         ],
         "warnings": [
-            ""
+            "Destroyed by grilling, searing, and frying cooking"
         ]
     },
     {
