@@ -165,7 +165,7 @@
             "Eye redness",
             "Eye sensitivity to light",
             "Fatigue",
-            "Growth impairments in children",
+            "Growth problems",
             "Hair loss",
             "Headache",
             "Insomnia",
@@ -835,7 +835,7 @@
             "Diarrhea",
             "Digestive problems",
             "Dizziness",
-            "Growth impairments in children",
+            "Growth problems",
             "Hair grayness",
             "Heart palpitations",
             "Headache",
@@ -983,7 +983,7 @@
             "Digestive problems",
             "Dizziness",
             "Fatigue",
-            "Growth impairments in children",
+            "Growth problems",
             "Hallucination",
             "Irritability",
             "Learning difficulties",
@@ -1102,7 +1102,7 @@
             "Colds",
             "Diarrhea",
             "Eye problems",
-            "Growth impairments in children",
+            "Growth problems",
             "Gum problems",
             "Infections",
             "Night blindness",
@@ -1232,7 +1232,7 @@
             "Depression",
             "Dizziness",
             "Fatigue",
-            "Growth impairments in children",
+            "Growth problems",
             "Hair driness",
             "Infections",
             "Joint redness",
@@ -1369,7 +1369,7 @@
             "Bone problems",
             "Depression",
             "Dizziness",
-            "Growth impairments in children",
+            "Growth problems",
             "Muscle problems",
             "Skin problems",
             "Tooth problems"
@@ -1784,7 +1784,7 @@
             "Birth problems",
             "Bone problems",
             "Convulsions",
-            "Growth impairments in children",
+            "Growth problems",
             "Heart palpitations",
             "High blood pressure",
             "Insomnia",
@@ -1981,7 +1981,7 @@
             "Chest pain",
             "Dizziness",
             "Fatigue",
-            "Growth impairments in children",
+            "Growth problems",
             "Headache",
             "Heart palpitations",
             "High blood cholesterol",
@@ -2089,7 +2089,7 @@
             "Diarrhea",
             "Dizziness",
             "Fever",
-            "Growth impairments in children",
+            "Growth problems",
             "Gum problems",
             "Hair loss",
             "High blood cholesterol",
@@ -2220,14 +2220,14 @@
             "Colds",
             "Depression",
             "Goiter",
-            "Growth impairments in children",
+            "Growth problems",
             "Hair driness",
             "Hair loss",
             "Hearing loss",
             "Heart palpitations",
             "High blood pressure",
             "Infections",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Nervousness",
             "Sleepiness",
@@ -2320,9 +2320,9 @@
             "Fertility",
             "Hair",
             "Leg ulcers",
-            "Mentality",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
             "Metabolism",
-            "Mood",
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Nails",
             "Nerves",
             "Skin",
@@ -2481,7 +2481,7 @@
             "Heart palpitations",
             "High blood pressure",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Irritability",
             "Low Calcium levels",
@@ -2579,8 +2579,8 @@
             "Kidneys",
             "Liver",
             "Menstruation",
-            "Mentality",
-            "Mood",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Muscles",
             "Nerves",
             "Recovery",
@@ -2618,11 +2618,11 @@
             "Convulsions",
             "Depression",
             "Dizziness",
-            "Growth impairments in children",
+            "Growth problems",
             "Hearing loss",
             "High blood glucose",
             "Infertility",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irritability",
             "Kidney problems",
             "Muscle twitching",
@@ -2713,8 +2713,8 @@
             "Fertility",
             "Growth",
             "Immunity",
-            "Mentality",
-            "Mood",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Muscles",
             "Pregnancy"
         ],
@@ -2836,8 +2836,8 @@
             "Anxiety",
             "Bleeding",
             "Bone problems",
-            "Growth impairments in children",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Growth problems",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Muscle problems",
             "Tooth problems",
@@ -2915,7 +2915,7 @@
             "Growth",
             "Heart",
             "Kidneys",
-            "Mentality",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
             "Muscles",
             "Teeth"
         ],
@@ -2941,10 +2941,10 @@
             "Constipation",
             "Digestive problems",
             "Fatigue",
-            "Growth impairments in children",
+            "Growth problems",
             "High blood pressure",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Muscle problems",
             "Skin driness"
@@ -3022,8 +3022,8 @@
             "Growth",
             "Heart",
             "Kidneys",
-            "Mentality",
-            "Mood",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Muscles",
             "Nerves",
             "Recovery",
@@ -3054,7 +3054,7 @@
             "Infections",
             "Infertility",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Shortness of breath",
             "Skin driness",
             "Sleepiness",
@@ -3153,8 +3153,8 @@
             "Immunity",
             "Kidneys",
             "Liver",
-            "Mentality",
-            "Mood",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Pregnancy",
             "Skin"
         ],
@@ -3245,8 +3245,8 @@
         "summary": "Sodium (N) is an essential mineral element",
         "uses": [
             "Circulation",
-            "Mentality",
-            "Mood",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
             "Muscles"
         ],
         "warnings": [
@@ -3276,18 +3276,17 @@
             "Metal storage, transportation, and detoxification via Metallothionein",
             "Reducing agent",
             "Vitamin A metabolism"
-            
         ],
         "deficiencies": [
             "Appetite loss",
             "Bleeding",
             "Colds",
             "Diarrhea",
-            "Growth impairments in children",
+            "Growth problems",
             "Hair loss",
             "Infections",
             "Infertility",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Liver enlargement",
             "Mouth problems",
             "Skin problems",
@@ -3379,7 +3378,7 @@
             "Growth",
             "Hair",
             "Immunity",
-            "Mentality",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
             "Nails",
             "Pregnancy",
             "Senses",
@@ -3394,42 +3393,115 @@
     },
     {
         "actions": [
-            ""
+            "Eicosanoids formation",
+            "Cell signaling via eicosanoids",
+            "High-density lipoprotein (HDL) formation via eicosanoids",
+            "Low-density lipoprotein (LDL) metabolism via eicosanoids",
+            "Cell membrane integrity via eicosanoids",
+            "Anti-inflammation via eicosanoids"
         ],
         "deficiencies": [
-            ""
+            "Birth problems",
+            "Growth problems",
+            "Hair loss",
+            "Heart problems",
+            "High blood cholesterol",
+            "Hyperactivity",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
+            "Pain",
+            "Prostate enlargement",
+            "Skin problems",
+            "Swelling",
+            "Weight loss"
         ],
         "functions": [
-            ""
+            "Brain",
+            "Cell growth",
+            "Cognition",
+            "Circulatory system",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "alpha-Linolenic acid (ALA)",
         "partnership": [
-            ""
+            "Linoleic acid (LA)"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Alpha-Linolenic acid",
+                "url": "https://en.wikipedia.org/wiki/Alpha-Linolenic_acid"
+            },
+            {
+                "credit": "Eicosanoid",
+                "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2138"
+            },
+            {
+                "credit": "National Institutes of Health, Omega-3 Fatty Acids",
+                "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Alpha-Linolenic acid",
+                "url": "http://umm.edu/health/medical/altmed/supplement/alphalinolenic-acid"
+            },
+            {
+                "credit": "Mayo clinic, Drugs and Supplements, Omega-3 fatty acids, fish oil, alpha-linolenic acid",
+                "url": "http://www.mayoclinic.org/drugs-supplements/omega-3-fatty-acids-fish-oil-alpha-linolenic-acid/background/hrb-20059372"
+            },
+            {
+                "credit": "WebMD, Alpha-Linolenic acid",
+                "url": "http://www.webmd.com/vitamins-supplements/ingredientmono-1035-ALPHA-LINOLENIC+ACID.aspx?activeIngredientId=1035&activeIngredientName=ALPHA-LINOLENIC+ACID&source=3"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "0.5 mg/day",
+            "Children (< 14 years)": "0.9 mg/day",
+            "Men (> 14 years)": "1.6 mg/day",
+            "Women (> 14 years)": "1.1 mg/day",
+            "Pregnancy": "1.1 mg/day",
+            "Lactation": "1.1 mg/day"
         },
-        "type": "",
+        "type": "Essential fatty acid (EFA)",
         "sources": [
-            ""
+            "Flaxseeds",
+            "Chia seeds",
+            "Hemp seeds",
+            "Walnuts",
+            "Butternuts",
+            "Mustard seeds",
+            "Marjoram",
+            "Spearmint",
+            "Parlsey",
+            "Beechnuts",
+            "Soybeans",
+            "Saffron",
+            "Bay leaf",
+            "Salmon",
+            "Herring",
+            "Sardines",
+            "Mackerel",
+            "Trout"
         ],
-        "summary": "",
+        "summary": "alpha-Linoleic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA)",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Blood vessels",
+            "Brain",
+            "Circulation",
+            "Growth",
+            "Hair",
+            "Heart",
+            "Immunity",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Pregnancy",
+            "Skin",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Degraded by sunlight and cooking"
         ]
     },
     {
