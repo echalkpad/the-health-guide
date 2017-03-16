@@ -32,6 +32,7 @@
             "Nausea",
             "Numbness",
             "Pulse abnormalities",
+            "Sleepiness",
             "Stress",
             "Walking difficulties"
         ],
@@ -179,6 +180,7 @@
             "Skin rash",
             "Skin redness",
             "Skin scaling",
+            "Sleepiness",
             "Throat soreness",
             "Tongue redness",
             "Tongue soreness",
@@ -321,6 +323,7 @@
             "Skin rash",
             "Skin redness",
             "Skin sensitivity to light",
+            "Sleepiness",
             "Swelling",
             "Tingling",
             "Tongue inflammation",
@@ -450,6 +453,7 @@
             "Skin itchiness",
             "Skin rash",
             "Skin redness",
+            "Sleepiness",
             "Stress",
             "Tingling",
             "Vomiting"
@@ -732,6 +736,7 @@
             "Skin rash around eyes, nose, and mouth",
             "Skin redness",
             "Skin scaling",
+            "Sleepiness",
             "Tingling",
             "Weakness"
         ],
@@ -847,6 +852,7 @@
             "Skin rash",
             "Skin redness",
             "Skin scaling",
+            "Sleepiness",
             "Tongue inflammation",
             "Tongue soreness",
             "Weakness",
@@ -1236,6 +1242,7 @@
             "Mouth inflammation",
             "Pain",
             "Skin rash",
+            "Sleepiness",
             "Shortness of breath",
             "Tooth problems",
             "Weakness"
@@ -1485,6 +1492,7 @@
             "Prostate enlargement",
             "Red blood cell fragility",
             "Skin problems",
+            "Sleepiness",
             "Speaking difficulties",
             "Walking difficulties",
             "Weakness"
@@ -1679,6 +1687,7 @@
             "Memory problems",
             "Mood swings",
             "Muscle problems",
+            "Sleepiness",
             "Speaking difficulties",
             "Walking difficulties"
         ],
@@ -1763,9 +1772,10 @@
     {
         "actions": [
             "pH balance",
-            "Electrical conduction system of the heart",
+            "Electrical conduction",
             "Blood coagulation",
             "Bone and tooth development",
+            "Cell signaling",
             "Vitamin D metabolism"
         ],
         "deficiencies": [
@@ -1790,6 +1800,7 @@
             "Acid/Base balance",
             "Bones",
             "Circulatory system",
+            "Electrolyte",
             "Muscle tone",
             "Nervous system",
             "Teeth"
@@ -1877,6 +1888,7 @@
     {
         "actions": [
             "Acetylcholine formation",
+            "Electrical conduction",
             "Cell signaling via Acetylcholine",
             "pH balance",
             "Hydrochloric acid (HCL) formation",
@@ -1898,6 +1910,7 @@
             "Cognition",
             "Circulatory system",
             "Digestion",
+            "Electrolyte",
             "Muscle tone",
             "Nervous system"
         ],
@@ -1951,8 +1964,7 @@
             "Water balance"
         ],
         "warnings": [
-            "Metabolism requires Sodium",
-            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, stress, pharmaceutical drugse"
+            "Metabolism requires Sodium"
         ]
     },
     {
@@ -2217,6 +2229,7 @@
             "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
             "Irregular hearbeat",
             "Nervousness",
+            "Sleepiness",
             "Thyroid enlargement",
             "Skin rash",
             "Weight gain"
@@ -2352,6 +2365,7 @@
             "Rapid hearbeat",
             "Skin itchiness",
             "Skin paleness",
+            "Sleepiness",
             "Swallowing difficulties",
             "Weakness",
             "Weight loss"
@@ -2452,7 +2466,8 @@
             "pH balance",
             "Cell signaling",
             "Calcium and Potassium absorption and metabolism",
-            "DNA and RNA formation"
+            "DNA and RNA formation",
+            "Electrical conduction"
         ],
         "deficiencies": [
             "Anxiety",
@@ -2483,6 +2498,7 @@
             "Bones",
             "Circulatory system",
             "Cognition",
+            "Electrolyte",
             "Mental attitude",
             "Metabolism",
             "Muscle tone",
@@ -2729,6 +2745,7 @@
             "Rapid heartbeat",
             "Shortness of breath",
             "Skin paleness",
+            "Sleepiness",
             "Tooth problems",
             "Weakness"
         ],
@@ -2810,8 +2827,9 @@
             "DNA and RNA formation",
             "Cell membrane integrity via Lecithin",
             "Vitamin B-complex metabolism",
-            "Nerve conduction via Sphingolipids",
-            "pH balance"
+            "Electrical conduction via Sphingolipids",
+            "pH balance",
+            "Cell signaling"
         ],
         "deficiencies": [
             "Anxiety",
@@ -2831,6 +2849,7 @@
             "Cell growth",
             "Circulatory system",
             "Cognition",
+            "Electrolyte",
             "Mental attitude",
             "Metabolism",
             "Muscle tone",
@@ -2911,7 +2930,8 @@
             "Carbohydrate metabolism",
             "Cellular-membrane potential and the propagation of action potentials in neuronal, muscular, and cardiac tissue",
             "Hormone formation",
-            "Cell signaling"
+            "Cell signaling",
+            "Electrical conduction"
         ],
         "deficiencies": [
             "Acne",
@@ -2934,6 +2954,7 @@
             "Circulatory system",
             "Cognition",
             "Digestion",
+            "Electrolyte",
             "Muscle tone",
             "Nervous system"
         ],
@@ -3009,7 +3030,7 @@
             "Stress"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, diarrhea, excess Sodium, excess, Chloride, high cholesterol",
+            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, diarrhea, excess Sodium, excess Chloride, high cholesterol",
             "Metabolism requires Magnesium"
         ]
     },
@@ -3035,7 +3056,9 @@
             "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Language skills, Learning, Memory, Problem solving, Social, Speaking, Thinking, Understanding problems)",
             "Shortness of breath",
             "Skin driness",
+            "Sleepiness",
             "Swelling",
+            "Thyroid enlargement",
             "Weight gain"
         ],
         "functions": [
@@ -3140,74 +3163,91 @@
     },
     {
         "actions": [
-            ""
+            "pH balance",
+            "Fluid balance",
+            "Osmotic balance (blood volume)",
+            "Cell signaling",
+            "Electrical conduction"
         ],
         "deficiencies": [
-            ""
+            "Apathy",
+            "Appetite loss",
+            "Concentration difficulties",
+            "Confusion",
+            "Convulsions",
+            "Depression",
+            "Dizziness",
+            "Fatigue",
+            "Headache",
+            "Irritability",
+            "Low blood pressure",
+            "Memory problems",
+            "Muscle cramps",
+            "Nausea",
+            "Sleepiness",
+            "Vomiting",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Acid/Base balance",
+            "Cognition",
+            "Circulatory system",
+            "Electrolyte",
+            "Muscle tone",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Sodium (N)",
         "partnership": [
-            ""
+            "Chloride"
         ],
         "references": [
             {
-                "credit": "Wikipedia, Manganese",
-                "url": "https://en.wikipedia.org/wiki/Manganese"
+                "credit": "Wikipedia, Sodium",
+                "url": "https://en.wikipedia.org/wiki/Sodium"
             },
             {
-                "credit": "Wikipedia, Anemia",
-                "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
-            },
-            {
-                "credit": "The world's healthiest foods, Manganese",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=77"
+                "credit": "Wikipedia, Hyponatremia",
+                "url": "https://en.wikipedia.org/wiki/Hyponatremia#Signs_and_symptoms"
             },
             {
                 "credit": "Wikibooks, 'Human physiology', Minerals",
                 "url": "https://en.Wikibooks.org/wiki/Human_Physiology/Nutrition#Minerals"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Manganese",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Vitamins and Minerals, Sodium",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Manganese",
-                "url": "http://www.healthy.net/Health/Article/Manganese/2072/1"
-            },
-            {
-                "credit": "MedlinePlus, Manganese",
-                "url": "https://medlineplus.gov/druginfo/natural/182.html"
-            },
-            {
-                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Manganese",
-                "url": "http://umm.edu/health/medical/altmed/supplement/manganese"
+                "credit": "Elson Haas M. MD, Healthy.net, Minerals: Sodium",
+                "url": "http://www.healthy.net/scr/Article.aspx?Id=2069"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=315&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=307&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "500 mg/day",
+            "Children (< 14 years)": "1000 mg/day",
+            "Men (> 14 years)": "1500 mg/day",
+            "Women (> 14 years)": "1500 mg/day",
+            "Pregnancy": "1500 mg/day",
+            "Lactation": "1500 mg/day"
         },
-        "type": "",
+        "type": "Essential mineral element",
         "sources": [
-            ""
+            "Table salt",
+            "Seafood",
+            "Meat"
         ],
-        "summary": "",
+        "summary": "Sodium (N) is an essential mineral element",
         "uses": [
             ""
         ],
         "warnings": [
-            ""
+            "Absorption impaired excess Potassium, sweating, vomiting, diarrhea",
+            "Metabolism requires Chloride",
+            "Excess causes cardiovascular problems"
         ]
     },
     {
