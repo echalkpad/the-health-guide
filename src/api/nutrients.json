@@ -424,7 +424,7 @@
             "Sleep"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess water"
         ]
     },
     {
@@ -547,7 +547,7 @@
         "warnings": [
             "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda) and by dry heat cooking",
             "Degraded 33% by cooking",
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
@@ -706,7 +706,7 @@
             "Water balance"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by sunlight and cooking"
         ]
     },
@@ -813,7 +813,7 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw egg whites",
             "Metabolism requires Manganese"
         ]
     },
@@ -957,7 +957,7 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by sunlight and cooking",
             "Destroyed by acids"
         ]
@@ -1083,7 +1083,7 @@
             "Optimism"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by acids (e.g vinegar) or alkalines (e.g baking soda) and by dry heat cooking",
             "Degraded by sunlight"
         ]
@@ -1094,7 +1094,7 @@
             "Retinoic acid production via Retinal",
             "Rhodopsin (rods) formation via Retinal",
             "Gene transcription via Retinoic acid",
-            "Cell growth and regeneration via Retinoic acid",
+            "Cell development via Retinoic acid",
             "Reducing agent"
         ],
         "deficiencies": [
@@ -1198,7 +1198,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess iron, mineral oil",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess iron, mineral oil",
             "Metabolism requires fat, Vitamin E, and Zinc"
         ]
     },
@@ -1355,7 +1355,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, mercury, fever, excess water",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, mercury, fever, excess water",
             "Destroyed by sunlight, heat, cooking, and alkalines (e.g baking soda)",
             "Degraded by Copper",
             "Metabolism requires Manganese"
@@ -1766,7 +1766,7 @@
         ],
         "warnings": [
             "Metabolism requires Manganese",
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
             "Destroyed by cooking"
         ]
     },
@@ -1882,7 +1882,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Sodium, excess phosphorus, excess protein, Zinc, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Sodium, excess phosphorus, excess protein, Zinc, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans)",
             "Metabolism requires acid medium, fat, protein, Magnesium, Vitamin C, Vitamin D"
         ]
     },
@@ -2065,7 +2065,7 @@
             "Heart"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Iron, phytic acid (e.g. from whole grains, seeds, nuts, legumes)"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess fat, excess Iron, phytic acid (e.g. from whole grains, seeds, nuts, legumes)"
         ]
     },
     {
@@ -2201,7 +2201,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Iron, Zinc, excess Molybdenum, Vitamin C, Manganese"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Iron, Zinc, excess Molybdenum, Vitamin C, Manganese"
         ]
     },
     {
@@ -2209,16 +2209,16 @@
             "Triiodothyronine (T3 thyroid hormone) and Thyroxine (T4 thyroid hormone) formation",
             "Thermoregulation (body temperature) via T4",
             "Metabolism via T3 and T4",
-            "Cell growth via T3 and T4",
+            "Cell development via T3 and T4",
             "Fatty acid and cholesterol formation via T3 and T4",
             "Protein formation via T3 and T4",
             "Carotene to Vitamin A convertion via T3 and T4"
         ],
         "deficiencies": [
             "Apathy",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Cold extremities",
             "Colds",
-            "Depression",
             "Goiter",
             "Growth problems",
             "Hair driness",
@@ -2227,9 +2227,7 @@
             "Heart palpitations",
             "High blood pressure",
             "Infections",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
-            "Nervousness",
             "Sleepiness",
             "Thyroid enlargement",
             "Skin rash",
@@ -2330,7 +2328,7 @@
             "Weight loss"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw foods (e.g. nuts and cabbage), Bromine (grains), Flouride, Chloride"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, raw foods (e.g. nuts and cabbage), Bromine (grains), Flouride, Chloride"
         ]
     },
     {
@@ -2471,23 +2469,19 @@
             "Electrical conduction"
         ],
         "deficiencies": [
-            "Anxiety",
             "Bone problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Confusion",
             "Constipation",
             "Convulsions",
-            "Depression",
             "Fatigue",
             "Heart palpitations",
             "High blood pressure",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
-            "Irritability",
             "Low Calcium levels",
             "Muscle cramps",
             "Muscle twitching",
-            "Nervousness",
             "Numbness",
             "Tingling",
             "Tooth problems",
@@ -2600,9 +2594,7 @@
             "Sex hormone formation",
             "Fatty acid and cholesterol formation",
             "Dopamine formation",
-            "Blood cell formation",
-            "Cell growth",
-            "Bone development",
+            "Cell development",
             "Protein, carbohydrate, and lipid metabolism",
             "Vitamin C metabolism",
             "Vitamin B1 (Thiamine) metabolism",
@@ -2615,19 +2607,16 @@
             "Balance loss",
             "Bone problems",
             "Birth problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Convulsions",
-            "Depression",
             "Dizziness",
             "Growth problems",
             "Hearing loss",
             "High blood glucose",
             "Infertility",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
-            "Irritability",
             "Kidney problems",
             "Muscle twitching",
             "Numbness",
-            "Stress",
             "Tingling",
             "Walking difficulties",
             "Weakness"
@@ -2719,7 +2708,7 @@
             "Pregnancy"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess Phosphorus, excess Iron, Zinc, Cobalt, soy protein"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Calcium, excess Phosphorus, excess Iron, Zinc, Cobalt, soy protein"
         ]
     },
     {
@@ -2814,7 +2803,7 @@
             "Optimism"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Copper"
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Copper"
         ]
     },
     {
@@ -2826,18 +2815,17 @@
             "Carbohydrate and lipid metabolism",
             "Protein formation",
             "DNA and RNA formation",
-            "Cell membrane integrity via Lecithin",
+            "Cell membrane structure via Lecithin",
             "Vitamin B-complex metabolism",
             "Electrical conduction via Sphingolipids",
             "pH balance",
             "Cell signaling"
         ],
         "deficiencies": [
-            "Anxiety",
             "Bleeding",
             "Bone problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Growth problems",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Muscle problems",
             "Tooth problems",
@@ -2920,7 +2908,7 @@
             "Teeth"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Aluminium, Magnesium, Iron, Zinc",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Aluminium, Magnesium, Iron, Zinc",
             "Metabolism requires Calcium, Vitamin D"
         ]
     },
@@ -2939,12 +2927,12 @@
             "Bone problems",
             "Breathing difficulties",
             "Constipation",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Digestive problems",
             "Fatigue",
             "Growth problems",
             "High blood pressure",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Irregular hearbeat",
             "Muscle problems",
             "Skin driness"
@@ -3031,7 +3019,7 @@
             "Stress"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, diarrhea, excess Sodium, excess Chloride, high cholesterol",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, diarrhea, excess Sodium, excess Chloride, high cholesterol",
             "Metabolism requires Magnesium"
         ]
     },
@@ -3040,12 +3028,13 @@
             "Glutathione peroxidase (GP) formation",
             "Selenocysteine formation",
             "Reducing agent",
-            "Cell growth and regeneration",
+            "Cell development",
             "Thyroxine (T4 thyroid hormone) to Triiodothyronine (T3 thyroid hormone) conversion"
         ],
         "deficiencies": [
             "Appetite loss",
             "Birth problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Cold extremities",
             "Colds",
             "Constipation",
@@ -3054,7 +3043,6 @@
             "Infections",
             "Infertility",
             "Insomnia",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Shortness of breath",
             "Skin driness",
             "Sleepiness",
@@ -3159,7 +3147,7 @@
             "Skin"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Vitamin C",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, excess Vitamin C",
             "Metabolism requires Iodine, Vitamin E"
         ]
     },
@@ -3280,13 +3268,13 @@
         "deficiencies": [
             "Appetite loss",
             "Bleeding",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Colds",
             "Diarrhea",
             "Growth problems",
             "Hair loss",
             "Infections",
             "Infertility",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Liver enlargement",
             "Mouth problems",
             "Skin problems",
@@ -3387,7 +3375,7 @@
             "Wounds"
         ],
         "warnings": [
-            "Absorption impaired by sedentarism,  alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Calcium, Copper, Iron, Phosphorus, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans), fiber, Mercury, milk, eggs",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Calcium, Copper, Iron, Phosphorus, phytic acid (e.g. from whole grains, seeds, nuts, legumes), oxalic acid (e.g. spinach rhubarb, sweet potatoes, beans), fiber, Mercury, milk, eggs",
             "Metabolism requires Protein, 'heme' (meat)"
         ]
     },
@@ -3397,17 +3385,16 @@
             "Cell signaling via eicosanoids",
             "High-density lipoprotein (HDL) formation via eicosanoids",
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
-            "Cell membrane integrity via eicosanoids",
+            "Cell membrane structure via eicosanoids",
             "Anti-inflammation via eicosanoids"
         ],
         "deficiencies": [
             "Birth problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Growth problems",
             "Hair loss",
             "Heart problems",
             "High blood cholesterol",
-            "Hyperactivity",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Pain",
             "Prostate enlargement",
             "Skin problems",
@@ -3419,6 +3406,9 @@
             "Cell growth",
             "Cognition",
             "Circulatory system",
+            "Hormone formation",
+            "Mental attitude",
+            "Metabolism",
             "Nervous system"
         ],
         "name": "alpha-Linolenic acid (ALA)",
@@ -3494,6 +3484,7 @@
             "Blood vessels",
             "Brain",
             "Circulation",
+            "Energy",
             "Growth",
             "Hair",
             "Heart",
@@ -3514,17 +3505,16 @@
             "Cell signaling via eicosanoids",
             "High-density lipoprotein (HDL) formation via eicosanoids",
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
-            "Cell membrane integrity via eicosanoids",
+            "Cell membrane structure via eicosanoids",
             "Anti-inflammation via eicosanoids"
         ],
         "deficiencies": [
             "Birth problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Growth problems",
             "Hair loss",
             "Heart problems",
             "High blood cholesterol",
-            "Hyperactivity",
-            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
             "Pain",
             "Prostate enlargement",
             "Skin problems",
@@ -3536,6 +3526,9 @@
             "Cell growth",
             "Cognition",
             "Circulatory system",
+            "Hormone formation",
+            "Mental attitude",
+            "Metabolism",
             "Nervous system"
         ],
         "name": "Linoleic acid (LA)",
@@ -3605,6 +3598,7 @@
             "Blood vessels",
             "Brain",
             "Circulation",
+            "Energy",
             "Growth",
             "Hair",
             "Heart",
@@ -3622,42 +3616,132 @@
     },
     {
         "actions": [
-            ""
+            "DNA and RNA formation",
+            "Gene expression",
+            "Cell development",
+            "Cell signaling",
+            "Nutrient transportation",
+            "Metabolism",
+            "Enzyme catalysis",
+            "Signal transduction"
         ],
         "deficiencies": [
-            ""
+            "Birth problems",
+            "Bone problems",
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
+            "Cold extremities",
+            "Digestive problems",
+            "Fatigue",
+            "Heart problems",
+            "Infections",
+            "Infertility",
+            "Kidney problems",
+            "Liver problems",
+            "Mouth problems",
+            "Muscle problems",
+            "Skin problems",
+            "Sleepiness",
+            "Weight problems"
         ],
         "functions": [
-            ""
+            "Acid/Base balance",
+            "Bones",
+            "Brain",
+            "Cell growth",
+            "Circulatory system",
+            "Collagen",
+            "Cognition",
+            "Digestion",
+            "Enzyme formation",
+            "Epithelium",
+            "Hormone formation",
+            "Mental attitude",
+            "Metabolism",
+            "Muscles",
+            "Nervous system",
+            "Senses"
         ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
+        "name": "Protein (Amino acids)",
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Protein",
+                "url": "https://en.wikipedia.org/wiki/Protein"
+            },
+            {
+                "credit": "Wikipedia, Amino acid",
+                "url": "https://en.wikipedia.org/wiki/Amino_acid"
+            },
+            {
+                "credit": "Wikipedia, Enzyme catalysis",
+                "url": "https://en.wikipedia.org/wiki/Enzyme_catalysis"
+            },
+            {
+                "credit": "The world's healthiest foods, Protein",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=92"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Protein Functions",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2103"
+            },
+            {
+                "credit": "Wikibooks, 'Human physiology', Proteins",
+                "url": "https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Proteins"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=203&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "2 g/kg/day",
+            "Children (< 14 years)": "1.5 g/kg/day",
+            "Men (> 14 years)": "1.5 g/kg/day",
+            "Women (> 14 years)": "1.5 g/kg/day",
+            "Pregnancy": "2 g/kg/day",
+            "Lactation": "2 g/kg/day"
         },
-        "type": "",
+        "type": "Macronutrient",
         "sources": [
-            ""
+            "Fish",
+            "Seeds",
+            "Soybeans",
+            "Lean meat",
+            "Nuts",
+            "Legumes",
+            "Cheese",
+            "Eggs"
         ],
-        "summary": "",
+        "summary": "Protein is the third most important nutrient, after oxygen and water, being the main functional and structural component of all cells. Protein is the backbone of all metabolic functions. Proteins are chains of amino acids, hence, amino acids are the building blocks of all cells. There are 20 amino acids, from which only 11 can be formed by the body on its own (Non-essential amino acids); the rest must be provided through nutrition (Essential amino acid). Based on these 9 essential aminoacids (Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine), the protein quality of food varies. Protein with all 9 essential amino acids is complete, the rest is incomplete. Thus. it is important to focus on complete protein foods. Amino acids are tied togethrt in all functions and if only one essential amino acid is missing, all the other processes are impaired",
         "uses": [
-            ""
+            "Blood vessels",
+            "Bones",
+            "Brain",
+            "Breasts",
+            "Circulation",
+            "Detoxification",
+            "Digestion",
+            "Energy",
+            "Fertility",
+            "Growth",
+            "Hair",
+            "Heart",
+            "Immunity",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Metabolism",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
+            "Muscles",
+            "Nerves",
+            "Recovery",
+            "Senses",
+            "Skin",
+            "Sleep"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {

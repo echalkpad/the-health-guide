@@ -4,7 +4,7 @@ Protein is the third most important nutrient, after oxygen and water, being the 
 > __Proteins are chains of amino acids, hence, amino acids are the building blocks of all cells.__ 
 
 There are 20 amino acids, from which only 11 can be formed by the body on its own (`Non-essential amino acids`); the rest must be provided through nutrition (`Essential amino acids`).
-Based on these 9 essential aminoacids, the protein quality offoodvaroes. Protein with all 9 essential amino acids is complete, the rest is incomplete.  Thus. it is important to focus on complete protein foods. Amino acids are tied togethrt in all functions and if only one essential amino acid is missing, all the other processes are impaired.
+Based on these 9 essential aminoacids, the protein quality of food varies. Protein with all 9 essential amino acids is complete, the rest is incomplete.  Thus. it is important to focus on complete protein foods. Amino acids are tied togethrt in all functions and if only one essential amino acid is missing, all the other processes are impaired.
 
 ## Essential amino acids
 - `Histidine`;
