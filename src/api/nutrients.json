@@ -1876,7 +1876,7 @@
             "Kidneys",
             "Heart",
             "Menstruation",
-            "Muscles",
+            "Muscles (contraction)",
             "Pregnancy",
             "Teeth",
             "Wounds"
@@ -2320,9 +2320,9 @@
             "Fertility",
             "Hair",
             "Leg ulcers",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Metabolism",
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Nails",
             "Nerves",
             "Skin",
@@ -2579,9 +2579,9 @@
             "Kidneys",
             "Liver",
             "Menstruation",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
-            "Muscles",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
+            "Muscles (relaxation)",
             "Nerves",
             "Recovery",
             "Sleep",
@@ -2713,8 +2713,8 @@
             "Fertility",
             "Growth",
             "Immunity",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Muscles",
             "Pregnancy"
         ],
@@ -2915,7 +2915,7 @@
             "Growth",
             "Heart",
             "Kidneys",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Muscles",
             "Teeth"
         ],
@@ -3022,8 +3022,8 @@
             "Growth",
             "Heart",
             "Kidneys",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Muscles",
             "Nerves",
             "Recovery",
@@ -3153,8 +3153,8 @@
             "Immunity",
             "Kidneys",
             "Liver",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Pregnancy",
             "Skin"
         ],
@@ -3245,8 +3245,8 @@
         "summary": "Sodium (N) is an essential mineral element",
         "uses": [
             "Circulation",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Muscles"
         ],
         "warnings": [
@@ -3378,7 +3378,7 @@
             "Growth",
             "Hair",
             "Immunity",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Nails",
             "Pregnancy",
             "Senses",
@@ -3451,17 +3451,21 @@
                 "url": "http://www.mayoclinic.org/drugs-supplements/omega-3-fatty-acids-fish-oil-alpha-linolenic-acid/background/hrb-20059372"
             },
             {
-                "credit": "WebMD, Alpha-Linolenic acid",
+                "credit": "WebMd, Alpha-Linolenic acid",
                 "url": "http://www.webmd.com/vitamins-supplements/ingredientmono-1035-ALPHA-LINOLENIC+ACID.aspx?activeIngredientId=1035&activeIngredientName=ALPHA-LINOLENIC+ACID&source=3"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=619&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "0.5 mg/day",
-            "Children (< 14 years)": "0.9 mg/day",
-            "Men (> 14 years)": "1.6 mg/day",
-            "Women (> 14 years)": "1.1 mg/day",
-            "Pregnancy": "1.1 mg/day",
-            "Lactation": "1.1 mg/day"
+            "Infants (< 1 years)": "0.5 g/day",
+            "Children (< 14 years)": "0.9 g/day",
+            "Men (> 14 years)": "1.6 g/day",
+            "Women (> 14 years)": "1.1 g/day",
+            "Pregnancy": "1.1 g/day",
+            "Lactation": "1.1 g/day"
         },
         "type": "Essential fatty acid (EFA)",
         "sources": [
@@ -3484,7 +3488,7 @@
             "Mackerel",
             "Trout"
         ],
-        "summary": "alpha-Linoleic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA)",
+        "summary": "alpha-Linolenic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA)",
         "uses": [
             "Blood cholesterol",
             "Blood vessels",
@@ -3494,8 +3498,8 @@
             "Hair",
             "Heart",
             "Immunity",
-            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)"
-            "Mood (Motivation, Optimism, Self-control, Stress management)"
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
             "Pregnancy",
             "Skin",
             "Wounds"
@@ -3506,42 +3510,114 @@
     },
     {
         "actions": [
-            ""
+            "Eicosanoids formation",
+            "Cell signaling via eicosanoids",
+            "High-density lipoprotein (HDL) formation via eicosanoids",
+            "Low-density lipoprotein (LDL) metabolism via eicosanoids",
+            "Cell membrane integrity via eicosanoids",
+            "Anti-inflammation via eicosanoids"
         ],
         "deficiencies": [
-            ""
+            "Birth problems",
+            "Growth problems",
+            "Hair loss",
+            "Heart problems",
+            "High blood cholesterol",
+            "Hyperactivity",
+            "Intellectual disability (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
+            "Pain",
+            "Prostate enlargement",
+            "Skin problems",
+            "Swelling",
+            "Weight loss"
         ],
         "functions": [
-            ""
+            "Brain",
+            "Cell growth",
+            "Cognition",
+            "Circulatory system",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Linoleic acid (LA)",
         "partnership": [
-            ""
+            "alpha-Linolenic acid (ALA)"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Linoleic acid",
+                "url": "https://en.wikipedia.org/wiki/Linoleic_acid"
+            },
+            {
+                "credit": "Omega-6 fatty acid",
+                "url": "https://en.wikipedia.org/wiki/Omega-6_fatty_acid"
+            },
+            {
+                "credit": "Eicosanoid",
+                "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2138"
+            },
+            {
+                "credit": "MedlinePlus, Omega-6 Fatty Acids",
+                "url": "https://medlineplus.gov/druginfo/natural/496.html"
+            },
+            {
+                "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Omega-6 fatty acids",
+                "url": "http://umm.edu/health/medical/altmed/supplement/omega6-fatty-acids"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=618&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "5 g/day",
+            "Children (< 14 years)": "10 g/day",
+            "Men (> 14 years)": "17 g/day",
+            "Women (> 14 years)": "12 g/day",
+            "Pregnancy": "12 g/day",
+            "Lactation": "12 g/day"
         },
-        "type": "",
+        "type": "Essential fatty acid (EFA)",
         "sources": [
-            ""
+            "Walnuts",
+            "Sunflower seeds",
+            "Butternuts",
+            "Pine nuts",
+            "Poppy seed",
+            "Watermelon seeds",
+            "Safflower seeds",
+            "Hemp seeds",
+            "Sesame seeds",
+            "Pecan nuts",
+            "Hickorynuts",
+            "Pumpkin seeds",
+            "Beechnuts",
+            "Peanuts",
+            "Pistachio nuts",
+            "Almonds"
         ],
-        "summary": "",
+        "summary": "Linoleic acid, LA, or 18:2 is an essential omega-6 (n-6) fatty acid part of the polyunsaturated fats (PUFA)",
         "uses": [
-            ""
+            "Blood cholesterol",
+            "Blood vessels",
+            "Brain",
+            "Circulation",
+            "Growth",
+            "Hair",
+            "Heart",
+            "Immunity",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
+            "Pregnancy",
+            "Skin",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Degraded by sunlight and cooking",
+            "Excess causes cardiovascular problems"
         ]
     },
     {
