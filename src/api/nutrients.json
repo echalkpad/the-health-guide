@@ -4047,9 +4047,10 @@
             "Ketogenesis",
             "Enzyme catalysis",
             "Antibody formation",
+            "Thymus growth",
             "Hormone formation",
             "Calcium absorption",
-            "Serotonin regulation"
+            "Serotonin release"
         ],
         "deficiencies": [
             "Bone problems",
@@ -4075,8 +4076,12 @@
         ],
         "name": "Lysine (Lys)",
         "partnership": [
+            "Alanine",
+            "Aspartic acid",
             "Calcium",
+            "Cysteine",
             "Iron",
+            "Threonine",
             "Vitamin B2 (Riboflavin)",
             "Vitamin B3 (Niacin)",
             "Vitamin B6 (Pyridoxine)",
@@ -4300,7 +4305,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=508&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4316,12 +4321,15 @@
             "Eggs",
             "Soybeans",
             "Meat",
-            "Dairy"
+            "Cheese",
+            "Nuts",
+            "Seeds"
         ],
         "summary": "Phenylalanine (Phe) is an essential glucogenic aromatic amino acid (AAA)",
         "uses": [
             "Attention",
             "Concentration",
+            "Energy",
             "Growth",
             "Learning",
             "Memory",
@@ -4330,37 +4338,59 @@
             "Optimism"
         ],
         "warnings": [
-            "Metabolism requires  Copper, Iron, Vitamin B3 (Niacin), Vitamin B6 (Pyridoxine), Vitamin C",
+            "Metabolism requires Copper, Iron, Vitamin B3 (Niacin), Vitamin B6 (Pyridoxine), Vitamin C",
             "Destroyed by grilling and frying",
             "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
         "actions": [
-            ""
+            "Acetyl-CoA formation",
+            "Glycine formation",
+            "Glucose formation (gluconeogenesis)",
+            "Serine formation",
+            "Elastin formation",
+            "Thymus growth",
+            "Antibody formation"
         ],
         "deficiencies": [
-            ""
+            "Colds",
+            "Fatigue",
+            "Growth problems",
+            "Infections",
+            "Muscle problems",
+            "Skin problems",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Collagen",
+            "Metabolism",
+            "Muscles"
         ],
-        "name": "",
+        "name": "Threonine (Thr)",
         "partnership": [
-            ""
+            "Alanine",
+            "Aspartic acid",
+            "Cysteine",
+            "Lysine"
         ],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Threonine",
+                "url": "https://en.wikipedia.org/wiki/Threonine"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
             },
             {
                 "credit": "The world's healthiest foods, Amino acids",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Threonine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1972"
             },
             {
                 "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -4372,55 +4402,96 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=502&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "49 mg/kg/day",
+            "Children (< 14 years)": "24 mg/kg/day",
+            "Men (> 14 years)": "20 mg/kg/day",
+            "Women (> 14 years)": "20 mg/kg/day",
+            "Pregnancy": "26 mg/kg/day",
+            "Lactation": "30 mg/kg/day"
         },
-        "type": "",
+        "type": "Essential amino acid",
         "sources": [
-            ""
+            "Eggs",
+            "Soybeans",
+            "Meat",
+            "Dairy",
+            "Seeds",
+            "Nuts"
         ],
-        "summary": "",
+        "summary": "Threonine (Thr) is an essential glucogenic amino acid",
         "uses": [
-            ""
+            "Energy",
+            "Growth",
+            "Hair",
+            "Immunity",
+            "Muscles",
+            "Nails",
+            "Skin"
         ],
         "warnings": [
-            ""
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
         "actions": [
-            ""
+            "5-Hydroxytryptophan (5-HTP) formation",
+            "Glucose formation (gluconeogenesis)",
+            "Serotonin formation via 5-HTP",
+            "Melanine formation via Serotonin",
+            "Vitamin B3 (Niacin) formation",
+            "Auxin formation"
         ],
         "deficiencies": [
-            ""
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
+            "Fatigue",
+            "Growth problems",
+            "Insomnia",
+            "Skin problems"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Metabolism",
+            "Mood",
+            "Muscles"
         ],
-        "name": "",
+        "name": "Tryptophan (Trp)",
         "partnership": [
-            ""
+            "Choline",
+            "Magnesium",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin B9 (Folic acid)",
+            "Vitamin B12 (Cobalamin)",
+            "Vitamin C"
         ],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Tryptophan",
+                "url": "https://en.wikipedia.org/wiki/Tryptophan"
+            },
+            {
+                "credit": "Wikipedia, 5-Hydroxytryptophan",
+                "url": "https://en.wikipedia.org/wiki/5-Hydroxytryptophan"
+            },
+            {
+                "credit": "Wikipedia, Aromatic amino acids",
+                "url": "https://en.wikipedia.org/wiki/Aromatic_amino_acids"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
             },
             {
                 "credit": "The world's healthiest foods, Amino acids",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Tryptophan",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1974"
             },
             {
                 "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -4436,51 +4507,79 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "13 mg/kg/day",
+            "Children (< 14 years)": "6 mg/kg/day",
+            "Men (> 14 years)": "5 mg/kg/day",
+            "Women (> 14 years)": "5 mg/kg/day",
+            "Pregnancy": "7 mg/kg/day",
+            "Lactation": "9 mg/kg/day"
         },
-        "type": "",
+        "type": "Essential amino acid",
         "sources": [
-            ""
+            "Eggs",
+            "Soybeans",
+            "Meat",
+            "Cheese",
+            "Seeds"
         ],
-        "summary": "",
+        "summary": "Tryptophan (Trp) is an essential glucogenic aromatic amino acid (AAA)",
         "uses": [
-            ""
+            "Energy",
+            "Growth",
+            "Immunity",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
+            "Muscles",
+            "Sleep"
         ],
         "warnings": [
-            ""
+            "Metabolism requires Magnesium, Vitamin B6 (Pyridoxine), Vitamin B9 (Folic acid), Vitamin C",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
         "actions": [
-            ""
+            "Succinyl-CoA formation",
+            "Glucose formation (gluconeogenesis)",
+            "Myelin formation"
         ],
         "deficiencies": [
-            ""
+            "Fatigue",
+            "Growth problems",
+            "Low blood glucose",
+            "Muscle problems",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Metabolism",
+            "Muscles",
+            "Nervous system"
         ],
-        "name": "",
+        "name": "Valine (Val)",
         "partnership": [
-            ""
+            "Vitamin B12 (Cobalamin)"
         ],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Valine",
+                "url": "https://en.wikipedia.org/wiki/Valine"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
+            },
+            {
+                "credit": "Wikipedia, Branched-chain amino acid",
+                "url": "https://en.wikipedia.org/wiki/Branched-chain_amino_acid"
             },
             {
                 "credit": "The world's healthiest foods, Amino acids",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Valine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1747"
             },
             {
                 "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -4492,27 +4591,36 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=510&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "58 mg/kg/day",
+            "Children (< 14 years)": "28 mg/kg/day",
+            "Men (> 14 years)": "24 mg/kg/day",
+            "Women (> 14 years)": "24 mg/kg/day",
+            "Pregnancy": "31 mg/kg/day",
+            "Lactation": "35 mg/kg/day"
         },
-        "type": "",
+        "type": "Essential amino acid",
         "sources": [
-            ""
+            "Eggs",
+            "Soybeans",
+            "Meat",
+            "Dairy",
+            "Seeds"
         ],
-        "summary": "",
+        "summary": "Valine (Val) is an essential glucogenic branched-chain amino acid (BCAA)",
         "uses": [
-            ""
+            "Energy",
+            "Growth",
+            "Muscles",
+            "Nerves"
         ],
         "warnings": [
-            ""
+            "Metabolism requires Vitamin B12 (Cobalamin)",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
