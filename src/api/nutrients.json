@@ -714,7 +714,7 @@
     },
     {
         "actions": [
-            "Fatty acids, Isoleucine, and Valine formation",
+            "Fatty acids, Isoleucine, Leucine, and Valine formation",
             "Glucose formation (gluconeogenesis)",
             "DNA and RNA formation"
         ],
@@ -3731,7 +3731,7 @@
             "Cheese",
             "Eggs"
         ],
-        "summary": "Protein is the third most important nutrient, after oxygen and water, being the main functional and structural component of all cells. Protein is the backbone of all metabolic functions. Proteins are chains of amino acids, hence, amino acids are the building blocks of all cells. There are 20 amino acids, from which only 11 can be formed by the body on its own (Non-essential amino acids); the rest must be provided through nutrition (Essential amino acid). Based on these 9 essential aminoacids (Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine), the protein quality of food varies. Protein with all 9 essential amino acids is complete, the rest is incomplete. Thus. it is important to focus on complete protein foods. Amino acids are tied togethrt in all functions and if only one essential amino acid is missing, all the other processes are impaired",
+        "summary": "Protein is the third most important nutrient, after oxygen and water, being the main functional and structural component of all cells. Protein is the backbone of all metabolic functions. Proteins are chains of amino acids, hence, amino acids are the building blocks of all cells. There are 20 amino acids, from which only 10 are essential (Arginine, Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine). Protein quality of food varies, according to the essential amino acid content. Protein with all essential amino acids is complete, the rest is incomplete. Thus, it is important to focus on complete protein foods",
         "uses": [
             "Blood vessels",
             "Bones",
@@ -3765,7 +3765,9 @@
             "Histamine production",
             "Anti-inflammation via Histamine",
             "Red blood cell formation",
-            "Copper, Iron, and Zinc absorption"
+            "Copper, Iron, and Zinc absorption",
+            "Enzyme catalysis",
+            "Glucose formation (gluconeogenesis)"
         ],
         "deficiencies": [
             "Balance loss",
@@ -3797,6 +3799,14 @@
                 "url": "https://en.wikipedia.org/wiki/Histidine"
             },
             {
+                "credit": "Wikipedia, Aromatic amino acids",
+                "url": "https://en.wikipedia.org/wiki/Aromatic_amino_acids"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
+            },
+            {
                 "credit": "The world's healthiest foods, Amino acids",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
             },
@@ -3814,7 +3824,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -3835,7 +3845,7 @@
             "Tofu",
             "Pork"
         ],
-        "summary": "Histidine (His) is an essential amino acid",
+        "summary": "Histidine (His) is an essential glucogenic and aromatic amino acid (AAA)",
         "uses": [
             "Anemia",
             "Blood vessels",
@@ -3848,7 +3858,481 @@
             "Muscles"
         ],
         "warnings": [
-            "Destroyed by grilling, searing, and frying cooking"
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+        ]
+    },
+    {
+        "actions": [
+            "Succinyl-CoA formation",
+            "Acetyl-CoA formation",
+            "Glucose formation (gluconeogenesis) via Acetyl-CoA and Succinyl-CoA",
+            "Ketogenesis"
+        ],
+        "deficiencies": [
+            "Fatigue",
+            "Growth problems",
+            "Low blood glucose",
+            "Muscle problems",
+            "Weakness"
+        ],
+        "functions": [
+            "Cell growth",
+            "Metabolism",
+            "Muscles"
+        ],
+        "name": "Isoleucine (Ile)",
+        "partnership": [
+            "Leucine",
+            "Valine",
+            "Vitamin B7 (Biotin)"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Isoleucine",
+                "url": "https://en.wikipedia.org/wiki/Isoleucine"
+            },
+            {
+                "credit": "Wikipedia, Branched-chain amino acid",
+                "url": "https://en.wikipedia.org/wiki/Branched-chain_amino_acid"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
+            },
+            {
+                "credit": "Wikipedia, Ketogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Ketogenic_amino_acid"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Isoleucine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1960"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "43 mg/kg/day",
+            "Children (< 14 years)": "22 mg/kg/day",
+            "Men (> 14 years)": "19 mg/kg/day",
+            "Women (> 14 years)": "19 mg/kg/day",
+            "Pregnancy": "25 mg/kg/day",
+            "Lactation": "30 mg/kg/day"
+        },
+        "type": "Essential amino acid",
+        "sources": [
+            "Eggs",
+            "Soybeans",
+            "Cheese",
+            "Meat"
+        ],
+        "summary": "Isoleucine (Ile) is an essential glucogenic, ketogenic, branched-chain amino acid (BCAA)",
+        "uses": [
+            "Energy",
+            "Growth",
+            "Muscles"
+        ],
+        "warnings": [
+            "Metabolism requires Vitamin B7 (Biotin)",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+        ]
+    },
+    {
+        "actions": [
+            "Ferritin formation",
+            "Astacin formation",
+            "Sterol formation",
+            "Acetyl-CoA formation",
+            "Ketogenesis"
+        ],
+        "deficiencies": [
+            "Fatigue",
+            "Growth problems",
+            "Low blood glucose",
+            "Muscle problems",
+            "Weakness"
+        ],
+        "functions": [
+            "Cell growth",
+            "Metabolism",
+            "Muscles"
+        ],
+        "name": "Leucine (Leu)",
+        "partnership": [
+            "Isoleucine",
+            "Valine"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Leucine",
+                "url": "https://en.wikipedia.org/wiki/Leucine"
+            },
+            {
+                "credit": "Wikipedia, Branched-chain amino acid",
+                "url": "https://en.wikipedia.org/wiki/Branched-chain_amino_acid"
+            },
+            {
+                "credit": "Wikipedia, Ketogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Ketogenic_amino_acid"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Leucine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1962"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=504&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "93 mg/kg/day",
+            "Children (< 14 years)": "49 mg/kg/day",
+            "Men (> 14 years)": "42 mg/kg/day",
+            "Women (> 14 years)": "42 mg/kg/day",
+            "Pregnancy": "56 mg/kg/day",
+            "Lactation": "62 mg/kg/day"
+        },
+        "type": "Essential amino acid",
+        "sources": [
+            "Eggs",
+            "Soybeans",
+            "Cheese",
+            "Meat"
+        ],
+        "summary": "Leucine (Leu) is an essential ketogenic, branched-chain amino acid (BCAA)",
+        "uses": [
+            "Energy",
+            "Growth",
+            "Muscles",
+            "Wounds"
+        ],
+        "warnings": [
+            "Metabolism requires Vitamin B7 (Biotin)",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+        ]
+    },
+    {
+        "actions": [
+            "Acetyl-CoA formation",
+            "Hydroxylysine formation",
+            "Allysine formation",
+            "Ketogenesis",
+            "Enzyme catalysis",
+            "Antibody formation",
+            "Hormone formation",
+            "Calcium absorption",
+            "Serotonin regulation"
+        ],
+        "deficiencies": [
+            "Bone problems",
+            "Colds",
+            "Depression",
+            "Fatigue",
+            "Growth problems",
+            "Infections",
+            "Insomnia",
+            "Muscle problems",
+            "Skin problems",
+            "Vision problems",
+            "Weakness"
+        ],
+        "functions": [
+            "Bones",
+            "Cell growth",
+            "Collagen",
+            "Metabolism",
+            "Nervous system",
+            "Muscles",
+            "Vision"
+        ],
+        "name": "Lysine (Lys)",
+        "partnership": [
+            "Calcium",
+            "Iron",
+            "Vitamin B2 (Riboflavin)",
+            "Vitamin B3 (Niacin)",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin C"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Lysine",
+                "url": "https://en.wikipedia.org/wiki/Lysine"
+            },
+            {
+                "credit": "Wikipedia, Ketogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Ketogenic_amino_acid"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Lysine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1744"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=505&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "89 mg/kg/day",
+            "Children (< 14 years)": "46 mg/kg/day",
+            "Men (> 14 years)": "38 mg/kg/day",
+            "Women (> 14 years)": "38 mg/kg/day",
+            "Pregnancy": "51 mg/kg/day",
+            "Lactation": "52 mg/kg/day"
+        },
+        "type": "Essential amino acid",
+        "sources": [
+            "Eggs",
+            "Soybeans",
+            "Cheese",
+            "Meat"
+        ],
+        "summary": "Lysine (Lys) is an essential ketogenic amino acid",
+        "uses": [
+            "Bones",
+            "Energy",
+            "Growth",
+            "Hair",
+            "Immunity",
+            "Muscles",
+            "Nails",
+            "Optimism",
+            "Recovery",
+            "Skin",
+            "Sleep",
+            "Vision"
+        ],
+        "warnings": [
+            "Metabolism requires Glutamic acid, Iron, Vitamin B2 (Riboflavin), Vitamin B3 (Niacin), Vitamin B6 (Pyridoxine), Vitamin C",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs",
+            "Destroyed by grilling and frying"
+        ]
+    },
+    {
+        "actions": [
+            "S-adenosyl methionine formation",
+            "Cysteine formation",
+            "Carnitine formation",
+            "Taurine formation",
+            "Lecithin formation",
+            "Phospholipid formation",
+            "Angiogenesis",
+            "Glucose formation (gluconeogenesis)"
+        ],
+        "deficiencies": [
+            "Fatigue",
+            "Growth problems",
+            "Muscle problems"
+        ],
+        "functions": [
+            "Antioxidant",
+            "Cell growth",
+            "Circulatory system (Cardiovascular and Immune system)",
+            "Metabolism",
+            "Muscles"
+        ],
+        "name": "Methionine (Met)",
+        "partnership": [
+            "Vitamin B12 (Cobalamin)"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Methionine",
+                "url": "https://en.wikipedia.org/wiki/Methionine"
+            },
+            {
+                "credit": "Wikipedia, Angiogenesis",
+                "url": "https://en.wikipedia.org/wiki/Angiogenesis"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Methionine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1963"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=506&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "43 mg/kg/day",
+            "Children (< 14 years)": "22 mg/kg/day",
+            "Men (> 14 years)": "19 mg/kg/day",
+            "Women (> 14 years)": "19 mg/kg/day",
+            "Pregnancy": "25 mg/kg/day",
+            "Lactation": "26 mg/kg/day"
+        },
+        "type": "Essential amino acid",
+        "sources": [
+            "Eggs",
+            "Meat",
+            "Cheese"
+        ],
+        "summary": "Methionine (Met) is an essential glucogenic, sulfur-containing amino acid (SAA)",
+        "uses": [
+            "Blood vessels",
+            "Circulation",
+            "Detoxification",
+            "Energy",
+            "Growth",
+            "Muscles",
+            "Nails",
+            "Skin",
+            "Wounds"
+        ],
+        "warnings": [
+            "Metabolism requires Vitamin B12 (Cobalamin)",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
+        ]
+    },
+    {
+        "actions": [
+            "Glucose formation (gluconeogenesis)",
+            "Tyrosine formation",
+            "Dopamine formation",
+            "Norepinephrine (Noradrenaline) and Epinephrine (Adrenaline) formation",
+            "Melanine formation"
+        ],
+        "deficiencies": [
+            "Depression",
+            "Fatigue",
+            "Muscle problems",
+            "Weakness"
+        ],
+        "functions": [
+            "Cell growth",
+            "Cognition",
+            "Metabolism",
+            "Nervous system"
+        ],
+        "name": "Phenylalanine (Phe)",
+        "partnership": [
+            "Copper",
+            "Iron",
+            "Vitamin B3 (Niacin)",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin C"
+        ],
+        "references": [
+            {
+                "credit": "Wikipedia, Phenylalanine",
+                "url": "https://en.wikipedia.org/wiki/Phenylalanine"
+            },
+            {
+                "credit": "Wikipedia, Aromatic amino acids",
+                "url": "https://en.wikipedia.org/wiki/Aromatic_amino_acids"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Phenylalanine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1965"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "84 mg/kg/day",
+            "Children (< 14 years)": "41 mg/kg/day",
+            "Men (> 14 years)": "33 mg/kg/day",
+            "Women (> 14 years)": "33 mg/kg/day",
+            "Pregnancy": "44 mg/kg/day",
+            "Lactation": "51 mg/kg/day"
+        },
+        "type": "Essential amino acid",
+        "sources": [
+            "Eggs",
+            "Soybeans",
+            "Meat",
+            "Dairy"
+        ],
+        "summary": "Phenylalanine (Phe) is an essential glucogenic aromatic amino acid (AAA)",
+        "uses": [
+            "Attention",
+            "Concentration",
+            "Growth",
+            "Learning",
+            "Memory",
+            "Motivation",
+            "Muscles",
+            "Optimism"
+        ],
+        "warnings": [
+            "Metabolism requires  Copper, Iron, Vitamin B3 (Niacin), Vitamin B6 (Pyridoxine), Vitamin C",
+            "Destroyed by grilling and frying",
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs"
         ]
     },
     {
@@ -3888,7 +4372,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -3948,7 +4432,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4008,7 +4492,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4068,7 +4552,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4128,7 +4612,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4188,7 +4672,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -4248,307 +4732,7 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
