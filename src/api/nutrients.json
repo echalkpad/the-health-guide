@@ -191,8 +191,8 @@
         "functions": [
             "Antioxidant",
             "Cell growth",
-            "Metabolism",
-            "Respiration"
+            "Circulatory system (Cardiovascular and Immune system)",
+            "Metabolism"
         ],
         "name": "Vitamin B2 (Riboflavin)",
         "partnership": [
@@ -562,7 +562,8 @@
             "Hemoglobin formation via PLP",
             "Norepinephrine (Noradrenaline), Acetylcholine, Gamma-Aminobutyric acid (GABA), Serotonin, and Histamine formation via PLP",
             "Magnesium, Potassium, and Sodium balance",
-            "Gene expression via PLP"
+            "Gene expression via PLP",
+            "Sex hormone formation via PLP"
         ],
         "deficiencies": [
             "Balance loss",
@@ -604,17 +605,16 @@
             "Weakness"
         ],
         "functions": [
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism",
             "Muscle tone",
-            "Nervous system",
-            "Respiration",
-            "Sex hormone formation"
+            "Nervous system"
         ],
         "name": "Vitamin B6 (Pyridoxine)",
         "partnership": [
             "Choline",
             "Copper",
+            "Histidine",
             "Iron",
             "Magnesium",
             "Tryptophan",
@@ -860,16 +860,16 @@
         ],
         "functions": [
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Digestion",
             "Mental attitude",
-            "Metabolism",
-            "Respiration"
+            "Metabolism"
         ],
         "name": "Vitamin B9 (Folic acid)",
         "partnership": [
             "Copper",
+            "Histidine",
             "Iron",
             "Vitamin B-complex",
             "Vitamin C"
@@ -970,7 +970,7 @@
             "Red blood cell formation via MTR",
             "Iron absorption and metabolism via MTR",
             "DNA and RNA formation via MTR",
-            "Choline and Methionine formationv ia MTR",
+            "Choline and Methionine formation via MTR",
             "Myelin formation via MUT"
         ],
         "deficiencies": [
@@ -1004,16 +1004,17 @@
         ],
         "functions": [
             "Cell growth",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Mental attitude",
             "Metabolism",
-            "Nervous system",
-            "Respiration"
+            "Nervous system"
         ],
         "name": "Vitamin B12 (Cobalamin)",
         "partnership": [
             "Copper",
             "Iron",
+            "Methionine",
             "Vitamin B-complex",
             "Vitamin C"
         ],
@@ -1250,10 +1251,9 @@
         "functions": [
             "Antioxidant",
             "Bones",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Collagen",
-            "Muscle tone",
-            "Respiration"
+            "Muscle tone"
         ],
         "name": "Vitamin C (Ascorbic acid)",
         "partnership": [
@@ -1377,7 +1377,7 @@
         "functions": [
             "Antioxidant",
             "Bones",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Collagen",
             "Muscle tone",
             "Teeth"
@@ -1499,10 +1499,9 @@
         ],
         "functions": [
             "Antioxidant",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Collagen",
-            "Muscle tone",
-            "Respiration"
+            "Muscle tone"
         ],
         "name": "Vitamin E (alpha-Tocopherol)",
         "partnership": [
@@ -1600,7 +1599,7 @@
         ],
         "functions": [
             "Bones",
-            "Circulatory system"
+            "Circulatory system (Cardiovascular and Immune system)"
         ],
         "name": "Vitamin K",
         "partnership": [
@@ -1694,7 +1693,7 @@
         ],
         "functions": [
             "Brain",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Nervous system"
         ],
@@ -1800,7 +1799,7 @@
         "functions": [
             "Acid/Base balance",
             "Bones",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Electrolyte",
             "Muscle tone",
             "Nervous system",
@@ -1909,7 +1908,7 @@
         "functions": [
             "Acid/Base balance",
             "Cognition",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Digestion",
             "Electrolyte",
             "Muscle tone",
@@ -1995,7 +1994,7 @@
             "Weakness"
         ],
         "functions": [
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism"
         ],
         "name": "Chromium (Cr)",
@@ -2110,13 +2109,13 @@
             "Antioxidant",
             "Cell growth",
             "Collagen",
-            "Circulatory system",
-            "Respiration",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Thyroid"
         ],
         "name": "Copper (Cu)",
         "partnership": [
             "Iron",
+            "Histidine",
             "Vitamin B2 (Riboflavin)",
             "Vitamin B6 (Pyridoxine)",
             "Vitamin B9 (Folic acid)",
@@ -2371,13 +2370,13 @@
         ],
         "functions": [
             "Antioxidant",
-            "Circulatory system",
-            "Respiration"
+            "Circulatory system (Cardiovascular and Immune system)"
         ],
         "name": "Iron (Fe)",
         "partnership": [
             "Cobalt",
             "Copper",
+            "Histidine",
             "Manganese",
             "Molybdenum",
             "Vitamin B2 (Riboflavin)",
@@ -2491,7 +2490,7 @@
         "functions": [
             "Acid/Base balance",
             "Bones",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Electrolyte",
             "Mental attitude",
@@ -2627,8 +2626,7 @@
             "Cognition",
             "Digestion",
             "Metabolism",
-            "Nervous system",
-            "Sex hormone formation"
+            "Nervous system"
         ],
         "name": "Manganese (Mn)",
         "partnership": [
@@ -2742,7 +2740,7 @@
         "functions": [
             "Antioxidant",
             "Cell growth",
-            "Respiration"
+            "Circulatory system (Cardiovascular and Immune system)"
         ],
         "name": "Molybdenum (Mo)",
         "partnership": [
@@ -2836,7 +2834,7 @@
             "Acid/Base balance",
             "Bones",
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Electrolyte",
             "Mental attitude",
@@ -2940,7 +2938,7 @@
         "functions": [
             "Acid/Base balance",
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Digestion",
             "Electrolyte",
@@ -3053,7 +3051,7 @@
         "functions": [
             "Antioxidant",
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Collagen",
             "Mental attitude",
@@ -3181,7 +3179,7 @@
         "functions": [
             "Acid/Base balance",
             "Cognition",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Electrolyte",
             "Muscle tone",
             "Nervous system"
@@ -3285,7 +3283,7 @@
         "functions": [
             "Antioxidant",
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Collagen",
             "Mental attitude",
@@ -3406,7 +3404,7 @@
             "Brain",
             "Cell growth",
             "Cognition",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Hormone formation",
             "Mental attitude",
             "Metabolism",
@@ -3531,7 +3529,7 @@
             "Brain",
             "Cell growth",
             "Cognition",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Hormone formation",
             "Mental attitude",
             "Metabolism",
@@ -3658,7 +3656,7 @@
             "Bones",
             "Brain",
             "Cell growth",
-            "Circulatory system",
+            "Circulatory system (Cardiovascular and Immune system)",
             "Collagen",
             "Cognition",
             "Digestion",
@@ -3700,6 +3698,10 @@
             {
                 "credit": "Wikibooks, 'Human physiology', Proteins",
                 "url": "https://en.wikibooks.org/wiki/Human_Physiology/Nutrition#Proteins"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
                 "credit": "USDA Branded Food Products Database",
@@ -3756,22 +3758,59 @@
     },
     {
         "actions": [
-            ""
+            "Histamine production",
+            "Anti-inflammation via Histamine",
+            "Red blood cell formation",
+            "Copper, Iron, and Zinc absorption"
         ],
         "deficiencies": [
-            ""
+            "Balance loss",
+            "Colds",
+            "Concentration difficulties",
+            "Dizziness",
+            "Fatigue",
+            "Headache",
+            "High blood pressure",
+            "Infections",
+            "Swelling",
+            "Weakness"
         ],
         "functions": [
-            ""
+            "Cell growth",
+            "Circulatory system (Cardiovascular and Immune system)",
+            "Muscles"
         ],
-        "name": "Histidine",
+        "name": "Histidine (His)",
         "partnership": [
-            ""
+            "Copper",
+            "Iron",
+            "Vitamin B6 (Pyridoxine)",
+            "Vitamin B9 (Folic acid)"
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, Histidine",
+                "url": "https://en.wikipedia.org/wiki/Histidine"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Histidine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
@@ -3792,9 +3831,17 @@
             "Tofu",
             "Pork"
         ],
-        "summary": "Histidine is an essential amino acid",
+        "summary": "Histidine (His) is an essential amino acid",
         "uses": [
-            ""
+            "Anemia",
+            "Blood vessels",
+            "Concentration",
+            "Circulation",
+            "Growth",
+            "Energy",
+            "Headaches",
+            "Heart",
+            "Muscles"
         ],
         "warnings": [
             "Destroyed by grilling, searing, and frying cooking"
@@ -3816,17 +3863,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -3856,17 +3923,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -3896,17 +3983,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -3936,17 +4043,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -3976,17 +4103,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4016,17 +4163,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4056,17 +4223,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4096,17 +4283,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4136,17 +4343,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4176,17 +4403,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4216,17 +4463,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
@@ -4256,17 +4523,37 @@
         ],
         "references": [
             {
-                "credit": "",
-                "url": ""
+                "credit": "Wikipedia, ",
+                "url": "https://en.wikipedia.org/wiki/"
+            },
+            {
+                "credit": "The world's healthiest foods, Amino acids",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+            },
+            {
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=25&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "g/day",
-            "Children (< 14 years)": "g/day",
-            "Men (> 14 years)": "g/day",
-            "Women (> 14 years)": "g/day",
-            "Pregnancy": "g/day",
-            "Lactation": "g/day"
+            "Infants (< 1 years)": "mg/kg/day",
+            "Children (< 14 years)": "mg/kg/day",
+            "Men (> 14 years)": "mg/kg/day",
+            "Women (> 14 years)": "mg/kg/day",
+            "Pregnancy": "mg/kg/day",
+            "Lactation": "mg/kg/day"
         },
         "type": "",
         "sources": [
