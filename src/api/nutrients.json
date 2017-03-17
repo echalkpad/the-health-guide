@@ -4612,6 +4612,7 @@
         ],
         "summary": "Valine (Val) is an essential glucogenic branched-chain amino acid (BCAA)",
         "uses": [
+            "Blood glucose",
             "Energy",
             "Growth",
             "Muscles",
@@ -4625,30 +4626,55 @@
     },
     {
         "actions": [
-            ""
+            "Hormone formation",
+            "Glucose formation (gluconeogenesis)",
+            "Nitrict oxide (NO) formation",
+            "Urea formation",
+            "Ornithine formation",
+            "Agmatine formation",
+            "Creatine formation",
+            "Growth hormone (GH) formation"
         ],
         "deficiencies": [
-            ""
+            "Bleeding",
+            "Colds",
+            "Constipation",
+            "Fatigue",
+            "Growth problems",
+            "Hair loss",
+            "Infections",
+            "Liver problems",
+            "Muscle problems",
         ],
         "functions": [
-            ""
+            "Bones",
+            "Cell growth",
+            "Circulatory system (Cardiovascular and Immune system)",
+            "Metabolism",
+            "Muscles",
+            "Nervous system",
+            "Teeth"
         ],
-        "name": "",
+        "name": "Arginine (Arg)",
         "partnership": [
             ""
         ],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Arginine",
+                "url": "https://en.wikipedia.org/wiki/Arginine"
+            },
+            {
+                "credit": "Wikipedia, Glucogenic amino acid",
+                "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
             },
             {
                 "credit": "The world's healthiest foods, Amino acids",
                 "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Arginine",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=1702"
             },
             {
                 "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -4660,27 +4686,44 @@
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=511&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "200 mg/kg/day",
+            "Children (< 14 years)": "60 mg/kg/day",
+            "Men (> 14 years)": "40 mg/kg/day",
+            "Women (> 14 years)": "40 mg/kg/day",
+            "Pregnancy": "100 mg/kg/day",
+            "Lactation": "100 mg/kg/day"
         },
-        "type": "",
+        "type": "Essential amino acid",
         "sources": [
-            ""
+            "Seeds",
+            "Nuts",
+            "Eggs",
+            "Beef"
         ],
-        "summary": "",
+        "summary": "Arginine (Arg) is an essential glucogenic amino acid during periods of growth, stress, healing, and recovery",
         "uses": [
-            ""
+            "Blood glucose",
+            "Blood vessels",
+            "Bones",
+            "Detoxification",
+            "Energy",
+            "Fertility",
+            "Growth",
+            "Heart",
+            "Immunity",
+            "Recovery",
+            "Pregnancy",
+            "Skin",
+            "Teeth",
+            "Wounds"
         ],
         "warnings": [
-            ""
+            "Absorption impaired by sedentarism, alcohol, sugar, tobacco, caffeine, stress, pharmaceutical drugs, Lysine",
+            "Destroyed by grilling and frying"
         ]
     },
     {
