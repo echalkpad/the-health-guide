@@ -302,7 +302,7 @@
             "DNA repair via NAD",
             "Fatty acid and cholesterol formation via NADP",
             "Red blood cell formation via NAD and NADP",
-            "Steroid formation via NAD and NADP"
+            "Hormone formation via NAD and NADP"
         ],
         "deficiencies": [
             "Aggression",
@@ -563,7 +563,7 @@
             "Norepinephrine (Noradrenaline), Acetylcholine, Gamma-Aminobutyric acid (GABA), Serotonin, and Histamine formation via PLP",
             "Magnesium, Potassium, and Sodium balance",
             "Gene expression via PLP",
-            "Sex hormone formation via PLP"
+            "Hormone formation via PLP"
         ],
         "deficiencies": [
             "Balance loss",
@@ -605,6 +605,7 @@
             "Weakness"
         ],
         "functions": [
+            "Cell growth",
             "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism",
             "Muscle tone",
@@ -692,6 +693,7 @@
             "Breasts",
             "Energy",
             "Eyes",
+            "Fertility",
             "Heart",
             "Immunity",
             "Menstruation",
@@ -2590,7 +2592,7 @@
             "Mn-containing Superoxide Dismutase (Mn-SOD) formation",
             "Glucosamine formation",
             "Blood vessels",
-            "Sex hormone formation",
+            "Hormone formation",
             "Fatty acid and cholesterol formation",
             "Dopamine formation",
             "Cell development",
@@ -3027,7 +3029,7 @@
             "Selenocysteine formation",
             "Reducing agent",
             "Cell development",
-            "Thyroxine (T4 thyroid hormone) to Triiodothyronine (T3 thyroid hormone) conversion"
+            "Triiodothyronine (T3 thyroid hormone) formation"
         ],
         "deficiencies": [
             "Appetite loss",
@@ -3261,7 +3263,8 @@
             "Dopamine transportation",
             "Metal storage, transportation, and detoxification via Metallothionein",
             "Reducing agent",
-            "Vitamin A metabolism"
+            "Vitamin A metabolism",
+            "Hormone formation"
         ],
         "deficiencies": [
             "Appetite loss",
@@ -3386,7 +3389,8 @@
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
             "Cell membrane structure via eicosanoids",
             "Anti-inflammation via eicosanoids",
-            "Ketogenesis"
+            "Ketogenesis",
+            "Hormone formation"
         ],
         "deficiencies": [
             "Birth problems",
@@ -3406,7 +3410,6 @@
             "Cell growth",
             "Cognition",
             "Circulatory system (Cardiovascular and Immune system)",
-            "Hormone formation",
             "Mood",
             "Metabolism",
             "Nervous system"
@@ -3511,7 +3514,8 @@
             "Low-density lipoprotein (LDL) metabolism via eicosanoids",
             "Cell membrane structure via eicosanoids",
             "Anti-inflammation via eicosanoids",
-            "Ketogenesis"
+            "Ketogenesis",
+            "Hormone formation"
         ],
         "deficiencies": [
             "Birth problems",
@@ -3531,7 +3535,6 @@
             "Cell growth",
             "Cognition",
             "Circulatory system (Cardiovascular and Immune system)",
-            "Hormone formation",
             "Mood",
             "Metabolism",
             "Nervous system"
@@ -3632,7 +3635,8 @@
             "Nutrient transportation",
             "Metabolism",
             "Enzyme catalysis",
-            "Signal transduction"
+            "Signal transduction",
+            "Hormone formation"
         ],
         "deficiencies": [
             "Birth problems",
@@ -3663,7 +3667,6 @@
             "Digestion",
             "Enzyme formation",
             "Epithelium",
-            "Hormone formation",
             "Mood",
             "Metabolism",
             "Muscles",
