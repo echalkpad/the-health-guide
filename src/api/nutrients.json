@@ -333,8 +333,7 @@
             "Antioxidant",
             "Cognition",
             "Metabolism",
-            "Nervous system",
-            "Steroid and sex hormones formation"
+            "Nervous system"
         ],
         "name": "Vitamin B3 (Niacin)",
         "partnership": [
@@ -3767,7 +3766,8 @@
             "Red blood cell formation",
             "Copper, Iron, and Zinc absorption",
             "Enzyme catalysis",
-            "Glucose formation (gluconeogenesis)"
+            "Glucose formation (gluconeogenesis)",
+            "Cell development"
         ],
         "deficiencies": [
             "Balance loss",
@@ -3864,6 +3864,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Succinyl-CoA formation",
             "Acetyl-CoA formation",
             "Glucose formation (gluconeogenesis) via Acetyl-CoA and Succinyl-CoA",
@@ -3954,6 +3955,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Ferritin formation",
             "Astacin formation",
             "Sterol formation",
@@ -4041,6 +4043,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Acetyl-CoA formation",
             "Hydroxylysine formation",
             "Allysine formation",
@@ -4155,6 +4158,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "S-adenosyl methionine formation",
             "Cysteine formation",
             "Carnitine formation",
@@ -4248,6 +4252,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Glucose formation (gluconeogenesis)",
             "Tyrosine formation",
             "Dopamine formation",
@@ -4345,6 +4350,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Acetyl-CoA formation",
             "Glycine formation",
             "Glucose formation (gluconeogenesis)",
@@ -4439,6 +4445,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "5-Hydroxytryptophan (5-HTP) formation",
             "Glucose formation (gluconeogenesis)",
             "Serotonin formation via 5-HTP",
@@ -4539,6 +4546,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Succinyl-CoA formation",
             "Glucose formation (gluconeogenesis)",
             "Myelin formation"
@@ -4626,6 +4634,7 @@
     },
     {
         "actions": [
+            "Cell development",
             "Hormone formation",
             "Glucose formation (gluconeogenesis)",
             "Nitrict oxide (NO) formation",
@@ -4644,7 +4653,7 @@
             "Hair loss",
             "Infections",
             "Liver problems",
-            "Muscle problems",
+            "Muscle problems"
         ],
         "functions": [
             "Bones",
@@ -4656,9 +4665,7 @@
             "Teeth"
         ],
         "name": "Arginine (Arg)",
-        "partnership": [
-            ""
-        ],
+        "partnership": [],
         "references": [
             {
                 "credit": "Wikipedia, Arginine",
@@ -4728,62 +4735,100 @@
     },
     {
         "actions": [
-            ""
+            "Hormone formation",
+            "Cell membrane structure",
+            "Cell signaling",
+            "Vitamin A, Vitamin D, Vitamin E, and Vitamin K absorption",
+            "Energy storage",
+            "Ketogenesis"
         ],
         "deficiencies": [
-            ""
+            "Cognitive problems (Attention, Behaviour, Concentration, Decision making, Learning, Memory, Mood, Problem solving, Reasoning, Social skills, Speaking, and Stress problems)",
+            "Fatigue",
+            "Muscle problems",
+            "Skin problems",
+            "Sleepiness",
+            "Weakness",
+            "Weight problems"
         ],
         "functions": [
-            ""
+            "Bones",
+            "Brain",
+            "Cell growth",
+            "Cognition",
+            "Metabolism",
+            "Mood",
+            "Muscle tone",
+            "Nervous system",
+            "Nutrient absorption",
+            "Senses"
         ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
+        "name": "Fatty acid (Fat)",
+        "partnership": [],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Lipid",
+                "url": "https://en.wikipedia.org/wiki/Lipid"
             },
             {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+                "credit": "Wikipedia, Fat",
+                "url": "https://en.wikipedia.org/wiki/Fat"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
+                "credit": "Wikipedia, Trygliceride",
+                "url": "https://en.wikipedia.org/wiki/Trygliceride"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Fats, Lipids And Oils",
+                "url": "http://www.healthy.net/Health/Article/Fats_Lipids_and_Oils/2099/1"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Lipids",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary fat: Total fat and Fatty acids",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
                 "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report?nutsort=646&max=1000&offset=0&nutrient1=645&nutrient2=646&nutrient3=&measureby=g&subset=0&sort=c&totCount=7911"
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "1 g/kg/day",
+            "Children (< 14 years)": "1 g/kg/day",
+            "Men (> 14 years)": "1 g/kg/day",
+            "Women (> 14 years)": "1 g/kg/day",
+            "Pregnancy": "1 g/kg/day",
+            "Lactation": "1 g/kg/day"
         },
-        "type": "",
+        "type": "Macronutrient",
         "sources": [
-            ""
+            "Vegetable oils",
+            "Fish",
+            "Seeds",
+            "Nuts"
         ],
-        "summary": "",
+        "summary": "Fatty acids or fats are lipids that serve as secondary energy source, when glucose is absent, along with other important functions. Fatty acids are classified as unsaturated fatty acids (fluid at low temperature and unstable) and saturated fatty acids (solid at low temperature and stable). alpha-Linolenic acid (an omega-3 polyunsaturated fatty acid) and Linoleic acid (an omega-6 polyunsaturated fatty acid) are the only essential fatty acids.",
         "uses": [
-            ""
+            "Bones",
+            "Brain",
+            "Energy",
+            "Growth",
+            "Hair",
+            "Immunity",
+            "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
+            "Mood (Motivation, Optimism, Self-control, Stress management)",
+            "Nails",
+            "Nerves",
+            "Pregnancy",
+            "Skin"
         ],
         "warnings": [
-            ""
+            "Unsaturated fats, because they are unstable, are degraded light and destroyed by heat",
+            "Unsaturated fats from processed (refined) foods are forcely hydrogenated to become stable and last during transportation and in food stores. This makes them turn intro trans fat, which are toxic for our body",
+            "Saturated and trans fats, among others, increase trygliceride levels (blood fat and fat storage) and damage our body, hence, they must be reduced as much as possible"
         ]
     },
     {
