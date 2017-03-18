@@ -4887,6 +4887,7 @@
             "Slow digestion"
         ],
         "deficiencies": [
+            "Abdominal pain",
             "Constipation",
             "Digestive problems",
             "High LDL level ('bad' cholesterol)",
@@ -4943,9 +4944,9 @@
             "Avocados",
             "Seeds"
         ],
-        "summary": "Fiber is the indigestable form of carbohydrates found in the skin of fruits and vegetables and in the bran (shell) of seeds and grains. The body cannot digest, nor absorb fiber, hence, it is not required by cells on their own, but by the overall system functions",
+        "summary": "Fiber is the indigestable form of carbohydrates found in the skin of fruits and vegetables and in the bran (shell) of seeds and grains. The body cannot digest, nor absorb fiber, hence, it is not required by cells on their own. Yet, it is required for the overall system functions",
         "uses": [
-            "Blood cholesterol",,
+            "Blood cholesterol",
             "Blood glucose",
             "Circulation",
             "Detoxification",
