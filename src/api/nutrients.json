@@ -124,7 +124,7 @@
             "Liver",
             "Memory",
             "Motivation",
-            "Muscles",
+            "Muscle tone",
             "Optimism",
             "Nerves",
             "Reasoning",
@@ -190,7 +190,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism"
         ],
@@ -458,7 +458,7 @@
             "Vomiting"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Digestion",
             "Metabolism",
             "Nervous system"
@@ -536,7 +536,6 @@
             "Heart",
             "Immunity",
             "Motivation",
-            "Muscles",
             "Nerves",
             "Optimism",
             "Skin",
@@ -604,7 +603,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism",
             "Muscle tone",
@@ -697,7 +696,7 @@
             "Immunity",
             "Menstruation",
             "Motivation",
-            "Muscles",
+            "Muscle tone",
             "Nerves",
             "Optimism",
             "Pregnancy",
@@ -742,7 +741,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Metabolism",
             "Nervous system"
@@ -860,7 +859,7 @@
             "Weight loss"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Digestion",
@@ -1004,7 +1003,7 @@
             "Walking difficulties"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Mood",
@@ -1114,7 +1113,7 @@
         "functions": [
             "Antioxidant",
             "Bones",
-            "Cell growth",
+            "Cell growth and development",
             "Epithelium",
             "Vision"
         ],
@@ -1348,7 +1347,7 @@
             "Heart",
             "Immunity",
             "Motivation",
-            "Muscles",
+            "Muscle tone",
             "Optimism",
             "Scurvy",
             "Skin",
@@ -1449,7 +1448,7 @@
             "Heart",
             "Immunity",
             "Optimism",
-            "Muscles",
+            "Muscle tone",
             "Skin",
             "Sleep",
             "Teeth"
@@ -1467,7 +1466,7 @@
             "High-density lipoprotein (HDL) formation",
             "Low-density lipoprotein (LDL) metabolism",
             "Vitamin A and Vitamin K metabolism and protection",
-            "Blood fat metabolism and balance",
+            "Blood lipid metabolism and balance",
             "Polyunsaturated fat protection",
             "Reducing agent",
             "Gene expression"
@@ -1484,7 +1483,7 @@
             "Fatigue",
             "Hair driness",
             "Hair dullness",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "High blood pressure",
             "Infertility",
             "Kidney problems",
@@ -1575,7 +1574,7 @@
             "Immunity",
             "Liver",
             "Menstruation",
-            "Muscles",
+            "Muscle tone",
             "Optimism",
             "Skin",
             "Varicose veins",
@@ -1668,7 +1667,7 @@
         "actions": [
             "Acetylcholine and Phosphatidylcholine production",
             "Lipid metabolism",
-            "Blood fat metabolism and balance via Phosphatidylcholine",
+            "Blood lipid metabolism and balance via Phosphatidylcholine",
             "Lecithin formation via Phosphatidylcholine",
             "Cell signaling via Acetylcholine",
             "Myelin formation via Acetylcholine",
@@ -1680,7 +1679,7 @@
             "Concentration difficulties",
             "Depression",
             "Fatigue",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "High blood pressure",
             "Irritability",
             "Learning difficulties",
@@ -1960,7 +1959,7 @@
             "Energy",
             "Kidneys",
             "Motivation",
-            "Muscles",
+            "Muscle tone",
             "Potassium preservation",
             "Water balance"
         ],
@@ -1984,7 +1983,7 @@
             "Growth problems",
             "Headache",
             "Heart palpitations",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "Irregular hearbeat",
             "Nausea",
             "Numbness",
@@ -2092,7 +2091,7 @@
             "Growth problems",
             "Gum problems",
             "Hair loss",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "Infections",
             "Irregular hearbeat",
             "Irritability",
@@ -2108,7 +2107,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Collagen",
             "Circulatory system (Cardiovascular and Immune system)",
             "Thyroid"
@@ -2195,7 +2194,7 @@
             "Hair",
             "Immunity",
             "Learning",
-            "Muscles",
+            "Muscle tone",
             "Nerves",
             "Skin",
             "Wounds"
@@ -2234,7 +2233,7 @@
             "Weight gain"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Mood",
             "Metabolism",
@@ -2594,7 +2593,6 @@
             "Hormone formation",
             "Fatty acid and cholesterol formation",
             "Dopamine formation",
-            "Cell development",
             "Protein, carbohydrate, and lipid metabolism",
             "Vitamin C metabolism",
             "Vitamin B1 (Thiamine) metabolism",
@@ -2612,7 +2610,7 @@
             "Dizziness",
             "Growth problems",
             "Hearing loss",
-            "High blood glucose",
+            "High blood glucose level",
             "Infertility",
             "Kidney problems",
             "Muscle twitching",
@@ -2623,7 +2621,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Digestion",
             "Metabolism",
@@ -2703,7 +2701,7 @@
             "Immunity",
             "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Mood (Motivation, Optimism, Self-control, Stress management)",
-            "Muscles",
+            "Muscle tone",
             "Pregnancy"
         ],
         "warnings": [
@@ -2740,7 +2738,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)"
         ],
         "name": "Molybdenum (Mo)",
@@ -2834,7 +2832,7 @@
         "functions": [
             "Acid/Base balance",
             "Bones",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Electrolyte",
@@ -2903,7 +2901,7 @@
             "Heart",
             "Kidneys",
             "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
-            "Muscles",
+            "Muscle tone",
             "Teeth"
         ],
         "warnings": [
@@ -2938,7 +2936,7 @@
         ],
         "functions": [
             "Acid/Base balance",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Digestion",
@@ -3011,7 +3009,7 @@
             "Kidneys",
             "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Mood (Motivation, Optimism, Self-control, Stress management)",
-            "Muscles",
+            "Muscle tone",
             "Nerves",
             "Recovery",
             "Sleep",
@@ -3027,7 +3025,6 @@
             "Glutathione peroxidase (GP) formation",
             "Selenocysteine formation",
             "Reducing agent",
-            "Cell development",
             "Triiodothyronine (T3 thyroid hormone) formation"
         ],
         "deficiencies": [
@@ -3051,7 +3048,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Collagen",
@@ -3234,12 +3231,11 @@
             "Circulation",
             "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Mood (Motivation, Optimism, Self-control, Stress management)",
-            "Muscles"
+            "Muscle tone"
         ],
         "warnings": [
             "Absorption impaired excess Potassium, sweating, vomiting, diarrhea",
-            "Metabolism requires Chloride",
-            "Excess causes cardiovascular problems"
+            "Metabolism requires Chloride"
         ]
     },
     {
@@ -3284,7 +3280,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Cognition",
             "Collagen",
@@ -3397,7 +3393,7 @@
             "Growth problems",
             "Hair loss",
             "Heart problems",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "Pain",
             "Prostate enlargement",
             "Skin problems",
@@ -3406,7 +3402,7 @@
         ],
         "functions": [
             "Brain",
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Circulatory system (Cardiovascular and Immune system)",
             "Mood",
@@ -3522,7 +3518,7 @@
             "Growth problems",
             "Hair loss",
             "Heart problems",
-            "High blood cholesterol",
+            "High LDL level ('bad' cholesterol)",
             "Pain",
             "Prostate enlargement",
             "Skin problems",
@@ -3531,7 +3527,7 @@
         ],
         "functions": [
             "Brain",
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Circulatory system (Cardiovascular and Immune system)",
             "Mood",
@@ -3601,7 +3597,8 @@
             "Beechnuts",
             "Peanuts",
             "Pistachio nuts",
-            "Almonds"
+            "Almonds",
+            "Avocados"
         ],
         "summary": "Linoleic acid, LA, or 18:2 is an essential omega-6 (n-6) fatty acid part of the polyunsaturated fats (PUFA)",
         "uses": [
@@ -3622,14 +3619,13 @@
         ],
         "warnings": [
             "Degraded by sunlight and cooking",
-            "Excess causes cardiovascular problems"
+            "Excess increases LDL levels and inflammation"
         ]
     },
     {
         "actions": [
             "DNA and RNA formation",
             "Gene expression",
-            "Cell development",
             "Cell signaling",
             "Nutrient transportation",
             "Metabolism",
@@ -3659,7 +3655,7 @@
             "Acid/Base balance",
             "Bones",
             "Brain",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Collagen",
             "Cognition",
@@ -3668,7 +3664,7 @@
             "Epithelium",
             "Mood",
             "Metabolism",
-            "Muscles",
+            "Muscle tone",
             "Nervous system",
             "Senses"
         ],
@@ -3712,12 +3708,12 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "2 g/kg/day",
-            "Children (< 14 years)": "1.5 g/kg/day",
-            "Men (> 14 years)": "1.5 g/kg/day",
-            "Women (> 14 years)": "1.5 g/kg/day",
-            "Pregnancy": "2 g/kg/day",
-            "Lactation": "2 g/kg/day"
+            "Infants (< 1 years)": "25% energy/day",
+            "Children (< 14 years)": "25% energy/day",
+            "Men (> 14 years)": "25% energy/day",
+            "Women (> 14 years)": "25% energy/day",
+            "Pregnancy": "25% energy/day",
+            "Lactation": "25% energy/day"
         },
         "type": "Macronutrient",
         "sources": [
@@ -3748,7 +3744,7 @@
             "Mentality (Attention, Concentration, Decision making, Learning, Memory, Reasoning, Speaking, and Stress problems)",
             "Metabolism",
             "Mood (Motivation, Optimism, Self-control, Stress management)",
-            "Muscles",
+            "Muscle tone",
             "Nerves",
             "Recovery",
             "Senses",
@@ -3782,7 +3778,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Muscles"
         ],
@@ -3864,7 +3860,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Succinyl-CoA formation",
             "Acetyl-CoA formation",
             "Glucose formation (gluconeogenesis) via Acetyl-CoA and Succinyl-CoA",
@@ -3878,7 +3873,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Metabolism",
             "Muscles"
         ],
@@ -3955,7 +3950,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Ferritin formation",
             "Astacin formation",
             "Sterol formation",
@@ -3970,7 +3964,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Metabolism",
             "Muscles"
         ],
@@ -4043,7 +4037,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Acetyl-CoA formation",
             "Hydroxylysine formation",
             "Allysine formation",
@@ -4070,7 +4063,7 @@
         ],
         "functions": [
             "Bones",
-            "Cell growth",
+            "Cell growth and development",
             "Collagen",
             "Metabolism",
             "Nervous system",
@@ -4158,7 +4151,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "S-adenosyl methionine formation",
             "Cysteine formation",
             "Carnitine formation",
@@ -4175,7 +4167,7 @@
         ],
         "functions": [
             "Antioxidant",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism",
             "Muscles"
@@ -4252,7 +4244,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Glucose formation (gluconeogenesis)",
             "Tyrosine formation",
             "Dopamine formation",
@@ -4266,7 +4257,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Metabolism",
             "Nervous system"
@@ -4350,7 +4341,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Acetyl-CoA formation",
             "Glycine formation",
             "Glucose formation (gluconeogenesis)",
@@ -4369,7 +4359,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Collagen",
             "Metabolism",
             "Muscles"
@@ -4445,7 +4435,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "5-Hydroxytryptophan (5-HTP) formation",
             "Glucose formation (gluconeogenesis)",
             "Serotonin formation via 5-HTP",
@@ -4461,7 +4450,7 @@
             "Skin problems"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Metabolism",
             "Mood",
             "Muscles"
@@ -4546,7 +4535,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Succinyl-CoA formation",
             "Glucose formation (gluconeogenesis)",
             "Myelin formation"
@@ -4559,7 +4547,7 @@
             "Weakness"
         ],
         "functions": [
-            "Cell growth",
+            "Cell growth and development",
             "Metabolism",
             "Muscles",
             "Nervous system"
@@ -4634,7 +4622,6 @@
     },
     {
         "actions": [
-            "Cell development",
             "Hormone formation",
             "Glucose formation (gluconeogenesis)",
             "Nitrict oxide (NO) formation",
@@ -4657,7 +4644,7 @@
         ],
         "functions": [
             "Bones",
-            "Cell growth",
+            "Cell growth and development",
             "Circulatory system (Cardiovascular and Immune system)",
             "Metabolism",
             "Muscles",
@@ -4754,7 +4741,7 @@
         "functions": [
             "Bones",
             "Brain",
-            "Cell growth",
+            "Cell growth and development",
             "Cognition",
             "Metabolism",
             "Mood",
@@ -4796,19 +4783,19 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "1 g/kg/day",
-            "Children (< 14 years)": "1 g/kg/day",
-            "Men (> 14 years)": "1 g/kg/day",
-            "Women (> 14 years)": "1 g/kg/day",
-            "Pregnancy": "1 g/kg/day",
-            "Lactation": "1 g/kg/day"
+            "Infants (< 1 years)": "35% energy/day",
+            "Children (< 14 years)": "35% energy/day",
+            "Men (> 14 years)": "35% energy/day",
+            "Women (> 14 years)": "35% energy/day",
+            "Pregnancy": "35% energy/day",
+            "Lactation": "35% energy/day"
         },
         "type": "Macronutrient",
         "sources": [
-            "Vegetable oils",
             "Fish",
             "Seeds",
-            "Nuts"
+            "Nuts",
+            "Avocados"
         ],
         "summary": "Fatty acids or fats are lipids that serve as secondary energy source, when glucose is absent, along with other important functions. Fatty acids are classified as unsaturated fatty acids (fluid at low temperature and unstable) and saturated fatty acids (solid at low temperature and stable). alpha-Linolenic acid (an omega-3 polyunsaturated fatty acid) and Linoleic acid (an omega-6 polyunsaturated fatty acid) are the only essential fatty acids.",
         "uses": [
@@ -4827,44 +4814,111 @@
         ],
         "warnings": [
             "Unsaturated fats, because they are unstable, are degraded light and destroyed by heat",
-            "Unsaturated fats from processed (refined) foods are forcely hydrogenated to become stable and last during transportation and in food stores. This makes them turn intro trans fat, which are toxic for our body",
-            "Saturated and trans fats, among others, increase triglyceride levels (blood fat and fat storage) and damage our body, hence, they must be reduced as much as possible",
-            "100 mg/dL is the maximum triglyceride level in the blood for optimal health"
+            "Fats from processed (refined) foods are forcely hydrogenated to become stable and last during transportation and in food stores. This makes them turn intro trans fat, which are toxic for our body. Trans fats, among others, increase triglyceride levels (Blood lipid and fat storage) and damage our body, hence, they must be eliminated completeley"
         ]
     },
     {
         "actions": [
-            ""
+            "Pyruvic acid formation (glycolysis)",
+            "Reduced Nicotinamide Adenine Dinucleotide (NADH) formation"
         ],
         "deficiencies": [
-            ""
+            "Dizziness",
+            "Fatigue",
+            "Headache",
+            "Vision problems",
+            "Weight loss"
         ],
         "functions": [
-            ""
+            "Metabolism"
         ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
+        "name": "Carbohydrate",
+        "partnership": [],
         "references": [
             {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
+                "credit": "Wikipedia, Carbohydrate",
+                "url": "https://en.wikipedia.org/wiki/Carbohydrate"
             },
             {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
+                "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Carbohydrates",
+                "url": "http://www.healthy.net/scr/article.aspx?Id=2100"
             },
             {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary Carbohydrates: Sugars and Starches",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
+                "credit": "USDA Branded Food Products Database",
+                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=205&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            }
+        ],
+        "recommendations": {
+            "Infants (< 1 years)": "40% energy/day",
+            "Children (< 14 years)": "40% energy/day",
+            "Men (> 14 years)": "40% energy/day",
+            "Women (> 14 years)": "40% energy/day",
+            "Pregnancy": "40% energy/day",
+            "Lactation": "40% energy/day"
+        },
+        "type": "Macronutrient",
+        "sources": [
+            "Sweeteners",
+            "Desserts",
+            "Candy",
+            "Fruit",
+            "Grains",
+            "Legumes",
+            "Vegetables"
+        ],
+        "summary": "Carbohydrates are the most common source of energy. Carbohydrates are chains of sugar units called saccharides and are classified based on their structure: simple carbohydrates (sugars) and complex carbohydrates (starches and fiber). Glucose, a sugar, is the universal energy supply used by cells which can also be obtained from fat and amino acids. Thus, sugars are non-essential nutrients. Fiber is the only essential type of carbohydrates",
+        "uses": [
+            "Energy"
+        ],
+        "warnings": [
+            "Excess sugars bring damage to blood vessels, bones, brain, DNA, heart, intestines, kidneys, liver, muscles, pancreas, stomach",
+            "Excess sugars may lead to autoimmune disease, cancer, cardiovascular disease, diabetes, high blood cholesterol, osteoporosis, obesity, Alzheimer's disease, attention deficit hyperactivity disorder (ADHD), insulin resistance, and many others among them"
+        ]
+    },
+    {
+        "actions": [
+            "Low-density lipoprotein (LDL) metabolism",
+            "Blood lipid balance",
+            "Blood glucose balance",
+            "Slow digestion"
+        ],
+        "deficiencies": [
+            "Constipation",
+            "Digestive problems",
+            "High LDL level ('bad' cholesterol)",
+            "High blood glucose level",
+            "Inflammation",
+            "Weight gain"
+        ],
+        "functions": [
+            "Circulatory system (Cardiovascular and Immune system)",
+            "Digestion"
+        ],
+        "name": "Fiber",
+        "partnership": [],
+        "references": [
+            {
+                "credit": "Wikipedia, Dietary fiber",
+                "url": "https://en.wikipedia.org/wiki/Dietary_fiber"
+            },
+            {
+                "credit": "The world's healthiest foods, Fiber",
+                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=59"
+            },
+            {
+                "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Carbohydrates",
+                "url": "http://www.healthy.net/Health/Article/Carbohydrates/2100/3"
+            },
+            {
+                "credit": "Mayo clinic, Dietary fiber: Essential for healthy diet",
+                "url": "http://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/fiber/art-20043983"
+            },
+            {
+                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary Carbohydrates: Sugars and Starches",
                 "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
             },
             {
@@ -4873,83 +4927,35 @@
             }
         ],
         "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
+            "Infants (< 1 years)": "1 g/kg/day",
+            "Children (< 14 years)": "1 g/kg/day",
+            "Men (> 14 years)": "1 g/kg/day",
+            "Women (> 14 years)": "1 g/kg/day",
+            "Pregnancy": "1 g/kg/day",
+            "Lactation": "1 g/kg/day"
         },
-        "type": "",
+        "type": "Essential carbohydrate",
         "sources": [
-            ""
+            "Grain bran",
+            "Skin of fruits and vegetables",
+            "Herbs and spices",
+            "Cacao",
+            "Avocados",
+            "Seeds"
         ],
-        "summary": "",
+        "summary": "Fiber is the indigestable form of carbohydrates found in the skin of fruits and vegetables and in the bran (shell) of seeds and grains. The body cannot digest, nor absorb fiber, hence, it is not required by cells on their own, but by the overall system functions",
         "uses": [
-            ""
+            "Blood cholesterol",,
+            "Blood glucose",
+            "Circulation",
+            "Detoxification",
+            "Digestion",
+            "Heart",
+            "Immunity"
         ],
         "warnings": [
-            ""
-        ]
-    },
-    {
-        "actions": [
-            ""
-        ],
-        "deficiencies": [
-            ""
-        ],
-        "functions": [
-            ""
-        ],
-        "name": "",
-        "partnership": [
-            ""
-        ],
-        "references": [
-            {
-                "credit": "Wikipedia, ",
-                "url": "https://en.wikipedia.org/wiki/"
-            },
-            {
-                "credit": "The world's healthiest foods, Amino acids",
-                "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
-            },
-            {
-                "credit": "Elson Haas M. MD, Healthy.net, Amino acids: ",
-                "url": "http://www.healthy.net/scr/article.aspx?Id=1738"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Appendix E: DRI Values for Indispensable Amino Acids by Life Stage and Gender Group",
-                "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
-            },
-            {
-                "credit": "USDA Branded Food Products Database",
-                "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
-            }
-        ],
-        "recommendations": {
-            "Infants (< 1 years)": "mg/kg/day",
-            "Children (< 14 years)": "mg/kg/day",
-            "Men (> 14 years)": "mg/kg/day",
-            "Women (> 14 years)": "mg/kg/day",
-            "Pregnancy": "mg/kg/day",
-            "Lactation": "mg/kg/day"
-        },
-        "type": "",
-        "sources": [
-            ""
-        ],
-        "summary": "",
-        "uses": [
-            ""
-        ],
-        "warnings": [
-            ""
+            "Excess impairs Calcium, Iron, Magnesium, Zinc absorption",
+            "Excess causes diarrhea"
         ]
     }
 ]
