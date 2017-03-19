@@ -13,7 +13,13 @@
         "Headache",
         "Skin paleness",
         "Weakness",
-        "Infections"
+        "Infections",
+        "Soreness",
+        "Sensory perception decrease",
+        "Walking difficulties",
+        "Speaking difficulties",
+        "Clumsiness",
+        "Instability"
     ],
     "degradation": [
         "Alkalis",
