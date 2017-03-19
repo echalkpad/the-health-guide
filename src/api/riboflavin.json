@@ -23,6 +23,7 @@
     "enemies": [
         "Alcohol",
         "Caffeine",
+        "Copper excess",
         "Processed food",
         "Prunes",
         "Raw seafood",
@@ -46,6 +47,10 @@
             "url": "https://en.wikipedia.org/wiki/Riboflavin"
         },
         {
+            "credit": "Wikipedia, Flavin adenine dinucleotide",
+            "url": "https://en.wikipedia.org/wiki/Flavin_adenine_dinucleotide"
+        },
+        {
             "credit": "Wikipedia, Cellular respiration",
             "url": "https://en.wikipedia.org/wiki/Cellular_respiration"
         },
@@ -67,6 +72,10 @@
         },
         {
             "credit": "Wikipedia, Lethargy",
+            "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
+        },
+        {
+            "credit": "Wikipedia, Dermatitis",
             "url": "https://en.wikipedia.org/wiki/Dermatitis#Signs_and_symptoms"
         },
         {
