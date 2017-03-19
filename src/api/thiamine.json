@@ -1,12 +1,10 @@
 {
-    "absorption": [
-        "Manganese"
-    ],
+    "absorption": [],
     "deficiencies": [
         "Fatigue",
         "Instability",
         "Confusion",
-        "Concentration difficulties",
+        "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
         "Depression",
@@ -18,22 +16,43 @@
         "Burning chest pain",
         "Irregular heart rhythm",
         "Swelling",
+        "Numbness and tingling",
         "Muscle atrophy"
     ],
     "degradation": [
         "Boiling"
     ],
     "enemies": [
-        ""
+        "Alcohol",
+        "Argan oil",
+        "Caffeine",
+        "Green tea",
+        "Hibiscus",
+        "Peaches",
+        "Potatoes",
+        "Processed food",
+        "Prunes",
+        "Raw seafood",
+        "Sedentarism",
+        "Smoking",
+        "Spearmint",
+        "Stress",
+        "Sugars",
+        "Thyme"
     ],
     "functions": [
         "Cardiovascular system (arthery health and heart muscle tone)",
+        "Central nervous system (arousal, attention, learning, memory, and reward system)",
         "Digestive system (intestine and stomach muscle tone)",
-        "Growth and development (children)",
         "Fatty acid and sterol production",
-        "Metabolism (glucose and ethanol metabolism)",
+        "Metabolism (carbohydrates and ethanol metabolism)",
         "Lipogenesis (glucose to fat storage convertion)",
-        "Nervous system (brain and neuromuscular junctions)"
+        "Peripheral cervous system (neuromuscular junctions)"
+    ],
+    "id": "404",
+    "metabolism": [
+        "Choline",
+        "Vitamin B"
     ],
     "name": "Vitamin B1 (Thiamine)",
     "references": [
@@ -42,8 +61,20 @@
             "url": "https://en.wikipedia.org/wiki/Thiamine"
         },
         {
+            "credit": "Wikipedia, Arousal",
+            "url": "https://en.wikipedia.org/wiki/Arousal"
+        },
+        {
             "credit": "Wikipedia, Atrophy",
             "url": "https://en.wikipedia.org/wiki/Atrophy"
+        },
+        {
+            "credit": "Wikipedia, Attention",
+            "url": "https://en.wikipedia.org/wiki/Attention"
+        },
+        {
+            "credit": "Wikipedia, Reward system",
+            "url": "https://en.wikipedia.org/wiki/Reward_system"
         },
         {
             "credit": "Wikipedia, Neuromuscular junction",
@@ -90,6 +121,6 @@
         "Pregnancy": "1.4 mg/day",
         "Lactation": "1.4 mg/day"
     },
-    "summary": "Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B1 is essential for energy production (metabolism) and for neuromuscular juctions involved in all muscular activities (brain, heart, intestines, skeletal muscles, stomach, etc.)",
+    "summary": "Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B1 is essential for energy production (metabolism), neuromuscular juctions involved in all muscular activities (heart, intestines, skeletal muscles, stomach, etc.), and mental arousal (alertness, attention, learning, memory, rewards system etc.)",
     "type": "Essential water-soluble vitamin"
 }
