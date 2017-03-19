@@ -24,9 +24,8 @@
         "Alcohol",
         "Caffeine",
         "Copper excess",
+        "Pharmaceutical drugs",
         "Processed food",
-        "Prunes",
-        "Raw seafood",
         "Sedentarism",
         "Smoking",
         "Stress",
@@ -38,7 +37,13 @@
     ],
     "id": "405",
     "metabolism": [
-        "Vitamin B"
+        "Copper",
+        "Iron",
+        "Vitamin A",
+        "Vitamin B",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin E"
     ],
     "name": "Vitamin B2 (Riboflavin)",
     "references": [

@@ -26,12 +26,12 @@
         "Anxiety",
         "Depression"
     ],
+    "degradation": [],
     "enemies": [
         "Alcohol",
         "Caffeine",
+        "Pharmaceutical drugs",
         "Processed food",
-        "Prunes",
-        "Raw seafood",
         "Sedentarism",
         "Smoking",
         "Stress",
@@ -42,6 +42,15 @@
         "Cardiovascular system (red blood cell production)",
         "Metabolism (carbohydrates, ethanol, fats, and protein metabolism)",
         "Nervous system (steroid production)"
+    ],
+    "id": "406",
+    "metabolism": [
+        "Chromium",
+        "Vitamin A",
+        "Vitamin B",
+        "Vitamin C",
+        "Vitamin D",
+        "Vitamin E"
     ],
     "name": "Vitamin B3 (Niacin)",
     "references": [
@@ -123,5 +132,5 @@
         "Lactation": "17 mg/day"
     },
     "summary": "Vitamin B3 or Niacin is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. itamin B3 is essential for energy production (metabolism), steroid production and redox reactions such as cellular respiration, electron transfer between molecules, and protection against free radicals (Reactive oxygen species or ROS) that cause oxidative stress (cellular damage that leads to aging, DNA mutations, inflammation, and others)",
-    "type": "Essential water-soluble vitamin",
+    "type": "Essential water-soluble vitamin"
 }
