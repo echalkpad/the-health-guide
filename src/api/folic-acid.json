@@ -18,7 +18,7 @@
         "Heart palpitations",
         "Anger",
         "Apathy",
-        "Withdrawal",
+        "Solitude",
         "Depression",
         "Birth problems"
     ],
@@ -27,10 +27,19 @@
         "Sunlight",
         "Vinegar (acids)"
     ],
-    "enemies": [],
+    "enemies": [
+        "Alcohol",
+        "Caffeine",
+        "Pharmaceutical drugs",
+        "Processed food",
+        "Sedentarism",
+        "Smoking",
+        "Stress",
+        "Sugars"
+    ],
     "functions": [
-        "Amino acids production",
         "Cell development (DNA and RNA production)",
+        "Metabolism (protein metabolism)",
         "Red blood cell production"
     ],
     "id": "431",
@@ -92,6 +101,6 @@
         "Pregnancy": "0.8 mg/day",
         "Lactation": "0.6 g/day"
     },
-    "summary": "Vitamin B9, Folic acid or Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. As it name suggests ('foliage'), vitamin B9 is found in leafy vegetables. Vitamin B9 is essential for energy production (metabolism), red blood cell production, and for growth and development, especially during pregnancy",
+    "summary": "Vitamin B9, Folic acid or Folate is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. As it name suggests ('foliage'), vitamin B9 is found in leafy vegetables. Vitamin B9 is essential for protein metabolism, red blood cell production, and for growth and development, especially during pregnancy",
     "type": "Essential water-soluble vitamin"
 }
