@@ -69,6 +69,6 @@
         "Pregnancy": "0.03 mg/day",
         "Lactation": "0.04 mg/day"
     },
-    "summary": "Chromium (Cr) is an essential trace element. It is essential for blood glucose metabolism by helping insulin perform better and blood cholesterol metabolism by increasing HDL.",
+    "summary": "Chromium (Cr) is an essential trace element. It is essential for blood glucose metabolism (component of glucose tolerance factor (GTF)) and blood cholesterol metabolism (HDL increase)",
     "type": "Essential trace element"
 }
