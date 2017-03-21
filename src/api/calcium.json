@@ -41,7 +41,7 @@
     "functions": [
         "Bones and teeth",
         "Growth",
-        "Nervous system (action potential involved in stimuli response, escpecially in muscle contraction)"
+        "Muscular system (cardiac, skeletal, and smooth muscle contraction)"
     ],
     "id": "301",
     "metabolism": [
@@ -102,6 +102,6 @@
         "Pregnancy": "1300 mg/day",
         "Lactation": "1300 mg/day"
     },
-    "summary": "Calcium (Ca) is an essential mineral element. It is essential for growth, bones, teeth, and nervous system (action potential involved in stimuli response, escpecially in muscle contraction)",
+    "summary": "Calcium (Ca) is an essential mineral element. It is essential for growth, bones, teeth, and muscular system (cardiac, skeletal, and smooth muscle contraction)",
     "type": "Essential mineral element"
 }
