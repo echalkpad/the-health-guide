@@ -1,5 +1,7 @@
 {
-    "absorption": [],
+    "absorption": [
+        "Manganese"
+    ],
     "deficiencies": [
         "Fatigue",
         "Nausea",
