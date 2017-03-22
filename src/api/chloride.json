@@ -1,8 +1,17 @@
 {
         "absorption": [],
         "deficiencies": [
-            "Digestive problems",
-            "Muscle contraction impairments"
+            "Abdominal pain",
+            "Diarrhea or constipation",
+            "Indigestion",
+            "Nausea",
+            "Vomiting",
+            "Muscle cramps",
+            "Weakness",
+            "Fatigue",
+            "Irritability",
+            "Confusion",
+            "Headache"
         ],
         "degradation": [],
         "enemies": [],
@@ -23,6 +32,10 @@
             {
                 "credit": "Wikipedia, Electrolyte",
                 "url": "https://en.wikipedia.org/wiki/Electrolyte"
+            },
+            {
+                "credit": "Kimberly Holland, Healthline, Electrolyte Disorders",
+                "url": "http://www.healthline.com/health/electrolyte-disorders"
             },
             {
                 "credit": "Wikipedia, Hydrochloric acid",
