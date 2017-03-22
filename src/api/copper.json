@@ -28,7 +28,7 @@
         "Alcohol",
         "Caffeine",
         "Iron excess",
-        "Manganese",
+        "Manganese excess",
         "Molybdenum excess",
         "Pharmaceutical drugs",
         "Phosphorus excess",
@@ -37,8 +37,8 @@
         "Smoking",
         "Stress",
         "Sugars",
-        "Vitamin C",
-        "Zinc"
+        "Vitamin C excess",
+        "Zinc excess"
     ],
     "functions": [
         "Cardiovascular system (hemoglobin production)",

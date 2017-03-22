@@ -19,19 +19,19 @@
     "depletion": [
         "Alcohol",
         "Caffeine",
-        "Calcium",
+        "Calcium excess",
         "Iron excess",
-        "Magnesium",
+        "Magnesium excess",
         "Pharmaceutical drugs",
-        "Phosphorus",
+        "Phosphorus excess",
         "Processed food",
         "Sedentarism",
         "Smoking",
         "Soy",
         "Stress",
         "Sugars",
-        "Vitamin B12 (Cobalamin)",
-        "Zinc"
+        "Vitamin B12 (Cobalamin) excess",
+        "Zinc excess"
     ],
     "functions": [
         "Fatty acid and sterol production",
