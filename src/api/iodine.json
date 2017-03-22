@@ -36,7 +36,7 @@
         "Unsprouted/unsoaked grains, nuts, seeds, and legumes"
     ],
     "functions": [
-        "Thyroxine (T4) and triiodothyronine (T3) thyroid hormones production (bones, central nervous system (arousal, attention, learning, memory, and reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral cervous system, protein production, reproduction)"
+        "Thyroxine (T4) and triiodothyronine (T3) thyroid hormones production (bones, cardiovascular system, central nervous system (arousal, attention, learning, memory, and reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral cervous system, protein production, reproduction)"
     ],
     "id": "",
     "metabolism": [
@@ -49,6 +49,10 @@
         {
             "credit": "Wikipedia, Iodine",
             "url": "https://en.wikipedia.org/wiki/Iodine"
+        },
+        {
+            "credit": "Wikipedia, Thyroid hormones",
+            "url": "https://en.wikipedia.org/wiki/Thyroid_hormones"
         },
         {
             "credit": "Wikipedia, Hypothyroidism",
