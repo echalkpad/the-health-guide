@@ -7,9 +7,8 @@
         "degradation": [],
         "enemies": [],
         "functions": [
-            "Acid/Base balance (pH level)",
             "Digestive system (hydrochloric acid production)",
-            "Fluid balance (osmotic pressure)"
+            "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)"
         ],
         "id": "",
         "name": "Chloride (Cl)",
@@ -46,6 +45,6 @@
             "Pregnancy": "2300 mg/day",
             "Lactation": "2300 mg/day"
         },
-        "summary": "Chloride (Cl) or Chlorine is an essential mineral element. It is essential for digestive system (gastric acid production), acid/base balance, and fluid balance.",
+        "summary": "Chloride (Cl) or Chlorine is an essential mineral element. It is essential for digestive system (gastric acid production) and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)",
         "type": "Essential mineral element"
     }
