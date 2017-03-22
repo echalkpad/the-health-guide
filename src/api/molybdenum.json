@@ -1,6 +1,12 @@
 {
     "absorption": [],
-    "deficiencies": [],
+    "deficiencies": [
+        "Vision problems",
+        "Rapid heart rate",
+        "Rapid breathing",
+        "Depression",
+        "Fatigue"
+    ],
     "degradation": [],
     "enemies": [
         "Alcohol",
@@ -13,10 +19,18 @@
         "Stress",
         "Sugars"
     ],
-    "functions": [],
+    "functions": [
+        "Detoxification (uric acid production)",
+        "Gene expression (DNA and RNA production)",
+        "Growth (protein production)",
+        "Metabolism (iron, protein, and Vitamin B metabolism)",
+        "Redox reactions (cellular respiration, transfer of electrons, hydrogen atoms, or hydronium ions, oxidative stress prevention)",
+        "Xanthine oxidase (XO) and xanthine dehydrogenase (XDH) production"
+    ],
     "id": "",
     "metabolism": [
         "Iron",
+        "Vitamin B",
         "Vitamin C"
     ],
     "name": "Molybdenum (Mo)",
@@ -26,8 +40,16 @@
             "url": "https://en.wikipedia.org/wiki/Molybdenum"
         },
         {
-            "credit": "Wikipedia, Anemia",
-            "url": "https://en.wikipedia.org/wiki/Anemia#Signs_and_symptoms"
+            "credit": "Wikipedia, Oxidoreductase",
+            "url": "https://en.wikipedia.org/wiki/Oxidoreductase"
+        },
+        {
+            "credit": "Wikipedia, Xanthine oxidase",
+            "url": "https://en.wikipedia.org/wiki/Xanthine_oxidase"
+        },
+        {
+            "credit": "Wikipedia, Xanthine dehydrogenase",
+            "url": "https://en.wikipedia.org/wiki/Xanthine_dehydrogenase"
         },
         {
             "credit": "The world's healthiest foods, Molybdenum",
@@ -54,6 +76,6 @@
         "Pregnancy": "0.05 mg/day",
         "Lactation": "0.05 mg/day"
     },
-    "summary": "Molybdenum (Mo) is an essential trace element",
+    "summary": "Molybdenum (Mo) is an essential trace element. It is essential for xanthine oxidase (XO) and xanthine dehydrogenase (XDH) production, which are involved in detoxification (uric acid production) growth (protein production), energy production (iron, protein, and vitamin B metabolism), vision (corneal epithelium and endothelium oxidative damage protection), and redox reactions such as cellular respiration and protection against free radicals (Reactive oxygen species or ROS) that cause oxidative stress (cellular damage that leads to aging, DNA mutations, inflammation, and others)",
     "type": "Essential trace element"
 }
