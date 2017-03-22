@@ -1,0 +1,90 @@
+{
+    "absorption": [],
+    "deficiencies": [
+        "Fatigue",
+        "Growth impairments",
+        "Skin problems",
+        "Hair loss",
+        "Inflammation",
+        "Swelling",
+        "Attention difficulties",
+        "Learning difficulties",
+        "Memory loss",
+        "Depression",
+        "Anorexia",
+        "Diarrhea",
+        "Bleeding",
+        "High blood cholesterol"
+    ],
+    "degradation": [
+        "Cooking",
+        "Sunlight"
+    ],
+    "depletion": [],
+    "functions": [
+        "Cardiovascular system (blood vessels health and heart muscle tone)",
+        "Cell membranes structure and signaling",
+        "Eicosanoid, steroid, and ketone bodies production",
+        "Growth",
+        "Immune system (anti-inflammatory)",
+        "Metabolism",
+        "Nervous system (steroid production)",
+        "Reproductive system (sex hormone production)"
+    ],
+    "metabolism": [
+        "Linoleic acid (LA)"
+    ],
+    "name": "alpha-Linolenic acid (ALA)",
+    "references": [
+        {
+            "credit": "Alpha-Linolenic acid",
+            "url": "https://en.wikipedia.org/wiki/Alpha-Linolenic_acid"
+        },
+        {
+            "credit": "Eicosanoid",
+            "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+        },
+        {
+            "credit": "Steroid",
+            "url": "https://en.wikipedia.org/wiki/Steroid"
+        },
+        {
+            "credit": "Ketogenesis",
+            "url": "https://en.wikipedia.org/wiki/Ketogenesis"
+        },
+        {
+            "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
+            "url": "http://www.healthy.net/scr/article.aspx?Id=2138"
+        },
+        {
+            "credit": "National Institutes of Health, Omega-3 Fatty Acids",
+            "url": "https://ods.od.nih.gov/factsheets/Omega3FattyAcids-HealthProfessional/"
+        },
+        {
+            "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Alpha-Linolenic acid",
+            "url": "http://umm.edu/health/medical/altmed/supplement/alphalinolenic-acid"
+        },
+        {
+            "credit": "Mayo clinic, Drugs and Supplements, Omega-3 fatty acids, fish oil, alpha-linolenic acid",
+            "url": "http://www.mayoclinic.org/drugs-supplements/omega-3-fatty-acids-fish-oil-alpha-linolenic-acid/background/hrb-20059372"
+        },
+        {
+            "credit": "WebMd, Alpha-Linolenic acid",
+            "url": "http://www.webmd.com/vitamins-supplements/ingredientmono-1035-ALPHA-LINOLENIC+ACID.aspx?activeIngredientId=1035&activeIngredientName=ALPHA-LINOLENIC+ACID&source=3"
+        },
+        {
+            "credit": "USDA Branded Food Products Database",
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=619&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+        }
+    ],
+    "recommendations": {
+        "Infants (< 1 years)": "0.5 g/day",
+        "Children (< 14 years)": "0.9 g/day",
+        "Men (> 14 years)": "1.6 g/day",
+        "Women (> 14 years)": "1.1 g/day",
+        "Pregnancy": "1.1 g/day",
+        "Lactation": "1.1 g/day"
+    },
+    "summary": "alpha-Linolenic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA). It is essential for cardiovascular system, immune system, nevrous system, reproductive system, and growth",
+    "type": "Essential fatty acid (EFA)"
+}
