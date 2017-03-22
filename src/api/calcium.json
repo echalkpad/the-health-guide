@@ -15,10 +15,11 @@
         "Muscle spasms",
       "Abdominal pain",
       "Convulsions",
-      "Diarrhea or constipation",
         "Numbness and tingling",
         "Irregular heart rhythm",
-        "Slow heart rate"
+        "Slow heart rate",
+      "Confusion",
+      "Depression"
     ],
     "degradation": [],
     "enemies": [
