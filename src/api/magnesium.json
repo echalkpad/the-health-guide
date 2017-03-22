@@ -11,8 +11,11 @@
         "Anorexia",
         "Irritability",
         "Insomnia",
+      "Constipation",
+      "Abdominal pain",
         "Muscle tremors",
         "Muscle twitching",
+      "Convulsions",
         "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
@@ -21,6 +24,7 @@
         "Confusion",
         "Rapid heart rate",
         "Chest pain",
+      "Irregular heart rhythm",
         "Breathing difficulties",
         "High blood pressure",
         "Numbness and tingling",
@@ -73,6 +77,10 @@
             "credit": "Wikipedia, Electrolyte",
             "url": "https://en.wikipedia.org/wiki/Electrolyte"
         },
+      {
+                "credit": "Kimberly Holland, Healthline, Electrolyte Disorders",
+                "url": "http://www.healthline.com/health/electrolyte-disorders"
+            },
         {
             "credit": "Wikipedia, Hypomagnesemia",
             "url": "https://en.wikipedia.org/wiki/Hypomagnesemia#Signs_and_symptoms"
