@@ -25,7 +25,7 @@
         "Alkalis",
         "Cooking"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Chloride",

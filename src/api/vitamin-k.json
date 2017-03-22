@@ -13,7 +13,7 @@
         "Rancid fat",
         "Vinegar (acid)"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Pharmaceutical drugs",

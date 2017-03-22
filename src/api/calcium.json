@@ -12,23 +12,27 @@
         "Teeth problems",
         "Growth impairments",
         "Weakness",
+        "Instability",
+        "Clumsiness",
         "Muscle spasms",
-      "Abdominal pain",
-      "Convulsions",
+        "Abdominal pain",
+        "Convulsions",
         "Numbness and tingling",
         "Irregular heart rhythm",
         "Slow heart rate",
-      "Confusion",
-      "Depression"
+        "Confusion",
+        "Delirium",
+        "Depression"
     ],
     "degradation": [],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Cacao",
         "Caffeine",
         "Fat excess",
         "Legumes",
         "Maize",
+        "Magnesium excess",
         "Pharmaceutical drugs",
         "Phosphorus excess",
         "Processed food",
@@ -45,7 +49,7 @@
     ],
     "functions": [
         "Bones and teeth",
-        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function (contraction))"
+        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function (contraction))",
         "Growth"
     ],
     "id": "301",
@@ -66,9 +70,9 @@
             "credit": "Wikipedia, Electrolyte",
             "url": "https://en.wikipedia.org/wiki/Electrolyte"
         },
-      {
+        {
             "credit": "Kimberly Holland, Healthline, Electrolyte Disorders",
-              "url": "http://www.healthline.com/health/electrolyte-disorders"
+            "url": "http://www.healthline.com/health/electrolyte-disorders"
         },
         {
             "credit": "Wikipedia, Hypocalcaemia",

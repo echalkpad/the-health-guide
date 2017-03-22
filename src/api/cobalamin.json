@@ -24,7 +24,7 @@
         "Sunlight",
         "Vinegar (acids)"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Pharmaceutical drugs",

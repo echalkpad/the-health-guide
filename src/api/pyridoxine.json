@@ -27,7 +27,7 @@
         "Cooking",
         "Sunlight"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Pharmaceutical drugs",

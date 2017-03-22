@@ -8,7 +8,7 @@
         "Fatigue"
     ],
     "degradation": [],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Copper excess",

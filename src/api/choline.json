@@ -28,7 +28,7 @@
     "degradation": [
         "Cooking"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Pharmaceutical drugs",

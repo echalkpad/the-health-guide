@@ -20,7 +20,7 @@
     "degradation": [
         "Sunlight"
     ],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Caffeine",
         "Copper excess",

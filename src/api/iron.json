@@ -35,7 +35,7 @@
         "Bleeding"
     ],
     "degradation": [],
-    "enemies": [
+    "depletion": [
         "Alcohol",
         "Cacao",
         "Caffeine",
