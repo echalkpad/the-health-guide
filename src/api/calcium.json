@@ -7,11 +7,15 @@
         "Vitamin D"
     ],
     "deficiencies": [
+        "Fatigue",
         "Bone problems",
         "Teeth problems",
         "Growth impairments",
         "Weakness",
         "Muscle spasms",
+      "Abdominal pain",
+      "Convulsions",
+      "Diarrhea or constipation",
         "Numbness and tingling",
         "Irregular heart rhythm",
         "Slow heart rate"
@@ -60,6 +64,10 @@
         {
             "credit": "Wikipedia, Electrolyte",
             "url": "https://en.wikipedia.org/wiki/Electrolyte"
+        },
+      {
+            "credit": "Kimberly Holland, Healthline, Electrolyte Disorders",
+              "url": "http://www.healthline.com/health/electrolyte-disorders"
         },
         {
             "credit": "Wikipedia, Hypocalcaemia",
