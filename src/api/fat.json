@@ -1,0 +1,77 @@
+{
+    "absorption": [],
+    "deficiencies": [
+        "Fatigue",
+        "Growth impairments",
+        "Skin problems",
+        "Hair loss",
+        "Inflammation",
+        "Swelling",
+        "Attention difficulties",
+        "Learning difficulties",
+        "Memory loss",
+        "Depression",
+        "Anorexia",
+        "Diarrhea",
+        "Bleeding",
+        "High blood cholesterol",
+        "High blood pressure"
+    ],
+    "degradation": [
+        "Cooking",
+        "Sunlight"
+    ],
+    "depletion": [],
+    "functions": [
+        "Cardiovascular system (blood vessels health)",
+        "Cell growth and protection (cell membrane health)",
+        "Digestive system (nutrient absorption)",
+        "Endocrine system (hormone production)",
+        "Immune system (anti-inflammatory)",
+        "Metabolism (energy production and storage and ketone bodies production (ketogenesis))",
+        "Nervous system (neurotransmitter production)"
+    ],
+    "id": "204",
+    "metabolism": [],
+    "name": "Fatty acid (Fat)",
+    "references": [
+        {
+            "credit": "Wikipedia, Lipid",
+            "url": "https://en.wikipedia.org/wiki/Lipid"
+        },
+        {
+            "credit": "Wikipedia, Fat",
+            "url": "https://en.wikipedia.org/wiki/Fat"
+        },
+        {
+            "credit": "Wikipedia, Triglyceride",
+            "url": "https://en.wikipedia.org/wiki/Triglyceride"
+        },
+        {
+            "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Fats, Lipids And Oils",
+            "url": "http://www.healthy.net/Health/Article/Fats_Lipids_and_Oils/2099/1"
+        },
+        {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Lipids",
+            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+        },
+        {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary fat: Total fat and Fatty acids",
+            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+        },
+        {
+            "credit": "USDA Branded Food Products Database",
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report?nutsort=646&max=1000&offset=0&nutrient1=645&nutrient2=646&nutrient3=&measureby=g&subset=0&sort=c&totCount=7911"
+        }
+    ],
+    "recommendations": {
+        "Infants (< 1 years)": "35% energy/day",
+        "Children (< 14 years)": "35% energy/day",
+        "Men (> 14 years)": "35% energy/day",
+        "Women (> 14 years)": "35% energy/day",
+        "Pregnancy": "35% energy/day",
+        "Lactation": "35% energy/day"
+    },
+    "summary": "Fatty acids or fats are lipids that serve as secondary energy supply, when glucose is absent, along with other important functions. Fatty acids are classified as unsaturated fatty acids (fluid at low temperature and unstable) and saturated fatty acids (solid at low temperature and stable). alpha-Linolenic acid (an omega-3 polyunsaturated fatty acid) and Linoleic acid (an omega-6 polyunsaturated fatty acid) are the only essential fatty acids. Fatty acids are essential for blood vessels, cell membrane, nutrient absorption, endocrine system (hormone production), energy production and storage (metabolism), immune system, and nervous system (neurotransmitter production)",
+    "type": "Macronutrient"
+}

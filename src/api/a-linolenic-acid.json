@@ -14,7 +14,8 @@
         "Anorexia",
         "Diarrhea",
         "Bleeding",
-        "High blood cholesterol"
+        "High blood cholesterol",
+        "High blood pressure"
     ],
     "degradation": [
         "Cooking",
@@ -22,12 +23,12 @@
     ],
     "depletion": [],
     "functions": [
-        "Cardiovascular system (blood vessels health and heart muscle tone)",
-        "Cell membranes structure and signaling",
+        "Cardiovascular system (blood vessels health)",
+        "Cell growth and protection (cell membrane health)",
         "Endocrine system (hormone production)",
-        "Growth",
         "Immune system (anti-inflammatory)",
-        "Metabolism (ketone bodies production (ketogenesis))"
+        "Metabolism (energy production and storage and ketone bodies production (ketogenesis))",
+        "Nervous system (neurotransmitter production)"
     ],
     "metabolism": [
         "Linoleic acid (LA)"
@@ -83,6 +84,6 @@
         "Pregnancy": "1.1 g/day",
         "Lactation": "1.1 g/day"
     },
-    "summary": "alpha-Linolenic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA). It is essential for cardiovascular system, immune system, nevrous system, reproductive system, and growth",
+    "summary": "alpha-Linolenic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA). It is essential for blood vessels, cell membrane, endocrine system (hormone production), energy production (metabolism), immune system, and nervous system (neurotransmitter production).",
     "type": "Essential fatty acid (EFA)"
 }
