@@ -41,6 +41,7 @@
         "Cardiovascular system (blood vessels health and hemoglobin production)",
         "Histamine production (digestive system, immune system, and nervous system)"
     ],
+    "id": "512",
     "metabolism": [
         "Copper",
         "Iron",
@@ -98,6 +99,6 @@
         "Pregnancy": "20 mg/kg/day",
         "Lactation": "20 mg/kg/day"
     },
-    "summary": "Histidine (His) is an essential glucogenic and aromatic amino acid (AAA). It is essential for cardiovascular system (blood vessels health and hemoglobin production) and histamine production (digestive system, immune system, and nervous system)",
+    "summary": "Histidine (His) is an essential glucogenic and aromatic amino acid (AAA). It is essential for cardiovascular system (blood vessels health and hemoglobin production) and histamine production (digestive system, immune system, and nervous system).",
     "type": "Essential amino acid"
 }
