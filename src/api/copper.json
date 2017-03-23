@@ -15,7 +15,10 @@
         "Diarrhea",
         "Weakness",
         "Dizziness",
+        "Clumsiness",
+        "Instability",
         "Confusion",
+        "Sensory perception decrease",
         "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
@@ -50,7 +53,7 @@
         "Collagen (bones, capillary walls, itervertebral discs, joints, ligaments, and skin)",
         "Immune system (histamine metabolism and thyroxine (T4 thyroid hormone) production)",
         "Metabolism (tyrosine metabolism)",
-        "Nervous system (myelin sheaths health)",
+        "Nervous system (myelin sheaths health involved in electrical insulation of nerves)",
         "Redox reactions (cellular respiration, transfer of electrons, hydrogen atoms, or hydronium ions, oxidative stress prevention)"
     ],
     "id": "312",
@@ -73,6 +76,10 @@
         {
             "credit": "Wikipedia, Superoxide dismutase",
             "url": "https://en.wikipedia.org/wiki/Superoxide_dismutase"
+        },
+        {
+            "credit": "Wikipedia, Myelin",
+            "url": "https://en.wikipedia.org/wiki/Myelin"
         },
         {
             "credit": "Wikipedia, Anemia",

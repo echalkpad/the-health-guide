@@ -38,7 +38,7 @@
     "functions": [
         "Bones",
         "Cardiovascular system",
-        "Central nervous system (arousal, attention, learning, memory, reward system)",
+        "Central nervous system (arousal, attention, learning, memory, mood, reward system)",
         "Cholesterol production",
         "Endocrine system (thyroxine (T4) and triiodothyronine (T3) thyroid hormones production)",
         "Gene expression (DNA and RNA production)",
@@ -112,5 +112,5 @@
         "Lactation": "0.29 mg/day"
     },
     "type": "Essential trace element",
-    "summary": "Iodine (I) is an essential trace element. It is essential for thyroxine (T4) and triiodothyronine (T3) thyroid hormones production, which are involved in all metabolisc functions (bones, central nervous system (arousal, attention, learning, memory, reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral nervous system, protein production, reproduction)"
+    "summary": "Iodine (I) is an essential trace element. It is essential for thyroxine (T4) and triiodothyronine (T3) thyroid hormones production, which are involved in all metabolisc functions (bones, central nervous system (arousal, attention, learning, memory, mood, reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, protein production, reproduction)"
 }

@@ -55,6 +55,7 @@ export class Nutrition {
         public methionine: Nutrient = new Nutrient(506, 'Amino Acids', 'Methionine', 'g'),
         public phenylalanine: Nutrient = new Nutrient(508, 'Amino Acids', 'Phenylalanine', 'g'),
         public valine: Nutrient = new Nutrient(510, 'Amino Acids', 'Valine', 'g'),
+		public arginine: Nutrient = new Nutrient(511, 'Amino Acids', 'Arginine', 'g'),
         public histidine: Nutrient = new Nutrient(512, 'Amino Acids', 'Histidine', 'g'),
         public alcohol: Nutrient = new Nutrient(221, 'Other', 'Alcohol', 'g'),
         public caffeine: Nutrient = new Nutrient(262, 'Other', 'Caffeine', 'mg'),
@@ -233,6 +234,10 @@ export class Nutrition {
 
                 case '510':
                     this.valine.value = +item.value;
+                    break;
+					
+				case '511':
+                    this.arginine.value = +item.value;
                     break;
 
                 case '512':

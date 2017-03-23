@@ -1,17 +1,15 @@
 {
     "absorption": [],
     "deficiencies": [
+        "Insomnia",
         "Fatigue",
-        "Anxiety",
+        "Drowsiness",
         "Depression",
         "Apathy",
-        "Confusion",
-        "Attention difficulties",
-        "Learning difficulties",
-        "Memory loss",
         "Irritability",
-        "Solitude",
-        "Pain"
+        "Delirium",
+        "Anxiety",
+        "Solitude"
     ],
     "degradation": [
         "Frying",
@@ -21,33 +19,36 @@
         "Alcohol",
         "Caffeine",
         "Pharmaceutical drugs",
+        "Phenylalanine",
         "Processed food",
         "Sedentarism",
         "Smoking",
         "Stress",
         "Sugars",
-        "Tryptophan"
+        "Tyrosine"
     ],
     "functions": [
-        "Nervous system (neurotransmitter and endorphin production involved in arousal, attention, learning, memory, mood, pain relief, and reward system)"
+        "Metabolism (Vitamin B3 (Niacin) production)",
+        "Nervous system (serotonin and melatonin production involved in mood and circadian rhythm (sleep patterns))"
     ],
-    "id": "508",
-    "name": "Phenylalanine (Phe)",
-    "partnership": [
-        "Copper",
-        "Iron",
-        "Vitamin B3 (Niacin)",
+    "id": "501",
+    "metabolism": [
+        "Choline",
+        "Magnesium",
         "Vitamin B6 (Pyridoxine)",
+        "Vitamin B9 (Folic acid)",
+        "Vitamin B12 (Cobalamin)",
         "Vitamin C"
     ],
+    "name": "Tryptophan (Trp)",
     "references": [
         {
-            "credit": "Wikipedia, Phenylalanine",
-            "url": "https://en.wikipedia.org/wiki/Phenylalanine"
+            "credit": "Wikipedia, Tryptophan",
+            "url": "https://en.wikipedia.org/wiki/Tryptophan"
         },
         {
-            "credit": "Wikipedia, Endorphins",
-            "url": "https://en.wikipedia.org/wiki/Endorphins"
+            "credit": "Wikipedia, 5-Hydroxytryptophan",
+            "url": "https://en.wikipedia.org/wiki/5-Hydroxytryptophan"
         },
         {
             "credit": "Wikipedia, Aromatic amino acids",
@@ -62,8 +63,8 @@
             "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
         },
         {
-            "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Phenylalanine",
-            "url": "http://www.healthy.net/scr/article.aspx?Id=1965"
+            "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Tryptophan",
+            "url": "http://www.healthy.net/scr/article.aspx?Id=1974"
         },
         {
             "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -75,25 +76,17 @@
         },
         {
             "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=508&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=512&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }
     ],
     "recommendations": {
-        "Infants (< 1 years)": "84 mg/kg/day",
-        "Children (< 14 years)": "41 mg/kg/day",
-        "Men (> 14 years)": "33 mg/kg/day",
-        "Women (> 14 years)": "33 mg/kg/day",
-        "Pregnancy": "44 mg/kg/day",
-        "Lactation": "51 mg/kg/day"
+        "Infants (< 1 years)": "13 mg/kg/day",
+        "Children (< 14 years)": "6 mg/kg/day",
+        "Men (> 14 years)": "5 mg/kg/day",
+        "Women (> 14 years)": "5 mg/kg/day",
+        "Pregnancy": "7 mg/kg/day",
+        "Lactation": "9 mg/kg/day"
     },
-    "sources": [
-        "Eggs",
-        "Soybeans",
-        "Meat",
-        "Cheese",
-        "Nuts",
-        "Seeds"
-    ],
-    "summary": "Phenylalanine (Phe) is an essential glucogenic aromatic amino acid (AAA). It is essential for nervous system (neurotransmitter and endorphin production) involved in arousal, attention, learning, memory, mood, reward system, etc. Also, endorphins cause a positive attitude (euphoria) and pain relief.",
+    "summary": "Tryptophan (Trp) is an essential glucogenic aromatic amino acid (AAA). It is essential for nervous system (serotonin and melatonin production, involved in mood and sleep patterns) and metabolism (vitamin B3 (Niacin) production)",
     "type": "Essential amino acid"
 }

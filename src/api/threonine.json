@@ -3,9 +3,6 @@
     "deficiencies": [
         "Fatigue",
         "Growth impairments",
-        "Bone problems",
-        "Muscle problems",
-        "Weight loss",
         "Cough",
         "Fever",
         "Headache",
@@ -34,39 +31,33 @@
         "Collagen (bones, capillary walls, itervertebral discs, joints, ligaments, and skin)",
         "Growth (cell growth and protein production)",
         "Immune system (antibody production)",
-        "Metabolism (ketone bodies production (ketogenesis))",
-        "Muscular system (development)"
+        "Metabolism"
     ],
-    "id": "505",
+    "id": "502",
     "metabolism": [
         "Alanine",
         "Aspartic acid",
-        "Calcium",
         "Cysteine",
-        "Iron",
-        "Threonine",
-        "Vitamin B2 (Riboflavin)",
-        "Vitamin B3 (Niacin)",
-        "Vitamin B6 (Pyridoxine)",
-        "Vitamin C"
+        "Lysine"
     ],
-    "name": "Lysine (Lys)",
+    "name": "Threonine (Thr)",
+    
     "references": [
         {
-            "credit": "Wikipedia, Lysine",
-            "url": "https://en.wikipedia.org/wiki/Lysine"
+            "credit": "Wikipedia, Threonine",
+            "url": "https://en.wikipedia.org/wiki/Threonine"
         },
         {
-            "credit": "Wikipedia, Ketogenic amino acid",
-            "url": "https://en.wikipedia.org/wiki/Ketogenic_amino_acid"
+            "credit": "Wikipedia, Glucogenic amino acid",
+            "url": "https://en.wikipedia.org/wiki/Glucogenic_amino_acid"
         },
         {
             "credit": "The world's healthiest foods, Amino acids",
             "url": "http://www.whfoods.com/genpage.php?tname=nutrient&dbid=129"
         },
         {
-            "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Lysine",
-            "url": "http://www.healthy.net/scr/article.aspx?Id=1744"
+            "credit": "Elson Haas M. MD, Healthy.net, Amino acids: Threonine",
+            "url": "http://www.healthy.net/scr/article.aspx?Id=1972"
         },
         {
             "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Protein and Amino acids",
@@ -78,17 +69,17 @@
         },
         {
             "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=505&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=502&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }
     ],
     "recommendations": {
-        "Infants (< 1 years)": "89 mg/kg/day",
-        "Children (< 14 years)": "46 mg/kg/day",
-        "Men (> 14 years)": "38 mg/kg/day",
-        "Women (> 14 years)": "38 mg/kg/day",
-        "Pregnancy": "51 mg/kg/day",
-        "Lactation": "52 mg/kg/day"
+        "Infants (< 1 years)": "49 mg/kg/day",
+        "Children (< 14 years)": "24 mg/kg/day",
+        "Men (> 14 years)": "20 mg/kg/day",
+        "Women (> 14 years)": "20 mg/kg/day",
+        "Pregnancy": "26 mg/kg/day",
+        "Lactation": "30 mg/kg/day"
     },
-    "summary": "Lysine (Lys) is an essential ketogenic amino acid. It is essential for growth, energy production (metabolism), calcium absorption and metabolism, muscle development and health, collagen production (bones, capillary walls, itervertebral discs, joints, ligaments, and skin), and immune system (antibody production)",
+    "summary": "Threonine (Thr) is an essential glucogenic amino acid. It is essential for growth, energy production (metabolism), collagen production (bones, capillary walls, itervertebral discs, joints, ligaments, and skin), and immune system (antibody production)",
     "type": "Essential amino acid"
 }

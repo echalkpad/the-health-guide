@@ -46,12 +46,12 @@
     ],
     "functions": [
         "Cardiovascular system (blood vessels health and heart muscle tone)",
-        "Central nervous system (arousal, attention, learning, memory, reward system)",
+        "Central nervous system (arousal, attention, learning, memory, mood, reward system)",
         "Digestive system (intestine and stomach muscle tone)",
         "Fatty acid, sterol, and acetylcholine production",
         "Metabolism (carbohydrates and ethanol metabolism)",
         "Lipogenesis (glucose to fat storage convertion)",
-        "Peripheral nervous system (neuromuscular junctions)"
+        "Peripheral nervous system (neuromuscular junctions involved in muscle contraction and senses)"
     ],
     "id": "404",
     "metabolism": [
@@ -81,7 +81,7 @@
             "url": "https://en.wikipedia.org/wiki/Attention"
         },
         {
-            "credit": "Wikipedia, Reward system",
+            "credit": "Wikipedia, mood, reward system",
             "url": "https://en.wikipedia.org/wiki/Reward_system"
         },
         {
@@ -129,6 +129,6 @@
         "Pregnancy": "1.4 mg/day",
         "Lactation": "1.4 mg/day"
     },
-    "summary": "Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B1 is essential for energy production (metabolism), neuromuscular juctions involved in all muscular activities (heart, intestines, skeletal muscles, stomach, etc.), and mental arousal (alertness, attention, learning, memory, rewards system etc.)",
+    "summary": "Vitamin B1 or Thiamine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B1 is essential for energy production (metabolism), neuromuscular juctions involved in all muscular activities (heart, intestines, skeletal muscles, stomach, etc.), and mental arousal (alertness, attention, learning, memory, mood, rewards system etc.)",
     "type": "Essential water-soluble vitamin"
 }

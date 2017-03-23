@@ -39,7 +39,7 @@
     ],
     "functions": [
         "Cardiovascular system (hemoglobin production)",
-        "Central nervous system (arousal, attention, learning, memory, reward system)",
+        "Central nervous system (arousal, attention, learning, memory, mood, reward system)",
         "Cell membranes (ceramide (lipid) production)",
         "Gene expression (DNA and RNA production)",
         "Immune system (histamine production)",
@@ -125,6 +125,6 @@
         "Pregnancy": "1.9 mg/day",
         "Lactation": "2 mg/day"
     },
-    "summary": "Vitamin B6 or Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B6 is essential for amino acid metabolism, cardiovascular system (hemoglobin production), immune system (histamine production), central nervous system (arousal, attention, learning, memory, reward system), muscular system (magnesium, potassium, and sodium metabolism), and gene expression (DNA and RNA production)",
+    "summary": "Vitamin B6 or Pyridoxine is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is part of the vitamin B-complex family and works together with the rest of the B vitamins. A deficiency of any of the B vitamins disrupts the function of the entire group. Vitamin B6 is essential for amino acid metabolism, cardiovascular system (hemoglobin production), immune system (histamine production), central nervous system (arousal, attention, learning, memory, mood, reward system), muscular system (magnesium, potassium, and sodium metabolism), and gene expression (DNA and RNA production)",
     "type": "Essential water-soluble vitamin"
 }
