@@ -22,7 +22,7 @@
         "Potassium excess"
     ],
     "functions": [
-        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)"
+        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function)"
     ],
     "id": "307",
     "name": "Sodium (N)",
@@ -67,6 +67,6 @@
         "Pregnancy": "1500 mg/day",
         "Lactation": "1500 mg/day"
     },
-    "summary": "Sodium (N) is an essential mineral element. It is essential for electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)",
+    "summary": "Sodium (N) is an essential mineral element. It is essential for electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function)",
     "type": "Essential mineral element"
 }

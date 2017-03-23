@@ -41,9 +41,9 @@
     "functions": [
         "Cardiovascular system (blood vessels health and heart muscle tone)",
         "Cell membranes structure (lecithin production) and signaling",
-        "Central nervous system (arousal, attention, learning, memory, and reward system)",
+        "Central nervous system (arousal, attention, learning, memory, reward system)",
         "Liver and gallbladder (fat metabolism)",
-        "Peripheral cervous system (neuromuscular junctions)"
+        "Peripheral nervous system (neuromuscular junctions)"
     ],
     "id": "421",
     "metabolism": [
@@ -126,4 +126,4 @@
     },
     "summary": "Choline is an essential water-soluble nutrient, hence, it cannot be stored and is easily eliminated from the body through urine or perspiration. It is related to the B Vitamins, but not considered yet one of them. Choline is essential for liver (fat metabolism), pregnancy, neuromuscular juctions involved in all muscular activities (heart, intestines, skeletal muscles, stomach, etc.), and mental arousal (alertness, attention, learning, memory, rewards system etc.)",
     "type": "Essential water-soluble vitamin"
-},
+}

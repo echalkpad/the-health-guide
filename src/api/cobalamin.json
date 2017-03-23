@@ -36,11 +36,9 @@
     ],
     "functions": [
         "Cardiovascular system (red blood cell production)",
-        "Choline production",
+        "Central nervous system (arousal, attention, learning, memory, reward system)",
         "Gene expression (DNA and RNA production)",
-        "Homocysteine to methionine convertion (methylation)",
-        "Metabolism (carbohydrate, fat, and protein metabolism)",
-        "Nervous system (neurotransmitter production)"
+        "Metabolism (carbohydrate, fat, protein metabolism, homocysteine to methionine convertion (methylation), and choline production)"
     ],
     "id": "418",
     "metabolism": [

@@ -26,7 +26,12 @@
     ],
     "functions": [
         "Cardiovascular system (blood vessels health)",
-        "S-adenosyl methionine (SAM) production (cell growth, gene expression (DNA and RNA production), immune system, liver, metabolism, nervous system (hormone and neurotransmitter production))"
+        "Endocrine system (hormone production)",
+        "Gene expression (DNA and RNA production)",
+        "Growth (cell growth)",
+        "Immune system",
+        "Liver",
+        "Metabolism"
     ],
     "id": "506",
     "metabolism": [
@@ -79,6 +84,6 @@
         "Pregnancy": "25 mg/kg/day",
         "Lactation": "26 mg/kg/day"
     },
-    "summary": "Methionine (Met) is an essential glucogenic, sulfur-containing amino acid (SAA). It is essential for blood vessels health and S-adenosyl methionine (SAM) production (cell growth, gene expression (DNA and RNA production), immune system, liver, metabolism, nervous system (hormone and neurotransmitter production))",
+    "summary": "Methionine (Met) is an essential glucogenic, sulfur-containing amino acid (SAA). It is essential for blood vessels health and S-adenosyl methionine (SAM) production (cell growth, endocrine system (hormone production), gene expression (DNA and RNA production), immune system, liver, metabolism, nervous system (neurotransmitter production))",
     "type": "Essential amino acid"
 }

@@ -47,11 +47,12 @@
         "Cardiovascular system (blood cells production)",
         "Cell structure and signaling",
         "Collagen (bones, capillary walls, itervertebral discs, joints, ligaments, and skin)",
+        "Endocrine system (hormone production)",
         "Fluid balance (osmotic pressure)",
         "Growth (cell growth)",
         "Immune system (antibody production)",
         "Metabolism (enzyme production)",
-        "Nervous system (hormone and neurotransmitter production)"
+        "Nervous system (neurotransmitter production)"
     ],
     "id": "203",
     "name": "Protein (Amino acids)",
@@ -113,6 +114,6 @@
         "Pregnancy": "20% energy/day",
         "Lactation": "20% energy/day"
     },
-    "summary": "Protein is the third most important nutrient, after oxygen and water, being the main functional and structural component of all cells. Proteins are chains of amino acids and amino acids are the building blocks of all life forms. There are 20 amino acids, from which only 10 are essential (Arginine, Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine). Protein quality of food varies, according to the essential amino acid content. Protein with all essential amino acids is complete, the rest is incomplete. Thus, it is important to focus on complete protein foods. Because of their importance, amino acids and protein are essential for the majority of body functions (cell structure and signaling, gene expression (DNA and RNA production), growth and developmnet, metabolism (enzyme production), collagen production (bones, capillary walls, itervertebral discs, joints, ligaments, and skin), immune system (antibody production), cardiovascular system (blood cell production), and nervous system (hormone and neurotransmitter production)",
+    "summary": "Protein is the third most important nutrient, after oxygen and water, being the main functional and structural component of all cells. Proteins are chains of amino acids and amino acids are the building blocks of all life forms. There are 20 amino acids, from which only 10 are essential (Arginine, Histidine, Isoleucine, Leucine, Lysine, Methionine, Phenylalanine, Threonine, Tryptophan, Valine). Protein quality of food varies, according to the essential amino acid content. Protein with all essential amino acids is complete, the rest is incomplete. Thus, it is important to focus on complete protein foods. Because of their importance, amino acids and protein are essential for the majority of body functions (cell structure and signaling, gene expression (DNA and RNA production), growth and developmnet, metabolism (enzyme production), collagen production (bones, capillary walls, itervertebral discs, joints, ligaments, and skin), immune system (antibody production), cardiovascular system (blood cell production), central nervous system (arousal, attention, learning, memory, reward system), and peripheral nervous system (neuromuscular junctions)",
     "type": "Macronutrient"
 }

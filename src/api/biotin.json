@@ -31,10 +31,7 @@
     ],
     "functions": [
         "Gene expression (DNA and RNA production)",
-        "Glucose production (Gluconeogenesis)",
-        "Fatty acid production",
-        "Isoleucine and Valine production (amino acid production)",
-        "Metabolism (fat metabolism)"
+        "Metabolism (isoleucine, valine, fatty acid, glucose production, and fat metabolism)"
     ],
     "id": "",
     "metabolism": [

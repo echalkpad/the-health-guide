@@ -13,7 +13,7 @@
     "depletion": [],
     "functions": [
         "Digestive system (hydrochloric acid production)",
-        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)"
+        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function)"
     ],
     "id": "",
     "name": "Chloride (Cl)",
@@ -58,6 +58,6 @@
         "Pregnancy": "2300 mg/day",
         "Lactation": "2300 mg/day"
     },
-    "summary": "Chloride (Cl) or Chlorine is an essential mineral element. It is essential for digestive system (gastric acid production) and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)",
+    "summary": "Chloride (Cl) or Chlorine is an essential mineral element. It is essential for digestive system (gastric acid production) and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function)",
     "type": "Essential mineral element"
 }

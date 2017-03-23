@@ -45,11 +45,9 @@
         "Antioxidant (oxidative stress protection)",
         "Cholesterol metabolism",
         "Collagen (bones, capillary walls, itervertebral discs, joints, ligaments, and skin)",
+        "Endocrine system (thyroxine (T4 thyroid hormone) production)",
         "Immune system",
-        "Thyroxine (T4 thyroid hormone) production",
-        "Tryptophan metabolism (serotonin production)",
-        "Tyrosine metabolism (epinephrine and norepinephrine production)",
-        "Vitamin B9 (Folic acid) metabolism (tetrahydrofolic acid production)"
+        "Metabolism (tryptophan to serotonin convertion, tyrosine to epinephrine and norepinephrine convertion, Vitamin B9 (Folic acid) to tetrahydrofolic acid convertion)"
     ],
     "id": "401",
     "metabolism": [
@@ -59,6 +57,9 @@
         "Vitamin B",
         "Vitamin E",
         "Selenium",
+        "Tryptophan",
+        "Tyrosine",
+        "Vitamin B9 (Folic acid)",
         "Zinc"
     ],
     "name": "Vitamin C (Ascorbic acid)",

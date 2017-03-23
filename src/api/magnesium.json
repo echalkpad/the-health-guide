@@ -56,7 +56,7 @@
         "Unsprouted/unsoaked grains, nuts, seeds, and legumes"
     ],
     "functions": [
-        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function (relaxation))",
+        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function (relaxation))",
         "Gene expression (DNA and RNA production)",
         "Growth",
         "Metabolism"
@@ -124,6 +124,6 @@
         "Pregnancy": "350 mg/day",
         "Lactation": "310 mg/day"
     },
-    "summary": "Magnesium (Mg) is an essential mineral element. It is essential for growth, metabolism, and and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function (relaxation)). Becuase of its impact on muscle relaxation, it is considered the 'antistress' and relaxation nutrient.",
+    "summary": "Magnesium (Mg) is an essential mineral element. It is essential for growth, metabolism, and and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function (relaxation)). Becuase of its impact on muscle relaxation, it is considered the 'antistress' and relaxation nutrient.",
     "type": "Essential mineral element"
 }

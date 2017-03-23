@@ -24,12 +24,10 @@
     "functions": [
         "Cardiovascular system (blood vessels health and heart muscle tone)",
         "Cell membranes structure and signaling",
-        "Eicosanoid, steroid, and ketone bodies production",
+        "Endocrine system (hormone production)",
         "Growth",
         "Immune system (anti-inflammatory)",
-        "Metabolism",
-        "Nervous system (steroid production)",
-        "Reproductive system (sex hormone production)"
+        "Metabolism (ketone bodies production (ketogenesis))"
     ],
     "metabolism": [
         "Linoleic acid (LA)"

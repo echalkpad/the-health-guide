@@ -24,11 +24,10 @@
     ],
     "functions": [
         "Collagen (bones, capillary walls, itervertebral discs, joints, ligaments, and skin)",
-        "Growth (cell growth)",
-        "Ketone bodies production (ketogenesis)",
+        "Growth (cell growth and protein production)",
         "Immune system (antibody production)",
-        "Metabolism",
-        "Muscles (protein production)"
+        "Metabolism (ketone bodies production (ketogenesis))",
+        "Muscular system (development)"
     ],
     "id": "505",
     "metabolism": [

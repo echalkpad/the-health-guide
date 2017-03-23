@@ -30,10 +30,9 @@
         "Sugars"
     ],
     "functions": [
-        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function)",
-        "Hormone production",
+        "Electrolyte (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function)",
+        "Endocrine system (hormone production)",
         "Metabolism (carbohydrate metabolism)",
-        "Muscles",
         "Protein production"
     ],
     "id": "306",
@@ -79,6 +78,6 @@
         "Pregnancy": "4700 mg/day",
         "Lactation": "5100 mg/day"
     },
-    "summary": "Potassium (K) is an essential mineral element. It is essential for muscles, carbohydrate metabolism, and and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle, and nerve function).",
+    "summary": "Potassium (K) is an essential mineral element. It is essential for muscles, carbohydrate metabolism, and and electrolyte activity (acid/base (pH) balance, fluid balance (osmotic pressure), muscle tone, and nerve function).",
      "type": "Essential mineral element"
 }

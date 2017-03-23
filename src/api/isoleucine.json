@@ -21,10 +21,9 @@
         "Sugars"
     ],
     "functions": [
-        "Growth (cell growth)",
-        "Ketone bodies production (ketogenesis)",
-        "Metabolism",
-        "Muscles (protein production)"
+        "Growth (cell growth and protein production)",
+        "Metabolism (ketone bodies production (ketogenesis))",
+        "Muscular system (development)"
     ],
     "id": "503",
     "metabolism": [

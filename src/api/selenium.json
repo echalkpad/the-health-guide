@@ -31,8 +31,15 @@
     "degradation": [],
     "depletion": [],
     "functions": [
+        "Bones",
+        "Cardiovascular system",
+        "Central nervous system (arousal, attention, learning, memory, reward system)",
+        "Endocrine system (thyroxine (T4) and triiodothyronine (T3) thyroid hormones production)",
+        "Gene expression (DNA and RNA production)",
+        "Growth and development (cholesterol and protein production)",
+        "Muscular system",
         "Redox reactions (oxidative stress protection)",
-        "Triiodothyronine (T3) thyroid hormone production (bones, cardiovascular system, central nervous system (arousal, attention, learning, memory, and reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral cervous system, protein production, reproduction)"
+        "Reproductive system"
     ],
     "id": "317",
     "metabolism": [
@@ -108,6 +115,6 @@
         "Pregnancy": "0.06 mg/day",
         "Lactation": "0.07 mg/day"
     },
-    "summary": "Selenium (Se) is an essential trace element. It is essential for antioxidant protection against oxidative stress and triiodothyronine (T3) thyroid hormones production, which are involved in all metabolisc functions (bones, cardiovascular system, central nervous system (arousal, attention, learning, memory, and reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral cervous system, protein production, reproduction)",
+    "summary": "Selenium (Se) is an essential trace element. It is essential for antioxidant protection against oxidative stress and triiodothyronine (T3) thyroid hormones production, which are involved in all metabolisc functions (bones, cardiovascular system, central nervous system (arousal, attention, learning, memory, reward system), cholesterol production, energy production, gene expression, growth and development, muscular system, peripheral nervous system, protein production, reproduction)",
     "type": "Essential trace element"
 }
