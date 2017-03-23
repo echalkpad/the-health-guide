@@ -19,7 +19,12 @@
         "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
-        "Colds",
+        "Cough",
+        "Fever",
+        "Headache",
+        "Nose running",
+        "Sneezing",
+        "Throat soreness",
         "Infections",
         "Irregular heart rhythm"
     ],
