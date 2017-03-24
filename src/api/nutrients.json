@@ -445,7 +445,7 @@
             "Infections",
             "Insomnia",
             "Irritability",
-            "Low blood glucose",
+            "Low blood glucose levels",
             "Muscle cramps",
             "Nausea",
             "Numbness",
@@ -582,7 +582,7 @@
             "Infertility",
             "Insomnia",
             "Irritability",
-            "Low blood glucose",
+            "Low blood glucose levels",
             "Mouth corners and lips cracking",
             "Mouth inflammation",
             "Mouth soreness",
@@ -3868,7 +3868,7 @@
         "deficiencies": [
             "Fatigue",
             "Growth problems",
-            "Low blood glucose",
+            "Low blood glucose levels",
             "Muscle problems",
             "Weakness"
         ],
@@ -3959,7 +3959,7 @@
         "deficiencies": [
             "Fatigue",
             "Growth problems",
-            "Low blood glucose",
+            "Low blood glucose levels",
             "Muscle problems",
             "Weakness"
         ],
@@ -4542,7 +4542,7 @@
         "deficiencies": [
             "Fatigue",
             "Growth problems",
-            "Low blood glucose",
+            "Low blood glucose levels",
             "Muscle problems",
             "Weakness"
         ],

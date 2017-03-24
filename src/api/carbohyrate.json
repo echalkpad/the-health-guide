@@ -1,18 +1,15 @@
 {
-    "absorption": [
-        "Pyruvic acid formation (glycolysis)",
-        "Reduced Nicotinamide Adenine Dinucleotide (NADH) formation"
-    ],
+    "absorption": [],
     "deficiencies": [
-        "Low blood glucose",
-        "Low blood cholesterol",
+        "Low blood glucose levels",
+        "Low low-density lipoprotein (LDL) levels",
         "Dizziness",
         "Weight loss"
     ],
     "degradation": [],
     "depletion": [],
     "functions": [
-        "Metabolism"
+        "Metabolism (energy production and storage)"
     ],
     "id": "205",
     "metabolism": [],
@@ -21,10 +18,6 @@
         {
             "credit": "Wikipedia, Carbohydrate",
             "url": "https://en.wikipedia.org/wiki/Carbohydrate"
-        },
-        {
-            "credit": "Wikipedia, Starch",
-            "url": "https://en.wikipedia.org/wiki/Starch"
         },
         {
             "credit": "Wikipedia, Resistant starch",
@@ -63,6 +56,6 @@
         "Pregnancy": "40% energy/day",
         "Lactation": "40% energy/day"
     },
-    "summary": "Carbohydrates are the most common source of energy. This is becuase glucose, the simples form of carbohydrates, is the main energy fuel, not only for our cells, but for the majority of living organisms. Glucose can also be obtained from fats and protein, thus, carbohydrates are not essential for the human organism (the body can also obtain its energy requirements from ketones bodies). Carbohydrates are chains of sugar units. Based on these units, carbohydrates are classified as simple and complex. Carbohydrates are problematic, because their cause high amounts of blood glucose at once (blood glucose spike) which in term cause high amounts of insulin secretion to stabilise the glucose excess. This doesn't happen with fiber though (a complex carbohydrate), which actually slows down digestion and stabilises glucose levels, but only with simple carbohydrates (sugars). Fiber is the only essential type of carbohydrate. High blood glucose and insulin are the root of all health problems",
+    "summary": "Carbohydrates are the most common source of energy. This is becuase glucose, the simples form of carbohydrates, is the main energy fuel, not only for our cells, but for the majority of living organisms. Glucose can also be obtained from fats and protein, thus, carbohydrates are not essential for the human organism (the body can also obtain its energy requirements from ketones bodies). Carbohydrates are chains of sugar units. Based on these units, carbohydrates are classified as simple and complex. Carbohydrates are problematic, because their cause high amounts of blood glucose at once (blood glucose spike) which in term cause high amounts of insulin secretion to stabilise the glucose excess. This doesn't happen, though, with dietary fiber (complex carbohydrate), which actually slows down digestion and stabilises glucose levels, but only with simple carbohydrates (sugars). Fiber is the only essential type of carbohydrate. Also, sugars cause inflammation and lead to health problems.",
     "type": "Macronutrient"
 }
