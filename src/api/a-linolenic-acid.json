@@ -77,13 +77,13 @@
         }
     ],
     "recommendations": {
-        "Infants (< 1 years)": "0.5 g/day",
-        "Children (< 14 years)": "0.9 g/day",
-        "Men (> 14 years)": "1.6 g/day",
-        "Women (> 14 years)": "1.1 g/day",
-        "Pregnancy": "1.1 g/day",
-        "Lactation": "1.1 g/day"
+        "Infants (< 1 years)": "3% energy/day",
+        "Children (< 14 years)": "3% energy/day",
+        "Men (> 14 years)": "3% energy/day",
+        "Women (> 14 years)": "3% energy/day",
+        "Pregnancy": "3% energy/day",
+        "Lactation": "3% energy/day",
     },
     "summary": "alpha-Linolenic acid, ALA, or 18:3 is an essential omega-3 (n-3) fatty acid part of the polyunsaturated fats (PUFA). It is essential for blood vessels, cell membrane, endocrine system (hormone production), energy production (metabolism), immune system, and nervous system (neurotransmitter production).",
-    "type": "Essential fatty acid (EFA)"
+    "type": "Essential omega-3 fatty acid"
 }

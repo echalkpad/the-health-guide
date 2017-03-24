@@ -44,6 +44,10 @@
             "url": "https://en.wikipedia.org/wiki/Fat"
         },
         {
+            "credit": "Wikipedia, Fatty acid",
+            "url": "https://en.wikipedia.org/wiki/Fatty_acid"
+        },
+        {
             "credit": "Wikipedia, Triglyceride",
             "url": "https://en.wikipedia.org/wiki/Triglyceride"
         },
@@ -72,6 +76,6 @@
         "Pregnancy": "35% energy/day",
         "Lactation": "35% energy/day"
     },
-    "summary": "Fatty acids or fats are lipids that serve as secondary energy supply, when glucose is absent, along with other important functions. Fatty acids are classified as unsaturated fatty acids (fluid at low temperature and unstable) and saturated fatty acids (solid at low temperature and stable). Along with industrial food processing, unsaturated fatty acids have been hydrogenized (stabilised) to increase the shelf life in food stores, turning them into trans-unsaturated fats, which damage our health and leading to genetic mutations of our DNA and, thus, disease. alpha-Linolenic acid (an omega-3 polyunsaturated fatty acid) and Linoleic acid (an omega-6 polyunsaturated fatty acid) are the only essential fatty acids. Fatty acids are essential for blood vessels, cell membrane, nutrient absorption, endocrine system (hormone production), energy production and storage (metabolism), immune system, and nervous system (neurotransmitter production)",
+    "summary": "Fatty acids or fats are lipids that serve as secondary energy supply, when glucose is absent, along with other important functions. Fatty acids are classified as unsaturated fatty acids (fluid at low temperature and unstable) and saturated fatty acids (solid at low temperature and stable). Along with industrial food processing, unsaturated fatty acids have been hydrogenized (stabilised) to increase the shelf life in food stores, turning them into trans-unsaturated fats, which damage our health and leading to genetic mutations of our DNA and, thus, disease. Omega-3 fatty acids (alpha-linoleic acid (ALA), docosahexaenoic acid (DHA), and eicosapentaenoic acid (EPA)) and omega-6 fatty acids (linoleic acid) are the only essential fatty acids. Fatty acids are essential for cardiovascular system (blood vessels), cell membranes, nutrient absorption, endocrine system (hormone production), energy production and storage (metabolism), immune system, and nervous system (neurotransmitter production). Excess amounts of omega-6 fatty acids cause inflammation and lead to health problems. Be careful to keep a 3:1 intake ratio of omega-6 to omega-3 fatty acids, that is, for every gram of omega-3 fatty acids, you should not exceed 3 grams of omega-6 fatty acids.",
     "type": "Macronutrient"
 }

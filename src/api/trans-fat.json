@@ -1,5 +1,5 @@
 {
-    "impact": [
+    "effects": [
         "Inflammation",
         "Fatigue",
         "Depression",
@@ -11,11 +11,14 @@
         "High low-density lipoprotein (LDL) levels ('bad cholesterol')",
         "High blood pressure",
         "Infertility",
-        "Weight gain (obesity)",
-        "Cardiovascular problems",
-        "Liver problems"
+        "Weight gain (obesity)"
     ],
     "id": "605",
+    "impact": [
+        "Cardiovascular system",
+        "Digestive system",
+        "Immune system"
+    ],
     "name": "Trans-unsaturated fatty acid (Trans-fat)",
     "references": [
         {

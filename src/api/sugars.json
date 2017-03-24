@@ -1,39 +1,50 @@
 {
-    "impact": [
+    "effects": [
         "Inflammation",
-        "Fatigue",
-        "Depression",
-        "Appathy",
-        "Irritability",
-        "Attention difficulties",
-        "Learning difficulties",
-        "Memory loss",
+        "High blood glucose",
         "High low-density lipoprotein (LDL) levels ('bad cholesterol')",
         "High blood pressure",
-        "Infertility",
+        "Hyperactivity",
+        "Addiction",
+        "Attention difficulties",
         "Weight gain (obesity)",
-        "Cardiovascular problems",
-        "Liver problems"
+        "Digestive problems",
+        "Bone problems",
+        "Tooth problems",
+        "Muscle atrophy"
     ],
-    "id": "605",
-    "name": "Trans-unsaturated fatty acid (Trans-fat)",
+    "id": "269",
+    "impact": [
+        "Bones and teeth",
+        "Brain",
+        "Cardiovascular system",
+        "Digestive system",
+        "Immune system",
+        "Muscular system",
+        "Pancreas"
+    ],
+    "name": "Sugars",
     "references": [
         {
-            "credit": "Wikipedia, Trans fat",
-            "url": "https://en.wikipedia.org/wiki/Trans_fat"
+            "credit": "Wikipedia, Sugar",
+            "url": "https://en.wikipedia.org/wiki/Sugar"
         },
         {
-            "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Fats, Lipids And Oils",
-            "url": "http://www.healthy.net/Health/Article/Fats_Lipids_and_Oils/2099/1"
+            "credit": "Wikipedia, Carbohydrate",
+            "url": "https://en.wikipedia.org/wiki/Carbohydrate"
         },
         {
-            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary fat: Total fat and Fatty acids",
+            "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Carbohydrates",
+            "url": "http://www.healthy.net/scr/article.aspx?Id=2100"
+        },
+        {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary Carbohydrates: Sugars and Starches",
             "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
         },
         {
             "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=605&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=269&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }
     ],
-    "summary": "Trans-unsaturated fatty acids or, simply, trans fat are unsaturated fatty acids that have been hydrogenized (stabilised) during food processing to increase their shelf life for commercial purposes. They are found in all processed food and margarine. Trans fat cause inflammation. Long-term inflammation leads to chronic inflammation, that is, the immune system goes mad and triggers inflammation and immune reponses although there is no threat (it thinks it is something normal to do). This behaviour is an autoimmune problem caused by DNA damage and mutation. Chronic inflammation is the root cause of all diseases. Inflammation can be determined more precisely using a C-reactive protein (CRP) test. Eliminate trans fat found in processed food completely for the sake of your health and wellness."
+    "summary": "Sugars are carbohydrates with only one (monosaccharides) and two (disaccharides) sugar units, hence the term simple carbohydrates. Sugars bring no benefits to our body, on the contrary, they damage our body. Sugars are rapidly absorbed and cause blood glucose spikes and high insulin secretion. Natural sugars from fruits and vegetables come along with fiber which slows down absorption. The real problem comes from refined sugars (sweeteners), which cause inflammation within our digestive system and cardiovascular system leading to health problems. They are found in all processed foods and desserts. Reduce sugars to less than 5% of daily energy intake."
 }
