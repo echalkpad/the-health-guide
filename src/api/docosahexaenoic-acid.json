@@ -2,20 +2,24 @@
     "absorption": [],
     "deficiencies": [
         "Fatigue",
+        "Inflammation",
+        "Birth problems",
         "Growth impairments",
         "Skin problems",
         "Hair loss",
-        "Inflammation",
-        "Swelling",
+        "Slow wound healing",
+        "Confusion",
+        "Convulsions",
         "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
+        "Eye problems",
         "Depression",
-        "Anorexia",
-        "Diarrhea",
-        "Bleeding",
-        "High low-density lipoprotein (LDL) levels ('bad cholesterol')",
-        "High blood pressure"
+        "Irritability",
+        "Apathy",
+        "High low-density lipoprotein (LDL) levels",
+        "High blood pressure",
+        "Irregular heart rhythm"
     ],
     "degradation": [
         "Cooking",
@@ -23,37 +27,42 @@
     ],
     "depletion": [],
     "functions": [
-        "Cardiovascular system (blood vessels health)",
         "Cell growth and protection (cell membrane health)",
-        "Endocrine system (hormone production)",
         "Immune system (anti-inflammatory)",
-        "Metabolism (energy production and storage and ketone bodies production (ketogenesis))",
-        "Nervous system (neurotransmitter production)"
+        "Nervous system (brain development)"
     ],
     "metabolism": [
-        "alpha-Linolenic acid (ALA)"
+        "Omega-3 fatty acids"
     ],
-    "name": "Linoleic acid (LA)",
+    "name": "Docosahexaenoic acid (DHA)",
     "references": [
         {
-            "credit": "Linoleic acid",
-            "url": "https://en.wikipedia.org/wiki/Linoleic_acid"
+            "credit": "Eicosapentaenoic acid",
+            "url": "https://en.wikipedia.org/wiki/Eicosapentaenoic_acid"
         },
         {
-            "credit": "Omega-6 fatty acid",
-            "url": "https://en.wikipedia.org/wiki/Omega-6_fatty_acid"
+            "credit": "Omega-3 fatty acid",
+            "url": "https://en.wikipedia.org/wiki/Omega-3_fatty_acid"
         },
         {
-            "credit": "Steroid",
-            "url": "https://en.wikipedia.org/wiki/Steroid"
+            "credit": "The world's healthiest foods, Omega-3 fatty acids",
+            "url": "http://www.whfoods.com/genpage.php?dbid=84&tname=nutrient"
         },
         {
-            "credit": "Eicosanoid",
-            "url": "https://en.wikipedia.org/wiki/Eicosanoid"
+            "credit": "Prostaglandin",
+            "url": "https://en.wikipedia.org/wiki/Prostaglandin"
         },
         {
-            "credit": "Ketogenesis",
-            "url": "https://en.wikipedia.org/wiki/Ketogenesis"
+            "credit": "Inflammation",
+            "url": "https://en.wikipedia.org/wiki/Inflammation"
+        },
+        {
+            "credit": "Mercola, Exercise and Diet Combat Inflammation, Allowing You to Live Longer",
+            "url": "http://fitness.mercola.com/sites/fitness/archive/2015/08/21/exercise-diet-inflammation.aspx"
+        },
+        {
+            "credit": "Dr. David M. Marquis, DC, DACBN, Mercola, How Inflammation Affects Every Aspect of Your Health",
+            "url": "http://articles.mercola.com/sites/articles/archive/2013/03/07/inflammation-triggers-disease-symptoms.aspx"
         },
         {
             "credit": "Elson Haas M. MD, Healthy.net, Supplemental Oils: Essential Fatty Acids",
@@ -64,22 +73,22 @@
             "url": "https://medlineplus.gov/druginfo/natural/496.html"
         },
         {
-            "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Omega-6 fatty acids",
+            "credit": "University of Maryland Medical Center, Complementary and Alternative Medicine Guide, Omega-3 fatty acids",
             "url": "http://umm.edu/health/medical/altmed/supplement/omega6-fatty-acids"
         },
         {
             "credit": "USDA Branded Food Products Database",
-            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=618&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=621&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
         }
     ],
     "recommendations": {
-        "Infants (< 1 years)": "9% energy/day",
-        "Children (< 14 years)": "9% energy/day",
-        "Men (> 14 years)": "9% energy/day",
-        "Women (> 14 years)": "9% energy/day",
-        "Pregnancy": "9% energy/day",
-        "Lactation": "9% energy/day",
+        "Infants (< 1 years)": "0.5% energy/day",
+        "Children (< 14 years)": "0.5% energy/day",
+        "Men (> 14 years)": "0.5% energy/day",
+        "Women (> 14 years)": "0.5% energy/day",
+        "Pregnancy": "0.5% energy/day",
+        "Lactation": "0.5% energy/day"
     },
-    "summary": "Linoleic acid, LA, or 18:2 is an essential omega-6 (n-6) fatty acid part of the polyunsaturated fats (PUFA). It is essential for blood vessels, cell membrane, endocrine system (hormone production), energy production and storage (metabolism), immune system, and nervous system (neurotransmitter production). Excess consumption of omega-6 fatty acids causes inflammation.",
+    "summary": "Linoleic acid, LA, or 18:2 is an essential omega-3 fatty acid part of the polyunsaturated fats (PUFA). It is essential for nervous system (brain development), cell growth and protection, and anti-inflammatory activities.",
     "type": "Essential omega-6 fatty acid"
 }

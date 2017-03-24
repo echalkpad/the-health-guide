@@ -8,7 +8,7 @@
         "Attention difficulties",
         "Learning difficulties",
         "Memory loss",
-        "High low-density lipoprotein (LDL) levels ('bad cholesterol')",
+        "High low-density lipoprotein (LDL) levels",
         "High blood pressure",
         "Infertility",
         "Weight gain (obesity)"
@@ -24,6 +24,18 @@
         {
             "credit": "Wikipedia, Trans fat",
             "url": "https://en.wikipedia.org/wiki/Trans_fat"
+        },
+        {
+            "credit": "Inflammation",
+            "url": "https://en.wikipedia.org/wiki/Inflammation"
+        },
+        {
+            "credit": "Mercola, Exercise and Diet Combat Inflammation, Allowing You to Live Longer",
+            "url": "http://fitness.mercola.com/sites/fitness/archive/2015/08/21/exercise-diet-inflammation.aspx"
+        },
+        {
+            "credit": "Dr. David M. Marquis, DC, DACBN, Mercola, How Inflammation Affects Every Aspect of Your Health",
+            "url": "http://articles.mercola.com/sites/articles/archive/2013/03/07/inflammation-triggers-disease-symptoms.aspx"
         },
         {
             "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Fats, Lipids And Oils",
