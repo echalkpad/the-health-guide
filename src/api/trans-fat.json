@@ -1,0 +1,39 @@
+{
+    "impact": [
+        "Inflammation",
+        "Fatigue",
+        "Depression",
+        "Appathy",
+        "Irritability",
+        "Attention difficulties",
+        "Learning difficulties",
+        "Memory loss",
+        "High low-density lipoprotein (LDL) levels ('bad cholesterol')",
+        "High blood pressure",
+        "Infertility",
+        "Weight gain (obesity)",
+        "Cardiovascular problems",
+        "Liver problems"
+    ],
+    "id": "605",
+    "name": "Trans-unsaturated fatty acid (Trans-fat)",
+    "references": [
+        {
+            "credit": "Wikipedia, Trans fat",
+            "url": "https://en.wikipedia.org/wiki/Trans_fat"
+        },
+        {
+            "credit": "Elson Haas M. MD, Healthy.net, Building Blocks Of Nutrition: Fats, Lipids And Oils",
+            "url": "http://www.healthy.net/Health/Article/Fats_Lipids_and_Oils/2099/1"
+        },
+        {
+            "credit": "Jennifer J. Otten, Jennifer Pitzi Hellwig, Linda D. Meyers, Editors, 'Dietary Reference Intakes: The Essential Guide to Nutrient Requirements', Dietary fat: Total fat and Fatty acids",
+            "url": "https://www.amazon.com/Dietary-Reference-Intakes-Essential-Requirements/dp/0309157420"
+        },
+        {
+            "credit": "USDA Branded Food Products Database",
+            "url": "https://ndb.nal.usda.gov/ndb/nutrients/report/nutrientsfrm?max=1000&offset=0&totCount=0&nutrient1=605&nutrient2=&nutrient3=&subset=0&sort=c&measureby=g"
+        }
+    ],
+    "summary": "Trans-unsaturated fatty acids or, simply, trans fat are unsaturated fatty acids that have been hydrogenized (stabilised) during food processing to increase their lifespan for commercial purposes. They are found in all processed food and margarine. Trans fat cause inflammation and DNA damage. Chronic inflammation and DNA mutations (autoimmune disease) are the root cause of all diseases. Eliminate trans fat found in processed food completely for the sake of your health and wellness."
+}
