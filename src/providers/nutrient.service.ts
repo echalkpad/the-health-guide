@@ -7,7 +7,7 @@ import { Observer } from 'rxjs/Observer';
 import { INutrientDetails } from '../models';
 
 @Injectable()
-export class NutrientDataService {
+export class NutrientService {
   constructor(private _db: Database) {
     _db.connect();
     _db.collection('nutrients');

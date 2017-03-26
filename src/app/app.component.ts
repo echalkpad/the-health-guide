@@ -3,8 +3,9 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import {
-  FoodListPage,
-  NutrientListPage
+  AuthPage,
+  HomePage,
+  FoodListPage
 } from '../pages';
 
 export interface IPageLink {
@@ -19,14 +20,14 @@ export interface IPageLink {
 export class MyApp {
   @ViewChild(Nav) private _nav: Nav;
   public pages: Array<IPageLink>;
-  public rootPage: any = FoodListPage;
+  public rootPage: any = AuthPage;
 
   constructor(public platform: Platform) {
     this._initializeApp();
 
     this.pages = [
-      { title: 'Foods', component: FoodListPage, icon: 'nutrition'},
-      { title: 'Nutrients', component: NutrientListPage, icon: 'leaf'},
+      { title: 'Home', component: HomePage, icon: 'home' },
+      { title: 'Foods', component: FoodListPage, icon: 'nutrition' }
     ];
 
   }

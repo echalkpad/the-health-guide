@@ -2,21 +2,28 @@ import { CommonModule } from '@angular/common';
 import { ErrorHandler } from '@angular/core';
 import { IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
+import { Facebook } from '@ionic-native/facebook';
 
 const cloudSettings: CloudSettings = {
-  'core': {
-    'app_id': '7020a3ca'
-  }
-};
+    'core': {
+        'app_id': '7020a3ca'
+    },
+    'auth': {
+        'facebook': {
+            'scope': ['public_profile', 'user_friends', 'email']
+        }
+    }
+}
 
 import { MyApp } from './app.component';
 
 // Pages
 import {
+    AuthPage,
     FoodDetailsPage,
     FoodListPage,
-    NutrientDetailsPage,
-    NutrientListPage
+    HomePage,
+    NutrientPage,
 } from '../pages';
 
 // Pipes
@@ -24,25 +31,28 @@ import { CapitalizePipe } from '../pipes'
 
 // Providers
 import {
+    AuthService,
     FoodService,
-    NutrientDataService
+    NutrientService
 } from '../providers';
 
 export const thgDeclarations = [
     MyApp,
+    AuthPage,
     CapitalizePipe,
     FoodDetailsPage,
     FoodListPage,
-    NutrientDetailsPage,
-    NutrientListPage
+    HomePage,
+    NutrientPage
 ];
 
 export const thgEntries = [
     MyApp,
+    AuthPage,
     FoodDetailsPage,
     FoodListPage,
-    NutrientDetailsPage,
-    NutrientListPage
+    HomePage,
+    NutrientPage
 ];
 
 export const thgImports = [
@@ -53,6 +63,8 @@ export const thgImports = [
 
 export const thgProviders = [
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    Facebook,
+    AuthService,
     FoodService,
-    NutrientDataService
+    NutrientService
 ];

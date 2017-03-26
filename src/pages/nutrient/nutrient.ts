@@ -7,25 +7,25 @@ import { Observable } from 'rxjs/Observable';
 //import { INutrientDetails } from '../../models';
 
 // Providers
-import { NutrientDataService } from '../../providers';
+import { NutrientService } from '../../providers';
 
 @Component({
-  selector: 'page-nutrient-details',
-  templateUrl: 'nutrient-details.html',
+  selector: 'page-nutrient',
+  templateUrl: 'nutrient.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class NutrientDetailsPage {
+export class NutrientPage {
   public nutrient$: Observable<any>;
   public nutrientDetail: string = 'summary';
   constructor(
     private _detectorRef: ChangeDetectorRef,
     private _navCtrl: NavController,
     private _navParams: NavParams,
-    private _nutrientDataSvc: NutrientDataService
+    private _nutrientSvc: NutrientService
   ) { }
 
   ionViewWillEnter() {
-    this.nutrient$ = this._nutrientDataSvc.getNutrient$(this._navParams.get('id'));
+    this.nutrient$ = this._nutrientSvc.getNutrient$(this._navParams.get('id'));
     this._detectorRef.markForCheck();
   }
 
