@@ -1,5 +1,6 @@
 // App
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ErrorHandler } from '@angular/core';
 import { IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { CloudSettings, CloudModule } from '@ionic/cloud-angular';
@@ -24,6 +25,9 @@ const cloudSettings: CloudSettings = {
     }
 }
 
+// Components
+import { ErrorMessageComponent } from '../components';
+
 // Pages
 import {
     AuthPage,
@@ -39,6 +43,7 @@ import { CapitalizePipe } from '../pipes'
 // Providers
 import {
     AuthService,
+    CustomValidationService,
     FoodService,
     NutrientService
 } from '../providers';
@@ -47,6 +52,7 @@ export const thgDeclarations = [
     MyApp,
     AuthPage,
     CapitalizePipe,
+    ErrorMessageComponent,
     FoodDetailsPage,
     FoodListPage,
     HomePage,
@@ -63,7 +69,10 @@ export const thgEntries = [
 ];
 
 export const thgImports = [
+    
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     IonicModule.forRoot(MyApp),
     CloudModule.forRoot(cloudSettings)
 ];
@@ -73,6 +82,7 @@ export const thgProviders = [
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthService,
+    CustomValidationService,
     FoodService,
     NutrientService
 ];
