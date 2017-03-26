@@ -1,7 +1,14 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Auth, FacebookAuth, GoogleAuth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
+import { 
+  Auth,
+  //FacebookAuth,
+  //GoogleAuth,
+  IDetailedError,
+  User,
+  UserDetails
+} from '@ionic/cloud-angular';
 
 // Pages
 import { HomePage } from '../home/home';
@@ -15,23 +22,42 @@ import { AuthService } from '../../providers';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AuthPage {
-
   constructor(
     private _auth: Auth,
     private _authSvc: AuthService,
     private _detectorRef: ChangeDetectorRef,
-    private _fbAuth: FacebookAuth,
-    private _googleAuth: GoogleAuth,
+    //private _fbAuth: FacebookAuth,
+    //private _googleAuth: GoogleAuth,
     private _navCtrl: NavController,
     private _navParams: NavParams,
     private _user: User
   ) { }
 
-  public createAccount(): void {
-    let details: UserDetails = { 'email': 'hi@ionic.io', 'password': 'puppies123' };
+  /*
+  // Issue
+  // Unable to login to social account
+  public fbAuth(): void {
+    this._fbAuth.login().then(() => this._navCtrl.setRoot(HomePage));
+  }
+
+  // Bug in browser
+  // No proxy found for Google Plus
+  public googleAuth(): void {
+    this._googleAuth.login().then(() => this._navCtrl.setRoot(HomePage));
+  }
+
+  */
+
+  public login(): void {
+    let details: UserDetails = { 'email': 'razvan.tomegea@outlook.com', 'password': 'parolaaceastanutrebuiesaouit94' };
+    this._auth.login('basic', details).then(() => this._navCtrl.setRoot(HomePage));
+  }
+
+  public signup(): void {
+    let details: UserDetails = { 'email': 'razvan.tomegea@outlook.com', 'password': 'parolaaceastanutrebuiesaouit94' };
 
     this._auth.signup(details).then(() => {
-      this._auth.login('basic', details).then(() => this._navCtrl.setRoot(HomePage));
+      console.log('Account success');
     }, (err: IDetailedError<string[]>) => {
       for (let e of err.details) {
         if (e === 'conflict_email') {
@@ -41,14 +67,6 @@ export class AuthPage {
         }
       }
     });
-  }
-
-  public fbAuth(): void {
-    this._fbAuth.login().then(() => this._navCtrl.setRoot(HomePage));
-  }
-
-  public googleAuth(): void {
-    this._googleAuth.login().then(() => this._navCtrl.setRoot(HomePage));
   }
 
   ionViewWillEnter() {
