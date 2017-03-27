@@ -14,13 +14,12 @@ import { HomePage } from '../home/home';
 import { CustomValidationService } from '../../providers';
 
 @Component({
-  selector: 'page-auth',
-  templateUrl: 'auth.html',
+  selector: 'page-signup',
+  templateUrl: 'signup.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AuthPage {
+export class SignupPage {
   public email: AbstractControl;
-  public error: string;
   public firstName: AbstractControl;
   public lastName: AbstractControl;
   public password: AbstractControl;
@@ -101,15 +100,13 @@ export class AuthPage {
           .then(() => this._navCtrl.setRoot(HomePage))
           .catch((err: IDetailedError<Array<string>>) => {
             for (let e of err.details) {
-              let error = CustomValidationService.getErrorMessage(e, err);
-              this._showAlert(error);
+              this._showAlert(CustomValidationService.getErrorMessage(e, err));
             }
           });
       })
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
-          let error = CustomValidationService.getErrorMessage(e, err);
-          this._showAlert(error);
+          this._showAlert(CustomValidationService.getErrorMessage(e, err));
         }
       });
   }

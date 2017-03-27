@@ -30,11 +30,12 @@ import { ErrorMessageComponent } from '../components';
 
 // Pages
 import {
-    AuthPage,
     FoodDetailsPage,
     FoodListPage,
     HomePage,
+    LoginPage,
     NutrientPage,
+    SignupPage
 } from '../pages';
 
 // Pipes
@@ -42,7 +43,6 @@ import { CapitalizePipe } from '../pipes'
 
 // Providers
 import {
-    AuthService,
     CustomValidationService,
     FoodService,
     NutrientService
@@ -50,26 +50,27 @@ import {
 
 export const thgDeclarations = [
     MyApp,
-    AuthPage,
     CapitalizePipe,
     ErrorMessageComponent,
     FoodDetailsPage,
     FoodListPage,
     HomePage,
-    NutrientPage
+    LoginPage,
+    NutrientPage,
+    SignupPage
 ];
 
 export const thgEntries = [
     MyApp,
-    AuthPage,
     FoodDetailsPage,
     FoodListPage,
     HomePage,
-    NutrientPage
+    LoginPage,
+    NutrientPage,
+    SignupPage
 ];
 
 export const thgImports = [
-    
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
@@ -81,7 +82,6 @@ export const thgProviders = [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    AuthService,
     CustomValidationService,
     FoodService,
     NutrientService

@@ -7,9 +7,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {
-  AuthPage,
   HomePage,
-  FoodListPage
+  FoodListPage,
+  LoginPage
 } from '../pages';
 
 export interface IPageLink {
@@ -24,7 +24,7 @@ export interface IPageLink {
 export class MyApp {
   @ViewChild(Nav) private _nav: Nav;
   public pages: Array<IPageLink>;
-  public rootPage: any = AuthPage;
+  public rootPage: any = LoginPage;
 
   constructor(private _platform: Platform, private _statusBar: StatusBar, private _splashScreen: SplashScreen) {
     this._initializeApp();
