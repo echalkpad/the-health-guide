@@ -32,9 +32,11 @@ import { ErrorMessageComponent } from '../components';
 import {
     FoodDetailsPage,
     FoodListPage,
+    ForgotPasswordPage,
     HomePage,
     LoginPage,
     NutrientPage,
+    PasswordResetPage,
     SignupPage
 } from '../pages';
 
@@ -43,6 +45,7 @@ import { CapitalizePipe } from '../pipes'
 
 // Providers
 import {
+    AlertService,
     CustomValidationService,
     FoodService,
     NutrientService
@@ -54,9 +57,11 @@ export const thgDeclarations = [
     ErrorMessageComponent,
     FoodDetailsPage,
     FoodListPage,
+    ForgotPasswordPage,
     HomePage,
     LoginPage,
     NutrientPage,
+    PasswordResetPage,
     SignupPage
 ];
 
@@ -64,9 +69,11 @@ export const thgEntries = [
     MyApp,
     FoodDetailsPage,
     FoodListPage,
+    ForgotPasswordPage,
     HomePage,
     LoginPage,
     NutrientPage,
+    PasswordResetPage,
     SignupPage
 ];
 
@@ -82,6 +89,7 @@ export const thgProviders = [
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AlertService,
     CustomValidationService,
     FoodService,
     NutrientService

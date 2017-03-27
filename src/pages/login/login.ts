@@ -1,15 +1,16 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertController, AlertOptions, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 
 // Pages
+import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 
 // Providers
-import { CustomValidationService } from '../../providers';
+import { AlertService, CustomValidationService } from '../../providers';
 
 @Component({
   selector: 'page-login',
@@ -17,12 +18,13 @@ import { CustomValidationService } from '../../providers';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPage {
+  public forgotPasswordPage: any;
   public email: AbstractControl;
-  public password: AbstractControl;
   public loginForm: FormGroup;
+  public password: AbstractControl;
   public signupPage: any;
   constructor(
-    private _alertCtrl: AlertController,
+    private _alertSvc: AlertService,
     private _auth: Auth,
     private _detectorRef: ChangeDetectorRef,
     private _fb: FormBuilder,
@@ -43,20 +45,10 @@ export class LoginPage {
       ]
     });
 
+    this.forgotPasswordPage = ForgotPasswordPage;
     this.email = this.loginForm.controls['email'];
     this.password = this.loginForm.controls['password'];
     this.signupPage = SignupPage;
-  }
-
-  private _showAlert(message: string): void {
-    let alertOpts: AlertOptions = {
-      title: 'Ooops!',
-      subTitle: 'Something went wrong',
-      message: message,
-      buttons: ['OK']
-    };
-
-    this._alertCtrl.create(alertOpts).present();
   }
 
   public login(form: any): void {
@@ -69,7 +61,7 @@ export class LoginPage {
       .then(() => this._navCtrl.setRoot(HomePage))
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
-          this._showAlert(CustomValidationService.getErrorMessage(e, err));
+          this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
         }
       });
   }

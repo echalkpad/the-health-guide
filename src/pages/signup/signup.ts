@@ -1,7 +1,7 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AlertController, AlertOptions, NavController } from 'ionic-angular';
+import { NavController } from 'ionic-angular';
 import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 
 // Vendor
@@ -11,7 +11,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { HomePage } from '../home/home';
 
 // Providers
-import { CustomValidationService } from '../../providers';
+import { AlertService, CustomValidationService } from '../../providers';
 
 @Component({
   selector: 'page-signup',
@@ -26,7 +26,7 @@ export class SignupPage {
   public signupForm: FormGroup;
   public username: AbstractControl;
   constructor(
-    private _alertCtrl: AlertController,
+    private _alertSvc: AlertService,
     private _auth: Auth,
     private _detectorRef: ChangeDetectorRef,
     private _fb: FormBuilder,
@@ -70,17 +70,6 @@ export class SignupPage {
 
   }
 
-  private _showAlert(message: string): void {
-    let alertOpts: AlertOptions = {
-      title: 'Ooops!',
-      subTitle: 'Something went wrong',
-      message: message,
-      buttons: ['OK']
-    };
-
-    this._alertCtrl.create(alertOpts).present();
-  }
-
   public signup(form: any): void {
     let details: UserDetails = {
       'custom': {
@@ -100,21 +89,15 @@ export class SignupPage {
           .then(() => this._navCtrl.setRoot(HomePage))
           .catch((err: IDetailedError<Array<string>>) => {
             for (let e of err.details) {
-              this._showAlert(CustomValidationService.getErrorMessage(e, err));
+              this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
             }
           });
       })
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
-          this._showAlert(CustomValidationService.getErrorMessage(e, err));
+          this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
         }
       });
-  }
-
-  ionViewWillEnter() {
-    if (this._auth.isAuthenticated()) {
-      this._navCtrl.setRoot(HomePage)
-    }
   }
 
   ionViewWillUnload() {
