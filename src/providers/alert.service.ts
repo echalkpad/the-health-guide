@@ -8,7 +8,7 @@ export class AlertService {
 
   public showAlert(message: string): void {
     let alertOpts: AlertOptions = {
-      title: 'Ooops!',
+      title: 'Uhh ohh,',
       subTitle: 'Something went wrong',
       message: message,
       buttons: ['OK']
