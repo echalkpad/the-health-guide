@@ -29,7 +29,7 @@ export class MyApp {
 
   constructor(private _deploy: Deploy, private _platform: Platform, private _statusBar: StatusBar, private _splashScreen: SplashScreen) {
     this._initializeApp();
-    this._checkUpdate();
+    //this._checkUpdate();
 
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
