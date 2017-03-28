@@ -1,6 +1,6 @@
 // App
 import { Injectable } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Injectable()
 export class CustomValidationService {
@@ -26,7 +26,7 @@ export class CustomValidationService {
     return (errorName in config) ? config[errorName] : 'Unknown Error';
   }
 
-  static noEmptyWhiteSpace(control): any {
+  static noEmptyWhiteSpace(control: FormControl): any {
     if (control.value != null && control.value.trim() !== '') {
       return null;
     } else {

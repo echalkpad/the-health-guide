@@ -1,4 +1,4 @@
 export { AlertService } from './alert.service';
-export { CustomValidationService } from './custom-validation.service';
+export { AuthValidator } from './auth-validator';
 export { FOOD_GROUPS, FoodService } from './food.service';
 export { NutrientService } from './nutrient.service';

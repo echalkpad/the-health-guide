@@ -10,7 +10,7 @@ import { HomePage } from '../home/home';
 import { SignupPage } from '../signup/signup';
 
 // Providers
-import { AlertService, CustomValidationService } from '../../providers';
+import { AlertService, AuthValidator } from '../../providers';
 
 @Component({
   selector: 'page-login',
@@ -35,13 +35,13 @@ export class LoginPage {
     this.loginForm = _fb.group({
       'email': [
         '',
-        Validators.compose([Validators.required, CustomValidationService.emailValidator,
-        CustomValidationService.noEmptyWhiteSpace])
+        Validators.compose([Validators.required, AuthValidator.emailValidator,
+        AuthValidator.noWhiteSpace])
       ],
       'password': [
         '',
         Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(16),
-        CustomValidationService.passwordValidator, CustomValidationService.noEmptyWhiteSpace])
+        AuthValidator.passwordValidator, AuthValidator.noWhiteSpace])
       ]
     });
 
@@ -61,7 +61,7 @@ export class LoginPage {
       .then(() => this._navCtrl.setRoot(HomePage))
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
-          this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
+          this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
         }
       });
   }

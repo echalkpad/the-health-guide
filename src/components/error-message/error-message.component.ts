@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 
 // Providers
-import { CustomValidationService } from '../../providers';
+import { AuthValidator } from '../../providers';
 
 @Component({
   selector: 'error-message',
@@ -15,21 +15,18 @@ export class ErrorMessageComponent {
   constructor() { }
 
   public get errorMessage() {
-    if (this.control) {
+    if (!!this.control && !!this.control.touched) {
       for (let propertyName in this.control.errors) {
-        if (this.control.touched) {
-          return CustomValidationService.getErrorMessage(propertyName, this.control.errors[propertyName]);
-        }
+        console.log(AuthValidator.getErrorMessage(propertyName, this.control.errors[propertyName]));
+        return AuthValidator.getErrorMessage(propertyName, this.control.errors[propertyName]);
       }
     }
-    if (this.group) {
+    if (!!this.group && !!this.group.touched) {
       for (let propertyName in this.group.errors) {
-        if (this.group.touched) {
-          return CustomValidationService.getErrorMessage(propertyName, this.group.errors[propertyName]);
-        }
+        return AuthValidator.getErrorMessage(propertyName, this.group.errors[propertyName]);
       }
     }
-    
+
     return null;
   }
 

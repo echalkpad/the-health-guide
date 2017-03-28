@@ -8,7 +8,7 @@ import { Auth } from '@ionic/cloud-angular';
 import { PasswordResetPage } from '../password-reset/password-reset';
 
 // Providers
-import { AlertService, CustomValidationService } from '../../providers';
+import { AlertService, AuthValidator } from '../../providers';
 
 @Component({
   selector: 'page-forgot-password',
@@ -31,8 +31,8 @@ export class ForgotPasswordPage {
     this.forgotPasswordForm = _fb.group({
       'email': [
         '',
-        Validators.compose([Validators.required, CustomValidationService.emailValidator,
-        CustomValidationService.noEmptyWhiteSpace])
+        Validators.compose([Validators.required, AuthValidator.emailValidator,
+        AuthValidator.noWhiteSpace])
       ]
     });
 

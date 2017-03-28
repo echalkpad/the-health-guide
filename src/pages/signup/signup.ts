@@ -11,7 +11,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { HomePage } from '../home/home';
 
 // Providers
-import { AlertService, CustomValidationService } from '../../providers';
+import { AlertService, AuthValidator } from '../../providers';
 
 @Component({
   selector: 'page-signup',
@@ -37,28 +37,28 @@ export class SignupPage {
     this.signupForm = _fb.group({
       'email': [
         '',
-        Validators.compose([Validators.required, CustomValidationService.emailValidator,
-        CustomValidationService.noEmptyWhiteSpace])
+        Validators.compose([Validators.required, AuthValidator.emailValidator,
+        AuthValidator.noWhiteSpace])
       ],
       'firstName': [
         '',
         Validators.compose([Validators.required, Validators.maxLength(20),
-        CustomValidationService.noEmptyWhiteSpace])
+        AuthValidator.noWhiteSpace])
       ],
       'lastName': [
         '',
         Validators.compose([Validators.required, Validators.maxLength(20),
-        CustomValidationService.noEmptyWhiteSpace])
+        AuthValidator.noWhiteSpace])
       ],
       'password': [
         '',
         Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(16),
-        CustomValidationService.passwordValidator, CustomValidationService.noEmptyWhiteSpace])
+        AuthValidator.passwordValidator, AuthValidator.noWhiteSpace])
       ],
       'username': [
         '',
         Validators.compose([Validators.required, Validators.maxLength(20),
-        CustomValidationService.usernameValidator, CustomValidationService.noEmptyWhiteSpace])
+        AuthValidator.usernameValidator, AuthValidator.noWhiteSpace])
       ],
     });
 
@@ -89,13 +89,13 @@ export class SignupPage {
           .then(() => this._navCtrl.setRoot(HomePage))
           .catch((err: IDetailedError<Array<string>>) => {
             for (let e of err.details) {
-              this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
+              this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
             }
           });
       })
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
-          this._alertSvc.showAlert(CustomValidationService.getErrorMessage(e, err));
+          this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
         }
       });
   }

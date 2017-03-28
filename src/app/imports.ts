@@ -37,6 +37,7 @@ import {
     LoginPage,
     NutrientPage,
     PasswordResetPage,
+    RegistrationPage,
     SignupPage
 } from '../pages';
 
@@ -46,7 +47,7 @@ import { CapitalizePipe } from '../pipes'
 // Providers
 import {
     AlertService,
-    CustomValidationService,
+    AuthValidator,
     FoodService,
     NutrientService
 } from '../providers';
@@ -62,6 +63,7 @@ export const thgDeclarations = [
     LoginPage,
     NutrientPage,
     PasswordResetPage,
+    RegistrationPage,
     SignupPage
 ];
 
@@ -74,6 +76,7 @@ export const thgEntries = [
     LoginPage,
     NutrientPage,
     PasswordResetPage,
+    RegistrationPage,
     SignupPage
 ];
 
@@ -90,7 +93,7 @@ export const thgProviders = [
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AlertService,
-    CustomValidationService,
+    AuthValidator,
     FoodService,
     NutrientService
 ];
