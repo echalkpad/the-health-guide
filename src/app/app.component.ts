@@ -36,8 +36,6 @@ export class MyApp {
         private _toastCtrl: ToastController
     ) {
         this._initializeApp();
-        this._checkUpdate();
-
         this.pages = [
             { title: 'Home', component: HomePage, icon: 'home' },
             { title: 'Foods', component: FoodListPage, icon: 'nutrition' }
@@ -110,6 +108,7 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             this._statusBar.styleDefault();
             this._splashScreen.hide();
+            this._checkUpdate();
         });
     }
 
