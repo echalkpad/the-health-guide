@@ -6,4 +6,3 @@ export { HomePage } from './home/home';
 export { LoginPage } from './login/login';
 export { PasswordResetPage } from './password-reset/password-reset';
 export { RegistrationPage } from './registration/registration';
-export { SignupPage } from './signup/signup';

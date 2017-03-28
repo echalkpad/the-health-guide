@@ -1,6 +1,6 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController } from 'ionic-angular';
 import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 
@@ -9,6 +9,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 
 // Pages
 import { HomePage } from '../home/home';
+import { LoginPage } from '../login/login';
 
 // Providers
 import { AlertService, AuthValidator } from '../../providers';
@@ -20,6 +21,7 @@ import { AlertService, AuthValidator } from '../../providers';
 })
 export class RegistrationPage {
   public email: AbstractControl;
+  public loginPage: any = LoginPage;
   public password: AbstractControl;
   public passwordConfirm: AbstractControl;
   public registerForm: FormGroup;
@@ -55,6 +57,37 @@ export class RegistrationPage {
     this.password = this.registerForm.get('password');
     this.passwordConfirm = this.registerForm.get('passwordConfirm');
     this.username = this.registerForm.get('username');
+  }
+
+  public register(form: { username: string, email: string, password: string }): void {
+    let details: UserDetails = {
+      'email': form.email.trim(),
+      'image': 'https://www.gravatar.com/avatar/' + Md5.hashStr(form.email.trim()),
+      'password': form.password.trim(),
+      'username': form.username.trim()
+    };
+
+    this._auth.signup(details)
+      .then(() => {
+        this._auth.login('basic', details)
+          .then(() => this._navCtrl.setRoot(HomePage))
+          .catch((err: IDetailedError<Array<string>>) => {
+            for (let e of err.details) {
+              this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
+            }
+          });
+      })
+      .catch((err: IDetailedError<Array<string>>) => {
+        for (let e of err.details) {
+          this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
+        }
+      });
+  }
+
+  ionViewWillEnter() {
+    if (this._auth.isAuthenticated()) {
+      this._navCtrl.setRoot(HomePage);
+    }
   }
 
   ionViewWillUnload() {

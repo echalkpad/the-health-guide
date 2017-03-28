@@ -19,7 +19,7 @@ export class ForgotPasswordPage {
   public forgotPasswordForm: FormGroup;
   public email: AbstractControl;
   public password: AbstractControl;
-  public pswResetPage: any;
+  public pswResetPage: any = PasswordResetPage;
   constructor(
     private _alertSvc: AlertService,
     private _auth: Auth,
@@ -36,8 +36,7 @@ export class ForgotPasswordPage {
       ]
     });
 
-    this.email = this.forgotPasswordForm.controls['email'];
-    this.pswResetPage = PasswordResetPage;
+    this.email = this.forgotPasswordForm.get('email');
   }
 
   public reqestReset(form: any): void {

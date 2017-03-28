@@ -7,7 +7,6 @@ import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 // Pages
 import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 import { HomePage } from '../home/home';
-import { SignupPage } from '../signup/signup';
 
 // Providers
 import { AlertService, AuthValidator } from '../../providers';
@@ -18,11 +17,10 @@ import { AlertService, AuthValidator } from '../../providers';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginPage {
-  public forgotPasswordPage: any;
+  public forgotPasswordPage: any = ForgotPasswordPage;
   public email: AbstractControl;
   public loginForm: FormGroup;
   public password: AbstractControl;
-  public signupPage: any;
   constructor(
     private _alertSvc: AlertService,
     private _auth: Auth,
@@ -40,15 +38,13 @@ export class LoginPage {
       ],
       'password': [
         '',
-        Validators.compose([Validators.required, Validators.minLength(6), Validators.maxLength(16),
+        Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16),
         AuthValidator.passwordValidator, AuthValidator.noWhiteSpace])
       ]
     });
 
-    this.forgotPasswordPage = ForgotPasswordPage;
-    this.email = this.loginForm.controls['email'];
-    this.password = this.loginForm.controls['password'];
-    this.signupPage = SignupPage;
+    this.email = this.loginForm.get('email');
+    this.password = this.loginForm.get('password');
   }
 
   public login(form: any): void {
@@ -64,12 +60,6 @@ export class LoginPage {
           this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));
         }
       });
-  }
-
-  ionViewWillEnter() {
-    if (this._auth.isAuthenticated()) {
-      this._navCtrl.setRoot(HomePage);
-    }
   }
 
   ionViewWillUnload() {

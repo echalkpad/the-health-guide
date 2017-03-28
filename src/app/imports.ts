@@ -37,8 +37,7 @@ import {
     LoginPage,
     NutrientPage,
     PasswordResetPage,
-    RegistrationPage,
-    SignupPage
+    RegistrationPage
 } from '../pages';
 
 // Pipes
@@ -63,8 +62,7 @@ export const thgDeclarations = [
     LoginPage,
     NutrientPage,
     PasswordResetPage,
-    RegistrationPage,
-    SignupPage
+    RegistrationPage
 ];
 
 export const thgEntries = [
@@ -76,8 +74,7 @@ export const thgEntries = [
     LoginPage,
     NutrientPage,
     PasswordResetPage,
-    RegistrationPage,
-    SignupPage
+    RegistrationPage
 ];
 
 export const thgImports = [

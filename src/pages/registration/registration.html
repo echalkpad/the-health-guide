@@ -26,9 +26,9 @@
         </ion-item>
         <error-message [group]="registerForm"></error-message>
         <br>
-        <button class="auth-page__button" ion-button block type="submit">Sign Up</button>
+        <button class="auth-page__button" ion-button block type="submit" [disabled]="registerForm.invalid">Sign Up</button>
         <div class="auth-page__links">
-          Already have an account? <a navPop>Log in</a>
+          Already have an account? <a [navPush]="loginPage">Log in</a>
         </div>
       </ion-list>
     </form>
