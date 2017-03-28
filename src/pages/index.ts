@@ -1,8 +1,9 @@
+export { AccountPage } from './account/account';
 export { FoodDetailsPage } from './food-details/food-details';
 export { FoodListPage } from './food-list/food-list';
 export { ForgotPasswordPage } from './forgot-password/forgot-password';
-export { NutrientPage } from './nutrient/nutrient';
 export { HomePage } from './home/home';
 export { LoginPage } from './login/login';
+export { NutrientPage } from './nutrient/nutrient';
 export { PasswordResetPage } from './password-reset/password-reset';
 export { RegistrationPage } from './registration/registration';

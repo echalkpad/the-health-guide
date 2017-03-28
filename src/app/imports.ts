@@ -30,6 +30,7 @@ import { ErrorMessageComponent } from '../components';
 
 // Pages
 import {
+    AccountPage,
     FoodDetailsPage,
     FoodListPage,
     ForgotPasswordPage,
@@ -53,6 +54,7 @@ import {
 
 export const thgDeclarations = [
     MyApp,
+    AccountPage,
     CapitalizePipe,
     ErrorMessageComponent,
     FoodDetailsPage,
@@ -67,6 +69,7 @@ export const thgDeclarations = [
 
 export const thgEntries = [
     MyApp,
+    AccountPage,
     FoodDetailsPage,
     FoodListPage,
     ForgotPasswordPage,

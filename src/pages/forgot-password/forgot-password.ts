@@ -1,7 +1,7 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { LoadingController, NavController } from 'ionic-angular';
 import { Auth } from '@ionic/cloud-angular';
 
 // Pages
@@ -24,12 +24,13 @@ export class ForgotPasswordPage {
     private _alertSvc: AlertService,
     private _auth: Auth,
     private _detectorRef: ChangeDetectorRef,
+    private _loadCtrl: LoadingController,
     private _fb: FormBuilder,
     private _navCtrl: NavController
   ) {
 
     this.forgotPasswordForm = _fb.group({
-      'email': [
+      email: [
         '',
         Validators.compose([Validators.required, AuthValidator.emailValidator,
         AuthValidator.noWhiteSpace])
@@ -39,9 +40,10 @@ export class ForgotPasswordPage {
     this.email = this.forgotPasswordForm.get('email');
   }
 
-  public reqestReset(form: any): void {
+  public reqestReset(form: { email: string }): void {
+
     this._auth.requestPasswordReset(form.email)
-      .then(() => this._navCtrl.setRoot(PasswordResetPage, { email: form.email }))
+      .then(() => this._navCtrl.push(PasswordResetPage, { email: form.email }))
       .catch((err: Error) => this._alertSvc.showAlert(err.toString()));
   }
 

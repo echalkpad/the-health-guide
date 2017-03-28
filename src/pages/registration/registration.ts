@@ -1,7 +1,7 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { LoadingController, NavController } from 'ionic-angular';
 import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 
 // Vendor
@@ -31,6 +31,7 @@ export class RegistrationPage {
     private _auth: Auth,
     private _detectorRef: ChangeDetectorRef,
     private _fb: FormBuilder,
+    private _loadCtrl: LoadingController,
     private _navCtrl: NavController,
     private _user: User
   ) {
@@ -60,6 +61,12 @@ export class RegistrationPage {
   }
 
   public register(form: { username: string, email: string, password: string }): void {
+    this._loadCtrl.create({
+      content: 'Creating your account...',
+      spinner: 'crescent',
+      dismissOnPageChange: true
+    }).present();
+    
     let details: UserDetails = {
       'email': form.email.trim(),
       'image': 'https://www.gravatar.com/avatar/' + Md5.hashStr(form.email.trim()),

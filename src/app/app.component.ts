@@ -8,6 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {
+    AccountPage,
     HomePage,
     FoodListPage,
     RegistrationPage
@@ -38,7 +39,8 @@ export class MyApp {
         this._initializeApp();
         this.pages = [
             { title: 'Home', component: HomePage, icon: 'home' },
-            { title: 'Foods', component: FoodListPage, icon: 'nutrition' }
+            { title: 'Foods', component: FoodListPage, icon: 'nutrition' },
+            { title: 'Account', component: AccountPage, icon: 'contact' }
         ];
 
     }
@@ -108,7 +110,9 @@ export class MyApp {
             // Here you can do any higher level native things you might need.
             this._statusBar.styleDefault();
             this._splashScreen.hide();
-            this._checkUpdate();
+            if (this._platform.is('cordova')) {
+                this._checkUpdate();
+            }
         });
     }
 

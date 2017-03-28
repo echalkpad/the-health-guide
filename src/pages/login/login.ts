@@ -1,7 +1,7 @@
 // App
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NavController } from 'ionic-angular';
+import { LoadingController, NavController } from 'ionic-angular';
 import { Auth, IDetailedError, User, UserDetails } from '@ionic/cloud-angular';
 
 // Pages
@@ -26,17 +26,18 @@ export class LoginPage {
     private _auth: Auth,
     private _detectorRef: ChangeDetectorRef,
     private _fb: FormBuilder,
+    private _loadCtrl: LoadingController,
     private _navCtrl: NavController,
     private _user: User
   ) {
 
     this.loginForm = _fb.group({
-      'email': [
+      email: [
         '',
         Validators.compose([Validators.required, AuthValidator.emailValidator,
         AuthValidator.noWhiteSpace])
       ],
-      'password': [
+      password: [
         '',
         Validators.compose([Validators.required, Validators.minLength(8), Validators.maxLength(16),
         AuthValidator.passwordValidator, AuthValidator.noWhiteSpace])
@@ -47,7 +48,13 @@ export class LoginPage {
     this.password = this.loginForm.get('password');
   }
 
-  public login(form: any): void {
+  public login(form: { email: string, password: string }): void {
+    this._loadCtrl.create({
+      content: 'Please wait...',
+      spinner: 'crescent',
+      dismissOnPageChange: true
+    }).present();
+
     let details: UserDetails = {
       'email': form.email.trim(),
       'password': form.password.trim(),
