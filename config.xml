@@ -45,4 +45,5 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.493536537981-sur3vbbhkp6b8imijmlqmfidvfi5fhn0" />
     </plugin>
     <plugin name="cordova-plugin-device" spec="~1.1.4" />
+    <plugin name="ionic-plugin-deploy" spec="~0.6.6" />
 </widget>

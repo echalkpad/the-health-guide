@@ -1,6 +1,7 @@
 // App
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
+import { Deploy } from '@ionic/cloud-angular';
 
 // Cordova
 import { StatusBar } from '@ionic-native/status-bar';
@@ -13,9 +14,9 @@ import {
 } from '../pages';
 
 export interface IPageLink {
-    title: string,
-    component: any,
-    icon: string
+  title: string,
+  component: any,
+  icon: string
 }
 
 @Component({
@@ -26,14 +27,27 @@ export class MyApp {
   public pages: Array<IPageLink>;
   public rootPage: any = RegistrationPage;
 
-  constructor(private _platform: Platform, private _statusBar: StatusBar, private _splashScreen: SplashScreen) {
+  constructor(private _deploy: Deploy, private _platform: Platform, private _statusBar: StatusBar, private _splashScreen: SplashScreen) {
     this._initializeApp();
+    this._checkUpdate();
 
     this.pages = [
       { title: 'Home', component: HomePage, icon: 'home' },
       { title: 'Foods', component: FoodListPage, icon: 'nutrition' }
     ];
 
+  }
+
+  private _checkUpdate(): void {
+    this._deploy.check().then((snapshotAvailable: boolean) => {
+      if (snapshotAvailable) {
+        /**
+         * If a new snapshot is available,
+         * download it, apply it, and reload the app
+         */
+        this._deploy.download().then(() => this._deploy.extract()).then(() => this._deploy.load());
+      }
+    });
   }
 
   private _initializeApp() {
