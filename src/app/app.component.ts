@@ -28,7 +28,7 @@ export class MyApp {
     public rootPage: any = RegistrationPage;
 
     constructor(
-        private _alertCtrl,
+        private _alertCtrl: AlertController,
         private _deploy: Deploy,
         private _platform: Platform,
         private _statusBar: StatusBar,
@@ -46,15 +46,6 @@ export class MyApp {
     }
 
     private _checkUpdate(): void {
-        this._deploy.check().then((snapshotAvailable: boolean) => {
-            if (snapshotAvailable) {
-                /**
-                 * If a new snapshot is available,
-                 * download it, apply it, and reload the app
-                 */
-                this._deploy.download().then(() => this._deploy.extract()).then(() => this._deploy.load());
-            }
-        });
         this._deploy.check().then((snapshotAvailable: boolean) => {
             if (snapshotAvailable) {
                 /**
