@@ -49,6 +49,74 @@ export class MyApp {
         this._deploy.download().then(() => this._deploy.extract()).then(() => this._deploy.load());
       }
     });
+    /**
+     * this.deploy.check().then((snapshotAvailable: boolean) => {
+    if (snapshotAvailable) {
+
+        let alert = this.alertCtrl.create({
+            title: 'There is an update to Awesome App',
+            message: 'Do you want to update?',
+            buttons: [{
+                text: 'Cancel',
+                handler: () => {
+                    console.log('Cancel clicked');
+                }
+            }, {
+                text: 'Update',
+                handler: () => {
+
+                    let updateMe = true;
+
+                    let toast = this.toastCtrl.create({
+                        message: 'Downloading .. 0%',
+                        position: 'bottom',
+                        showCloseButton: true,
+                        closeButtonText: 'Cancel'
+                    });
+
+                    toast.onDidDismiss(() => {
+                        updateMe = false;
+                    });
+
+                    toast.present();
+
+                    // this.deploy.channel = 'production';
+                    this.deploy
+                        .download({
+                            onProgress: p => {
+                                toast.setMessage('Downloading .. ' + p + '%');
+                                console.log('Downloading = ' + p + '%');
+                            }
+                        })
+                        .then(() => {
+
+                            if (updateMe) {
+                                this.deploy
+                                    .extract({
+                                        onProgress: p => {
+                                            toast.setMessage('Extracting .. ' + p + '%');
+                                            console.log('Extracting = ' + p + '%');
+                                        }
+                                    })
+                                    .then(() => {
+                                        if (updateMe) {
+                                            return this.deploy.load();
+                                        }
+                                    })
+                                    .catch(() => toast.setMessage('Uhh ohh, network problem!'))
+                            }
+
+                        })
+                        .catch(() => toast.setMessage('Uhh ohh, network problem!'))
+                }
+            }]
+        });
+        alert.present();
+        // When snapshotAvailable is true, you can apply the snapshot
+
+    }
+});
+     */
   }
 
   private _initializeApp() {
