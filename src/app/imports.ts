@@ -31,13 +31,22 @@ import { ErrorMessageComponent } from '../components';
 // Pages
 import {
     AccountPage,
+    ActivitySelectPage,
+    ExercisePage,
+    FitnessPage,
     FoodDetailsPage,
     FoodListPage,
     ForgotPasswordPage,
+    HealingPage,
     HomePage,
+    LifestylePage,
     LoginPage,
+    MealSelectPage,
     NutrientPage,
+    NutritionPage,
     PasswordResetPage,
+    RecipeDetailsPage,
+    RecipesPage,
     RegistrationPage
 } from '../pages';
 
@@ -55,28 +64,46 @@ import {
 export const thgDeclarations = [
     MyApp,
     AccountPage,
+    ActivitySelectPage,
     CapitalizePipe,
     ErrorMessageComponent,
+    ExercisePage,
+    FitnessPage,
     FoodDetailsPage,
     FoodListPage,
     ForgotPasswordPage,
+    HealingPage,
     HomePage,
+    LifestylePage,
     LoginPage,
+    MealSelectPage,
     NutrientPage,
+    NutritionPage,
     PasswordResetPage,
+    RecipeDetailsPage,
+    RecipesPage,
     RegistrationPage
 ];
 
 export const thgEntries = [
     MyApp,
     AccountPage,
+    ActivitySelectPage,
+    ExercisePage,
+    FitnessPage,
     FoodDetailsPage,
     FoodListPage,
     ForgotPasswordPage,
+    HealingPage,
     HomePage,
+    LifestylePage,
     LoginPage,
+    MealSelectPage,
     NutrientPage,
+    NutritionPage,
     PasswordResetPage,
+    RecipeDetailsPage,
+    RecipesPage,
     RegistrationPage
 ];
 

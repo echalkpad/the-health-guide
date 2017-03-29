@@ -4,9 +4,6 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 import { LoadingController, NavController, NavParams } from 'ionic-angular';
 import { Auth } from '@ionic/cloud-angular';
 
-// Pages
-import { RegistrationPage } from '../registration/registration';
-
 // Providers
 import { AlertService, AuthValidator } from '../../providers';
 

@@ -9,8 +9,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {
     AccountPage,
-    HomePage,
+    ExercisePage,
+    FitnessPage,
     FoodListPage,
+    HealingPage,
+    HomePage,
+    LifestylePage,
+    NutritionPage,
+    RecipesPage,
     RegistrationPage
 } from '../pages';
 
@@ -39,8 +45,14 @@ export class MyApp {
         this._initializeApp();
         this.pages = [
             { title: 'Home', component: HomePage, icon: 'home' },
-            { title: 'Foods', component: FoodListPage, icon: 'nutrition' },
-            { title: 'Account', component: AccountPage, icon: 'contact' }
+            { title: 'Fitness', component: FitnessPage, icon: 'body' },
+            { title: 'Lifestyle', component: LifestylePage, icon: 'clock' },
+            { title: 'Exercise', component: ExercisePage, icon: 'bicycle' },
+            { title: 'Nutrition', component: NutritionPage, icon: 'nutrition' },
+            { title: 'Healing', component: HealingPage, icon: 'heart' },
+            { title: 'Foods', component: FoodListPage, icon: 'basket' },
+            { title: 'Recipes', component: RecipesPage, icon: 'restaurant' },
+            { title: 'Account', component: AccountPage, icon: 'person' }
         ];
 
     }
