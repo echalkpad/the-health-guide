@@ -4,7 +4,6 @@ import { AlertController, AlertOptions, LoadingController, NavController } from 
 import { Auth, User } from '@ionic/cloud-angular';
 
 // Pages
-import { LoginPage } from '../login/login';
 import { RegistrationPage } from '../registration/registration';
 
 @Component({
@@ -24,9 +23,16 @@ export class AccountPage {
   ) { }
 
   private _deleteAccount(): void {
+    let loader = this._loadCtrl.create({
+      content: 'Deleting account...',
+      spinner: 'crescent'
+    });
+
+    loader.present();
     this._user.delete();
     this._user.unstore();
     this._auth.logout();
+    loader.dismiss();
     this._navCtrl.setRoot(RegistrationPage);
   }
 
@@ -44,11 +50,6 @@ export class AccountPage {
         {
           text: "Yes, I'm sure",
           handler: () => {
-            this._loadCtrl.create({
-              content: 'Deleting account...',
-              spinner: 'crescent',
-              dismissOnPageChange: true
-            }).present();
             this._deleteAccount();
           }
         }
@@ -60,7 +61,7 @@ export class AccountPage {
 
   public signout(): void {
     this._auth.logout();
-    this._navCtrl.setRoot(LoginPage);
+    this._navCtrl.setRoot(RegistrationPage);
   }
 
   ionViewWillUnload() {

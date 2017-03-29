@@ -61,12 +61,13 @@ export class RegistrationPage {
   }
 
   public register(form: { username: string, email: string, password: string }): void {
-    this._loadCtrl.create({
+    let loader = this._loadCtrl.create({
       content: 'Creating your account...',
-      spinner: 'crescent',
-      dismissOnPageChange: true
-    }).present();
-    
+      spinner: 'crescent'
+    });
+
+    loader.present();
+
     let details: UserDetails = {
       'email': form.email.trim(),
       'image': 'https://www.gravatar.com/avatar/' + Md5.hashStr(form.email.trim()),
@@ -77,7 +78,10 @@ export class RegistrationPage {
     this._auth.signup(details)
       .then(() => {
         this._auth.login('basic', details)
-          .then(() => this._navCtrl.setRoot(HomePage))
+          .then(() => {
+            loader.dismiss();
+            this._navCtrl.setRoot(HomePage);
+          })
           .catch((err: IDetailedError<Array<string>>) => {
             for (let e of err.details) {
               this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));

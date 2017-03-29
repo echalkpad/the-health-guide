@@ -49,11 +49,12 @@ export class LoginPage {
   }
 
   public login(form: { email: string, password: string }): void {
-    this._loadCtrl.create({
+    let loader = this._loadCtrl.create({
       content: 'Please wait...',
-      spinner: 'crescent',
-      dismissOnPageChange: true
-    }).present();
+      spinner: 'crescent'
+    });
+
+    loader.present();
 
     let details: UserDetails = {
       'email': form.email.trim(),
@@ -61,7 +62,10 @@ export class LoginPage {
     };
 
     this._auth.login('basic', details)
-      .then(() => this._navCtrl.setRoot(HomePage))
+      .then(() => {
+        loader.dismiss();
+        this._navCtrl.setRoot(HomePage);
+      })
       .catch((err: IDetailedError<Array<string>>) => {
         for (let e of err.details) {
           this._alertSvc.showAlert(AuthValidator.getErrorMessage(e, err));

@@ -5,7 +5,7 @@ import { LoadingController, NavController, NavParams } from 'ionic-angular';
 import { Auth } from '@ionic/cloud-angular';
 
 // Pages
-import { LoginPage } from '../login/login';
+import { RegistrationPage } from '../registration/registration';
 
 // Providers
 import { AlertService, AuthValidator } from '../../providers';
@@ -17,7 +17,6 @@ import { AlertService, AuthValidator } from '../../providers';
 })
 export class PasswordResetPage {
   public email: string;
-  public loginPage: any = LoginPage;
   public password: AbstractControl;
   public passwordResetForm: FormGroup;
   public resetCode: AbstractControl;
@@ -49,17 +48,22 @@ export class PasswordResetPage {
   }
 
   public backToLogin(): void {
-    this._navCtrl.setRoot(LoginPage);
+    this._navCtrl.popToRoot();
   }
 
   public resetPassword(form: { resetCode: number, password: string }): void {
-    this._loadCtrl.create({
-      content: 'Please wait...',
-      spinner: 'crescent',
-      dismissOnPageChange: true
-    }).present();
+    let loader = this._loadCtrl.create({
+      content: 'Resetting your password...',
+      spinner: 'crescent'
+    });
+
+    loader.present();
+    
     this._auth.confirmPasswordReset(form.resetCode, form.password)
-      .then(() => this._navCtrl.setRoot(LoginPage))
+      .then(() => {
+        loader.dismiss();
+        this._navCtrl.popToRoot();
+      })
       .catch((err: Error) => this._alertSvc.showAlert(err.toString()));
   }
 

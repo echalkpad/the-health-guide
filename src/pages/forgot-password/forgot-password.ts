@@ -41,9 +41,18 @@ export class ForgotPasswordPage {
   }
 
   public reqestReset(form: { email: string }): void {
+    let loader = this._loadCtrl.create({
+      content: 'Sending request...',
+      spinner: 'crescent'
+    });
 
+    loader.present();
+    
     this._auth.requestPasswordReset(form.email)
-      .then(() => this._navCtrl.push(PasswordResetPage, { email: form.email }))
+      .then(() => {
+        loader.dismiss();
+        this._navCtrl.push(PasswordResetPage, { email: form.email });
+      })
       .catch((err: Error) => this._alertSvc.showAlert(err.toString()));
   }
 
