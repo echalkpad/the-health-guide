@@ -80,7 +80,7 @@ export class RegistrationPage {
         this._auth.login('basic', details)
           .then(() => {
             loader.dismiss();
-            this._navCtrl.setRoot(HomePage);
+            this._navCtrl.setRoot(HomePage, { new: true });
           })
           .catch((err: IDetailedError<Array<string>>) => {
             for (let e of err.details) {
