@@ -58,6 +58,7 @@ export class MyApp {
     }
 
     private _checkUpdate(): void {
+        this._deploy.channel = 'dev';
         this._deploy.check().then((snapshotAvailable: boolean) => {
             if (snapshotAvailable) {
                 /**
@@ -86,7 +87,6 @@ export class MyApp {
 
                             toast.onDidDismiss(() => updateConfirmed = false);
                             toast.present();
-                            this._deploy.channel = 'dev';
                             this._deploy.download({
                                 onProgress: progress => {
                                     toast.setMessage(`Downloading ... ${progress}%`);
