@@ -10,7 +10,10 @@ import { MyApp } from './app.component';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-const cloudSettings: CloudSettings = {
+// Firebase
+import { AngularFireModule, AuthMethods, AuthProviders } from 'angularfire2';
+
+const CLOUD_SETTINGS: CloudSettings = {
     'core': {
         'app_id': 'af911689'
     },
@@ -23,7 +26,20 @@ const cloudSettings: CloudSettings = {
             'scope': ['']
         }
     }
-}
+};
+
+const FIREBASE_AUTH_CONFIG = {
+    provider: AuthProviders.Password,
+    method: AuthMethods.Password
+};
+
+const FIREBASE_CONFIG = {
+    apiKey: "AIzaSyAHAV3Jh_wkht6NQUcCjhnYFc8AVEZREc4",
+    authDomain: "the-health-guide-1.firebaseapp.com",
+    databaseURL: "https://the-health-guide-1.firebaseio.com",
+    storageBucket: "the-health-guide-1.appspot.com",
+    messagingSenderId: "493536537981"
+};
 
 // Components
 import { ErrorMessageComponent } from '../components';
@@ -108,11 +124,12 @@ export const thgEntries = [
 ];
 
 export const thgImports = [
+    AngularFireModule.initializeApp(FIREBASE_CONFIG, FIREBASE_AUTH_CONFIG, 'the-health-guide-1'),
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
     IonicModule.forRoot(MyApp),
-    CloudModule.forRoot(cloudSettings)
+    CloudModule.forRoot(CLOUD_SETTINGS)
 ];
 
 export const thgProviders = [

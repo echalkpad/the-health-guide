@@ -2,6 +2,9 @@
 import { ChangeDetectorRef, ChangeDetectionStrategy, Component } from '@angular/core';
 import { AlertController, NavController, NavParams } from 'ionic-angular';
 
+// Firebase
+import { AngularFire, FirebaseListObservable } from 'angularfire2';
+
 // Pages
 import { FitnessPage } from '../fitness/fitness';
 
@@ -11,8 +14,9 @@ import { FitnessPage } from '../fitness/fitness';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class HomePage {
-
+  public items: FirebaseListObservable<Array<any>>;
   constructor(
+    private _af: AngularFire,
     private _alertCtrl: AlertController,
     private _detectorRef: ChangeDetectorRef,
     private _navCtrl: NavController,
@@ -30,6 +34,7 @@ export class HomePage {
 
       greetAlert.onDidDismiss(() => this._navCtrl.setRoot(FitnessPage, { new: true }));
     }
+    this.items = _af.database.list('/items');
   }
 
   ionViewWillUnload() {
