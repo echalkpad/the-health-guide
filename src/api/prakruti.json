@@ -1,6 +1,7 @@
 [
     {
         "balance": [],
+        "description": "",
         "elements": [
             "air",
             "ether"
@@ -9,7 +10,7 @@
         "mentalConstituition": {
             "activity": "restlessness, hyperactivity",
             "beliefs": "changing, rebel, erratic",
-            "dreams": "flying, jumping, dancing, restless, nightmares, searching",
+            "dreams": "flying, jumping, dancing, restless, nightmares, searching, running, constantly moving",
             "creativity": "arthistic, creative, ideas in many areas, questioning",
             "decisions": "insecure, hard to decide",
             "emotions": "unpredictable, modd changes, insecure, jumpy, anxious",
@@ -23,9 +24,9 @@
             "organisation": "multi-tasking, messy, start many projects without finishing them, easily distracted",
             "sexDrive": "extreme or none, easily excited and satisfied",
             "social": "independent, insecure, nervous in new environments, many casual insignificant acquintances",
-            "stressResponse": "anxious, worried, fearfull, nervous",
+            "stressResponse": "anxious, worried, fearfull, nervous, confused, insecured",
             "temperament": "enthusiastic, lively, spontaneous, like to change, excitable, fun personality, bored easily",
-            "talk": "talkative, quick and diffuse speech, good communication skills",
+            "talk": "talkative, quick and diffuse speech, good communication skills"
         },
         "locations": [
             "small intestine",
@@ -44,11 +45,13 @@
             "bodyTemperature": "cold hands and feet, feeling cold",
             "bodyWeight": "underweight, difficulty gaining weight and muscle mass, lose weight and muscle mass easily",
             "bones": "narrow, irregular, proeminent",
+            "bowelMovements": "dry, hard, constipation",
             "chest": "sunken, visible ribs, flat",
             "climate": "dislike dry wind and cold climates, like warm climates",
-            "complexion": "dark, brown, easily tanning",
+            "complexion": "dark, easily tanning",
             "digestion": "irregular, gas",
             "eating": "quickly",
+            "eyebrows": "thin, dry, firm",
             "eyes": "small, sunken, active, dark",
             "face": "narrow, edgy, oblong, wrinckles",
             "fingers": "long, narrow",
@@ -61,10 +64,11 @@
             "muscles": "weak, visible veins and tendons",
             "nails": "cracked",
             "neck": "long, narrow",
-            "nose": "assymetrical, narrow, sharp",
-            "perspiration": "poor, scanty, small odour",
+            "nose": "assymetrical, narrow",
+            "perspiration": "poor, scanty, less odour",
             "pulse": "thrady, slithering",
             "schedule": "irregular",
+            "shoulders": "narrow, slope downward",
             "skin": "dry, thin, rough, cold, cracked",
             "sleep": "light, wake up easily, difficulty falling and staying asleep",
             "stamina": "short bursts of energy, tire and overexert easily, very active and fast",
